@@ -1,0 +1,158 @@
+
+
+Plan du manuscript:
+
+
+I) Introduction / cosmologie
+    1) Le modèle ΛCDM
+    2) Spectre de puissance de la matière (le CMB a un moment ?)
+    3) La physique des BAO
+    4) La physique des RSD
+    # 5) Les différents traceurs : QSO, Lyα
+    5) Traceurs et biais
+
+
+II) SDSS/eBOSS
+    1) SDSS
+       - SDSS I/II/III
+       - SDSS IV (à voir comment je regroupe les sous parties)
+    2) eBOSS
+       - les traceurs d'eBOSS
+       - sélection des cibles
+       - pavage du ciel
+       - phase d'observation 
+       - caractéristiques techniques de l'instrument:
+       	 - télescope
+	 - caméra
+	 - spectro
+	 - performances ? (Présenter brièvement, et à détailler si utile)
+      - résultats
+    3) desi
+
+
+III) Presentation des donnees 
+    1) Catalogues
+     	identifications des spectres + estimation du redshift
+    2) Réduction des données
+       photons –> spectres (CCD 2D -> spectre 1D)
+       + réduction : soustraction du fond de ciel, calibration du flux, ...
+    3) Champ d'absorption
+        définition de la forêt Lyα (cuts)
+	masques : DLAs, lignes de ciel ?
+	fit du continu + calcul des deltas
+ 
+
+IV) Mocks
+    1) Objectifs des mocks
+       pourquoi des GRF, l'utilisation des mocks (test de l'analyse)
+    2) Construction des mocks
+       - champs de densité (QSO, Lyα)
+       - densité le long des l.o.s.
+       - densité -> transmission (FGPA) : (en complexifiant)
+       	    - ajout des petites échelles
+	    - FGPA sans RSD
+	    - ajout des RSD (FGPA avec eta)
+       - DLA ?
+       - survey desi ? (7 chunks)
+    3) Ajustement des paramètres
+       - FGPA
+       - P1D
+    4) Quickquasars ?
+    5) Effets astro ?
+       - DLAs
+       - métaux
+    Peut-être regrouper 4) et 5) : partie expansion des mocks
+    6) Check des mocks
+       besoin auparavant d'avoir introduit les modèles de CF etc etc (*)
+       - Lyα x Lyα
+       - Lyα x QSO
+       - QSO x QSO ?
+       - DLA x ?
+
+
+(*) : Soit faire une partie avant la partie sur les mocks pour expliquer les modeles de fonction de correlations (et donc l'enlever de la partie analyse).
+Sinon on peut presenter les modeles dans la partie analyse, ensuite presenter les tests sur les mocks puis les resultats de l'analyse.
+
+
+
+V) Analyse
+
+
+VI) Conclusion
+
+
+
+
+II)
+1) SDSS
+   - SDSS I/II/III
+   - SDSS IV
+
+Decrire rapidement les differents surveys (pas necessaire)
+
+SDSS I-II:
+   SDSS : York et al 2000
+   filtres (?) Fukugita et al 1996
+   spectra using SDSS spectrograph (Smee et al 2013): 640 fibers
+   DR7 (Abazajian et al 2009)
+   re-ecrire la description des relevés :
+   	     Legacy survey : 1.3 million spectra over 8000 sq deg, mainly quasars and galaxies
+	     SEGUE-1 : THe Sloan Extension for galactic understanding and exploration 1, Yanny et al 2009 : milky way structure through 3000 sq deg of new imaging and 240 000 star spectra
+	     SDSS II Supernova survey (Frieman et al 2008, Sako et al 2014)
+
+
+
+
+SDSS III:
+     4 surveys (Eisenstein et al 2011):
+       - SEGUE2 : stelar spectro, before BOSS
+       - BOSS (check les details feuille 1) : have led to 1-2% precision measurements of the cosmological distance scale for z < 0.6 and z=2.5 (ref?)
+Jan 2015: DR12 (Alam et al 2015a): 343160 galaxies ("lowz" 2% à vérifier), 862735 medium redshift gal (CMASS, zmed=0.57) and 181605 QSO (zmed=0.32)
+       - Marvel 2008-2012 (Ge et al 2009): feuille note 1
+       - APOGEE 1 (Majewski et al 2015)
+       + SEQUELS and SDSS RM thanks to good weather (Alam et al 2015b)
+    SDSS III completed in jan 2015 in DR12 (Alam et al 2015b)
+
+
+SDSS IV: (details feuille note 2)
+pareil, pas necessaire de decrire en details les differents survey
+- APOGEE2 : stelar astrophysics
+- MANGA
+- eBOSS : described in next session
+- eBOSS sub programms :
+  - SPIDERS
+  - TDSS
+
+eBOSS: Dawson et al 2015
+       use the same 1000 fiber spectro
+       extend LRG survey to get better than 1% precision in distance measurement (combining BOSS and eBOSS)
+       2 new probs : ELG and QSO
+       QSO 0.9 < z < 2.2 : ~82.6 per sq deg (bright and high bias)
+       ELG : observed during 2016-2018: 2% precision at higher redshift (0.6 < z < 1.1)
+       First percent level distance measurement with BAO and RSD in 0.6 < z < 2 : transition from mat to DE domination
+       4 tracers -> LRG, ELG, QSO clustering and QSO lya : largest volume of cosmo redshift survey
+       description de chaque traceur feuille note 4
+       
+  - tilling process (Blanton et al 2003)
+       plate : 7 sq deg, in average: one center per 5 sq deg (avoid gapes)
+       1800 plates provide up to 9000 sq deg
+       Tiling : feuille note 5
+       1000 fibers: 100 calibration targets, 50+50 for TDSS and SPIDERS, remaining 800 fibers for LRG and QSO samples
+       ELG are on 300 dedicated plates: reduce LRG and QSO : go down from 9000 to 7500 sq deg
+       to have 300 plates for ELG : 16% less but provide a new BAO constraint comparable to BOSS DR9 galaxy on a new redshift range
+
+  - target selection (targeting strategy Blanton 2017 6.1.3) (a detailler ! decrire comment on obtient les QSO a grand z, contamination par les etoiles)
+       7500 sq deg : 4500 NGC and 3000 SGC
+       eBOSS target selection from SDSS imaging camera in ugriz filters (Fukigita et al 1996) + use the highly uniform infrared photometry from the WISE satellite (explained in Lang et al 2014) : two filters 3.4 and 4.6 um
+       + details dans feuille note 5
+
+  - observing sequence: acquire signal on each field until the accumulated depth ensure to classify objects, and reach desired redshift sucess rates. There is a simple data reduction in real time to estimate the depth of each exposure and get feedback
+  Est-ce que c'est vraiment important ? (Sinon c'est feuille note 6)
+
+
+- le telescope: Gunn et al 2006 (feuille note 0)
+- la camera (Gunn et al 1998) (feuille note 0)
+- SDSS spectrographe + BOSS upgrade (Smee et al 2012) (feuille note 0)
+
+
+
