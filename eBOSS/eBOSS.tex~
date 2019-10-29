@@ -1,0 +1,223 @@
+\documentclass[11pt, twoside, a4paper, openright]{report}
+
+\usepackage{../source/util}
+
+\begin{document}
+\chapter{Le relevé eBOSS de SDSS}
+
+\section{Le Sloan Digital Sky Survey}
+
+
+Le \emph{Sloan Digital Sky Survey} (SDSS) est né dans les années 1990 de l'ambition de réaliser un relevé spectroscopique à la fois profond et étendu dans le but d'étudier, entre autres, la structuration de l'univers à grande échelle. Cette idée a été rendue possible par l'apparition des capteurs CCD, des spectrographes à fibres optiques ainsi que par les capacités à analyser des lots de données de plus en plus grands. En 1991, la fondation Sloan décide donc d'investir dans ce projet ambitieux, permettant sa construction et lui donnant ainsi son nom. 
+Le téléscope fut construit à l'Apache Point Observatory (APO) au Nouveau Mexique, et la première lumière prise en 1998. Ce télescope capable de mesurer le spectre de centaines d'objets à la fois, générant ainsi de grandes quantités de données, a marqu\'e une nouvelle ère, à la fois en terme de relevé cosmologique et de manière d'analyser de telles quantités de donnés.
+
+\subsection{SDSS I-II-III}
+Les deux premières générations du SDSS, SDDS-I de 2000 à 2005 puis SDSS-II de 2005 à 2008, ont produit plusieurs résultats importants.\\
+Premièrement, un relevé photométrique multi-bandes de plus de $\num{11600}\,\mathrm{deg^{2}}$, couvert par les filtres \emph{u, g, r, i} and \emph{z}\footnote{Ces filtres couvrent les longueurs d'onde allant de $400$ à $1000\,\mathrm{nm}$. Voir~\ref{fig:Filtres}}. Parmis ces $\num{11600}\,\mathrm{deg^{2}}$, \num{7500} forment le relevé contigu appelé \emph{the Legacy Survey}. Ce relevé photométrique a permis de sélectionner plus de \num{930000} galaxies et \num{120000} quasars candidats, afin d'en mesurer les spectres. Il a été rendu public lors de la septième plublication de données de SDSS\footnote{SDSS DR7 : http://www.sdss.org/dr7} et est détaillé dans \cite{Abazajian2008}. Son étude a conduit à la première détection à $3,6\,\sigma$ des BAO \cite{Eisenstein2005}, mesurant ainsi l'échelle BAO moyennée sur le volume, $D_V$, à un redshift effectif de 0,35 et avec une précision de 5\,\%. \\
+Un second relevé photométrique et spectroscopique de $\num{3500}\,\mathrm{deg^{2}}$, contenant \num{460000} étoiles de notre galaxie, a été produit dans le but d'étudier la structure et la composition de la Voie Lactée. Ce relevé est nommé \emph{SEGUE} (Sloan Extension for Galactic Understanding and Exploration \cite{Collaboration2009}).\\
+Enfin, le \emph{SDSS Supernova Survey}, un relevé d'environ $\num{250}\,\mathrm{deg^{2}}$ observé à plusieurs reprises et visant à contraindre l'expansion locale de l'univers grace à l'étude des supernovae de type 1a, a produit un échantillon d'environ 500 SNe 1a, toutes confirmées spectroscopiquement entre $z=0,1$ et $z=0,4$.
+
+\paragraph{}
+Au vu du succès de SDSS-I et II, une troisième géneration de SDSS débuta fin 2008. Elle se compose de 4 relevés différents \cite{Eisenstein2011}, avec le même téléscope que les deux générations précédentes. \\
+Parmi ces relevés figure \emph{SEGUE-2}, suite du programme SEGUE. Il a produit un relevé d'étoiles de la Voie Lactée dans le but de mieux comprendre la formation et l'évolution des galaxies. Le relevé \emph{MARVEL} (Multi Object APO Radial Velocity Exoplanet Large-ara Survey) a opéré de 2008 à 2012. Ce programme étudie les exo-planètes via deux spectrographes interférométrique de 60 fibres chacun, en mesurant la vitesse radiale d'environ \num{11000} étoiles brillantes. \emph{APOGEE-1}, pour APO Galactic Evolution Experiment 1, vise à mieux comprendre la formation et l'évolution des galaxies. Il a produit un relevé spectrométrique dans l'infra rouge de très haute résolution et très haut rapport signal sur bruit d'environ \num{150000} étoiles. Ce relevé ainsi que celui de SEGUE-2 jouent un rôle important dans la compréhension de la formation des galaxies et dans l'étude de la distribution de matière noire à petite échelle.\\
+Enfin, le 4e relevé de SDSS-III est nommé \emph{BOSS}, pour Baryon Oscillation Spectroscopic Survey. Il poursuit la mesure de l'échelle BAO faite avec le Legacy Survey et inclut un nouveau traceur : la forêt Lyman alpha dans le spectre de quasars lointains. Afin d'observer un plus grand nombre d'objets et d'avoir une mesure plus précise, le spectrographe initialement présent sur SDSS a été amélioré : la gamme de longueur d'onde observée est plus grande, le diamètre des fibres a été réduit, ce qui conduit à un nombre total de \num{1000} fibres. Les observations commencèrent en 2009 et se terminèrent, en avance, en 2014. Le temps d'observation restant permit de mener plusieurs programmes d'observation en dark time (\#prov), tel que \emph{SEQUELS} (Sloan Extended QUasars, ELG and LRG Survey) qui a réalisé un relevé de $\num{300}\,\mathrm{deg^{2}}$ avec le spectrographe de BOSS, afin de tester la target selection (\#prov) de SDSS-IV.\\
+BOSS mena à de nombreux résultats importants. Il produisit un relevé de plus de 1,5 million de galaxies, qui donna une mesure de l'échelle BAO avec une précision de 2,1\,\% à un redshift $z=0,32$ (échantillon \emph{LOWZ}) ainsi qu'une mesure à $z=0,57$ avec une précision de 1,0\,\% (échantillon \emph{CMASS}) \cite{Alam2016}. L'étude du \lya conduisit à une mesure de l'échelle BAO à un redshift effectif $z=2,4$ avec une précision de 3\,\% \cite{Bourboux2019}.
+L'ensemble des données de SDSS-III a été rendu public lors de la douzième publication de données de SDSS\footnote{SDSS DR12 : http://www.sdss.org/dr12} \cite{Alam2016}.
+
+
+\subsection{SDSS-IV}
+
+La quatrième génération de SDSS débuta courant 2014. Elle comporte 3 programmes spectroscopiques majeurs \cite{Blanton2017}, dont nous donnons une brève description ici :
+\begin{itemize}
+\item \emph{APOGEE-2}, suite d'APOGEE-1, effectue de la spectroscopie stellaire grâce à un spectrographe de haute résolution dans le proche infrarouge. En plus du relevé dans le \emph{NGC} (North Galactic Cap) mené à l'APO, le programme comporte un relevé dans le \emph{SGC} (South Galactic Cap). Le relevé sud est produit grâce au télescope du Pont, de 2,5 mètres, situé à Las Campanas au Chili. L'objectif final est d'obtenir le spectre de plus de \num{400000} étoiles dans le proche infrarouge, afin d'accéder aux régions clés de la Voie Lactée non-observable en optique, et ainsi mieux comprendre la formation et l'évolution des galaxies.
+\item \emph{MaNGA} est un nouveau programme de SDSS. C'est le premier à utiliser un spectrographe de champ intégré\footnote{\emph{intregral field spectrograph} en anglais}. Contrairement aux programmes précédents qui obtenaient le spectre du centre de la galaxie cible, MaNGA va mesurer le spectre en plusieurs points répartis sur toute la surface de la galaxie observée. Ce procédé va permettre d'étudier la structure interne d'environ \num{10000} galaxies proches ($z < 0,03$), en mesurant notamment les cartes 2D des vitesses et des dispersions de vitesse des étoiles, ainsi que leur  métallicité.
+\item \emph{eBOSS} pour Extended Baryon Oscillation Spectroscopic Survey, est le troisième programme majeur de SDSS-IV. C'est le programme qui fournit les données de ce manuscript, il est décrit en détail dans la section suivante ainsi que dans \cite{Dawson2015}. En plus du programme principal, eBOSS inclut deux sous-programmes : \emph{SPIDERS} et \emph{TDSS}.
+  
+  SPIDERS étudie la nature des émissions en X. Il utilise 5\,\% des fibres d'eBOSS afin de viser des sources émettant en X. Ces sources sont issues principalement du relevé \emph{ROSAT All Sky Survey} ainsi que des sources observées par le satellite \emph{eROSITA}.
+
+  TDSS vise à comprendre la nature des sources variables. Il utilise lui aussi 5\,\% des fibres d'eBOSS, afin de mesurer le spectre de sources variables présentes dans le relevé \emph{Pan-STARRS1} (PS1) ou dans l'imagerie de SDSS. Parmis les sources identifiées par PS1, environ 60\,\% sont des quasars, et 40\,\% des étoiles variables. A la fin, TDSS aura produit un relevé d'environ \num{200000} spectres, jusqu'à une magnitude limite de 21.
+\end{itemize}
+
+
+
+\section{eBOSS}
+
+Suite au succès important de BOSS, la collaboration SDSS poursuit la mesure de l'échelle BAO avec le programme eBOSS. Il inclut deux nouveaux traceurs, afin de sonder une époque clé qui est l'époque de transition de la domination de la matière à celle de l'énergie noire. \\
+L'objectif principal est d'étendre la mesure de distance effectuée avec les galaxies de BOSS à un redshift $0,6 < z < 1$, ainsi que de faire la première mesure de clustering (\#prov) à l'aide de quasars en tant que traceurs et la première mesure de l'échelle BAO à un redshift $1 < z < 2$. \\
+La précision viśee sur la mesure de distance avec l'échantillon de galaxies est de 1\,\%, et de 2\,\% pour les nouveaux traceurs.
+
+
+
+\subsection{Les traceurs de eBOSS}
+
+Afin d'étendre la gamme de redshift sondée par BOSS, eBOSS inclut donc deux nouveaux traceurs : les ELG et les quasars en tant que traceurs de la matière. Auxquels s'ajoutent les traceurs déja présents dans BOSS : les LRG et les forêts \lya des quasars. Ces traceurs sont présentés ici :
+\begin{itemize}
+\item LRG : l'échantillon de \emph{Luminous Red Galaxies} déja construit lors du programme BOSS est étendu. Un minimum de \num{300000} galaxies confirmées spectroscopiquement est nécessaire dans la gamme de redshift $0,6 < z < 1$ afin d'atteindre la précision de 1\,\% sur l'échelle BAO.
+\item ELG (\emph{Emission Line Galaxies}) : ce sont des galaxies bleues formant beaucoup d'étoiles, facilement identifiables par leurs raies d'émission. Leur relevé couvre les redshifts $0,6 < z < 1,1$ et doit conduire à une mesure à 2\,\% de précision de l'échelle BAO. Un total de \num{190000} ELG devrait constituer l'échantillon final.
+\item QSO : nouveaux traceurs, ils sont utilisés afin de construire un relevé spectroscopique au même titre que les LRG, mais à plus grand redshift. Ils permettent ainsi de mesurer le clustering (\#prov) et l'échelle BAO dans une époque jusque là insondé ($0,9 < z < 2,2$). Cet échantillon peu dense doit mener à une mesure à 2\,\% sur l'échelle BAO. Du fait que ce relevé est dominé par le bruit de grenaille (\emph{shot noise}), une augmentation de statistique se traduit directement par une augmentation sur la précision de la mesure. De futurs relevés pourront ainsi venir compléter cet échantillon.
+\item \lya QSO : ces quasars sont les objets contenant la forêt \lya. Contrairement aux objets ponctuels, la quantité d'information contenue dans la forêt \lya dépend du rapport signal sur bruit. Les quasars \lya de BOSS vérifiant $z > 2,1$ et $0,75 < S/N < 3$ par $\mathrm{\angstrom}$ sont donc réobservés dans eBOSS. Le gain attendu sur le rapport signal sur bruit grâce à cette réobservation est d'environ 40\,\%. La densité moyenne de ces objets est de l'ordre de $8\,deg^{-2}$. \\
+  En plus de ces objets, eBOSS observe de nouveaux quasars \lya, avec une densité moyenne de $18\,deg^{-2}$.
+\end{itemize}
+Ces 4 traceurs sont représentés sur la figure~\ref{fig:eBOSStracers}.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{../img/eBOSS/eBOSStracers}
+  \caption{Représentation des 4 différents traceurs d'eBOSS et leur r\'epartition en redshift.}
+  \label{fig:eBOSStracers}
+\end{figure}
+\paragraph{}
+Une fois le programme eBOSS achevé, le relevé contiendra un échantillon de LRG couvrant la gamme $0,6 < z < 1$ avec une densité de 50 objets par $\mathrm{deg^{2}}$ et une pureté supérieur à 80\,\%. L'échantillon d'ELG couvrira une gamme en redshift légèremment plus haute et contiendra un total de \num{190000} objets avec une pureté supérieur à 74\,\%. Les quasars utilisés pour le clustering (\#prov) constituront un échantillon convrant la gamme $0,9 < z < 2,2$ avec une densité de 90 cibles par $\mathrm{deg^{2}}$ et une pureté supérieur à 50\,\%. Enfin la réobservation des quasars \lya de faible luminosité apportera 8 objets par $\mathrm{deg^{2}}$ à des redshifts $z > 2,1$, auxquels s'ajouteront de nouveaux quasars \lya avec une densité de 18 objets par $\mathrm{deg^{2}}$. \\
+Pour la suite, nous nous intéresserons uniquement aux quasars \lya, qui constituent l'ensemble des données traitées dans cette étude. Ils seront simplement désignés par quasars ou QSO.
+
+
+\subsection{Sélection des cibles}
+
+La sélection des cibles s'effectue sur la base du relevé photomotrique construit par SDSS-I et II dans les bandes \emph{ugriz} et rendu publique lors de la neuvième publication de donnée SDSS\footnote{SDSS DR9 : http://www.sdss.org/dr9}.
+Lors de la construction du catalogue de BOSS, la photométrie provenant de \emph{UKIDSS} (UKIRT Infrared Deep Sky Survey \cite{Lawrence2006}) et de \emph{GALEX} (Galaxy Evolution Explorer \cite{Martin2004}) a été utilisée afin de préciser la sélection des cibles.
+De la même manière, la photométrie de SDSS est complétée par plusieurs relevés afin de définir les nouveaux quasars à observer dans eBOSS :
+\begin{itemize}
+\item Les bandes W1 et W2 ($3,4\,\mu m$ et $4,6\,\mu m$) du relevé photométrique du satellite \emph{WISE} (Wide-field Infrared Survey Explorer, Wright et al. 2010)
+\item La photométrie multi-époque de \emph{PTF} (Palomar Transient Factory \cite{Law2009})
+\item Les données de \emph{FIRST} (Faint Images of the Radio Sky at Twenty-Centimeters \cite{Becker1995})
+\end{itemize}
+
+% Contrairement aux relevés d'objets ponctuels tels que les galaxies, les quasars ne nécessitent pas une homogénéïté importante à travers le relevé. Une distribution aléatoire de quasars est suffisante afin de mesurer le champ de densité d'avant plan. Ceci simplifie énormément la sélection des cibles.
+
+Les relevés d'objets ponctuels utilisés pour la mesure de l'échelle BAO ou du \#prov clustering, tels que les relevés de galaxies, nécessitent une très bonne homogénéïté. Contrairement à ces relevés, les quasars utilisés pour le \lya ne nécessitent pas cette homogénéïté (\#prov expliquer pourquoi). Une distribution quelconque de quasars est suffisante afin de mesurer le champ de densité d'avant plan. Ceci simplifie énormément la sélection des cibles. \\
+Pour BOSS, le relevé de QSO a été construit en utilisant l'algorithme \texttt{XDQSO} (Bovy et al. 2011a,b), ce qui a permis d'avoir un relevé homogène. Comme expliqué précédemment, cette homogénéïté n'est pas nécessaire, mais permet d'autres sciences que la mesure de l'échelle BAO avec le \lya. Par exemple, le papier étudie l'homogénéïté cosmique en utilisant l'échantillon de quasars DR12 de BOSS.
+
+
+\paragraph{} Pour eBOSS, la présence d'un échantillon de quasars à $0,9 < z < 2,2$ destiné à la fois à la mesure de l'échelle BAO et du clustering (\#prov) permet de relacher le critère d'homogénéïté imposé pour BOSS et ainsi augmenter le nombre de cibles. Premièrement, les QSO de BOSS ayant un rapport signal sur bruit $0,75 < S/R < 3$ et ne comprennant pas de BAL sont réobservés. Ces quasars représentent une densité de cible de 8,3\,$deg^{-2}$. A ces quasars s'ajoutent de nouveaux quasars sélectionnés par l'algorythme XDQSO. L'algorythme est utilisé avec des paramètres mon strictes que pour BOSS, afin d'augmenter le nombre de cibles. 6,6\,$deg^{-2}$ nouveaux quasars sont ainsi ajouté à l'échantillon. Ensuite, des quasars sont sélectionnés grace aux données de PTF, à une densité de 3,2\,$deg^{-2}$. Enfin, les catalogues FIRST fournissent de nouveaux quasars potentiels, avec une densité de 1\,$deg^{-2}$.
+
+Ainsi, un total de total d'environ 8 QSO par $deg^{2}$ sera réobservé, accompagné d'environ 18 nouveaux quasars par $deg^{2}$.
+
+% Afin de construire le relevé eBOSS, le même algorythme a été utilisé pour sélectionner les quasars. Cette fois ci, la présence d'un échantillon de quasars à $0.9 < z < 2.2$ destiné à la fois à la mesure de l'échelle BAO et du clustering (\#prov) a permis réduire les critères de sélection des QSO et ainsi de dégrader l'homogénéïté de l'échantillon de quasars \lya afin d'augmenter le nombre de cibles. 
+
+% releve de BOSS : destine a la base pour le Lya, donc pas besoin en soit que ca soit homogene, mais ca a ete construit plus ou moins homogene car ca doit simplifier des choses et ca permet de faire d'autre sciences (papier de Pierre Laurent).
+% eBOSS : on degrade l'homogeneite pour avoir plus de qso (on s'en fiche puisque c'est pour le lya). et de toute facon on a un releve homogene qu'est le releve QSO CORE 0.9 < z < 2.2 dans eBOSS.
+
+\subsection{Pavage du ciel}
+
+Une fois que toutes les cibles ont été sélectionnées grâce aux observations photométriques, la phase d'observation spectroscopique peut commencer. Les données sont acquises via 1~000 fibres optiques insérées dans une plaque, que l'on dispose au centre du plan focal du télescope. 
+Le processus de ``pavage'' consiste donc à assigner chaque cible à une fibre optique dans une plaque d'observation, en minimisant le nombre de plaques nécessaires et en maximisant le nombre de cibles à observer. Cette opération est dirigée par le résultat de l'algorithme de sélection des cibles ainsi que du nombre de fibres disponibles.
+
+Le temps d'exposition d'une plaque est de l'ordre de 1,5 heure, ce qui, étant donné le nombre d'heures allouées à eBOSS, permet d'observer environ 1~800 plaques.
+Chaque plaque couvre une surface de 7\,$\mathrm{deg^{2}}$ sur le ciel. En moyenne, un centre de plaque est assigné tous les 5\,$\mathrm{deg^{2}}$ afin d'éviter les trous dans le relevé. 
+Ainsi, 1~800 plaques peuvent couvrir un relevé d'environ 9\,000\,$\mathrm{deg^{2}}$. 
+
+Parmis les 1~000 fibres disposées sur chaque plaque, 100 sont destinées aux programmes TDSS et SPIDERS. 100 fibres supplémentaires sont reservées à la calibration. Il reste donc 800 fibres par plaque destinées aux traceurs de eBOSS. Ces fibres sont assignées aux LRG et QSO. Le relevé des ELG se fait sur des plaques indépendantes. Afin de mener ce relevé, la taille du relevé des LRG et QSO est réduit de 9~000 à 7~500\,$\mathrm{deg^{2}}$. Ainsi 300 plaques sont rendues disponibles pour l'observation des ELG.
+
+
+\paragraph{} Une fois le pavage du ciel effectué, la position des fibres sur le ciel est convertie en coordonnées dans le plan focal du télescope. Chaque fibre dite de science est positionnée de manière à maximiser la lumière en sortie à 5 400\,$\angstrom$ pour les galaxies et les quasars clustering (\#prov). Pour les quasars \lya, la lumière en sortie est maximisée à 4 000\,$\angstrom$. \\
+En plus des 900 fibres de sciences, 100 sont allouées pour la calibration. Parmis ces 100 fibres, 80 sont destinnées à la soustraction du fond de ciel. Pour chaque plaque, il est requis que chaque spectrographe reçoivent au moins 30 fibres de ciel. Les 20 fibres restantes sont destinnées à la calibration du flux. La calibration se fait en pointant des étoiles standards de type F. De la même manière, parmis ces 20 fibres, au minimum 6 fibres sont requises sur chaque spectrographe.
+
+
+\subsection{Phase d'observation}
+
+Une fois le pavage du ciel réalisé, les plaques sont préparées puis percées. Ces plaques sont des plaques d'aluminium de 3,2\,$mm$ d'épaisseur et de 80\,$cm$ de diamètre. La zone contenant les fibres mesure 65,2\,$cm$ de diamètre. La préparation des plaques est faite à l'université de Washington. Elle est décrite dans \cite{Blanton2017}.
+
+Une fois les plaques prêtes, les observations peuvent commencer. La prise de données a débuté en juillet 2014. Pendant les deux premières années, seules les plaques des LRG et des QSO ont été observées. Les deux années suivantes, les plaques des ELG ont été observées en alternance avec les plaques assignées aux LRG et QSO. Les 305 plaques formant le relevé d'ELG ont fini d'être observées en février 2018. 
+
+En mars 2019, les observations sont arrêtées afin de laisser les autres programmes observer. Contrairement à BOSS, les observations pour eBOSS ont connu un mauvais temps, retardant l'avancement du relevé. Ce retard est essentiellement pris sur l'observation des plaques contenant les LRG et QSO : environ 1~000 plaques sur les 1~500 initialement prévues ont pu être obervées, réduisant le relevé de 7~500 à environ 4~700\,$\mathrm{deg^{2}}$.
+
+
+\subsection{Caractéristiques techniques de l'instrument}
+L'instrument \cite{Gunn2006} utilisé pour eBOSS est celui de SDSS, situé à l'APO. Nous décrivons ici ses composantes importantes.
+
+\subsubsection{Le télescope}
+Le télescope est installé à l'APO. Il est commun à tous les programmes SDSS. Afin de mener à bien ces différents programmes, le télescope doit être capable de réaliser un relevé photométrique d'un quart du ciel, puis mesurer le spectre de millions de cibles identifiées via cette photométrie. Ainsi le télescope nécessite un grand champ de vue, avec très peu de distorsions dans le plan focal. Ces prérequis ont conduit à la construction d'un télescope de 2,5 m de diamètre de type Ritchey-Chrétien. (\#prov mettre un schéma du telescope ?).
+
+Le télescope se compose d'un miroir primaire de 2,5 m de diamètre et d'ouverture f/2,25, et d'un miroire secondaire de 1,08 m de diamètre situé à 3,6 m du miroire primaire. Avec un plan focal situé à 0,76 m derrière le miroire primaire, l'ouverture finale du télescope est f/5. Le champ de vue qui en résulte est de 3$\degres$ de diamètre sur le ciel, correspondant à un diamètre de 0,65 m dans le plan focal. \\
+Le télescope inclut aussi 2 correcteurs optiques. Le premier est un correcteur d'astigmatisme de type Gascoigne. Le second est un jeu de correcteurs hautement asphériques et interchangeables situés près du plan focal. L'un, épais, est utilisé pour la photométrie ; l'autre, beaucoup plus fin, est utilisé lors des phases de spectrométrie.
+
+
+\subsubsection{La caméra}
+L'instrument nécessite une caméra \cite{Gunn1998} capable de couvrir l'entièreté du plan focal du télescope. Le très grand champ de vue du télescope a imposé l'utilisation des CCD les plus grands disponibles à l'époque : les Tektronix Tk2048E. Ces CCD sont des grilles de 2~048$\times$2~048 pixels de 24\,$\mu m$. Etant donné la longueur focale du télescope, ces 24\,$\mu m$ représentent 0,4$\arcsecond$ sur le ciel. Ainsi, la PSF (\#prov) d'une largeur à mi-hauteur d'environ 1$\arcsecond$ est très bien échantillonnée.
+
+La caméra est constituée de 2 modules, le premier comportant 5 (couleurs\footnote{Les 5 couleurs correspondant aux filtres u, g, r, i et z. Voir~\ref{fig:Filtres}}) x 6 (colonnes) CCD est destiné à la photométrie. En plus de ces 30 CCD, 22 400$\times$2~048 CCD (de même taille de pixel) sont ajoutés au dessus et en dessous du module dédié à la photométrie. Ces CCD permettent de relier les étoiles standards brillantes aux objets observés lors de la phase photométrique. Ils constituent le module d'astrométrie. Deux CCD supplémentaires sont ajoutés comme dispositifs de contrôle pour la mise au point. La figure~\ref{fig:CcdSchema} résume leur disposition.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{../img/eBOSS/CcdSchema}
+  \caption{Schéma de la disposition des CCD dans le plan focal du télescope SDSS. Les capteurs 1 à 15 sont les CCD dédiés à la photométrie. Le module d'astrométrie se compose des CCD 16 à 21. Enfin le CCD 22 sert au contrôle de la mise au point.}
+  \label{fig:CcdSchema}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{../img/eBOSS/Filtres}
+  \caption{Efficacité quantique de chacun des 5 filtres utilisés lors de la phase photométrique de SDSS. Les courbes incluent l'efficacité quantique des CCD, ainsi que l'efficacité du système optique. Les courbes en dessous incluent en plus la transmission de l'atmosphère.}
+  \label{fig:Filtres}
+\end{figure}
+
+Lors de la phase d'observation photométrique, la caméra est utilisée en mode \emph{time delay integration} (TDI). Ce mode d'observation consiste à laisser le ciel défiler devant la caméra. La lumière de chaque objet est ainsi accumulée durant tout le transit de l'objet. Cette technique permet de gagner en efficacité d'observation, en réduisant le temps de lecture (qu'il y aurait en mode exposition classique) et le temps de pointage du télescope.
+
+
+\subsubsection{Le spectrographe}
+Une fois la phase de photométrie effectuée et les cibles sélectionnées, la phase de spectroscopie commence. Les plaques d'observations sont disposées au plan focal du télescope (à la place de la camera). Les fibres, insérées dans ces plaques et placées à la position de chaque cible, sont ensuite envoyées vers les spectrographes \cite{Smee2012} afin de mesurer le spectre de ces cibles.
+
+Les spectrographes utilisés dans eBOSS sont les mêmes que ceux utilisés dans BOSS. Ces spectrographes, initialement présents dans SDSS, ont été améliorés afin d'atteindre les objectifs de BOSS. Comparé à SDSS, BOSS a augmenté le nombre de spectres mesurés de 35\,\%, ces objets étant à plus grand redshift, donc de plus faible luminosité. Ainsi le nombre de fibres des spectrographes de BOSS passe de 640 à 1~000. Les objets observés étant plus lointains et donc ayant une taille sur le ciel plus petite, le diamètre de ces fibres est réduit d'un tier, passant à 120\,$\mu m$, afin d'augmenter le rapport signal sur bruit des spectres. BOSS inclut aussi un nouveau traceur : la forêt \lya. Afin de mesurer l'absorption dans la forêt \lya des quasars à un redshift $z=2.2$, la longueur d'onde d'observation minimale a été diminuée de 3~900 à 3~560\,$\angstrom$. De la même manière, la longueur d'onde d'observation maximale à été augmenté de 9~100 à 10~400\,$\angstrom$ pour améliorer la détermination des redshifts de l'échantillon de galaxies.
+
+\paragraph{} Pour limiter les risques de dommage des fibres lors du montage et du démontage des différentes plaques, chaque plaque est montée sur un support rigide. Ce support rigide est appelé cartouche, il comporte la plaque d'observation en aluminium, les 1~000 fibres insérées dans cette plaque, et deux slitheads (\#prov) qui sont ensuite inséré dans chacun des spectrographes. La figure~\ref{fig:CartoucheImage} donne un apperçu de ces cartouches.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.35]{../img/eBOSS/CartoucheImage}
+  \caption{Le schéma de gauche présente les différents éléments d'une cartouche. On peut y reconnaître la plaque en alluminium sur le dessus en gris. Sur la droite, une photo d'une cartouche sur laquelle les fibres optiques ont été insérées dans la plaque d'alluminium. L'extrémité des fibres est reliée aux slitheads (\#prov), visibles à droite et à gauche, qui seront insérés dans les 2 spectrographes. Crédits : \cite{Smee2012}.}
+  \label{fig:CartoucheImage}
+\end{figure}
+
+L'instrument dispose de deux spectrographes. Chacun des spectrographes reçoit via les slitheads 500 fibres optiques. La lumière issue de ces fibres est collimatée grâce à un miroir sphérique. Le faisceau parallèle ainsi créé passe à travers un miroir semi-réfléchissant, permettant de séparer les longueurs d'onde plus petites des longueurs d'onde plus grandes que 6~050\,$\angstrom$. Enfin, chaque demi-faisceau passe au travers d'un grisme, et arrive sur la caméra bleue pour les longueurs d'onde plus petites que 6~050\,$\angstrom$, ou sur la caméra rouge pour les longueurs d'onde plus grandes. La figure~\ref{fig:SchemaSpectro} schématise le fonctionnement des spectrographes.
+Après avoir traversé toutes les pièces d'optique, la lumière arrive sur des CCD de 4~000$\times$4~000 pixels, avec une taille de pixel de 15\,$\mu m$. Ainsi une des dimensions du CCD correspond à la longueur d'onde observée, selon l'axe de dispersion, l'autre dimension parcours les différentes fibres. Selon cette dimension, chaque spectre possède un profil de 3 pixels de large et  est séparé de son voisin par 6 pixels afin d'éviter le cross-talk (\#prov).
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{../img/eBOSS/SchemaSpectro}
+  \caption{Schéma des spectrographes de BOSS. La lumière arrive via les fibres optiques (A). Elle est ensuite collimatée (B) en un faisceau parallèle, puis séparée par le mirroir semi-réfléchissant (C). Les longueurs d'ondes $\lambda < 6050$ sont réfléchies vers la caméra bleu (G), les autres entrent dans le bras rouge (F) du spectrographe. Chaque bras comporte un grisme (D et E), une série de lentille puis le CCD (H et I). Crédits : \cite{Smee2012}.}
+  \label{fig:SchemaSpectro}
+\end{figure}
+
+\subsubsection{Les performances}
+Les améliorations apportées à l'instrument pour BOSS ont permis d'augmenter le nombre maximal de spectres observables par nuit, ainsi que la magnitude limite atteignable. Cette dernière est directement liée à l'efficacité optique du système. L'efficacité optique est définie comme le ratio du flux mesuré d'une source ponctuelle sur le flux de cette même source situé en dehors de l'atmosphère. La figure~\ref{fig:SpectroThroughput} présente les estimations des différentes composantes participant à l'efficacité optique globale de l'instrument, ainsi que la comparaison entre l'efficacité optique mesuré pour SDSS et pour BOSS, en fonction de la longueur d'onde. Grâce aux améliorations apportées pour BOSS, l'efficacité optique a été multipliée par environ un facteur 2.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{../img/eBOSS/SpectroThroughput}
+  \caption{Efficacité optique en fonction de la longueur d'onde. Le panneau de gauche présente les prévisions de l'efficacité optique de l'instrument avec toutes ses composantes. Le panneau de droite présente l'efficacité optique du spectrographe 1 (en haut) et du spectrographe 2 (en bas) de SDSS (noir) et de BOSS (rouge). Crédits : \cite{Smee2012}. \#prov Est-ce que c'est bien visible la fig de droite ?}
+  \label{fig:SpectroThroughput}
+\end{figure}
+
+Le pouvoir de résolution traduit la capacité de l'instrument à identifier et mesurer des raies spectrales. Pour mesurer ce pouvoir de résolution, le spectre de lampes à arc dédiées à la calibration est mesuré, puis chaque raie d'émission est ajustée par une gaussienne de largeur $\sigma_\lambda$. Ce $\sigma_\lambda$ est ensuite ajusté par un polynome en fonction de $\lambda$, ce qui donne une estimation de la largeur d'une raie spectrale en fonction de la longueur d'onde observée. Enfin, le pouvoir de résolution est défini comme $R = \frac{\lambda}{2,35 \times \sigma_\lambda}$. La résolution est donnée par le dénominateur : la largeur à mi-hauteur de la gaussienne. Le pouvoir de résolution a été mesuré sur 100 plaques SDSS et 100 plaques BOSS. La comparaison est présentée sur la figure~\ref{fig:SpectroResoPower}. Le pouvoir de résolution est sensiblement moins grand pour BOSS que pour SDSS, mais reste au dessus des prérequis.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{../img/eBOSS/SpectroResoPower}
+  \caption{Pouvoir de résolution en fonction de la longueur d'onde pour les spectrographes de SDSS (rouge) et BOSS (gris). La courbe de gauche correspond à la mesure sur le spectrographe 1, et celle de droite sur le spectrographe 2. Les régions colorées représentent les régions contenant 68\,\% des mesures. Crédits : \cite{Smee2012}.}
+  \label{fig:SpectroResoPower}
+\end{figure}
+
+
+\subsection{Résultats}
+
+\#prov Ca sera plus simple à remplir une fois que le papier de cosmo eBOSS sera sorti.
+
+\section{DESI}
+
+Le \emph{Dark Energy Spectroscopic Instrument} (DESI) \cite{DESICollaboration2016} est un projet américain de mesure d'énergie noire de génération 4. Il a vu sa première lumière en octobre 2019 et devrait commencer la prise de données en juillet 2020. (\#prov Commissionning octobre 2019 - fev 2020 puis 3 mois de SV pour tester la TS, qualité des spectres pour la détermination du redshift (temps d'exposition), puis dernier mois de SV oú on fait 1\,\% du survey avec la config choisie (TS entre autre). A la fin de ce mois là, soit on garde et on continue le survey, soit on retouche la TS par exemple, et on part pour le survey (dans ce cas le 1\,\% est perdu).)
+
+Comme eBOSS, DESI étudie les BAO et la croissance des structures à l'aide d'un très grand relevé de galaxies et de quasars. A l'issue des 5 ans d'observation prévus, DESI aura mesuré plus de 30 millions de spectres, distribués sur un relevé de plus de 14~000\,$\mathrm{deg^{2}}$. \\
+Pour atteindre ses objectifs, DESI utilise le télescope Mayall, mesurant 4\,m de diamètre et situé au Kitt Peak en Arizona. Le champ de vue du télescope est le même que celui de SDSS : 3$\degres$ de diamètre sur le ciel. L'instrument inclut aussi un système de fibre optique, au nombre de 5~000, mais celles ci sont placées au plan focal à l'aide de robots qui ajustent la position de chaque fibre avant chaque exposition. 10 spectrographes reçoivent ces fibres, chacun comportant 3 caméras et couvrant les longueurs d'onde de 3~600 à 9~800\,$\angstrom$. \\
+% L'instrument inclut 5~000 fibres, dont le placement au plan focal est robotisé. Les fibres sont envoyés vers 10 spectrographes, chacun comportant 3 caméras et couvrant les longueurs d'onde de 3~600 à 9~800\,$\angstrom$. \\
+‌‌DESI utilise les 4 mêmes traceurs qu'eBOSS : les LRG jusqu'à $z=1,0$, les ELG jusqu'à $z=1,7$, ainsi que les quasars en tant que traceurs directs de la matière et les quasars \lya sur la gamme $2,1 < z < 3,5$. En plus de ces traceurs, DESI obervera des galaxies brillantes (BG : \emph{Bright Galaxies}) pendant le dark time (\#prov). Le relevé de ces galaxies contiendra 10 millions d'objets, avec un redshift moyen $z=0,2$.
+
+A la fin des 5 ans d'observations, DESI fournira plus de 30 points de mesure de distance, chacun avec une précision plus petite que le pourcent, et couvrant la gamme $0 < z < 3.5$. La figure~\ref{fig:DesiVsEboss} illustre la différence entre BOSS et DESI pour la mesure de distance de Hubble.\\
+De plus, DESI donnera une mesure de la somme des masses des neutrinos, avec une incentitude de 0,020\,eV. Cette précision est suffisante pour exclure la hiérarchie de masse inversée à 3 $\sigma$ (besoin d'expliquer ce que c'est ? ou sinon citer un papier ?).
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{../img/eBOSS/DesiVsEboss}
+  \caption{Mesure de la distance de Hubble en fonction du redshift. Les points vert (\#prov C'est quoi?), rouge, jaune et bleu donnent les mesures existantes. Les points gris donnent la prédiction pour les galaxies de DESI, les points noirs donnent la prédiction pour les QSO de DESI.}
+  \label{fig:DesiVsEboss}
+\end{figure}
+
+
+\bibliographystyle{unsrt}
+\bibliography{../source/biblio}
+
+
+\end{document}
