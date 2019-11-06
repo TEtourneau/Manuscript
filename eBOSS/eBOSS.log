@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 OCT 2019 09:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 NOV 2019 17:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -364,74 +364,82 @@ File: ../img/eBOSS/eBOSStracers.png Graphic file (type png)
 <use ../img/eBOSS/eBOSStracers.png>
 Package pdftex.def Info: ../img/eBOSS/eBOSStracers.png used on input line 64.
 (pdftex.def)             Requested size: 256.45749pt x 160.09772pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 87.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 90.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [4 <../img/eBOSS/eBOSStracers.png>] [5]
+<../img/eBOSS/SchemaTelescope.png, id=39, 439.6425pt x 432.61626pt>
+File: ../img/eBOSS/SchemaTelescope.png Graphic file (type png)
+
+<use ../img/eBOSS/SchemaTelescope.png>
+Package pdftex.def Info: ../img/eBOSS/SchemaTelescope.png used on input line 14
+3.
+(pdftex.def)             Requested size: 219.82071pt x 216.3076pt.
+
 
 Package frenchb.ldf Warning: Degrees would look better in TS1-encoding:
 (frenchb.ldf)                add \usepackage{textcomp} to the preamble.
-(frenchb.ldf)                Degrees used on input line 130.
+(frenchb.ldf)                Degrees used on input line 147.
 
-<../img/eBOSS/CcdSchema.png, id=38, 764.8575pt x 755.82375pt>
+<../img/eBOSS/CcdSchema.png, id=40, 764.8575pt x 755.82375pt>
 File: ../img/eBOSS/CcdSchema.png Graphic file (type png)
 
 <use ../img/eBOSS/CcdSchema.png>
-Package pdftex.def Info: ../img/eBOSS/CcdSchema.png used on input line 140.
+Package pdftex.def Info: ../img/eBOSS/CcdSchema.png used on input line 156.
 (pdftex.def)             Requested size: 229.45901pt x 226.74887pt.
  [6]
-<../img/eBOSS/Filtres.png, id=44, 662.475pt x 664.4825pt>
+<../img/eBOSS/Filtres.png, id=45, 662.475pt x 664.4825pt>
 File: ../img/eBOSS/Filtres.png Graphic file (type png)
 
 <use ../img/eBOSS/Filtres.png>
-Package pdftex.def Info: ../img/eBOSS/Filtres.png used on input line 147.
+Package pdftex.def Info: ../img/eBOSS/Filtres.png used on input line 163.
 (pdftex.def)             Requested size: 264.9853pt x 265.78828pt.
- [7 <../img/eBOSS/CcdSchema.png>]
-<../img/eBOSS/CartoucheImage.png, id=50, 994.71625pt x 393.47pt>
+ [7 <../img/eBOSS/SchemaTelescope.png>] [8 <../img/eBOSS/CcdSchema.png> <../img
+/eBOSS/Filtres.png>]
+<../img/eBOSS/CartoucheImage.png, id=56, 994.71625pt x 393.47pt>
 File: ../img/eBOSS/CartoucheImage.png Graphic file (type png)
 
 <use ../img/eBOSS/CartoucheImage.png>
-Package pdftex.def Info: ../img/eBOSS/CartoucheImage.png used on input line 163
+Package pdftex.def Info: ../img/eBOSS/CartoucheImage.png used on input line 179
 .
 (pdftex.def)             Requested size: 348.1559pt x 137.71655pt.
 
-<../img/eBOSS/SchemaSpectro.png, id=51, 752.8125pt x 334.24875pt>
+<../img/eBOSS/SchemaSpectro.png, id=57, 752.8125pt x 334.24875pt>
 File: ../img/eBOSS/SchemaSpectro.png Graphic file (type png)
 
 <use ../img/eBOSS/SchemaSpectro.png>
-Package pdftex.def Info: ../img/eBOSS/SchemaSpectro.png used on input line 172.
+Package pdftex.def Info: ../img/eBOSS/SchemaSpectro.png used on input line 187.
 
 (pdftex.def)             Requested size: 376.40532pt x 167.12396pt.
 
-<../img/eBOSS/SpectroThroughput.png, id=52, 979.66pt x 437.635pt>
+<../img/eBOSS/SpectroThroughput.png, id=58, 874.26625pt x 626.34pt>
 File: ../img/eBOSS/SpectroThroughput.png Graphic file (type png)
 
 <use ../img/eBOSS/SpectroThroughput.png>
 Package pdftex.def Info: ../img/eBOSS/SpectroThroughput.png used on input line 
-181.
-(pdftex.def)             Requested size: 391.85706pt x 175.05089pt.
- [8 <../img/eBOSS/Filtres.png>]
-[9 <../img/eBOSS/CartoucheImage.png> <../img/eBOSS/SchemaSpectro.png>]
-<../img/eBOSS/SpectroResoPower.png, id=62, 787.94376pt x 299.1175pt>
+196.
+(pdftex.def)             Requested size: 305.99777pt x 219.22227pt.
+
+<../img/eBOSS/SpectroResoPower.png, id=59, 787.94376pt x 299.1175pt>
 File: ../img/eBOSS/SpectroResoPower.png Graphic file (type png)
 
 <use ../img/eBOSS/SpectroResoPower.png>
-Package pdftex.def Info: ../img/eBOSS/SpectroResoPower.png used on input line 1
-89.
+Package pdftex.def Info: ../img/eBOSS/SpectroResoPower.png used on input line 2
+05.
 (pdftex.def)             Requested size: 393.97092pt x 149.55838pt.
- [10 <../img/eBOSS/SpectroThroughput.png>] (/usr/local/texlive/2017/texmf-dist/
-tex/latex/ucs/data/uni-32.def
+ [9 <../img/eBOSS/CartoucheImage.png>]
+[10 <../img/eBOSS/SchemaSpectro.png> <../img/eBOSS/SpectroThroughput.png>]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-<../img/eBOSS/DesiVsEboss.png, id=68, 972.63374pt x 593.21625pt>
+) [11 <../img/eBOSS/SpectroResoPower.png>]
+<../img/eBOSS/DesiVsEboss.png, id=74, 972.63374pt x 593.21625pt>
 File: ../img/eBOSS/DesiVsEboss.png Graphic file (type png)
 
 <use ../img/eBOSS/DesiVsEboss.png>
-Package pdftex.def Info: ../img/eBOSS/DesiVsEboss.png used on input line 213.
+Package pdftex.def Info: ../img/eBOSS/DesiVsEboss.png used on input line 230.
 (pdftex.def)             Requested size: 291.79237pt x 177.96625pt.
- (./eBOSS.bbl [11 <../img/eBOSS/SpectroResoPower.png>] [12 <../img/eBOSS/DesiVs
-Eboss.png>] [13
+ (./eBOSS.bbl [12 <../img/eBOSS/DesiVsEboss.png>] [13
 
 ] [14]
 Underfull \vbox (badness 7667) has occurred while \output is active []
@@ -445,13 +453,13 @@ a-vid Schle-gel,
 
 [17]) [18] (./eBOSS.aux) ) 
 Here is how much of TeX's memory you used:
- 6396 strings out of 492995
- 84527 string characters out of 6132704
- 167005 words of memory out of 5000000
- 9815 multiletter control sequences out of 15000+600000
+ 6402 strings out of 492995
+ 84714 string characters out of 6132704
+ 168016 words of memory out of 5000000
+ 9820 multiletter control sequences out of 15000+600000
  24573 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,32p,1157b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,32p,1161b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/c
 m-super/cm-super-t1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
@@ -473,10 +481,10 @@ cal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on eBOSS.pdf (18 pages, 1618037 bytes).
+Output written on eBOSS.pdf (18 pages, 1626833 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
+ 163 PDF objects out of 1000 (max. 8388607)
  103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
