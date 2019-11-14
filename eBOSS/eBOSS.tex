@@ -22,7 +22,7 @@ Au vu du succès de SDSS-I et II, une troisième géneration de SDSS débuta fin
 Parmi ces relevés figure \emph{SEGUE-2}, suite du programme SEGUE. Il a produit un relevé d'étoiles de la Voie Lactée dans le but de mieux comprendre la formation et l'évolution des galaxies. Le relevé \emph{MARVEL} (Multi Object APO Radial Velocity Exoplanet Large-ara Survey) a opéré de 2008 à 2012. Ce programme étudie les exo-planètes via deux spectrographes interférométrique de 60 fibres chacun, en mesurant la vitesse radiale d'environ \num{11000} étoiles brillantes. \emph{APOGEE-1}, pour APO Galactic Evolution Experiment 1, vise à mieux comprendre la formation et l'évolution des galaxies. Il a produit un relevé spectrométrique dans l'infra rouge de très haute résolution et très haut rapport signal sur bruit d'environ \num{150000} étoiles. Ce relevé ainsi que celui de SEGUE-2 jouent un rôle important dans la compréhension de la formation des galaxies et dans l'étude de la distribution de matière noire à petite échelle.\\
 Enfin, le 4e relevé de SDSS-III est nommé \emph{BOSS}, pour Baryon Oscillation Spectroscopic Survey. Il poursuit la mesure de l'échelle BAO faite avec le Legacy Survey et inclut un nouveau traceur : la forêt Lyman alpha dans le spectre de quasars lointains. Afin d'observer un plus grand nombre d'objets et d'avoir une mesure plus précise, le spectrographe initialement présent sur SDSS a été amélioré : la gamme de longueur d'onde observée est plus grande, le diamètre des fibres a été réduit, ce qui conduit à un nombre total de \num{1000} fibres. Les observations commencèrent en 2009 et se terminèrent, en avance, en 2014. Le temps d'observation restant permit de mener plusieurs programmes d'observation en dark time (\#prov), tel que \emph{SEQUELS} (Sloan Extended QUasars, ELG and LRG Survey) qui a réalisé un relevé de $\num{300}\,\mathrm{deg^{2}}$ avec le spectrographe de BOSS, afin de tester la target selection (\#prov) de SDSS-IV.\\
 BOSS mena à de nombreux résultats importants. Il produisit un relevé de plus de 1,5 million de galaxies, qui donna une mesure de l'échelle BAO avec une précision de 2,1\,\% à un redshift $z=0,32$ (échantillon \emph{LOWZ}) ainsi qu'une mesure à $z=0,57$ avec une précision de 1,0\,\% (échantillon \emph{CMASS})~\cite{Alam2016}. L'étude du \lya{} conduisit à une mesure de l'échelle BAO à un redshift effectif $z=2,4$ avec une précision de 3\,\%~\cite{Bourboux2019}.
-L'ensemble des données de SDSS-III a été rendu public lors de la douzième publication de données de SDSS\footnote{SDSS DR12 : http://www.sdss.org/dr12}~\cite{Alam2016}.
+L'ensemble des données de SDSS-III a été rendu public lors de la douzième publication de données de SDSS\footnote{SDSS DR12 : http://www.sdss.org/dr12}~\cite{Alam2015}.
 
 
 \subsection{SDSS-IV}
@@ -79,7 +79,7 @@ La sélection des cibles s'effectue sur la base du relevé photométrique réali
 Lors de la construction du catalogue de BOSS, la photométrie provenant de \emph{UKIDSS} (UKIRT Infrared Deep Sky Survey~\cite{Lawrence2006}) et de \emph{GALEX} (Galaxy Evolution Explorer~\cite{Martin2004}) a été utilisée afin de préciser la sélection des cibles.
 De la même manière, la photométrie de SDSS est complétée par plusieurs relevés afin de définir les nouveaux quasars à observer dans eBOSS :
 \begin{itemize}
-\item Les bandes W1 et W2 ($3,4\,\mu m$ et $4,6\,\mu m$) du relevé photométrique du satellite \emph{WISE} (Wide-field Infrared Survey Explorer, CITE:Wright et al. 2010)
+\item Les bandes W1 et W2 ($3,4\,\mu m$ et $4,6\,\mu m$) du relevé photométrique du satellite \emph{WISE} (Wide-field Infrared Survey Explorer~\cite{Wright2010})
 \item La photométrie multi-époque de \emph{PTF} (Palomar Transient Factory~\cite{Law2009})
 \item Les données de \emph{FIRST} (Faint Images of the Radio Sky at Twenty-Centimeters~\cite{Becker1995})
 \end{itemize}
@@ -87,7 +87,7 @@ De la même manière, la photométrie de SDSS est complétée par plusieurs rele
 % Contrairement aux relevés d'objets ponctuels tels que les galaxies, les quasars ne nécessitent pas une homogénéïté importante à travers le relevé. Une distribution aléatoire de quasars est suffisante afin de mesurer le champ de densité d'avant plan. Ceci simplifie énormément la sélection des cibles.
 
 % Les relevés d'objets utilisés en tant que traceurs directs pour la mesure de l'échelle BAO ou du \#prov clustering, tels que les relevés de galaxies, nécessitent une très bonne homogénéïté. Contrairement à ces relevés, les quasars utilisés pour le \lya{} ne nécessitent pas cette homogénéïté (\#prov expliquer pourquoi). \\
-\paragraph{} Pour BOSS, le relevé de QSO a été construit en utilisant d'une part l'algorithme \texttt{XDQSO} (CITE:Bovy et al. 2011a,b) pour l'échantillon \texttt{QSO\_CORE}, ce qui a permis d'avoir un échantillon homogène, et d'autre part en incluant des QSO sélectionnés via différentes techniques afin d'augmenter au maximum la densité de quasars \lya{}.
+\paragraph{} Pour BOSS, le relevé de QSO a été construit en utilisant d'une part l'algorithme \texttt{XDQSO}~\cite{Bovy2010a} pour l'échantillon \texttt{QSO\_CORE}, ce qui a permis d'avoir un échantillon homogène, et d'autre part en incluant des QSO sélectionnés via différentes techniques afin d'augmenter au maximum la densité de quasars \lya{}.
 Contrairement aux relevés d'objets utilisés en tant que traceurs directs pour la mesure de l'échelle BAO ou du \#prov clustering, les quasars \lya{} ne nécessitent pas un relevé homogène (\#prov: renvoi vers l'explication).
 C'est pour cette raison que l'échantillon de QSO \lya{} peut être complété sans se soucier de dégrader l'homogénéité.
 Cependant, la présence d'un échantillon homogène de quasars à grand redshift permet d'autres sciences que la mesure de l'échelle BAO.
@@ -115,7 +115,7 @@ Ainsi, un total de total d'environ 8 QSO par $\mathrm{deg^{2}}$ sera réobservé
 \subsection{Pavage du ciel}
 
 Une fois que les cibles ont été sélectionnées grâce aux observations photométriques, la phase d'observation spectroscopique peut commencer. Les données sont acquises via \num{1000} fibres optiques insérées dans une plaque, que l'on dispose au centre du plan focal du télescope. 
-Le processus de ``pavage'' (CITE: Blanton 2003) consiste donc à assigner chaque cible à une fibre optique dans une plaque d'observation, en minimisant le nombre de plaques nécessaires et en maximisant le nombre de cibles à observer. Cette opération est dirigée par le résultat de l'algorithme de sélection des cibles ainsi que du nombre de fibres disponibles. \\
+Le processus de ``pavage''~\cite{Blanton2001} consiste donc à assigner chaque cible à une fibre optique dans une plaque d'observation, en minimisant le nombre de plaques nécessaires et en maximisant le nombre de cibles à observer. Cette opération est dirigée par le résultat de l'algorithme de sélection des cibles ainsi que du nombre de fibres disponibles. \\
 % Le temps d'exposition d'une plaque est de l'ordre de 1,5 heure, ce qui, étant donné le nombre d'heures allouées à eBOSS, permet d'observer environ \num{1800} plaques.
 % Chaque plaque couvre une surface de $7\,\mathrm{deg^{2}}$ sur le ciel. En moyenne, un centre de plaque est assigné tous les $5\,\mathrm{deg^{2}}$ afin d'éviter les trous dans le relevé. 
 % Ainsi, \num{1800} plaques peuvent couvrir un relevé d'environ $\num{9000}\,\mathrm{deg^{2}}$.
@@ -141,7 +141,7 @@ Le télescope est installé à l'APO. Il est commun à tous les programmes SDSS.
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{../img/eBOSS/SchemaTelescope}
-  \caption{Schéma du télescope SDSS. Le miroir principal est représenté en bas en rouge. Le miroir secondaire est visible au sommet du télescope en rouge. Les spectrographes sont représentés en vert sous le télescope. Une cartouche, pas encore disposée au plan focal du télescope, est représentée sous les spectrographes.}
+  \caption{Schéma du télescope SDSS. Le miroir principal est représenté en bas en rouge. Le miroir secondaire est visible au sommet du télescope en rouge. Les spectrographes sont représentés en vert sous le télescope. Une cartouche, pas encore disposée au plan focal du télescope, est représentée sous les spectrographes. Crédits :~\cite{Smee2012}.}
   \label{fig:SchemaTelescope}
 \end{figure}
 Le télescope se compose d'un miroir primaire de $2,5\,\mathrm{m}$ de diamètre et d'ouverture f/2,25, et d'un miroir secondaire de $1,08\,\mathrm{m}$ de diamètre situé à $3,6\,\mathrm{m}$ du miroir primaire. Avec un plan focal situé à $0,76\,\mathrm{m}$ derrière le miroir primaire, l'ouverture finale du télescope est f/5. Le champ de vue qui en résulte est de $3\degres$ de diamètre sur le ciel ($7\,\mathrm{deg^{2}}$), correspondant à un diamètre de $0,65\,\mathrm{m}$ dans le plan focal. \\
