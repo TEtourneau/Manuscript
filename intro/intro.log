@@ -1,10 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 JAN 2020 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 FEB 2020 18:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input {\detokenize{ intro.tex }}
-(./intro.tex (/usr/local/texlive/2017/texmf-dist/tex/latex/base/report.cls
+**intro.tex
+(./intro.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -21,31 +24,41 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (../source/util.sty (/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+)
+(../source/util.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
- (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/utf8x.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-)) (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucs.sty
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
- (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-global.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count88
 \uc@combtoks=\toks16
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2017/05/19 3.10 The Babel package
- (/usr/local/texlive/2017/texmf-dist/tex/generic/babel-french/frenchb.ldf
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-french/frenchb.ldf
 Language: frenchb 2017/04/30 v3.3a French support from the babel system
- (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
@@ -74,24 +87,30 @@ Package babel Info: Making ? an active character on input line 365.
 \leftmarginFB=\skip46
 \parindentFFN=\dimen105
 \FBfnindent=\skip47
-)) (/usr/local/texlive/2017/texmf-dist/tex/latex/carlisle/scalefnt.sty) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks23
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip48
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen106
-)) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen107
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count97
@@ -131,14 +150,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
- (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-) (/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count109
@@ -153,44 +176,364 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen121
 \Gm@layoutvoffset=\dimen122
 \Gm@dimlist=\toks29
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/SIunits/SIunits.sty
-Package: SIunits 2007/12/02 v1.36 Support for the International System of units (MH)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2017/05/13 L3 programming layer (loader) 
 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2017/05/13 L3 programming layer (code)
+\c_max_int=\count112
+\l_tmpa_int=\count113
+\l_tmpb_int=\count114
+\g_tmpa_int=\count115
+\g_tmpb_int=\count116
+\g__prg_map_int=\count117
+\c_log_iow=\count118
+\l_iow_line_count_int=\count119
+\l__iow_line_target_int=\count120
+\l__iow_one_indent_int=\count121
+\l__iow_indent_int=\count122
+\c_zero_dim=\dimen123
+\c_max_dim=\dimen124
+\l_tmpa_dim=\dimen125
+\l_tmpb_dim=\dimen126
+\g_tmpa_dim=\dimen127
+\g_tmpb_dim=\dimen128
+\c_zero_skip=\skip51
+\c_max_skip=\skip52
+\l_tmpa_skip=\skip53
+\l_tmpb_skip=\skip54
+\g_tmpa_skip=\skip55
+\g_tmpb_skip=\skip56
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+\l_keys_choice_int=\count123
+\c__fp_leading_shift_int=\count124
+\c__fp_middle_shift_int=\count125
+\c__fp_trailing_shift_int=\count126
+\c__fp_big_leading_shift_int=\count127
+\c__fp_big_middle_shift_int=\count128
+\c__fp_big_trailing_shift_int=\count129
+\c__fp_Bigg_leading_shift_int=\count130
+\c__fp_Bigg_middle_shift_int=\count131
+\c__fp_Bigg_trailing_shift_int=\count132
+\c__fp_rand_size_int=\count133
+\c__fp_rand_four_int=\count134
+\c__fp_rand_eight_int=\count135
+\l__sort_length_int=\count136
+\l__sort_min_int=\count137
+\l__sort_top_int=\count138
+\l__sort_max_int=\count139
+\l__sort_true_max_int=\count140
+\l__sort_block_int=\count141
+\l__sort_begin_int=\count142
+\l__sort_end_int=\count143
+\l__sort_A_int=\count144
+\l__sort_B_int=\count145
+\l__sort_C_int=\count146
+\c_empty_box=\box28
+\l_tmpa_box=\box29
+\l_tmpb_box=\box30
+\g_tmpa_box=\box31
+\g_tmpb_box=\box32
+\l__box_top_dim=\dimen129
+\l__box_bottom_dim=\dimen130
+\l__box_left_dim=\dimen131
+\l__box_right_dim=\dimen132
+\l__box_top_new_dim=\dimen133
+\l__box_bottom_new_dim=\dimen134
+\l__box_left_new_dim=\dimen135
+\l__box_right_new_dim=\dimen136
+\l__box_internal_box=\box33
+\l__coffin_internal_box=\box34
+\l__coffin_internal_dim=\dimen137
+\l__coffin_offset_x_dim=\dimen138
+\l__coffin_offset_y_dim=\dimen139
+\l__coffin_x_dim=\dimen140
+\l__coffin_y_dim=\dimen141
+\l__coffin_x_prime_dim=\dimen142
+\l__coffin_y_prime_dim=\dimen143
+\c_empty_coffin=\box35
+\l__coffin_aligned_coffin=\box36
+\l__coffin_aligned_internal_coffin=\box37
+\l_tmpa_coffin=\box38
+\l_tmpb_coffin=\box39
+\l__coffin_display_coffin=\box40
+\l__coffin_display_coord_coffin=\box41
+\l__coffin_display_pole_coffin=\box42
+\l__coffin_display_offset_dim=\dimen144
+\l__coffin_display_x_dim=\dimen145
+\l__coffin_display_y_dim=\dimen146
+\l__coffin_bounding_shift_dim=\dimen147
+\l__coffin_left_corner_dim=\dimen148
+\l__coffin_right_corner_dim=\dimen149
+\l__coffin_bottom_corner_dim=\dimen150
+\l__coffin_top_corner_dim=\dimen151
+\l__coffin_scaled_total_height_dim=\dimen152
+\l__coffin_scaled_width_dim=\dimen153
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count147
+\l__driver_tmp_box=\box43
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2017/05/13 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count148
+\g__xparse_grabber_int=\count149
+\l__xparse_m_args_int=\count150
+\l__xparse_mandatory_args_int=\count151
+\l__xparse_v_nesting_int=\count152
+)
+Package: siunitx 2017/05/19 v2.7g A comprehensive (SI) units package
 
-\@qskwidth=\skip51
-\symgreek=\mathgroup4
-(/usr/local/texlive/2017/texmf-dist/tex/latex/SIunits/SIunits.cfg)) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen154
+\extrarowheight=\dimen155
+\NC@list=\toks30
+\extratabsurround=\skip57
+\backup@length=\skip58
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2017/05/13 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box44
+\l__siunitx_tmp_dim=\dimen156
+\l__siunitx_tmp_int=\count153
+\l__siunitx_number_mantissa_length_int=\count154
+\l__siunitx_number_uncert_length_int=\count155
+\l__siunitx_round_int=\count156
+\l__siunitx_process_decimal_int=\count157
+\l__siunitx_process_uncertainty_int=\count158
+\l__siunitx_process_fixed_int=\count159
+\l__siunitx_process_integer_min_int=\count160
+\l__siunitx_process_precision_int=\count161
+\l__siunitx_group_min_int=\count162
+\l__siunitx_angle_marker_box=\box45
+\l__siunitx_angle_unit_box=\box46
+\l__siunitx_angle_marker_dim=\dimen157
+\l__siunitx_angle_unit_dim=\dimen158
+\l__siunitx_unit_int=\count163
+\l__siunitx_unit_denominator_int=\count164
+\l__siunitx_unit_numerator_int=\count165
+\l__siunitx_unit_prefix_int=\count166
+\l__siunitx_unit_prefix_base_int=\count167
+\l__siunitx_unit_prefix_gram_int=\count168
+\l__siunitx_number_product_int=\count169
+\c__siunitx_one_fill_skip=\skip59
+\l__siunitx_table_unit_align_skip=\skip60
+\l__siunitx_table_exponent_dim=\dimen159
+\l__siunitx_table_integer_dim=\dimen160
+\l__siunitx_table_mantissa_dim=\dimen161
+\l__siunitx_table_marker_dim=\dimen162
+\l__siunitx_table_result_dim=\dimen163
+\l__siunitx_table_uncert_dim=\dimen164
+\l__siunitx_table_fill_pre_dim=\dimen165
+\l__siunitx_table_fill_post_dim=\dimen166
+\l__siunitx_table_fill_mid_dim=\dimen167
+\l__siunitx_table_pre_box=\box47
+\l__siunitx_table_post_box=\box48
+\l__siunitx_table_mantissa_box=\box49
+\l__siunitx_table_result_box=\box50
+\l__siunitx_table_number_align_skip=\skip61
+\l__siunitx_table_text_align_skip=\skip62
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7251.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPostPower with sig. 'mm' on line 7254.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7257.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrePower with sig. 'mm' on line 7260.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIQualifier with sig. 'mm' on line 7263.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7266.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7269.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7284.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \num with sig. 'om' on line 7293.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7302.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrange with sig. 'omm' on line 7311.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7323.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrange with sig. 'ommm' on line 7335.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SI with sig. 'omom' on line 7347.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \sisetup with sig. 'm' on line 7350.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tablenum with sig. 'om' on line 7365.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \si with sig. 'om' on line 7377.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numInBookmark with sig. 'om' on line 7424.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrangeInBookmark with sig. 'omm' on line 7426.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIInBookmark with sig. 'omom' on line 7428.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlistInBookmark with sig. 'omm' on line 7430.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrangeInBookmark with sig. 'ommm' on line 7432.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \siInBookmark with sig. 'om' on line 7433.
+.................................................
+\g__file_internal_ior=\read1
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator-lang
+uage-mappings.tex)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
- (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count112
+\Gread@gobject=\count170
 ))
-\Gin@req@height=\dimen123
-\Gin@req@width=\dimen124
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
- (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/SIstyle/sistyle.sty
-Package: sistyle 2008/07/16 v2.3a SI units and numbers (DNJ Els)
-\ttoks@A=\toks30
-\ttoks@B=\toks31
-)) (./intro.aux)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen170
+\lightrulewidth=\dimen171
+\cmidrulewidth=\dimen172
+\belowrulesep=\dimen173
+\belowbottomsep=\dimen174
+\aboverulesep=\dimen175
+\abovetopsep=\dimen176
+\cmidrulesep=\dimen177
+\cmidrulekern=\dimen178
+\defaultaddspace=\dimen179
+\@cmidla=\count171
+\@cmidlb=\count172
+\@aboverulesep=\dimen180
+\@belowrulesep=\dimen181
+\@thisruleclass=\count173
+\@lastruleclass=\count174
+\@thisrulewidth=\dimen182
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip63
+\enit@outerparindent=\dimen183
+\enit@toks=\toks31
+\enit@inbox=\box51
+\enitdp@description=\count175
+)
+\tablebox=\box52
+\tablewidth=\dimen184
+)
+(./intro.aux)
+\openout1 = `intro.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
@@ -203,37 +546,17 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 6.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 6.
- (/Users/tetourne/.emacs.d/elpa/auctex-12.1.2/latex/preview.sty
-Package: preview 2017/04/24 12.1 (AUCTeX/preview-latex)
- (/usr/local/texlive/2017/texmf-dist/tex/generic/luatex85/luatex85.sty
-Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
-)
-(/Users/tetourne/.emacs.d/elpa/auctex-12.1.2/latex/prtightpage.def
-\PreviewBorder=\dimen125
-) (/Users/tetourne/.emacs.d/elpa/auctex-12.1.2/latex/prauctex.def
-No auxiliary output files.
-
-
-\hbadness=\count113
-\hfuzz=\dimen126
-(/Users/tetourne/.emacs.d/elpa/auctex-12.1.2/latex/prauctex.cfg)) (/Users/tetourne/.emacs.d/elpa/auctex-12.1.2/latex/prfootnotes.def)
-\pr@snippet=\count114
-\pr@box=\box28
-\pr@output=\toks32
-
-Preview: Fontsize 10.95pt
-Preview: PDFoutput 1
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 LaTeX Info: Redefining \degres on input line 6.
 LaTeX Info: Redefining \dots on input line 6.
+Package frenchb.ldf Info: Setting StandardItemizeEnv=true for
+(frenchb.ldf)             compatibility with enumitem package,
+(frenchb.ldf)             reported on input line 6.
+Package frenchb.ldf Info: Setting StandardEnumerateEnv=true for
+(frenchb.ldf)             compatibility with enumitem package,
+(frenchb.ldf)             reported on input line 6.
 LaTeX Info: Redefining \up on input line 6.
 
 *geometry* driver: auto-detecting
@@ -270,22 +593,31 @@ LaTeX Info: Redefining \up on input line 6.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-basic-dictionary/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/05/19 v2.7g siunitx: Abbreviated units
+) (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen127
-\scratchbox=\box29
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen128
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count176
+\scratchdimen=\dimen185
+\scratchbox=\box53
+\nofMPsegments=\count177
+\nofMParguments=\count178
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count179
+\MPscratchDim=\dimen186
+\MPnumerator=\count180
+\makeMPintoPDFobject=\count181
+\everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -293,1154 +625,194 @@ Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
- (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-)) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
-./intro.tex:7: Preview: Snippet 1 started.
-<-><->
-      
-l.7 \chapter
-            {Introduction à la cosmologie}
-Not a real error.
+\c__siunitx_mathsf_int=\count182
+\c__siunitx_mathtt_int=\count183
 
 Chapitre 1.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-Preview: Tightpage -32891 -32891 32891 32891
-./intro.tex:7: Preview: Snippet 1 ended.(8192000+316971x27970198).
-<-><->
-      
-l.7 \chapter{Introduction à la cosmologie}
-                                           
-Not a real error.
-
-[1
-
-
-
-
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: Citation `CITE' on page 1 undefined on input line 9.
 
-./intro.tex:11: Preview: Snippet 2 started.
-<-><->
-      
-l.11 \section
-             {Qu'est-ce que la cosmologie ?}
-Not a real error.
-
-./intro.tex:11: Preview: Snippet 2 ended.(651269+183455x27970198).
-<-><->
-      
-l.11 \section{Qu'est-ce que la cosmologie ?}
-                                            
-Not a real error.
-
-[2
-
-]
-./intro.tex:14: Preview: Snippet 3 started.
-<-><->
-      
-l.14 \begin{figure}
-                   
-Not a real error.
-
-<../img/intro/cosmohindoue.png, id=12, 111.2958pt x 149.358pt>
+<../img/intro/cosmohindoue.png, id=1, 111.2958pt x 149.358pt>
 File: ../img/intro/cosmohindoue.png Graphic file (type png)
- <use ../img/intro/cosmohindoue.png>
+
+<use ../img/intro/cosmohindoue.png>
 Package pdftex.def Info: ../img/intro/cosmohindoue.png used on input line 16.
 (pdftex.def)             Requested size: 111.29552pt x 149.35762pt.
- <../img/intro/genese.png, id=14, 117.0774pt x 156.585pt>
+
+<../img/intro/genese.png, id=3, 117.0774pt x 156.585pt>
 File: ../img/intro/genese.png Graphic file (type png)
- <use ../img/intro/genese.png>
+
+<use ../img/intro/genese.png>
 Package pdftex.def Info: ../img/intro/genese.png used on input line 18.
 (pdftex.def)             Requested size: 117.0771pt x 156.58461pt.
-
-./intro.tex:21: Preview: Snippet 3 ended.(12839371+0x27970198).
-<-><->
-      
-l.21 \end{figure}
-                 
-Not a real error.
-
-[3
+ [1
 
 
- <../img/intro/cosmohindoue.png> <../img/intro/genese.png>]
-./intro.tex:28: Preview: Snippet 4 started.
-<-><->
-      
-l.28 ...es de distance d'étoiles proches\footnote
-                                                  {Par exemple la mesure de ...
-Not a real error.
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../img/
+intro/cosmohindoue.png> <../img/intro/genese.png>]
+Underfull \hbox (badness 7522) in paragraph at lines 28--28
+[][][]\T1/cmr/m/n/9 .[]Par exemple la me-sure de la dis-tance de 61 Cy-gni par 
+Bes-sel en 1838. #prov
+ []
 
-./intro.tex:28: Preview: Snippet 4 ended.(598574+0x430178).
-<-><->
-      
-l.28 ...etermination-de-la-distance-d-une-etoile/}
-                                                  . L'idée de galaxie, un s...
-Not a real error.
-
-[4]
-./intro.tex:30: Preview: Snippet 5 started.
-<-><->
-      
-l.30 \paragraph
-               {}
-Not a real error.
-
-./intro.tex:30: Preview: Snippet 5 ended.(0+0x0).
-<-><->
-      
-l.30 \paragraph{}
-                 
-Not a real error.
-
-[5
-
-]
-./intro.tex:33: Preview: Snippet 6 started.
-<-><->
-      
-l.33 ...bserve le décalage vers le rouge\footnote
-                                                  {voir explication du redsh...
-Not a real error.
-
-./intro.tex:33: Preview: Snippet 6 ended.(598574+0x430178).
-<-><->
-      
-l.33 ...xplication du redshift section \#prov:ref}
-                                                   du spectre d'objets loint...
-Not a real error.
-
-[6]
-./intro.tex:33: Preview: Snippet 7 started.
-<-><->
-      
-l.33 ...imation de la constante de Hubble\footnote
-                                                  {Constante reliant proport...
-Not a real error.
-
-./intro.tex:33: Preview: Snippet 7 ended.(598574+0x430178).
-<-><->
-      
-l.33 ...alaxies à leur distance, voir \#prov:ref}
-                                                  . En 1929, Edwin Hubble pu...
-Not a real error.
-
-[7]
-./intro.tex:35: Preview: Snippet 8 started.
-<-><->
-      
-l.35 ... \emph{constante cosmologique}, et noté $
-                                                  \Lambda$. Cette constante ...
-Not a real error.
-
-./intro.tex:35: Preview: Snippet 8 ended.(490372+0x498347).
-<-><->
-      
-l.35 ...onstante cosmologique}, et noté $\Lambda$
-                                                  . Cette constante est rajo...
-Not a real error.
-
-[8]
-./intro.tex:37: Preview: Snippet 9 started.
-<-><->
-      
-l.37 \paragraph
-               {}
-Not a real error.
-
-./intro.tex:37: Preview: Snippet 9 ended.(0+0x0).
-<-><->
-      
-l.37 \paragraph{}
-                 
-Not a real error.
-
-[9
-
-]
-./intro.tex:43: Preview: Snippet 10 started.
-<-><->
-      
-l.43 \begin{figure}
-                   
-Not a real error.
-
-<../img/intro/univershistory2.png, id=43, 1043.9pt x 653.44125pt>
+[2] <../img/intro/univershistory2.png, id=25, 1043.9pt x 653.44125pt>
 File: ../img/intro/univershistory2.png Graphic file (type png)
- <use ../img/intro/univershistory2.png>
-Package pdftex.def Info: ../img/intro/univershistory2.png used on input line 45.
+
+<use ../img/intro/univershistory2.png>
+Package pdftex.def Info: ../img/intro/univershistory2.png used on input line 45
+.
 (pdftex.def)             Requested size: 365.37047pt x 228.70786pt.
 
-./intro.tex:48: Preview: Snippet 10 ended.(19348620+0x27970198).
-<-><->
-      
-l.48 \end{figure}
-                 
-Not a real error.
-
-[10
-
-
- <../img/intro/univershistory2.png>]
-./intro.tex:51: Preview: Snippet 11 started.
-<-><->
-      
-l.51 \section
-             {Le modèle \lcdm{}}
-Not a real error.
-
-./intro.tex:51: Preview: Snippet 11 ended.(651269+0x27970198).
-<-><->
-      
-l.51 \section{Le modèle \lcdm{}}
-                                 
-Not a real error.
-
-[11
-
-]
-./intro.tex:53: Preview: Snippet 12 started.
-<-><->
-      
-l.53 ...ou aussi appelé constante cosmologique ($
-                                                  \Lambda$), et de matière ...
-Not a real error.
-
-./intro.tex:53: Preview: Snippet 12 ended.(490372+0x498347).
-<-><->
-      
-l.53 ... appelé constante cosmologique ($\Lambda$
-                                                  ), et de matière noire fr...
-Not a real error.
-
-[12]
-./intro.tex:54: Preview: Snippet 13 started.
-<-><->
-      
-l.54 \begin{figure}
-                   
-Not a real error.
-
-<../img/intro/lcdm.png, id=55, 575.14874pt x 493.845pt>
+<../img/intro/lcdm.png, id=26, 575.14874pt x 493.845pt>
 File: ../img/intro/lcdm.png Graphic file (type png)
- <use ../img/intro/lcdm.png>
+
+<use ../img/intro/lcdm.png>
 Package pdftex.def Info: ../img/intro/lcdm.png used on input line 56.
 (pdftex.def)             Requested size: 172.54594pt x 148.15463pt.
 
-./intro.tex:59: Preview: Snippet 13 ended.(11395614+0x27970198).
-<-><->
-      
-l.59 \end{figure}
-                 
-Not a real error.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[13
+ [3]
+[4 <../img/intro/univershistory2.png> <../img/intro/lcdm.png>]
 
-
- <../img/intro/lcdm.png>]
-./intro.tex:62: Preview: Snippet 14 started.
-<-><->
-      
-l.62 ...forme d'une matière non standard\footnote
-                                                  {Non-décrite par le modè...
-Not a real error.
-
-./intro.tex:62: Preview: Snippet 14 ended.(598574+0x430178).
-<-><->
-      
-l.62 ...le standard de la physique des particules}
-                                                   intéragissant uniquement...
-Not a real error.
-
-[14]
-./intro.tex:65: Preview: Snippet 15 started.
-<-><->
-      
-l.65 ...ps noir, avec une température d'environ $
-                                                  3\,\mathrm{K}$, et possèd...
-Not a real error.
-
-./intro.tex:65: Preview: Snippet 15 ended.(490372+0x1036561).
-<-><->
-      
-l.65 ...une température d'environ $3\,\mathrm{K}$
-                                                  , et possède des anisotro...
-Not a real error.
-
-[15]
-./intro.tex:65: Preview: Snippet 16 started.
-<-><->
-      
-l.65 ...lides en faveur des modèles de big bang.}
-                                                  
-Not a real error.
-
-./intro.tex:65: Preview: Snippet 16 ended.(490372+139537x5821426).
-<-><->
-      
-l.65 ...lides en faveur des modèles de big bang.}
-                                                  
-Not a real error.
-
-[16]
-./intro.tex:65: Preview: Snippet 17 started.
-<-><->
-      
-l.65 ...lides en faveur des modèles de big bang.}
-                                                  
-Not a real error.
-
-./intro.tex:65: Preview: Snippet 17 ended.(538214+139537x2112988).
-<-><->
-      
-l.65 ...lides en faveur des modèles de big bang.}
-                                                  
-Not a real error.
-
-[17]
-
-LaTeX Warning: Citation `CITE:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC46596/' on page 3 undefined on input line 65.
+LaTeX Warning: Citation `CITE:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4659
+6/' on page 5 undefined on input line 65.
 
 
-LaTeX Warning: Citation `CITE:planck2018' on page 3 undefined on input line 67.
+LaTeX Warning: Citation `CITE:planck2018' on page 5 undefined on input line 67.
 
-./intro.tex:69: Preview: Snippet 18 started.
-<-><->
-      
-l.69 \subsection
-                {Description du modèle}
-Not a real error.
-
-./intro.tex:69: Preview: Snippet 18 ended.(542724+152880x27970198).
-<-><->
-      
-l.69 \subsection{Description du modèle}
-                                        
-Not a real error.
-
-[18
-
-]
-./intro.tex:71: Preview: Snippet 19 started.
-<-><->
-      
-l.71 ...�nergie, via la célèbre formule\footnote
-                                                  {où $E$ est l'énergie, $...
-Not a real error.
-
-./intro.tex:71: Preview: Snippet 19 ended.(598574+0x430178).
-<-><->
-      
-l.71 ...c$ la vitesse de la lumière dans le vide}
-                                                   $E = mc²$, ainsi que cel...
-Not a real error.
-
-[19]
-./intro.tex:71: Preview: Snippet 20 started.
-<-><->
-      
-l.71 ... la vitesse de la lumière dans le vide} $
-                                                  E = mc²$, ainsi que celle...
-Not a real error.
-
-./intro.tex:71: Preview: Snippet 20 ended.(598574+0x2779786).
-<-><->
-      
-l.71 ...se de la lumière dans le vide} $E = mc²$
-                                                  , ainsi que celle de l'esp...
-Not a real error.
-
-[20]
-./intro.tex:73: Preview: Snippet 21 started.
-<-><->
-      
-l.73 \paragraph
-               {La métrique —}
-Not a real error.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-./intro.tex:73: Preview: Snippet 21 ended.(495234+139502x5460716).
-<-><->
-      
-l.73 \paragraph{La métrique —}
-                                 
-Not a real error.
-
-[21
-
-]
-./intro.tex:75: Preview: Snippet 22 started.
-<-><->
-      
-l.75 \begin{equation}
-                     
-Not a real error.
-
-./intro.tex:78: Preview: Snippet 22 ended.(1765796+0x27970198).
-<-><->
-      
-l.78 \end{equation}
-                   
-Not a real error.
-
-[22
-
-]
-./intro.tex:79: Preview: Snippet 23 started.
-<-><->
-      
-l.79 où $
-          d\Omega = d\theta + sin(\theta) d\phi$ , $R(t)$ rend compte de l'e...
-Not a real error.
-
-./intro.tex:79: Preview: Snippet 23 ended.(538214+179404x6186436).
-<-><->
-      
-l.79 où $d\Omega = d\theta + sin(\theta) d\phi$
-                                                 , $R(t)$ rend compte de l'e...
-Not a real error.
-
-[23]
-./intro.tex:79: Preview: Snippet 24 started.
-<-><->
-      
-l.79 ...d\Omega = d\theta + sin(\theta) d\phi$ , $
-                                                  R(t)$ rend compte de l'exp...
-Not a real error.
-
-./intro.tex:79: Preview: Snippet 24 ended.(538214+179404x1367715).
-<-><->
-      
-l.79 ...ga = d\theta + sin(\theta) d\phi$ , $R(t)$
-                                                   rend compte de l'expansio...
-Not a real error.
-
-[24]
-./intro.tex:79: Preview: Snippet 25 started.
-<-><->
-      
-l.79 ...de l'expansion de l'univers à l'instant $
-                                                  t$, et $k$ vaut soit $1$, ...
-Not a real error.
-
-./intro.tex:79: Preview: Snippet 25 ended.(441393+0x259141).
-<-><->
-      
-l.79 ... l'expansion de l'univers à l'instant $t$
-                                                  , et $k$ vaut soit $1$, $0...
-Not a real error.
-
-[25]
-./intro.tex:79: Preview: Snippet 26 started.
-<-><->
-      
-l.79 ...ansion de l'univers à l'instant $t$, et $
-                                                  k$ vaut soit $1$, $0$ ou $...
-Not a real error.
-
-./intro.tex:79: Preview: Snippet 26 ended.(498346+0x396186).
-<-><->
-      
-l.79 ...sion de l'univers à l'instant $t$, et $k$
-                                                   vaut soit $1$, $0$ ou $-1...
-Not a real error.
-
-[26]
-./intro.tex:79: Preview: Snippet 27 started.
-<-><->
-      
-l.79 ...ivers à l'instant $t$, et $k$ vaut soit $
-                                                  1$, $0$ ou $-1$ selon si l...
-Not a real error.
-
-./intro.tex:79: Preview: Snippet 27 ended.(462465+0x358810).
-<-><->
-      
-l.79 ...ers à l'instant $t$, et $k$ vaut soit $1$
-                                                  , $0$ ou $-1$ selon si l'u...
-Not a real error.
-
-[27]
-./intro.tex:79: Preview: Snippet 28 started.
-<-><->
-      
-l.79 ... à l'instant $t$, et $k$ vaut soit $1$, $
-                                                  0$ ou $-1$ selon si l'univ...
-Not a real error.
-
-./intro.tex:79: Preview: Snippet 28 ended.(462465+0x358810).
-<-><->
-      
-l.79 ...� l'instant $t$, et $k$ vaut soit $1$, $0$
-                                                   ou $-1$ selon si l'univer...
-Not a real error.
-
-[28]
-./intro.tex:79: Preview: Snippet 29 started.
-<-><->
-      
-l.79 ...nstant $t$, et $k$ vaut soit $1$, $0$ ou $
-                                                  -1$ selon si l'univers pos...
-Not a real error.
-
-./intro.tex:79: Preview: Snippet 29 ended.(462465+59802x916960).
-<-><->
-      
-l.79 ...ant $t$, et $k$ vaut soit $1$, $0$ ou $-1$
-                                                   selon si l'univers possè...
-Not a real error.
-
-[29]
-./intro.tex:80: Preview: Snippet 30 started.
-<-><->
-      
-l.80 \begin{figure}
-                   
-Not a real error.
-
-<../img/intro/curvature.png, id=116, 519.9425pt x 169.63374pt>
+) [5]
+<../img/intro/curvature.png, id=47, 519.9425pt x 169.63374pt>
 File: ../img/intro/curvature.png Graphic file (type png)
- <use ../img/intro/curvature.png>
+
+<use ../img/intro/curvature.png>
 Package pdftex.def Info: ../img/intro/curvature.png used on input line 82.
 (pdftex.def)             Requested size: 311.96791pt x 101.78102pt.
+ [6 <../img/intro/curvature.png>]
 
-./intro.tex:85: Preview: Snippet 30 ended.(9287626+0x27970198).
-<-><->
-      
-l.85 \end{figure}
-                 
-Not a real error.
+LaTeX Warning: Citation `prov: Dodelson 2.1.2' on page 7 undefined on input lin
+e 159.
 
-[30
+[7]
 
+LaTeX Warning: Citation `CITE planck + Riess ?' on page 8 undefined on input li
+ne 184.
 
- <../img/intro/curvature.png>]
-./intro.tex:87: Preview: Snippet 31 started.
-<-><->
-      
-l.87 \begin{equation}
-                     
-Not a real error.
+[8]
 
-./intro.tex:90: Preview: Snippet 31 ended.(885627+0x27970198).
-<-><->
-      
-l.90 \end{equation}
-                   
-Not a real error.
+LaTeX Warning: Citation `CITE: Hogg 1999' on page 9 undefined on input line 258
+.
 
-[31
+[9]
 
-]
-./intro.tex:91: Preview: Snippet 32 started.
-<-><->
-      
-l.91 où $
-          a(t) = R(t) / R(t₀)$,  $t₀$ est le présent et $S_{k}$ est dé...
-Not a real error.
+LaTeX Warning: Citation `CITE ref' on page 10 undefined on input line 293.
 
-./intro.tex:91: Preview: Snippet 32 ended.(538214+179404x5558977).
-<-><->
-      
-l.91 où $a(t) = R(t) / R(t₀)$
-                                ,  $t₀$ est le présent et $S_{k}$ est dé...
-Not a real error.
+\tblskip=\dimen187
+\digitwidth=\dimen188
+\signwidth=\dimen189
+\dpwidth=\dimen190
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 329.
 
-[32]
-./intro.tex:91: Preview: Snippet 33 started.
-<-><->
-      
-l.91 où $a(t) = R(t) / R(t₀)$,  $
-                                    t₀$ est le présent et $S_{k}$ est dé...
-Not a real error.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (5.18414pt too wide) detected at line 343
+$\OML/cmm/m/it/10.95 S[] \OMS/cmsy/m/n/10.95 ^^Q \OML/cmm/m/it/10.95 ^^[[]\OT1/
+cmr/m/n/10.95 (
+[]\OML/cmm/m/it/10.95 =\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10
+.95 3)[]$ 
+ []
 
-./intro.tex:91: Preview: Snippet 33 ended.(441393+107642x570441).
-<-><->
-      
-l.91 où $a(t) = R(t) / R(t₀)$,  $t₀$
-                                          est le présent et $S_{k}$ est dé...
-Not a real error.
 
-[33]
-./intro.tex:91: Preview: Snippet 34 started.
-<-><->
-      
-l.91 ...) / R(t₀)$,  $t₀$ est le présent et $
-                                                  S_{k}$ est défini comme
-Not a real error.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-./intro.tex:91: Preview: Snippet 34 ended.(490372+116910x776826).
-<-><->
-      
-l.91 ...t₀)$,  $t₀$ est le présent et $S_{k}$
-                                                   est défini comme
-Not a real error.
-
-[34]
-./intro.tex:92: Preview: Snippet 35 started.
-<-><->
-      
-l.92 \begin{align}
-                  
-Not a real error.
-
-./intro.tex:100: Preview: Snippet 35 ended.(2673867+0x27970198).
-<-><->
-      
-l.100 \end{align}
-                 
-Not a real error.
-
-[35]
-./intro.tex:101: Preview: Snippet 36 started.
-<-><->
-      
-l.101 ...ermet de mettre en évidence le rapport $
-                                                  a(t)$, appelé facteur d'�...
-Not a real error.
-
-./intro.tex:101: Preview: Snippet 36 ended.(538214+179404x1196617).
-<-><->
-      
-l.101 ... de mettre en évidence le rapport $a(t)$
-                                                  , appelé facteur d'échel...
-Not a real error.
-
-[36]
-./intro.tex:101: Preview: Snippet 37 started.
-<-><->
-      
-l.101 .... Afin de rendre compte de l'expansion, $
-                                                  a(t) < 1$ pour $t < t₀$ ...
-Not a real error.
-
-./intro.tex:101: Preview: Snippet 37 ended.(538214+179404x2512247).
-<-><->
-      
-l.101 ... rendre compte de l'expansion, $a(t) < 1$
-                                                   pour $t < t₀$ (passé) ...
-Not a real error.
-
-[37]
-./intro.tex:101: Preview: Snippet 38 started.
-<-><->
-      
-l.101 ... compte de l'expansion, $a(t) < 1$ pour $
-                                                  t < t₀$ (passé) et $a(t...
-Not a real error.
-
-./intro.tex:101: Preview: Snippet 38 ended.(441393+107642x1786402).
-<-><->
-      
-l.101 ...e l'expansion, $a(t) < 1$ pour $t < t₀$
-                                                   (passé) et $a(t) > 1$ po...
-Not a real error.
-
-[38]
-./intro.tex:101: Preview: Snippet 39 started.
-<-><->
-      
-l.101 ... $a(t) < 1$ pour $t < t₀$ (passé) et $
-                                                  a(t) > 1$ pour $t > t₀$ ...
-Not a real error.
-
-./intro.tex:101: Preview: Snippet 39 ended.(538214+179404x2512247).
-<-><->
-      
-l.101 ...1$ pour $t < t₀$ (passé) et $a(t) > 1$
-                                                   pour $t > t₀$ (futur).
-Not a real error.
-
-[39]
-./intro.tex:101: Preview: Snippet 40 started.
-<-><->
-      
-l.101 ... $t < t₀$ (passé) et $a(t) > 1$ pour $
-                                                  t > t₀$ (futur).
-Not a real error.
-
-./intro.tex:101: Preview: Snippet 40 ended.(441393+107642x1786402).
-<-><->
-      
-l.101 ...�$ (passé) et $a(t) > 1$ pour $t > t₀$
-                                                   (futur).
-Not a real error.
-
-[40]
-./intro.tex:103: Preview: Snippet 41 started.
-<-><->
-      
-l.103 \paragraph
-                {Le redshift —}
-Not a real error.
-
-./intro.tex:103: Preview: Snippet 41 ended.(495234+0x4975770).
-<-><->
-      
-l.103 \paragraph{Le redshift —}
-                                 
-Not a real error.
-
-[41
-
-]
-./intro.tex:104: Preview: Snippet 42 started.
-<-><->
-      
-l.104 ...Similairement à l'effet Doppler\footnote
-                                                  {L'effet Doppler est l'aug...
-Not a real error.
-
-./intro.tex:104: Preview: Snippet 42 ended.(598574+0x430178).
-<-><->
-      
-l.104 ... puis plus grave lorsqu'elle s'éloigne.}
-                                                  , le spectre observé de c...
-Not a real error.
-
-[42]
-./intro.tex:105: Preview: Snippet 43 started.
-<-><->
-      
-l.105 Le redshift, noté $
-                          z$, est défini via la relation
-Not a real error.
-
-./intro.tex:105: Preview: Snippet 43 ended.(308974+0x365289).
-<-><->
-      
-l.105 Le redshift, noté $z$
-                            , est défini via la relation
-Not a real error.
-
-[43]
-./intro.tex:106: Preview: Snippet 44 started.
-<-><->
-      
-l.106 \begin{equation}
-                      
-Not a real error.
-
-./intro.tex:109: Preview: Snippet 44 ended.(1583713+0x27970198).
-<-><->
-      
-l.109 \end{equation}
-                    
-Not a real error.
-
-[44
-
-]
-./intro.tex:110: Preview: Snippet 45 started.
-<-><->
-      
-l.110 où $
-           \lambda_{e}$ est la longueur d'onde émise, et $\lambda_{o}$ la l...
-Not a real error.
-
-./intro.tex:110: Preview: Snippet 45 ended.(498346+107642x709796).
-<-><->
-      
-l.110 où $\lambda_{e}$
-                        est la longueur d'onde émise, et $\lambda_{o}$ la l...
-Not a real error.
-
-[45]
-./intro.tex:110: Preview: Snippet 46 started.
-<-><->
-      
-l.110 ..._{e}$ est la longueur d'onde émise, et $
-                                                  \lambda_{o}$ la longueur d...
-Not a real error.
-
-./intro.tex:110: Preview: Snippet 46 ended.(498346+107642x720628).
-<-><->
-      
-l.110 ... longueur d'onde émise, et $\lambda_{o}$
-                                                   la longueur d'onde observ...
-Not a real error.
-
-[46]
-./intro.tex:111: Preview: Snippet 47 started.
-<-><->
-      
-l.111 \begin{equation}
-                      
-Not a real error.
-
-./intro.tex:114: Preview: Snippet 47 ended.(1619594+0x27970198).
-<-><->
-      
-l.114 \end{equation}
-                    
-Not a real error.
-
-[47
-
-]
-./intro.tex:115: Preview: Snippet 48 started.
-<-><->
-      
-l.115 ... le spectre d'un objet avec un redshift $
-                                                  z=2$ est décalé vers le ...
-Not a real error.
-
-./intro.tex:115: Preview: Snippet 48 ended.(462465+0x1680919).
-<-><->
-      
-l.115 ...spectre d'un objet avec un redshift $z=2$
-                                                   est décalé vers le roug...
-Not a real error.
-
-[48]
-./intro.tex:117: Preview: Snippet 49 started.
-<-><->
-      
-l.117 \paragraph
-                {Les distances —}
-Not a real error.
-
-./intro.tex:117: Preview: Snippet 49 ended.(495234+0x5799167).
-<-><->
-      
-l.117 \paragraph{Les distances —}
-                                   
-Not a real error.
-
-[49
-
-]
-
-LaTeX Warning: Citation `CITE: Hogg 1999' on page 4 undefined on input line 118.
-
-./intro.tex:121: Preview: Snippet 50 started.
-<-><->
-      
-l.121 \paragraph
-                {Les équations d'Einstein —}
-Not a real error.
-
-./intro.tex:121: Preview: Snippet 50 ended.(495234+139502x9832047).
-<-><->
-      
-l.121 \paragraph{Les équations d'Einstein —}
-                                               
-Not a real error.
-
-[50
-
-]
-./intro.tex:122: Preview: Snippet 51 started.
-<-><->
-      
-l.122 ...instants est toujours extrémale\footnote
-                                                  {Elle est minimale dans la...
-Not a real error.
-
-./intro.tex:122: Preview: Snippet 51 ended.(598574+0x430178).
-<-><->
-      
-l.122 ...nimale dans la grande majorité des cas.}
-                                                  . L'action est une quantit...
-Not a real error.
-
-[51]
-./intro.tex:123: Preview: Snippet 52 started.
-<-><->
-      
-l.123 \begin{equation}
-                      
-Not a real error.
-
-./intro.tex:126: Preview: Snippet 52 ended.(1815259+0x27970198).
-<-><->
-      
-l.126 \end{equation}
-                    
-Not a real error.
-
-[52
-
-]
-./intro.tex:127: Preview: Snippet 53 started.
-<-><->
-      
-l.127 où $
-           L$ est le lagrangien du système. En mécanique newtonienne, il e...
-Not a real error.
-
-./intro.tex:127: Preview: Snippet 53 ended.(490372+0x488380).
-<-><->
-      
-l.127 où $L$
-              est le lagrangien du système. En mécanique newtonienne, il e...
-Not a real error.
-
-[53]
-./intro.tex:127: Preview: Snippet 54 started.
-<-><->
-      
-l.127 ...mme dans les théories de champs\footnote
-                                                  {Par exemple la théorie q...
-Not a real error.
-
-./intro.tex:127: Preview: Snippet 54 ended.(598574+0x430178).
-<-><->
-      
-l.127 ...xemple la théorie quantique des champs.}
-                                                  , le terme du lagrangien e...
-Not a real error.
-
-[54]
-./intro.tex:128: Preview: Snippet 55 started.
-<-><->
-      
-l.128 \begin{equation}
-                      
-Not a real error.
-
-./intro.tex:131: Preview: Snippet 55 ended.(1594726+0x27970198).
-<-><->
-      
-l.131 \end{equation}
-                    
-Not a real error.
-
-[55
-
-]
-./intro.tex:132: Preview: Snippet 56 started.
-<-><->
-      
-l.132 où $
-           g$ est le déterminant de la métrique, $R$ le scalaire de Ricci,...
-Not a real error.
-
-./intro.tex:132: Preview: Snippet 56 ended.(308974+139537x368028).
-<-><->
-      
-l.132 où $g$
-              est le déterminant de la métrique, $R$ le scalaire de Ricci,...
-Not a real error.
-
-[56]
-./intro.tex:132: Preview: Snippet 57 started.
-<-><->
-      
-l.132 ...g$ est le déterminant de la métrique, $
-                                                  R$ le scalaire de Ricci, e...
-Not a real error.
-
-./intro.tex:132: Preview: Snippet 57 ended.(490372+0x550424).
-<-><->
-      
-l.132 ... est le déterminant de la métrique, $R$
-                                                   le scalaire de Ricci, et ...
-Not a real error.
-
-[57]
-./intro.tex:132: Preview: Snippet 58 started.
-<-><->
-      
-l.132 ...métrique, $R$ le scalaire de Ricci, et $
-                                                  G_N$ la constante de Newto...
-Not a real error.
-
-./intro.tex:132: Preview: Snippet 58 ended.(490372+111084x1094983).
-<-><->
-      
-l.132 ...rique, $R$ le scalaire de Ricci, et $G_N$
-                                                   la constante de Newton. U...
-Not a real error.
-
-[58]
-./intro.tex:133: Preview: Snippet 59 started.
-<-><->
-      
-l.133 \begin{equation}
-                      
-Not a real error.
-
-./intro.tex:136: Preview: Snippet 59 ended.(1468097+0x27970198).
-<-><->
-      
-l.136 \end{equation}
-                    
-Not a real error.
-
-[59
-
-]
-./intro.tex:137: Preview: Snippet 60 started.
-<-><->
-      
-l.137 où $
-           g_{\mu \nu}$ est la métrique, $R_{\mu \nu}$ le tenseur de Ricci,...
-Not a real error.
-
-./intro.tex:137: Preview: Snippet 60 ended.(308974+209587x1018280).
-<-><->
-      
-l.137 où $g_{\mu \nu}$
-                        est la métrique, $R_{\mu \nu}$ le tenseur de Ricci,...
-Not a real error.
-
-[60]
-./intro.tex:137: Preview: Snippet 61 started.
-<-><->
-      
-l.137 où $g_{\mu \nu}$ est la métrique, $
-                                           R_{\mu \nu}$ le tenseur de Ricci,...
-Not a real error.
-
-./intro.tex:137: Preview: Snippet 61 ended.(490372+209587x1220879).
-<-><->
-      
-l.137 ...\mu \nu}$ est la métrique, $R_{\mu \nu}$
-                                                   le tenseur de Ricci, $T_{...
-Not a real error.
-
-[61]
-./intro.tex:137: Preview: Snippet 62 started.
-<-><->
-      
-l.137 ...que, $R_{\mu \nu}$ le tenseur de Ricci, $
-                                                  T_{\mu \nu}$ le tenseur é...
-Not a real error.
-
-./intro.tex:137: Preview: Snippet 62 ended.(490372+209587x1095358).
-<-><->
-      
-l.137 ... \nu}$ le tenseur de Ricci, $T_{\mu \nu}$
-                                                   le tenseur énergie-impul...
-Not a real error.
-
-[62]
-./intro.tex:137: Preview: Snippet 63 started.
-<-><->
-      
-l.137 ...\nu}$ le tenseur énergie-impulsion, et $
-                                                  \Lambda$ la constante cosm...
-Not a real error.
-
-./intro.tex:137: Preview: Snippet 63 ended.(490372+0x498347).
-<-><->
-      
-l.137 ... tenseur énergie-impulsion, et $\Lambda$
-                                                   la constante cosmologique...
-Not a real error.
-
-[63]
-./intro.tex:137: Preview: Snippet 64 started.
-<-><->
-      
-l.137 ...lité plusieurs équations. Les indices $
-                                                  \mu$ et $\nu$ varient de 0...
-Not a real error.
-
-./intro.tex:137: Preview: Snippet 64 ended.(308974+139537x432401).
-<-><->
-      
-l.137 ...� plusieurs équations. Les indices $\mu$
-                                                   et $\nu$ varient de 0 à ...
-Not a real error.
-
-[64]
-./intro.tex:137: Preview: Snippet 65 started.
-<-><->
-      
-l.137 ...sieurs équations. Les indices $\mu$ et $
-                                                  \nu$ varient de 0 à 3, 0 ...
-Not a real error.
-
-./intro.tex:137: Preview: Snippet 65 ended.(308974+0x400173).
-<-><->
-      
-l.137 ...rs équations. Les indices $\mu$ et $\nu$
-                                                   varient de 0 à 3, 0 repr...
-Not a real error.
-
-[65]
-./intro.tex:137: Preview: Snippet 66 started.
-<-><->
-      
-l.137 ...Il existe donc une équation par couple $
-                                                  (\mu, \nu)$, produisant 16...
-Not a real error.
-
-./intro.tex:137: Preview: Snippet 66 ended.(538214+179404x1709664).
-<-><->
-      
-l.137 ...onc une équation par couple $(\mu, \nu)$
-                                                  , produisant 16 équations...
-Not a real error.
-
-[66]
-./intro.tex:139: Preview: Snippet 67 started.
-<-><->
-      
-l.139 \paragraph
-                {Les équations de Friedmann-Lemaître —}
-Not a real error.
-
-./intro.tex:139: Preview: Snippet 67 ended.(495234+139502x14643586).
-<-><->
-      
-l.139 ...es équations de Friedmann-Lemaître —}
-                                                  
-Not a real error.
-
-[67
-
-]
 No file intro.bbl.
+[10] [11] (./intro.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5920 strings out of 492995
- 79775 string characters out of 6132704
- 161589 words of memory out of 5000000
- 9330 multiletter control sequences out of 15000+600000
- 26510 words of font info for 74 fonts, out of 8000000 for 9000
+ 15169 strings out of 492995
+ 291986 string characters out of 6132704
+ 335130 words of memory out of 5000000
+ 18544 multiletter control sequences out of 15000+600000
+ 31957 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,17n,32p,2213b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2074.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on intro.pdf (67 pages, 899786 bytes).
+ 39i,16n,35p,10410b,786s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/cm-super/sfti1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+public/cm-super/sftt1095.pfb>
+Output written on intro.pdf (11 pages, 1104799 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
+ 165 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
