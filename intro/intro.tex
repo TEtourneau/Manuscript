@@ -223,8 +223,8 @@ ce qui nous donne finalement
   a(t) \propto t^{\frac{2}{3(1+w)}} .
 \end{equation}
 
-Ce raisonnement s'étend à plusieurs fluides. Selon le fluide considéré, la valeur de $w$ est différente. Nous pouvons déjà distinguer la matière relativiste de la matière non relativiste. La matière non relativiste $(m)$ ou simplement matière, se compose de la matière baryonique\footnote{La matière dite ``ordinaire'', que nous côtoyons dans la vie de tous les jours.} $(b)$ et de la matière noire froide $(c)$. Elle est dite ``pressureless'' (sans pression) car elle possède un paramètre d'état nul : $w_m = 0$. Nous avons alors : $\rho_m \propto a^{-3}$.
-Concernant la matière relativiste, aussi appelée radiation $(r)$ et composée des photons $(\gamma)$ et des neutrinos relativistes $(\nu)$, le paramètre d'état est $w_r = 1/3$, ce qui nous donne $\rho_r \propto a^{-4}$. Nous pouvons remarquer que la densité de matière diminue proportionnellement au volume de l'univers, par simple effet de dilution. La densité de radiation possède un facteur $1/a$ supplémentaire. Ce facteur provient du redshift des photons observés, et s'ajoute au $1/a^3$ de la dilution.
+Ce raisonnement s'étend à plusieurs fluides. Selon le fluide considéré, la valeur de $w$ est différente. Nous pouvons déjà distinguer la matière relativiste de la matière non relativiste. La matière non relativiste $(m)$ ou simplement matière, se compose de la matière baryonique\footnote{La matière dite ``ordinaire'', que nous côtoyons dans la vie de tous les jours.} $(b)$ et de la matière noire froide $(c)$. Elle est dite ``pressureless'' (sans pression) car elle possède un paramètre d'état nul : $w_m = 0$. Nous avons alors : $\rho_m \propto a^{-3}$. \\
+Concernant la matière relativiste, aussi appelée radiation $(r)$, elle composée des photons $(\gamma)$ et des neutrinos relativistes $(\nu)$. Son paramètre d'état est $w_r = 1/3$, ce qui donne $\rho_r \propto a^{-4}$. Nous pouvons remarquer que la densité de matière diminue proportionnellement au volume de l'univers, par simple effet de dilution. La densité de radiation possède un facteur $1/a$ supplémentaire. Ce facteur provient du redshift des photons observés, et s'ajoute au $1/a^3$ de la dilution.
 % dû à l'augmentation de la longueur d'onde des photons avec l'expansion (\#correction fishy, voir avec Jim).
 Afin de travailler avec des quantités sans dimension et normalisées, il est courant d'introduire la densité critique $\rho_{crit} = 3 H_0^2 / 8 \pi G$. L'équation~\ref{eq:friedmann3} s'écrit alors
 \begin{equation}
@@ -268,12 +268,13 @@ ainsi que la distance de Hubble
 \end{equation}
 Nous pouvons alors définir les distances suivantes :
 \begin{itemize}[label=$\bullet$]
-\item la distance comobile : c'est la distance qui sépare 2 objets suivant le flow(\#prov flot ? écoulement ?) de Hubble. Autrement dit, cette mesure représente la distance entre 2 objets s'ils ne subissent pas l'expansion de l'espace. La distance comobile le long de la ligne de visé est définie comme
+\item la distance comobile : c'est la distance qui sépare 2 objets suivant le flow(\#prov flot ? écoulement ?) de Hubble. Deux objets à un redshift $z$ et séparés d'une distance physique $D$ possèdent une distance comobile $(1+z)D$. La distance comobile le long de la ligne de visé est définie comme
   \begin{equation}
     \label{eq:dist_como}
     D_{C} = D_H \int_0^z \frac{dz'}{E(z')} .
   \end{equation}
-  Dans le cas où l'univers n'est pas plat ($\Omega_k \neq 0$), la distance comobile le long de la ligne de visée n'est pas la même que la distance comobile transverse $D_{M}$ :
+  Deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel possèdent une distance comobile $\delta \theta D_M$. $D_M$ est la distance comobile transverse. 
+  Dans le cas où l'univers n'est pas plat ($\Omega_k \neq 0$), la distance comobile transverse $D_M$  n'est pas la même que la distance comobile le long de la ligne de visée $D_{C}$ :
   \begin{equation}
     \label{eq:dist_como_trans}
     D_M = \left\{
@@ -285,9 +286,24 @@ Nous pouvons alors définir les distances suivantes :
     \right..
   \end{equation}
   
-\item La distance de diamètre angulaire : c'est la distance reliée à la taille apparente d'un objet. 
-\end{itemize}
+\item La distance de diamètre angulaire : c'est la distance reliée à la taille apparente d'un objet. Deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel possèdent une distance physique $\delta \theta D_A$. $D_A$ est la distance de diamètre angulaire. Elle diffère de $D_M$ du fait qu'elle considère la distance physique et non comobile entre les deux objets. Elle est donc reliée à $D_M$ par
+  \begin{equation}
+    \label{eq:dist_ang}
+    D_A = \frac{D_M}{1+z}.
+  \end{equation}
 
+\item la distance de luminosité : elle est définie via la relation qui exprime le flux d'une source lumineuse en fonction de sa luminosité
+  \begin{equation}
+    \label{eq:dist_lum}
+    F = \frac{L}{4\pi D_L²} \hspace{0.5cm} \rightarrow \hspace{0.5cm} D_L = \sqrt{\frac{L}{4 \pi F}} .
+  \end{equation}
+  Elle est reliée à la distance comobile transverse via
+  \begin{equation}
+    D_L = (1+z) D_M = (1+z)² D_A ,
+  \end{equation}
+  le facteur (1+z) supplémetaire provenant du fait que les photons sont redshiftés à cause de l'expansion.
+\end{itemize}
+Dans ce manuscrit, les distances qui nous intéressent particulièrement sont $D_C$ et $D_A$. Nous y ferons appel dans la section \#prov ref.
 
 \paragraph{Les paramètres du modèle —} 
 Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés par le satellite Planck~\cite{CITE ref} avec une précision d'environ 1~\% et sont résumés dans le tableau~\ref{table:planck2018}. Les 6 paramètres mesurés par Planck sont
@@ -302,66 +318,66 @@ Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés p
 
 
 \begin{table}[h]
+  \centering
+  \caption{Paramètres cosmologiques mesurés par le satellite Planck. La partie supérieure du tableau indique les six paramètres ajustés aux données. La partie inférieure donne d'autres paramètres déduits de ces six paramètres ajustés. Ces chiffres sont tirés de la table 1.1 de~\ref{CITE ref}}
   \label{table:planck2018}
-  \caption{blabla}
-\vskip -4mm
-\newdimen\tblskip \tblskip=5pt
-\setbox\tablebox=\vbox{
- \newdimen\digitwidth
- \setbox0=\hbox{\rm 0}
- \digitwidth=\wd0
- \catcode`*=\active
- \def*{\kern\digitwidth}
- \newdimen\signwidth
- \setbox0=\hbox{+}
- \signwidth=\wd0
- \catcode`!=\active
- \def!{\kern\signwidth}
- \newdimen\dpwidth
- \setbox0=\hbox{.}
- \dpwidth=\wd0
- \catcode`?=\active
- \def?{\kern\dpwidth}
-\halign{\hbox to 1.2in{#\leaderfil}\tabskip 1em&
-\hfil#\hfil& \hfil#\hfil\tabskip 4em& \hfil#\hfil\tabskip 1em& \hfil#\hfil&
-\hfil#\hfil\tabskip=0pt\cr
-\noalign{\doubleline}
-\omit\hfil Parameter\hfil& {\tt Plik}\ best fit& {\tt Plik}\ [1]& {\tt CamSpec}\ [2]& ($[2]-[1]$)/$\sigma_1$& Combined\cr
-\noalign{\vskip 3pt\hrule\vskip 3pt}
-$\Omega_{\mathrm{b}}h^2$& $0.022383$& $0.02237\pm0.00015$& $0.02229\pm0.00015$& $-0.5$& $0.02233\pm0.00015$\cr
-$\Omega_{\mathrm{c}}h^2$& $0.12011 $& $0.1200\pm0.0012$& $0.1197\pm0.0012$& $-0.3$& $0.1198\pm0.0012$\cr
-$100\theta_{\mathrm{MC}}$& $1.040909$& $1.04092\pm0.00031$& $1.04087\pm0.00031$& $-0.2$& $1.04089\pm0.00031$\cr
-$\tau$& $0.0543$& $0.0544\pm0.0073$& $0.0536^{+0.0069}_{-0.0077}$& $-0.1$& $0.0540\pm0.0074$\cr
-$\ln(10^{10}A_\mathrm{s})$& $3.0448$& $3.044\pm0.014$& $3.041\pm0.015$& $-0.3$& $3.043\pm0.014$\cr
-$n_\mathrm{s}$& $0.96605$& $0.9649\pm0.0042$& $0.9656\pm0.0042$& $+0.2$& $0.9652\pm0.0042$\cr
-\noalign{\vskip 3pt\hrule\vskip 4pt}
-$\Omega_{\mathrm{m}} h^2$ & $ 0.14314 $  &  $ 0.1430\pm 0.0011 $  &  $ 0.1426\pm 0.0011 $  &  $ -0.3 $  &  $ 0.1428\pm 0.0011 $ \cr
-$H_0 \,[\si{\kilo\meter\per\second\per Mpc}]$& $67.32$& $67.36\pm0.54*$& $67.39\pm0.54*$& $+0.1$& $67.37\pm0.54*$\cr
-$\Omega_{\mathrm{m}}$& $0.3158$& $0.3153\pm0.0073$& $0.3142\pm0.0074$& $-0.2$& $0.3147\pm0.0074$\cr
-$\mathrm{Age}\, [\mathrm{Gyr}]$& $13.7971$& $13.797\pm0.023*$& $13.805\pm0.023*$& $+0.4$& $13.801\pm0.024*$\cr
-$\sigma_8$& $0.8120$& $0.8111\pm0.0060$& $0.8091\pm0.0060$& $-0.3$& $0.8101\pm0.0061$\cr
-$S_8\equiv \sigma_8 (\Omega_{\mathrm{m}}/0.3)^{0.5}$& $0.8331$& $0.832\pm0.013$& $0.828\pm0.013$& $-0.3$& $0.830\pm0.013$\cr
-$z_{\mathrm{re}}$& $7.68$& $7.67\pm0.73$& $7.61\pm0.75$& $-0.1$& $7.64\pm0.74$\cr
-$100\theta_\ast$& $1.041085$& $1.04110\pm0.00031$& $1.04106\pm0.00031$& $-0.1$& $1.04108\pm0.00031$\cr
-$r_{\mathrm{drag}} \,[{\rm Mpc}]$& $147.049$& $147.09\pm0.26**$& $147.26\pm0.28**$& $+0.6$& $147.18\pm0.29**$\cr
-\noalign{\vskip 3pt\hrule\vskip 3pt}}}
-\endPlancktablewide
+  \begin{tabular}{lc}
+    \toprule
+    Parameters & Combined \\
+    \midrule
+    $\Omega_{\mathrm{b}}h^2$\dotfill & $0.02233\pm0.00015$ \\
+    $\Omega_{\mathrm{c}}h^2$\dotfill & $0.1198\pm0.0012$ \\
+    $100\theta_{\mathrm{MC}}$\dotfill & $1.04089\pm0.00031$ \\
+    $\tau$\dotfill & $0.0540\pm0.0074$ \\
+    $\ln(10^{10}A_\mathrm{s})$\dotfill & $3.043\pm0.014$ \\
+    $n_\mathrm{s}$\dotfill & $0.9652\pm0.0042$ \\
+    \midrule
+    $\Omega_{\mathrm{m}} h^2$\dotfill & $ 0.1428\pm 0.0011 $ \\
+    $H_0 \,[\si{\kilo\meter\per\second\per Mpc}]$\dotfill & $67.37\pm0.54$ \\
+    $\Omega_{\mathrm{m}}$\dotfill & $0.3147\pm0.0074$ \\
+    $\mathrm{Age}\, [\mathrm{Gyr}]$\dotfill  & $13.801\pm0.024$ \\
+    $\sigma_8$\dotfill & $0.8101\pm0.0061$ \\
+    $S_8\equiv \sigma_8 (\Omega_{\mathrm{m}}/0.3)^{0.5}$\dotfill & $0.830\pm0.013$ \\
+    $z_{\mathrm{re}}$\dotfill & $7.64\pm0.74$ \\
+    $100\theta_\ast$\dotfill & $1.04108\pm0.00031$ \\
+    $r_{\mathrm{drag}} \,[{\rm Mpc}]$\dotfill & $147.18\pm0.29$ \\
+    \bottomrule
+  \end{tabular}
 \end{table}
 
-De ces paramètres se déduisent les autres, notament les densités d'énergies aujourd'hui, dont nous venons de parler.
+De ces 6 paramètres se déduisent les autres, notament les densités d'énergies aujourd'hui, dont nous venons de parler. Certains sont indiqués dans la seconde partie du tableau~\ref{table:planck2018}, dont notamment $r_{drag}$, la taille de l'horizon acoustique aujourd'hui, ou encore $\Omega_m$ la densité relative de matière aujourd'hui. Les paramètres cosmologiques utilisés pour la confection des simulations présentées dans ce manuscrit et par le code d'analyse \picca{} sont légèrement différents de ceux présentés dans le tableau~\ref{table:planck2018}. Les voici :
+\begin{equation}
+  \label{eq:par_cosmo}
+  \Omega_M = \num{0.31457} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_k = \num{0} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_{\Lambda} = \num{0.68543} .
+\end{equation}
 
 
 
 \section{La fonction de corrélation de la matière}
 
-Plus tôt, nous parlions du spectre de puissance des fluctuations primordiales sans avoir auparavant défini de quoi il s'agissait. Nous donnons ici une explication du spectre de puissance, et de son analogue, la fonction de corrélation.
+Plus tôt, nous parlions du spectre de puissance des fluctuations primordiales sans avoir auparavant défini de quoi il s'agissait. Nous donnons ici une explication du spectre de puissance, et de son analogue, la fonction de corrélation, objet d'étude de ce manuscrit.
 
 \subsection{Une analogie avec le son}
 
 Prenons l'exemple d'un instrument de musique très simple : le diapason.
 % Lorsqu'il est joué, le diapason produit une note fixe, caractéristique de l'instrument. Le signal sonore en fonction du temps, qui correspond à l'évolution de la pression de l'air en fonction du temps, est alors très proche d'une sinusoïde.
-Lorsqu'il est joué, le diapason produit un signal sonore, correspondant aux ondes de pression se propageant dans l'air, très proche d'une sinusoïde. La note produite correspond alors à une fréquence particulière, carractéristique de l'instrument. Ce passage, du signal temporel à la fréquence correspondante, correspond à la transformé de fourrier. Chaque signal peut etre decompose ...
+% Lorsqu'il est joué, le diapason produit un signal sonore, correspondant aux ondes de pression se propageant dans l'air, très proche d'une sinusoïde. La note produite correspond alors à une fréquence particulière, carractéristique de l'instrument. Ce passage, du signal temporel à la fréquence correspondante, correspond à la transformé de fourrier. Chaque signal peut etre decompose ...
+Le diapason a la particularité de produire un signal sonore très proche d'une sinusoïde. Le son qu'il produit correspond alors à une note particulière, d'une fréquence donnéee, caractéristique de l'instrument. Par opposition au diapason, la corde de guitare par exemple, lorsqu'elle vibre, produit un son composé de plusieurs fréquences : la fréquence fondamentale, qui donne la hauteur de la note, et les fréquences harmoniques, des multiples de la fréquence fondamentale. Ces fréquences harmoniques participent à la richesse du son de l'instrument. L'outil mathématique permettant d'étudier ces phénomènes s'appelle la transformation de Fourier. La transformation de Fourier permet d'associer à un signal temporel, sa transformée de Fourier, un signal dans l'espace des fréquences.
 
+Reprenons l'exemple du diapason. Comme dit précédemment, le signal sonore produit est très proche d'une sinusoïde. La figure~\ref{fig:example_tf} illustre la transformation de Fourier : à gauche se trouve le signal temporel, qui correspond au signal sonore, et à droite se trouve la transformée de Fourier de ce signal. Le cas du diapason se situerait plutôt sur la première ligne, tandis que le cas de la corde de guitare ressemblerait plutôt à la troisième : une somme de sinusoïdes de différentes fréquences, la fréquence la plus basse donnant la fréquence fondamentale. Dans notre cas, nous pouvons remarquer que le signal dans l'espace fréquentiel est relativement simple : il indique la répartition des différentes fréquences présentes dans le signal temporel.
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{example_tf}
+  \caption{bla}
+  \label{fig:example_tf}
+\end{figure}
+
+La transformation de Fourier permet donc de décomposer le signal temporel en une série de sinus et cosinus, et d'indiquer la répartition des différentes fréquences. Pour un signal temporel $F(t)$, la transformée de Fourier associée à ce signal est donnée par
+\begin{equation}
+  \label{eq:def_tf}
+  \tilde f(\omega) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{+\infty}f(t) e^{-i \omega t} dt ,
+\end{equation}
+où $\omega$ est la pulsation. Elle est reliée à la fréquence $f$ par $\omega = 2 \pi f$.
 
 \bibliographystyle{unsrt}
 \bibliography{../source/biblio}
