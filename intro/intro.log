@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 FEB 2020 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2020 12:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -692,7 +692,7 @@ Underfull \hbox (badness 7522) in paragraph at lines 28--28
 Bes-sel en 1838. #prov
  []
 
-[2] <../img/intro/univershistory2.png, id=25, 1043.9pt x 653.44125pt>
+[2] <../img/intro/univershistory2.png, id=26, 1043.9pt x 653.44125pt>
 File: ../img/intro/univershistory2.png Graphic file (type png)
 
 <use ../img/intro/univershistory2.png>
@@ -700,17 +700,16 @@ Package pdftex.def Info: ../img/intro/univershistory2.png used on input line 45
 .
 (pdftex.def)             Requested size: 365.37047pt x 228.70786pt.
 
-<../img/intro/lcdm.png, id=26, 575.14874pt x 493.845pt>
+<../img/intro/lcdm.png, id=27, 575.14874pt x 493.845pt>
 File: ../img/intro/lcdm.png Graphic file (type png)
 
 <use ../img/intro/lcdm.png>
 Package pdftex.def Info: ../img/intro/lcdm.png used on input line 56.
 (pdftex.def)             Requested size: 172.54594pt x 148.15463pt.
-
+ [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
-[4 <../img/intro/univershistory2.png> <../img/intro/lcdm.png>]
+ [4 <../img/intro/univershistory2.png> <../img/intro/lcdm.png>]
 
 LaTeX Warning: Citation `CITE:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4659
 6/' on page 5 undefined on input line 65.
@@ -722,81 +721,120 @@ LaTeX Warning: Citation `CITE:planck2018' on page 5 undefined on input line 67.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [5]
-<../img/intro/curvature.png, id=47, 519.9425pt x 169.63374pt>
+<../img/intro/curvature.png, id=44, 519.9425pt x 169.63374pt>
 File: ../img/intro/curvature.png Graphic file (type png)
 
 <use ../img/intro/curvature.png>
-Package pdftex.def Info: ../img/intro/curvature.png used on input line 82.
+Package pdftex.def Info: ../img/intro/curvature.png used on input line 100.
 (pdftex.def)             Requested size: 311.96791pt x 101.78102pt.
- [6 <../img/intro/curvature.png>]
+ [6 <../img/intro/curvature.png>] [7]
 
-LaTeX Warning: Citation `prov: Dodelson 2.1.2' on page 7 undefined on input lin
-e 159.
+LaTeX Warning: Citation `prov: Dodelson 2.1.2' on page 8 undefined on input lin
+e 190.
 
-[7]
 
 LaTeX Warning: Citation `CITE planck + Riess ?' on page 8 undefined on input li
-ne 184.
+ne 215.
 
 [8]
-
-LaTeX Warning: Citation `CITE: Hogg 1999' on page 9 undefined on input line 258
-.
+Overfull \hbox (12.42831pt too wide) in paragraph at lines 264--264
+\T1/cmr/bx/n/10.95 Cette équa-tion n'est pas in-dé-pen-dante des deux équa-tion
+s de Friedmann-Lemaître
+ []
 
 [9]
 
-LaTeX Warning: Citation `CITE ref' on page 10 undefined on input line 309.
+LaTeX Warning: Citation `CITE: Hogg 1999' on page 10 undefined on input line 31
+3.
 
 [10]
 
-LaTeX Warning: Reference `CITE ref' on page 11 undefined on input line 322.
+LaTeX Warning: Citation `CITE ref' on page 11 undefined on input line 364.
+
+[11]
+
+LaTeX Warning: Reference `CITE ref' on page 12 undefined on input line 377.
 
 
-LaTeX Warning: Reference `CITE ref' on page 11 undefined on input line 322.
+LaTeX Warning: Reference `CITE ref' on page 12 undefined on input line 377.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 348.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 403.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [11]
-<../img/intro/example_tf.png, id=76, 778.91pt x 473.77pt>
+) [12]
+<../img/intro/example_tf.png, id=75, 778.91pt x 473.77pt>
 File: ../img/intro/example_tf.png Graphic file (type png)
 
 <use ../img/intro/example_tf.png>
-Package pdftex.def Info: ../img/intro/example_tf.png used on input line 370.
+Package pdftex.def Info: ../img/intro/example_tf.png used on input line 426.
 (pdftex.def)             Requested size: 389.45406pt x 236.88441pt.
+ [13 <../img/intro/example_tf.png>]
+<../img/intro/carte_cmb.png, id=81, 1025.8325pt x 582.175pt>
+File: ../img/intro/carte_cmb.png Graphic file (type png)
+
+<use ../img/intro/carte_cmb.png>
+Package pdftex.def Info: ../img/intro/carte_cmb.png used on input line 448.
+(pdftex.def)             Requested size: 359.04675pt x 203.7643pt.
+
+
+LaTeX Warning: Citation `CITE:planck2018 legacy' on page 14 undefined on input 
+line 449.
+
+
+LaTeX Warning: Citation `CITE:planck2018 legacy' on page 14 undefined on input 
+line 449.
+
+<../img/intro/spectre_cmb.png, id=82, 1069.9975pt x 392.46625pt>
+File: ../img/intro/spectre_cmb.png Graphic file (type png)
+
+<use ../img/intro/spectre_cmb.png>
+Package pdftex.def Info: ../img/intro/spectre_cmb.png used on input line 454.
+(pdftex.def)             Requested size: 395.89288pt x 145.21022pt.
+
+
+LaTeX Warning: Citation `CITE:planck2018 legacy' on page 14 undefined on input 
+line 455.
+
+
+LaTeX Warning: Citation `CITE:planck2018 legacy' on page 14 undefined on input 
+line 455.
+
+[14 <../img/intro/carte_cmb.png>]
+
+LaTeX Warning: Reference `CITE' on page 15 undefined on input line 494.
+
+
+LaTeX Warning: Reference `CITE' on page 15 undefined on input line 494.
 
 No file intro.bbl.
-[12 <../img/intro/example_tf.png>] (./intro.aux)
+[15 <../img/intro/spectre_cmb.png>] (./intro.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15176 strings out of 492995
- 292171 string characters out of 6132704
- 328187 words of memory out of 5000000
- 18550 multiletter control sequences out of 15000+600000
- 31957 words of font info for 84 fonts, out of 8000000 for 9000
+ 15174 strings out of 492995
+ 292382 string characters out of 6132704
+ 329333 words of memory out of 5000000
+ 18559 multiletter control sequences out of 15000+600000
+ 27402 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,16n,35p,10410b,786s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,16n,35p,10410b,782s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2017/t
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/texmf-d
@@ -807,12 +845,13 @@ nts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/cm-super/sfti1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/cm-super/sftt1095.pfb>
-Output written on intro.pdf (12 pages, 1153612 bytes).
+1/public/cm-super/sfti0900.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+public/cm-super/sfti1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/cm-super/sftt1095.pfb>
+Output written on intro.pdf (15 pages, 2467222 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 176 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
