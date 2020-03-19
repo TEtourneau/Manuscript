@@ -304,6 +304,7 @@ En évaluant l'équation précédente pour $t=0$, nous obtenons
 \end{equation}
 \textbf{Pour un univers plat, nous avons $\Omega_k = 0$, et donc $\Omega_{total} = 1$. Nous retrouvons alors que $\rho_{crit}$ correspond à la densité totale de l'univers. (\#prov Omega\_total prend en compte la courbure ou pas ? C'est pas en accord avec mon equation~\ref{eq:friedmann5}, c'est pas clair ...)}
 
+\#prov Il faut peut-etre faire un graph qui montre l'evolution des omega, avec la phase de domination de chaque espèce
 
 \paragraph{Les distances —}
 La notion de distance en relativité générale n'est pas si intuitive.
@@ -388,7 +389,7 @@ Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés p
     $n_\mathrm{s}$\dotfill & $0.9652\pm0.0042$ \\
     \midrule
     $\Omega_{\mathrm{m}} h^2$\dotfill & $ 0.1428\pm 0.0011 $ \\
-    $H_0 \,[\si{\kilo\meter\per\second\per Mpc}]$\dotfill & $67.37\pm0.54$ \\
+    $H_0 \,[\si{\kilo\meter\per\second\per\Mpc}]$\dotfill & $67.37\pm0.54$ \\
     $\Omega_{\mathrm{m}}$\dotfill & $0.3147\pm0.0074$ \\
     $\mathrm{Age}\, [\mathrm{Gyr}]$\dotfill  & $13.801\pm0.024$ \\
     $\sigma_8$\dotfill & $0.8101\pm0.0061$ \\
@@ -477,7 +478,7 @@ où $\rho(\vec{r})$ est la densité en $\vec{r}$ et $\bar \rho$ est la densité 
 
 % Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation, l'objet d'étude de ce manuscrit. Nous nous intéressons particulièrement à la fonction de corrélation de la matière. La distribution de matière dans l'univers peut être vue comme une variable aléatoire 
 
-Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation à deux points, l'objet d'étude de ce manuscrit. De la même manière que nous nous sommes intéressés précédemment au spectre de puissance du CMB, nous nous intéressons ici à la fonction de corrélation de la matière. Du fait de l'isotropie de l'univers, la fonction de corrélation ne dépend que de la distance $r$. Elle permet d'étudier de façon statistique la distribution de matière dans l'univers. Plus exactement, elle donne la corrélation de la distribution de matière entre 2 points de l'espace séparés d'une distance $r$. Elle peut aussi être vue comme un excès de probabilité : si la fonction de corrélation $\xi(r)$ est positive, alors il est plus probable de trouver de la matière en deux points de l'espace séparés par une distance $r$ que si celle ci avait été distribuée de manière uniforme\footnote{Pour une distribution de matière uniforme, $\xi(r) = 0$ pour tout $r$.}. Similairement au spectre de puissance, la fonction de corrélation $\xi$ est définie comme
+Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation à deux points, l'objet d'étude de ce manuscrit. De la même manière que nous nous sommes intéressés précédemment au spectre de puissance du CMB, nous nous intéressons ici à la fonction de corrélation de la matière. Du fait de l'isotropie de l'univers, la fonction de corrélation ne dépend que de la distance $r$. Elle permet d'étudier de façon statistique la distribution de matière dans l'univers. Plus exactement, elle donne la corrélation de la distribution de matière entre 2 points de l'espace séparés d'une distance $r$. Elle peut aussi être vue comme un excès de probabilité : si la fonction de corrélation $\xi(r)$ est positive, alors il est plus probable de trouver de la matière en deux points de l'espace séparés par une distance $r$ que si celle-ci avait été distribuée de manière uniforme\footnote{Pour une distribution de matière uniforme, $\xi(r) = 0$ pour tout $r$.}. Similairement au spectre de puissance, la fonction de corrélation $\xi$ est définie comme
 \begin{equation}
   \label{eq:def_cf}
   \xi(r) = < \delta(r') \delta(r + r') >,
@@ -493,7 +494,60 @@ ce qui donne, une fois l'isotropie supposée,
   \label{eq:cf_tf2}
   P(k) = \frac{-1}{4 i \pi^2 k} \int_{-\infty}^{+\infty} e^{- i k r} r \xi(r) dr .
 \end{equation}
-La figure~\ref{CITE} présente le spectre de puissance et~\ref{CITE} la fonction de corrélation de la matière aujourd'hui.
+La figure~\ref{CITE} présente le spectre de puissance et~\ref{CITE} la fonction de corrélation de la matière aujourd'hui. (\#prov mettre la figure)
+Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale (voir section~\ref{subsec:descri_mod} paragraphe \emph{Les paramètres du modèle} \#prov en fait pas besoin puisque ca fait ref a un truc d'avant?). Ces modes sont directement reliés au spectre de puissance des fluctuations primordiales. Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les petites et grandes échelles est dû au fait que les modes plus petits que $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$ sont entrés dans l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} durant la phase de domination de la radiation ou avant : ces modes possèdent une taille caractéristique plus petite que l'horizon au moment de l'égalité radiation-matière. Les modes plus grands que l'horizon au moment de l'égalité radiation-matière sont gelés, et n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial : $P(k) \propto k^{ns}$ pour ces modes là. Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k < k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et croissent proportionnellement à $\mathrm{G}(z)$. $\mathrm{G}$ est appelé le taux de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$. Ainsi, pour des redshifts $z << z_{eq}$, le spectre de puissance varie comme
+\begin{equation}
+  \label{eq:pow_spec_vs_z}
+  P(k,z) = G(z)^{2} P(k,z=0) .
+\end{equation}
+Le taux de croissance des structures ne dépendant pas de $k$, la fonction de corrélation est aussi proportionnelle à $\mathrm{G}(z)$ :
+\begin{equation}
+  \label{eq:cf_vs_z}
+  \xi(r, z) = G(z)^{2} \xi(r, z=0).
+\end{equation}
+Tout ceci est un bref résumé de la cosmologie des inhomogénéïtés. Cette dernière est très bien décrite dans \ref{CITE:Dodelson chap7} et nous référons le lecteur à cette ouvrage pour davantage de d'explications.
+
+
+Enfin, un point pertinent pour ce manuscrit sont les oscillations présentes dans le spectre de puissance de la matière pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$. Ces oscillations sont appelées \emph{oscillations acoustiques de baryon} (BAO pour Baryonic Acoustic Oscillations) et sont la trace de la physique qui se déroulait avant l'émission du CMB. Le méchanisme est décrit plus en détail dans la section suivante. Nous pouvons cependant déjà noter que ces oscillations caractéristiques dans le spectre de puissance correspondent au pic présent dans la fonction de corrélation de la matière à $r \sim \SI{100}{\per\h\Mpc}$. Ce pic est davantage visible dans le plan $(r, r^{2} \xi(r))$.
+
+\section{Les oscillations acoustiques de baryon}
+Les BAO sont une empreinte laissé par la physique pre-recombinaison, et détectable aujourd'hui dans la distribution de matière,. Cette empreinte correspond à un excès de corrélation de la matière, à une distance comobile d'environ $\SI{100}{\per\h\Mpc}$ (\#prov h en italic ou rm ? il est en italic dans la def de H0). Cette distance, appelée \emph{échelle BAO}, fournit une règle standard pour la cosmologie : après l'émission du CMB, la taille comobile de l'échelle BAO reste constante avec le temps. Ainsi, en mesurant l'évolution de la taille physique de l'échelle BAO au cours du temps, nous accédons à l'historique de l'expansion de l'univers. \\
+Dans cette section, nous décrivons les BAO, comment elles se forment, comment elles sont mesurées et les contraintes qu'elles permettent d'établir sur les modèles cosmologiques.
+
+\subsection{La genèse}
+Comme expliqué au début de ce manuscrit, l'univers avant la recombinaison\footnote{Le moment où les électrons se lient aux protons pour former les premiers atomes.} est un plasma chaud et dense,
+% composé des photons, des baryons, et de la matière noire. L'univers n'étant, initialemment, pas parfaitement homogène,
+qui présente de faibles inhomogénéïtés.
+% les surdensités présentes produisent des puits de potentiels,
+Chaque surdensité produit un puit de potentiel,
+dans lesquels les particules – les photons, les baryons, la matière noire – tombent.
+Les photons et les baryons étant couplés, la pression de radiation augmente au fur et à mesure que la densité augmente. Se joue alors une compétition entre la gravité, qui tend à faire tomber les photons et les baryons dans les puits de potentiel, et la pression de radiation, qui tend à les repousser hors de ce puit de potentiel. Ainsi, les baryons et les photons tombent, puis rebondissent, puis retombent lorsque la pression de radiation devient trop faible, etc.
+Ce processus crée donc des oscillations dans le plasma photon-baryon primordial. Comme dans tout milieu, ces oscillations donnent lieu à des ondes acoustiques, qui se propagent à la vitesse du son dans ce milieu. Celle-ci est définie comme
+\begin{equation}
+  \label{eq:sound_speed}
+  c_{s} = \sqrt{\frac{1}{3(1 + R)}},
+\end{equation}
+où $R = \frac{3\rho_b}{4\rho_{\gamma}}$. Etant donné que la densité de photons $\rho_{\gamma}$ est bien suppérieure à la densité de baryons $\rho_{b}$, la vitesse du son $c_s$ vaut $1/\sqrt{3}$ en bonne approximation. (\#prov en fait est-ce que c'est important de donner ca?)
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{bao_schema}
+  \caption{bla}
+  \label{fig:bao_schema}
+\end{figure}
+Ces ondes acoustiques se propagent donc dans le plasma primordial depuis chaque surdensité . La figure~\ref{fig:bao_schema} schématise le méchanisme pour une seule surdensité. A l'instant $t=0$, nous considérons donc une surdensité en $R = \SI{0}{\Mpc}$. Cette surdensité est composée de matière noire (CDM), de baryons et de photons. Le puis de potentiel créé fait s'effondrer les espèces présentes, jusqu'à ce que la pression de radiation devienne suffisante pour initier une onde acoustique. Au fur et à mesure que le temps s'écoule (le redshift diminue), le front d'onde dans le plasma photon-baryon se propage. Puis, à un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons, et l'onde devient gelée. Ainsi la surdensité de baryon ne se propage plus, et les photons, qui n'interagissent plus avec les baryons, se propagent librement. La surdensité de matière noire à $R = \SI{0}{\Mpc}$, qui a continué de croître, tend à rappeler les baryons par effet gravitationnel. Cependant, la surdensité de baryon à $R \sim \SI{150}{\Mpc}$ produit aussi un puit de potentiel, dans lequel la matière noire alentour tombe progressivement. Ainsi, même si la majeure partie des baryons retombent dans le puit de potentiel créé par la surdensité initiale, un second puit de potentiel, formé par des baryons et de la matière noire, subsiste en $R \sim \SI{150}{\Mpc}$. Nous pouvons généraliser cette vue simplifier en une dimension à 3 dimensions : le front d'onde qui se propagent à partir de la surdensité initiale est alors sphérique, et le second puit de potentiel résultant est alors une sphère centrée sur la surdensité initiale et de rayon $R \sim \SI{150}{\Mpc}$. Cette distance d'environ $\SI{150}{\Mpc}$ est appelée \emph{horizon acoustique} : c'est la distance que l'onde sonore a pu parcourir avant d'être gelée. L'horizon acoustique est défini comme
+\begin{equation}
+  \label{eq:sound_horizon}
+  r_{d} = \int^{\infty}_{z_{drag}} \frac{c_{s}}{H(z)} dz ,
+\end{equation}
+et vaut $r_{d} = \SI{147.18(29)}{\Mpc}$ selon~\ref{CITE planck2018}.
+
+Ce processus a laissé des traces dans la distribution de matière à grande échelle : à chaque surdensité primordiale est associée une sphère de surdensité de rayon comobile $\SI{150}{\Mpc}$. Ainsi, lorsque nous observons aujourd'hui un traceur de la densité de matière, telle une galaxie, il est davantage probable d'en trouver d'autres, séparés du premier d'une distance comobile d'environ $\SI{150}{\Mpc}$. C'est ce que traduit le pic BAO présent dans la fonction de corrélation de la matière, montrée sur la figure~\ref{fig:CITE figure CF}
+
+
+\subsection{Mesurer l'échelle BAO}
+
+Comme nous allons le voir dans ce qui suit, les analyses BAO ne mesurent pas directement l'échelle BAO $r_{d}$. En cosmologie, les observations  ne permettent pas de mesurer des distances. Les informations auxquelles l'observateur a accès sont des différences de vitesse le long de la ligne de visé, via l'observation des spectres, ainsi que des angles, via les projections sur la sphère céleste.
 
 
 \bibliographystyle{unsrt}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 FEB 2020 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 MAR 2020 10:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -103,8 +103,44 @@ l.11 \usepackage{
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
-./util.sty:16: Undefined control sequence.
-l.16 \geometry
+
+./util.sty:12: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \usepackage{
+                 booktabs}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./util.sty:13: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \usepackage{
+                 enumitem}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./util.sty:14: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \usepackage{
+                 array}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+./util.sty:19: Undefined control sequence.
+l.19 \geometry
               {left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -113,13 +149,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./util.sty:16: LaTeX Error: Missing \begin{document}.
+./util.sty:19: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \geometry{l
+l.19 \geometry{l
                 eft=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -166,12 +202,12 @@ Missing character: There is no 5 in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--17
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--20
 []
  []
 
-./util.sty:19: Undefined control sequence.
-l.19 \sisetup
+./util.sty:22: Undefined control sequence.
+l.22 \sisetup
              {locale = FR,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -180,13 +216,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./util.sty:19: LaTeX Error: Missing \begin{document}.
+./util.sty:22: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \sisetup{l
+l.22 \sisetup{l
                ocale = FR,
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -212,8 +248,8 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no , in font nullfont!
-./util.sty:22: Undefined control sequence.
-l.22 \sisetup
+./util.sty:25: Undefined control sequence.
+l.25 \sisetup
              {inter-unit-product=\ensuremath{\cdot}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -241,11 +277,11 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 22.
+(Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 22.
-./util.sty:23: Undefined control sequence.
-l.23 \sisetup
+(Font)              <5> on input line 25.
+./util.sty:26: Undefined control sequence.
+l.26 \sisetup
              {per-mode=reciprocal}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -272,16 +308,52 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
+./util.sty:28: Undefined control sequence.
+l.28 \sisetup
+             {separate-uncertainty = true}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 19--25
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 22--29
 []
  []
 
 
-Overfull \hbox (2.77779pt too wide) in paragraph at lines 19--25
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 22--29
 \OMS/cmsy/m/n/10 ^^A$
  []
 
+\tablebox=\box26
+\tablewidth=\dimen102
 )
 ! Emergency stop.
 <*> util.sty
@@ -290,11 +362,11 @@ Overfull \hbox (2.77779pt too wide) in paragraph at lines 19--25
 
  
 Here is how much of TeX's memory you used:
- 49 strings out of 492995
- 333 string characters out of 6132704
+ 57 strings out of 492995
+ 414 string characters out of 6132704
  54074 words of memory out of 5000000
- 3701 multiletter control sequences out of 15000+600000
+ 3709 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 19i,1n,13p,74b,58s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 19i,1n,13p,90b,58s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

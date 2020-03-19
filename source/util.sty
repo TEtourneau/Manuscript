@@ -5,8 +5,8 @@
 \usepackage{amsmath} % or simply amstext
 \usepackage{geometry}
 % \usepackage[decimalsymbol=comma]{SIunits}
-% \usepackage{siunitx}
-\usepackage[load-configurations = abbreviations]{siunitx}
+\usepackage{siunitx}
+% \usepackage[load-configurations = abbreviations]{siunitx}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{booktabs}
@@ -20,34 +20,15 @@
 
 % Units
 \sisetup{locale = FR,
-detect-all,
+  inter-unit-product=\ensuremath{\cdot},
+  per-mode=reciprocal,
+  separate-uncertainty = true,
+  detect-all
 }
-\sisetup{inter-unit-product=\ensuremath{\cdot}}
-\sisetup{per-mode=reciprocal}
-% \sisetup{inter-unit-product =$\cdot$}
-\sisetup{separate-uncertainty = true} 
+\DeclareSIUnit{\Mpc}{Mpc}
+\DeclareSIUnit{\h}{h}
 
 % Commands
-\def\pmb#1{\setbox0=\hbox{#1}%
-    \kern-.025em\copy0\kern-\wd0
-    \kern.05em\copy0\kern-\wd0
-    \kern-.025em\raise.0433em\box0}
-\newbox\tablebox    \newdimen\tablewidth
-\def\leaderfil{\leaders\hbox to 5pt{\hss.\hss}\hfil}
-\def\endPlancktable{\tablewidth=\columnwidth 
-    $$\hss\copy\tablebox\hss$$
-    \vskip-\lastskip\vskip -2pt}
-\def\endPlancktablewide{\tablewidth=\textwidth 
-    $$\hss\copy\tablebox\hss$$
-    \vskip-\lastskip\vskip -2pt}
-\def\tablenote#1 #2\par{\begingroup \parindent=0.8em
-    \abovedisplayshortskip=0pt\belowdisplayshortskip=0pt
-    \noindent
-    $$\hss\vbox{\hsize\tablewidth \hangindent=\parindent \hangafter=1 \noindent
-    \hbox to \parindent{$^#1$\hss}\strut#2\strut\par}\hss$$
-    \endgroup}
-\def\doubleline{\vskip 3pt\hrule \vskip 1.5pt \hrule \vskip 5pt}
-
 \newcommand{\hMpc}{h^{-1}\,\mathrm{Mpc}}
 \newcommand{\hGpc}{h^{-1}\,\mathrm{Gpc}}
 \newcommand{\kms}{\mathrm{km\,s^{-1}}}
