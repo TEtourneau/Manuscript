@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+t = np.linspace(0, 5, 100000)
+
+f, axs = plt.subplots(3,2)
+
+axs[0,0].plot(t, np.sin(2*np.pi*t), colors='r')
+axs[0,1].bar(1, 1, width=0.1)
+
+axs[1,0].plot(t, np.sin(2*np.pi*t), colors='royalblue', linestyle='--')
+axs[1,0].plot(t, np.sin(3.2*2*np.pi*t), colors='green', linestyle='--')
+axs[1,0].plot(t, np.sin(2*np.pi*t) + np.sin(3.2*2*np.pi*t), colors='r')
+axs[0,1].bar(1, 1, width=0.1)
+axs[0,1].bar(3.2, 1, width=0.1)
+
+axs[0,1].set_xlim(0, 5)

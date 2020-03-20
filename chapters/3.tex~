@@ -1,0 +1,69 @@
+% created on 2019-12-13
+% @author : bmazoyer
+
+\chapter{Set-up expérimental}
+\minitoc
+\newpage
+\thispagestyle{fancy}
+\label{chapter:set-up}
+
+\section{ALTO : Accélérateur Linéaire et Tandem d'Orsay} 
+\label{section:ALTO}
+ALTO est un ensemble de deux accélérateurs que je vais présenter dans cette partie. Cet ensemble est situé sur le campus de l'université Paris-Saclay (Orsay, France) et il comprend un Tandem qui délivre des faisceaux stables, ainsi qu'un accélérateur d'électrons pour les faisceaux radioactifs, produit par technique ISOL\footnote{ISOL : Isotopic Separation On-line}.\par 
+
+\begin{figure}[ht]
+	\includegraphics[width=0.6\textwidth]{figures/plan_alto.jpg}
+	\centering
+	\caption{Schéma d'ALTO}
+	\centering
+	\label{fig:ALTO}
+\end{figure}
+
+Le Tandem est la partie historique d'ALTO, c'est un Van de Graaf de \SI{15}{\mega\volt} mis en fonctionnement en 1972, qui accélére des noyaux sur une grande gamme de masse, allant jusqu'à accélérer des noyaux d'or.  Le Tandem peut délivrer des faisceaux stables accélérés à cinq plateformes expérimentales, en bleu sur la figure \ref{fig:ALTO}. Après avoir ajouté un ensemble cible-source et un séparateur de masse auprès du Tandem, le projet de production de noyaux radioactifs par photofission émerge dans le début des années 2000, c'est le début d'ALTO tel qu'on le connait, opérationnel depuis 2006.\par
+La technique ISOL permet d'obtenir des faisceaux d'une grande qualité optique, permettant l'étude d'observables selon trois axes principaux :
+\begin{itemize}
+    \item Utiliser le piègeage électromagnétique pour mesurer l'énergie de liaison totale (\textit{i.e.} la masse) de l'état fondamentale ou d'isomères. 
+    \item Exploiter l'interaction hyperfine entre le noyau et son milieu pour accéder à des propriétés statiques telles que le spin, le moment dipolaire magnétique ou encore les paramètres de mélange de multipolarités de transitions gammas. C'est dans cet axe que s'inscrit cette étude.
+    \item Réaliser la spectroscopie de noyau afin de mesurer les énergies de liaison des états nucléaires à courte durée de vie (non-accessible par piègeages électromagnétique) ainsi que des propriétés dynamiques comme les probalités de transition entre états. Ces mesures sont possibles grâce à une grande purification des faisceaux, et grâce à l'utilisation de détecteurs à haute résolution en énergie et en temps. 
+\end{itemize}{}
+ALTO regroupe en salle 110 (figure \ref{fig:salle110}) des instruments permettant d'effectuer des mesures suivant ces trois axes :
+\begin{itemize}
+    \item MLLTRAP : Mesure de masse, 
+    \item PolarEx : Orientation nucléaire à basse température et résonance magnétique nucléaire,
+    \item LINO : Spectroscopie laser et orientation nucléaire par technique laser,
+    \item BEDO : Spectroscopie gamma ou electrons après décroissance $\beta$, 
+    \item TETRA : Mesure de probabilités d'émmission neutrons.
+\end{itemize}{}
+
+
+\begin{figure}[ht]
+	\includegraphics[width=0.7\textwidth]{figures/salle110.pdf}
+	\centering
+	\caption{Hall expérimental radioactif d'ALTO}
+	\centering
+	\label{fig:salle110}
+\end{figure}
+
+
+\subsubsection{La technique ISOL : Separation Isotopique En Ligne}
+La technique ISOL est utilisée pour produire des faisceaux radioactifs par différentes installations partout dans le monde : ISOLDE@CERN, SPIRAL@GANIL, IGISOL@JYSL... Cette technique consiste à envoyer un faisceau primaire (électrons, protons, gammas, neutrons ou encore ions lourds) sur une cible épaisse pour produire un grand nombre de noyaux radioactifs, puis à les extraires de la cible pour les étudier.\par
+Dans la cible plusieurs mécanismes peuvent rentrer en jeux : avec un faisceau primaire de faible énergie ($\sim$\SIrange{10}{100}{\mega\electronvolt\per nucléon}) il peut y avoir de la fusion évaporation, de la fission ou des réactions de transfert ; en utilisant un faisceau énérgétique ($\sim$\SIrange{100}{1000}{\mega\electronvolt\per nucléon}) on observera principalement de la spallation et de la fragmentation. A ce stade, les éléments produits  sont stoppés dans la cible, il faut alors la chauffer pour favoriser la diffusion et l'effusion des atomes radioactifs hors de cette dernière (la physique et chimie des matériaux jouent ici un rôle très important dans la préparation des cibles). Il faut ensuite les ioniser et les accélérer pour former un faisceau de quelques \si{\kilo\electronvolt}. Pour influer le taux de production il est possible de jouer sur quatres paramètres : l'épaisseur de la cible, l'intensité des faisceaux incidents, la température et la micro-structure de la cible.\par
+
+\subsubsection{Le faisceau primaire d'éléctrons et la photofission à ALTO}
+Pour produire les éléments radioactif à ALTO on utilise la photofission. Des électrons sont accélérés par le LINAC\footnote{LINAC : LINear ACcelerator} jusqu'à une énergie de \SI{50}{\mega\electronvolt} et avec une intensité de \SI{10}{\micro\ampere}. C'est un faisceau pulsé d'une largeur temporelle \SI{15}{\pico\second} et sa période de répétition est de \SI{333}{\pico\second}. Le faisceau d'électrons est ensuite guidé jusqu'à l'ensemble cible-source pour y induire la photofission.\par
+La fission est une mécanisme de réaction exothermique qui permet à un noyau lourd de se diviser en plusieurs noyaux. A ALTO la fission de \isotope[238]{U} est provoquée par les photons issus du rayonnement de freinage, ou Bremsstrahlung, des électrons du faisceau primaire dans le champ électrique des noyaux de la cible. Pour réussir à induire la fission, il faut un apport d'énergie suffisant pour dépasser la barrière coulombienne des noyaux de la cible, proche de \SI{6}{\mega\electronvolt} pour l'Uranium. 
+
+\subsubsection{L'ensemble cible-source}
+La cible utilisée à ALTO est une cible de \SI{70}{\gram} de carbure d'Uranium et graphite\footnote{UCx, densité \SI{3,36}{\gram\per\cubic\centi\meter}}.  Les électrons sortant du LINAC à \SI{50}{\mega\electronvolt} sont d'abord ralentis dans les premiers centimètres de la cible, puis convertit en photons par rayonnement Bremsstrahlung, ce qui induit un taux de 10$^{11}$ fissions par secondes. La cible est chauffée à une température de \SI{2000}{\degreeCelsius} permettant aux produits de fissions de diffuser et d'éffuser hors de la cible vers la source d'ions. Un nouveau type de cible a aussi été développé récemment à ALTO \cite{guillot_development_2019}, dont la microstructure poreuse permet une meilleure extraction des isotopes, ce qui augmente significativement la production des éléments à faible temps de vie.
+A ALTO trois différentes source d'ions peuvent être utilisées :
+\begin{itemize}
+    \item La source à ionisation de surface,
+    \item La source plasma chaud,
+    \item La source laser.
+\end{itemize}{}
+L'ionisation de surface est simple et efficace, il permet d'ioniser les espèces ayant un faible potentiel d'ionisation, et elle a  en particulier une bonne sélectivité sur les alcalins. La source plasma quand à elle permet d'ioniser les atomes avec des potentiels d'ionisation plus élevés grâce aux énergies mis en jeu dans le plasma. Enfin la source laser permet d'ioniser les élements non accessibles par les deux précédentes méthodes, en plus d'avoir une grande sélectivité qui évite les contaminations isobariques.
+
+\subsubsection{Séparateur de masse PARRNe}
+A la sortie de la source d'inos une différence de potentiel de \SI{30}{\kilo\electronvolt} extraits les espèces précedemment ionisées, pour les acheminer vers le séparateur de masse PARRNe\footnote{PARRNe : Production d'Atomes Radioactifs Riches en Neutrons}. Ce dernier permet une épuration des faisceaux radioactifs pour afin de n'avoir que l'espèce d'interet en sortie. C'est dipôle électromagnétique avec un angle de déflexion de \SI{65}{\degree} et un rayon de courbure de \SI{60}{\centi\meter}. Son pouvoir de résolution est $R=\frac{A}{\Delta A}= \num{1500}$. Les ions, une fois sélectionnés, sont ensuite guidés jusqu'aux plateformes expérimentales par le kicker-bender.
+
+

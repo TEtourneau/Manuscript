@@ -1,0 +1,219 @@
+\usepackage[utf8x]{inputenc}
+
+%Bibliography style
+\usepackage[square, numbers]{natbib}
+\bibliographystyle{unsrtnat}
+%\bibliographystyle{plain}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+\usepackage{mathptmx}
+\usepackage{geometry} 
+\usepackage{xcolor}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage[explicit]{titlesec}
+\usepackage{lmodern}
+\usepackage{color}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{afterpage}
+\usepackage{emptypage}
+\usepackage{setspace}
+\usepackage{pgffor}
+    \setlength{\columnseprule}{0pt}
+    \setlength\columnsep{10pt}
+\usepackage[francais,nohints]{minitoc}
+    \setcounter{minitocdepth}{3}
+ 
+ %https://la-bibliotex.fr/2019/02/03/ecrire-les-nombres-et-les-unites-avec-latex/   
+\usepackage{siunitx}
+% \sisetup{
+%     detect-all,
+%      output-decimal-marker={,},
+%      group-minimum-digits = 3,
+%      group-separator={~},
+%      number-unit-separator={~},
+%      inter-unit-product={~},
+%      list-separator = {, },
+%      list-final-separator = { et },
+%      range-phrase = --,
+%      separate-uncertainty = true,
+%      multi-part-units = single,
+%      list-units = single,
+%      range-units = single
+%     }
+\usepackage{physics}
+\usepackage{isotope}
+
+\usepackage[perpage]{footmisc} % to reset the counter of footnote each page
+
+    
+\usepackage{fancyhdr}			% Entête et pieds de page. Doit être placé APRES geometry
+\pagestyle{fancy}		% Indique que le style de la page sera justement fancy
+%\lfoot[\thepage]{} 		% gauche du pied de page
+%\cfoot{} 			% milieu du pied de page
+%\rfoot[]{\thepage} 
+\fancyfoot{} % vide le pied~de~page
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{}% droite du pied de page
+\fancyhead{}	
+\fancyhead[LE]{\leftmark}	
+\fancyhead[RO]{\rightmark}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % vide l’en-tête et le pied~de~page.
+\fancyfoot[LE,RO]{\thepage} % numéro de la page en cours en gras% et centré en pied~de~page.
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+
+
+% Premiere page des chapitres
+\newlength\chapnumb
+\setlength\chapnumb{3cm}
+ 
+\titleformat{\chapter}[block] {
+  \normalfont}{}{0pt} { %police
+    \parbox[b]{\chapnumb}{
+      \fontsize{120}{110}\selectfont\thechapter} %taille du chiffre
+      \parbox[b]{\dimexpr\textwidth-\chapnumb\relax}{
+        \raggedleft 
+        \hfill{\bfseries\Huge#1}\\ %taille du titre
+        \rule{\dimexpr\textwidth-\chapnumb\relax}{0.4pt} %ligne de separation
+  }
+}
+ 
+ %premiere page chapitre non numerote (remerciement, table des matieres ...)
+ 
+\titleformat{name=\chapter,numberless}[block]
+{\normalfont}{}{0pt}
+{   
+    \parbox[b]{\dimexpr\textwidth}{%   
+    \hfill{\bfseries\Huge#1}\\
+  \rule{\dimexpr\textwidth}{0.4pt}}}
+    
+ %   \titleformat{name=\chapter,numberless}[block]
+%{\normalfont}{}{0pt}
+%{\parbox[b]{\chapnumb}{%
+%   \mbox{}}%
+%  \parbox[b]{\dimexpr\textwidth-\chapnumb\relax}{%
+%    \raggedleft%
+%    \hfill{\bfseries\Huge#1}\\
+%    \rule{\dimexpr\textwidth-\chapnumb\relax}{0.4pt}}}
+
+
+%%%    SIunitx
+\sisetup{locale = FR,
+  inter-unit-product=\ensuremath{\cdot},
+  per-mode=reciprocal,
+  separate-uncertainty = true,
+  detect-all
+}
+\DeclareSIUnit{\Mpc}{Mpc}
+\DeclareSIUnit{\h}{h}
+
+%%% Geometry
+\geometry{
+left=20mm,
+top=30mm,
+right=20mm,
+bottom=30mm
+}
+
+%%% Color
+\definecolor{bordeau}{rgb}{0.3515625,0,0.234375}
+
+%%% Commands
+\newcommand{\hMpc}{h^{-1}\,\mathrm{Mpc}}
+\newcommand{\hGpc}{h^{-1}\,\mathrm{Gpc}}
+\newcommand{\kms}{\mathrm{km\,s^{-1}}}
+
+\newcommand{\lya}{Ly$\alpha$}
+\newcommand{\lyb}{Ly$\beta$}
+\newcommand{\lyalya}{Ly$\alpha$(Ly$\alpha$)}
+\newcommand{\lyalyb}{Ly$\alpha$(Ly$\beta$)}
+
+\newcommand{\lrf}{\lambda_{\rm RF}}
+\newcommand{\kpar}{k_{\parallel}}
+\newcommand{\apar}{\alpha_{\parallel}}
+\newcommand{\rpar}{r_{\parallel}}
+\newcommand{\aperp}{\alpha_{\perp}}
+\newcommand{\rperp}{r_{\perp}}
+\newcommand{\kper}{k_{\perp}}
+
+\newcommand{\blya}{b_{\rm Ly\alpha}}
+\newcommand{\betalya}{\beta_{\rm Ly\alpha}}
+\newcommand{\blyb}{b_{\rm Ly\alpha}}
+\newcommand{\betalyb}{\beta_{\rm Ly\beta}}
+\newcommand{\dlya}{d_{\rm Ly\alpha}}
+\newcommand{\bhcd}{b_{\rm HCD}}
+\newcommand{\betahcd}{\beta_{\rm HCD}}
+\newcommand{\Fhcd}{F_{\rm HCD}}
+\newcommand{\Lhcd}{L_{\rm HCD}}
+
+\newcommand{\imin}{i_{\rm min}}
+\newcommand{\imax}{i_{\rm max}}
+\newcommand{\jmin}{j_{\rm min}}
+\newcommand{\jmax}{j_{\rm max}}
+
+\newcommand{\xioned}{\xi_{\rm 1d}}
+\newcommand{\DHub}{D_{H}}
+\newcommand{\DM}{D_{M}}
+
+\newcommand{\omegam}{\Omega_M}
+\newcommand{\omegac}{\Omega_C}
+\newcommand{\omegab}{\Omega_B}
+\newcommand{\omegan}{\Omega_\nu}
+\newcommand{\omegal}{\Omega_\Lambda}
+\newcommand{\omegak}{\Omega_k}
+\newcommand{\orad}{\Omega_R}
+\newcommand{\ogam}{\Omega_\gamma}
+\newcommand{\lcdm}{$\Lambda$CDM}
+
+\newcommand{\picca}{\texttt{picca}}
+
+%%% Rem's command
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+    
+    
+\renewcommand{\thesection}{\arabic{section}}
+
+% Romain
+\newcommand{\cRM}[1]{\MakeUppercase{\romannumeral #1}}	% Capital
+\newcommand{\cRm}[1]{\textsc{\romannumeral #1}}	% Petit majuscule
+\newcommand{\crm}[1]{\romannumeral #1}
+% Siècle %
+\newcommand{\siecle}[1]{\cRm{#1}\textsuperscript{e}~siècle}
+
+
+
+% Thesis title
+\newcommand{\PhDTitle}{Etude de l'énergie noire avec les forêts \lya{} d'eBOSS} 
+
+% Name
+\newcommand{\PhDname}{Thomas Etourneau} 
+
+% Change this variable if you add or remove chapters
+\newcommand*{\NumOfChapters}{6}
+
+% Change this variable if you add or remove appendices
+\newcommand*{\NumOfAppendices}{2}
+
+% PDF metadata
+\hypersetup{
+	pdfauthor={\PhDname},
+	pdfsubject={Manuscrit de thèse de doctorat},
+	pdftitle={\PhDTitle}
+}

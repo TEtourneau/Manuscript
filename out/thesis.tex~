@@ -1,0 +1,49 @@
+% created on 2019-12-13
+% @author : bmazoyer
+\documentclass[a4paper, twoside, 11pt]{report}
+
+\input{source/packages.tex}
+
+\begin{document}
+\onehalfspacing % taille de l'interligne
+
+\input{layout/firstpage.tex}
+
+\input{layout/dedication.tex}
+\cleardoublepage
+
+\input{layout/acknowledgements.tex}
+\cleardoublepage
+
+\pagenumbering{arabic}
+
+
+% Table des matières    
+    \setcounter{tocdepth}{1}       
+    \dominitoc
+    \tableofcontents
+    % \listoffigures
+    % \listoftables
+    
+    
+    % \setcounter{mtc}{2}	% "Corrige" les minitocs décallés à cause des chapter* (ex : table des matières)
+    
+    \cleardoublepage
+    
+    
+    \foreach \i in {1,2,...,\NumOfChapters}{
+      \input{chapters/\i}
+      \cleardoublepage
+    }
+    
+    \appendix
+    \foreach \i in {1,2,...,\NumOfAppendices}{
+      \input{appendices/\i}
+      \cleardoublepage
+    }
+    
+    \bibliography{source/bibliography.bib}
+    \pagebreak
+    
+    \input{layout/lastpage.tex}
+  \end{document}

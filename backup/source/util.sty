@@ -1,0 +1,78 @@
+% Packages
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath} % or simply amstext
+\usepackage{geometry}
+% \usepackage[decimalsymbol=comma]{SIunits}
+\usepackage{siunitx}
+% \usepackage[load-configurations = abbreviations]{siunitx}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{array}
+% \usepackage{sistyle}
+
+
+% Formating
+\geometry{left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
+
+% Units
+\sisetup{locale = FR,
+  inter-unit-product=\ensuremath{\cdot},
+  per-mode=reciprocal,
+  separate-uncertainty = true,
+  detect-all
+}
+\DeclareSIUnit{\Mpc}{Mpc}
+\DeclareSIUnit{\h}{h}
+
+% Commands
+\newcommand{\hMpc}{h^{-1}\,\mathrm{Mpc}}
+\newcommand{\hGpc}{h^{-1}\,\mathrm{Gpc}}
+\newcommand{\kms}{\mathrm{km\,s^{-1}}}
+
+\newcommand{\lya}{Ly$\alpha$}
+\newcommand{\lyb}{Ly$\beta$}
+\newcommand{\lyalya}{Ly$\alpha$(Ly$\alpha$)}
+\newcommand{\lyalyb}{Ly$\alpha$(Ly$\beta$)}
+
+\newcommand{\lrf}{\lambda_{\rm RF}}
+\newcommand{\kpar}{k_{\parallel}}
+\newcommand{\apar}{\alpha_{\parallel}}
+\newcommand{\rpar}{r_{\parallel}}
+\newcommand{\aperp}{\alpha_{\perp}}
+\newcommand{\rperp}{r_{\perp}}
+\newcommand{\kper}{k_{\perp}}
+
+\newcommand{\blya}{b_{\rm Ly\alpha}}
+\newcommand{\betalya}{\beta_{\rm Ly\alpha}}
+\newcommand{\blyb}{b_{\rm Ly\alpha}}
+\newcommand{\betalyb}{\beta_{\rm Ly\beta}}
+\newcommand{\dlya}{d_{\rm Ly\alpha}}
+\newcommand{\bhcd}{b_{\rm HCD}}
+\newcommand{\betahcd}{\beta_{\rm HCD}}
+\newcommand{\Fhcd}{F_{\rm HCD}}
+\newcommand{\Lhcd}{L_{\rm HCD}}
+
+\newcommand{\imin}{i_{\rm min}}
+\newcommand{\imax}{i_{\rm max}}
+\newcommand{\jmin}{j_{\rm min}}
+\newcommand{\jmax}{j_{\rm max}}
+
+\newcommand{\xioned}{\xi_{\rm 1d}}
+\newcommand{\DHub}{D_{H}}
+\newcommand{\DM}{D_{M}}
+
+\newcommand{\omegam}{\Omega_M}
+\newcommand{\omegac}{\Omega_C}
+\newcommand{\omegab}{\Omega_B}
+\newcommand{\omegan}{\Omega_\nu}
+\newcommand{\omegal}{\Omega_\Lambda}
+\newcommand{\omegak}{\Omega_k}
+\newcommand{\orad}{\Omega_R}
+\newcommand{\ogam}{\Omega_\gamma}
+\newcommand{\lcdm}{$\Lambda$CDM}
+
+\newcommand{\picca}{\texttt{picca}}

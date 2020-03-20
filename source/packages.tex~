@@ -1,0 +1,118 @@
+\usepackage[utf8]{inputenc}
+
+%Bibliography style
+\usepackage[square, numbers]{natbib}
+\bibliographystyle{unsrtnat}
+%\bibliographystyle{plain}
+
+
+
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+\usepackage{mathptmx}
+\usepackage{geometry} %marges
+\geometry{
+left=20mm,
+top=30mm,
+right=20mm,
+bottom=30mm
+}
+\usepackage{xcolor}
+    \definecolor{bordeau}{rgb}{0.3515625,0,0.234375}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage[explicit]{titlesec}
+\usepackage{lmodern}
+\usepackage{color}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{afterpage}
+\usepackage{emptypage}
+\usepackage{setspace}
+\usepackage{pgffor}
+    \setlength{\columnseprule}{0pt}
+    \setlength\columnsep{10pt}
+\usepackage[francais,nohints]{minitoc}
+    \setcounter{minitocdepth}{3}
+ 
+ %https://la-bibliotex.fr/2019/02/03/ecrire-les-nombres-et-les-unites-avec-latex/   
+\usepackage{siunitx}
+\sisetup{
+    detect-all,
+     output-decimal-marker={,},
+     group-minimum-digits = 3,
+     group-separator={~},
+     number-unit-separator={~},
+     inter-unit-product={~},
+     list-separator = {, },
+     list-final-separator = { et },
+     range-phrase = --,
+     separate-uncertainty = true,
+     multi-part-units = single,
+     list-units = single,
+     range-units = single
+    }
+\usepackage{physics}
+\usepackage{isotope}
+
+\usepackage[perpage]{footmisc} % to reset the counter of footnote each page
+
+    
+\usepackage{fancyhdr}			% Entête et pieds de page. Doit être placé APRES geometry
+\pagestyle{fancy}		% Indique que le style de la page sera justement fancy
+%\lfoot[\thepage]{} 		% gauche du pied de page
+%\cfoot{} 			% milieu du pied de page
+%\rfoot[]{\thepage} 
+\fancyfoot{} % vide le pied~de~page
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{}% droite du pied de page
+\fancyhead{}	
+\fancyhead[LE]{\leftmark}	
+\fancyhead[RO]{\rightmark}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % vide l’en-tête et le pied~de~page.
+\fancyfoot[LE,RO]{\thepage} % numéro de la page en cours en gras% et centré en pied~de~page.
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+
+
+% Premiere page des chapitres
+\newlength\chapnumb
+\setlength\chapnumb{3cm}
+ 
+\titleformat{\chapter}[block] {
+  \normalfont}{}{0pt} { %police
+    \parbox[b]{\chapnumb}{
+      \fontsize{120}{110}\selectfont\thechapter} %taille du chiffre
+      \parbox[b]{\dimexpr\textwidth-\chapnumb\relax}{
+        \raggedleft 
+        \hfill{\bfseries\Huge#1}\\ %taille du titre
+        \rule{\dimexpr\textwidth-\chapnumb\relax}{0.4pt} %ligne de separation
+  }
+}
+ 
+ %premiere page chapitre non numerote (remerciement, table des matieres ...)
+ 
+\titleformat{name=\chapter,numberless}[block]
+{\normalfont}{}{0pt}
+{   
+    \parbox[b]{\dimexpr\textwidth}{%   
+    \hfill{\bfseries\Huge#1}\\
+  \rule{\dimexpr\textwidth}{0.4pt}}}
+    
+ %   \titleformat{name=\chapter,numberless}[block]
+%{\normalfont}{}{0pt}
+%{\parbox[b]{\chapnumb}{%
+%   \mbox{}}%
+%  \parbox[b]{\dimexpr\textwidth-\chapnumb\relax}{%
+%    \raggedleft%
+%    \hfill{\bfseries\Huge#1}\\
+%    \rule{\dimexpr\textwidth-\chapnumb\relax}{0.4pt}}}

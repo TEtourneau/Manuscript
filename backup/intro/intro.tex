@@ -1,0 +1,556 @@
+\documentclass[11pt, twoside, a4paper, openright]{report}
+
+\usepackage{../source/util}
+\graphicspath{ {../img/intro/} }
+
+\begin{document}
+\chapter{Introduction à la cosmologie}
+
+Ce premier chapitre a pour but de présenter la cosmologie moderne et d'expliquer brièvement sa construction au fil du dernier siècle. L'idée est de donner une vue d'ensemble du paradigme actuel, tout en détaillant davantage les points clés nécessaires à ce manuscrit. Pour une étude approfondie de la cosmologie moderne, nous référons le lecteur aux ouvrages suivants : \cite{CITE}. 
+
+\section{Qu'est-ce que la cosmologie ?}
+Le terme cosmogonie (du grec \emph{cosmo-} : monde ; \emph{gon-} : engendrer) désigne une conception et tentative d'explication de la naissance du monde, et parfois de l'Homme. Il existe une grand nombre de cosmogonies, três souvent d'origines religieuses. Nous pouvons citer par exemple la cosmogonie hindoue, dans laquelle le monde est vu comme un cycle : le dieu Brahma crée le monde lorsqu'il se réveille, et le détruit lorsqu'il s'endort. Notre univers correspond ainsi à une journée de Brahma, débutant lorsque Brahma ouvre les yeux et prenant fin lorsqu'il les referme. Le monde suit ainsi une suite de créations et de destructions.
+Nous pouvons aussi citer la cosmogonie abrahamique, décrite dans la Genèse. Cette cosmogonie est commune au judaïsme, au christianisme, et à l'islam. Dans cette cosmogonie, le dieu créateur, intemporel, conçut le monde en 7 jours. Il commença par créer la lumière le premier jour. Il termina par créer l'Homme à son image le sixième jour, puis se reposa le dernier jour.
+\begin{figure}
+  \centering
+  \includegraphics[scale=1]{cosmohindoue.png}
+  \hspace{3cm}
+  \includegraphics[scale=1]{genese.png}
+  \caption{Gauche : illustration artistique de la cosmologie hindoue. Droite : couverture du livre de la Genèse, Bible de Staint-Paul-hors-des-Murs, vers 870.}
+  \label{fig:cosmohindoue}
+\end{figure}
+
+Nous pourrions passer la totalité de ce manuscrit à décrire diverses cosmogonies. Mais celle qui nous intéresse et que nous allons détailler ici est la cosmogonie scientifique : la \emph{cosmologie}. La cosmologie est donc l'étude de l'univers, son origine, ses constituants et son devenir, dans le cadre de la méthode scientifique. Même si aujourd'hui la cosmologie fait consensus au sein des scientifiques en ce qui concerne la compréhension de l'univers, cela n'a pas toujours été le cas. Pendant longtemps les croyances religieuses ont dominé, allant jusqu'à limiter voire interdir les avancées scientifiques.
+Il faut attendre le \textsc{XVI}\ieme~siècle pour que Copernic propose le modèle héliocentrique, soit presque \num{2000} ans après le modèle géocentrique d'Aristote, soutenu par l'église et les savants jusqu'alors.
+% et s'oppose ainsi au modèle géocentrique introduit par d'Aristote et soutenu par l'église et les savants de l'époque.
+Par la suite, les observations de Galilée, les travaux de Kepler ainsi que l'émancipation des dogmes religieux ont permis au modèle héliocentrique, fondé sur les lois de Kepler, de s'imposer. Cela a aussi permis à Newton de proposer sa théorie de la gravitation peu de temps après. Cette période marque la naissance de la physique et de la cosmologie.
+
+Jusqu'au \textsc{XIX}\ieme~siècle, le modèle héliocentrique décrivant l'univers comme se limitant à notre système solaire fait consensus. Puis émerge l'idée que les étoiles sont d'autres systèmes solaires, notament grâce aux premières mesures de distance d'étoiles proches\footnote{Par exemple la mesure de la distance de 61 Cygni par Bessel en 1838. \#prov https://www.universalis.fr/encyclopedie/premiere-determination-de-la-distance-d-une-etoile/.}. L'idée de galaxie, un système rassemblant une multitude de systèmes solaires, fait aussi sont apparition, nous conduisant vers un paradigme de moins en moins anthropocentrique.
+
+\paragraph{}
+La cosmologie moderne naît réellement au début du \textsc{XX}\ieme~siècle. En 1915, Einstein propose sa théorie de la gravitation : la \emph{relativité générale}. Elle offre une vision radicalement différente de la théorie bien établie de Newton. La gravitation n'est plus vue comme une force instantannée entre les corps massifs mais comme une déformation de l'espace temps se propageant à la vitesse de la lumière. La théorie d'Einstein prédit correctement l'avance du périhélie de Mercure, dont la valeur était jusque là incomprise. Puis en 1919 lors d'une éclipse de Soleil, la déviation de la lumière par un corps massif, prédiction directe de la relativité générale et non présente dans la théorie de Newton, est observée. Non seulement la déviation de la lumière est observée pour la première fois, mais l'angle de déviation observé correspond à celui prédit par la théorie. Ceci assoit au sein de la communauté scientifique la théorie d'Einstein en tant que nouvelle théorie de la gravitation.
+
+Par ailleurs, la cosmologie observationnelle connaît des avancées remarquables, notament grâce à Edwin Hubble qui observe le décalage vers le rouge\footnote{voir explication du redshift section~\ref{subsec:descri_mod}, paragraphe \emph{Le redshift}.} du spectre d'objets lointains, dû à leur vitesse d'éloignement. Il comprend aussi que les objets étendus, jusque là interpretés comme des nuages de poussière et de gas et appelés nébuleuses, sont d'autres galaxies semblables à la nôtre. Parallèlement, Alexandre Friedmann résout en 1922 les équations d'Einstein de la relativité générale pour un univers homogène et isotrope et trouve une solution d'univers en expansion, qui contraste avec l'idée d'un univers statique et éternel jusque là ancrée dans les esprits. Enfin, Georges Lemaître effectue le lien entre tous ces éléments. En 1927, il publie un papier explicant que l'éloignement des galaxies et le décalage vers le rouge de leur spectre pouvait être expliqué par une théorie d'univers en expension, et donne la première estimation de la constante de Hubble\footnote{Constante reliant proportionnellement la vitesse d'éloignement des galaxies à leur distance, voir section~\ref{subsec:descri_mod}, paragraphe \emph{Les équations de Friedmann-Lemaître}.}. En 1929, Edwin Hubble publie son célèbre papier, exposant la loi de Hubble et favorisant très fortement le modèle d'univers en expansion.
+
+Nous pouvons noter ici que peu de temps après avoir publié sa théorie, Einstein ajoute dans ses équations une constante ad hoc, dite \emph{constante cosmologique}, et noté $\Lambda$. Cette constante est rajoutée afin de rendre les solutions à ses équations capables de décrire un univers statique (idée dominante de l'époque). Puis, suite à la publication de Hubble, Einstein retire la constante cosmologique de ses équations et la qualifie de ``plus grande bêtise de sa vie''. L'ironie fait qu'en 1998, la constante cosmologique est réintroduite dans les modèles afin d'expliquer l'observation de l'accélération de l'expansion de l'univers (voir \#prov ref). Les mesures les plus récentes estiment que la densité d'énergie de cette constante cosmologique, aussi appellée énergie sombre, représente environ \SI{70}{\percent} de l'énergie totale de notre univers.
+
+\paragraph{}
+Ces quinze années très fertiles pour la cosmologie ont popularisé l'idée d'un univers en expansion. Si certains s'y opposent et défendent un univers statique, d'autres s'y intéressent et étudient en détail les conséquences de ces modèles théoriques. Si l'univers est en expansion, c'est qu'il a été dans le passé plus petit qu'il ne l'est aujourd'hui. L'étude des solutions aux équations d'Einstein montre que l'expansion dilue la matière dans l'univers, et conduit à son refroidissement. L'univers était donc plus chaud et plus dense dans le passé. Si l'on remonte suffisament dans l'histoire de l'univers, celui ci devient de plus en plus petit, jusqu'à n'être à l'origine qu'un point infiniment chaud et dense. Ceci conduit à nommer ces classes de modèles \emph{hot big bang models}, ou modèles de big bang chaud en français. Il est à noter que cet \emph{instant zéro} est une extrapolation des modèles et reste hypothétique : au delà d'une certaine température et densité, les effets quantiques ne peuvent plus être négligés, rendant alors impossible l'utilisation de la relativité générale. Cet instant est appelé mur de Planck. Afin de comprendre ce qu'il se passe entre le mur de Planck et l'instant zéro, une théorie traitant à la fois la gravitation et l'aspect quantique de la matière est nécessaire. C'est un domaine de recherche très dynamique aujourd'hui, dans lequel un grand nombre de théories de gravité quantique sont étudiées.
+% . Ces points conduisent à nommer ces classes de solutions \emph{hot big bang models}, ou modèles de big bang en français, symbolisant l'idée qu'à l'origine\footnote{\#prov ou plutôt aussi loin que nous puissions remonter ? Ca vaut peut-être le coup d'expliquer la distinction}, l'univers fût un point infiniment chaud et dense.
+
+Suite notament aux publications de Friedmann, Lemaître et Hubble, les défenseurs des modèles de big bang ont commencé à chercher des observables capables de prouver ces modèles. En 1948, George Gamow, Ralph Alpher et Robert Herman, reprenant les travaux de Georges Lemaître, prédisent l'existence du \emph{fond diffus cosmologique} (CMB : Cosmic Microwave Background). Ce rayonnement fossile, si les modèles de big bang sont vérifiés, aurait été émis lorsque l'univers était encore dense et chaud. Il repose sur l'idée que, du fait de la température initialement très élevée, les particules possèdent trop d'énergie pour s'assembler et former les premières briques élémentaires. L'univers n'est alors qu'une soupe où toutes les particules s'entrechoquent constamment. Lorsque l'univers s'expand, la température baisse et l'énergie des particules aussi, autorisant ainsi la formation des premiers noyaux d'atomes. Mais la température et la densité sont toujours trop importantes pour laisser les premiers atomes se former : l'univers est alors un bain de noyaux, principalement d'hydrogène et d'hélium, d'électrons et de photons. Les photons sont diffusés constamment sur les électrons libres, rendant le plasma de l'univers primordial opaque. Puis, lorsque l'univers devient suffisamment froid, les électrons ne disposant plus de suffisamment d'énergie sont capturés par les noyaux, formant les premiers atomes de l'univers. Ces atomes, neutres, ne diffusent pas les photons. Ces derniers peuvent alors se propager librement, et l'univers devient transparent. Ce sont ces premiers photons, émis environ \num{380000} ans après le big bang, qui forment le fond diffus cosmologique et que nous pouvons mesurer aujourd'hui. Les principales étapes sont résumées sur la figure~\ref{fig:univershistory}, dont notament la formation des premiers noyaux vers 0,01 seconde, puis le CMB vers \num{380000} ans.
+En 1965, 17 ans après sa prédiction, le CMB est détecté par Penzias et Wilson, établissant ainsi le consensus sur les modèles de big bang. A partir de ce moment là, un certain nombre d'observations ont été menées par les cosmologistes afin de contraindre et distinguer les différents modèles de big bang.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.35]{univershistory2}
+  \caption{Illustration de l'histoire de l'univers depuis ses origines jusqu'à aujourd'hui. Les principales étapes sont représentées : la formation des premiers protons et neutrons, puis des premiers atomes, et enfin l'emission du CMB.}
+  \label{fig:univershistory}
+\end{figure}
+
+
+\section{Le modèle \lcdm{}}
+
+Le modèle \lcdm{} est aujourd'hui le modèle cosmologique qui fait consensus dans la communauté scientifique. Il est souvent désigné comme le modèle standard de la cosmologie. C'est un modèle de big bang, décrivant un univers composé principalement d'énergie noire, ou aussi appelé constante cosmologique ($\Lambda$), et de matière noire froide (CDM : Cold Dark Matter). La figure~\ref{fig:lcdm} présente la répartition de ses différentes composantes.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{lcdm}
+  \caption{Répartition des différentes composantes du modèle \lcdm{}.}
+  \label{fig:lcdm}
+\end{figure}
+
+Le modèle s'est établi suite à un certain nombre d'observations. D'abord, la détection du CMB en 1965, qui confirme les modèles de big bang.
+Puis l'introduction de la matière noire dans les modèles au cours des années 70 et 80, notament grâce aux travaux de Vera Rubin sur le problème de la masse manquante dans les galaxies. Déja en 1933, Fritz Zwicky remarquait que la masse visible dans les amas n'était pas suffisante pour expliquer leur cohésion, et supposa donc l'existence d'une matière invisible. Une série d'observations fut menée dans les années 70 afin d'étudier les courbes de vitesse des étoiles au sein des galaxies. Les étoiles situées en périphérie furent mesurées avec une vitesse plus importante qu'attendue. La conclusion fut similaire à celle de Zwicky : la présence de masse invisible dans les halos de galaxies permet d'expliquer ces courbes de rotation. Ainsi la matière noire froide fut introduite dans les modèles cosmologiques : environ \SI{25}{\percent} de la masse de l'univers est sous la forme d'une matière non standard\footnote{Non-décrite par le modèle standard de la physique des particules.} intéragissant uniquement via la gravitation avec la matière ordinaire.
+
+% Plus tard, le satelitte COBE fut envoyé dans l'espace afin de mesurer le spectre\footnote{voir explication \#prov:ref} du CMB.
+Plus tard, le satelitte COBE fut envoyé dans l'espace afin de détecter les anisotropies du CMB. Selon les prédictions des modèles de big bang, le spectre du CMB suit une loi de corps noir, avec une température d'environ \SI{3}{\kelvin}, et possède des anisotropies correspondant aux perturbations primordiales de densité. La mission fut un succès : les mesures de COBE ont permis d'identifier les anisotropies de température du CMB, mettant en évidence les fluctuations de densité de l'univers primordial. D'autre part, le spectre du CMB est mesuré avec une température $T = \SI{2,725(1)}{\kelvin}$ (\#prov Mather et al APJ 1994), ne déviant pas du spectre du corps noir de plus de \SI{0,25}{\percent} \cite{CITE:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC46596/}. La détection des anisotropies du CMB constitue un des arguments les plus solides en faveur des modèles de big bang.
+
+Jusque alors, les modèles cosmologiques n'incluaient pas d'énergie noire. Puis en 1998, deux équipes différentes publient l'analyse de distances de luminosité de supernovae de type 1a (SN1a), toutes les deux mettant en évidence l'accélération de l'expansion de l'univers et donc favorisant les modèles contenant de l'énergie noire. Ce sont ces dernières observations qui ancrent \lcdm{} comme modèle de big bang préféré. Par la suite, le satellites WMAP puis le satellite Planck sont lancés en 2001 et en 2009 afin de mesurer avec une plus grande précision les anisotropies du CMB. Ces mesures successives sont effectuées avec une précision sans précédent, permettant de contraindre très fortement les paramètres cosmologiques. Les résultats finaux de la collaboration Planck ont été publiés en 2018~\cite{CITE:planck2018} et fournissent les paramètres cosmologiques du modèle \lcdm{} avec une précision inférieur au pourcent (voir tableau~\ref{table:planck2018}).
+
+\subsection{Description du modèle}
+\label{subsec:descri_mod}
+
+Le modèle \lcdm{}, et plus généralement les modèles de big bang, sont fondés sur le formalisme de la relativité générale.
+%\textbf{Cette théorie, élaborée par Einstein en 1915, fait deux postulats. D'abord, elle suppose l'unification de la masse et de l'énergie, via la célèbre formule\footnote{où $E$ est l'énergie, $m$ la masse, et $c$ la vitesse de la lumière dans le vide.} $E = mc²$, ainsi que celle de l'espace et du temps (\#prov check si ce sont vraiment des postulats ou des conséquences, sinon dire juste que ca decoule de relat restreinte + principe equi). Ceci revient à se placer dans le cadre de la relativité restreinte. Elle suppose ensuite le principe d'équivalence}.
+\textbf{Cette théorie, élaborée par Einstein en 1915, est la généralisation de la relativité restreinte, proposée par Einstein 10 ans plus tôt. La relativité restreinte emet deux postulats :
+  \begin{itemize}[label=$\bullet$]
+  \item les lois de la physique sont les mêmes dans tous les référentiels inertiels\footnote{Un référentiel dans lequel l'observateur n'est pas accéléré.},
+  \item la vitesse de la lumière dans le vide est la même dans tous les référentiels inertiels.
+  \end{itemize}
+  Cette théorie traite donc du mouvements des corps dans des référentiels inertiels. Afin d'étendre la théorie aux référentiels accélérés, et d'ainsi inclure la gravitation, le principe d'équivalence est supposé.}
+Ce principe affirme que la masse inertielle et la masse gravifique sont équivalentes, et que les effets de la gravitation sont identiques aux effets de l'accélération du référentiel de l'observateur. Autrement dit, il n'existe pas d'expérience permettant à l'observateur de distinguer s'il se trouve dans un champ de gravitation uniforme ou dans un référentiel uniformément accéléré. La gravitation n'est alors plus vue comme une force, mais comme un effet géométrique, conséquence de la déformation de l'espace-temps.
+
+\textbf{Dans la suite de cette section, afin de simplifier les équations, nous nous plaçons dans un système d'unité dans lequel
+  \begin{equation}
+    c = \hbar = k_{B} = 1 .
+  \end{equation}
+}
+
+\paragraph{La métrique —}
+Le formalisme de la relativité générale s'appuie donc sur celui de la relativité restreinte. L'espace-temps est décrit par la métrique. Cet objet mathématique\footnote{Un tenseur de rang 2.} permet de définir le produit scalaire sur l'espace-temps à 4 dimensions, et donc de mesurer les distances et les angles.
+\textbf{Nous verrons plus loin dans ce manuscrit que la métrique dépend de la distribution de masse. Ainsi, et c'est un point remarquable de la relativité générale, la masse courbe l'espace temps et l'espace-temps indique à la masse, via la métrique, comme se déplacer au sein de celui-ci\footnote{Inspiré de la citation de John Wheeler : "Spacetime tells matter how to move; matter tells spacetime how to curve."}.}
+% C'est la métrique qui contient l'information sur la gravitation (\#prov dire que la masse courbe l'espace temps et que c'est traduit par la métrique; voir pour rajouter la citation.
+Dans le cadre du modèle \lcdm{}, la métrique utilisée est la métrique FLRW (pour Friedmann Lemaître Robertson Walker), elle s'exprime comme :
+\begin{equation}
+  \label{eq:metrique1}
+  ds² = - dt² + R(t) \left[ \frac{dr²}{1 - k r²} + r² d\Omega \right],
+\end{equation}
+où $d\Omega = d\theta + \sin(\theta) d\phi$ , $R(t)$ rend compte de l'expansion de l'univers à l'instant $t$, et $k$ vaut soit $1$, $0$ ou $-1$ selon que l'univers possède une courbure positive, nulle ou négative (voir figure~\ref{fig:curvature}).
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{curvature}
+  \caption{Représentation de la courbure de l'univers : positive à gauche, négative au centre et nulle à droite.}
+  \label{fig:curvature}
+\end{figure}
+A l'aide d'un changement de coordonnées, il est possible de se ramener à la formule suivante :
+\begin{equation}
+  \label{eq:metrique2}
+  ds² = - dt² + a(t)\left[ d\chi² + S_{k}²(\chi) d\Omega \right],
+\end{equation}
+où $a(t) = R(t) / R(t₀)$,  $t₀$ est le temps présent et $S_{k}$ est défini comme
+\begin{align}
+  S_{k}(\chi) = R(t₀) \left\{
+    \begin{array}{ll}
+      \sin(\chi / R(t₀)) & \mbox{si } k = 1 \\
+      \chi / R(t₀) & \textrm{si } k = 0 \\
+      \sinh(\chi / R(t₀)) & \mbox{si } k = -1
+    \end{array}
+\right..
+\end{align}
+Cette formulation permet de mettre en évidence le rapport $a(t)$, appelé facteur d'échelle. Par définition il vaut 1 aujourd'hui. Afin de rendre compte de l'expansion, $a(t) < 1$ pour $t < t₀$ (passé) et $a(t) > 1$ pour $t > t₀$ (futur).
+
+\paragraph{Le redshift —}
+\label{par:redshift}
+% Le décalage vers le rouge, ou \emph{redshift} en anglais, est une conséquense de la relativité générale. Les objets distants s'éloignent de nous du fait de l'expansion de l'univers. Similairement à l'effet Doppler\footnote{L'effet Doppler est l'augmentation ou la diminution de la longueur d'onde d'une onde lorsque l'émetteur de cette dernière s'approche ou s'éloigne de l'observateur. L'exemple le plus connu est celui de l'ambulance : le son entendu est plus aigu lorsque l'ambulance s'approche, puis plus grave lorsqu'elle s'éloigne.}, le spectre observé de ces objets est décalé vers les grandes longueurs d'onde. Mais contrairement à l'effet Doppler, le redshift n'est pas directement dû à la vitesse de recession de l'objet : les photons, lorsqu'ils se propagent de l'objet émetteur jusqu'à nous, subissent la dilatation de l'espace et perdent ainsi de l'énergie, leur longueur d'onde se trouvant augmentée \#correction: un peu fishy: demander a Jim sinon. Le redshift est donc du à l'expansion de l'univers. Il est d'ailleurs parfois nommé redshift cosmologique.
+% Le redshift, noté $z$, est défini via la relation
+% \begin{equation}
+%   \label{eq:redshift}
+%   1 + z = \frac{\lambda_{o}}{\lambda_{e}},
+% \end{equation}
+% où $\lambda_{e}$ est la longueur d'onde émise, et $\lambda_{o}$ la longueur d'onde observée. On peut montrer que le reshift est relié au facteur d'échelle via la formule
+% \begin{equation}
+%   \label{eq:redshift2}
+%   1 + z = \frac{1}{a(t)}.
+% \end{equation}
+Le décalage vers le rouge, ou \emph{redshift} en anglais, est une conséquense de la relativité générale. Les objets distants s'éloignent de nous du fait de l'expansion de l'univers. Similairement à l'effet Doppler\footnote{L'effet Doppler est l'augmentation ou la diminution de la longueur d'onde d'une onde lorsque l'émetteur de cette dernière s'approche ou s'éloigne de l'observateur. L'exemple le plus connu est celui de l'ambulance : le son entendu est plus aigu lorsque l'ambulance s'approche, puis plus grave lorsqu'elle s'éloigne.}, le spectre observé de ces objets est décalé vers les grandes longueurs d'onde. Mais contrairement à l'effet Doppler, le redshift n'est pas directement dû à la vitesse de recession de l'objet : les photons, lorsqu'ils se propagent de l'objet émetteur jusqu'à nous, subissent la dilatation de l'espace et voient leur longueur d'onde augmenter. Ceci est dû au facteur d'échelle $a$ présent dans la métrique. En effet, on peut montrer que
+\begin{equation}
+  \frac{\lambda_o}{\lambda_e} = \frac{a(t_e)}{a(t_o)} ,
+\end{equation}
+où $t_e$ et $t_o$ sont les temps d'émission et d'observation du photon, $\lambda_{e}$  et $\lambda_{o}$ sa longueur d'onde lors de l'émission et de l'observation.
+% Le redshift est alors définit comme \#prov changer : le redshift est définit comme le raport des lambda et on deduit qu'il est relié à a
+\textbf{Le redshift $z$ mesure alors le décalage vers le rouge d'un objet observé. Il est défini comme
+\begin{equation}
+  \label{eq:redshift}
+  1 + z = \frac{\lambda_o}{\lambda_e} ,
+\end{equation}
+il est relié au facteur d'échelle par
+\begin{equation}
+  \label{eq:redshift2}
+  1 + z = \frac{1}{a(t)}.
+\end{equation} }
+Le redshift est donc directement du à l'expansion de l'univers. Il est d'ailleurs parfois nommé redshift cosmologique. Il peut servir de mesure de temps (et aussi de distance, voir section~\ref{subsec:descri_mod} paragraphe \emph{Les distances}) : le spectre d'un objet avec un redshift $z=2$ est décalé vers le rouge d'un facteur 3. Il en découle que sa lumière observée aujourd'hui a été émise lorsque l'univers avait une taille 3 fois plus petite qu'aujourd'hui, soit il y a environ 12 milliards d'annéees.
+
+% leur longueur d'onde se trouvant augmentée \#correction: un peu fishy: demander a Jim sinon. Le redshift est donc du à l'expansion de l'univers. Il est d'ailleurs parfois nommé redshift cosmologique.
+% Le redshift, noté $z$, est défini via la relation
+% \begin{equation}
+%   \label{eq:redshift}
+%   1 + z = \frac{\lambda_{o}}{\lambda_{e}},
+% \end{equation}
+% où $\lambda_{e}$ est la longueur d'onde émise, et $\lambda_{o}$ la longueur d'onde observée. On peut montrer que le reshift est relié au facteur d'échelle via la formule
+% \begin{equation}
+%   \label{eq:redshift2}
+%   1 + z = \frac{1}{a(t)}.
+% \end{equation}
+
+% Ainsi le redshift peut servir de mesure de temps (et aussi de distance, voir distances \#prov) : le spectre d'un objet avec un redshift $z=2$ est décalé vers le rouge d'un facteur 3. Il en découle que sa lumière observé aujourd'hui a été émise lorsque l'univers avait une taille 3 fois plus petite qu'aujourd'hui, soit il y a environ 12 milliards d'annéees.
+
+\paragraph{Les équations d'Einstein —}
+Lorsqu'Einstein publie sa théorie en 1915, la façon de présenter les équations d'Einstein, le coeur de la théorie, est différente de la façon de les présenter aujourd'hui. Nous nous proposons ici de suivre l'approche de la physique moderne, qui formule toutes les théories en termes d'un seul et même principe : le \emph{principe de moindre action}. Ce principe stipule que l'action mis en oeuvre lors de l'évolution d'un système entre deux instants est toujours extrémale\footnote{Elle est minimale dans la grande majorité des cas.}. L'action est une quantité caractérisant globalement un système, elle est définie comme
+\begin{equation}
+  \label{eq:action}
+  \mathcal{S} = \int_{t₀}^{t₁} L dt,
+\end{equation}
+où $L$ est le lagrangien du système. En mécanique newtonienne, il est défini comme la différence de l'énergie cinétique et de l'énergie potentiel. En relativité générale, tout comme dans les théories de champs\footnote{Par exemple la théorie quantique des champs.}, le terme du lagrangien est représenté plutôt par une densité de lagrangien. Cette densité de lagrangien est alors intégrée sur l'espace-temps afin d'obtenir l'action. Dans le cas de la relativité générale, l'action est définie comme
+\begin{equation}
+  \label{eq:actionrg}
+  \mathcal{S} = \int d⁴x \sqrt{-g} \frac{R}{4 \pi G} ,
+\end{equation}
+où $g$ est le déterminant de la métrique, $R$ le scalaire de Ricci, et $G$ la constante de Newton. \textbf{Le scalaire de Ricci caractérise la courbure, il dépend des dérivées secondes de la métrique}. Une fois l'action déterminé, sa minimisation conduit aux équations du mouvement du système. Dans notre cas, ce sont les équations d'Einstein :
+\begin{equation}
+  \label{eq:einstein}
+  R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi G T_{\mu \nu},
+\end{equation}
+\textbf{où $g_{\mu \nu}$ est la métrique, $R_{\mu \nu}$ le tenseur de Ricci, $T_{\mu \nu}$ le tenseur énergie-impulsion, et $\Lambda$ la constante cosmologique. Le tenseur de Ricci dépend des symboles de Christoffel et de leur dérivé, eux mêmes dépendant des dérivés de la métrique. C'est donc un terme purement géométrique. La contraction du tenseur de Ricci donne le scalaire de Ricci $R$. Le tenseur énergie-impulsion quant à lui contient l'information de la distribution de masse. Ainsi il y a un lien directe entre la métrique, la déformation de l'espace-temps, et la masse présente dans l'univers.}
+
+L'équation~\ref{eq:einstein} regroupe en réalité plusieurs équations. Les indices $\mu$ et $\nu$ varient de 0 à 3, 0 représentant la coordonnée temporelle et 1 à 3 les coordonnées spatiales. Il existe donc une équation par couple $(\mu, \nu)$, produisant 16 équations. Par des arguments de symétrie, ce nombre se réduit à 6 équations indépendantes, que l'on nomme les équations d'Einstein.
+
+\paragraph{Les équations de Friedmann-Lemaître —}
+Les équations d'Einstein forment un système d'équations différentielles, de second ordre et non linéaires, et de fait, difficile à résoudre. Afin de simplifier les équations et trouver des solutions, certaines hypothèses sont faites. Dans la plupart des modèles cosmologiques, l'univers est supposé homogène et isotrope à grande échelle.
+% C'est le cas de la métrique FLRW (voir eq.~\ref{eq:metrique2})
+\textbf{La métrique qui décrit un univers homogène, isotrope et en expansion est la métrique FLRW (voir eq.~\ref{eq:metrique2}).}
+Dans un tel cas, on peut calculer le membre de gauche de l'équation~\ref{eq:einstein}. Ce calcul, que nous ne détaillerons pas ici, passe par la détermination des symboles de Christoffel et est très bien détaillé dans \cite{prov: Dodelson 2.1.2}. De plus, pour un fluide parfait, le tenseur énergie impulsion prend la forme
+\begin{equation}
+  T_{\mu \nu} =
+  \begin{pmatrix}
+    -\rho & 0 & 0 & 0 \\
+    0 & \mathcal{P} & 0 & 0\\
+    0 & 0 & \mathcal{P} & 0\\
+    0 & 0 & 0 & \mathcal{P}
+  \end{pmatrix} ,
+\end{equation}
+où $\rho$ est la densité du fluide, et $\mathcal{P}$ est sa pression. Dans ces conditions, la partie temporelle de l'équation~\ref{eq:einstein} donne
+\begin{equation}
+  \label{eq:friedmann1}
+  \left(\frac{\dot{a}}{a}\right)^2 = \frac{8 \pi G}{3}\rho + \frac{\Lambda}{3} - \frac{k}{a^2} 
+\end{equation}
+et la partie spatiale
+\begin{equation}
+  \label{eq:friedmann2}
+  2 \frac{\ddot{a}}{a} + \left(\frac{\dot{a}}{a}\right)^2 = - 8 \pi G \mathcal{P} + \Lambda - \frac{k}{a^2} ,
+\end{equation}
+où le point désigne la dérivé temporelle. On définit alors le taux d'expansion $H$ comme $H(t) = \frac{\dot{a}(t)}{a(t)}$. Sa valeur actuelle, notée $H₀$, est appelée constante de Hubble. Elle relie proportionnellement la distance des galaxies à leur vitesse d'éloignement, via la loi de Hubble :
+\begin{equation}
+  \label{eq:hubble}
+  V = H_0 \times D.
+\end{equation}
+$H_0$ est souvent donné comme $H_0 = 100 h\,\mathrm{km \cdot s^{-1} \cdot Mpc^{-1}}$, où $h$ est un paramètre sans dimension qui prend en compte l'incertitude sur $H_0$. D'après les mesures les plus récentes~\cite{CITE planck + Riess ?}, $h$ varie entre $\num{0,67}$ et $\num{0,75}$.
+% L'équation~\ref{eq:hubble} est nommée en l'honneur d'Edwin Hubble, après sa publication en 1929, même si Georges Lemaître fut sans doute le premier à saisir le lien entre distance et vitesse d'éloignement des galaxies et son implication concernant l'expansion de l'univers (\#prov a reformuler).
+\textbf{L'équation~\ref{eq:hubble} est nommée en l'honneur d'Edwin Hubble, après sa publication en 1929, même si Georges Lemaître fut sans doute le premier à expliquer le lien entre distance et vitesse d'éloignement des galaxies par l'expansion de l'univers.}
+Suite à cette brève parenthèse, retournons à nos deux équations. Il est courant de récrire ces équations en injectant $H(t)$, ainsi qu'en remplaçant la seconde par une combinaison linéaire des deux précédentes :
+\begin{align}
+  \label{eq:friedmann3}
+  % \left\{
+  %   \begin{array}{l}
+  H^2 &= \frac{8 \pi G}{3} \rho + \frac{\Lambda}{3} - \frac{k}{a^2} ,\\
+  \label{eq:friedmann4}
+        %         - 2 \dot{H} - 3 H^2 = 8 \pi G P + \Lambda + \frac{k}{a^2}
+  \frac{\ddot{a}}{a} &= - \frac{4 \pi G}{3} (\rho + 3 \mathcal{P}) + \frac{\Lambda}{3} .
+        %       \end{array}
+  % \right..
+\end{align}
+Ces deux équations sont appelées les équations de Friedmann-Lemaître. Elles découlent directement des équations d'Einstein pour un univers homogène et isotrope,
+% et permettent de relier les densités d'énergie des différentes composantes de l'univers au facteur d'échelle (\#prov inverser : ca permet d'estimer l'evolution du facteur d'echelle en fonction des compo de l'uni).
+\textbf{et permettent d'estimer l'évolution du facteur d'échelle en fonction des différentes composantes de l'univers.}
+Nous pouvons noter que le membre de droite de l'équations~\ref{eq:friedmann3} contient 3 entités : le fluide parfait ainsi que la courbure et la constante cosmologique. Même si cela reste un choix d'écriture et ne relève d'aucun argument mathématique, il permet de mettre en évidence le fait que ces deux dernières entités peuvent être considérées comme des composante énergétique de l'univers, avec leur propre densité d'énergie.
+
+
+\paragraph{Évolution de l'univers —}
+\textbf{Afin de simplifier le raisonnement, nous nous plaçons dans le cas où l'univers est constitué d'un seul fluide parfait. Nous verrons par la suite comment considérer le cas d'un univers composé de plusieurs fluides.
+Pour un fluide donné, les équations de Friedmann-Lemaître permettent de déterminer l'évolution de $\rho$ et $\mathcal{P}$ en fonction du facteur d'échelle. Afin d'obtenir leur évolution temporelle ainsi que celle du facteur d'échelle, il est nécessaire d'ajouter une équation. L'équation généralement choisie est l'équation d'état d'un fluide parfait, reliant sa pression à sa densité :
+\begin{equation}
+  \label{eq:etat}
+  \mathcal{P} = w \rho,
+\end{equation}
+où $w$ est le paramètre d'état du fluide, ici supposé constant.
+De plus, en utilisant la conservation\footnote{Cette équation est l'analogue en relativité générale de la conservation de l'énergie.} du tenseur énergie-impulsion $\partial_{\mu} T^{\mu \nu} = 0$, nous obtenons la relation de conservation
+\begin{equation}
+  \label{eq:conservation}
+  \dot{\rho} + 3 H (\rho + \mathcal{P}) = 0 .
+\end{equation}
+Cette équation n'est pas indépendante des deux équations de Friedmann-Lemaître et peut aussi être obtenue avec une combinaison linéaire de ces deux dernières. En intégrant cette équation et en utilisant l'équation d'état~\ref{eq:etat}, nous obtenons donc l'évolution de $\rho$ avec le facteur d'échelle
+\begin{equation}
+  \label{eq:rho_vs_a}
+  \rho = \rho_0 a^{-3(1+w)} ,
+\end{equation}
+où $\rho_0$ est la densité aujourd'hui. Ainsi, l'évolution de la densité d'énergie de notre fluide dépendra principalement de son paramètre d'état $w$. Si nous injectons maintenant cette équation dans l'équation~\ref{eq:friedmann3}, nous obtenons
+\begin{equation}
+  \label{eq:H_evol}
+  H = H_0 a^{-3 (1+w) / 2} ,
+\end{equation}
+ce qui nous donne finalement
+\begin{equation}
+  \label{eq:a_vs_t}
+  a(t) \propto t^{\frac{2}{3(1+w)}} .
+\end{equation}
+Ce raisonnement est valable pour un univers constitué d'un seul fluide parfait, mais se généralise à un univers contenant plusieurs fluides. }
+Selon le fluide considéré, la valeur de $w$ est différente. Nous pouvons déjà distinguer les particules relativistes des particules non relativiste. La matière non relativiste $(m)$ ou simplement matière, se compose de la matière baryonique\footnote{La matière dite ``ordinaire'', que nous côtoyons dans la vie de tous les jours.} $(b)$ et de la matière noire froide $(c)$.
+% Elle est dite sans pression, donc son paramètre d'état est nul (\#prov expliquer avec les mains : gaz de galaxies qui n'interagissent pas)  : $w_m = 0$. Nous avons alors : $\rho_m \propto a^{-3}$. \\
+\textbf{Elle peut être vue comme un gaz de galaxies, n'interagissant les unes avec les autres que via la gravitation. Le fluide correspondant possède alors une pression nulle, son paramètre d'état est donc $w_m = 0$. Nous avons alors : $\rho_m \propto a^{-3}$. \\}
+Concernant les particules relativistes, qui constituent ce qu'on appelle la radiation $(r)$, elle est composée des photons $(\gamma)$ et des neutrinos relativistes $(\nu)$. Son paramètre d'état est $w_r = 1/3$, ce qui donne $\rho_r \propto a^{-4}$. Nous pouvons remarquer que la densité de matière diminue proportionnellement au volume de l'univers, par simple effet de dilution. La densité de radiation possède un facteur $1/a$ supplémentaire. Ce facteur provient du redshift des photons observés, et s'ajoute au $1/a^3$ de la dilution.
+% dû à l'augmentation de la longueur d'onde des photons avec l'expansion (\#correction fishy, voir avec Jim).
+% Afin de travailler avec des quantités sans dimension et normalisées, il est courant d'introduire la densité critique $\rho_{crit} = 3 H_0^2 / 8 \pi G$ (\#prov expliquer ce que c'est avant de donner la formule). L'équation~\ref{eq:friedmann3} s'écrit alors
+
+
+\textbf{Afin de travailler avec des quantités sans dimension et normalisées, il est courant d'introduire la densité critique $\rho_{crit} = 3 H_0^2 / 8 \pi G$. Cette desité correspond à la densité limite pour laquelle l'univers est plat. Au delà de cette limite, l'univers est fermé, en deçà, l'univers est ouvert. En introduisant la densité critique, l'équation~\ref{eq:friedmann3} s'écrit alors}
+\begin{equation}
+  \label{eq:friedmann5}
+  \frac{H^2}{H_0^2} = \frac{\rho}{\rho_{crit}} ,
+\end{equation}
+où $\rho$ représente la densité total d'énergie de l'univers, incluant la contribution de la constante cosmologie $\Lambda$ et de la courbure $k$ . A l'aide de l'équation~\ref{eq:rho_vs_a}, chaque composante peut être mise sous la forme
+\begin{equation}
+  \label{eq:def_omgega}
+  \frac{\rho_i}{\rho_{crit}} = \Omega_i a^{-3 (1+w)} , 
+\end{equation}
+où $\Omega_i$ est le ratio de la densité de l'espèce $i$ par la densité critique aujourd'hui. Nous pouvons alors récrire~\ref{eq:friedmann5} comme
+\begin{equation}
+  \label{eq:friedmann6}
+  \frac{H^2}{H_0^2} = \sum_i \Omega_i a^{-3 (1+w)} ,
+\end{equation}
+où $i$ court sur toutes les espèces contribuant à l'énergie totale de l'univers. Nous avons déjà présenté deux d'entre elles : $\Omega_m$ et $\Omega_r$. Comme mentionné plus tôt, la courbure et la constante cosmologique participent au bilan énergétique global et peuvent être mises sous la forme d'une densité d'énergie, en introduisant
+\begin{equation}
+  \label{eq:omega_lambda}
+  \Omega_{k} = - \frac{k}{a^2 H^2} , \hspace{1cm} \textrm{et} \hspace{1cm} \Omega_{\Lambda} = \frac{\Lambda}{3 H^2} .
+\end{equation}
+Nous pouvons remarquer ici que $\Omega_{\Lambda}$ est indépendant de $a$. Il en découle $w_{\Lambda} = -1$ : la constante cosmologique peut être interprétée comme un fluide de densité d'énergie constante et de pression négative. Nous verrons par la suite que sa domination dans le bilan énergétique de l'univers actuel est responsable de l'accélération de l'expansion (\#prov voir paragraphe?).
+Enfin, en utilisant les deux définitions précédentes, nous obtenons l'évolution du taux d'expansion
+\begin{equation}
+  \label{eq:friedmann7}
+  \frac{H^2}{H_0^2} = \Omega_m a^{-3} + \Omega_r a^{-4} + \Omega_k a^{-2} + \Omega_{\Lambda}.
+\end{equation}
+% \#prov ca decoule de 1.23 puis 1.24; et peut etre donner omega\_k = 1 - omega\_total Il en découle que pour un univers plat, $\Omega_k = 0$ et donc $\Omega_m + \Omega_r + \Omega_{\Lambda} = 1$.
+En évaluant l'équation précédente pour $t=0$, nous obtenons
+\begin{equation}
+  \label{eq:sum_omega}
+ 1 - \Omega_k  =  \Omega_m + \Omega_r + \Omega_{\Lambda} = \Omega_{total}
+\end{equation}
+\textbf{Pour un univers plat, nous avons $\Omega_k = 0$, et donc $\Omega_{total} = 1$. Nous retrouvons alors que $\rho_{crit}$ correspond à la densité totale de l'univers. (\#prov Omega\_total prend en compte la courbure ou pas ? C'est pas en accord avec mon equation~\ref{eq:friedmann5}, c'est pas clair ...)}
+
+\#prov Il faut peut-etre faire un graph qui montre l'evolution des omega, avec la phase de domination de chaque espèce
+
+\paragraph{Les distances —}
+La notion de distance en relativité générale n'est pas si intuitive.
+% Définissons premièrement la quantité
+% \#prov expliquer plus avec les mains ce qu'est la distance comobile et physique; comobile est defini comme delta\_theta * DM
+\textbf{Du fait de l'expansion, la distance que nous observons entre nous et un astre lointain n'est pas la même que la distance entre nous et cet astre lointain aujourd'hui. La distance que nous observons est nécessairement plus petite : l'astre, entre le temps de l'emission et aujourd'hui, s'est éloigné de nous. Afin de simplifier les comparaisons de distances à différentes époques, nous définissons la distance \emph{comobile} comme étant la distance \emph{physique} multipliée par $(1+z)$ : c'est la distance physique telle qu'elle nous apparaîtrait aujourd'hui. Ainsi, la distance comobile séparant deux objets suivant le flot de Hubble reste la même au cours du temps.}
+Nous présentons ici les différentes distances utilisées en cosmologie. Elles sont très bien décrites dans \cite{CITE: Hogg 1999}, et nous suivons d'ailleurs ses notations. Définissons premièrement la quantité
+\begin{equation}
+  \label{eq:dist_ez}
+  E(z) = \frac{H(z)}{H_0} 
+  = \sqrt{\Omega_m a^{-3} + \Omega_r a^{-4} + \Omega_k a^{-2} + \Omega_{\Lambda}} ,
+\end{equation}
+ainsi que la distance de Hubble
+\begin{equation}
+  \label{eq:dist_hubble}
+  D_H = \frac{c}{H_0} .
+\end{equation}
+Nous pouvons alors définir les distances suivantes :
+\begin{itemize}[label=$\bullet$]
+\item \textbf{la distance comobile : comme expliqué précédemment, c'est la distance qui sépare 2 objets suivant le flot de Hubble}. Deux objets à un redshift $z$ et séparés d'une distance physique $D$ possèdent une distance comobile $(1+z)D$. La distance comobile le long de la ligne de visé est définie comme
+  \begin{equation}
+    \label{eq:dist_como}
+    D_{C} = D_H \int_0^z \frac{dz'}{E(z')} .
+  \end{equation}
+  Deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel possèdent une distance comobile $\delta \theta D_M$. $D_M$ est la distance comobile transverse. 
+  Dans le cas où l'univers n'est pas plat ($\Omega_k \neq 0$), la distance comobile transverse $D_M$  n'est pas la même que la distance comobile le long de la ligne de visée $D_{C}$ :
+  \begin{equation}
+    \label{eq:dist_como_trans}
+    D_M = \left\{
+      \begin{array}{ll}
+        D_H \frac{1}{\sqrt{\Omega_k}} \sin(\Omega_k D_C / D_H) & \mbox{si } \Omega_k < 0 \\
+        D_C & \textrm{si } \Omega_k = 0 \\
+        D_H \frac{1}{\sqrt{\Omega_k}} \sinh(\Omega_k D_C / D_H) & \mbox{si } \Omega_k > 0
+      \end{array}
+    \right..
+  \end{equation}
+  
+\item La distance de diamètre angulaire : c'est la distance reliée à la taille apparente d'un objet. Deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel possèdent une distance physique $\delta \theta D_A$. $D_A$ est la distance de diamètre angulaire. Elle diffère de $D_M$ du fait qu'elle considère la distance physique et non comobile entre les deux objets. Elle est donc reliée à $D_M$ par
+  \begin{equation}
+    \label{eq:dist_ang}
+    D_A = \frac{D_M}{1+z}.
+  \end{equation}
+
+\item la distance de luminosité : elle est définie via la relation qui exprime le flux d'une source lumineuse en fonction de sa luminosité
+  \begin{equation}
+    \label{eq:dist_lum}
+    F = \frac{L}{4\pi D_L²} \hspace{0.5cm} \rightarrow \hspace{0.5cm} D_L = \sqrt{\frac{L}{4 \pi F}} .
+  \end{equation}
+  Elle est reliée à la distance comobile transverse via
+  \begin{equation}
+    D_L = (1+z) D_M = (1+z)² D_A ,
+  \end{equation}
+\textbf{le facteur (1+z) supplémetaire provenant du fait que les photons sont redshiftés à cause de l'expansion, et perdent donc davantage d'énergie lors de leur propagation jusqu'à nous.}
+\end{itemize}
+Dans ce manuscrit, les distances qui nous intéressent particulièrement sont $D_C$ et $D_M$. Nous y ferons appel dans la section \#prov ref.
+
+\paragraph{Les paramètres du modèle —} 
+Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés par le satellite Planck~\cite{CITE ref} avec une précision d'environ 1~\% et sont résumés dans le tableau~\ref{table:planck2018}. Les 6 paramètres mesurés par Planck sont
+\begin{itemize}
+\item $\Omega_bh^2$, la densité de baryons multipliée par $h^2$
+\item $\Omega_ch^2$, la densité de matière noire multipliée par $h^2$
+\item $\theta_{MC}$, une approximation de $\theta_*$ : l'angle sur le ciel de l'échelle acoustique
+\item $\tau$, \textbf{la profondeur optique totale, intégrée de $z=0$ jusqu'au CMB. La contribution provient essentiellement des électrons libres lors de la réionisation}
+\item $A_s$, l'amplitude du spectre de puissance des fluctuations primordiales 
+\item $n_s$, l'indice spectrale du spectre de puissance des fluctuations primordiales
+\end{itemize}
+
+
+\begin{table}[h]
+  \centering
+  \caption{Paramètres cosmologiques mesurés par le satellite Planck. La partie supérieure du tableau indique les six paramètres ajustés aux données. La partie inférieure donne d'autres paramètres déduits de ces six paramètres ajustés. Ces chiffres sont tirés de la table 1.1 de~\ref{CITE ref}}
+  \label{table:planck2018}
+  \begin{tabular}{lc}
+    \toprule
+    Parameters & Combined \\
+    \midrule
+    $\Omega_{\mathrm{b}}h^2$\dotfill & $0.02233\pm0.00015$ \\
+    $\Omega_{\mathrm{c}}h^2$\dotfill & $0.1198\pm0.0012$ \\
+    $100\theta_{\mathrm{MC}}$\dotfill & $1.04089\pm0.00031$ \\
+    $\tau$\dotfill & $0.0540\pm0.0074$ \\
+    $\ln(10^{10}A_\mathrm{s})$\dotfill & $3.043\pm0.014$ \\
+    $n_\mathrm{s}$\dotfill & $0.9652\pm0.0042$ \\
+    \midrule
+    $\Omega_{\mathrm{m}} h^2$\dotfill & $ 0.1428\pm 0.0011 $ \\
+    $H_0 \,[\si{\kilo\meter\per\second\per\Mpc}]$\dotfill & $67.37\pm0.54$ \\
+    $\Omega_{\mathrm{m}}$\dotfill & $0.3147\pm0.0074$ \\
+    $\mathrm{Age}\, [\mathrm{Gyr}]$\dotfill  & $13.801\pm0.024$ \\
+    $\sigma_8$\dotfill & $0.8101\pm0.0061$ \\
+    $S_8\equiv \sigma_8 (\Omega_{\mathrm{m}}/0.3)^{0.5}$\dotfill & $0.830\pm0.013$ \\
+    $z_{\mathrm{re}}$\dotfill & $7.64\pm0.74$ \\
+    $100\theta_\ast$\dotfill & $1.04108\pm0.00031$ \\
+    $r_{\mathrm{drag}} \,[{\rm Mpc}]$\dotfill & $147.18\pm0.29$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+De ces 6 paramètres se déduisent les autres, notament les densités d'énergies aujourd'hui, dont nous venons de parler. Certains sont indiqués dans la seconde partie du tableau~\ref{table:planck2018},
+\textbf{dont notamment $r_{drag}$, la taille comobile de l'horizon acoustique au moment du découplage des baryons avec les photons,}
+ou encore $\Omega_m$ la densité relative de matière aujourd'hui. Les paramètres cosmologiques utilisés pour la confection des simulations présentées dans ce manuscrit et par le code d'analyse \picca{} sont légèrement différents de ceux présentés dans le tableau~\ref{table:planck2018}. Nous les donnons ici :
+\begin{equation}
+  \label{eq:par_cosmo}
+  \Omega_M = \num{0.31457} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_k = \num{0} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_{\Lambda} = \num{0.68543} .
+\end{equation}
+
+
+
+\section{La fonction de corrélation de la matière}
+
+Plus tôt, nous parlions du spectre de puissance des fluctuations primordiales sans avoir auparavant défini de quoi il s'agissait. Nous donnons ici une explication du spectre de puissance, et de son analogue, la fonction de corrélation, objet d'étude de ce manuscrit.
+
+\subsection{Une analogie avec le son}
+
+Prenons l'exemple d'un instrument de musique très simple : le diapason.
+% Lorsqu'il est joué, le diapason produit une note fixe, caractéristique de l'instrument. Le signal sonore en fonction du temps, qui correspond à l'évolution de la pression de l'air en fonction du temps, est alors très proche d'une sinusoïde.
+% Lorsqu'il est joué, le diapason produit un signal sonore, correspondant aux ondes de pression se propageant dans l'air, très proche d'une sinusoïde. La note produite correspond alors à une fréquence particulière, carractéristique de l'instrument. Ce passage, du signal temporel à la fréquence correspondante, correspond à la transformé de fourrier. Chaque signal peut etre decompose ...
+Le diapason a la particularité de produire un signal sonore très proche d'une sinusoïde. Le son qu'il produit correspond alors à une note particulière, d'une fréquence donnéee, caractéristique de l'instrument. Par opposition au diapason, la corde de guitare par exemple, lorsqu'elle vibre, produit un son composé de plusieurs fréquences : la fréquence fondamentale, qui donne la hauteur de la note, et les fréquences harmoniques, des multiples de la fréquence fondamentale. Ces fréquences harmoniques participent à la richesse du son de l'instrument. L'outil mathématique permettant d'étudier ces phénomènes s'appelle la transformation de Fourier. La transformation de Fourier permet d'associer à un signal temporel, sa transformée de Fourier, un signal dans l'espace des fréquences.
+
+Reprenons l'exemple du diapason. Comme dit précédemment, le signal sonore produit est très proche d'une sinusoïde. La figure~\ref{fig:example_tf} illustre la transformation de Fourier : à gauche se trouve le signal temporel, qui correspond au signal sonore, et à droite se trouve la transformée de Fourier de ce signal. Le cas du diapason se situerait plutôt sur la première ligne : une sinusoïde dont la transformée de Fourier correspond à un dirac dans l'espace de Fourier, tandis que le cas de la corde de guitare ressemblerait plutôt à la troisième : une somme de sinusoïdes de différentes fréquences, la fréquence la plus basse donnant la fréquence fondamentale. Dans notre cas, nous pouvons remarquer que le signal dans l'espace fréquentiel est relativement simple : une somme de dirac indiquant les fréquences issues de la décomposition du signal temporel en sinusoïdes.
+% il indique la répartition des différentes fréquences présentes dans le signal temporel.
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{example_tf}
+  \caption{Illustration de la transformation de Fourier. Le signal temporel à gauche en rouge est décomposé en somme de sinusoïdes. La transformée de Fourier correspond au signal fréquenciel, à droite, donnant la répartition des fréquences mises en jeu dans le signal temporel.}
+  \label{fig:example_tf}
+\end{figure}
+
+La transformation de Fourier permet donc de décomposer un signal temporel en une série de sinus et cosinus, et d'indiquer la répartition des différentes fréquences. Pour un signal temporel $f$, la transformée de Fourier $\tilde f$ associée à ce signal est donnée par
+\begin{equation}
+  \label{eq:def_tf}
+  \tilde f(\omega) = \int_{-\infty}^{+\infty}f(t) e^{- i \omega t} dt ,
+\end{equation}
+où $t$ est le temps en $\si{\second}$, et $\omega$ la pulsation en $\si{\per\second}$. Elle est reliée à la fréquence par $\omega = 2 \pi f$. La transformation inverse est donnée par
+\begin{equation}
+  \label{eq:def_tf_inv}
+   f(t) = \frac{1}{2 \pi}\int_{-\infty}^{+\infty} \tilde f(\omega) e^{ i \omega t} df .
+\end{equation}
+
+
+\subsection{Le spectre de puissance}
+
+Le spectre de puissance est un outil mathématique utilisé afin d'étudier la répartition des modes présents dans un ensemble de données. Les modes sont la généralisation du concept de fréquence. Par exemple, dans le cas du diapason, les modes sont les différentes fréquences qui composent le signal temporel. Mais en cosmologie, les modes sont plutôt associés à des fluctuations spatiales. Reprenons l'exemple du CMB. La carte des fluctuations en température est présentée sur la figure~\ref{fig:carte_cmb} et le spectre de puissance associé sur la figure~\ref{fig:spectre_cmb}. 
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.35]{carte_cmb}
+  \caption{Carte des fluctuations en température du CMB. La ligne grise délimite les zones masquées pour éviter la contamination, notamment par la poussière de notre galaxie. Crédits : \cite{CITE:planck2018 legacy}}
+  \label{fig:carte_cmb}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.37]{spectre_cmb}
+  \caption{Spectre de puissance des fluctuations en température du CMB. Les points rouges sont les points mesurés, et la ligne bleu indique le meilleur ajustement du modèle \lcdm{}. Crédits : \cite{CITE:planck2018 legacy}}
+  \label{fig:spectre_cmb}
+\end{figure}
+Calculer le spectre de puissance du CMB revient donc à identifier la répartition des modes  dans la carte des fluctuations en température. Le spectre de puissance du CMB présente un pic à $l \sim 200$. Cela signifie que le mode $l \sim 200$ est donc le mode dominant, correspondant à des fluctuations sur le ciel d'une taille caractéristique d'environ $\SI{1}{\degree}$.
+% et que les fluctuations qu'il engendre ont une taille caractéristique d'environ $\SI{1}{\degree}$ sur le ciel.
+
+Après cette explication imagée de la transformée de Fourier et du spectre du puissance, nous définissons le spectre de puissance comme
+\begin{equation}
+  \label{eq:def_pow_spec}
+  P(\vec{k}) = < \delta(\vec{k'}) \delta(\vec{k}+\vec{k}') >,
+\end{equation}
+où $<.>$ désigne la moyenne sur $\vec{k'}$, et $\delta(\vec{k})$ est le contraste associé au vecteur d'onde $\vec{k}$. Le contraste est une variable qui renseigne sur l'excès relatif d'une certaine quantité par rapport à la moyenne en chaque point. Par exemple on définit le contraste de densité comme
+\begin{equation}
+  \label{eq:contraste}
+  \delta(\vec{r}) = \frac{\rho(\vec{r}) - \bar \rho}{\bar \rho} ,
+\end{equation}
+où $\rho(\vec{r})$ est la densité en $\vec{r}$ et $\bar \rho$ est la densité moyenne sur tous les $\vec{r}$. Le vecteur d'onde $\vec{k}$ quant à lui est généralement la variable associée dans l'espace de Fourier au vecteur position $\vec{r}$. Etant donné que l'isotropie est supposée en cosmologie, les normes se suffisent à leur vecteur. Ainsi les quantités comme la densité $\rho$ ou le spectre de puissance $P$ ne dépendent que de $r$ ou $k$, la norme des vecteurs $\vec{r}$ et $\vec{k}$.
+
+
+\subsection{La fonction de corrélation}
+
+% Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation, l'objet d'étude de ce manuscrit. Nous nous intéressons particulièrement à la fonction de corrélation de la matière. La distribution de matière dans l'univers peut être vue comme une variable aléatoire 
+
+Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation à deux points, l'objet d'étude de ce manuscrit. De la même manière que nous nous sommes intéressés précédemment au spectre de puissance du CMB, nous nous intéressons ici à la fonction de corrélation de la matière. Du fait de l'isotropie de l'univers, la fonction de corrélation ne dépend que de la distance $r$. Elle permet d'étudier de façon statistique la distribution de matière dans l'univers. Plus exactement, elle donne la corrélation de la distribution de matière entre 2 points de l'espace séparés d'une distance $r$. Elle peut aussi être vue comme un excès de probabilité : si la fonction de corrélation $\xi(r)$ est positive, alors il est plus probable de trouver de la matière en deux points de l'espace séparés par une distance $r$ que si celle-ci avait été distribuée de manière uniforme\footnote{Pour une distribution de matière uniforme, $\xi(r) = 0$ pour tout $r$.}. Similairement au spectre de puissance, la fonction de corrélation $\xi$ est définie comme
+\begin{equation}
+  \label{eq:def_cf}
+  \xi(r) = < \delta(r') \delta(r + r') >,
+\end{equation}
+où $<.>$ désigne la moyenne sur $r'$, et $\delta(r)$ est le contraste. Dans le cas de la fonction de corrélation de la matière, $\delta(r)$ est le contraste de densité, comme défini dans l'équation~\ref{eq:contraste}.
+On peut montrer que la fonction de corrélation est reliée au spectre de puissance par la transformation de Fourier :
+\begin{equation}
+  \label{eq:cf_tf}
+  P(\vec{k}) = \int \xi(\vec{r}) e^{- i \vec{k} \vec{r}} d^3\vec{r} ,
+\end{equation}
+ce qui donne, une fois l'isotropie supposée,
+\begin{equation}
+  \label{eq:cf_tf2}
+  P(k) = \frac{-1}{4 i \pi^2 k} \int_{-\infty}^{+\infty} e^{- i k r} r \xi(r) dr .
+\end{equation}
+La figure~\ref{CITE} présente le spectre de puissance et~\ref{CITE} la fonction de corrélation de la matière aujourd'hui. (\#prov mettre la figure)
+Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale (voir section~\ref{subsec:descri_mod} paragraphe \emph{Les paramètres du modèle} \#prov en fait pas besoin puisque ca fait ref a un truc d'avant?). Ces modes sont directement reliés au spectre de puissance des fluctuations primordiales. Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les petites et grandes échelles est dû au fait que les modes plus petits que $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$ sont entrés dans l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} durant la phase de domination de la radiation ou avant : ces modes possèdent une taille caractéristique plus petite que l'horizon au moment de l'égalité radiation-matière. Les modes plus grands que l'horizon au moment de l'égalité radiation-matière sont gelés, et n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial : $P(k) \propto k^{ns}$ pour ces modes là. Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k < k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et croissent proportionnellement à $\mathrm{G}(z)$. $\mathrm{G}$ est appelé le taux de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$. Ainsi, pour des redshifts $z << z_{eq}$, le spectre de puissance varie comme
+\begin{equation}
+  \label{eq:pow_spec_vs_z}
+  P(k,z) = G(z)^{2} P(k,z=0) .
+\end{equation}
+Le taux de croissance des structures ne dépendant pas de $k$, la fonction de corrélation est aussi proportionnelle à $\mathrm{G}(z)$ :
+\begin{equation}
+  \label{eq:cf_vs_z}
+  \xi(r, z) = G(z)^{2} \xi(r, z=0).
+\end{equation}
+Tout ceci est un bref résumé de la cosmologie des inhomogénéïtés. Cette dernière est très bien décrite dans \ref{CITE:Dodelson chap7} et nous référons le lecteur à cette ouvrage pour davantage de d'explications.
+
+
+Enfin, un point pertinent pour ce manuscrit sont les oscillations présentes dans le spectre de puissance de la matière pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$. Ces oscillations sont appelées \emph{oscillations acoustiques de baryon} (BAO pour Baryonic Acoustic Oscillations) et sont la trace de la physique qui se déroulait avant l'émission du CMB. Le méchanisme est décrit plus en détail dans la section suivante. Nous pouvons cependant déjà noter que ces oscillations caractéristiques dans le spectre de puissance correspondent au pic présent dans la fonction de corrélation de la matière à $r \sim \SI{100}{\per\h\Mpc}$. Ce pic est davantage visible dans le plan $(r, r^{2} \xi(r))$.
+
+\section{Les oscillations acoustiques de baryon}
+Les BAO sont une empreinte laissé par la physique pre-recombinaison, et détectable aujourd'hui dans la distribution de matière,. Cette empreinte correspond à un excès de corrélation de la matière, à une distance comobile d'environ $\SI{100}{\per\h\Mpc}$ (\#prov h en italic ou rm ? il est en italic dans la def de H0). Cette distance, appelée \emph{échelle BAO}, fournit une règle standard pour la cosmologie : après l'émission du CMB, la taille comobile de l'échelle BAO reste constante avec le temps. Ainsi, en mesurant l'évolution de la taille physique de l'échelle BAO au cours du temps, nous accédons à l'historique de l'expansion de l'univers. \\
+Dans cette section, nous décrivons les BAO, comment elles se forment, comment elles sont mesurées et les contraintes qu'elles permettent d'établir sur les modèles cosmologiques.
+
+\subsection{La genèse}
+Comme expliqué au début de ce manuscrit, l'univers avant la recombinaison\footnote{Le moment où les électrons se lient aux protons pour former les premiers atomes.} est un plasma chaud et dense,
+% composé des photons, des baryons, et de la matière noire. L'univers n'étant, initialemment, pas parfaitement homogène,
+qui présente de faibles inhomogénéïtés.
+% les surdensités présentes produisent des puits de potentiels,
+Chaque surdensité produit un puit de potentiel,
+dans lesquels les particules – les photons, les baryons, la matière noire – tombent.
+Les photons et les baryons étant couplés, la pression de radiation augmente au fur et à mesure que la densité augmente. Se joue alors une compétition entre la gravité, qui tend à faire tomber les photons et les baryons dans les puits de potentiel, et la pression de radiation, qui tend à les repousser hors de ce puit de potentiel. Ainsi, les baryons et les photons tombent, puis rebondissent, puis retombent lorsque la pression de radiation devient trop faible, etc.
+Ce processus crée donc des oscillations dans le plasma photon-baryon primordial. Comme dans tout milieu, ces oscillations donnent lieu à des ondes acoustiques, qui se propagent à la vitesse du son dans ce milieu. Celle-ci est définie comme
+\begin{equation}
+  \label{eq:sound_speed}
+  c_{s} = \sqrt{\frac{1}{3(1 + R)}},
+\end{equation}
+où $R = \frac{3\rho_b}{4\rho_{\gamma}}$. Etant donné que la densité de photons $\rho_{\gamma}$ est bien suppérieure à la densité de baryons $\rho_{b}$, la vitesse du son $c_s$ vaut $1/\sqrt{3}$ en bonne approximation. (\#prov en fait est-ce que c'est important de donner ca?)
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{bao_schema}
+  \caption{bla}
+  \label{fig:bao_schema}
+\end{figure}
+Ces ondes acoustiques se propagent donc dans le plasma primordial depuis chaque surdensité . La figure~\ref{fig:bao_schema} schématise le méchanisme pour une seule surdensité. A l'instant $t=0$, nous considérons donc une surdensité en $R = \SI{0}{\Mpc}$. Cette surdensité est composée de matière noire (CDM), de baryons et de photons. Le puis de potentiel créé fait s'effondrer les espèces présentes, jusqu'à ce que la pression de radiation devienne suffisante pour initier une onde acoustique. Au fur et à mesure que le temps s'écoule (le redshift diminue), le front d'onde dans le plasma photon-baryon se propage. Puis, à un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons, et l'onde devient gelée. Ainsi la surdensité de baryon ne se propage plus, et les photons, qui n'interagissent plus avec les baryons, se propagent librement. La surdensité de matière noire à $R = \SI{0}{\Mpc}$, qui a continué de croître, tend à rappeler les baryons par effet gravitationnel. Cependant, la surdensité de baryon à $R \sim \SI{150}{\Mpc}$ produit aussi un puit de potentiel, dans lequel la matière noire alentour tombe progressivement. Ainsi, même si la majeure partie des baryons retombent dans le puit de potentiel créé par la surdensité initiale, un second puit de potentiel, formé par des baryons et de la matière noire, subsiste en $R \sim \SI{150}{\Mpc}$. Nous pouvons généraliser cette vue simplifier en une dimension à 3 dimensions : le front d'onde qui se propagent à partir de la surdensité initiale est alors sphérique, et le second puit de potentiel résultant est alors une sphère centrée sur la surdensité initiale et de rayon $R \sim \SI{150}{\Mpc}$. Cette distance d'environ $\SI{150}{\Mpc}$ est appelée \emph{horizon acoustique} : c'est la distance que l'onde sonore a pu parcourir avant d'être gelée. L'horizon acoustique est défini comme
+\begin{equation}
+  \label{eq:sound_horizon}
+  r_{d} = \int^{\infty}_{z_{drag}} \frac{c_{s}}{H(z)} dz ,
+\end{equation}
+et vaut $r_{d} = \SI{147.18(29)}{\Mpc}$ selon~\ref{CITE planck2018}.
+
+Ce processus a laissé des traces dans la distribution de matière à grande échelle : à chaque surdensité primordiale est associée une sphère de surdensité de rayon comobile $\SI{150}{\Mpc}$. Ainsi, lorsque nous observons aujourd'hui un traceur de la densité de matière, telle une galaxie, il est davantage probable d'en trouver d'autres, séparés du premier d'une distance comobile d'environ $\SI{150}{\Mpc}$. C'est ce que traduit le pic BAO présent dans la fonction de corrélation de la matière, montrée sur la figure~\ref{fig:CITE figure CF}
+
+
+\subsection{Mesurer l'échelle BAO}
+
+Comme nous allons le voir dans ce qui suit, les analyses BAO ne mesurent pas directement l'échelle BAO $r_{d}$. En cosmologie, les observations  ne permettent pas de mesurer des distances. Les informations auxquelles l'observateur a accès sont des différences de vitesse le long de la ligne de visé, via l'observation des spectres, ainsi que des angles, via les projections sur la sphère céleste. Afin d'expliquer les mesures des analyses BAO, nous supposons un cas idéal où l'observateur observe directement une surdensité primordiale, et l'horizon acoustique qui lui correspond. Le schéma~\ref{fig} illustre la situation.
+
+
+\bibliographystyle{unsrt}
+\bibliography{../source/biblio}
+
+\end{document}
