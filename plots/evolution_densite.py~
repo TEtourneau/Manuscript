@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+a = np.linspace(1e-5,1,100)
+rad = 0.8 + a**-4
+mat = 0.5 + a**-3
+cc = 0.2*np.ones_like(a)
+
+plt.plot(a, rad)
+plt.plot(a, mat)
+plt.plot(a, cc)
+plt.grid()
+plt.xlabel('a')
+plt.ylabel('densitée')
+plt.yscale('log')
+plt.show()
