@@ -5,9 +5,9 @@
 
 \graphicspath{ {../figures/intro/} }
 \chapter{Introduction à la cosmologie}
-% \minitoc
-% \newpage
-% \thispagestyle{fancy}
+\minitoc
+\newpage
+\thispagestyle{fancy}
 
 Ce premier chapitre a pour but de présenter la cosmologie moderne et d'expliquer brièvement sa construction au fil du dernier siècle. L'idée est de donner une vue d'ensemble du paradigme actuel, tout en détaillant davantage les points clés nécessaires à ce manuscrit. Pour une étude approfondie de la cosmologie moderne, nous référons le lecteur aux ouvrages suivants : \cite{CITE}. 
 
@@ -124,7 +124,7 @@ où $a(t) = R(t) / R(t₀)$,  $t₀$ est le temps présent et $S_{k}$ est défin
     \end{array}
 \right..
 \end{align}
-Cette formulation permet de mettre en évidence le rapport $a(t)$, appelé facteur d'échelle. Par définition il vaut 1 aujourd'hui. Afin de rendre compte de l'expansion, $a(t) < 1$ pour $t < t₀$ (passé) et $a(t) > 1$ pour $t > t₀$ (futur).
+Cette formulation permet de mettre en évidence le rapport $a(t)$, appelé facteur d'échelle. Par définition il vaut 1 aujourd'hui. Afin de rendre compte de l'expansion, $a(t) \langle 1$ pour $t \langle t₀$ (passé) et $a(t) \rangle 1$ pour $t \rangle t₀$ (futur).
 
 \paragraph{Le redshift —}
 \label{par:redshift}
@@ -321,7 +321,7 @@ En évaluant l'équation précédente pour $t=0$, nous obtenons
 \end{equation}
 Ainsi pour un univers plat, nous avons $k = 0$, et donc $\Omega_{total} = 1$. Nous retrouvons alors que $\rho_{crit}$ correspond à la densité totale de l'univers. 
 
-Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvons comparer les différentes densités d'énergie à n'importe quel redshift, en considérant le rapport $\rho_{i}(z) / \rho_{crit}(z)$, où $\rho_{crit}(z) = 3H^{2} / 8 \pi G$. La figure~\ref{fig:evol_omega} présente l'évolution  avec le redshift des densités relatives, et indique donc les différentes aires de dominations. Pour $z > z_{eq}$, c'est la radiation qui domine. Puis vient l'époque de domination de la matière, jusqu'à $z \sim 0.3$. Enfin, c'est l'énergie noire qui domine aujourd'hui.
+Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvons comparer les différentes densités d'énergie à n'importe quel redshift, en considérant le rapport $\rho_{i}(z) / \rho_{crit}(z)$, où $\rho_{crit}(z) = 3H^{2} / 8 \pi G$. La figure~\ref{fig:evol_omega} présente l'évolution  avec le redshift des densités relatives, et indique donc les différentes aires de dominations. Pour $z \rangle z_{eq}$, c'est la radiation qui domine. Puis vient l'époque de domination de la matière, jusqu'à $z \sim 0.3$. Enfin, c'est l'énergie noire qui domine aujourd'hui.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{evol_omega}
@@ -339,7 +339,7 @@ ce qui nous donne finalement, pour $w \neq -1$, l'évolution temporelle du facte
   \label{eq:a_vs_t}
   a(t) \propto t^{\frac{2}{3(1+w)}} .
 \end{equation}
-Ainsi, dans chaque phase de domination, $a$ évolue comme une loi de puissance : $a \propto t^{\frac{1}{2}}$ durant l'air de domination de la radiation, puis $a \propto t^{\frac{2}{3}}$ lors de la domination de la matière. Cependant, l'univers est dominée par l'énergie noire, l'équation différentielle~\ref{eq:H_evol} devient $H = H_0$, et nous obtenons $a \propto \mathrm{e}^{H_{0} t}$. Nous pouvons noter que durant toutes les phases de domination, $\dot a > 0$ : l'univers est en expansion. De plus, lors des phases de domination de la radiation et de la matière, $\ddot a < 0$ : l'expansion de l'univers décélerre. Cependant, pour $ z \lesssim 0.3$, nous avons $\ddot a > 0$, l'univers est alors en expansion accélérée.
+Ainsi, dans chaque phase de domination, $a$ évolue comme une loi de puissance : $a \propto t^{\frac{1}{2}}$ durant l'air de domination de la radiation, puis $a \propto t^{\frac{2}{3}}$ lors de la domination de la matière. Cependant, l'univers est dominée par l'énergie noire, l'équation différentielle~\ref{eq:H_evol} devient $H = H_0$, et nous obtenons $a \propto \mathrm{e}^{H_{0} t}$. Nous pouvons noter que durant toutes les phases de domination, $\dot a \rangle 0$ : l'univers est en expansion. De plus, lors des phases de domination de la radiation et de la matière, $\ddot a \langle 0$ : l'expansion de l'univers décélerre. Cependant, pour $ z \lesssim 0.3$, nous avons $\ddot a \rangle 0$, l'univers est alors en expansion accélérée.
 
 % (\#prov Omega\_total prend en compte la courbure ou pas ? C'est pas en accord avec mon equation~\ref{eq:friedmann5}, c'est pas clair ... :\#correc: enlever omega k de omega tot au dessus, c'est plus pedagogique et ne pas le considerer comme une densite d'energie)
 
@@ -447,9 +447,9 @@ Nous pouvons alors définir les distances suivantes :
     \label{eq:dist_como_trans}
     D_M = \left\{
       \begin{array}{ll}
-        D_H \frac{1}{\sqrt{\Omega_k}} \sin(\Omega_k D_C / D_H) & \mbox{si } \Omega_k < 0 \\
+        D_H \frac{1}{\sqrt{\Omega_k}} \sin(\Omega_k D_C / D_H) & \mbox{si } \Omega_k \langle 0 \\
         D_C & \textrm{si } \Omega_k = 0 \\
-        D_H \frac{1}{\sqrt{\Omega_k}} \sinh(\Omega_k D_C / D_H) & \mbox{si } \Omega_k > 0
+        D_H \frac{1}{\sqrt{\Omega_k}} \sinh(\Omega_k D_C / D_H) & \mbox{si } \Omega_k \rangle 0
       \end{array}
     \right..
   \end{equation}
@@ -519,23 +519,25 @@ dont notamment $r_{drag}$, la taille comobile de l'horizon acoustique au moment 
 ou encore $\Omega_m$ la densité relative de matière aujourd'hui. Les paramètres cosmologiques utilisés pour la confection des simulations présentées dans ce manuscrit et par le code d'analyse \picca{} sont légèrement différents de ceux présentés dans le tableau~\ref{table:planck2018}. Nous les donnons ici :
 \begin{equation}
   \label{eq:par_cosmo}
-  \Omega_M = \num{0.31457} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_k = \num{0} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_{\Lambda} = \num{0.68543} .
+  \Omega_m = \num{0.31457} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_k = \num{0} \hspace{0.5cm} ; \hspace{0.5cm} \Omega_{\Lambda} = \num{0.68543} .
 \end{equation}
 
 
 
 \section{La fonction de corrélation de la matière}
 
-Plus tôt, nous parlions du spectre de puissance des fluctuations primordiales sans avoir auparavant défini de quoi il s'agissait. Nous donnons ici une explication du spectre de puissance, et de son analogue, la fonction de corrélation, objet d'étude de ce manuscrit.
+\textbf{Plus tôt, nous parlions du spectre de puissance des fluctuations primordiales sans avoir auparavant défini ce dont il s'agissait. Nous donnons ici une explication de la notion de spectre de puissance, ainsi que de la fonction de corrélation, objet d'étude de ce manuscrit.}
 
 \subsection{Une analogie avec le son}
 
-Prenons l'exemple d'un instrument de musique très simple : le diapason.
-% Lorsqu'il est joué, le diapason produit une note fixe, caractéristique de l'instrument. Le signal sonore en fonction du temps, qui correspond à l'évolution de la pression de l'air en fonction du temps, est alors très proche d'une sinusoïde.
-% Lorsqu'il est joué, le diapason produit un signal sonore, correspondant aux ondes de pression se propageant dans l'air, très proche d'une sinusoïde. La note produite correspond alors à une fréquence particulière, carractéristique de l'instrument. Ce passage, du signal temporel à la fréquence correspondante, correspond à la transformé de fourrier. Chaque signal peut etre decompose ...
-Le diapason a la particularité de produire un signal sonore très proche d'une sinusoïde. Le son qu'il produit correspond alors à une note particulière, d'une fréquence donnéee, caractéristique de l'instrument. Par opposition au diapason, la corde de guitare par exemple, lorsqu'elle vibre, produit un son composé de plusieurs fréquences : la fréquence fondamentale, qui donne la hauteur de la note, et les fréquences harmoniques, des multiples de la fréquence fondamentale. Ces fréquences harmoniques participent à la richesse du son de l'instrument. L'outil mathématique permettant d'étudier ces phénomènes s'appelle la transformation de Fourier. La transformation de Fourier permet d'associer à un signal temporel, sa transformée de Fourier, un signal dans l'espace des fréquences.
+\textbf{Prenons l'exemple d'un phénomène simple : le son créé par un diapason. Le diapason est un outil utilisé par les musiciens pour accorder leurs instruments. Lorsqu'il est joué, le diapason produit un signal sonore très proche d'une sinusoïde.}
+Le son produit correspond alors à une note particulière, d'une fréquence donnéee, caractéristique de l'instrument. Par opposition au diapason, la corde de guitare par exemple, lorsqu'elle vibre, produit un son composé de plusieurs fréquences : la fréquence fondamentale, qui donne la hauteur de la note, et les fréquences harmoniques, des multiples de la fréquence fondamentale. Ces fréquences harmoniques participent à la richesse du son de l'instrument. L'outil mathématique permettant d'étudier ces phénomènes s'appelle la transformation de Fourier. La transformation de Fourier permet d'associer à un signal temporel, sa transformée de Fourier, un signal dans l'espace des fréquences.
 
-Reprenons l'exemple du diapason. Comme dit précédemment, le signal sonore produit est très proche d'une sinusoïde. La figure~\ref{fig:example_tf} illustre la transformation de Fourier : à gauche se trouve le signal temporel, qui correspond au signal sonore, et à droite se trouve la transformée de Fourier de ce signal. Le cas du diapason se situerait plutôt sur la première ligne : une sinusoïde dont la transformée de Fourier correspond à un dirac dans l'espace de Fourier, tandis que le cas de la corde de guitare ressemblerait plutôt à la troisième : une somme de sinusoïdes de différentes fréquences, la fréquence la plus basse donnant la fréquence fondamentale. Dans notre cas, nous pouvons remarquer que le signal dans l'espace fréquentiel est relativement simple : une somme de dirac indiquant les fréquences issues de la décomposition du signal temporel en sinusoïdes.
+Reprenons l'exemple du diapason. Comme dit précédemment, le signal sonore produit est très proche d'une sinusoïde. La figure~\ref{fig:example_tf} illustre la transformation de Fourier : à gauche se trouve le signal temporel, qui correspond au signal sonore, et à droite se trouve la transformée de Fourier de ce signal.
+% Le cas du diapason se situerait plutôt sur la première ligne :
+\textbf{La première ligne correspond au cas simplifié du diapason :}
+une sinusoïde dont la transformée de Fourier donne un dirac dans l'espace de Fourier, tandis que le cas de la corde de guitare ressemblerait plutôt au cas simplifié de la troisième ligne (\#prov refaire le plot en mettant les harmoniques plutot que des frequences randoms):
+une somme de sinusoïdes de différentes fréquences, la fréquence la plus basse donnant la fréquence fondamentale. Dans notre cas, nous pouvons remarquer que le signal dans l'espace fréquentiel est relativement simple : une somme de dirac indiquant les fréquences issues de la décomposition du signal temporel en sinusoïdes.
 % il indique la répartition des différentes fréquences présentes dans le signal temporel.
 \begin{figure}[h]
   \centering
@@ -558,45 +560,65 @@ où $t$ est le temps en $\si{\second}$, et $\omega$ la pulsation en $\si{\per\se
 
 \subsection{Le spectre de puissance}
 
-Le spectre de puissance est un outil mathématique utilisé afin d'étudier la répartition des modes présents dans un ensemble de données. Les modes sont la généralisation du concept de fréquence. Par exemple, dans le cas du diapason, les modes sont les différentes fréquences qui composent le signal temporel. Mais en cosmologie, les modes sont plutôt associés à des fluctuations spatiales. Reprenons l'exemple du CMB. La carte des fluctuations en température est présentée sur la figure~\ref{fig:carte_cmb} et le spectre de puissance associé sur la figure~\ref{fig:spectre_cmb}. 
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.35]{carte_cmb}
-  \caption{Carte des fluctuations en température du CMB. La ligne grise délimite les zones masquées pour éviter la contamination, notamment par la poussière de notre galaxie. Crédits : \cite{CITE:planck2018 legacy}}
-  \label{fig:carte_cmb}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.37]{spectre_cmb}
-  \caption{Spectre de puissance des fluctuations en température du CMB. Les points rouges sont les points mesurés, et la ligne bleu indique le meilleur ajustement du modèle \lcdm{}. Crédits : \cite{CITE:planck2018 legacy}}
-  \label{fig:spectre_cmb}
-\end{figure}
-Calculer le spectre de puissance du CMB revient donc à identifier la répartition des modes  dans la carte des fluctuations en température. Le spectre de puissance du CMB présente un pic à $l \sim 200$. Cela signifie que le mode $l \sim 200$ est donc le mode dominant, correspondant à des fluctuations sur le ciel d'une taille caractéristique d'environ $\SI{1}{\degree}$.
-% et que les fluctuations qu'il engendre ont une taille caractéristique d'environ $\SI{1}{\degree}$ sur le ciel.
-
-Après cette explication imagée de la transformée de Fourier et du spectre du puissance, nous définissons le spectre de puissance comme
-\begin{equation}
-  \label{eq:def_pow_spec}
-  P(\vec{k}) = < \delta(\vec{k'}) \delta(\vec{k}+\vec{k}') >,
-\end{equation}
-où $<.>$ désigne la moyenne sur $\vec{k'}$, et $\delta(\vec{k})$ est le contraste associé au vecteur d'onde $\vec{k}$. Le contraste est une variable qui renseigne sur l'excès relatif d'une certaine quantité par rapport à la moyenne en chaque point. Par exemple on définit le contraste de densité comme
+Le spectre de puissance est un outil mathématique utilisé afin d'étudier la répartition des modes présents dans un ensemble de données. Les modes sont la généralisation du concept de fréquence. Par exemple, dans le cas du diapason, les modes sont les différentes fréquences qui composent le signal temporel. En cosmologie, les modes sont associés à des fluctuations spatiales. Prenons l'exemple de la distribution de la matière. On peut définir le contraste de densité en $\vec x$ comme
 \begin{equation}
   \label{eq:contraste}
-  \delta(\vec{r}) = \frac{\rho(\vec{r}) - \bar \rho}{\bar \rho} ,
+  \delta(\vec x) = \frac{\rho(\vec x) - \bar \rho}{\bar\rho} ,
 \end{equation}
-où $\rho(\vec{r})$ est la densité en $\vec{r}$ et $\bar \rho$ est la densité moyenne sur tous les $\vec{r}$. Le vecteur d'onde $\vec{k}$ quant à lui est généralement la variable associée dans l'espace de Fourier au vecteur position $\vec{r}$. Etant donné que l'isotropie est supposée en cosmologie, les normes se suffisent à leur vecteur. Ainsi les quantités comme la densité $\rho$ ou le spectre de puissance $P$ ne dépendent que de $r$ ou $k$, la norme des vecteurs $\vec{r}$ et $\vec{k}$.
+où $\rho(\vec x)$ est la densité en $\vec x$, et $\bar \rho$ la densité moyenne. Le spectre de puissance du contraste de densité de la matière renseigne donc sur la répartition des modes de fluctuations spatiales de ce contraste. La variable dans l'espace de Fourier associée au vecteur position $\vec x$ est le vecteur d'onde $\vec k$. Le spectre de puissance du contraste de densité de la matière est défini comme
+\begin{equation}
+  \label{eq:def_pow_spec}
+  P(\vec{k}) = \langle \delta(\vec{k'}) \delta(\vec{k}+\vec{k}') \rangle,
+\end{equation}
+où $\langle.\rangle$ désigne la moyenne sur $\vec{k'}$, et $\delta(\vec{k})$ est le contraste de densité associé au vecteur d'onde $\vec{k}$. Etant donné qu'on suppose l'isotropie en cosmologie, le spectre de puissance dépend uniquement de $k$, la norme de $\vec{k}$.
+
+
+% Reprenons l'exemple du CMB. (\#prov plutot parler du spectre de puissance de la matiere : presenter le contraste de densite etc). La carte des fluctuations en température est présentée sur la figure~\ref{fig:carte_cmb} et le spectre de puissance associé sur la figure~\ref{fig:spectre_cmb}. 
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[scale=0.35]{carte_cmb}
+%   \caption{Carte des fluctuations en température du CMB. La ligne grise délimite les zones masquées pour éviter la contamination, notamment par la poussière de notre galaxie. Crédits : \cite{CITE:planck2018 legacy}}
+%   \label{fig:carte_cmb}
+% \end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[scale=0.37]{spectre_cmb}
+%   \caption{Spectre de puissance des fluctuations en température du CMB. Les points rouges sont les points mesurés, et la ligne bleu indique le meilleur ajustement du modèle \lcdm{}. Crédits : \cite{CITE:planck2018 legacy}}
+%   \label{fig:spectre_cmb}
+% \end{figure}
+% Calculer le spectre de puissance du CMB revient donc à identifier la répartition des modes  dans la carte des fluctuations en température. Le spectre de puissance du CMB présente un pic à $l \sim 200$. Cela signifie que le mode $l \sim 200$ est donc le mode dominant, correspondant à des fluctuations sur le ciel d'une taille caractéristique d'environ $\SI{1}{\degree}$.
+% % et que les fluctuations qu'il engendre ont une taille caractéristique d'environ $\SI{1}{\degree}$ sur le ciel.
+
+% Après cette explication imagée de la transformée de Fourier et du spectre du puissance, nous définissons le spectre de puissance comme
+% \begin{equation}
+%   \label{eq:def_pow_spec}
+%   P(\vec{k}) = \langle \delta(\vec{k'}) \delta(\vec{k}+\vec{k}') \rangle,
+% \end{equation}
+% où $\langle.\rangle$ désigne la moyenne sur $\vec{k'}$, et $\delta(\vec{k})$ est le contraste associé au vecteur d'onde $\vec{k}$. Le contraste est une variable qui renseigne sur l'excès relatif d'une certaine quantité par rapport à la moyenne en chaque point. Par exemple on définit le contraste de densité comme
+% \begin{equation}
+%   \label{eq:contraste}
+%   \delta(\vec{r}) = \frac{\rho(\vec{r}) - \bar \rho}{\bar \rho} ,
+% \end{equation}
+% où $\rho(\vec{r})$ est la densité en $\vec{r}$ et $\bar \rho$ est la densité moyenne sur tous les $\vec{r}$. Le vecteur d'onde $\vec{k}$ quant à lui est généralement la variable associée dans l'espace de Fourier au vecteur position $\vec{r}$. Etant donné que l'isotropie est supposée en cosmologie, les normes se suffisent à leur vecteur. Ainsi les quantités comme la densité $\rho$ ou le spectre de puissance $P$ ne dépendent que de $r$ ou $k$, la norme des vecteurs $\vec{r}$ et $\vec{k}$.
 
 
 \subsection{La fonction de corrélation}
 
 % Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation, l'objet d'étude de ce manuscrit. Nous nous intéressons particulièrement à la fonction de corrélation de la matière. La distribution de matière dans l'univers peut être vue comme une variable aléatoire 
 
-Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation à deux points, l'objet d'étude de ce manuscrit. De la même manière que nous nous sommes intéressés précédemment au spectre de puissance du CMB, nous nous intéressons ici à la fonction de corrélation de la matière. Du fait de l'isotropie de l'univers, la fonction de corrélation ne dépend que de la distance $r$. Elle permet d'étudier de façon statistique la distribution de matière dans l'univers. Plus exactement, elle donne la corrélation de la distribution de matière entre 2 points de l'espace séparés d'une distance $r$. Elle peut aussi être vue comme un excès de probabilité : si la fonction de corrélation $\xi(r)$ est positive, alors il est plus probable de trouver de la matière en deux points de l'espace séparés par une distance $r$ que si celle-ci avait été distribuée de manière uniforme\footnote{Pour une distribution de matière uniforme, $\xi(r) = 0$ pour tout $r$.}. Similairement au spectre de puissance, la fonction de corrélation $\xi$ est définie comme
+Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation à deux points, l'objet d'étude de ce manuscrit. De la même manière que nous nous sommes intéressés précédemment au spectre de puissance de la matière, nous nous intéressons ici à la fonction de corrélation de la matière. Du fait de l'isotropie de l'univers, cette fonction de corrélation ne dépend que de la distance $r$. Elle permet d'étudier de façon statistique la distribution de matière dans l'univers. Plus exactement, elle donne la corrélation de la distribution de matière entre 2 points de l'espace séparés d'une distance $r$. Similairement au spectre de puissance, la fonction de corrélation du contraste de densité de la matière $\xi$ est définie comme
 \begin{equation}
   \label{eq:def_cf}
-  \xi(r) = < \delta(r') \delta(r + r') >,
+  \xi(r) = \langle \delta(\vec{r'}) \delta(\vec{r} + \vec{r'}) \rangle,
 \end{equation}
-où $<.>$ désigne la moyenne sur $r'$, et $\delta(r)$ est le contraste. Dans le cas de la fonction de corrélation de la matière, $\delta(r)$ est le contraste de densité, comme défini dans l'équation~\ref{eq:contraste}.
+où $\langle.\rangle$ désigne la moyenne sur $\vec{r'}$, et $\delta(\vec{r})$ est le contraste de densité.
+La fonction de corrélation peut aussi être vue comme un excès de probabilité :
+\begin{equation}
+  \label{eq:def_cf2}
+  dP(r_{1}, r_{2}) = \bar \rho^{2} ( 1 + \xi(r_{1} - r_{2})) dV_{1} dV_{2} .
+\end{equation}
+Ainsi, si la fonction de corrélation $\xi(r)$ est positive, alors il est plus probable de trouver de la matière en deux points de l'espace séparés par une distance $r = r_{1} - r_{2}$ que si celle-ci avait été distribuée de manière uniforme\footnote{Pour une distribution de matière uniforme, $\xi(r) = 0$ pour tout $r$.}.
+% Dans le cas de la fonction de corrélation de la matière, $\delta(r)$ est le contraste de densité, comme défini dans l'équation~\ref{eq:contraste}.
 On peut montrer que la fonction de corrélation est reliée au spectre de puissance par la transformation de Fourier :
 \begin{equation}
   \label{eq:cf_tf}
@@ -605,50 +627,52 @@ On peut montrer que la fonction de corrélation est reliée au spectre de puissa
 ce qui donne, une fois l'isotropie supposée,
 \begin{equation}
   \label{eq:cf_tf2}
-  P(k) = \frac{-1}{4 i \pi^2 k} \int_{-\infty}^{+\infty} e^{- i k r} r \xi(r) dr .
+  P(k) = \frac{i}{4 \pi^2 k} \int_{-\infty}^{+\infty} e^{- i k r} r \xi(r) dr .
 \end{equation}
 La figure~\ref{CITE} présente le spectre de puissance et~\ref{CITE} la fonction de corrélation de la matière aujourd'hui. (\#prov mettre la figure)
-Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale (voir section~\ref{subsec:descri_mod} paragraphe \emph{Les paramètres du modèle} \#prov en fait pas besoin puisque ca fait ref a un truc d'avant?). Ces modes sont directement reliés au spectre de puissance des fluctuations primordiales. Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les petites et grandes échelles est dû au fait que les modes plus petits que $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$ sont entrés dans l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} durant la phase de domination de la radiation ou avant : ces modes possèdent une taille caractéristique plus petite que l'horizon au moment de l'égalité radiation-matière. Les modes plus grands que l'horizon au moment de l'égalité radiation-matière sont gelés, et n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial : $P(k) \propto k^{ns}$ pour ces modes là. Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k < k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et croissent proportionnellement à $\mathrm{G}(z)$. $\mathrm{G}$ est appelé le taux de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$. Ainsi, pour des redshifts $z << z_{eq}$, le spectre de puissance varie comme
+Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale.
+% Ces modes à grande échelle sont directement reliés au spectre de puissance des fluctuations primordiales.
+\textbf{Ces modes à grande échelle ne sont pas affectés par la physique qui se déroule durant la domination de la radiation. Ils sondent directement les fluctuations primordiales de densité.}
+Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les petites et grandes échelles est dû au fait que les modes $k \rangle k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, sont entrés dans l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} durant la phase de domination de la radiation : ces modes possèdent donc une taille caractéristique plus petite que l'horizon au moment de l'égalité radiation-matière. Les modes plus grands que l'horizon au moment de l'égalité radiation-matière sont gelés (\#prov pourquoi?), et n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial : $P(k) \propto k^{ns}$ pour ces modes là. Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k \langle k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et croissent proportionnellement à $G(z)$. $G$ est appelé le taux de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$ à grand $z$, lorsque $\Omega_m = 1$. Ainsi, pour des redshifts $z \langle\langle z_{eq}$, le spectre de puissance varie comme
 \begin{equation}
   \label{eq:pow_spec_vs_z}
   P(k,z) = G(z)^{2} P(k,z=0) .
 \end{equation}
-Le taux de croissance des structures ne dépendant pas de $k$, la fonction de corrélation est aussi proportionnelle à $\mathrm{G}(z)$ :
+Le taux de croissance des structures ne dépendant pas de $k$, la fonction de corrélation est aussi proportionnelle à $G(z)$ :
 \begin{equation}
   \label{eq:cf_vs_z}
   \xi(r, z) = G(z)^{2} \xi(r, z=0).
 \end{equation}
-Tout ceci est un bref résumé de la cosmologie des inhomogénéïtés. Cette dernière est très bien décrite dans \ref{CITE:Dodelson chap7} et nous référons le lecteur à cette ouvrage pour davantage d'explications.
+Tout ceci est un bref résumé de l'évolution des inhomogénéïtés en cosmologie. Cette dernière est très bien décrite dans \ref{CITE:Dodelson chap7} et nous référons le lecteur à cette ouvrage pour davantage d'explications.
 
 
-Enfin, un point pertinent pour ce manuscrit sont les oscillations présentes dans le spectre de puissance de la matière pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$. Ces oscillations sont appelées \emph{oscillations acoustiques de baryon} (BAO pour Baryonic Acoustic Oscillations) et sont la trace de la physique qui se déroulait avant l'émission du CMB. Le méchanisme est décrit plus en détail dans la section suivante. Nous pouvons cependant déjà noter que ces oscillations caractéristiques dans le spectre de puissance correspondent au pic présent dans la fonction de corrélation de la matière à $r \sim \SI{100}{\per\h\Mpc}$. Ce pic est davantage visible dans le plan $(r, r^{2} \xi(r))$.
+Enfin, un point pertinent pour ce manuscrit sont les oscillations présentes dans le spectre de puissance de la matière pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$. Ces oscillations sont dues aux \emph{oscillations acoustiques de baryon} (BAO pour Baryonic Acoustic Oscillations) et sont la trace de la physique qui se déroulait avant l'émission du CMB. Le méchanisme est décrit plus en détail dans la section suivante. Nous pouvons cependant déjà noter que ces oscillations caractéristiques dans le spectre de puissance correspondent au pic présent dans la fonction de corrélation de la matière à $r \sim \SI{100}{\per\h\Mpc}$. Ce pic est davantage visible dans le plan $(r, r^{2} \xi(r))$.
 
 \section{Les oscillations acoustiques de baryon}
-Les BAO sont une empreinte laissé par la physique pre-recombinaison, et détectable aujourd'hui dans la distribution de matière,. Cette empreinte correspond à un excès de corrélation de la matière, à une distance comobile d'environ $\SI{100}{\per\h\Mpc}$ (\#prov h en italic ou rm ? il est en italic dans la def de H0). Cette distance, appelée \emph{échelle BAO}, fournit une règle standard pour la cosmologie : après l'émission du CMB, la taille comobile de l'échelle BAO reste constante avec le temps. Ainsi, en mesurant l'évolution de la taille physique de l'échelle BAO au cours du temps, nous accédons à l'historique de l'expansion de l'univers. \\
+Les BAO sont une empreinte laissé par la physique pre-recombinaison\footnote{Le moment où les électrons se lient aux protons pour former les premiers atomes.}, et détectable aujourd'hui dans la distribution de matière. Cette empreinte correspond à un excès de corrélation de la matière, à une distance comobile d'environ $\SI{100}{\per\h\Mpc}$ (\#prov h en italic ou rm ? il est en italic dans la def de H0). Cette distance, appelée \emph{échelle BAO}, fournit une règle standard pour la cosmologie : après l'émission du CMB, la taille comobile de l'échelle BAO reste constante avec le temps. Ainsi, en mesurant l'évolution de la taille physique de l'échelle BAO au cours du temps (\#prov reformuler : on mesure delta z et delta theta), nous accédons à l'historique de l'expansion de l'univers. \\
 Dans cette section, nous décrivons les BAO, comment elles se forment, comment elles sont mesurées et les contraintes qu'elles permettent d'établir sur les modèles cosmologiques.
 
 \subsection{La genèse}
-Comme expliqué au début de ce manuscrit, l'univers avant la recombinaison\footnote{Le moment où les électrons se lient aux protons pour former les premiers atomes.} est un plasma chaud et dense,
+Comme expliqué au début de ce manuscrit, l'univers avant la recombinaison est un plasma chaud et dense,
 % composé des photons, des baryons, et de la matière noire. L'univers n'étant, initialemment, pas parfaitement homogène,
 qui présente de faibles inhomogénéïtés.
 % les surdensités présentes produisent des puits de potentiels,
-Chaque surdensité produit un puit de potentiel,
+Chaque surdensité produit un puit de potentiel (\#prov c'est vraiment ca qui se passe? a discuter avec Jim),
 dans lesquels les particules – les photons, les baryons, la matière noire – tombent.
 Les photons et les baryons étant couplés, la pression de radiation augmente au fur et à mesure que la densité augmente. Se joue alors une compétition entre la gravité, qui tend à faire tomber les photons et les baryons dans les puits de potentiel, et la pression de radiation, qui tend à les repousser hors de ce puit de potentiel. Ainsi, les baryons et les photons tombent, puis rebondissent, puis retombent lorsque la pression de radiation devient trop faible, etc.
-Ce processus crée donc des oscillations dans le plasma photon-baryon primordial. Comme dans tout milieu, ces oscillations donnent lieu à des ondes acoustiques, qui se propagent à la vitesse du son dans ce milieu. Celle-ci est définie comme
+Ce processus crée donc des oscillations dans le plasma photon-baryon primordial. Comme dans tout milieu, ces oscillations donnent lieu à des ondes acoustiques, qui se propagent à la vitesse du son dans ce milieu. Celle-ci s'exprime comme
 \begin{equation}
   \label{eq:sound_speed}
   c_{s} = \sqrt{\frac{1}{3(1 + R)}},
 \end{equation}
-où $R = \frac{3\rho_b}{4\rho_{\gamma}}$. Etant donné que la densité de photons $\rho_{\gamma}$ est bien suppérieure à la densité de baryons $\rho_{b}$, la vitesse du son $c_s$ vaut $1/\sqrt{3}$ en bonne approximation. (\#prov en fait est-ce que c'est important de donner ca?)
-
+où $R = \frac{3\rho_b}{4\rho_{\gamma}}$. Etant donné que la densité de photons $\rho_{\gamma}$ est bien suppérieure à la densité de baryons $\rho_{b}$, la vitesse du son $c_s$ vaut $1/\sqrt{3}$ en bonne approximation.
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{bao_schema}
   \caption{bla}
   \label{fig:bao_schema}
 \end{figure}
-Ces ondes acoustiques se propagent donc dans le plasma primordial depuis chaque surdensité . La figure~\ref{fig:bao_schema} schématise le méchanisme pour une seule surdensité. A l'instant $t=0$, nous considérons donc une surdensité en $R = \SI{0}{\Mpc}$. Cette surdensité est composée de matière noire (CDM), de baryons et de photons. Le puis de potentiel créé fait s'effondrer les espèces présentes, jusqu'à ce que la pression de radiation devienne suffisante pour initier une onde acoustique. Au fur et à mesure que le temps s'écoule (le redshift diminue), le front d'onde dans le plasma photon-baryon se propage. Puis, à un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons, et l'onde devient gelée. Ainsi la surdensité de baryon ne se propage plus, et les photons, qui n'interagissent plus avec les baryons, se propagent librement. La surdensité de matière noire à $R = \SI{0}{\Mpc}$, qui a continué de croître, tend à rappeler les baryons par effet gravitationnel. Cependant, la surdensité de baryon à $R \sim \SI{150}{\Mpc}$ produit aussi un puit de potentiel, dans lequel la matière noire alentour tombe progressivement. Ainsi, même si la majeure partie des baryons retombent dans le puit de potentiel créé par la surdensité initiale, un second puit de potentiel, formé par des baryons et de la matière noire, subsiste en $R \sim \SI{150}{\Mpc}$. Nous pouvons généraliser cette vue simplifier en une dimension à 3 dimensions : le front d'onde qui se propagent à partir de la surdensité initiale est alors sphérique, et le second puit de potentiel résultant est alors une sphère centrée sur la surdensité initiale et de rayon $R \sim \SI{150}{\Mpc}$. Cette distance d'environ $\SI{150}{\Mpc}$ est appelée \emph{horizon acoustique} : c'est la distance que l'onde sonore a pu parcourir avant d'être gelée. L'horizon acoustique est défini comme
+Ces ondes acoustiques se propagent donc dans le plasma primordial depuis chaque surdensité . La figure~\ref{fig:bao_schema} schématise le méchanisme pour une seule surdensité. A l'instant $t=0$, nous considérons donc une surdensité en $R = \SI{0}{\Mpc}$. Cette surdensité est composée de matière noire (CDM), de baryons et de photons. Le puit de potentiel créé fait s'effondrer (\#prov : a discuter) les espèces présentes, jusqu'à ce que la pression de radiation devienne suffisante pour initier une onde acoustique. Au fur et à mesure que le temps s'écoule (le redshift diminue), le front d'onde dans le plasma photon-baryon se propage. \textbf{Puis, à un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons. La pression dans le milieu devient nulle, faisant chuter la vitesse du son à zéro. L'onde est alors gelée.} Ainsi la surdensité de baryon ne se propage plus, et les photons, qui n'interagissent plus avec les baryons, se propagent librement. La surdensité de matière noire à $R = 0$, qui a continué de croître, rappelle les baryons par effet gravitationnel. Cependant, la surdensité de baryon à $R \sim \SI{150}{\Mpc}$ produit aussi un puit de potentiel, dans lequel la matière noire alentour tombe progressivement. Ainsi, même si la majeure partie des baryons retombent dans le puit de potentiel créé par la surdensité initiale, un second puit de potentiel, formé par des baryons et de la matière noire, subsiste en $R \sim \SI{150}{\Mpc}$. Nous pouvons généraliser cette vue simplifiée en une dimension à 3 dimensions : le front d'onde qui se propagent à partir de la surdensité initiale est alors sphérique, et le second puit de potentiel résultant est alors une sphère centrée sur la surdensité initiale et de rayon $R \sim \SI{150}{\Mpc}$. Cette distance d'environ $\SI{150}{\Mpc}$ est appelée \emph{horizon acoustique} : c'est la distance que l'onde sonore a pu parcourir avant d'être gelée. L'horizon acoustique est défini comme
 \begin{equation}
   \label{eq:sound_horizon}
   r_{d} = \int^{\infty}_{z_{drag}} \frac{c_{s}}{H(z)} dz ,
@@ -716,7 +740,7 @@ Prenons un exemple. Supposons que nous voulons reconstruire la distribution de l
   \caption{blabla}
   \label{fig:schema_biais}
 \end{figure}
-Les galaxies, comme tous les objets effondrés, se forment dans les endroits les plus denses de l'univers. Ceci est illustré sur la figure~\ref{fig:schema_biais} par le fait que les galaxies ne peuvent se former que pour des densitées $\rho > 0.8$. Ainsi, sonder la distribution de matière via l'observation des galaxies nous fait manquer toute la distribution de matière pour laquelle $\rho < 0.8$. La distribution reconstruite sera donc plus clustered (\#prov) que la distribution sous-jacente. Cependant, il est possible de relier la fonction de corrélation des galaxies, à celle de la distribution de matière, par relation de proportionnalité :
+Les galaxies, comme tous les objets effondrés, se forment dans les endroits les plus denses de l'univers. Ceci est illustré sur la figure~\ref{fig:schema_biais} par le fait que les galaxies ne peuvent se former que pour des densitées $\rho \rangle 0.8$. Ainsi, sonder la distribution de matière via l'observation des galaxies nous fait manquer toute la distribution de matière pour laquelle $\rho \langle 0.8$. La distribution reconstruite sera donc plus clustered (\#prov) que la distribution sous-jacente. Cependant, il est possible de relier la fonction de corrélation des galaxies, à celle de la distribution de matière, par relation de proportionnalité :
 \begin{equation}
   \label{eq:biais1}
   \xi_{galaxies}(r) = b^2 \xi_{matière}(r) ,
