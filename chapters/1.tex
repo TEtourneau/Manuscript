@@ -240,7 +240,7 @@ où le point désigne la dérivé temporelle. On définit alors le taux d'expans
   \label{eq:hubble}
   V = H_0 \times D.
 \end{equation}
-$H_0$ est souvent donné comme $H_0 = 100 h\,\mathrm{km \cdot s^{-1} \cdot Mpc^{-1}}$, où $h$ est un paramètre sans dimension qui prend en compte l'incertitude sur $H_0$. D'après les mesures les plus récentes~\cite{CITE planck + Riess ?}, $h$ varie entre $\num{0,67}$ et $\num{0,75}$.
+$H_0$ est souvent donné comme $H_{0} = \SI{100}{\h\km\per\s\per\Mpc}$, où $h$ est un paramètre sans dimension qui prend en compte l'incertitude sur $H_0$. D'après les mesures les plus récentes~\cite{CITE planck + Riess ?}, $h$ varie entre $\num{0,67}$ et $\num{0,75}$.
 % L'équation~\ref{eq:hubble} est nommée en l'honneur d'Edwin Hubble, après sa publication en 1929, même si Georges Lemaître fut sans doute le premier à saisir le lien entre distance et vitesse d'éloignement des galaxies et son implication concernant l'expansion de l'univers (\#prov a reformuler).
 L'équation~\ref{eq:hubble} est nommée en l'honneur d'Edwin Hubble, après sa publication en 1929, même si Georges Lemaître fut sans doute le premier à interpréter le lien entre distance et vitesse d'éloignement des galaxies par l'expansion de l'univers.
 Suite à cette brève parenthèse, retournons à nos deux équations. Il est courant de récrire ces équations en injectant $H(t)$, ainsi qu'en remplaçant la seconde par une combinaison linéaire des deux précédentes :
@@ -471,7 +471,7 @@ Nous pouvons alors définir les distances suivantes :
   \end{equation}
 % \textbf{le facteur (1+z) supplémentaire provenant du fait que les photons sont redshiftés à cause de l'expansion, et perdent donc davantage d'énergie lors de leur propagation jusqu'à nous \#correc: a verifier, peut etre dans le bouquin de Jim. En fait y a un sqrt(1+z) qui vient de lénergie, et sqrt(1+z) qui vient du fait qu'il faut plus de temps aux photons pour cross la sphere de luminosite (p107 dans le bouquin de Jim)}
 \end{itemize}
-Les distances sont usuellememt mesurées en \si{\per\h\kpc} ou \si{\per\h\Mpc}, le facteur $\mathrm{h}$ permettant de rendre ces distances indépendantes du choix de la cosmologie. Un parsec vaut environ \num{3.2616} années lumières, soit environ $\SI{3,085 677 581 e16}{\meter}$.
+Les distances sont usuellememt mesurées en \si{\perh\kpc} ou \si{\perh\Mpc}, le facteur $\mathrm{h}$ permettant de rendre ces distances indépendantes du choix de la cosmologie. Un parsec vaut environ \num{3.2616} années lumières, soit environ $\SI{3,085 677 581 e16}{\meter}$.
 Dans ce manuscrit, les distances qui nous intéressent particulièrement sont $D_C$ et $D_M$. Nous y ferons appel dans la section \#prov ref.
 
 \paragraph{Les paramètres du modèle —} 
@@ -560,18 +560,19 @@ où $t$ est le temps en $\si{\second}$, et $\omega$ la pulsation en $\si{\per\se
 
 \subsection{Le spectre de puissance}
 
-Le spectre de puissance est un outil mathématique utilisé afin d'étudier la répartition des modes présents dans un ensemble de données. Les modes sont la généralisation du concept de fréquence. Par exemple, dans le cas du diapason, les modes sont les différentes fréquences qui composent le signal temporel. En cosmologie, les modes sont associés à des fluctuations spatiales. Prenons l'exemple de la distribution de la matière. On peut définir le contraste de densité en $\vec x$ comme
+\textbf{
+  Le spectre de puissance est un outil mathématique utilisé afin d'étudier la répartition des modes présents dans un ensemble de données. Les modes sont la généralisation du concept de fréquence. Par exemple, dans le cas du diapason, les modes sont les différentes fréquences qui composent le signal temporel. En cosmologie, les modes sont associés à des fluctuations spatiales. Prenons l'exemple de la distribution de la matière. On peut définir le contraste de densité en $\vec x$ comme
 \begin{equation}
   \label{eq:contraste}
   \delta(\vec x) = \frac{\rho(\vec x) - \bar \rho}{\bar\rho} ,
 \end{equation}
-où $\rho(\vec x)$ est la densité en $\vec x$, et $\bar \rho$ la densité moyenne. Le spectre de puissance du contraste de densité de la matière renseigne donc sur la répartition des modes de fluctuations spatiales de ce contraste. La variable dans l'espace de Fourier associée au vecteur position $\vec x$ est le vecteur d'onde $\vec k$. Le spectre de puissance du contraste de densité de la matière est défini comme
+où $\rho(\vec x)$ est la densité en $\vec x$, et $\bar \rho$ la densité moyenne. Le spectre de puissance du contraste de densité de la matière renseigne donc sur la répartition des modes de fluctuations spatiales de la matière. La variable dans l'espace de Fourier associée au vecteur position $\vec x$ est le vecteur d'onde $\vec k$. Les grands $k$ correspondent aux modes des petites échelles, et les petits $k$ aux modes des grandes échelles. Le spectre de puissance du contraste de densité de la matière est défini comme
 \begin{equation}
   \label{eq:def_pow_spec}
   P(\vec{k}) = \langle \delta(\vec{k'}) \delta(\vec{k}+\vec{k}') \rangle,
 \end{equation}
-où $\langle.\rangle$ désigne la moyenne sur $\vec{k'}$, et $\delta(\vec{k})$ est le contraste de densité associé au vecteur d'onde $\vec{k}$. Etant donné qu'on suppose l'isotropie en cosmologie, le spectre de puissance dépend uniquement de $k$, la norme de $\vec{k}$.
-
+où $\langle.\rangle$ désigne la moyenne sur $\vec{k'}$, et $\delta(\vec{k})$ est le contraste de densité associé au vecteur d'onde $\vec{k}$. Etant donné qu'on suppose l'isotropie en cosmologie, le spectre de puissance dépend uniquement de $k$, la norme de $\vec{k}$. La figure~\#prov montre le spectre de puissance de la matière à $z=0$, elle est discuté dans la section suivante.
+}
 
 % Reprenons l'exemple du CMB. (\#prov plutot parler du spectre de puissance de la matiere : presenter le contraste de densite etc). La carte des fluctuations en température est présentée sur la figure~\ref{fig:carte_cmb} et le spectre de puissance associé sur la figure~\ref{fig:spectre_cmb}. 
 % \begin{figure}[h]
@@ -615,8 +616,9 @@ où $\langle.\rangle$ désigne la moyenne sur $\vec{r'}$, et $\delta(\vec{r})$ e
 La fonction de corrélation peut aussi être vue comme un excès de probabilité :
 \begin{equation}
   \label{eq:def_cf2}
-  dP(r_{1}, r_{2}) = \bar \rho^{2} ( 1 + \xi(r_{1} - r_{2})) dV_{1} dV_{2} .
+  dP(r_{1}, r_{2}) = \bar \rho^{2} ( 1 + \xi(r_{1} - r_{2})) dV_{1} dV_{2} ,
 \end{equation}
+où $dP(r_{1}, r_{2})$ donne la probabilité de trouver de la matière en $r_{1}$ et $r_{2}$.
 Ainsi, si la fonction de corrélation $\xi(r)$ est positive, alors il est plus probable de trouver de la matière en deux points de l'espace séparés par une distance $r = r_{1} - r_{2}$ que si celle-ci avait été distribuée de manière uniforme\footnote{Pour une distribution de matière uniforme, $\xi(r) = 0$ pour tout $r$.}.
 % Dans le cas de la fonction de corrélation de la matière, $\delta(r)$ est le contraste de densité, comme défini dans l'équation~\ref{eq:contraste}.
 On peut montrer que la fonction de corrélation est reliée au spectre de puissance par la transformation de Fourier :
@@ -632,8 +634,12 @@ ce qui donne, une fois l'isotropie supposée,
 La figure~\ref{CITE} présente le spectre de puissance et~\ref{CITE} la fonction de corrélation de la matière aujourd'hui. (\#prov mettre la figure)
 Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale.
 % Ces modes à grande échelle sont directement reliés au spectre de puissance des fluctuations primordiales.
-\textbf{Ces modes à grande échelle ne sont pas affectés par la physique qui se déroule durant la domination de la radiation. Ils sondent directement les fluctuations primordiales de densité.}
-Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les petites et grandes échelles est dû au fait que les modes $k \rangle k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, sont entrés dans l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} durant la phase de domination de la radiation : ces modes possèdent donc une taille caractéristique plus petite que l'horizon au moment de l'égalité radiation-matière. Les modes plus grands que l'horizon au moment de l'égalité radiation-matière sont gelés (\#prov pourquoi?), et n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial : $P(k) \propto k^{ns}$ pour ces modes là. Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k \langle k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et croissent proportionnellement à $G(z)$. $G$ est appelé le taux de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$ à grand $z$, lorsque $\Omega_m = 1$. Ainsi, pour des redshifts $z \langle\langle z_{eq}$, le spectre de puissance varie comme
+\textbf{Ces modes à grande échelle ne sont pas affectés par la physique qui se déroule durant la domination de la radiation. Ils sondent donc directement les fluctuations primordiales de densité.
+Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les grandes et petites échelles est dû au fait que les modes $k \rangle k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, possèdent une taille caractéristique plus petite que l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} au moment de l'égalité radiation-matière : ces modes sont donc entrés dans l'horizon durant la phase de domination de la radiation, et ont donc été affectés par la physique qui s'y déroule.
+% sont entrés dans l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} durant la phase de domination de la radiation : ces modes possèdaient une taille caractéristique plus petite que l'horizon au moment de l'égalité radiation-matière, et ont donc été affectés par la physique qui s'y déroule.
+Les modes plus grands que l'horizon au moment de l'égalité radiation-matière ne sont pas affectés par cette physique et sont donc gelés : ils n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial.
+Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k \rangle k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et tous les modes croissent proportionnellement à $G(z)$. }
+$G$ est appelé le taux de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$ à grand $z$, lorsque $\Omega_m = 1$. Ainsi, pour des redshifts $z \langle\langle z_{eq}$, le spectre de puissance varie comme
 \begin{equation}
   \label{eq:pow_spec_vs_z}
   P(k,z) = G(z)^{2} P(k,z=0) .
@@ -646,10 +652,12 @@ Le taux de croissance des structures ne dépendant pas de $k$, la fonction de co
 Tout ceci est un bref résumé de l'évolution des inhomogénéïtés en cosmologie. Cette dernière est très bien décrite dans \ref{CITE:Dodelson chap7} et nous référons le lecteur à cette ouvrage pour davantage d'explications.
 
 
-Enfin, un point pertinent pour ce manuscrit sont les oscillations présentes dans le spectre de puissance de la matière pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$. Ces oscillations sont dues aux \emph{oscillations acoustiques de baryon} (BAO pour Baryonic Acoustic Oscillations) et sont la trace de la physique qui se déroulait avant l'émission du CMB. Le méchanisme est décrit plus en détail dans la section suivante. Nous pouvons cependant déjà noter que ces oscillations caractéristiques dans le spectre de puissance correspondent au pic présent dans la fonction de corrélation de la matière à $r \sim \SI{100}{\per\h\Mpc}$. Ce pic est davantage visible dans le plan $(r, r^{2} \xi(r))$.
+Enfin, un point pertinent pour ce manuscrit sont les oscillations présentes dans le spectre de puissance de la matière pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$. Ces oscillations sont dues aux \emph{oscillations acoustiques de baryon} (BAO pour Baryonic Acoustic Oscillations) et sont la trace de la physique qui se déroulait avant l'émission du CMB. Le méchanisme est décrit plus en détail dans la section suivante. Nous pouvons cependant déjà noter que ces oscillations caractéristiques dans le spectre de puissance correspondent au pic présent dans la fonction de corrélation de la matière à $r \sim \SI{100}{\perh\Mpc}$. Ce pic est davantage visible dans le plan $(r, r^{2} \xi(r))$.
 
 \section{Les oscillations acoustiques de baryon}
-Les BAO sont une empreinte laissé par la physique pre-recombinaison\footnote{Le moment où les électrons se lient aux protons pour former les premiers atomes.}, et détectable aujourd'hui dans la distribution de matière. Cette empreinte correspond à un excès de corrélation de la matière, à une distance comobile d'environ $\SI{100}{\per\h\Mpc}$ (\#prov h en italic ou rm ? il est en italic dans la def de H0). Cette distance, appelée \emph{échelle BAO}, fournit une règle standard pour la cosmologie : après l'émission du CMB, la taille comobile de l'échelle BAO reste constante avec le temps. Ainsi, en mesurant l'évolution de la taille physique de l'échelle BAO au cours du temps (\#prov reformuler : on mesure delta z et delta theta), nous accédons à l'historique de l'expansion de l'univers. \\
+Les BAO sont une empreinte laissée par la physique pre-recombinaison\footnote{Le moment où les électrons se lient aux protons pour former les premiers atomes.}, et détectable aujourd'hui dans la distribution de matière. Cette empreinte correspond à un excès de corrélation de la matière, à une distance comobile d'environ $\SI{100}{\perh\Mpc}$. Cette distance, appelée \emph{échelle BAO}, fournit une règle standard pour la cosmologie : après l'émission du CMB, la taille comobile de l'échelle BAO reste constante avec le temps.
+\textbf{Ainsi, en déduisant l'évolution de la taille physique de l'échelle BAO au cours du temps, grâce notamment à la mesure d'angles et de différences de redshift, nous accédons à l'historique de l'expansion de l'univers.}
+% Ainsi, en mesurant l'évolution de la taille physique de l'échelle BAO au cours du temps (\#prov reformuler : on mesure delta z et delta theta), nous accédons à l'historique de l'expansion de l'univers. \\
 Dans cette section, nous décrivons les BAO, comment elles se forment, comment elles sont mesurées et les contraintes qu'elles permettent d'établir sur les modèles cosmologiques.
 
 \subsection{La genèse}
@@ -677,7 +685,7 @@ Ces ondes acoustiques se propagent donc dans le plasma primordial depuis chaque 
   \label{eq:sound_horizon}
   r_{d} = \int^{\infty}_{z_{drag}} \frac{c_{s}}{H(z)} dz ,
 \end{equation}
-et vaut $r_{d} = \SI{147.18(29)}{\Mpc}$ selon~\ref{CITE planck2018}.
+et vaut $r_{d} = \SI{99.16(20)}{\perh\Mpc}$ selon~\ref{CITE planck2018}.
 
 Ce processus a laissé des traces dans la distribution de matière à grande échelle : à chaque surdensité primordiale est associée une sphère de surdensité de rayon comobile $\SI{150}{\Mpc}$. Ainsi, lorsque nous observons aujourd'hui un traceur de la densité de matière, telle une galaxie, il est davantage probable d'en trouver d'autres, séparés du premier d'une distance comobile d'environ $\SI{150}{\Mpc}$. C'est ce que traduit le pic BAO présent dans la fonction de corrélation de la matière, montrée sur la figure~\ref{fig:CITE figure CF}
 
@@ -755,12 +763,12 @@ Les quasars, pour \emph{quasi - star}, sont les objets les plus lumineux de l'un
   \caption{bla}
   \label{fig:schema_qso}
 \end{figure}
-Le trou noir supermassif, au centre, acrète la matière environnante. Sous forme d'un disque, cette dernière s'échauffe en tombant et rayonne énormément d'énergie, dans toutes les longueurs d'ondes. Selon les cas, et souvent par cycle, le noyau actif peut émettre de puissants jets de matière ultra-relativiste. La figure~\ref{fig:qso_jets} montre de tels jets. Ces jets, d'une taille de plus de \SI{200}{\per\h\kpc}, sont principalement constitués de noyaux ionisés, d'électron et de positrons, éjectés à une vitesse proche de celle de la lumière. Ces phénomènes font partis des plus énergétiques de l'univers.
+Le trou noir supermassif, au centre, acrète la matière environnante. Sous forme d'un disque, cette dernière s'échauffe en tombant et rayonne énormément d'énergie, dans toutes les longueurs d'ondes. Selon les cas, et souvent par cycle, le noyau actif peut émettre de puissants jets de matière ultra-relativiste. La figure~\ref{fig:qso_jets} montre de tels jets. Ces jets, d'une taille de plus de \SI{200}{\perh\kpc}, sont principalement constitués de noyaux ionisés, d'électron et de positrons, éjectés à une vitesse proche de celle de la lumière. Ces phénomènes font partis des plus énergétiques de l'univers.
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.4]{qso_jets}
   \label{fig:qso_jets}
-  \caption{Image radio du quasar 3C 175 prise avec le VLA. Les deux jets ultra-relativistes visibles ont une taille d'environ \SI{212}{\per\h\kpc}. Crédits : \cite{CITE http://adsabs.harvard.edu/full/1994AJ....108..766B} ou citer le cite de la NASA qu'a coloré l'image?}
+  \caption{Image radio du quasar 3C 175 prise avec le VLA. Les deux jets ultra-relativistes visibles ont une taille d'environ \SI{212}{\perh\kpc}. Crédits : \cite{CITE http://adsabs.harvard.edu/full/1994AJ....108..766B} ou citer le cite de la NASA qu'a coloré l'image?}
 \end{figure}
 
 Selon l'orientation du disque par rapport à l'observateur, le noyau actif est dénomé différemment. Lorsque nous observons le disque par une direction proche de la tranche, le tore constitué de poussière qui l'entoure, obstrue la lumière. Le noyau actif nous apparaît alors moins brillant, il est classé comme une galaxie \emph{Seyfert}. Lorsque nous observons le disque de face, la lumière n'est pas obstruée, et le noyau actif est alors beaucoup plus briant. Ces objets sont désignés en tant que \emph{quasar} ou \emph{QSO} (\emph{Quasi Stelar Object}). Lorsque le jet pointe directement vers la terre, l'objet est classifié comme \emph{blazar}.

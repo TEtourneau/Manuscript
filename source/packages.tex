@@ -113,14 +113,16 @@
 
 %%%    SIunitx
 \sisetup{locale = FR,
-  inter-unit-product=\ensuremath{\cdot},
+  % inter-unit-product=\ensuremath{\cdot},
+  inter-unit-product=\ensuremath{\,},
   per-mode=reciprocal,
   separate-uncertainty = true,
   detect-all
 }
 \DeclareSIUnit{\Mpc}{Mpc}
 \DeclareSIUnit{\kpc}{kpc}
-\DeclareSIUnit{\h}{h}
+\DeclareSIUnit{\h}{\textit{h}~}
+\DeclareSIUnit{\perh}{\textit{h}^{-1}\,}
 
 %%% Geometry
 \geometry{

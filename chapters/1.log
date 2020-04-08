@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 APR 2020 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 APR 2020 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1962,15 +1962,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 221.
+(hyperref)                removing `math shift' on input line 223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 221.
+(hyperref)                removing `\alpha' on input line 223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 221.
+(hyperref)                removing `math shift' on input line 223.
 
 ) (./1.aux)
 \openout1 = `1.aux'.
@@ -2335,13 +2335,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13] <../figures/intro/example_tf.png, id=261, 778.91pt x 473.77pt>
+[13] <../figures/intro/example_tf.png, id=261, 1013.7875pt x 520.94624pt>
 File: ../figures/intro/example_tf.png Graphic file (type png)
 
 <use ../figures/intro/example_tf.png>
 Package pdftex.def Info: ../figures/intro/example_tf.png used on input line 544
 .
-(pdftex.def)             Requested size: 389.45406pt x 236.88441pt.
+(pdftex.def)             Requested size: 506.89252pt x 260.47249pt.
+
+Overfull \hbox (23.19565pt too wide) in paragraph at lines 544--545
+ [][] 
+ []
+
+
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2351,19 +2359,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14 <../figures/intro/example_tf.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 620.
+(Font)              <9> on input line 622.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 620.
+(Font)              <7> on input line 622.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 620.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 622.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 620.
-
-
-LaTeX Warning: Reference `CITE' on page 15 undefined on input line 632.
-
-
-LaTeX Warning: Reference `CITE' on page 15 undefined on input line 632.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 622.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2373,8 +2375,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 
+LaTeX Warning: Reference `CITE' on page 16 undefined on input line 634.
+
+
+LaTeX Warning: Reference `CITE' on page 16 undefined on input line 634.
+
+
 LaTeX Warning: Reference `CITE:Dodelson chap7' on page 16 undefined on input li
-ne 646.
+ne 652.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2382,37 +2390,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16] <../figures/intro/bao_schema.png, id=294, 595.22375pt x 777.90625pt>
+[16] <../figures/intro/bao_schema.png, id=293, 595.22375pt x 777.90625pt>
 File: ../figures/intro/bao_schema.png Graphic file (type png)
 
 <use ../figures/intro/bao_schema.png>
-Package pdftex.def Info: ../figures/intro/bao_schema.png used on input line 671
+Package pdftex.def Info: ../figures/intro/bao_schema.png used on input line 679
 .
 (pdftex.def)             Requested size: 297.61115pt x 388.95216pt.
-
-
-LaTeX Warning: Reference `CITE planck2018' on page 17 undefined on input line 6
-80.
-
-
-LaTeX Warning: Reference `fig:CITE figure CF' on page 17 undefined on input lin
-e 682.
-
-
-Package caption Warning: \label without proper reference on input line 690.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:bao_dessin' on page 17 undefined on input line 68
-7.
-
-<../figures/intro/bao_dessin.png, id=297, 1053.9375pt x 372.39125pt>
-File: ../figures/intro/bao_dessin.png Graphic file (type png)
-
-<use ../figures/intro/bao_dessin.png>
-Package pdftex.def Info: ../figures/intro/bao_dessin.png used on input line 691
-.
-(pdftex.def)             Requested size: 421.56754pt x 148.95386pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2428,7 +2412,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18 <../figures/intro/bao_schema.png>]
-Overfull \hbox (9.0798pt too wide) in paragraph at lines 698--700
+
+LaTeX Warning: Reference `CITE planck2018' on page 19 undefined on input line 6
+88.
+
+
+LaTeX Warning: Reference `fig:CITE figure CF' on page 19 undefined on input lin
+e 690.
+
+
+Package caption Warning: \label without proper reference on input line 698.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:bao_dessin' on page 19 undefined on input line 69
+5.
+
+<../figures/intro/bao_dessin.png, id=309, 1053.9375pt x 372.39125pt>
+File: ../figures/intro/bao_dessin.png Graphic file (type png)
+
+<use ../figures/intro/bao_dessin.png>
+Package pdftex.def Info: ../figures/intro/bao_dessin.png used on input line 699
+.
+(pdftex.def)             Requested size: 421.56754pt x 148.95386pt.
+
+Overfull \hbox (9.0798pt too wide) in paragraph at lines 706--708
 \T1/lmr/m/n/10.95 Ainsi, dans la di-rec-tion trans-verse à la di-rec-tion d'ob-
 ser-va-tion, l'ob-ser-va-teur me-sure le rap-port $\OML/lmm/m/it/10.95 D[]\OT1/
 lmr/m/n/10.95 (\OML/lmm/m/it/10.95 z\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 =r[
@@ -2442,16 +2450,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19 <../figures/intro/bao_dessin.png>]
-<../figures/intro/schema_biais.png, id=324, 943.525pt x 529.98pt>
+<../figures/intro/schema_biais.png, id=322, 943.525pt x 529.98pt>
 File: ../figures/intro/schema_biais.png Graphic file (type png)
 
 <use ../figures/intro/schema_biais.png>
 Package pdftex.def Info: ../figures/intro/schema_biais.png used on input line 7
-39.
+47.
 (pdftex.def)             Requested size: 377.4033pt x 211.98824pt.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 746.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2459,36 +2464,52 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20] <../figures/intro/schema_qso.png, id=335, 649.42625pt x 428.60126pt>
+[20]
+
+LaTeX Warning: Command \` invalid in math mode on input line 754.
+
+<../figures/intro/schema_qso.png, id=333, 649.42625pt x 428.60126pt>
 File: ../figures/intro/schema_qso.png Graphic file (type png)
 
 <use ../figures/intro/schema_qso.png>
-Package pdftex.def Info: ../figures/intro/schema_qso.png used on input line 754
+Package pdftex.def Info: ../figures/intro/schema_qso.png used on input line 762
 .
 (pdftex.def)             Requested size: 324.71233pt x 214.3001pt.
 
 
-Package caption Warning: \label without proper reference on input line 762.
+Package caption Warning: \label without proper reference on input line 770.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:qso_jets' on page 21 undefined on input line 758.
+LaTeX Warning: Reference `fig:qso_jets' on page 21 undefined on input line 766.
 
 
-<../figures/intro/qso_jets.png, id=337, 627.34375pt x 415.5525pt>
+<../figures/intro/qso_jets.png, id=335, 627.34375pt x 415.5525pt>
 File: ../figures/intro/qso_jets.png Graphic file (type png)
 
 <use ../figures/intro/qso_jets.png>
-Package pdftex.def Info: ../figures/intro/qso_jets.png used on input line 761.
+Package pdftex.def Info: ../figures/intro/qso_jets.png used on input line 769.
 (pdftex.def)             Requested size: 250.93304pt x 166.21805pt.
 
 
 Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
-.108..766B' on page 21 undefined on input line 763.
+.108..766B' on page 21 undefined on input line 771.
 
 
 Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
-.108..766B' on page 21 undefined on input line 763.
+.108..766B' on page 21 undefined on input line 771.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:prov' on page 21 undefined on input line 776.
+
+
+LaTeX Warning: Reference `CITE:prov' on page 21 undefined on input line 776.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2496,29 +2517,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <../figures/intro/schema_biais.png> <../figures/intro/schema_qso.png (PNG c
-opy)>]
+[21 <../figures/intro/schema_biais.png>]
 
-LaTeX Warning: Reference `fig:prov' on page 22 undefined on input line 768.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-
-LaTeX Warning: Reference `CITE:prov' on page 22 undefined on input line 768.
-
+[22 <../figures/intro/schema_qso.png (PNG copy)> <../figures/intro/qso_jets.png
+>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 780.
+(Font)              <12> on input line 788.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 780.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 780.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 788.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 780.
+(hyperref)                removing `math shift' on input line 788.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 780.
+(hyperref)                removing `\alpha' on input line 788.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 788.
 
 
 Package natbib Warning: There were undefined citations.
@@ -2534,35 +2557,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22 <../figures/intro/qso_jets.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 786.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 786.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 794.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 794.
  (./1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 786.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 786.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 794.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 794.
 Package rerunfilecheck Info: File `1.out' has not changed.
 (rerunfilecheck)             Checksum: 17E78978CC2FD01BC5E765E538C4F5A6;1269.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 786.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 794.
  ) 
 Here is how much of TeX's memory you used:
- 29734 strings out of 492995
- 537899 string characters out of 6132704
- 706137 words of memory out of 5000000
- 32529 multiletter control sequences out of 15000+600000
- 125787 words of font info for 110 fonts, out of 8000000 for 9000
+ 29751 strings out of 492995
+ 538114 string characters out of 6132704
+ 705231 words of memory out of 5000000
+ 32541 multiletter control sequences out of 15000+600000
+ 160374 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,21n,57p,10403b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,21n,50p,10403b,1076s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -2628,7 +2644,7 @@ onts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
 lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on 1.pdf (23 pages, 1962367 bytes).
+Output written on 1.pdf (23 pages, 1963897 bytes).
 PDF statistics:
  469 PDF objects out of 1000 (max. 8388607)
  394 compressed objects within 4 object streams

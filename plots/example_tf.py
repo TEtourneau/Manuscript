@@ -6,12 +6,12 @@ t = np.linspace(0, 2.5, 100000)
 
 f, axs = plt.subplots(3,2, sharex=True)
 
-f1 = 1
-f2 = 2.2
-f3 = 0.3
-a1 = 1
-a2 = 0.5
-a3 = 2
+f1 = 0.5
+f2 = 1
+f3 = 2
+a1 = 2
+a2 = 0.7
+a3 = 0.2
 
 axs[0, 0].plot(t, a1*np.sin(f1*2*np.pi*t), color='r')
 axs[0, 1].bar(f1, a1, width=0.05, color='b')
