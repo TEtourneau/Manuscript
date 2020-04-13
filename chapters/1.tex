@@ -42,7 +42,7 @@ Ces quinze années très fertiles pour la cosmologie ont popularisé l'idée d'u
 % . Ces points conduisent à nommer ces classes de solutions \emph{hot big bang models}, ou modèles de big bang en français, symbolisant l'idée qu'à l'origine\footnote{\#prov ou plutôt aussi loin que nous puissions remonter ? Ca vaut peut-être le coup d'expliquer la distinction}, l'univers fût un point infiniment chaud et dense.
 
 Suite notamment aux publications de Friedmann, Lemaître et Hubble, les défenseurs des modèles de big bang ont commencé à chercher des observables capables de prouver ces modèles. En 1948, George Gamow, Ralph Alpher et Robert Herman, reprenant les travaux de Georges Lemaître, prédisent l'existence du \emph{fond diffus cosmologique} (CMB : Cosmic Microwave Background). Ce rayonnement fossile, si les modèles de big bang sont vérifiés, aurait été émis lorsque l'univers était encore dense et chaud. Il repose sur l'idée que, du fait de la température initialement très élevée, les particules possèdent trop d'énergie pour s'assembler et former les premières briques élémentaires. L'univers n'est alors qu'une soupe où toutes les particules s'entrechoquent constamment. Lorsque l'univers s'expand, la température baisse et l'énergie des particules aussi, autorisant ainsi la formation des premiers noyaux d'atomes. Mais la température et la densité sont toujours trop importantes pour laisser les premiers atomes se former : l'univers est alors un bain de noyaux, principalement d'hydrogène et d'hélium, d'électrons et de photons. Les photons sont diffusés constamment sur les électrons libres, rendant le plasma de l'univers primordial opaque. Puis, lorsque l'univers devient suffisamment froid, les électrons ne disposant plus de suffisamment d'énergie sont capturés par les noyaux, formant les premiers atomes de l'univers. Ces atomes, neutres, ne diffusent pas les photons. Ces derniers peuvent alors se propager librement, et l'univers devient transparent. Ce sont ces premiers photons, émis environ \num{380000} ans après le big bang, qui forment le fond diffus cosmologique et que nous pouvons mesurer aujourd'hui. Les principales étapes sont résumées sur la figure~\ref{fig:univershistory}, dont notamment la formation des premiers noyaux vers 0,01 seconde, puis le CMB vers \num{380000} ans.
-\textbf{Après l'apparition des premières étoiles, le rayonnement libéré par celles-ci commence progressivement à réionisé l'hydrogène, qui était devenu neutre au moment de l'émission du CMB. Les dernières analyses estiment le redshift de la réionisation à $5 \langle z_{réionisation} \langle 9$ (\#prov citer Planck et ?)}
+\textbf{Après l'apparition des premières étoiles, le rayonnement libéré par celles-ci commence progressivement à réionisé l'hydrogène, qui était devenu neutre au moment de l'émission du CMB. Les dernières analyses estiment le redshift de la réionisation à $5 < z_{réionisation} < 9$ (\#prov citer Planck et ?)}
 En 1965, 17 ans après sa prédiction, le CMB est détecté par Penzias et Wilson, établissant ainsi le consensus sur les modèles de big bang. A partir de ce moment là, un certain nombre d'observations ont été menées par les cosmologistes afin de contraindre et distinguer les différents modèles de big bang.
 \begin{figure}
   \centering
@@ -129,7 +129,7 @@ où $a(t) = R(t) / R(t₀)$,  $t₀$ est le temps présent et $S_{k}$ est défin
     \end{array}
 \right..
 \end{align}
-Cette formulation permet de mettre en évidence le rapport $a(t)$, appelé facteur d'échelle. Par définition il vaut 1 aujourd'hui. Afin de rendre compte de l'expansion, $a(t) \langle 1$ pour $t \langle t₀$ (passé) et $a(t) \rangle 1$ pour $t \rangle t₀$ (futur).
+Cette formulation permet de mettre en évidence le rapport $a(t)$, appelé facteur d'échelle. Par définition il vaut 1 aujourd'hui. Afin de rendre compte de l'expansion, $a(t) < 1$ pour $t < t₀$ (passé) et $a(t) > 1$ pour $t > t₀$ (futur).
 
 \paragraph{Le redshift —}
 \label{par:redshift}
@@ -334,11 +334,11 @@ En évaluant l'équation précédente pour $t=0$, nous obtenons
 \end{equation}
 Ainsi pour un univers plat, nous avons $k = 0$, et donc $\Omega_{total} = 1$. Nous retrouvons alors que $\rho_{crit}$ correspond à la densité totale de l'univers. 
 
-Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvons comparer les différentes densités d'énergie à n'importe quel redshift, en considérant le rapport $\Omega_{i}(z) = \rho_{i}(z) / \rho_{crit}(z)$, où $\rho_{crit}(z) = 3H(z)^{2} / 8 \pi G$. La figure~\ref{fig:evol_omega} présente l'évolution  avec le redshift des densités relatives, et indique donc les différentes ères de domination. Pour $z \rangle z_{eq}$, c'est la radiation qui domine. Puis vient l'époque de domination de la matière, jusqu'à $z \sim 0.3$. Enfin, c'est la constante cosmologique $\Lambda$ qui domine aujourd'hui.
+Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvons comparer les différentes densités d'énergie à n'importe quel redshift, en considérant le rapport $\Omega_{i}(z) = \rho_{i}(z) / \rho_{crit}(z)$, où $\rho_{crit}(z) = 3H(z)^{2} / 8 \pi G$. La figure~\ref{fig:evol_omega} présente l'évolution  avec le redshift des densités relatives, et indique donc les différentes ères de domination. Pour $z > z_{eq}$, c'est la radiation qui domine. Puis vient l'époque de domination de la matière, jusqu'à $z \sim \num{0.3}$. Enfin, c'est la constante cosmologique $\Lambda$ qui domine aujourd'hui.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{evol_omega}
-  \caption{Evolution en fonction du redshift des densités relatives d'énergie pour un univers plat. Sont indiqués en pointillés le redshift d'égalité radiation-matière $z_{eq} = 3387 \pm 21$, le redshift d'émission du CMB $z_{\ast} = 1089.80 \pm 0.21$, et le redshift aujourd'hui $z = 0$~\cite{CITEplanck2018}. Crédits : Thèse de Pauline Zarrouk.}
+  \caption{Evolution en fonction du redshift des densités relatives d'énergie pour un univers plat. Sont indiqués en pointillés le redshift d'égalité radiation-matière $z_{eq} = 3387 \pm 21$, le redshift d'émission du CMB $z_{\ast} = \num{1089.80} \pm \num{0.21}$, et le redshift aujourd'hui $z = 0$~\cite{CITEplanck2018}. Crédits : Thèse de Pauline Zarrouk.}
 \label{fig:evol_omega}
 \end{figure}
 
@@ -352,7 +352,7 @@ ce qui nous donne finalement, pour $w \neq -1$, l'évolution temporelle du facte
   \label{eq:a_vs_t}
   a(t) \propto t^{\frac{2}{3(1+w)}} .
 \end{equation}
-Ainsi, dans chaque phase de domination, $a$ évolue comme une loi de puissance : $a \propto t^{\frac{1}{2}}$ durant l'air de domination de la radiation, puis $a \propto t^{\frac{2}{3}}$ lors de la domination de la matière. Cependant, l'univers est actuellement dominé par l'énergie noire, l'équation différentielle~\ref{eq:H_evol} devient $H = H_0$, et nous obtenons $a \propto \mathrm{e}^{H_{0} t}$. Nous pouvons noter que durant toutes les phases de domination, $\dot a \rangle 0$ : l'univers est en expansion. De plus, lors des phases de domination de la radiation et de la matière, $\ddot a \langle 0$ : l'expansion de l'univers décélerre. Cependant, pour $ z \lesssim 0.3$, nous avons $\ddot a \rangle 0$, l'univers est alors en expansion accélérée.
+Ainsi, dans chaque phase de domination, $a$ évolue comme une loi de puissance : $a \propto t^{\frac{1}{2}}$ durant l'air de domination de la radiation, puis $a \propto t^{\frac{2}{3}}$ lors de la domination de la matière. Cependant, l'univers est actuellement dominé par l'énergie noire, l'équation différentielle~\ref{eq:H_evol} devient $H = H_0$, et nous obtenons $a \propto \mathrm{e}^{H_{0} t}$. Nous pouvons noter que durant toutes les phases de domination, $\dot a > 0$ : l'univers est en expansion. De plus, lors des phases de domination de la radiation et de la matière, $\ddot a < 0$ : l'expansion de l'univers décélerre. Cependant, pour $ z \lesssim \num{0.3}$, nous avons $\ddot a > 0$, l'univers est alors en expansion accélérée.
 
 % (\#prov Omega\_total prend en compte la courbure ou pas ? C'est pas en accord avec mon equation~\ref{eq:friedmann5}, c'est pas clair ... :\#correc: enlever omega k de omega tot au dessus, c'est plus pedagogique et ne pas le considerer comme une densite d'energie)
 
@@ -462,9 +462,9 @@ Nous pouvons alors définir les distances suivantes :
     \label{eq:dist_como_trans}
     D_M = \left\{
       \begin{array}{ll}
-        D_H \frac{1}{\sqrt{\Omega_k}} \sin(\Omega_k D_C / D_H) & \mbox{si } \Omega_k \langle 0 \\
+        D_H \frac{1}{\sqrt{\Omega_k}} \sin(\Omega_k D_C / D_H) & \mbox{si } \Omega_k < 0 \\
         D_C & \textrm{si } \Omega_k = 0 \\
-        D_H \frac{1}{\sqrt{\Omega_k}} \sinh(\Omega_k D_C / D_H) & \mbox{si } \Omega_k \rangle 0
+        D_H \frac{1}{\sqrt{\Omega_k}} \sinh(\Omega_k D_C / D_H) & \mbox{si } \Omega_k > 0
       \end{array}
     \right..
   \end{equation}
@@ -651,11 +651,11 @@ La figure~\ref{CITE} présente le spectre de puissance et~\ref{CITE} la fonction
 Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale.
 % Ces modes à grande échelle sont directement reliés au spectre de puissance des fluctuations primordiales.
 \textbf{Ces modes à grande échelle ne sont pas affectés par la physique qui se déroule durant la domination de la radiation. Ils sondent donc directement les fluctuations primordiales de densité.
-Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les grandes et petites échelles est dû au fait que les modes $k \rangle k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, possèdent une taille caractéristique plus petite que l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} au moment de l'égalité radiation-matière : ces modes sont donc entrés dans l'horizon durant la phase de domination de la radiation, et ont donc été affectés par la physique qui s'y déroule.
+Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les grandes et petites échelles est dû au fait que les modes $k > k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, possèdent une taille caractéristique plus petite que l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} au moment de l'égalité radiation-matière : ces modes sont donc entrés dans l'horizon durant la phase de domination de la radiation, et ont donc été affectés par la physique qui s'y déroule.
 % sont entrés dans l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} durant la phase de domination de la radiation : ces modes possèdaient une taille caractéristique plus petite que l'horizon au moment de l'égalité radiation-matière, et ont donc été affectés par la physique qui s'y déroule.
 Les modes plus grands que l'horizon au moment de l'égalité radiation-matière ne sont pas affectés par cette physique et sont donc gelés : ils n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial.
-Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k \rangle k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et tous les modes croissent proportionnellement à $G(z)$. 
-$G$ est appelé le facteur de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$ à grand $z$, lorsque $\Omega_m = 1$.} Ainsi, pour des redshifts $z \langle\langle z_{eq}$, le spectre de puissance varie comme
+Les modes plus petits quant à eux sont suppressed (\#prov) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est suppressed (\#prov), d'où le changement de comportement pour les $k > k_{eq}$. Après l'égalité, les modes ne sont plus suppressed (\#prov) et tous les modes croissent proportionnellement à $G(z)$. 
+$G$ est appelé le facteur de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$ à grand $z$, lorsque $\Omega_m = 1$.} Ainsi, pour des redshifts $z << z_{eq}$, le spectre de puissance varie comme
 \begin{equation}
   \label{eq:pow_spec_vs_z}
   P(k,z) = G(z)^{2} P(k,z=0) .
@@ -768,7 +768,7 @@ Prenons un exemple. Supposons que nous voulons reconstruire la distribution de l
   \caption{blabla}
   \label{fig:schema_biais}
 \end{figure}
-Les galaxies, comme tous les objets effondrés, se forment dans les endroits les plus denses de l'univers. Ceci est illustré sur la figure~\ref{fig:schema_biais} par le fait que les galaxies ne peuvent se former que pour des densitées $\rho \rangle 0.8$. Ainsi, sonder la distribution de matière via l'observation des galaxies nous fait manquer toute la distribution de matière pour laquelle $\rho \langle 0.8$. La distribution reconstruite sera donc plus clustered (\#prov) que la distribution sous-jacente. Ce phénomène est décrit par ce qu'on nomme le \emph{biais}. Le biais $b_i(z)$ du traceur $i$ au redshift $z$ est défini par
+Les galaxies, comme tous les objets effondrés, se forment dans les endroits les plus denses de l'univers. Ceci est illustré sur la figure~\ref{fig:schema_biais} par le fait que les galaxies ne peuvent se former que pour des densitées $\rho > \num{0.8}$. Ainsi, sonder la distribution de matière via l'observation des galaxies nous fait manquer toute la distribution de matière pour laquelle $\rho < \num{0.8}$. La distribution reconstruite sera donc plus clustered (\#prov) que la distribution sous-jacente. Ce phénomène est décrit par ce qu'on nomme le \emph{biais}. Le biais $b_i(z)$ du traceur $i$ au redshift $z$ est défini par
 \begin{equation}
   \label{eq:biais1}
   \delta_{i}(\vec r, z) = b_{i}(z) \delta_{matière}(\vec r, z), 
@@ -788,7 +788,7 @@ Afin de construire la fonction de corrélation du traceur $i$, il est nécessair
 où $z_{mesure}$ est le redshift mesuré, $\delta z_{sys}$ et $\delta z_{stat}$ sont les erreurs statistiques et systématiques sur la mesure du redshift, $z_{vrai}$ est le vrai redshift, inaccessible, et $\Delta z_{v}$ et le redshift induit par la vitesse particulière du traceur. En effet, en plus du redshift cosmologique, l'effet Doppler vient s'ajouter à la mesure du redshift. Ces deux effets sont indiscernables. Cependant, la vitesse particulière du traceur est corrélée avec le champ de matière sous-jacent : les traceurs ont tendance à se déplacer vers les surdensités, par effet gravitationnel. La figure~\ref{fig:schema_rsd} illustre la situation : au centre se trouve une surdensité, représentée par un amas de galaxies. Quatre galaxies se trouvent autour de cette surdensité, leur vitesse particulière est représentée par une flèche noire, qui est dirigée vers le centre à cause du puit de potentiel créé par la surdensité. La galaxie se trouvant derrière cette surdensité se déplace donc vers l'observateur, son redshift mesuré est ainsi plus petit que son redshift cosmologique. Similairement, la galaxie se trouvant devant la surdensité est reconstuire avec une redshift plus grand. Les objets se déplaçant perpendiculairement à la ligne de visée ne sont pas affectés. La ligne en pointillés bleu indique la distribution reconstruite dans l'espace des redshifts : cette distribution n'est plus circulaire, elle est aplatie selon la direction de la ligne de visée. Cette effet est appelé \emph{RSD} (Redshift Space Distorsions), ou \emph{distorsions dans l'espace des redshifts}.
 \begin{figure}
   \centering
-  \includegraphics[scale=0.3]{schema_rsd}
+  \includegraphics[scale=0.4]{schema_rsd}
   \caption{bla}
   \label{fig:schema_rsd}
 \end{figure}
@@ -810,7 +810,7 @@ De cette équation, nous déduisons la relation entre la fonction de corrélatio
 \end{equation}
 où $\beta_i = f / b_i$ est le paramètre RSD du traceur $i$, et $\mu =\frac{\vec r \cdot \vec u}{r}$. Le vecteur $\vec r$ peut être décomposé comme $\vec r = \rpar{} \vec u + \vec \rperp{}$, où $\vec \rperp{}$ est perpendiculaire à la ligne de visée. La quantité $\mu$ vaut alors $\rpar{} / r$. Du fait de l'isotropie dans la direction transverse à la ligne de visée, $\xi_i^s$ ne dépend que de la norme de $\vec \rperp{}$.
 
-L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance logarithmique $f$ est une prédiction de la relativité générale, pour un univers dominé par la matière, il vaut $f = \Omega_{m}^{0.55}$. La mesure de $f$ est donc un test direct de la relativité générale. (\#prov nécessite une source ? Besoin de détailler plus les analyses RSD ? Parler de sigma8 ?)
+L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance logarithmique $f$ est une prédiction de la relativité générale, pour un univers dominé par la matière, il vaut $f = \Omega_{m}^{\num{0.55}}$. La mesure de $f$ est donc un test direct de la relativité générale. (\#prov nécessite une source ? Besoin de détailler plus les analyses RSD ? Parler de sigma8 ?)
 
 \subsection{Les quasars}
 Les quasars, pour \emph{quasi - star}, sont les objets les plus lumineux de l'univers. Ils font parties des galaxies actives, abrégées AGN (\emph{Active galatic nuclei}). Ces galaxies hébergent en leur centre un trou noir supermassif, de quelques millions à plusieurs milliards de masses solaires. La figure~\ref{fig:schema_qso} schématise le noyau actif. 
@@ -836,16 +836,16 @@ La grande luminosité des quasars les rend observables à très grand redshift, 
   \label{fig:raies}
   \begin{tabular}{lll}
     \toprule
-    Raie & Notation & $\lambda_{RF} [\si{\angstrom}]$ \\
+    Raie & Notation & $\lambda_{\mathrm{RF}} [\si{\angstrom}]$ \\
     \midrule
-    $\mathrm{Lyman-}\beta$ & \lyb{}  & 1025.72 \\
-    $\mathrm{Lyman-}\alpha$ & \lya{} & 1215.67 \\
-    Silicium II & SiII(1190) & 1190.4158 \\
-    Silicium II & SiII(1193) & 1193.2897 \\
-    Silicium III & SiIII(1207) & 1206.500 \\
-    Silicium III & SiIII(1260) & 1260.4221 \\
-    Carbon IV & CIV(1548) & 1548.2049 \\
-    Carbon IV & CIV(1551) & 1550.77845 \\
+    $\mathrm{Lyman-}\beta$ & \lyb{}  & \num{1025.72} \\
+    $\mathrm{Lyman-}\alpha$ & \lya{} & \num{1215.67} \\
+    Silicium II & SiII(1190) & \num{1190.4158} \\
+    Silicium II & SiII(1193) & \num{1193.2897} \\
+    Silicium III & SiIII(1207) & \num{1206.500} \\
+    Silicium III & SiIII(1260) & \num{1260.4221} \\
+    Carbon IV & CIV(1548) & \num{1548.2049} \\
+    Carbon IV & CIV(1551) & \num{1550.77845} \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -866,17 +866,30 @@ ou ce qu'il y a dans picca (et dans le papier DR16):
 b_{QSO}(z) = 3.77 ( \frac{1+z}{3.334} )^{1.44} .
 \end{equation} 
 
-Le paramètre RSD des quasars est donné par $\beta_{QSO} = f / b_{QSO}$. En bonne approximation, pour $z \rangle 2$, $f = \Omega_m \sim 1$.
+Le paramètre RSD des quasars est donné par $\beta_{QSO} = f / b_{QSO}$. En bonne approximation, pour $z > 2$, $f = \Omega_m \sim 1$.
 
 Montrer des plots de b(z) et beta(z) pour les QSO ? avec les données ?
 
 
-
-
 \subsection{La forêt \lya{}}
-Contrairement aux galaxies et quasars qui sont des traceurs booléens, la forêt \lya{} sonde directement la densité de matière (au biais près)
+Comme expliqué précédemment, le spectre des quasars possèdent une raie d'émission très intense : la raie \lya{}. Cette raie résulte de la désexcitation d'un atom d'hydrogène. Découverte par le physicien Theodore Lyman au début du \textsc{XX}\ieme~siècle, la série de Lyman regroupe les transitions électroniques des états excités de l'atome d'hydrogène vers son état fondamental. Dans son état fondamental, l'électron se trouve sur la couche électronique la plus proche du noyau, il possède un nombre quantique principal $n=1$. Dans un état excité, l'électron se trouve sur une couche externe et $n > 1$. Dans une telle configuration, l'atome d'hydrogène n'est pas stable, il tend à réduire son énergie. L'électron passe alors de la couche électronique sur laquelle il se trouve à une couche électronique pour laquelle le nombre quantique principal est plus faible. La série de Lyman correspond aux transitions pour lesquelles la couche électronique finale est la couche fondamentale $n=1$. Plus l'électron se trouvait initialement sur une couche éloignée du noyau, et plus la transition est énergétique. La raie \lya{} correspond à la transition la moins énergétique : de $n=2$ à $n=1$. La raie \lyb{} est la seconde moins énergétique : de $n=3$ à $n=1$. S'en suivent les autres transitions pour $n > 3$.
 
+Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, les quasars possèdent une raie \lya{} très intense. Ainsi, en plus de la position de chaque quasar observé, nous pouvons utiliser la raie \lya{} pour obtenir davantage d'informations sur la distribution de matière à grand échelle. En effet, cette raie peut être utilisée pour tracer la matière le long de la ligne de visée de chaque quasar. Nous décrivons dans les lignes qui suivent comment utiliser la raie \lya{} comme traceur. La figure~\ref{REF} schématise la situation.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{schema_lya}
+  \caption{bla}
+  \label{fig:schema_lya}
+\end{figure}
+Un quasar, situé à un redshift $z_{QSO}$ émet de la lumière jusqu'à un observateur situé sur terre, à $z=0$. Trois absorbeurs sont disposés le long de la ligne de visée, à des redshifts $z_1$, $z_2$ et $z_3$. Ils représentent les structures à grande échelle de l'univers. L'hydrogène neutre et non excité qui constitue ces absorbeurs peut absorber les photons issus du quasar. Nous supposons que ces absorbeurs absorbent uniquement en \lya{} : les photons possédant une longueur d'onde $\lambda_{\mathrm{RF}} = \SI{1215.67}{\angstrom}$ dans le référentiel de l'absorbeur sont absorbés par l'hydrogène neutre, et leur électron effectuent une transition électronique de la couche $n=1$ à $n=2$. Plus l'absorbeur est dense, et plus le nombre de photons absorbés est important. Considérons à présent l'absorbeur 1. L'absorption \lya{} s'effectuant, sans son référentiel, à $\lambda_{\mathrm{RF}} = \SI{1215.67}{\angstrom}$, les photons absorbés sont ceux pour lesquels $\lambda_{QSO} = \num{1215.67} / (1+(z_{QSO} - z_{1})) \si{\angstrom}$ dans le référentiel du quasar. Depuis le référentiel de l'observateur, la raie \lya{} se trouve à $\lambda_{obs} = \num{1215.67} (1+z_{qso}) \si{\angstrom}$ et la raie d'absorption due à l'absorbeur 1 à $\lambda_{obs} = \num{1215.67} (1+z_{1}) \si{\angstrom}$.
 
-\subsection{Redshift space distorsions}
+\begin{itemize}
+\item qso : $\lambda1 = 1215.67$ ; $\lambda2 = \frac{1215.67}{1 + z_{QSO} - z_{1}}$
+\item abs1 : $\lambda1 = 1215.67 ( 1+ z_{QSO} - z_{1})$ ; $ \lambda2 = 1215.67$
+\item obs : $\lambda1 = 1215.67 ( 1+z_{QSO})$ ; $\lambda2 = \frac{1215.67}{1 + z_{QSO} - z_{1}}(1+z_{QSO}) =? 1215.67(1+z_{1})$
+\end{itemize}
+
+% Supposons un  quasar, situé à un redshift $z_{qso}$. L'observateur est situé sur terre, à $z=0$. La raie \lya{}, dans le référentiel du quasar, possèdent une longueur d'onde $\lambda_{\mathrm{RF}} = \SI{1215.67}{\angstrom}$. Cependant, dans le référentiel de l'observateur, ils possèdent une longeur d'onde $\lambda_{obs} = \num{1215.67} (1+z_{qso}) \si{\angstrom}$. Sur leur trajet jusqu'à l'observateur, les photons émis par le quasar rencontrent les structures à grande échelle. Trois absorbeurs, aux redshifts $z_1$, $z_2$ et $z_3$, sont représentés. Supposons tout d'abord que ces structures sont faites uniquement d'hydrogène neutre non excité. Le premier absorbeur, au redshift $z_1$, peut absorber des photons issus du quasars. Les raies d'absorption possibles sont les raies de la série de Lyman, et la plus probable est l'absorption \lya{}. Ainsi, l'absorbeur 1 va absorber une partie des photons issus du quasar par absorption \lya{}, ces photons possèdent une longueur d'onde dans le référentiel de l'absorbeur 1 $\lambda_{\mathrm{RF-1}} = \num{1215.67} (1+(z_{qso} - z_1)) \si{\angtrom}$
+
 
 \end{document}
