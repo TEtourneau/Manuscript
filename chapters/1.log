@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 APR 2020 10:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 APR 2020 10:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2542,9 +2542,6 @@ Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
 LaTeX Warning: Reference `fig:prov' on page 23 undefined on input line 832.
 
 
-LaTeX Warning: Reference `CITE:prov' on page 23 undefined on input line 832.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
@@ -2553,23 +2550,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [23 <../figures/intro/schema_qso.png (PNG copy)>]
 
 Package natbib Warning: Citation `CITE Croom' on page 24 undefined on input lin
-e 856.
+e 853.
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24 <../figures/intro/qso_jets.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 879.
+(Font)              <12> on input line 876.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 879.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 879.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 876.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 879.
+(hyperref)                removing `math shift' on input line 876.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 879.
+(hyperref)                removing `\alpha' on input line 876.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 876.
 
 
 Package natbib Warning: There were undefined citations.
@@ -2585,12 +2590,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24 <../figures/intro/qso_jets.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 885.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 885.
+[25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 882.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 882.
  (./1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 885.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 885.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 882.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 882.
 Package rerunfilecheck Info: File `1.out' has not changed.
 (rerunfilecheck)             Checksum: FF0174500045525295E7A1E5E9FE5C75;1362.
 
@@ -2600,11 +2605,11 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 885.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 882.
  ) 
 Here is how much of TeX's memory you used:
- 29774 strings out of 492995
- 538520 string characters out of 6132704
+ 29776 strings out of 492995
+ 538543 string characters out of 6132704
  708231 words of memory out of 5000000
  32552 multiletter control sequences out of 15000+600000
  160374 words of font info for 119 fonts, out of 8000000 for 9000
@@ -2678,10 +2683,10 @@ onts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
 lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on 1.pdf (24 pages, 2005885 bytes).
+Output written on 1.pdf (25 pages, 2007683 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 143 named destinations out of 1000 (max. 500000)
+ 501 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 145 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 
