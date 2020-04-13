@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 APR 2020 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 APR 2020 11:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2542,6 +2542,10 @@ Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
 LaTeX Warning: Reference `fig:prov' on page 23 undefined on input line 832.
 
 
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 833.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
@@ -2552,18 +2556,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Package natbib Warning: Citation `CITE Croom' on page 24 undefined on input lin
 e 853.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24 <../figures/intro/qso_jets.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 876.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 876.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 876.
@@ -2576,6 +2572,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 876.
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24 <../figures/intro/qso_jets.png>]
 
 Package natbib Warning: There were undefined citations.
 
@@ -2683,7 +2686,7 @@ onts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
 lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on 1.pdf (25 pages, 2007683 bytes).
+Output written on 1.pdf (25 pages, 2007506 bytes).
 PDF statistics:
  501 PDF objects out of 1000 (max. 8388607)
  421 compressed objects within 5 object streams
