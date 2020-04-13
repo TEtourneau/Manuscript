@@ -785,7 +785,7 @@ Afin de construire la fonction de corrélation du traceur $i$, il est nécessair
 \begin{equation}
   z_{mesure} = z_{vrai} + \Delta z_{v} + \delta z_{sys} + \delta z_{stat} ,
 \end{equation}
-où $z_{mesure}$ est le redshift mesuré, $\delta z_{sys}$ et $\delta z_{stat}$ sont les erreurs statistiques et systématiques sur la mesure du redshift, $z_{vrai}$ est le vrai redshift, inaccessible, et $\Delta z_{v}$ et le redshift induit par la vitesse particulière du traceur. En effet, en plus du redshift cosmologique, l'effet Doppler vient s'ajouter à la mesure du redshift. Ces deux effets sont indiscernables. Cependant, la vitesse particulière du traceur est corrélée avec le champ de matière sous-jacent : les traceurs ont tendance à se déplacer vers les surdensités, par effet gravitationnel. La figure~\ref{fig:schema_rsd} illustre la situation : au centre se trouve une surdensité, représentée par un amas de galaxies. Quatre galaxies se trouvent autour de cette surdensité, leur vitesse particulière est représentée par une flèche noire, qui est dirigée vers le centre à cause du puit de potentiel créé par la surdensité. La galaxie se trouvant derrière cette surdensité se déplace donc vers l'observateur, son redshift mesuré est ainsi plus petit que son redshift cosmologique. De même, la galaxie se trouvant devant la surdensité est reconstuire avec une redshift plus grand. Les objets se déplaçant perpendiculairement à la ligne de visée ne sont pas affectés. La ligne en pointillés bleu indique la distribution reconstruite dans l'espace des redshifts : cette distribution n'est plus circulaire, elle est aplatie selon la direction de la ligne de visée. Cette effet est appelé \emph{RSD} (Redshift Space Distorsions), ou \emph{distorsions dans l'espace des redshifts}.
+où $z_{mesure}$ est le redshift mesuré, $\delta z_{sys}$ et $\delta z_{stat}$ sont les erreurs statistiques et systématiques sur la mesure du redshift, $z_{vrai}$ est le vrai redshift, inaccessible, et $\Delta z_{v}$ et le redshift induit par la vitesse particulière du traceur. En effet, en plus du redshift cosmologique, l'effet Doppler vient s'ajouter à la mesure du redshift. Ces deux effets sont indiscernables. Cependant, la vitesse particulière du traceur est corrélée avec le champ de matière sous-jacent : les traceurs ont tendance à se déplacer vers les surdensités, par effet gravitationnel. La figure~\ref{fig:schema_rsd} illustre la situation : au centre se trouve une surdensité, représentée par un amas de galaxies. Quatre galaxies se trouvent autour de cette surdensité, leur vitesse particulière est représentée par une flèche noire, qui est dirigée vers le centre à cause du puit de potentiel créé par la surdensité. La galaxie se trouvant derrière cette surdensité se déplace donc vers l'observateur, son redshift mesuré est ainsi plus petit que son redshift cosmologique. Similairement, la galaxie se trouvant devant la surdensité est reconstuire avec une redshift plus grand. Les objets se déplaçant perpendiculairement à la ligne de visée ne sont pas affectés. La ligne en pointillés bleu indique la distribution reconstruite dans l'espace des redshifts : cette distribution n'est plus circulaire, elle est aplatie selon la direction de la ligne de visée. Cette effet est appelé \emph{RSD} (Redshift Space Distorsions), ou \emph{distorsions dans l'espace des redshifts}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.3]{schema_rsd}
@@ -798,7 +798,7 @@ Ces distorsions résultent d'un effet gravitationnel : les traceurs acquièrent 
   \label{eq:kaiser}
   \delta^{s}(\vec k, z) = (1 + f(z) \mu^2) \delta(\vec k, z) ,
 \end{equation}
-où $f = \frac{d \ln{D}}{d \ln{a}}$ est le taux de croissance logarithmique, et $\mu = \frac{\vec k \cdot \vec u}{k}$, où $\vec u$ est la direction de la ligne de visée. Lorsque le champ de matière est sondé dans l'espace des redshifts à l'aide d'un traceur $i$, l'équation précédente devient
+où $f = \frac{d \ln{G}}{d \ln{a}}$ est le taux de croissance logarithmique, et $\mu = \frac{\vec k \cdot \vec u}{k}$, où $\vec u$ est la direction de la ligne de visée. Lorsque le champ de matière est sondé dans l'espace des redshifts à l'aide d'un traceur $i$, l'équation précédente devient
 \begin{equation}
   \label{eq:kaiser2}
   \delta_i^{s}(\vec k, z) = (b_i(z) + f(z) \mu^2) \delta_{matière}(\vec k, z) .
@@ -808,7 +808,9 @@ De cette équation, nous déduisons la relation entre la fonction de corrélatio
   \label{eq:kaiser3}
   \xi_{i}^s(r, \mu, z) = b_{i}^2(z)(1 + \beta_i(z) \mu^2)^2 \xi_{matière}(r, z) ,
 \end{equation}
-où $\beta_i = f / b_i$ est le paramètre RSD du traceur $i$, et $\mu =\frac{\vec r \cdot \vec u}{r}$. Le vecteur $\vec r$ peut être décomposé comme $\vec r = \rpar{} \vec u + \vec \rperp{}$, où $\vec \rperp{}$ est perpendiculaire à la ligne de visée. La quantité $\mu$ vaut alors $\rpar{} / r$. Du fait de l'isotropie dans la direction transverse à la ligne de visée, $\xi_i^s$ ne dépend que de la norme de $\vec \rperp{}$. Ainsi, l'analyse de la fonction de corrélation permet non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance logarithmique $f$ est une prédiction de la relativité générale, pour un univers dominé par la matière, il vaut $f = \Omega_{m}^{0.55}$. La mesure de $f$ est donc un test direct de la relativité générale. (\#prov nécessite une source ? Besoin de détailler plus les analyses RSD ? Parler de sigma8 ?)
+où $\beta_i = f / b_i$ est le paramètre RSD du traceur $i$, et $\mu =\frac{\vec r \cdot \vec u}{r}$. Le vecteur $\vec r$ peut être décomposé comme $\vec r = \rpar{} \vec u + \vec \rperp{}$, où $\vec \rperp{}$ est perpendiculaire à la ligne de visée. La quantité $\mu$ vaut alors $\rpar{} / r$. Du fait de l'isotropie dans la direction transverse à la ligne de visée, $\xi_i^s$ ne dépend que de la norme de $\vec \rperp{}$.
+
+L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance logarithmique $f$ est une prédiction de la relativité générale, pour un univers dominé par la matière, il vaut $f = \Omega_{m}^{0.55}$. La mesure de $f$ est donc un test direct de la relativité générale. (\#prov nécessite une source ? Besoin de détailler plus les analyses RSD ? Parler de sigma8 ?)
 
 \subsection{Les quasars}
 Les quasars, pour \emph{quasi - star}, sont les objets les plus lumineux de l'univers. Ils font parties des galaxies actives, abrégées AGN (\emph{Active galatic nuclei}). Ces galaxies hébergent en leur centre un trou noir supermassif, de quelques millions à plusieurs milliards de masses solaires. La figure~\ref{fig:schema_qso} schématise le noyau actif. 
@@ -827,29 +829,26 @@ Le trou noir supermassif, au centre, acrète la matière environnante. Sous form
 \end{figure}
 Selon l'orientation du disque par rapport à l'observateur, le noyau actif est dénomé différemment. Lorsque nous observons le disque par une direction proche de la tranche, le tore constitué de poussière qui l'entoure, obstrue la lumière. Le noyau actif nous apparaît alors moins brillant, il est classé comme une galaxie \emph{Seyfert}. Lorsque nous observons le disque de face, la lumière n'est pas obstruée, et le noyau actif est alors beaucoup plus briant. Ces objets sont désignés en tant que \emph{quasar} ou \emph{QSO} (\emph{Quasi Stelar Object}). Lorsque le jet pointe directement vers la terre, l'objet est classifié comme \emph{blazar}.
 
-La grande luminosité des quasars les rend observables à très grand redshift, et permet d'obtenir des spectres avec un bon rapport signal sur bruit à moindre coup. L'obtention du spectre de ces objets est nécessaire pour déterminer leur redshift avec précision. La figure~\ref{fig:prov} présente le spectre d'un quasar mesuré par eBOSS. (\#prov Mettre le spectre d'un QSO, mais lequel ?). Ce spectre présente un certain nombre de raies d'émission, parmis lesquelles figurent la raie $\mathrm{Lyman-}\alpha$ (\lya{}) à $\lambda = \SI{1215.67}{\angstrom}$ qui est la plus intense, associée à la raie  $\mathrm{Lyman-}\beta$ (\lyb{}) à $\lambda = \SI{1025.72}{\angstrom}$, ou encore les raies associées au silicium ou au carbon. Les différentes raies sont référencées dans le tableau~\ref{CITE:prov}. La détermination du redshift du quasar passe par l'identification d'un certain nombre de ces raies.
-
-% L'identification de ces raies est nécessaire pour déterminer le redshift du quasar observé : la longueur d'onde observée d'une ou plusieurs raies d'émission est comparée à celle obtenue en laboratoire (voir équation~\ref{eq:redshift}). Evidemment, le redshift mesuré par cette méthode n'est pas le \emph{vrai} redshift cosmologique, mais plutôt la combinaison de plusieurs effets :
-% \begin{equation}
-%   \label{eq:z_qso}
-%   z_{mesure} = z_{vrai} + \Delta z_v + \delta z_{sys} + \delta z_{stat},
-% \end{equation}
-% où $z_{vrai}$ est le vrai redshift, inconnu, $\Delta z_v$ est le redshift induit par la vitesse particulière du quasar, et $\delta z_{sys}$ et $\delta z_{stat}$ sont les erreurs systématiques et statistiques sur la mesure du redshift. L'imprécision sur la mesure de redshift peut modifier la fonction de corrélation et affecter la mesure de l'échelle BAO. Cependant, $\delta z_{stat}$ a pour seul effet d'élargir le pic BAO, et comme nous le verrons plus tard, $\delta z_{sys}$ peut être modélisé dans l'ajustement de la fonction de la corrélation. Le terme $\Delta z_v$ peut lui aussi être modélisé. En effet, la vitesse particulière des objets compactes est induites par leur mouvement vers les régions de haute densité. Il est donc possible de relier l'effet de leur vitesse à la densité de matière sous-jacente. Ceci est fait via la formule de Kaiser~\cite{CITE} :
-% \begin{equation}
-%   \label{eq:kaiser}
-%   \delta^{s}(\vec k) = (1 + f\mu^2) \delta(\vec k),
-% \end{equation}
-% où $\delta^{s}$ est le contraste de densité dans l'espace des redshift, $\delta$ le contraste dans l'espace réel, $f = \frac{d \ln{D}}{d \ln{a}}$ est le taux de croissance logarithmique, et $\mu = \vec k \dot \vec u$, où $\vec u$ est la direction de la ligne de visée. En pratique, $\delta$ n'est pas accessible car $z_{vrai}$ et $\Delta z_v$ sont indistingables : nous avons accès uniquement à la combinaison des deux, et ainsi uniquement à $\delta^{s}$. Cependant, grâce à l'équation~\ref{eq:biais1} et~\ref{eq:kaiser}, nous pouvons relier le contraste de densité des quasars dans l'espace des redshifts, c'est à dire celui que l'on mesure, au contraste de densité de la matière sous-jacente par
-% \begin{equation}
-%   \label{eq:kaiser2}
-%   \delta^s_{QSO}(\vec k, z) = b_{QSO}(z) (1 + f(z) \mu^2) \delta_{matière}(\vec k) .
-% \end{equation}
-% Le spectre de puissance de $\delta_{QSO}^{s}$ est donc relié à celui de la matière par
-% \begin{align}
-%   P_{QSO}(k, z) &= (b_{QSO}(z) + f(z) \mu^2)^2 P_{matière}(k, z) , 
-%   &=  b_{QSO}^2(z)(1 + \beta_{QSO}(z) \mu^2)^2 P_{matière}(k, z) ,
-% \end{align}
-% où $\beta_{QSO} = \frac{f}{b_{QSO}}$ est le paramètre RSD des quasars.
+La grande luminosité des quasars les rend observables à très grand redshift, et permet d'obtenir des spectres avec un bon rapport signal sur bruit à moindre coup. L'obtention du spectre de ces objets est nécessaire pour déterminer leur redshift avec précision. La figure~\ref{fig:prov} présente le spectre d'un quasar mesuré par eBOSS. (\#prov Mettre le spectre d'un QSO, mais lequel ?). Ce spectre présente un certain nombre de raies d'émission, parmis lesquelles figurent la raie $\mathrm{Lyman-}\alpha$ (\lya{}) à $\lambda = \SI{1215.67}{\angstrom}$ qui est la plus intense, associée à la raie  $\mathrm{Lyman-}\beta$ (\lyb{}) à $\lambda = \SI{1025.72}{\angstrom}$, ou encore les raies associées au silicium ou au carbon. Les différentes raies sont référencées dans le tableau~\ref{fig:raies}. La détermination du redshift du quasar passe par l'identification d'un certain nombre de ces raies.
+\begin{table}[h]
+  \centering
+  \caption{Liste non exhaustive des principales raies d'émissions présentes dans les spectres des quasars observés par eBOSS. La 3\up{e} colonne donne la longueur d'onde de la raie dans le référentiel propre du quasar.}
+  \label{fig:raies}
+  \begin{tabular}{lll}
+    \toprule
+    Raie & Notation & $\lambda_{RF} [\si{\angstrom}]$ \\
+    \midrule
+    Lyman $\beta$ & & \\
+    Lyman $\alpha$ & & \\
+    Silicium II & SiII(1190) & 1190.4158 \\
+    Silicium II & SiII(1193) & 1193.2897 \\
+    Silicium III & SiIII(1207) & 1206.500 \\
+    Silicium III & SiIII(1260) & 1260.4221 \\
+    Carbon IV & CIV(1548) & 1548.2049 \\
+    Carbon IV & CIV(1551) & 1550.77845 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 Les quasars sont donc des objets idéaux pour construire un relevé spectroscopique étendu et à grand redshift, et ainsi sonder l'échelle BAO sur un grand volume d'univers. Cependant, comme expliqué précédemment, les quasars sont des objets qui se forment dans des environnements très dense. C'est donc un traceur très biaisé. Le biais des quasars est mesuré par~\cite{CITE Croom} et vaut
 \begin{equation}
