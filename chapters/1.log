@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 APR 2020 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 APR 2020 12:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2149,11 +2149,6 @@ File: ../figures/intro/genese.png Graphic file (type png)
 Package pdftex.def Info: ../figures/intro/genese.png used on input line 21.
 (pdftex.def)             Requested size: 117.0771pt x 156.58461pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[][][]\T1/lmr/m/n/9 .[]Par exemple la me-sure de la dis-tance de 61 Cy-gni par 
-Bes-sel en 1838. #prov
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -2220,6 +2215,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5 <../figures/intro/univershistory2.png> <../figures/intro/lcdm.png>]
 
+Package natbib Warning: Citation `CITE:Mather et al APJ 1994' on page 6 undefin
+ed on input line 78.
+
+
 Package natbib Warning: Citation `CITE:https://www.ncbi.nlm.nih.gov/pmc/article
 s/PMC46596/' on page 6 undefined on input line 78.
 
@@ -2256,7 +2255,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 
-Package natbib Warning: Citation `prov: Dodelson 2.1.2' on page 9 undefined on 
+Package natbib Warning: Citation `CITE: Dodelson 2.1.2' on page 9 undefined on 
 input line 196.
 
 
@@ -2342,7 +2341,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13] <../figures/intro/example_tf.png, id=268, 1013.7875pt x 520.94624pt>
+[13] <../figures/intro/example_tf.png, id=269, 1013.7875pt x 520.94624pt>
 File: ../figures/intro/example_tf.png Graphic file (type png)
 
 <use ../figures/intro/example_tf.png>
@@ -2371,7 +2370,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15 <../figures/intro/example_tf.png>]
-<../figures/intro/carte_cmb.png, id=287, 1025.8325pt x 582.175pt>
+<../figures/intro/carte_cmb.png, id=288, 1025.8325pt x 582.175pt>
 File: ../figures/intro/carte_cmb.png Graphic file (type png)
 
 <use ../figures/intro/carte_cmb.png>
@@ -2387,7 +2386,7 @@ Package natbib Warning: Citation `CITE' on page 16 undefined on input line 495.
 Package natbib Warning: Citation `CITE' on page 16 undefined on input line 495.
 
 
-<../figures/intro/spectre_cmb.png, id=288, 1069.9975pt x 392.46625pt>
+<../figures/intro/spectre_cmb.png, id=289, 1069.9975pt x 392.46625pt>
 File: ../figures/intro/spectre_cmb.png Graphic file (type png)
 
 <use ../figures/intro/spectre_cmb.png>
@@ -2437,7 +2436,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] <../figures/intro/bao_schema.png, id=316, 595.22375pt x 777.90625pt>
+[17] <../figures/intro/bao_schema.png, id=317, 595.22375pt x 777.90625pt>
 File: ../figures/intro/bao_schema.png Graphic file (type png)
 
 <use ../figures/intro/bao_schema.png>
@@ -2475,7 +2474,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:bao_dessin' on page 20 undefined on input line 60
 5.
 
-<../figures/intro/bao_dessin.png, id=337, 1053.9375pt x 372.39125pt>
+<../figures/intro/bao_dessin.png, id=338, 1053.9375pt x 372.39125pt>
 File: ../figures/intro/bao_dessin.png Graphic file (type png)
 
 <use ../figures/intro/bao_dessin.png>
@@ -2497,6 +2496,69 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20 <../figures/intro/bao_dessin.png>]
+<../figures/intro/h_vs_z.png, id=347, 830.10126pt x 647.41875pt>
+File: ../figures/intro/h_vs_z.png Graphic file (type png)
+
+<use ../figures/intro/h_vs_z.png>
+Package pdftex.def Info: ../figures/intro/h_vs_z.png used on input line 649.
+(pdftex.def)             Requested size: 290.5398pt x 226.59995pt.
+
+
+Package natbib Warning: Citation `CITE:Beutler2011' on page 21 undefined on inp
+ut line 650.
+
+
+Package natbib Warning: Citation `CITE:Ross2015' on page 21 undefined on input 
+line 650.
+
+
+Package natbib Warning: Citation `CITE:Alam2017' on page 21 undefined on input 
+line 650.
+
+
+Package natbib Warning: Citation `CITE:Agathe2019' on page 21 undefined on inpu
+t line 650.
+
+
+Package natbib Warning: Citation `CITE:Blomqvist2019' on page 21 undefined on i
+nput line 650.
+
+
+Package natbib Warning: Citation `CITE:Planck2016' on page 21 undefined on inpu
+t line 650.
+
+
+Package natbib Warning: Citation `CITE:Agathe2019' on page 21 undefined on inpu
+t line 650.
+
+
+Package natbib Warning: Citation `CITE:Beutler2011' on page 21 undefined on inp
+ut line 650.
+
+
+Package natbib Warning: Citation `CITE:Ross2015' on page 21 undefined on input 
+line 650.
+
+
+Package natbib Warning: Citation `CITE:Alam2017' on page 21 undefined on input 
+line 650.
+
+
+Package natbib Warning: Citation `CITE:Agathe2019' on page 21 undefined on inpu
+t line 650.
+
+
+Package natbib Warning: Citation `CITE:Blomqvist2019' on page 21 undefined on i
+nput line 650.
+
+
+Package natbib Warning: Citation `CITE:Planck2016' on page 21 undefined on inpu
+t line 650.
+
+
+Package natbib Warning: Citation `CITE:Agathe2019' on page 21 undefined on inpu
+t line 650.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -2505,45 +2567,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Command \` invalid in math mode on input line 673.
+LaTeX Warning: Command \` invalid in math mode on input line 679.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 675.
+LaTeX Warning: Command \` invalid in math mode on input line 681.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 678.
+LaTeX Warning: Command \` invalid in math mode on input line 684.
 
 
-Package natbib Warning: Citation `CITE' on page 22 undefined on input line 681.
+Package natbib Warning: Citation `CITE' on page 22 undefined on input line 687.
 
 
-<../figures/intro/schema_rsd.png, id=357, 785.93625pt x 335.2525pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22 <../figures/intro/h_vs_z.png>]
+<../figures/intro/schema_rsd.png, id=367, 785.93625pt x 335.2525pt>
 File: ../figures/intro/schema_rsd.png Graphic file (type png)
 
 <use ../figures/intro/schema_rsd.png>
-Package pdftex.def Info: ../figures/intro/schema_rsd.png used on input line 694
+Package pdftex.def Info: ../figures/intro/schema_rsd.png used on input line 700
 .
 (pdftex.def)             Requested size: 314.36893pt x 134.09862pt.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22]
-
-Package natbib Warning: Citation `CITE' on page 23 undefined on input line 699.
+Package natbib Warning: Citation `CITE' on page 23 undefined on input line 705.
 
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 709.
+LaTeX Warning: Command \` invalid in math mode on input line 715.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 714.
+LaTeX Warning: Command \` invalid in math mode on input line 720.
 
 
-Package natbib Warning: Citation `CITE' on page 23 undefined on input line 717.
+Package natbib Warning: Citation `CITE' on page 23 undefined on input line 723.
 
 
 
@@ -2552,51 +2614,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23 <../figures/intro/schema_rsd.png>]
-<../figures/intro/schema_qso.png, id=375, 649.42625pt x 428.60126pt>
+[23] <../figures/intro/schema_qso.png, id=378, 649.42625pt x 428.60126pt>
 File: ../figures/intro/schema_qso.png Graphic file (type png)
 
 <use ../figures/intro/schema_qso.png>
-Package pdftex.def Info: ../figures/intro/schema_qso.png used on input line 725
+Package pdftex.def Info: ../figures/intro/schema_qso.png used on input line 731
 .
 (pdftex.def)             Requested size: 324.71233pt x 214.3001pt.
 
-<../figures/intro/qso_jets.png, id=377, 627.34375pt x 415.5525pt>
+<../figures/intro/qso_jets.png, id=380, 627.34375pt x 415.5525pt>
 File: ../figures/intro/qso_jets.png Graphic file (type png)
 
 <use ../figures/intro/qso_jets.png>
-Package pdftex.def Info: ../figures/intro/qso_jets.png used on input line 732.
+Package pdftex.def Info: ../figures/intro/qso_jets.png used on input line 738.
 (pdftex.def)             Requested size: 250.93304pt x 166.21805pt.
 
 
 Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
-.108..766B' on page 24 undefined on input line 733.
+.108..766B' on page 24 undefined on input line 739.
 
 
 Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
-.108..766B' on page 24 undefined on input line 733.
+.108..766B' on page 24 undefined on input line 739.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24 <../figures/intro/schema_qso.png (PNG copy)>]
-
-LaTeX Warning: Reference `fig:prov' on page 25 undefined on input line 738.
+LaTeX Warning: Reference `fig:prov' on page 24 undefined on input line 744.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 739.
-
-
-Package natbib Warning: Citation `CITE Croom' on page 25 undefined on input lin
-e 759.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+               Default added (so using `tbp') on input line 745.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2604,68 +2650,76 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <../figures/intro/qso_jets.png>]
+[24 <../figures/intro/schema_rsd.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25 <../figures/intro/schema_qso.png (PNG copy)> <../figures/intro/qso_jets.png
+>]
+
+Package natbib Warning: Citation `CITE Croom' on page 26 undefined on input lin
+e 765.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 780.
+(Font)              <12> on input line 786.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 780.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 786.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 786.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 780.
+(hyperref)                removing `\alpha' on input line 786.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 780.
+(hyperref)                removing `math shift' on input line 786.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 780.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[26]
 
-LaTeX Warning: Reference `REF' on page 26 undefined on input line 783.
+LaTeX Warning: Reference `REF' on page 27 undefined on input line 789.
 
-<../figures/intro/schema_lya.png, id=393, 1092.08pt x 227.85126pt>
+<../figures/intro/schema_lya.png, id=404, 1092.08pt x 227.85126pt>
 File: ../figures/intro/schema_lya.png Graphic file (type png)
 
 <use ../figures/intro/schema_lya.png>
-Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 786
+Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 792
 .
 (pdftex.def)             Requested size: 436.82426pt x 91.13889pt.
 
-<../figures/intro/foret_lya.png, id=395, 1160.335pt x 669.50125pt>
+<../figures/intro/foret_lya.png, id=406, 1160.335pt x 669.50125pt>
 File: ../figures/intro/foret_lya.png Graphic file (type png)
 
 <use ../figures/intro/foret_lya.png>
-Package pdftex.def Info: ../figures/intro/foret_lya.png used on input line 794.
+Package pdftex.def Info: ../figures/intro/foret_lya.png used on input line 800.
 
 (pdftex.def)             Requested size: 406.12334pt x 234.32895pt.
 
 
-Package natbib Warning: Citation `CITE CALURA et al 2012' on page 26 undefined 
-on input line 799.
+Package natbib Warning: Citation `CITE CALURA et al 2012' on page 27 undefined 
+on input line 805.
 
 
-Package natbib Warning: Citation `CITE lya dr16' on page 26 undefined on input 
-line 799.
+Package natbib Warning: Citation `CITE lya dr16' on page 27 undefined on input 
+line 805.
 
 
-Package natbib Warning: Citation `CITE CALURA et al 2012' on page 26 undefined 
-on input line 799.
+Package natbib Warning: Citation `CITE CALURA et al 2012' on page 27 undefined 
+on input line 805.
 
 
-Package natbib Warning: Citation `CITE lya dr16' on page 26 undefined on input 
-line 799.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[26 <../figures/intro/schema_lya.png>]
-Underfull \vbox (badness 2837) has occurred while \output is active []
-
+Package natbib Warning: Citation `CITE lya dr16' on page 27 undefined on input 
+line 805.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2673,10 +2727,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27 <../figures/intro/foret_lya.png>]
-
-LaTeX Warning: Command \` invalid in math mode on input line 832.
-
+[27 <../figures/intro/schema_lya.png>]
 
 LaTeX Warning: Command \` invalid in math mode on input line 838.
 
@@ -2686,7 +2737,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28]
+[28 <../figures/intro/foret_lya.png>]
+
+LaTeX Warning: Command \` invalid in math mode on input line 844.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+
+Package natbib Warning: Citation `CITE Rogers2018' on page 30 undefined on inpu
+t line 873.
+
+
+LaTeX Warning: Reference `CITE DR16' on page 30 undefined on input line 874.
+
+
+LaTeX Warning: Reference `prov' on page 30 undefined on input line 875.
+
+<../figures/intro/exemple_dla.png, id=440, 1154.3125pt x 409.53pt>
+File: ../figures/intro/exemple_dla.png Graphic file (type png)
+
+<use ../figures/intro/exemple_dla.png>
+Package pdftex.def Info: ../figures/intro/exemple_dla.png used on input line 87
+8.
+(pdftex.def)             Requested size: 461.71683pt x 163.80908pt.
+
 
 Package natbib Warning: There were undefined citations.
 
@@ -2701,12 +2780,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 860.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 860.
+[30 <../figures/intro/exemple_dla.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 886.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 886.
  (./1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 860.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 860.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 886.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 886.
 Package rerunfilecheck Info: File `1.out' has not changed.
 (rerunfilecheck)             Checksum: 3E43D8BB5A7638383D518C8C31849E0C;1352.
 
@@ -2716,18 +2795,21 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 860.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 886.
  ) 
 Here is how much of TeX's memory you used:
- 29812 strings out of 492995
- 539279 string characters out of 6132704
+ 29843 strings out of 492995
+ 539894 string characters out of 6132704
  707231 words of memory out of 5000000
- 32569 multiletter control sequences out of 15000+600000
- 134319 words of font info for 112 fonts, out of 8000000 for 9000
+ 32593 multiletter control sequences out of 15000+600000
+ 137311 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,21n,50p,10403b,1070s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not ex
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
 t, replaced by a fixed one
@@ -2802,10 +2884,10 @@ sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1.pdf (29 pages, 3336118 bytes).
+Output written on 1.pdf (30 pages, 3579443 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
- 165 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 170 named destinations out of 1000 (max. 500000)
+ 235 words of extra memory for PDF output out of 10000 (max. 10000000)
 
