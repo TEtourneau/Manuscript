@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 APR 2020 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 APR 2020 16:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2637,12 +2637,17 @@ Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
 Package natbib Warning: Citation `CITE http://adsabs.harvard.edu/full/1994AJ...
 .108..766B' on page 24 undefined on input line 739.
 
+<../figures/intro/spectre_qso.png, id=383, 1119.18124pt x 434.62375pt>
+File: ../figures/intro/spectre_qso.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:prov' on page 24 undefined on input line 744.
+<use ../figures/intro/spectre_qso.png>
+Package pdftex.def Info: ../figures/intro/spectre_qso.png used on input line 74
+7.
+(pdftex.def)             Requested size: 447.66457pt x 173.8464pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 745.
+               Default added (so using `tbp') on input line 751.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2661,23 +2666,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 >]
 
 Package natbib Warning: Citation `CITE Croom' on page 26 undefined on input lin
-e 765.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 786.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 786.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 786.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 786.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 786.
+e 771.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2685,41 +2674,55 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[26 <../figures/intro/spectre_qso.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 792.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 792.
 
-LaTeX Warning: Reference `REF' on page 27 undefined on input line 789.
 
-<../figures/intro/schema_lya.png, id=404, 1092.08pt x 227.85126pt>
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 792.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 792.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 792.
+
+<../figures/intro/schema_lya.png, id=408, 1092.08pt x 227.85126pt>
 File: ../figures/intro/schema_lya.png Graphic file (type png)
 
 <use ../figures/intro/schema_lya.png>
-Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 792
+Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 798
 .
 (pdftex.def)             Requested size: 436.82426pt x 91.13889pt.
 
-<../figures/intro/foret_lya.png, id=406, 1160.335pt x 669.50125pt>
+<../figures/intro/foret_lya.png, id=410, 1160.335pt x 669.50125pt>
 File: ../figures/intro/foret_lya.png Graphic file (type png)
 
 <use ../figures/intro/foret_lya.png>
-Package pdftex.def Info: ../figures/intro/foret_lya.png used on input line 800.
+Package pdftex.def Info: ../figures/intro/foret_lya.png used on input line 806.
 
 (pdftex.def)             Requested size: 406.12334pt x 234.32895pt.
 
 
 Package natbib Warning: Citation `CITE CALURA et al 2012' on page 27 undefined 
-on input line 805.
+on input line 811.
 
 
 Package natbib Warning: Citation `CITE lya dr16' on page 27 undefined on input 
-line 805.
+line 811.
 
 
 Package natbib Warning: Citation `CITE CALURA et al 2012' on page 27 undefined 
-on input line 805.
+on input line 811.
 
 
 Package natbib Warning: Citation `CITE lya dr16' on page 27 undefined on input 
-line 805.
+line 811.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2728,9 +2731,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27 <../figures/intro/schema_lya.png>]
-
-LaTeX Warning: Command \` invalid in math mode on input line 838.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -2742,6 +2742,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Warning: Command \` invalid in math mode on input line 844.
 
 
+LaTeX Warning: Command \` invalid in math mode on input line 850.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
@@ -2750,20 +2753,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [29]
 
 Package natbib Warning: Citation `CITE Rogers2018' on page 30 undefined on inpu
-t line 873.
+t line 871.
 
 
-LaTeX Warning: Reference `CITE DR16' on page 30 undefined on input line 874.
+LaTeX Warning: Reference `CITE DR16' on page 30 undefined on input line 872.
 
 
-LaTeX Warning: Reference `prov' on page 30 undefined on input line 875.
+LaTeX Warning: Reference `prov' on page 30 undefined on input line 873.
 
-<../figures/intro/exemple_dla.png, id=440, 1154.3125pt x 409.53pt>
+<../figures/intro/exemple_dla.png, id=445, 1154.3125pt x 409.53pt>
 File: ../figures/intro/exemple_dla.png Graphic file (type png)
 
 <use ../figures/intro/exemple_dla.png>
 Package pdftex.def Info: ../figures/intro/exemple_dla.png used on input line 87
-8.
+6.
 (pdftex.def)             Requested size: 461.71683pt x 163.80908pt.
 
 
@@ -2780,12 +2783,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <../figures/intro/exemple_dla.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 886.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 886.
+[30]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 884.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31 <../figures/intro/exemple_dla.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 884.
  (./1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 886.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 886.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 884.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 884.
 Package rerunfilecheck Info: File `1.out' has not changed.
 (rerunfilecheck)             Checksum: 3E43D8BB5A7638383D518C8C31849E0C;1352.
 
@@ -2795,13 +2806,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 886.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 884.
  ) 
 Here is how much of TeX's memory you used:
- 29843 strings out of 492995
- 539894 string characters out of 6132704
- 707231 words of memory out of 5000000
- 32593 multiletter control sequences out of 15000+600000
+ 29849 strings out of 492995
+ 540082 string characters out of 6132704
+ 707247 words of memory out of 5000000
+ 32596 multiletter control sequences out of 15000+600000
  137311 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,21n,50p,10403b,1070s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2884,10 +2895,10 @@ sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1.pdf (30 pages, 3579443 bytes).
+Output written on 1.pdf (31 pages, 3638302 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 481 compressed objects within 5 object streams
- 170 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 488 compressed objects within 5 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 
