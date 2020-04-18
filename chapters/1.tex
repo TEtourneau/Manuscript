@@ -1,15 +1,18 @@
+%% Lines to compile only this capter
 \documentclass[11pt, twoside, a4paper, openright]{report}
 \input{../source/packages.tex}
 
 \begin{document}
+%%
 
 \graphicspath{ {../figures/intro/} }
+
 \chapter{Introduction à la cosmologie}
 \minitoc
 \newpage
 \thispagestyle{fancy}
 
-Ce premier chapitre a pour but de présenter la cosmologie moderne et d'expliquer brièvement sa construction au fil du dernier siècle. L'idée est de donner une vue d'ensemble du paradigme actuel, tout en détaillant davantage les points clés nécessaires à ce manuscrit. Pour une étude approfondie de la cosmologie moderne, nous référons le lecteur aux ouvrages suivants : \cite{CITE}.
+Ce premier chapitre a pour but de présenter la cosmologie moderne et d'expliquer brièvement sa construction au fil du dernier siècle. L'idée est de donner une vue d'ensemble du paradigme actuel, tout en détaillant davantage les points clés nécessaires à ce manuscrit. Pour une étude approfondie de la cosmologie moderne, nous référons le lecteur aux ouvrages suivants :~\cite{Rich2010},~\cite{Dodelson2003}. 
 
 \section{Qu'est-ce que la cosmologie ?}
 Le terme cosmogonie (du grec \emph{cosmo-} : monde ; \emph{gon-} : engendrer) désigne une conception et tentative d'explication de la naissance du monde, et parfois de l'Homme. Il existe une grand nombre de cosmogonies, três souvent d'origines religieuses. Nous pouvons citer par exemple la cosmogonie hindoue, dans laquelle le monde est vu comme un cycle : le dieu Brahma crée le monde lorsqu'il se réveille, et le détruit lorsqu'il s'endort. Notre univers correspond ainsi à une journée de Brahma, débutant lorsque Brahma ouvre les yeux et prenant fin lorsqu'il les referme. Le monde suit ainsi une suite de créations et de destructions.
@@ -75,9 +78,9 @@ environ \SI{25}{\percent} de la masse de l'univers est sous la forme d'une mati�
 La masse des électrons étant négligeable, les protons et les neutrons représentent l’essentiel de la masse de la matière ordinaire, qui est donc appelée matière baryonique.
 
 % Plus tard, le satelitte COBE fut envoyé dans l'espace afin de mesurer le spectre\footnote{voir explication \#prov:ref} du CMB.
-Plus tard, le satellite COBE fut envoyé dans l'espace afin de détecter les anisotropies du CMB. Selon les prédictions des modèles de big bang, le spectre du CMB suit une loi de corps noir, avec une température d'environ \SI{3}{\kelvin}, et possède des anisotropies correspondant aux perturbations primordiales de densité. La mission fut un succès : les mesures de COBE ont permis d'identifier les anisotropies de température du CMB, mettant en évidence les fluctuations de densité de l'univers primordial. D'autre part, le spectre du CMB est mesuré avec une température $T = \SI{2,725(1)}{\kelvin}$~\cite{CITE:Mather et al APJ 1994}, ne déviant pas du spectre du corps noir de plus de \SI{0,25}{\percent} \cite{CITE:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC46596/}. La détection des anisotropies du CMB constitue un des arguments les plus solides en faveur des modèles de big bang.
+Plus tard, le satellite COBE fut envoyé dans l'espace afin de détecter les anisotropies du CMB. Selon les prédictions des modèles de big bang, le spectre du CMB suit une loi de corps noir, avec une température d'environ \SI{3}{\kelvin}, et possède des anisotropies correspondant aux perturbations primordiales de densité. La mission fut un succès : les mesures de COBE ont permis d'identifier les anisotropies de température du CMB, mettant en évidence les fluctuations de densité de l'univers primordial. D'autre part, le spectre du CMB est mesuré avec une température $T = \SI{2,728(4)}{\kelvin}$ (\cite{Fixsen1996}), ne déviant pas du spectre du corps noir de plus de \SI{0,25}{\percent} (\cite{Bennett1993}). La détection des anisotropies du CMB constitue un des arguments les plus solides en faveur des modèles de big bang.
 
-Jusque alors, les modèles cosmologiques n'incluaient pas d'énergie noire. Puis en 1998, deux équipes différentes publient l'analyse de distances de luminosité de supernovae de type 1a (SN1a), toutes les deux mettant en évidence l'accélération de l'expansion de l'univers et donc favorisant les modèles contenant de l'énergie noire. Ce sont ces dernières observations qui ancrent \lcdm{} comme modèle de big bang préféré. Par la suite, le satellites WMAP puis le satellite Planck sont lancés en 2001 et en 2009 afin de mesurer avec une plus grande précision les anisotropies du CMB. Ces mesures successives sont effectuées avec une précision sans précédent, permettant de contraindre très fortement les paramètres cosmologiques. Les résultats finaux de la collaboration Planck ont été publiés en 2018~\cite{CITE:planck2018} et fournissent les paramètres cosmologiques du modèle \lcdm{} avec une précision inférieur au pourcent (voir tableau~\ref{table:planck2018}).
+Jusque alors, les modèles cosmologiques n'incluaient pas d'énergie noire. Puis en 1998, deux équipes différentes publient l'analyse de distances de luminosité de supernovae de type 1a (SN1a), toutes les deux mettant en évidence l'accélération de l'expansion de l'univers et donc favorisant les modèles contenant de l'énergie noire. Ce sont ces dernières observations qui ancrent \lcdm{} comme modèle de big bang préféré. Par la suite, le satellites WMAP puis le satellite Planck sont lancés en 2001 et en 2009 afin de mesurer avec une plus grande précision les anisotropies du CMB. Ces mesures successives sont effectuées avec une précision sans précédent, permettant de contraindre très fortement les paramètres cosmologiques. Les résultats finaux de la collaboration Planck ont été publiés en 2018 (\cite{Collaboration2018}) et fournissent les paramètres cosmologiques du modèle \lcdm{} avec une précision inférieur au pourcent (voir tableau~\ref{table:planck2018}).
 
 \subsection{Description du modèle}
 \label{subsec:descri_mod}
@@ -193,7 +196,7 @@ L'équation~\ref{eq:einstein} regroupe en réalité plusieurs équations. Les in
 Les équations d'Einstein forment un système d'équations différentielles, de second ordre et non linéaires, et de fait, difficile à résoudre. Afin de simplifier les équations et trouver des solutions, certaines hypothèses sont faites. Dans la plupart des modèles cosmologiques, l'univers est supposé homogène et isotrope à grande échelle.
 % C'est le cas de la métrique FLRW (voir eq.~\ref{eq:metrique2})
 La métrique qui décrit un univers homogène et isotrope est la métrique FLRW (voir l'équation~\ref{eq:metrique2}).
-Dans un tel cas, on peut calculer le membre de gauche de l'équation~\ref{eq:einstein}. Ce calcul, que nous ne détaillerons pas ici, est très bien détaillé dans \cite{CITE: Dodelson 2.1.2}. De plus, pour un fluide parfait, le tenseur énergie impulsion prend la forme
+Dans un tel cas, on peut calculer le membre de gauche de l'équation~\ref{eq:einstein}. Ce calcul, que nous ne détaillerons pas ici, est très bien détaillé dans la section 2.1.2 de \cite{Dodelson2003}. De plus, pour un fluide parfait, le tenseur énergie impulsion prend la forme
 \begin{equation}
   T_{\mu \nu} =
   \begin{pmatrix}
@@ -218,7 +221,7 @@ où le point désigne la dérivé temporelle. On définit alors le taux d'expans
   \label{eq:hubble}
   V = H_0 \times D.
 \end{equation}
-$H_0$ est souvent donné comme $H_{0} = \SI{100}{\h\km\per\s\per\Mpc}$, où $h$ est un paramètre sans dimension qui prend en compte l'incertitude sur $H_0$. D'après les mesures les plus récentes~\cite{CITE planck + Riess ?}, $h$ varie entre $\num{0,67}$ et $\num{0,75}$.
+$H_0$ est souvent donné comme $H_{0} = \SI{100}{\h\km\per\s\per\Mpc}$, où $h$ est un paramètre sans dimension qui prend en compte l'incertitude sur $H_0$. D'après les mesures les plus récentes (\cite{Collaboration2018}, \cite{Riess2019}), $h$ varie entre $\num{0,67}$ et $\num{0,75}$.
 % L'équation~\ref{eq:hubble} est nommée en l'honneur d'Edwin Hubble, après sa publication en 1929, même si Georges Lemaître fut sans doute le premier à saisir le lien entre distance et vitesse d'éloignement des galaxies et son implication concernant l'expansion de l'univers (\#prov a reformuler).
 L'équation~\ref{eq:hubble} est nommée en l'honneur d'Edwin Hubble, après sa publication en 1929, même si Georges Lemaître fut sans doute le premier à interpréter le lien entre distance et vitesse d'éloignement des galaxies par l'expansion de l'univers.
 Suite à cette brève parenthèse, retournons à nos deux équations. Il est courant de récrire ces équations en injectant $H(t)$, ainsi qu'en remplaçant la seconde par une combinaison linéaire des deux précédentes :
@@ -311,7 +314,7 @@ Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvon
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{evol_omega}
-  \caption{Evolution en fonction du redshift des densités relatives d'énergie pour un univers plat. Sont indiqués en pointillés le redshift d'égalité radiation-matière $z_{eq} = 3387 \pm 21$, le redshift d'émission du CMB $z_{\ast} = \num{1089.80} \pm \num{0.21}$, et le redshift aujourd'hui $z = 0$~\cite{CITEplanck2018}. Crédits : Thèse de Pauline Zarrouk.}
+  \caption{Evolution en fonction du redshift des densités relatives d'énergie pour un univers plat. Sont indiqués en pointillés le redshift d'égalité radiation-matière $z_{eq} = 3387 \pm 21$, le redshift d'émission du CMB $z_{\ast} = \num{1089.80} \pm \num{0.21}$, et le redshift aujourd'hui $z = 0$ (\cite{Collaboration2018}). Crédits : Thèse de Pauline Zarrouk.}
 \label{fig:evol_omega}
 \end{figure}
 
@@ -333,7 +336,7 @@ Du fait de l'expansion, la distance qui séparait deux astres lointains au momen
 La distance à laquelle nous avons accès est la distance qui séparait ces deux astres lorsque la lumière que nous captons aujourd'hui a été émise. Entre ce moment et aujourd'hui, l'expansion a éloigné ces deux astres et leur distance de séparation a été multipliée par un facteur $\frac{1}{a(t_e)} = 1 + z_{e}$, où $t_e$ est le temps correspondant à l'émission.
 Afin de simplifier les comparaisons de distances à différentes époques, nous définissons la distance \emph{comobile} comme ceci : deux objets à un redshift $z$ et séparés d'une distance physique $D$ possèdent une distance comobile $(1+z)D$ . \textbf{C'est la distance physique, en incluant l'expansion jusqu'à aujourd'hui}. Ainsi, la distance comobile séparant deux objets soumis à l'expansion reste la même au cours du temps.
 
-Nous présentons ici les différentes distances utilisées en cosmologie. Elles sont très bien décrites dans \cite{CITE: Hogg 1999}, dont nous suivons d'ailleurs les notations. Aussi, nous sortons désormais du cadre dans lequel $c = \hbar = k_{B} = 1$ et nous reprenons le système d'unité usuel. Définissons premièrement la quantité
+Nous présentons ici les différentes distances utilisées en cosmologie. Elles sont très bien décrites dans \cite{hogg_distance_1999}, dont nous suivons d'ailleurs les notations. Aussi, nous sortons désormais du cadre dans lequel $c = \hbar = k_{B} = 1$ et nous reprenons le système d'unité usuel. Définissons premièrement la quantité
 \begin{equation}
   \label{eq:dist_ez}
   E(z) = \frac{H(z)}{H_0} 
@@ -385,7 +388,7 @@ Les distances sont usuellememt mesurées en \si{\perh\kpc} ou \si{\perh\Mpc}, le
 Dans ce manuscrit, les distances qui nous intéressent particulièrement sont $D_C$ et $D_M$. Nous y ferons appel dans la section~\ref{subsec:mesure_bao}.
 
 \paragraph{Les paramètres du modèle —} 
-Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés par le satellite Planck~\cite{CITE ref} avec une précision d'environ 1~\% et sont résumés dans le tableau~\ref{table:planck2018}. Les 6 paramètres mesurés par Planck sont
+Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés par le satellite Planck (\cite{Collaboration2018}) avec une précision d'environ 1~\% et sont résumés dans le tableau~\ref{table:planck2018}. Les 6 paramètres mesurés par Planck sont
 \begin{itemize}
 \item $\Omega_bh^2$, la densité de baryons multipliée par $h^2$
 \item $\Omega_ch^2$, la densité de matière noire multipliée par $h^2$
@@ -398,7 +401,7 @@ Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés p
 
 \begin{table}[h]
   \centering
-  \caption{Paramètres cosmologiques mesurés par le satellite Planck. La partie supérieure du tableau indique les six paramètres ajustés aux données. La partie inférieure donne d'autres paramètres déduits de ces six paramètres ajustés. Ces chiffres sont tirés de la table 1.1 de~\ref{CITE ref}}
+  \caption{Paramètres cosmologiques mesurés par le satellite Planck. La partie supérieure du tableau indique les six paramètres ajustés aux données. La partie inférieure donne d'autres paramètres déduits de ces six paramètres ajustés. Ces chiffres sont tirés de la table 1.1 de~\cite{Collaboration2018}}
   \label{table:planck2018}
   \begin{tabular}{lc}
     \toprule
@@ -492,7 +495,7 @@ Similairement au spectre de puissance du contraste de densité, il est possible 
 \begin{figure}
   \centering
   \includegraphics[scale=0.3]{carte_cmb}
-  \caption{Carte des fluctuations en température mesurées par le satellite Planck~\cite{CITE}. La zone grise délimite la zone contaminée par les émissions galactiques, qui est masquée dans l'analyse.}
+  \caption{Carte des fluctuations en température mesurées par le satellite Planck (\cite{Aghanim2019}). La zone grise délimite la zone contaminée par les émissions galactiques, qui est masquée dans l'analyse.}
   \label{fig:carte_cmb}
 \end{figure}
 \begin{figure}
@@ -530,7 +533,7 @@ ce qui donne, une fois l'isotropie supposée,
   \label{eq:cf_tf2}
   P(k) = \frac{i}{4 \pi^2 k} \int_{-\infty}^{+\infty} e^{- i k r} r \xi(r) dr .
 \end{equation}
-La figure~\ref{CITE} présente le spectre de puissance et~\ref{CITE} la fonction de corrélation de la matière aujourd'hui. (\#prov mettre la figure)
+La figure~\ref{prov} présente le spectre de puissance et~\ref{prov} la fonction de corrélation de la matière aujourd'hui. (\#prov mettre la figure)
 Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale.
 Ces modes à grande échelle ne sont pas affectés par la physique qui se déroule durant la domination de la radiation. Ils sondent donc directement les fluctuations primordiales de densité.
 Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les grandes et petites échelles est dû au fait que les modes $k > k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, possèdent une taille caractéristique plus petite que l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout évènemment en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} au moment de l'égalité radiation-matière : ces modes sont donc entrés dans l'horizon durant la phase de domination de la radiation, et ont donc été affectés par la physique qui s'y déroule.
@@ -546,7 +549,7 @@ Le facteur de croissance des structures ne dépendant pas de $k$, la fonction de
   \label{eq:cf_vs_z}
   \xi(r, z) = G(z)^{2} \xi(r, z=0).
 \end{equation}
-Tout ceci est un bref résumé de l'évolution des inhomogénéïtés en cosmologie. Cette dernière est très bien décrite dans \ref{CITE:Dodelson chap7} et nous référons le lecteur à cette ouvrage pour davantage d'explications.
+Tout ceci est un bref résumé de l'évolution des inhomogénéïtés en cosmologie. Cette dernière est très bien décrite dans le chapitre 7 de~\cite{Dodelson2003} et nous référons le lecteur à cette ouvrage pour davantage d'explications.
 
 
 Enfin, un point pertinent pour ce manuscrit sont les oscillations présentes dans le spectre de puissance de la matière pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$. Ces oscillations sont dues aux \emph{oscillations acoustiques de baryon} (BAO pour Baryonic Acoustic Oscillations) et sont la trace de la physique qui se déroulait avant l'émission du CMB. Ce mécanisme est décrit plus en détail dans la section suivante. Nous pouvons cependant déjà noter que ces oscillations caractéristiques dans le spectre de puissance correspondent au pic présent dans la fonction de corrélation de la matière à $r \sim \SI{100}{\perh\Mpc}$. Ce pic est davantage visible lorsque l'on représente $r^2\xi(r)$ en fonction de $r$.
@@ -591,11 +594,11 @@ Cette distance d'environ $\SI{150}{\Mpc}$ est appelée \emph{horizon acoustique}
   \label{eq:sound_horizon}
   r_{d} = \int^{\infty}_{z_{drag}} \frac{c_{s}}{H(z)} dz ,
 \end{equation}
-et sa valeur mesurée par~\ref{CITE planck2018} est $r_{d} = \SI{99.16(20)}{\perh\Mpc}$.
+et sa valeur mesurée par~\cite{Collaboration2018} est $r_{d} = \SI{99.16(20)}{\perh\Mpc}$.
 
 Ce processus a laissé des traces dans la distribution de matière à grande échelle : à chaque surdensité primordiale est associée une sphère de surdensité de rayon comobile $\SI{150}{\Mpc}$.
 Il y a donc un excès de probabilité de trouver deux traceurs de densité de matière, comme par exemple des galaxies, séparés par une distance  comobile d'environ $\SI{150}{\Mpc}$.
-Cet excès est traduit par le pic BAO présent dans la fonction de corrélation de la matière, montrée sur la figure~\ref{fig:CITE figure CF}
+Cet excès est traduit par le pic BAO présent dans la fonction de corrélation de la matière, montrée sur la figure~\ref{fig:prov figure CF}
 
 
 \subsection{Mesurer l'échelle BAO}
@@ -647,7 +650,7 @@ Mettre un plot qui montre H(z) / (1+z) (deceleration puis acceleration etc etc)
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{h_vs_z}
-  \caption{Mesure de $H(z) / (1+z)$ à l'aide des BAO. Les points roses~\cite{CITE:Beutler2011}, noirs~\cite{CITE:Ross2015} et verts~\cite{CITE:Alam2017} présentent les mesures faites avec des galaxies. Le point rouge donne la mesure faite avec l'auto-corrélation du \lya{}~\cite{CITE:Agathe2019} et le point bleu la mesure faite avec la corrélation croisée \lya{}-QSO~\cite{CITE:Blomqvist2019}. La ligne noire montre la valeur donnée par la cosmologie de Planck~\cite{CITE:Planck2016}. Crédits : \cite{CITE:Agathe2019}}
+  \caption{Mesure de $H(z) / (1+z)$ à l'aide des BAO. Les points roses (\cite{Beutler2011}), noirs (\cite{Ross2014a}) et verts (\cite{Alam2016}) présentent les mesures faites avec des galaxies. Le point rouge donne la mesure faite avec l'auto-corrélation du \lya{}(\cite{CITE}) et le point bleu la mesure faite avec la corrélation croisée \lya{}-QSO (\cite{CITE}). La ligne noire montre la valeur donnée par la cosmologie de Planck (\cite{planck_collaboration_planck_2015}). Crédits : \cite{CITE}}
   \label{fig:h_vs_z}
 \end{figure}
 
@@ -684,7 +687,7 @@ où $\delta_{i}$ est le contraste de densité du traceur $i$, et $\delta_{matiè
   \xi_{i}(r, z) = b_{i}^2(z) \xi_{matière}(r, z) ,
 \end{equation}
 \textbf{ce qui nous permet de sonder indirectement la fonction de corrélation de la matière ainsi que de mesurer le biais du traceur utilisé.}
-La fonction de corrélation associée au traceur $i$ est amplifiée par un facteur $b_{i}^2$. Il est donc avantageux de choisir un traceur avec un biais important, afin d'obtenir une fonction de corrélation avec une amplitude importante, et ainsi un rapport signal sur bruit plus grand. \textbf{La première détection des BAO a ainsi été faite avec les LRG (des galaxies rouges) dont la mesure du biais donne $b_{LRG} \sim 2$~\cite{CITE}.}
+La fonction de corrélation associée au traceur $i$ est amplifiée par un facteur $b_{i}^2$. Il est donc avantageux de choisir un traceur avec un biais important, afin d'obtenir une fonction de corrélation avec une amplitude importante, et ainsi un rapport signal sur bruit plus grand. \textbf{La première détection des BAO a ainsi été faite avec les LRG (des galaxies rouges) dont la mesure du biais donne $b_{LRG} \sim 2$ (\cite{eisenstein_detection_2005}).}
 
 \subsection{Distorsions dans l'espace des redshifts}
 Afin de construire la fonction de corrélation du traceur $i$, il est nécessaire de connaître le redshift de chaque traceur. Dans le cas des traceurs booléens, comme par exemple les galaxies, le redshift est obtenu en mesurant le spectre de l'objet, puis en comparant les longueurs d'onde des raies d'émission présentes dans le spectre aux longueurs d'onde mesurées en laboratoire. Le redshift mesuré est donc le suivant :
@@ -702,7 +705,7 @@ Ces deux effets sont indiscernables. Cependant, la vitesse particulière du trac
   \label{fig:schema_rsd}
 \end{figure}
 
-Ces distorsions résultent d'un effet gravitationnel : les traceurs acquièrent leur vitesse en tombant dans les puits de potentiel créés par les surdensités. L'effet peut donc être modélisé. La formule de Kaiser~\cite{CITE} relie le contraste de densité $\delta^s(\vec k)$ dans l'espace des redshifts au contraste de densité $\delta(\vec k)$ dans l'espace réel
+Ces distorsions résultent d'un effet gravitationnel : les traceurs acquièrent leur vitesse en tombant dans les puits de potentiel créés par les surdensités. L'effet peut donc être modélisé. La formule de Kaiser (\cite{kaiser_clustering_1987}) relie le contraste de densité $\delta^s(\vec k)$ dans l'espace des redshifts au contraste de densité $\delta(\vec k)$ dans l'espace réel
 \begin{equation}
   \label{eq:kaiser}
   \delta^{s}(\vec k, z) = (1 + f(z) \mu_k^2) \delta(\vec k, z) ,
@@ -720,7 +723,7 @@ De cette équation, nous déduisons la relation entre le spectre de puissance $P
   P_{i}^s(k, \mu_k, z) = b_{i}^2(z)(1 + \beta_i(z) \mu_k^2)^2 P_{matière}(k, z) ,
 \end{equation}
 où $\beta_i = f / b_i$ est le paramètre RSD du traceur $i$.
-Du fait de l'isotropie dans la direction transverse à la ligne de visée, $P_i^s$ ne dépend que de la norme de $\vec \kperp{}$. Il en va de même pour le vecteur $\vec r$, qui est décomposé en $\vec r =  \rpar{} \vec u + \vec \rperp{}$. Nous avons alors $\mu = \rpar{} / r$, et la fonction de corrélation $\xi_i^s$ ne dépend que de $\rpar{}$ et de la norme de $\vec \rperp{}$. Son expression, que nous ne donnons pas ici, est calculée dans~\cite{CITE}.
+Du fait de l'isotropie dans la direction transverse à la ligne de visée, $P_i^s$ ne dépend que de la norme de $\vec \kperp{}$. Il en va de même pour le vecteur $\vec r$, qui est décomposé en $\vec r =  \rpar{} \vec u + \vec \rperp{}$. Nous avons alors $\mu = \rpar{} / r$, et la fonction de corrélation $\xi_i^s$ ne dépend que de $\rpar{}$ et de la norme de $\vec \rperp{}$. Son expression, que nous ne donnons pas ici, est calculée dans~\cite{Hamilton1992}.
 
 L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f = \Omega_{m}^{\num{0.55}}$. La mesure de $f$ est donc un test direct de la relativité générale. (\#prov nécessite une source ? Besoin de détailler plus les analyses RSD ? Parler de sigma8 ?)
 
@@ -736,7 +739,7 @@ Le trou noir supermassif, au centre, accrète la matière environnante. Sous for
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{qso_jets}
-  \caption{Image radio du quasar 3C 175 prise avec le VLA. Les deux jets ultra-relativistes visibles ont une taille d'environ \SI{212}{\perh\kpc}. Crédits : \cite{CITE http://adsabs.harvard.edu/full/1994AJ....108..766B}}
+  \caption{Image radio du quasar 3C 175 prise avec le VLA. Les deux jets ultra-relativistes visibles ont une taille d'environ \SI{212}{\perh\kpc}. Crédits : \cite{Bridle1994}}
   \label{fig:qso_jets}
 \end{figure}
 Selon l'orientation du disque par rapport à l'observateur, le noyau actif est dénommé différemment. Lorsque nous observons le disque par une direction proche de la tranche, le tore constitué de poussière qui l'entoure, obstrue la lumière. Le noyau actif nous apparaît alors moins brillant, il est classé comme une galaxie \emph{Seyfert}. Lorsque nous observons le disque de face, la lumière n'est pas obstruée, et le noyau actif est alors beaucoup plus brillant. Ces objets sont désignés en tant que \emph{quasar} ou \emph{QSO} (\emph{Quasi Stelar Object}). Lorsque le jet pointe directement vers la terre, l'objet est classifié comme \emph{blazar}.
@@ -807,8 +810,8 @@ L'absorption \lya{} s'effectue dans son référentiel à $\lambda_{\mathrm{RF-1}
   \caption{Spectre d'un quasar eBOSS à haut rapport signal sur bruit. Le quasar se trouve à un redshift $z=3.058$.
     Les pointillés gris à droite indique la raie \lya{}, et celle de gauche la raie \lyb{}.
     Les lignes continues donnent les deux meilleurs ajustements indépendants de $C_{q}(\lambda_{RF})\bar F(z)$ (le continu du spectre sans absorption multiplié par l'absorption moyenne à ce redshift) pour la forêt \lya (bleu) et \lyb{} (orange).
-    Les lignes continues donnent le continu $C_{q}(\lambda_{RF})$ en supposant $\bar F(z)$ mesuré par \cite{CITE CALURA et al 2012}, pour la forêt \lya{} et \lyb{}. L'identifiant du quasar est $\mathrm{Thing\_id} = 498518806$.
-  Crédits : \cite{CITE lya dr16}}
+    Les lignes continues donnent le continu $C_{q}(\lambda_{RF})$ en supposant $\bar F(z)$ mesuré par \cite{Calura2012}, pour la forêt \lya{} et \lyb{}. L'identifiant du quasar est $\mathrm{Thing\_id} = 498518806$.
+  Crédits : \cite{prov:LyaDR16}}
   \label{fig:foret_lya}
 \end{figure}
 \paragraph{}
@@ -868,7 +871,7 @@ Comme expliqué dans la section précédente, chaque absorption observée dans l
 
 
 \paragraph{}
-Un autre contaminant présent dans la forêt \lya{} sont les HCD (High Column Density). Les HCD sont des absorbeurs possédant une densité de colonne\footnote{La densité de colonne mesure la quantité de matière intégrée le long de la ligne de visée. Elle est mesurée en \si{atome\per\centi\meter\squared}.} supérieure à $\SI{1.6e17}{atome\per\centi\meter\squared}$ \cite{CITE Rogers2018}. Ces absorbeurs très denses produisent de très fortes absorptions. Ils correspondent à des sytèmes effondrés, comme le gas présent dans ou autour des galaxies. Leur fonction de corrélation est donc beaucoup plus structurée que celle du \lya{}. De plus, du fait des vitesses importantes du gas présent dans ces objets effondrés, le profile d'absorption des HCD est élargi, produisant une absorption au delà de la position physique de l'absorbeur. Ce profile d'absorption peut être modélisé par un profile de Voigt.
+Un autre contaminant présent dans la forêt \lya{} sont les HCD (High Column Density). Les HCD sont des absorbeurs possédant une densité de colonne\footnote{La densité de colonne mesure la quantité de matière intégrée le long de la ligne de visée. Elle est mesurée en \si{atome\per\centi\meter\squared}.} supérieure à $\SI{1.6e17}{atome\per\centi\meter\squared}$ (\cite{Rogers2017}). Ces absorbeurs très denses produisent de très fortes absorptions. Ils correspondent à des sytèmes effondrés, comme le gas présent dans ou autour des galaxies. Leur fonction de corrélation est donc beaucoup plus structurée que celle du \lya{}. De plus, du fait des vitesses importantes du gas présent dans ces objets effondrés, le profile d'absorption des HCD est élargi, produisant une absorption au delà de la position physique de l'absorbeur. Ce profile d'absorption peut être modélisé par un profile de Voigt.
 La figure~\ref{fig:exemple_dla} montre le spectre d'un quasar possédant un DLA, ainsi que le profile de voigt ajusté. Les DLA sont les HCD pour lesquels la densité de colonne est supérieure à \SI{2e20}{atome\per\centi\meter\squared}. Ces HCD sont tellement denses qu'ils peuvent être identifiés dans les spectres. Dans l'analyse~\ref{CITE DR16}, les DLA identifiés sont modélisés par un profile de Voigt, puis, tous les pixels pour lequels la fraction de flux transmis est inférieure à \num{0.80} sont masqués.
 Les HCD pour lesquels la densité de colonne est inférieure à \SI{2e20}{atome\per\centi\meter\squared} ne sont pas identifiables. Ils ne peuvent donc pas être masqués. Cependant, ils doivent être traités différemment des absorptions moyennes du \lya{}. Le traitement des HCD est détaillé dans la section~\ref{prov}.
 \begin{figure}
@@ -880,5 +883,5 @@ Les HCD pour lesquels la densité de colonne est inférieure à \SI{2e20}{atome\
 
 
 
-
+\bibliography{../source/library}
 \end{document}
