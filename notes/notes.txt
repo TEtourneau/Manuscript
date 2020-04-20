@@ -1,45 +1,6 @@
-Intro :
+Notes :
 
-    1) Qu'est-ce que la cosmologie ?
-- différents exemples de cosmogonie, puis : cosmologie = cosmogonie scientifique
-- essor de la cosmologie dans les années 1920 : RG + obs de Hubble + papiers de Friedman et Le maitre
-- modèle préféré : Hot Big Bang (construction historique rapide) + idées générales
-- début du consensus en 65 avec l'obs du CMB
+- Il faudrait sans doute que j'expose l'objectif de ma these et du manuscrit avant le debut du chapitre sur les mocks ?
+Je pourrais simplemer rajouter une ou deux phrases en disant "Nous avons presente les donnees DR16 lya, l'objectif de ce manuscrit est de tester l'analyse de ces donnees avec des simu" ou qqch comme ca
 
-    2) ΛCDM
-- observations de précision fin des années 90 et début 2000 qui assoit le modèle (SN1a + WMAP)
-  –> consensus sur les densités d'énergie dans l'univers
-Avant 80's : pas de CDM : dur de former des galaxies
-Avant 98 : pas de DE dans les modèles : ok pour la formation des galaxies mais problème avec H0 et large scale clustering
-C'est la mesure des anisotropies du CMB (COBE) + des SN1a en 98 qui mène à ΛCDM
-WMAP puis Planck : densité des composants à 1% (inclure un graph)
-–> Description du modèle :
-      1. RG : postulats, puis description de la métrique, dénitions du facteur d'échelle et du redshift, définition des distances ? puis Eq d'Einstein
-      2. Eq de Friedman
-      3. Les différentes densités Ω, leur évolution avec a (ou z)
-      4. La paramétrisation de ΛCDM : 6 paramètres. Expliquer brièvement ce qui contraint le CMB, et ce qu'on peut contraindre avec des mesures locales (notament SN1a et BAO : mesures de distances)
-
-    3) La fonction de corrélation de la matière
-- lien entre fonction de corrélation et spectre de puissance (définitions + explications imagées (son ?) de la TF)
-- spectre de puissance de la matière : exemple du CMB
-- évolution en z du spectre de puissance : perturbations linéaires (mode croissant du contraste de densité : growth factor)
-- spectre de puissance de la matière aujourd'hui (prédiction théorique : évolution du spectre de puissance d'input jusqu'à z=0)
-- fonction de corrélations de la matière aujourd'hui (exemple : LRG SDSS ?), TF du spectre de puissance, mais aussi estimée directement (brièvement, sans rentrer dans les détails de biais etc)
-
-    4) Physique des BAO
-- analogie avec le son ? Avec les vagues ? Imager le truc
-- description de la physique du CMB dans les grandes lignes (couplages, découplages etc)
-–> onde de pression "gelée" après découplage.
-–> distance caractéristique + évolution avec l'expension de l'univers : 2 distances mises en jeu
-
-    5) Traceurs et biais
-explication "avec les mains" du biais puis définition
-Les différents traceurs utilisés pour la mesure de la CF de la matière (les différents redshifts, les différents biais).
-
-    6) Physique des RSD
-- espace réel, espace des redshifts (mesure du z des galaxies etc)
-- formule de Kaiser : explication du parmètre beta. Explication du beta pour le Lya ? f != b*beta
-- effet des fingers of god ?
-
-Il faut sans doute que je présente en détail la CF du Lya, et Lya x QSO, peut-être aussi QSOxQSO ?
-Mais a quel endroit ? 
+- Une fois que y aura le papier DR16 cosmo sorti : finir la fin du chap2 : eBOSS results

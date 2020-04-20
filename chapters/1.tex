@@ -101,7 +101,7 @@ Dans la suite de cette section, afin de simplifier les équations, nous nous pla
   \end{equation}
 
 
-\paragraph{La métrique —}
+\subsubsection{La métrique}
 Le formalisme de la relativité générale s'appuie donc sur celui de la relativité restreinte. La géométrie de l'espace-temps est décrite par la métrique. Cet objet mathématique\footnote{Un tenseur de rang 2.} permet de définir le produit scalaire sur l'espace-temps à 4 dimensions, et donc de mesurer les distances et les angles.
 Nous verrons plus loin dans ce manuscrit que la métrique dépend de la distribution de masse. Ainsi, et c'est le fondement de la relativité générale, la masse courbe l'espace temps et l'espace-temps indique à la masse, via la métrique, comme se déplacer au sein de celui-ci\footnote{Inspiré de la citation de John Wheeler : "Spacetime tells matter how to move; matter tells spacetime how to curve".}. \\
 % C'est la métrique qui contient l'information sur la gravitation (\#prov dire que la masse courbe l'espace temps et que c'est traduit par la métrique; voir pour rajouter la citation.
@@ -134,7 +134,7 @@ où $a(t) = R(t) / R(t₀)$,  $t₀$ est le temps présent et $S_{k}$ est défin
 \end{align}
 Cette formulation permet de mettre en évidence le rapport $a(t)$, appelé facteur d'échelle. Par définition il vaut 1 aujourd'hui. Afin de rendre compte de l'expansion, $a(t) < 1$ pour $t < t₀$ (passé) et $a(t) > 1$ pour $t > t₀$ (futur).
 
-\paragraph{Le redshift —}
+\subsubsection{Le redshift}
 \label{par:redshift}
 % Le décalage vers le rouge, ou \emph{redshift} en anglais, est une conséquense de la relativité générale. Les objets distants s'éloignent de nous du fait de l'expansion de l'univers. Similairement à l'effet Doppler\footnote{L'effet Doppler est l'augmentation ou la diminution de la longueur d'onde d'une onde lorsque l'émetteur de cette dernière s'approche ou s'éloigne de l'observateur. L'exemple le plus connu est celui de l'ambulance : le son entendu est plus aigu lorsque l'ambulance s'approche, puis plus grave lorsqu'elle s'éloigne.}, le spectre observé de ces objets est décalé vers les grandes longueurs d'onde. Mais contrairement à l'effet Doppler, le redshift n'est pas directement dû à la vitesse de recession de l'objet : les photons, lorsqu'ils se propagent de l'objet émetteur jusqu'à nous, subissent la dilatation de l'espace et perdent ainsi de l'énergie, leur longueur d'onde se trouvant augmentée \#correction: un peu fishy: demander a Jim sinon. Le redshift est donc du à l'expansion de l'univers. Il est d'ailleurs parfois nommé redshift cosmologique.
 % Le redshift, noté $z$, est défini via la relation
@@ -172,7 +172,7 @@ où $t_e$ et $t_o$ sont les temps d'émission et d'observation du photon, $\lamb
 Le redshift est donc directement dû à l'expansion de l'univers. Il est d'ailleurs parfois nommé redshift cosmologique. Il peut servir de mesure de temps (et aussi de distance, voir section~\ref{subsec:descri_mod} paragraphe \emph{Les distances}) : le spectre d'un objet avec un redshift $z=2$ est décalé vers le rouge d'un facteur 3. Il en découle que sa lumière observée aujourd'hui a été émise lorsque l'univers avait une taille 3 fois plus petite qu'aujourd'hui, soit il y a environ 12 milliards d'annéees.
 
 
-\paragraph{Les équations d'Einstein —}
+\subsubsection{Les équations d'Einstein}
 Lorsqu'Einstein publie sa théorie en 1915, la façon de présenter les équations d'Einstein, le coeur de la théorie, est différente de la façon de les présenter aujourd'hui. Nous nous proposons ici de suivre l'approche de la physique moderne, qui formule toutes les théories en termes d'un seul et même principe : le \emph{principe de moindre action}. Ce principe stipule que l'action mis en oeuvre lors de l'évolution d'un système entre deux instants est toujours extrémale\footnote{Elle est minimale dans la grande majorité des cas.}. L'action est une quantité caractérisant globalement un système, elle est définie comme
 \begin{equation}
   \label{eq:action}
@@ -192,7 +192,7 @@ où $g_{\mu \nu}$ est la métrique, $R_{\mu \nu}$ le tenseur de Ricci, $T_{\mu \
 
 L'équation~\ref{eq:einstein} regroupe en réalité plusieurs équations. Les indices $\mu$ et $\nu$ varient de 0 à 3, 0 représentant la coordonnée temporelle et 1 à 3 les coordonnées spatiales. Il existe donc une équation par couple $(\mu, \nu)$, produisant 16 équations. Par des arguments de symétrie, ce nombre se réduit à 6 équations indépendantes, que l'on nomme les équations d'Einstein.
 
-\paragraph{Les équations de Friedmann-Lemaître —}
+\subsubsection{Les équations de Friedmann-Lemaître}
 Les équations d'Einstein forment un système d'équations différentielles, de second ordre et non linéaires, et de fait, difficile à résoudre. Afin de simplifier les équations et trouver des solutions, certaines hypothèses sont faites. Dans la plupart des modèles cosmologiques, l'univers est supposé homogène et isotrope à grande échelle.
 % C'est le cas de la métrique FLRW (voir eq.~\ref{eq:metrique2})
 La métrique qui décrit un univers homogène et isotrope est la métrique FLRW (voir l'équation~\ref{eq:metrique2}).
@@ -242,7 +242,7 @@ et permettent d'estimer l'évolution du facteur d'échelle en fonction des diff�
 Nous pouvons noter que le membre de droite de l'équations~\ref{eq:friedmann3} contient 3 entités : le fluide parfait ainsi que la courbure et la constante cosmologique. Même si cela reste un choix d'écriture et ne relève d'aucun argument mathématique, il permet de mettre en évidence le fait que ces deux dernières entités peuvent être considérées comme des composante énergétique de l'univers, avec leur propre densité d'énergie.
 
 
-\paragraph{Evolution de l'univers —}
+\subsubsection{Evolution de l'univers}
 % Considérons un univers constitué de plusieurs fluides parfaits.
 % Les équations de Friedmann-Lemaître permettent de déterminer l'évolution de $\rho$ et $\mathcal{P}$ en fonction du facteur d'échelle. Afin d'obtenir leur évolution temporelle, ainsi que celle du facteur d'échelle, il est nécessaire d'ajouter une équation. Cette équation est l'équation d'état d'un fluide parfait, reliant sa pression à sa densité :
 % Afin de résoudre les équations de Friedmann-Lemaître, et d'obtenir l'évolution de $\rho$ et $\mathcal{P}$ en fonction du facteur d'échelle, il est nécessaire d'ajouter deux équations par fluide. La première est l'équation d'état d'un fluide parfait, reliant sa pression à sa densité :
@@ -330,7 +330,7 @@ ce qui nous donne finalement, pour $w \neq -1$, l'évolution temporelle du facte
 \end{equation}
 Ainsi, dans chaque phase de domination, $a$ évolue comme une loi de puissance : $a \propto t^{\frac{1}{2}}$ durant l'air de domination de la radiation, puis $a \propto t^{\frac{2}{3}}$ lors de la domination de la matière. Cependant, l'univers est actuellement dominé par l'énergie noire, l'équation différentielle~\ref{eq:H_evol} devient $H = H_0$, et nous obtenons $a \propto \mathrm{e}^{H_{0} t}$. Nous pouvons noter que durant toutes les phases de domination, $\dot a > 0$ : l'univers est en expansion. De plus, lors des phases de domination de la radiation et de la matière, $\ddot a < 0$ : l'expansion de l'univers décélerre. Cependant, pour $ z \lesssim \num{0.3}$, nous avons $\ddot a > 0$, l'univers est alors en expansion accélérée.
 
-\paragraph{Les distances —}
+\subsubsection{Les distances}
 La notion de distance en relativité générale n'est pas très intuitive.
 Du fait de l'expansion, la distance qui séparait deux astres lointains au moment où ils ont émis leur lumière n'est pas la distance qui les sépare aujourd'hui.
 La distance à laquelle nous avons accès est la distance qui séparait ces deux astres lorsque la lumière que nous captons aujourd'hui a été émise. Entre ce moment et aujourd'hui, l'expansion a éloigné ces deux astres et leur distance de séparation a été multipliée par un facteur $\frac{1}{a(t_e)} = 1 + z_{e}$, où $t_e$ est le temps correspondant à l'émission.
@@ -387,7 +387,7 @@ Nous pouvons alors définir les distances suivantes :
 Les distances sont usuellememt mesurées en \si{\perh\kpc} ou \si{\perh\Mpc}, le facteur $h$ permettant de rendre ces distances indépendantes de l'incertitude sur la mesure de $H_{0}$. Un parsec vaut environ \num{3.2616} années lumières, soit environ $\SI{3,0857 e16}{\meter}$.
 Dans ce manuscrit, les distances qui nous intéressent particulièrement sont $D_C$ et $D_M$. Nous y ferons appel dans la section~\ref{subsec:mesure_bao}.
 
-\paragraph{Les paramètres du modèle —} 
+\subsubsection{Les paramètres du modèle} 
 Le modèle \lcdm{} est un modèle décrit par 6 paramètres. Ils sont mesurés par le satellite Planck (\cite{Collaboration2018}) avec une précision d'environ 1~\% et sont résumés dans le tableau~\ref{table:planck2018}. Les 6 paramètres mesurés par Planck sont
 \begin{itemize}
 \item $\Omega_bh^2$, la densité de baryons multipliée par $h^2$
