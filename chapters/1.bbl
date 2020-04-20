@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,27 +16,6 @@ Scott Dodelson.
 \newblock \emph{{Modern Cosmology}}.
 \newblock Academic Press, 2003.
 \newblock \doi{10.1023/B:FOOP.0000019699.88151.ed}.
-
-\bibitem[Fixsen et~al.(1996)Fixsen, Cheng, Gales, Mather, Shafer, and
-  Wright]{Fixsen1996}
-D.~J. Fixsen, E.~S. Cheng, J.~M. Gales, J.~C. Mather, R.~A. Shafer, and E.~L.
-  Wright.
-\newblock {The Cosmic Microwave Background Spectrum from the Full COBE/FIRAS
-  Data Set}.
-\newblock may 1996.
-\newblock \doi{10.1086/178173}.
-\newblock URL \url{http://arxiv.org/abs/astro-ph/9605054
-  http://dx.doi.org/10.1086/178173}.
-
-\bibitem[Bennett et~al.(1993)Bennett, Boggess, Cheng, Hauser, Kelsall, Mather,
-  Moseley, Murdock, Shafer, Silverberg, Smoot, Weiss, and Wright]{Bennett1993}
-C.~L. Bennett, N.~W. Boggess, E.~S. Cheng, M.~G. Hauser, T.~Kelsall, J.~C.
-  Mather, S.~H. Moseley, T.~L. Murdock, R.~A. Shafer, R.~F. Silverberg, G.~F.
-  Smoot, R.~Weiss, and E.~L. Wright.
-\newblock {Scientific results from the Cosmic Background Explorer (COBE)}.
-\newblock In \emph{Proceedings of the National Academy of Sciences of the
-  United States of America}, volume~90, pages 4766--4773, 1993.
-\newblock \doi{10.1073/pnas.90.11.4766}.
 
 \bibitem[Collaboration et~al.(2018)Collaboration, Aghanim, Akrami, Ashdown,
   Aumont, Baccigalupi, Ballardini, Banday, Barreiro, Bartolo, Basak, Battye,
@@ -74,6 +53,27 @@ Planck Collaboration, N.~Aghanim, Y.~Akrami, M.~Ashdown, J.~Aumont,
 \newblock {Planck 2018 results. VI. Cosmological parameters}.
 \newblock jul 2018.
 \newblock URL \url{https://arxiv.org/abs/1807.06209}.
+
+\bibitem[Fixsen et~al.(1996)Fixsen, Cheng, Gales, Mather, Shafer, and
+  Wright]{Fixsen1996}
+D.~J. Fixsen, E.~S. Cheng, J.~M. Gales, J.~C. Mather, R.~A. Shafer, and E.~L.
+  Wright.
+\newblock {The Cosmic Microwave Background Spectrum from the Full COBE/FIRAS
+  Data Set}.
+\newblock may 1996.
+\newblock \doi{10.1086/178173}.
+\newblock URL \url{http://arxiv.org/abs/astro-ph/9605054
+  http://dx.doi.org/10.1086/178173}.
+
+\bibitem[Bennett et~al.(1993)Bennett, Boggess, Cheng, Hauser, Kelsall, Mather,
+  Moseley, Murdock, Shafer, Silverberg, Smoot, Weiss, and Wright]{Bennett1993}
+C.~L. Bennett, N.~W. Boggess, E.~S. Cheng, M.~G. Hauser, T.~Kelsall, J.~C.
+  Mather, S.~H. Moseley, T.~L. Murdock, R.~A. Shafer, R.~F. Silverberg, G.~F.
+  Smoot, R.~Weiss, and E.~L. Wright.
+\newblock {Scientific results from the Cosmic Background Explorer (COBE)}.
+\newblock In \emph{Proceedings of the National Academy of Sciences of the
+  United States of America}, volume~90, pages 4766--4773, 1993.
+\newblock \doi{10.1073/pnas.90.11.4766}.
 
 \bibitem[Riess et~al.(2019)Riess, Casertano, Yuan, Macri, and
   Scolnic]{Riess2019}
@@ -165,6 +165,38 @@ Shadab Alam, Metin Ata, Stephen Bailey, Florian Beutler, Dmitry Bizyaev,
 \newblock jul 2016.
 \newblock \doi{10.1093/mnras/stx721}.
 \newblock URL \url{https://arxiv.org/abs/1607.03155}.
+
+\bibitem[Agathe et~al.(2019)Agathe, Balland, des Bourboux, Busca, Blomqvist,
+  Guy, Rich, Font-Ribera, Pieri, Bautista, Dawson, Goff, de~la Macorra,
+  Palanque-Delabrouille, Percival, P{\'{e}}rez-R{\`{a}}fols, Schneider, Slosar,
+  and Y{\`{e}}che]{Agathe2019a}
+Victoria de~Sainte Agathe, Christophe Balland, H{\'{e}}lion du~Mas des
+  Bourboux, Nicol{\'{a}}s~G. Busca, Michael Blomqvist, Julien Guy, James Rich,
+  Andreu Font-Ribera, Matthew~M. Pieri, Julian~E. Bautista, Kyle Dawson,
+  Jean-Marc~Le Goff, Axel de~la Macorra, Nathalie Palanque-Delabrouille,
+  Will~J. Percival, Ignasi P{\'{e}}rez-R{\`{a}}fols, Donald~P. Schneider,
+  An{\v{z}}e Slosar, and Christophe Y{\`{e}}che.
+\newblock {Baryon acoustic oscillations at z = 2.34 from the correlations of
+  Ly-alpha absorption in eBOSS DR14}.
+\newblock apr 2019.
+\newblock \doi{10.1051/0004-6361/201935638}.
+\newblock URL \url{https://arxiv.org/abs/1904.03400}.
+
+\bibitem[Blomqvist et~al.(2019)Blomqvist, des Bourboux, Busca, Agathe, Rich,
+  Balland, Bautista, Dawson, Font-Ribera, Guy, Goff, Palanque-Delabrouille,
+  Percival, P{\'{e}}rez-R{\`{a}}fols, Pieri, Schneider, Slosar, and
+  Y{\`{e}}che]{Blomqvist2019a}
+Michael Blomqvist, H{\'{e}}lion du~Mas des Bourboux, Nicol{\'{a}}s~G. Busca,
+  Victoria de~Sainte Agathe, James Rich, Christophe Balland, Julian~E.
+  Bautista, Kyle Dawson, Andreu Font-Ribera, Julien Guy, Jean-Marc~Le Goff,
+  Nathalie Palanque-Delabrouille, Will~J. Percival, Ignasi
+  P{\'{e}}rez-R{\`{a}}fols, Matthew~M. Pieri, Donald~P. Schneider, An{\v{z}}e
+  Slosar, and Christophe Y{\`{e}}che.
+\newblock {Baryon acoustic oscillations from the cross-correlation of Ly-alpha
+  absorption and quasars in eBOSS DR14}.
+\newblock apr 2019.
+\newblock \doi{10.1051/0004-6361/201935641}.
+\newblock URL \url{https://arxiv.org/abs/1904.03430}.
 
 \bibitem[{Planck Collaboration} et~al.(2015){Planck Collaboration}, Ade,
   Aghanim, Arnaud, Ashdown, Aumont, Baccigalupi, Banday, Barreiro, Bartlett,

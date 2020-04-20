@@ -2,60 +2,61 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: 1.aux
 The style file: unsrtnat.bst
-White space in argument---line 201 of file 1.aux
+White space in argument---line 202 of file 1.aux
  : \citation{CITE
  :                Croom}
 I'm skipping whatever remains of this command
 Database file #1: ../source/library.bib
-Warning--I didn't find a database entry for "CITE"
 Warning--I didn't find a database entry for "prov:LyaDR16"
 Warning--empty publisher in Rich2010
+Warning--empty journal in Collaboration2018
 Warning--empty journal in Fixsen1996
 Warning--can't use both volume and number fields in Bennett1993
-Warning--empty journal in Collaboration2018
 Warning--empty journal in Riess2019
 Warning--empty journal in Ross2014a
 Warning--empty journal in Alam2016
+Warning--empty journal in Agathe2019a
+Warning--empty journal in Blomqvist2019a
 Warning--empty journal in Rogers2017
-You've used 18 entries,
+You've used 20 entries,
             2481 wiz_defined-function locations,
-            697 strings with 17543 characters,
-and the built_in function-call counts, 20557 in all, are:
-= -- 650
-> -- 3410
+            707 strings with 18838 characters,
+and the built_in function-call counts, 22059 in all, are:
+= -- 708
+> -- 3638
 < -- 8
-+ -- 1158
-- -- 1122
-* -- 2620
-:= -- 4231
-add.period$ -- 80
-call.type$ -- 18
-change.case$ -- 34
-chr.to.int$ -- 18
-cite$ -- 26
-duplicate$ -- 374
-empty$ -- 628
-format.name$ -- 1140
-if$ -- 3582
++ -- 1236
+- -- 1196
+* -- 2802
+:= -- 4537
+add.period$ -- 90
+call.type$ -- 20
+change.case$ -- 38
+chr.to.int$ -- 20
+cite$ -- 30
+duplicate$ -- 410
+empty$ -- 684
+format.name$ -- 1216
+if$ -- 3848
 int.to.chr$ -- 1
-int.to.str$ -- 19
-missing$ -- 20
-newline$ -- 124
-num.names$ -- 54
-pop$ -- 142
+int.to.str$ -- 21
+missing$ -- 22
+newline$ -- 138
+num.names$ -- 60
+pop$ -- 160
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 20
 quote$ -- 0
-skip$ -- 224
+skip$ -- 242
 stack$ -- 0
-substring$ -- 310
-swap$ -- 82
+substring$ -- 314
+swap$ -- 86
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
-warning$ -- 8
-while$ -- 54
+type$ -- 134
+warning$ -- 10
+while$ -- 58
 width$ -- 0
-write$ -- 278
+write$ -- 308
 (There was 1 error message)
