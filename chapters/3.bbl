@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -175,5 +175,23 @@ Nicolas Busca and Christophe Balland.
   Deep Neural Networks}.
 \newblock aug 2018.
 \newblock URL \url{http://arxiv.org/abs/1808.09955}.
+
+\bibitem[Parks et~al.(2017)Parks, Prochaska, Dong, and Cai]{Parks2017}
+David Parks, J.~Xavier Prochaska, Shawfeng Dong, and Zheng Cai.
+\newblock {Deep Learning of Quasar Spectra to Discover and Characterize Damped
+  Lya Systems}.
+\newblock sep 2017.
+\newblock \doi{10.1093/mnras/sty196}.
+\newblock URL \url{http://arxiv.org/abs/1709.04962
+  http://dx.doi.org/10.1093/mnras/sty196}.
+
+\bibitem[Guo and Martini(2019)]{Guo2019}
+Zhiyuan Guo and Paul Martini.
+\newblock {Classification of Broad Absorption Line Quasars with a Convolutional
+  Neural Network}.
+\newblock jan 2019.
+\newblock \doi{10.3847/1538-4357/ab2590}.
+\newblock URL \url{http://arxiv.org/abs/1901.04506
+  http://dx.doi.org/10.3847/1538-4357/ab2590}.
 
 \end{thebibliography}
