@@ -704,12 +704,22 @@ Ces deux effets sont indiscernables. Cependant, la vitesse particulière du trac
   \label{fig:schema_rsd}
 \end{figure}
 
-Ces distorsions résultent d'un effet gravitationnel : les traceurs acquièrent leur vitesse en tombant dans les puits de potentiel créés par les surdensités. L'effet peut donc être modélisé. La formule de Kaiser (\cite{kaiser_clustering_1987}) relie le contraste de densité $\delta^s(\vec k)$ dans l'espace des redshifts au contraste de densité $\delta(\vec k)$ dans l'espace réel
+Ces distorsions résultent d'un effet gravitationnel : les traceurs acquièrent leur vitesse en tombant dans les puits de potentiel créés par les surdensités. L'effet peut donc être modélisé.
+\textbf{La formule de Kaiser (\cite{kaiser_clustering_1987}) relie le contraste de densité $\delta^s(\vec k)$ dans l'espace des redshifts au contraste de densité $\delta(\vec k)$ dans l'espace réel
 \begin{equation}
   \label{eq:kaiser}
   \delta^{s}(\vec k, z) = (1 + f(z) \mu_k^2) \delta(\vec k, z) ,
 \end{equation}
-où $f = \frac{d \ln{G}}{d \ln{a}}$ est le taux de croissance, et $\mu_k = \frac{\vec k \cdot \vec u}{k}$, où $\vec u$ est la direction de la ligne de visée.
+où
+\begin{equation}
+  f = \frac{d \ln{G}}{d \ln{a}}
+\end{equation}
+est le taux de croissance, et
+\begin{equation}
+  \mu_k = \frac{\vec k \cdot \vec u}{k}
+\end{equation}
+avec $\vec u$ la direction de la ligne de visée.}
+%où $f = \frac{d \ln{G}}{d \ln{a}}$ est le taux de croissance, et $\mu_k = \frac{\vec k \cdot \vec u}{k}$, où $\vec u$ est la direction de la ligne de visée.
 Le vecteur $\vec k$ peut être décomposé comme $\vec k = \kpar{} \vec u + \vec \kperp{}$, où $\vec \kperp{}$ est perpendiculaire à la ligne de visée. La quantité $\mu_k$ vaut alors $\kpar{} / k$. 
 Lorsque le champ de matière est sondé dans l'espace des redshifts à l'aide d'un traceur $i$, l'équation précédente devient
 \begin{equation}
@@ -727,14 +737,15 @@ Du fait de l'isotropie dans la direction transverse à la ligne de visée, $P_i^
 L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f = \Omega_{m}^{\num{0.55}}$. La mesure de $f$ est donc un test direct de la relativité générale. (\#prov nécessite une source ? Besoin de détailler plus les analyses RSD ? Parler de sigma8 ?)
 
 \subsection{Les quasars}
-Les quasars, pour \emph{quasi - star}, sont parmi les objets les plus lumineux de l'univers. Ils font partis des noyaux actifs de galaxie, abrégées AGN (\emph{Active galatic nuclei}). Ces galaxies hébergent en leur centre un trou noir supermassif, de quelques millions à plusieurs milliards de masses solaires. La figure~\ref{fig:schema_qso} schématise le noyau actif. 
+Les quasars, pour \emph{quasi - star}, sont parmi les objets les plus lumineux de l'univers. Ils font partie des noyaux actifs de galaxie, abrégées AGN (\emph{Active galatic nuclei}). Ces galaxies hébergent en leur centre un trou noir supermassif, de quelques millions à plusieurs milliards de masses solaires. La figure~\ref{fig:schema_qso} schématise le noyau actif. 
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{schema_qso.png}
-  \caption{Schéma explicatif d'un noyau actif de galaxie. Le trou noir supermassif central est entouré d'un disque d'accrétion. Ce disque d'accrétion, en tombant, s'échauffe et émet puissamment dans toutes les longueurs d'onde. Des jets peuvent se former, et éjectent de la matière ultra-relativiste. Un tore, constitué de poussière entoure le disque. Lorsque ce tore obstrue la lumière qui atteint l'observateur, l'objet apparaît moins brillant et est classé en tant que galaxie Seyfert.  Sinon, l'objet est dénommé quasar. Lorsque le jet pointe directement vers l'observateur, l'objet est appelé blazar}.
+  \caption{Schéma explicatif d'un noyau actif de galaxie. Le trou noir supermassif central est entouré d'un disque d'accrétion. Ce disque d'accrétion, en tombant, s'échauffe et émet puissamment dans toutes les longueurs d'onde. Des jets peuvent se former, et éjectent de la matière ultra-relativiste. Un tore, constitué de poussière entoure le disque. Lorsque ce tore obstrue la lumière qui atteint l'observateur, l'objet apparaît moins brillant et est classé en tant que galaxie Seyfert.  Sinon, l'objet est dénommé quasar. Lorsque le jet pointe directement vers l'observateur, l'objet est appelé blazar
+  \textbf{Cependant, les quasars restent mal compris. La formation et l'impacte de leur jet est au c{\oe}ur de nombreuses études (voir par exemple~\cite{Chabanier2020}).}}
   \label{fig:schema_qso}
 \end{figure}
-Le trou noir supermassif, au centre, accrète la matière environnante. Sous forme d'un disque, cette dernière s'échauffe en tombant et rayonne énormément d'énergie, dans toutes les longueurs d'ondes. Selon les cas, et souvent par cycle, le noyau actif peut émettre de puissants jets de matière ultra-relativiste. La figure~\ref{fig:qso_jets} montre de tels jets. Ces jets, d'une taille de plus de \SI{200}{\perh\kpc}, sont principalement constitués de noyaux ionisés, d'électrons et de positrons, éjectés à une vitesse proche de celle de la lumière. Ces phénomènes font parti des plus énergétiques de l'univers.
+Le trou noir supermassif, au centre, accrète la matière environnante. Sous forme d'un disque, cette dernière s'échauffe en tombant et rayonne énormément d'énergie, dans toutes les longueurs d'ondes. Selon les cas, et souvent par cycle, le noyau actif peut émettre de puissants jets de matière ultra-relativiste. La figure~\ref{fig:qso_jets} montre de tels jets. Ces jets, d'une taille de plus de \SI{200}{\perh\kpc}, sont principalement constitués de noyaux ionisés, d'électrons et de positrons, éjectés à une vitesse proche de celle de la lumière. Ces phénomènes font partie des plus énergétiques de l'univers.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{qso_jets}
@@ -801,7 +812,7 @@ Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, les q
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{schema_lya}
-  \caption{blabla}
+  \caption{\textbf{Schéma illustratif de l'absorption le long de la ligne de visée d'un quasar. L'observateur, à $z=0$ est représenté par le télescope. Le quasar, à $z_{QSO}$ est représenté par l'étoile jaune. Les absorbeurs le long de la ligne de visée sont représentés par les nuages, aux redshifts $z_{1}$, $z_{2}$ et $z_{3}$.}}
   \label{fig:schema_lya}
 \end{figure}
 Un quasar, situé à un redshift $z_{QSO}$ émet de la lumière jusqu'à un observateur situé sur terre, à $z=0$. Trois absorbeurs sont disposés le long de la ligne de visée, à des redshifts $z_1$, $z_2$ et $z_3$. Ils appartiennent aux structures à grande échelle de l'univers. L'hydrogène neutre et non excité présent dans ces absorbeurs peut absorber les photons issus du quasar. Nous supposons que ces absorbeurs absorbent uniquement en \lya{} : les photons possédant une longueur d'onde $\lambda_{\mathrm{Ly}\alpha} = \SI{1215.67}{\angstrom}$ dans le référentiel de l'absorbeur sont absorbés par l'hydrogène neutre et leur électron effectuent une transition électronique des couches $n=1$ à $n=2$. Plus l'absorbeur est dense, plus le nombre de photons absorbés est important. Considérons à présent l'absorbeur 1.
@@ -849,7 +860,7 @@ où $\bar F$ est la transmission moyenne au redshift $z$. \\
 Du fait que le contraste du \lya{} soit défini en fonction de l'absorption observée (moins il y a de lumière, plus il y a de matière), le biais $b_{\mathrm{Ly}\alpha}$ qui relie $\delta_{\mathrm{Ly}\alpha}$ à $\delta_{matière}$ est négatif.
 De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière associées sont faibles. Ainsi, à la différence des traceurs ponctuels tels les quasars ou les galaxies, le biais du \lya{} est très faible.
 Cependant, pour chaque spectre de quasar observé, la forêt \lya{} fournit un grand nombre de raies d'absorption, qui chacune trace la distribution de matière. Ceci augmente énormément la statistique et compense ce biais très faible.
-Nous ne donnons pas ici le biais du \lya{}, ni son paramètre RSD $\beta_{\mathrm{Ly}\alpha}$, car leur mesure est donnée dans la partie \#prov ref. Nous mentionnons cependant un point important concernant les RSD du \lya{}. L'équation~\ref{eq:kaiser} est déterminée en utilisant la conservation du contraste $\delta$ entre l'espace réel et l'espace des redshifts. Mais ce n'est pas le cas du contraste $\delta_{\mathrm{Ly}\alpha}$. En passant de l'espace réel à l'espace des redshifts, le \lya{}, tout comme les traceurs booléens, est reconstruit plus proche des surdensités. Cependant, les vitesses particulières responsables de cet effet modifient aussi la densité du traceur, et ainsi la quantité de flux absorbé. De fait, le contraste $\delta_{\mathrm{Ly}\alpha}$ n'est pas conservé. Nous pouvons tout de même définir le paramètre RSD du \lya{} comme
+Nous ne donnons pas ici le biais du \lya{}, ni son paramètre RSD $\beta_{\mathrm{Ly}\alpha}$, car leur mesure est donnée dans la partie \#prov ref. Nous mentionnons cependant un point important concernant les RSD du \lya{}. L'équation~\ref{eq:kaiser} est obtenue en utilisant la conservation du contraste $\delta$ entre l'espace réel et l'espace des redshifts. Mais ce n'est pas le cas du contraste $\delta_{\mathrm{Ly}\alpha}$. En passant de l'espace réel à l'espace des redshifts, le \lya{}, tout comme les traceurs booléens, est reconstruit plus proche des surdensités. Cependant, les vitesses particulières responsables de cet effet modifient aussi la densité du traceur, et ainsi la quantité de flux absorbé. De fait, le contraste $\delta_{\mathrm{Ly}\alpha}$ n'est pas conservé. Nous pouvons tout de même définir le paramètre RSD du \lya{} comme
 \begin{equation}
   \label{eq:kaiser4}
   \delta_{\mathrm{Ly}\alpha}^{s}(\vec k, z) = b_{\mathrm{Ly}\alpha}(z) (1+ \beta_{\mathrm{Ly}\alpha}(z) \mu^2) \delta_{matière}(\vec k, z)  .
@@ -874,8 +885,13 @@ Comme expliqué dans la section précédente, chaque absorption observée dans l
 
 \paragraph{}
 Un autre contaminant présent dans la forêt \lya{} sont les HCD (High Column Density). Les HCD sont des absorbeurs possédant une densité de colonne\footnote{La densité de colonne mesure la quantité de matière intégrée le long de la ligne de visée. Elle est mesurée en \si{atome\per\centi\meter\squared}.} supérieure à $\SI{1.6e17}{atome\per\centi\meter\squared}$ (\cite{Rogers2017}). Ces absorbeurs très denses produisent de très fortes absorptions. Ils correspondent à des sytèmes effondrés, comme le gaz présent dans ou autour des galaxies. Leur fonction de corrélation est donc beaucoup plus grande que celle du \lya{}. De plus, du fait des vitesses importantes du gaz présent dans ces objets effondrés, le profile d'absorption des HCD est élargi, produisant une absorption au delà de la position physique de l'absorbeur. Ce profile d'absorption peut être modélisé par un profile de Voigt.
-La figure~\ref{fig:exemple_dla} montre le spectre d'un quasar possédant un DLA, ainsi que le profile de voigt ajusté. Les DLA sont les HCD pour lesquels la densité de colonne est supérieure à \SI{2e20}{atome\per\centi\meter\squared}. Ces HCD sont tellement denses qu'ils peuvent être identifiés dans les spectres. Dans l'analyse~\ref{CITE DR16}, les DLA identifiés sont modélisés par un profile de Voigt, puis, tous les pixels pour lequels la fraction de flux transmis est inférieure à \num{0.80} sont masqués.
-Les HCD pour lesquels la densité de colonne est inférieure à \SI{2e20}{atome\per\centi\meter\squared} ne sont pas identifiables. Ils ne peuvent donc pas être masqués. Cependant, ils doivent être traités différemment des absorptions moyennes du \lya{}. Le traitement des HCD est détaillé dans la section~\ref{prov}.
+Les DLA (\#prov) sont les HCD pour lesquels la densité de colonne est supérieure à \SI{2e20}{atome\per\centi\meter\squared}.
+La figure~\ref{fig:exemple_dla} montre le spectre d'un quasar possédant un DLA, ainsi que le profile de voigt ajusté.
+Ces HCD sont tellement denses qu'ils peuvent être identifiés dans les spectres. Dans l'analyse~\ref{CITE DR16}, les DLA identifiés sont modélisés par un profile de Voigt, puis, tous les pixels pour lequels la fraction de flux transmis est inférieure à \num{0.80} sont masqués, \textbf{les autres sont corrigés grâce au profile de Voigt.}
+Les HCD pour lesquels la densité de colonne est inférieure à \SI{2e20}{atome\per\centi\meter\squared} ne sont pas identifiables. Ils ne peuvent donc pas être masqués.
+% Cependant, ils doivent être traités différemment des absorptions moyennes du \lya{}.
+Cependant, leur présence doit être modélisée dans le modèle de la fonction de corrélation.
+Le traitement des HCD est détaillé dans la section~\ref{prov}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{exemple_dla}
