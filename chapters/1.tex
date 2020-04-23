@@ -468,9 +468,9 @@ où $t$ est le temps en $\si{\second}$, et $\omega$ la pulsation en $\si{\per\se
 Le spectre de puissance est un outil mathématique utilisé afin d'étudier la répartition des modes présents dans un ensemble de données. Les modes sont la généralisation du concept de fréquence. Par exemple, dans le cas du diapason, les modes sont les différentes fréquences qui composent le signal temporel. En cosmologie, les modes sont associés à des fluctuations spatiales. Prenons l'exemple de la distribution de la matière. On peut définir le contraste de densité en $\vec x$ comme
 \begin{equation}
   \label{eq:contraste}
-  \delta(\vec x) = \frac{\rho(\vec x) - \bar \rho}{\bar\rho} ,
+  \delta(\vec x) = \frac{\rho(\vec x) - \overline \rho}{\overline\rho} ,
 \end{equation}
-où $\rho(\vec x)$ est la densité en $\vec x$, et $\bar \rho$ la densité moyenne. Le spectre de puissance du contraste de densité de la matière renseigne donc sur la répartition des modes de fluctuations spatiales de la matière. La variable dans l'espace de Fourier associée au vecteur position $\vec x$ est le vecteur d'onde $\vec k$. Les grands $k$ correspondent aux modes à petites échelles, et les petits $k$ aux modes à grandes échelles.
+où $\rho(\vec x)$ est la densité en $\vec x$, et $\overline \rho$ la densité moyenne. Le spectre de puissance du contraste de densité de la matière renseigne donc sur la répartition des modes de fluctuations spatiales de la matière. La variable dans l'espace de Fourier associée au vecteur position $\vec x$ est le vecteur d'onde $\vec k$. Les grands $k$ correspondent aux modes à petites échelles, et les petits $k$ aux modes à grandes échelles.
 Nous définissons le contraste de densité $\delta(\vec k)$ associé au vecteur d'onde $\vec k$ comme étant la transformée de Fourier en trois dimensions du contraste de densité $\delta(\vec r)$
 \begin{equation}
   \label{eq:delta_k}
@@ -511,7 +511,7 @@ Du fait de l'isotropie de l'univers, la fonction de corrélation ne dépend que 
 Elle peut aussi être vue comme un excès de probabilité :
 \begin{equation}
   \label{eq:def_cf2}
-  dP(r_{1}, r_{2}) = \bar \rho^{2} ( 1 + \xi(r_{1} - r_{2})) dV_{1} dV_{2} ,
+  dP(r_{1}, r_{2}) = \overline \rho^{2} ( 1 + \xi(r_{1} - r_{2})) dV_{1} dV_{2} ,
 \end{equation}
 où $dP(r_{1}, r_{2})$ donne la probabilité de trouver de la matière en $r_{1}$ et $r_{2}$.
 Ainsi, si la fonction de corrélation $\xi(r)$ est positive, alors il est plus probable de trouver de la matière en deux points de l'espace séparés par une distance $r = r_{1} - r_{2}$ que si celle-ci avait été distribuée de manière uniforme\footnote{Pour une distribution de matière uniforme, $\xi(r) = 0$ pour tout $r$.}.
@@ -760,7 +760,7 @@ La grande luminosité des quasars les rend observables à très grand redshift, 
   \label{tab:raies}
   \begin{tabular}{lll}
     \toprule
-    Raie & Notation & $\lambda_{\mathrm{RF}} [\si{\angstrom}]$ \\
+    Raie & Notation & $\lambda_{\mathrm{\mathrm{RF}}} [\si{\angstrom}]$ \\
     \midrule
     $\mathrm{Lyman-}\beta$ & \lyb{}  & \num{1025.72} \\
     $\mathrm{Lyman-}\alpha$ & \lya{} & \num{1215.67} \\
@@ -796,6 +796,7 @@ Le paramètre RSD des quasars est donné par $\beta_{QSO} = f / b_{QSO}$. En bon
 
 
 \subsection{La forêt \lya{}}
+\label{subsec:lya}
 Comme expliqué précédemment, le spectre des quasars possède une raie d'émission très intense : la raie \lya{}. Cette raie résulte de la désexcitation des atomes d'hydrogène. Découverte par le physicien Theodore Lyman au début du \textsc{XX}\ieme~siècle, la série de Lyman regroupe les transitions électroniques des états excités de l'atome d'hydrogène vers son état fondamental. Dans son état fondamental, l'électron se trouve sur la couche électronique la plus proche du noyau, il possède un nombre quantique principal $n=1$. Dans un état excité, l'électron se trouve sur une couche externe avec $n > 1$. Dans une telle configuration, l'atome d'hydrogène n'est pas stable, il tend à réduire son énergie. L'électron passe alors de la couche électronique sur laquelle il se trouve à une couche électronique de plus basse énergie, pour laquelle le nombre quantique principal est plus faible. La série de Lyman correspond aux transitions pour lesquelles la couche électronique finale est la couche fondamentale $n=1$. Plus l'électron se trouvait initialement sur une couche éloignée du noyau, et plus la transition est énergétique. La raie \lya{} correspond à la transition la moins énergétique : de $n=2$ à $n=1$. La raie \lyb{} est la seconde moins énergétique : de $n=3$ à $n=1$. S'en suivent les autres transitions pour $n > 3$.
 
 % Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, les quasars possèdent une raie \lya{} très intense. Ainsi, en plus de la position de chaque quasar observé, nous pouvons utiliser la raie \lya{} pour obtenir davantage d'informations sur la distribution de matière à grand échelle. En effet, cette raie peut être utilisée pour tracer la matière le long de la ligne de visée de chaque quasar.
@@ -819,8 +820,8 @@ L'absorption \lya{} s'effectue dans son référentiel à $\lambda_{\mathrm{RF}} 
   \includegraphics[scale=0.35]{foret_lya}
   \caption{Spectre d'un quasar eBOSS à haut rapport signal sur bruit. Le quasar se trouve à un redshift $z=3.058$.
     Les pointillés gris à droite indique la raie \lya{}, et celle de gauche la raie \lyb{}.
-    Les lignes continues donnent les deux meilleurs ajustements indépendants de $C_{q}(\lambda_{RF})\bar F(z)$ (le continu du spectre sans absorption multiplié par l'absorption moyenne à ce redshift) pour la forêt \lya (bleu) et \lyb{} (orange).
-    Les lignes continues donnent le continu $C_{q}(\lambda_{RF})$ en supposant $\bar F(z)$ mesuré par \cite{Calura2012}, pour la forêt \lya{} et \lyb{}. L'identifiant du quasar est $\mathrm{Thing\_id} = 498518806$.
+    Les lignes continues donnent les deux meilleurs ajustements indépendants de $C_{q}(\lambda_{\mathrm{RF}})\overline F(z)$ (le continu du spectre sans absorption multiplié par l'absorption moyenne à ce redshift) pour la forêt \lya (bleu) et \lyb{} (orange).
+    Les lignes continues donnent le continu $C_{q}(\lambda_{\mathrm{RF}})$ en supposant $\overline F(z)$ mesuré par \cite{Calura2012}, pour la forêt \lya{} et \lyb{}. L'identifiant du quasar est $\mathrm{Thing\_id} = 498518806$.
   Crédits : \cite{prov:LyaDR16}}
   \label{fig:foret_lya}
 \end{figure}
@@ -851,9 +852,9 @@ est la profondeur optique de l'absorbeur. Plus l'absorbeur est dense, plus la pr
 La fraction de flux transmis $F$ est notre observable. Nous définissons donc le contraste de densité du \lya{} à partir de celle-ci : 
 \begin{equation}
   \label{eq:delta_lya}
-  \delta_{\mathrm{Ly}\alpha}(z) = \frac{F}{\bar F(z)} - 1 , 
+  \delta_{\mathrm{Ly}\alpha}(z) = \frac{F}{\overline F(z)} - 1 , 
 \end{equation}
-où $\bar F$ est la transmission moyenne au redshift $z$.\\
+où $\overline F$ est la transmission moyenne au redshift $z$.\\
 Du fait que le contraste du \lya{} soit défini en fonction de l'absorption observée (moins il y a de lumière, plus il y a de matière), le biais $b_{\mathrm{Ly}\alpha}$ qui relie $\delta_{\mathrm{Ly}\alpha}$ à $\delta_{matière}$ est négatif.
 % De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière associées sont faibles. Ainsi, à la différence des traceurs ponctuels tels les quasars ou les galaxies, le biais du \lya{} est très faible.
 \textbf{De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière tracées appartiennent au régime linéaire, par opposition aux traceurs booléens qui sondent des régions effondrées et non linéaires. Le biais de l'hydrogène est donc proche de 1. Cependant, la non linéarité de l'équation~\ref{eq:tff} compresse les variations de $\tau$, les ramenant entre 0 et 1. Ceci a pour effet de réduire drastiquement le biais du \lya{}. A un redshift $z \sim \num{2.5}$, le biais de $F$ est de l'ordre de \num{0.15}. Celui ci est nettement inférieur à celui des LRG, qui vaut environ 2, et aussi à celui des quasars, qui est de l'ordre de \num{3.5} à $z \sim \num{2.5}$.
