@@ -62,7 +62,7 @@ Les spectres produits par la chaîne de réduction des données SDSS sont rebinn
 L'absorption \lya{} est mesurée dans deux régions disctinctes du spectre. La première, dénommée région \lya{}, correspond aux longueurs d'onde $\num{1040} \leq \lambda_{\mathrm{RF}} \leq \SI{1200}{\angstrom}$, c'est à dire entre les raies d'émission \lyb{} et \lya{}. La seconde, dénommée région \lyb{}, correspond aux longueurs d'onde $\num{920} \leq \lambda_{\mathrm{RF}} \leq \SI{1020}{\angstrom}$, c'est à dire entre la limite de la série de Lyman et la raie d'émission \lyb{}. Les pixels d'absorption \lya{} dans la région \lya{} sont dénommés pixels \lyalya{}, et ceux dans la région \lyb{} sont dénommés pixels \lyalyb{}.
 De plus, l'analyse se limite aux pixels dont la longueur d'onde observée est comprise entre $\num{3000} \leq \lambda_{obs} \leq \SI{6000}{\angstrom}$, à cause notamment des absorptions atmosphériques intenses dans l'UV, et des raies d'émissions du ciel dans le proche infrarouge. Ces limites sur $\lambda_{\mathrm{RF}}$ correspondent à un redshift minimal $z_{QSO} = 2$ pour les quasars \lya{}, et $z_{QSO} = 2.53$ pour les quasars \lyb{}. Parmi les \num{341468} quasars utilisés comme traceur (dénommés quasars traceurs), \num{256328} sont utilisés pour leurs pixels \lyalya{} (dénommés quasar \lya{}), et \num{103080} sont utilisés pour leurs pixels \lyalyb{} (dénommés quasar \lyb{}).
 
-D'autres sélections sont aussi appliquées. Les quasars pour lesquels la probabilité d'avoir un BAL est supérieure à 0.9 sont écartés. Les mauvaises observations durant BOSS ou eBOSS sont mises de côté. De plus, chaque région nécessite au moins 50 pixels. Cette sélection décale le redshift minimal à $z_{QSO} = 2.10$ pour les quasars \lya{}, et à $z = 2.65$ pour les quasars \lyb{}. Enfin, l'ajustement du continu (voir section suivante) échoue pour certains spectres. Ces spectres sont aussi écartés.
+D'autres sélections sont aussi appliquées. Les quasars pour lesquels la probabilité d'avoir un BAL est supérieure à 0.9 sont écartés. Les mauvaises observations durant BOSS ou eBOSS sont mises de côté. De plus, chaque région nécessite au moins 50 pixels. Cette sélection décale le redshift minimal à $z_{QSO} = 2.10$ pour les quasars \lya{}, et à $z = 2.65$ pour les quasars \lyb{}. Enfin, l'ajustement du continuum (voir section suivante) échoue pour certains spectres. Ces spectres sont aussi écartés.
 Après toutes ces sélections, l'échantillon final contient \num{210005} quasars \lya{} et \num{69656} quasars \lyb{}.
 La distribution en redshift des pixels et des quasars traceurs est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
 \begin{figure}
@@ -75,21 +75,25 @@ La distribution en redshift des pixels et des quasars traceurs est présentée d
 Enfin, des corrections sur le flux et la variance du flux sont appliquées afin de corriger les imperfections de la chaîne de réduction. De plus, certaines régions spectrales en longueur d'onde observée sont masquées, à cause de l'augmentation de la variance du flux causée par raies du ciel. Tout ceci est décrit en détail dans~\cite{CITE:dr16}.
 
 \section{Définition du champ d'absorption}
-Dans cette section, nous décrivons comment, du flux observé $f_q(\lambda)$ du quasar $q$ à la longueur d'onde observée $\lambda$, nous pouvons déduire les fluctuations du champ d'absorption \lya{}.
+Dans cette section, nous décrivons comment, du flux mesuré $f_q(\lambda)$ du quasar $q$ à la longueur d'onde observée $\lambda$, nous pouvons déduire les fluctuations du champ d'absorption \lya{}.
+La démarche que nous décrivons ici est très bien expliquée dans la thèse~\cite{CITE:Victoria}. Nous y référons le lecteur pour plus de détails.
+
+\subsection{Calcul des $\delta$}
 Comme présenté dans la section~\ref{subsec:lya}, le contraste de l'absorption \lya{} $\delta_q(\lambda)$ est défini comme
 \begin{equation}
   \label{eq:deltaF}
-  \delta_q = \frac{f_q(\lambda)}{\overline F(\lambda) C_q(\lambda)} - 1,
+  \delta_q(\lambda) = \frac{f_q(\lambda)}{\overline F(\lambda) C_q(\lambda)} - 1,
 \end{equation}
-où $\overline F(\lambda)$ est la transmission moyenne au redshift $z = \lambda_{\mathrm{Ly}\alpha} / \lambda - 1$, et $C_q(\lambda)$ donne le flux du spectre sans absorption. Il est dénommé \emph{continuum} et est différent pour chaque quasar.
-Le terme $\overline F(\lambda) C_q(\lambda)$ représente donc le flux moyen attendu du quasar $q$.
-Du fait de la faible résolution des données, $\overline F(\lambda)$ n'est pas mesurable. Pour ne pas dépendre d'analyses externes, on détermine directement le produit $\overline F(\lambda) C_q(\lambda)$ pour chaque spectre. Ce calcul, opéré de manière itérative, est décrit dans les lignes qui suivent.
-
-Premièrement, la diversité dans les spectres est modélisée par une relation linéaire en $\mathrm{log}_{10} \lambda$ :
+où $\overline F(\lambda)$ est la transmission moyenne au redshift $z = \lambda / \lambda_{\mathrm{Ly}\alpha} - 1$, et $C_q(\lambda)$ donne le flux du spectre sans absorption. Il est dénommé \emph{continuum} et est différent pour chaque quasar.
+Le produit $\overline F(\lambda) C_q(\lambda)$ représente donc le flux moyen attendu du quasar $q$.
+Du fait de la faible résolution des données, $\overline F(\lambda)$ n'est pas mesurable. Pour ne pas dépendre d'analyses externes, on détermine directement le produit $\overline F(\lambda) C_q(\lambda)$ pour chaque spectre.
+Afin de prendre en compte la variabilité d'un spectre à un autre, le produit $\overline F(\lambda) C_q(\lambda)$ est modélisé par une relation linéaire en $\mathrm{log}_{10} \lambda$ :
 \begin{equation}
+  \label{eq:diversity}
   \overline F(\lambda) C_q(\lambda) = \overline C(\lambda_{\mathrm{RF}})(a_q + b_q \log_{10}(\lambda)),
 \end{equation}
-où $\overline C(\lambda_{\mathrm{RF}})$ donne le continuum moyenné sur tous les spectres, en fonction de la longueur d'onde dans le référentiel du quasar. Les termes $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$ sont déterminés en minimisant la fonction de vraissemblance
+où $\overline C(\lambda_{\mathrm{RF}})$ donne le continuum moyenné sur tous les spectres, en fonction de la longueur d'onde dans le référentiel du quasar. $a_q$ et $b_q$ sont propres à chaque quasar, ils modélisent la diversité des quasars.
+Les termes $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$ sont déterminés en minimisant la fonction de vraissemblance $L$, qui s'exprime comme
 \begin{equation}
   \label{eq:likelihood}
   - 2 \ln L = - \sum_{i} \frac{\left[f_{i} - \overline F C_q(\lambda_{i}, a_q, b_q)\right]^2}{\sigma_q^2 (\lambda_i)} + \ln [\sigma_q^2 (\lambda_i)] .
@@ -102,12 +106,37 @@ La variance $\sigma_q^2(\lambda)$ dans chaque pixel est donnée par
 Le terme $\eta(\lambda)\sigma_{\mathrm{instru}, q}^2(\lambda)$ rend compte de la variance provoquée par l'instrument, et liée à l'incertitude sur la mesure des flux. Le terme $\sigma_{\mathrm{cosmo}}(\lambda)$ est purement cosmologique et donne la variance propre au champ d'absorption du \lya{}. Il traduit le fait que certaines régions de l'univers peuvent absorber plus ou moins que la moyenne. Du fait de l'isotropie, $\sigma_{\mathrm{cosmo}}$ ne dépend que de $z$. Enfin, le terme $\epsilon(\lambda)(\overline F C(\lambda))^4 / \sigma_{\mathrm{instru},q}^2 (\lambda)$ rend compte du fait que la variance augmente avec le signal sur bruit, probablement à cause de la diversité des quasars et de l'erreur sur la mesure de leur redshift.
 
 Afin d'obtenir le produit $\overline F C_q$ pour chaque quasar, il faut minimiser la fonction de vraissemblance $L$ (équation~\ref{eq:likelihood}), et donc ajuster les paramètres $a_q$, $b_q$, $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$. Cependant, celle fonction dépend elle même du produit $\overline F C_q$. Pour résoudre ce problème, le calcul est fait de manière itérative.
-Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\mathrm{RF}}$, sont initialisés. Ceci permet d'ajuser $\overline F C_q$ sur $f_q(\lambda)$ en minimisant la fonction de vraissemblance $L$. Dans cet ajustement, chaque pixel $i$ est pondéré par un poid
+Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\mathrm{RF}})$, sont initialisés. Ceci permet d'ajuser $\overline F C_q$ sur $f_q(\lambda)$ en minimisant la fonction de vraissemblance $L$. Dans cet ajustement, chaque pixel observé à une longueur d'onde $\lambda$ est pondéré par un poid
 \begin{equation}
   \label{eq:weights}
-  w_{q, i}(\lambda) = \frac{1}{\sigma_{q, i}^2(\lambda)} .
+  w_{q}(\lambda) = \frac{1}{\sigma_{q}^2(\lambda)} .
 \end{equation}
-Une fois cette ajustement fait, $\overline C(\lambda_{\mathrm{RF}}$ est de nouveau calculé. Puis, les paramètres $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$ sont ajustés de manière à ce que, à lambda fixé, $\sigma_q(\lambda)$ reproduise la variance estimée à partir des flux $f_q(\lambda)$ de tous les quasars. Ce nouvel ajustement permet une nouvelle fois d'ajuster $\overline F C_q$, etc. Cette procédure est répétée jusqu'à attendre une convergence, au bout de 5 itérations.
+Une fois cette ajustement fait, $\overline C(\lambda_{\mathrm{RF}})$ est de nouveau calculé. Puis, les paramètres $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$ sont ajustés de manière à ce que, à lambda fixé, $\sigma_q(\lambda)$ reproduise la variance estimée à partir des flux $f_q(\lambda)$ de tous les quasars. Ce nouvel ajustement permet une nouvelle fois d'ajuster $\overline F C_q$, etc. Cette procédure est répétée jusqu'à obtenir des valeurs stables pour les paramètres ajustés. En pratique, 5 itérations sont suffisantes. Cette procédure permet donc d'estimer, pour chaque quasar, le produit $\overline F(\lambda) C_q(\lambda)$, et ainsi d'estimer les $\delta_q(\lambda)$ (équation~\ref{eq:deltaF}) indépendamment dans chaque région.
+
+
+\subsection{Prise en compte de l'ajustement du continuum}
+La procédure décrite dans la section précédente permet d'ajuster le continuum de chaque quasar afin d'estimer le champ $\delta$ dans chaque région d'absorption \lya{}. Cependant, cet ajustement biaise le champ $\delta$ mesuré, et introduit de fausses corrélations lors du calcul des fonctions de corrélation. Il est donc important de prendre en compte cet effet.
+% Dans la suite, $\delta_q$ dénote le champ original, et $\tilde \delta_q$ le champ estimé.
+% La modélisation de la diversité des quasars avec les paramètres $a_q$ et $b_q$ (équation~\ref{eq:diversity}) force la moyenne et la pente des $\\tilde delta_q$ à zéro. 
+
+En redéfinissant les paramètres $a_q$ et $b_q$, l'équation~\ref{eq:diversity} peut être mise sous la forme
+\begin{equation}
+  \label{eq:diversity2}
+  \overline F(\lambda) C_q(\lambda) = \overline C(\lambda_{\mathrm{RF}})(a_q + b_q (\Lambda - \overline \Lambda_q)) ,
+\end{equation}
+où $\Lambda = \log_{10} \lambda$, et $\overline \Lambda_q$ est la moyenne de $\Lambda$ dans chaque forêt :
+\begin{equation}
+  \label{eq:lambda_mean}
+  \overline \Lambda_q = \frac{\sum_{\lambda} w_q(\lambda) \Lambda}{\sum_{\lambda} w_q(\lambda)} .
+\end{equation}
+Le champ $ \delta_q$ mesuré est donc donné par
+\begin{equation}
+  \label{eq:deltaF2}
+   \delta_q(\lambda) = \frac{f_q(\lambda)}{\overline C(\lambda_{\mathrm{RF}})(a_q + b_q (\Lambda - \overline \Lambda_q))} - 1 .
+\end{equation}
+Du fait que $a_q$ et $b_q$ sont ajustés sur les $f_q(\lambda)$, l'utilisation de l'équation~\ref{eq:diversity2} pour déterminer le continuum force la moyenne et la pente de chaque région spectrale à être nulle.
+Afin de prendre en compte les corrélations introduites par cet effet, le champ 
+
 
 
 
