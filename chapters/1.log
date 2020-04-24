@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 APR 2020 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 APR 2020 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2418,7 +2418,7 @@ lmr/m/n/10.95 (\OML/lmm/m/it/10.95 z\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 =r[
 ]$\T1/lmr/m/n/10.95 .
  []
 
-<../figures/intro/h_vs_z.png, id=373, 830.10126pt x 647.41875pt>
+<../figures/intro/h_vs_z.png, id=374, 830.10126pt x 647.41875pt>
 File: ../figures/intro/h_vs_z.png Graphic file (type png)
 
 <use ../figures/intro/h_vs_z.png>
@@ -2448,7 +2448,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: Command \` invalid in math mode on input line 677.
 
-<../figures/intro/schema_rsd.png, id=414, 785.93625pt x 335.2525pt>
+<../figures/intro/schema_rsd.png, id=415, 785.93625pt x 335.2525pt>
 File: ../figures/intro/schema_rsd.png Graphic file (type png)
 
 <use ../figures/intro/schema_rsd.png>
@@ -2469,7 +2469,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: Command \` invalid in math mode on input line 725.
 
-<../figures/intro/schema_qso2.png, id=429, 474.77374pt x 316.18124pt>
+<../figures/intro/schema_qso2.png, id=430, 474.77374pt x 316.18124pt>
 File: ../figures/intro/schema_qso2.png Graphic file (type png)
 
 <use ../figures/intro/schema_qso2.png>
@@ -2477,7 +2477,7 @@ Package pdftex.def Info: ../figures/intro/schema_qso2.png used on input line 73
 6.
 (pdftex.def)             Requested size: 322.84187pt x 215.0004pt.
 
-<../figures/intro/qso_jets.png, id=433, 627.34375pt x 415.5525pt>
+<../figures/intro/qso_jets.png, id=434, 627.34375pt x 415.5525pt>
 File: ../figures/intro/qso_jets.png Graphic file (type png)
 
 <use ../figures/intro/qso_jets.png>
@@ -2491,7 +2491,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [24 <../figures/intro/schema_rsd.png>]
-<../figures/intro/spectre_qso.png, id=449, 1119.18124pt x 434.62375pt>
+<../figures/intro/spectre_qso.png, id=450, 1119.18124pt x 434.62375pt>
 File: ../figures/intro/spectre_qso.png Graphic file (type png)
 
 <use ../figures/intro/spectre_qso.png>
@@ -2502,6 +2502,10 @@ Package pdftex.def Info: ../figures/intro/spectre_qso.png used on input line 75
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 757.
+
+
+Underfull \vbox (badness 1199) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2534,29 +2538,29 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 798.
 
-<../figures/intro/schema_lya.png, id=471, 1092.08pt x 227.85126pt>
+<../figures/intro/schema_lya.png, id=472, 1092.08pt x 227.85126pt>
 File: ../figures/intro/schema_lya.png Graphic file (type png)
 
 <use ../figures/intro/schema_lya.png>
-Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 807
+Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 808
 .
 (pdftex.def)             Requested size: 436.82426pt x 91.13889pt.
 
-<../figures/intro/foret_lya.png, id=473, 1160.335pt x 669.50125pt>
+<../figures/intro/foret_lya.png, id=474, 1160.335pt x 669.50125pt>
 File: ../figures/intro/foret_lya.png Graphic file (type png)
 
 <use ../figures/intro/foret_lya.png>
-Package pdftex.def Info: ../figures/intro/foret_lya.png used on input line 819.
+Package pdftex.def Info: ../figures/intro/foret_lya.png used on input line 821.
 
 (pdftex.def)             Requested size: 406.12334pt x 234.32895pt.
 
 
 Package natbib Warning: Citation `prov:LyaDR16' on page 27 undefined on input l
-ine 824.
+ine 826.
 
 
 Package natbib Warning: Citation `prov:LyaDR16' on page 27 undefined on input l
-ine 824.
+ine 826.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2573,13 +2577,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [28 <../figures/intro/foret_lya.png>]
 
-LaTeX Warning: Command \` invalid in math mode on input line 857.
+LaTeX Warning: Command \` invalid in math mode on input line 859.
 
 
-Package mathptmx Warning: There are no bold math fonts on input line 862.
+Package mathptmx Warning: There are no bold math fonts on input line 864.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 876.
+LaTeX Warning: Command \` invalid in math mode on input line 875.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2589,17 +2593,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [29]
 
-LaTeX Warning: Reference `CITE DR16' on page 30 undefined on input line 904.
+LaTeX Warning: Reference `CITE DR16' on page 30 undefined on input line 906.
 
 
-LaTeX Warning: Reference `prov' on page 30 undefined on input line 908.
+LaTeX Warning: Reference `prov' on page 30 undefined on input line 910.
 
-<../figures/intro/exemple_dla.png, id=512, 1154.3125pt x 409.53pt>
+<../figures/intro/exemple_dla.png, id=513, 1154.3125pt x 409.53pt>
 File: ../figures/intro/exemple_dla.png Graphic file (type png)
 
 <use ../figures/intro/exemple_dla.png>
 Package pdftex.def Info: ../figures/intro/exemple_dla.png used on input line 91
-1.
+3.
 (pdftex.def)             Requested size: 461.71683pt x 163.80908pt.
  (./1.bbl
 
@@ -2669,24 +2673,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [36]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 919.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 919.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 921.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 921.
  (./1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 919.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 919.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 921.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 921.
 Package rerunfilecheck Info: File `1.out' has not changed.
 (rerunfilecheck)             Checksum: 3E43D8BB5A7638383D518C8C31849E0C;1352.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 919.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 921.
  ) 
 Here is how much of TeX's memory you used:
- 29939 strings out of 492995
- 541768 string characters out of 6132704
- 720674 words of memory out of 5000000
- 32654 multiletter control sequences out of 15000+600000
+ 29940 strings out of 492995
+ 541780 string characters out of 6132704
+ 720719 words of memory out of 5000000
+ 32655 multiletter control sequences out of 15000+600000
  143297 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,21n,50p,10403b,1070s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2769,10 +2773,10 @@ sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1.pdf (36 pages, 3656166 bytes).
+Output written on 1.pdf (36 pages, 3647419 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 591 compressed objects within 6 object streams
+ 713 PDF objects out of 1000 (max. 8388607)
+ 592 compressed objects within 6 object streams
  199 named destinations out of 1000 (max. 500000)
  240 words of extra memory for PDF output out of 10000 (max. 10000000)
 

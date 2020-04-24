@@ -575,8 +575,8 @@ où $R = \frac{3\rho_b}{4\rho_{\gamma}}$. Etant donné que la densité de photon
 Ces ondes acoustiques se propagent donc dans le plasma primordial depuis chaque surdensité . La figure~\ref{fig:bao_schema} schématise le mécanisme pour une seule surdensité. A l'instant $t=0$, nous considérons donc une surdensité en $R = \SI{0}{\Mpc}$. Cette surdensité est composée de matière noire (CDM), de baryons et de photons.
 Grâce à la pression non nulle du milieu, une onde acoustique est initiée. 
 Au fur et à mesure que le temps s'écoule (le redshift diminue), le front d'onde dans le plasma photon-baryon se propage.
-\textbf{Puis, à un redshift de $z_{\ast} \sim 1090$, les photons se découplent des baryons. Ils se progagent donc librement.
-A un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons\footnote{A cause de la grande assymétrie entre le nombre de baryons et le nombre de photons $n_{b} / n_{\gamma} \sim 10^{-9}$, les baryons se découplent des photons après que ces derniers se soient découplés des baryons.}. La pression dans le milieu devient nulle, faisant chuter la vitesse du son à zéro. L'onde est alors gelée. Ainsi la surdensité de baryon ne se propage plus. Il n'y a alors plus que la gravitation qui affecte la distribution de chaque espèce.}
+Puis, à un redshift de $z_{\ast} \sim 1090$, les photons se découplent des baryons. Ils se progagent donc librement.
+A un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons\footnote{A cause de la grande assymétrie entre le nombre de baryons et le nombre de photons $n_{b} / n_{\gamma} \sim 10^{-9}$, les baryons se découplent des photons après que ces derniers se soient découplés des baryons.}. La pression dans le milieu devient nulle, faisant chuter la vitesse du son à zéro. L'onde est alors gelée. Ainsi la surdensité de baryon ne se propage plus. Il n'y a alors plus que la gravitation qui affecte la distribution de chaque espèce.
 % Puis, à un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons. La pression dans le milieu devient nulle, faisant chuter la vitesse du son à zéro. L'onde est alors gelée.
 % \textbf{Ainsi la surdensité de baryon ne se propage plus. Les photons, qui n'interagissent plus avec les baryons\footnote{A cause de la grande assymétrie entre le nombre de baryons et le nombre de photons $n_{b} / n_{\gamma} \sim 10^{-9}$, les photons se découplent des baryons avant que ces derniers ne se découplent des photons.} dès $z_{\ast} \sim 1090$, se propagent librement. Il n'y a alors plus que la gravitation qui affecte la distribution de chaque espèce.}
 La surdensité de matière noire à $R = 0$, qui a continué de croître, attire les baryons par effet gravitationnel. Cependant, la surdensité de baryon à $R \sim \SI{150}{\Mpc}$ produit aussi un puit de potentiel, dans lequel la matière noire alentour tombe progressivement.
@@ -636,7 +636,7 @@ Indépendamment d'autres sondes cosmologiques, telles le CMB ou les supernovae, 
 \end{align}
 où $E(z) = \sqrt{\Omega_m (1+z)^3 + \Omega_{\Lambda} + 1 - \Omega_{total}}$. \\
 Ainsi, sans faire de supposition sur le modèle cosmologique, comme par exemple la platitude, les BAO permettent de contraindre les paramètres $(\Omega_{m} , \Omega_{\Lambda} , H_0 r_d)$ du modèle (o)\lcdm{}.
-Mettre un plot qui montre H(z) / (1+z) (deceleration puis acceleration etc etc)
+\textbf{La figure~\ref{fig:h_vs_z} présente la mesure de $H(z) / (1+z)$ à l'aide des BAO.}
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{h_vs_z}
@@ -676,9 +676,9 @@ où $\delta_{i}$ est le contraste de densité du traceur $i$, et $\delta_{matiè
   \label{eq:biais2}
   \xi_{i}(r, z) = b_{i}^2(z) \xi_{matière}(r, z) .
 \end{equation}
-\textbf{Ainsi, par l'intermédiaire du traceur $i$, nous pouvons mesurer la fonction de corrélation de la matière, à un facteur multiplicatif près. De plus, en comparant la fonction de corrélation du traceur $i$ à celle de la matière prédite par les modèles, nous pouvons mesurer le biais $b_{i}$ de ce traceur. 
+Ainsi, par l'intermédiaire du traceur $i$, nous pouvons mesurer la fonction de corrélation de la matière, à un facteur multiplicatif près. De plus, en comparant la fonction de corrélation du traceur $i$ à celle de la matière prédite par les modèles, nous pouvons mesurer le biais $b_{i}$ de ce traceur. 
 % \textbf{ce qui nous permet de sonder indirectement la fonction de corrélation de la matière ainsi que de mesurer le biais du traceur utilisé.}
-Comme indiqué dans l'équation précédente, la fonction de corrélation associée au traceur $i$ est amplifiée par un facteur $b_{i}^2$.}
+Comme indiqué dans l'équation précédente, la fonction de corrélation associée au traceur $i$ est amplifiée par un facteur $b_{i}^2$.
 Il est donc avantageux de choisir un traceur avec un biais important, afin d'obtenir une fonction de corrélation avec une amplitude importante, et ainsi un rapport signal sur bruit plus grand. La première détection des BAO a ainsi été faite avec les LRG (des galaxies rouges) dont la mesure du biais donne $b_{LRG} \sim 2$ (\cite{eisenstein_detection_2005}).
 
 \subsection{Distorsions dans l'espace des redshifts}
@@ -689,7 +689,7 @@ Afin de construire la fonction de corrélation du traceur $i$, il est nécessair
 où $z_{mesure}$ est le redshift mesuré, $\delta z_{sys}$ et $\delta z_{stat}$ sont les erreurs statistiques et systématiques sur la mesure du redshift, $z_{vrai}$ est le vrai redshift, inaccessible, et $\Delta z_{v}$ et le redshift induit par la vitesse particulière du traceur.
 En effet, en plus de leur vitesse de récession due à l'expansion, les objets peuvent posséder une vitesse, dite particulière, induite par le champ de gravitation environnant. 
 Ainsi, en plus du redshift cosmologique, l'effet Doppler vient s'ajouter à la mesure du redshift.
-Ces deux effets sont indiscernables. Cependant, la vitesse particulière du traceur est corrélée avec le champ de matière sous-jacent : les traceurs ont tendance à se déplacer vers les surdensités, par effet gravitationnel. La figure~\ref{fig:schema_rsd} illustre la situation : au centre se trouve une surdensité, représentée par un amas de galaxies. Quatre galaxies se trouvent autour de cette surdensité, leur vitesse particulière est représentée par une flèche noire, qui est dirigée vers le centre à cause du puit de potentiel créé par la surdensité. La galaxie se trouvant derrière cette surdensité se déplace donc vers l'observateur, son redshift mesuré est ainsi plus petit que son redshift cosmologique. Similairement, la galaxie se trouvant devant la surdensité est reconstuire avec une redshift plus grand. Les objets se déplaçant perpendiculairement à la ligne de visée ne sont pas affectés. La ligne en pointillés bleu indique la distribution reconstruite dans l'espace des redshifts : cette distribution n'est plus circulaire, elle est aplatie selon la direction de la ligne de visée. Cette effet est appelé \emph{RSD} (Redshift Space Distorsions), ou \emph{distorsions dans l'espace des redshifts}.
+Ces deux effets sont indiscernables. Cependant, la vitesse particulière du traceur est corrélée avec le champ de matière sous-jacent : les traceurs ont tendance à se déplacer vers les surdensités, par effet gravitationnel. La figure~\ref{fig:schema_rsd} illustre la situation : au centre se trouve une surdensité, représentée par un amas de galaxies. Quatre galaxies se trouvent autour de cette surdensité, leur vitesse particulière est représentée par une flèche noire, qui est dirigée vers le centre à cause du puit de potentiel créé par la surdensité. La galaxie se trouvant derrière cette surdensité se déplace donc vers l'observateur, son redshift mesuré est ainsi plus petit que son redshift cosmologique. Similairement, la galaxie se trouvant devant la surdensité est reconstuire avec une redshift plus grand. Les objets se déplaçant perpendiculairement à la ligne de visée ne sont pas affectés. La ligne en pointillés bleu indique la distribution reconstruite dans l'espace des redshifts : cette distribution n'est plus circulaire, elle est aplatie selon la direction de la ligne de visée. Cette effet est appelé \emph{RSD} (Redshift Space Distortions), ou \emph{distorsions dans l'espace des redshifts}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{schema_rsd}
@@ -735,7 +735,7 @@ Les quasars, pour \emph{quasi - star}, sont parmi les objets les plus lumineux d
   \centering
   \includegraphics[scale=0.68]{schema_qso2}
   \caption{Schéma explicatif d'un noyau actif de galaxie. Le trou noir supermassif central est entouré d'un disque d'accrétion. Ce disque d'accrétion, en tombant, s'échauffe et émet puissamment dans toutes les longueurs d'onde. Des jets peuvent se former, et éjectent de la matière ultra-relativiste. Un tore, constitué de poussière entoure le disque. Lorsque ce tore obstrue la lumière qui atteint l'observateur, l'objet apparaît moins brillant et est classé en tant que galaxie Seyfert.  Sinon, l'objet est dénommé quasar. Lorsque le jet pointe directement vers l'observateur, l'objet est appelé blazar.
-  \textbf{Cependant, les quasars restent mal compris. La formation et l'impacte de leur jet est au c{\oe}ur de nombreuses études (voir par exemple~\cite{Chabanier2020}).}}
+  Cependant, les quasars restent mal compris. La formation et l'impact de leur jet est au c{\oe}ur de nombreuses études (voir par exemple~\cite{Chabanier2020}).}
   \label{fig:schema_qso}
 \end{figure}
 Le trou noir supermassif, au centre, accrète la matière environnante. Sous forme d'un disque, cette dernière s'échauffe en tombant et rayonne énormément d'énergie, dans toutes les longueurs d'ondes. Selon les cas, et souvent par cycle, le noyau actif peut émettre de puissants jets de matière ultra-relativiste. La figure~\ref{fig:qso_jets} montre de tels jets. Ces jets, d'une taille de plus de \SI{200}{\perh\kpc}, sont principalement constitués de noyaux ionisés, d'électrons et de positrons, éjectés à une vitesse proche de celle de la lumière. Ces phénomènes font partie des plus énergétiques de l'univers.
@@ -777,7 +777,7 @@ La grande luminosité des quasars les rend observables à très grand redshift, 
   \end{tabular}
 \end{table}
 
-Les quasars sont donc des objets idéaux pour construire un relevé spectroscopique étendu et à grand redshift, et ainsi sonder l'échelle BAO sur un grand volume d'univers. De plus, comme expliqué précédemment, les quasars sont des objets qui se forment dans des environnements très dense. Ils constituent donc un traceur très biaisé. \textbf{Le biais des quasars est mesuré par~\cite{Laurent2017}. Nous le paramétrisons ici comme
+Les quasars sont donc des objets idéaux pour construire un relevé spectroscopique étendu et à grand redshift, et ainsi sonder l'échelle BAO sur un grand volume d'univers. De plus, comme expliqué précédemment, les quasars sont des objets qui se forment dans des environnements très dense. Ils constituent donc un traceur très biaisé. Le biais des quasars est mesuré par~\cite{Laurent2017}. Nous le paramétrisons ici comme
 % \begin{equation}
 %   \label{eq:b_qso}
 %  b_{QSO}(z) = (0.53 \pm 0.19) + (0.289 \pm 0.035)(1 + z)^2 ,
@@ -792,7 +792,7 @@ b_{QSO}(z) = 3.7 \left(\frac{1+z}{1+2.33}\right)^{1.7} .
 %   \label{eq:b_qso}
 % b_{QSO}(z) = 3.77 ( \frac{1+z}{3.334} )^{1.44} .
 % \end{equation} 
-Le paramètre RSD des quasars est donné par $\beta_{QSO} = f / b_{QSO}$. En bonne approximation, pour $z > 2$, $f = \Omega_m \sim 1$. }
+Le paramètre RSD des quasars est donné par $\beta_{QSO} = f / b_{QSO}$. En bonne approximation, pour $z > 2$, $f = \Omega_m^{\num{0.55}} \sim 1$. 
 
 
 \subsection{La forêt \lya{}}
@@ -800,21 +800,22 @@ Le paramètre RSD des quasars est donné par $\beta_{QSO} = f / b_{QSO}$. En bon
 Comme expliqué précédemment, le spectre des quasars possède une raie d'émission très intense : la raie \lya{}. Cette raie résulte de la désexcitation des atomes d'hydrogène. Découverte par le physicien Theodore Lyman au début du \textsc{XX}\ieme~siècle, la série de Lyman regroupe les transitions électroniques des états excités de l'atome d'hydrogène vers son état fondamental. Dans son état fondamental, l'électron se trouve sur la couche électronique la plus proche du noyau, il possède un nombre quantique principal $n=1$. Dans un état excité, l'électron se trouve sur une couche externe avec $n > 1$. Dans une telle configuration, l'atome d'hydrogène n'est pas stable, il tend à réduire son énergie. L'électron passe alors de la couche électronique sur laquelle il se trouve à une couche électronique de plus basse énergie, pour laquelle le nombre quantique principal est plus faible. La série de Lyman correspond aux transitions pour lesquelles la couche électronique finale est la couche fondamentale $n=1$. Plus l'électron se trouvait initialement sur une couche éloignée du noyau, et plus la transition est énergétique. La raie \lya{} correspond à la transition la moins énergétique : de $n=2$ à $n=1$. La raie \lyb{} est la seconde moins énergétique : de $n=3$ à $n=1$. S'en suivent les autres transitions pour $n > 3$.
 
 % Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, les quasars possèdent une raie \lya{} très intense. Ainsi, en plus de la position de chaque quasar observé, nous pouvons utiliser la raie \lya{} pour obtenir davantage d'informations sur la distribution de matière à grand échelle. En effet, cette raie peut être utilisée pour tracer la matière le long de la ligne de visée de chaque quasar.
-\textbf{Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, les quasars possèdent une raie d'émission \lya{} très intense. Grâce à leur luminosité importante dans toutes les longueurs d'ondes, ils peuvent nous servir à sonder la distribution de matière à grande échelle, en ``éclairant'' le milieu intergalactique.
-Nous décrivons dans les lignes qui suivent comment utiliser l'absorption \lya{} comme traceur.}
+Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, les quasars possèdent une raie d'émission \lya{} très intense. Grâce à leur luminosité importante dans toutes les longueurs d'onde, ils peuvent nous servir à sonder la distribution de matière à grande échelle, en ``éclairant'' le milieu intergalactique.
+Nous décrivons dans les lignes qui suivent comment utiliser l'absorption \lya{} comme traceur.
 La figure~\ref{fig:schema_lya} schématise la situation.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{schema_lya}
-  \caption{\textbf{Schéma illustratif de l'absorption le long de la ligne de visée d'un quasar. L'observateur, à $z=0$ est représenté par le télescope. Le quasar, à $z_{QSO}$ est représenté par l'étoile jaune. Les absorbeurs le long de la ligne de visée sont représentés par les nuages, aux redshifts $z_{1}$, $z_{2}$ et $z_{3}$.}}
+  \caption{Schéma illustratif de l'absorption le long de la ligne de visée d'un quasar. L'observateur, à $z=0$ est représenté par le télescope. Le quasar, à $z_{QSO}$ est représenté par l'étoile jaune. Les absorbeurs le long de la ligne de visée sont représentés par les nuages, aux redshifts $z_{1}$, $z_{2}$ et $z_{3}$.}
   \label{fig:schema_lya}
 \end{figure}
 Un quasar, situé à un redshift $z_{QSO}$ émet de la lumière jusqu'à un observateur situé sur terre, à $z=0$. Trois absorbeurs sont disposés le long de la ligne de visée, à des redshifts $z_1$, $z_2$ et $z_3$. Ils appartiennent aux structures à grande échelle de l'univers. L'hydrogène neutre et non excité présent dans ces absorbeurs peut absorber les photons issus du quasar.
 % Nous supposons que ces absorbeurs absorbent uniquement en \lya{} :
-\textbf{Cependant, d'autres absorptions peuvent avoir lieu. En première approximation, nous pouvons considérer que ces absorbeurs absorbent uniquement en \lya{}.}
+D'autres absorptions peuvent avoir lieu. Mais, en première approximation, nous pouvons considérer que ces absorbeurs absorbent uniquement en \lya{}.
 Les photons possédant une longueur d'onde $\lambda_{\mathrm{Ly}\alpha} = \SI{1215.67}{\angstrom}$ dans le référentiel de l'absorbeur sont donc absorbés par l'hydrogène neutre et l'électron de ce dernier effectue une transition électronique des couches $n=1$ à $n=2$. Plus l'absorbeur est dense, plus le nombre de photons absorbés est important. Considérons à présent l'absorbeur 1.
 L'absorption \lya{} s'effectue dans son référentiel à $\lambda_{\mathrm{RF}} = \lambda_{\mathrm{Ly}\alpha}$, ce qui correspond, dans le référentiel de l'observateur, à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{1})$. De plus, la longueur d'onde correspondant à la raie d'émission du \lya{} du quasar dans le référentiel de l'observateur est $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{QSO})$. Ainsi, comme $z_1 < z_{QSO}$, l'observateur identifie une raie d'absorption à une longueur d'onde plus faible que la raie d'émission \lya{} dans le spectre du quasar. Il en est de même pour les 2\up{ème} et 3\up{ème} absorbeurs : le spectre observé présente une raie d'absorption à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{2})$ et à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{3})$. Le mécanisme se généralise pour tous les absorbeurs présents le long de la ligne de visée. Chaque absorbeur crée une raie d'absorption, à une longueur d'onde plus faible que la raie d'émission \lya{}. Ainsi, la région du spectre à gauche de la raie \lya{} contient toute une série de raies d'absorption. Cette région s'appelle la forêt \lya{}. Elle est visible sur la figure~\ref{fig:spectre_qso}. Ce même processus est à l'oeuvre pour la raie \lyb{}, et pour toutes les autres raies d'émission présentes dans le spectre.
-\textbf{Cependant, il est beaucoup plus marqué pour la forêt \lya{}, grâce à la grande section efficace de la transition associée.}
+% \textbf{Cependant, il est beaucoup plus marqué pour la forêt \lya{}, grâce à la grande section efficace de la transition associée.}
+Cependant, il est beaucoup plus marqué pour la forêt \lya{}. Ceci vient de l'abondance de l'hydrogène dans le milieu intergalactique, et aussi de la grande section efficace de la transition \lya{}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{foret_lya}
@@ -855,14 +856,14 @@ La fraction de flux transmis $F$ est notre observable. Nous définissons donc le
   \delta_{\mathrm{Ly}\alpha}(z) = \frac{F}{\overline F(z)} - 1 , 
 \end{equation}
 où $\overline F$ est la transmission moyenne au redshift $z$.\\
-Du fait que le contraste du \lya{} soit défini en fonction de l'absorption observée (moins il y a de lumière, plus il y a de matière), le biais $b_{\mathrm{Ly}\alpha}$ qui relie $\delta_{\mathrm{Ly}\alpha}$ à $\delta_{matière}$ est négatif.
+Du fait que le contraste du \lya{} est défini en fonction de l'absorption observée (moins il y a de lumière, plus il y a de matière), le biais $b_{\mathrm{Ly}\alpha}$ qui relie $\delta_{\mathrm{Ly}\alpha}$ à $\delta_{matière}$ est négatif.
 % De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière associées sont faibles. Ainsi, à la différence des traceurs ponctuels tels les quasars ou les galaxies, le biais du \lya{} est très faible.
-\textbf{De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière tracées appartiennent au régime linéaire, par opposition aux traceurs booléens qui sondent des régions effondrées et non linéaires. Le biais de l'hydrogène est donc proche de 1. Cependant, la non linéarité de l'équation~\ref{eq:tff} compresse les variations de $\tau$, les ramenant entre 0 et 1. Ceci a pour effet de réduire drastiquement le biais du \lya{}. A un redshift $z \sim \num{2.5}$, le biais de $F$ est de l'ordre de \num{0.15}. Celui ci est nettement inférieur à celui des LRG, qui vaut environ 2, et aussi à celui des quasars, qui est de l'ordre de \num{3.5} à $z \sim \num{2.5}$.
+De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière tracées appartiennent au régime linéaire, par opposition aux traceurs booléens qui sondent des régions effondrées et non linéaires. Le biais de l'hydrogène est donc proche de 1. Cependant, la non linéarité de l'équation~\ref{eq:tff} compresse les variations de $\tau$, le ramenant entre 0 et 1. Ceci a pour effet de réduire drastiquement le biais du \lya{}. A un redshift $z \sim \num{2.5}$, le biais de $F$ est de l'ordre de \num{0.15}. Il est nettement inférieur à celui des LRG, qui vaut environ 2, et aussi à celui des quasars, qui est de l'ordre de \num{3.5} à $z \sim \num{2.5}$.
 Ce faible biais est compensé par deux effets.
-Premièrement, pour chaque spectre de quasar observé, la forêt \lya{} fournit un grand nombre de raies d'absorption, qui chacune trace la densité du champ de matière contrairement aux traceurs booléens. Ceci augmente énormément la statistique.
-Deuxièmement, le paramêtre RSD du \lya{} est très important, $\beta_{\mathrm{Ly}\alpha} \sim 2$ contre $\sim \num{0.3}$ pour les quasars, ce qui augmente énormément la fonction de corrélation le long de la ligne de visée.}
+Premièrement, pour chaque spectre de quasar observé, la forêt \lya{} fournit un grand nombre de pixels, qui chacun trace la densité du champ de matière contrairement aux traceurs booléens. Ceci augmente énormément la statistique.
+\textbf{Deuxièmement, le paramêtre RSD du \lya{} est très important, $\beta_{\mathrm{Ly}\alpha} \sim 2$ contre $\sim \num{0.3}$ pour les quasars, ce qui augmente  la fonction de corrélation le long de la ligne de visée d'un facteur $\sim (1+\beta)^2 = 9$ au lieu de $\sim 2$.}
 
-\textbf{Un point important est à noter concernant les RSD du \lya{}.
+Un point important est à noter concernant les RSD du \lya{}.
 % Cependant, pour chaque spectre de quasar observé, la forêt \lya{} fournit un grand nombre de raies d'absorption, qui chacune trace la distribution de matière. Ceci augmente énormément la statistique et compense ce biais très faible.
 % Nous ne donnons pas ici le biais du \lya{}, ni son paramètre RSD $\beta_{\mathrm{Ly}\alpha}$, car leur mesure est donnée dans la partie \#prov ref. Nous mentionnons cependant un point important concernant les RSD du \lya{}.
 L'équation~\ref{eq:kaiser} est obtenue en utilisant la conservation du nombre de traceurs entre l'espace réel et l'espace des redshifts. Cependant, ce n'est pas le cas du \lya{}.
@@ -873,19 +874,19 @@ Nous pouvons tout de même définir le paramètre RSD du \lya{} comme
   \label{eq:kaiser4}
   \delta_{\mathrm{Ly}\alpha}^{s}(\vec k, z) = b_{\mathrm{Ly}\alpha}(z) (1+ \beta_{\mathrm{Ly}\alpha}(z) \mu^2) \delta_{matière}(\vec k, z)  .
 \end{equation}
-Mais, dans ce cas, $ \beta_{\mathrm{Ly}\alpha} \neq f / b_{\mathrm{Ly}\alpha}$. \\
-Nous présentons les mesures du biais et du paramètre RSD du \lya{} dans la section \#prov.}
+Mais, dans ce cas, $ \beta_{\mathrm{Ly}\alpha} \neq f / b_{\mathrm{Ly}\alpha}$.
+Nous présentons les mesures du biais et du paramètre RSD du \lya{} dans la section \#prov.
 
 \paragraph{}
 La forêt \lya{} est donc une observable très avantageuse.
 % Elle permet de sonder les contrastes de densité faibles en traçant le milieu intergalactique diffus.
-\textbf{Elle permet de sonder le régime linéaire des fluctuations de densité en traçant le milieu intergalactique diffus.
+Elle permet de sonder le régime linéaire des fluctuations de densité en traçant le milieu intergalactique diffus.
 Elle permet aussi de sonder l'univers à grands redshifts grâce à la grande luminosité des quasars. De plus, chaque spectre  de quasar fournit un grand nombre de pixels d'absorption \lya{}, qui sondent la densité du champ de matière.
 % Enfin, le relevé spectroscopique de quasar \lya{} ne requiert pas d'être homogène, contrairement aux traceurs booléens.
-Enfin, le relevé spectroscopique de quasar \lya{} ne requiert pas une sensibilité homogène, contrairement aux traceurs booléens.}
+Enfin, le relevé spectroscopique de quasar \lya{} ne requiert pas une sélection homogène, contrairement aux traceurs booléens.
 En effet, comme le \lya{} est senbible à la densité, via l'observation du flux transmis, il est possible de construire un contraste (équation~\ref{eq:delta_lya}) similaire au contraste de densité de la matière (équation~\ref{eq:contraste}). Ce n'est pas le cas des traceurs booléens car ces derniers ne renseignent pas sur la densité sondée. Les analyses BAO et RSD qui utilisent ces traceurs construisent alors la fonction de corrélation différemment, en ayant recours à l'estimateur de Landy-Szalay. Cette estimateur compare la distribution de traceurs observés à une distribution aléatoire.
 % Il est donc important d'avoir un échantillon de traceur homogène.
-\textbf{Il est donc important d'avoir un échantillon de traceurs sélectionnés homogènement à travers le relevé.}
+Il est donc important d'avoir un échantillon de traceurs sélectionnés homogènement à travers le relevé.
 
 % Cependant, la forêt \lya{} possède un inconvénient que n'ont pas les traceurs booléens : les contaminants. Ils sont détaillés dans la section suivante.
 
@@ -894,15 +895,15 @@ En effet, comme le \lya{} est senbible à la densité, via l'observation du flux
 Le \lya{} n'est pas le seul absorbeur présent dans le spectre des quasars. D'autres espèces peuvent être présentes le long de la ligne de visée, et ainsi causer de l'absorption. Par abus de langage, les métaux désignent en astronomie les éléments qui possèdent un numéro atomique supérieur à 2. A la différence de l'hydrogène et d'une partie de l'hélium qui est d'origine primordiale\footnote{L'hydrogène et l'hélium sont formés durant la nucléo-synthèse primordiale.}, les métaux sont formés dans les étoiles, puis sont dispersés via l'explosion des supernovae. Les métaux sont donc trouvés proches des environnements qui forment des étoiles : les galaxies.
 
 % Comme expliqué dans la section précédente, chaque absorption observée dans la forêt \lya{} est supposée être causée par un absorbeur \lya{}. Cependant, rien ne nous garanti que l'absorption observée n'est pas causée par un autre absorbeur, à un autre redshift.
-\textbf{Comme expliqué dans la section précédente, en première approximation, chaque absorption observée dans la forêt \lya{} est causée par un absorbeur \lya{}. Cependant, certaines absorptions sont causées par des métaux.}
-Etant donné que le champ des métaux est corrélé avec le champ d'hydrogène neutre, les raies d'absorptions des métaux sont corrélés avec celles du \lya. Supposons la présence d'un métal à un redshift $z_{met}$, absorbant dans son référentiel à une longueur d'onde $\lambda_{met}$. L'absorption produite est observée à $\lambda_{obs1} = \lambda_{met} ( 1 + z_{met})$, mais sera reconstruite à un redshift $z_{abs} = \frac{\lambda_{obs1}}{\lambda_{\mathrm{Ly}\alpha}} - 1 \neq z_{met}$. De plus, la présence d'hydrogène neutre au redshift du métal $z_{met}$ produit aussi une absorption, à une longueur d'onde $\lambda_{obs2} = \lambda_{\mathrm{Ly}\alpha}(1+z_{met})$. Ainsi, à chaque raie d'absorption de métal, interprétée comme de l'absorption \lya{}, est associée une autre raie d'absorption \lya{}. Ceci produit une fausse corrélation le long de la ligne de visée, à une séparation caractérisée par le rapport $\lambda_{met} / \lambda_{\mathrm{Ly}\alpha}$. Cette effet est très présent dans la fonction de corrélation à une dimension : lorsque l'on corrèle des pixels d'une même forêt, mais aussi dans la fonction de corrélation à trois dimensions le long de la ligne de visée ($\rperp{} < \SI{4}{\perh\Mpc}$). (\#prov faire référence à une figure qui montre la fonction de corrélation de DR16)
+Comme expliqué dans la section précédente, en première approximation, chaque absorption observée dans la forêt \lya{} est causée par un absorbeur \lya{}. Cependant, certaines absorptions sont causées par des métaux.
+Etant donné que le champ des métaux est corrélé avec le champ d'hydrogène neutre, les raies d'absorptions des métaux sont corrélés avec celles du \lya. Supposons la présence d'un métal à un redshift $z_{met}$, absorbant dans son référentiel à une longueur d'onde $\lambda_{met}$. L'absorption produite est observée à $\lambda_{obs1} = \lambda_{met} ( 1 + z_{met})$, mais sera reconstruite à un redshift $z_{abs} = \lambda_{obs1} / \lambda_{\mathrm{Ly}\alpha} - 1 \neq z_{met}$. De plus, la présence d'hydrogène neutre au redshift du métal $z_{met}$ produit aussi une absorption, à une longueur d'onde $\lambda_{obs2} = \lambda_{\mathrm{Ly}\alpha}(1+z_{met})$. Ainsi, à chaque raie d'absorption de métal, interprétée comme de l'absorption \lya{}, est associée une autre raie d'absorption \lya{}. Ceci produit une fausse corrélation le long de la ligne de visée, à une séparation caractérisée par le rapport $\lambda_{met} / \lambda_{\mathrm{Ly}\alpha}$. Cette effet est très présent dans la fonction de corrélation à une dimension : lorsque l'on corrèle des pixels d'une même forêt, mais aussi dans la fonction de corrélation à trois dimensions le long de la ligne de visée ($\rperp{} < \SI{4}{\perh\Mpc}$). (\#prov faire référence à une figure qui montre la fonction de corrélation de DR16)
 
 
 \paragraph{}
 Un autre contaminant présent dans la forêt \lya{} sont les HCD (High Column Density). Les HCD sont des absorbeurs possédant une densité de colonne\footnote{La densité de colonne mesure la quantité de matière intégrée le long de la ligne de visée. Elle est mesurée en \si{atome\per\centi\meter\squared}.} supérieure à $\SI{1.6e17}{atome\per\centi\meter\squared}$ (\cite{Rogers2017}). Ces absorbeurs très denses produisent de très fortes absorptions. Ils correspondent à des sytèmes effondrés, comme le gaz présent dans ou autour des galaxies. Leur fonction de corrélation est donc beaucoup plus grande que celle du \lya{}. De plus, du fait des vitesses importantes du gaz présent dans ces objets effondrés, le profile d'absorption des HCD est élargi, produisant une absorption au delà de la position physique de l'absorbeur. Ce profile d'absorption peut être modélisé par un profile de Voigt.
 Les DLA (\#prov) sont les HCD pour lesquels la densité de colonne est supérieure à \SI{2e20}{atome\per\centi\meter\squared}.
 La figure~\ref{fig:exemple_dla} montre le spectre d'un quasar possédant un DLA, ainsi que le profile de voigt ajusté.
-Ces HCD sont tellement denses qu'ils peuvent être identifiés dans les spectres. Dans l'analyse~\ref{CITE DR16}, les DLA identifiés sont modélisés par un profile de Voigt, puis, tous les pixels pour lequels la fraction de flux transmis est inférieure à \num{0.80} sont masqués, \textbf{les autres sont corrigés grâce au profile de Voigt.}
+Ces HCD sont tellement denses qu'ils peuvent être identifiés dans les spectres. Dans l'analyse~\ref{CITE DR16}, les DLA identifiés sont modélisés par un profile de Voigt, puis, tous les pixels pour lequels la fraction de flux transmis est inférieure à \num{0.80} sont masqués, les autres sont corrigés grâce au profile de Voigt.
 Les HCD pour lesquels la densité de colonne est inférieure à \SI{2e20}{atome\per\centi\meter\squared} ne sont pas identifiables. Ils ne peuvent donc pas être masqués.
 % Cependant, ils doivent être traités différemment des absorptions moyennes du \lya{}.
 Cependant, leur présence doit être modélisée dans le modèle de la fonction de corrélation.
