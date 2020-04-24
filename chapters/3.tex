@@ -82,7 +82,7 @@ La démarche que nous décrivons ici est très bien expliquée dans la thèse~\c
 Comme présenté dans la section~\ref{subsec:lya}, le contraste de l'absorption \lya{} $\delta_q(\lambda)$ est défini comme
 \begin{equation}
   \label{eq:deltaF}
-  \delta_q(\lambda) = \frac{f_q(\lambda)}{\overline F(\lambda) C_q(\lambda)} - 1,
+  \delta_q(\lambda) = \frac{f_q(\lambda)}{\overline F(\lambda) C_q(\lambda)} - 1 \;,
 \end{equation}
 où $\overline F(\lambda)$ est la transmission moyenne au redshift $z = \lambda / \lambda_{\mathrm{Ly}\alpha} - 1$, et $C_q(\lambda)$ donne le flux du spectre sans absorption. Il est dénommé \emph{continuum} et est différent pour chaque quasar.
 Le produit $\overline F(\lambda) C_q(\lambda)$ représente donc le flux moyen attendu du quasar $q$.
@@ -90,18 +90,18 @@ Du fait de la faible résolution des données, $\overline F(\lambda)$ n'est pas 
 Afin de prendre en compte la variabilité d'un spectre à un autre, le produit $\overline F(\lambda) C_q(\lambda)$ est modélisé par une relation linéaire en $\mathrm{log}_{10} \lambda$ :
 \begin{equation}
   \label{eq:diversity}
-  \overline F(\lambda) C_q(\lambda) = \overline C(\lambda_{\mathrm{RF}})(a_q + b_q \log_{10}(\lambda)),
+  \overline F(\lambda) C_q(\lambda) = \overline C(\lambda_{\mathrm{RF}})(a_q + b_q \log_{10}(\lambda)) \; ,
 \end{equation}
 où $\overline C(\lambda_{\mathrm{RF}})$ donne le continuum moyenné sur tous les spectres, en fonction de la longueur d'onde dans le référentiel du quasar. $a_q$ et $b_q$ sont propres à chaque quasar, ils modélisent la diversité des quasars.
 Les termes $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$ sont déterminés en minimisant la fonction de vraissemblance $L$, qui s'exprime comme
 \begin{equation}
   \label{eq:likelihood}
-  - 2 \ln L = - \sum_{i} \frac{\left[f_{i} - \overline F C_q(\lambda_{i}, a_q, b_q)\right]^2}{\sigma_q^2 (\lambda_i)} + \ln [\sigma_q^2 (\lambda_i)] .
+  - 2 \ln L = - \sum\limits_{i} \frac{\left[f_{i} - \overline F C_q(\lambda_{i}, a_q, b_q)\right]^2}{\sigma_q^2 (\lambda_i)} + \ln [\sigma_q^2 (\lambda_i)] \;  .
 \end{equation}
 La variance $\sigma_q^2(\lambda)$ dans chaque pixel est donnée par
 \begin{equation}
   \label{eq:variance}
-  \sigma_q^2(\lambda) = \eta(\lambda) \sigma_{\mathrm{instru}, q}^2(\lambda) + \sigma_{\mathrm{cosmo}}^2 (\lambda) (\overline F C_q(\lambda))^2 + \frac{\epsilon(\lambda)(\overline F C(\lambda))^4}{\sigma_{\mathrm{instru},q}^2 (\lambda)} .
+  \sigma_q^2(\lambda) = \eta(\lambda) \sigma_{\mathrm{instru}, q}^2(\lambda) + \sigma_{\mathrm{cosmo}}^2 (\lambda) (\overline F C_q(\lambda))^2 + \frac{\epsilon(\lambda)(\overline F C(\lambda))^4}{\sigma_{\mathrm{instru},q}^2 (\lambda)}  \; .
 \end{equation}
 Le terme $\eta(\lambda)\sigma_{\mathrm{instru}, q}^2(\lambda)$ rend compte de la variance provoquée par l'instrument, et liée à l'incertitude sur la mesure des flux. Le terme $\sigma_{\mathrm{cosmo}}(\lambda)$ est purement cosmologique et donne la variance propre au champ d'absorption du \lya{}. Il traduit le fait que certaines régions de l'univers peuvent absorber plus ou moins que la moyenne. Du fait de l'isotropie, $\sigma_{\mathrm{cosmo}}$ ne dépend que de $z$. Enfin, le terme $\epsilon(\lambda)(\overline F C(\lambda))^4 / \sigma_{\mathrm{instru},q}^2 (\lambda)$ rend compte du fait que la variance augmente avec le signal sur bruit, probablement à cause de la diversité des quasars et de l'erreur sur la mesure de leur redshift.
 
@@ -109,7 +109,7 @@ Afin d'obtenir le produit $\overline F C_q$ pour chaque quasar, il faut minimise
 Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\mathrm{RF}})$, sont initialisés. Ceci permet d'ajuser $\overline F C_q$ sur $f_q(\lambda)$ en minimisant la fonction de vraissemblance $L$. Dans cet ajustement, chaque pixel observé à une longueur d'onde $\lambda$ est pondéré par un poid
 \begin{equation}
   \label{eq:weights}
-  w_{q}(\lambda) = \frac{1}{\sigma_{q}^2(\lambda)} .
+  w_{q}(\lambda) = \frac{1}{\sigma_{q}^2(\lambda)}  \; .
 \end{equation}
 Une fois cette ajustement fait, $\overline C(\lambda_{\mathrm{RF}})$ est de nouveau calculé. Puis, les paramètres $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$ sont ajustés de manière à ce que, à lambda fixé, $\sigma_q(\lambda)$ reproduise la variance estimée à partir des flux $f_q(\lambda)$ de tous les quasars. Ce nouvel ajustement permet une nouvelle fois d'ajuster $\overline F C_q$, etc. Cette procédure est répétée jusqu'à obtenir des valeurs stables pour les paramètres ajustés. En pratique, 5 itérations sont suffisantes. Cette procédure permet donc d'estimer, pour chaque quasar, le produit $\overline F(\lambda) C_q(\lambda)$, et ainsi d'estimer les $\delta_q(\lambda)$ (équation~\ref{eq:deltaF}) indépendamment dans chaque région.
 
@@ -122,23 +122,46 @@ La procédure décrite dans la section précédente permet d'ajuster le continuu
 En redéfinissant les paramètres $a_q$ et $b_q$, l'équation~\ref{eq:diversity} peut être mise sous la forme
 \begin{equation}
   \label{eq:diversity2}
-  \overline F(\lambda) C_q(\lambda) = \overline C(\lambda_{\mathrm{RF}})(a_q + b_q (\Lambda - \overline \Lambda_q)) ,
+  \overline F(\lambda) C_q(\lambda) = \overline C(\lambda_{\mathrm{RF}})(a_q + b_q (\Lambda - \overline \Lambda_q))  \; ,
 \end{equation}
 où $\Lambda = \log_{10} \lambda$, et $\overline \Lambda_q$ est la moyenne de $\Lambda$ dans chaque forêt :
 \begin{equation}
   \label{eq:lambda_mean}
-  \overline \Lambda_q = \frac{\sum_{\lambda} w_q(\lambda) \Lambda}{\sum_{\lambda} w_q(\lambda)} .
+  \overline \Lambda_q = \frac{\sum\limits_{\lambda} w_q(\lambda) \Lambda}{\sum\limits_{\lambda} w_q(\lambda)}  \; .
 \end{equation}
 Le champ $ \delta_q$ mesuré est donc donné par
 \begin{equation}
   \label{eq:deltaF2}
-   \delta_q(\lambda) = \frac{f_q(\lambda)}{\overline C(\lambda_{\mathrm{RF}})(a_q + b_q (\Lambda - \overline \Lambda_q))} - 1 .
+   \delta_q(\lambda) = \frac{f_q(\lambda)}{\overline C(\lambda_{\mathrm{RF}})(a_q + b_q (\Lambda - \overline \Lambda_q))} - 1  \; .
 \end{equation}
-Du fait que $a_q$ et $b_q$ sont ajustés sur les $f_q(\lambda)$, l'utilisation de l'équation~\ref{eq:diversity2} pour déterminer le continuum force la moyenne et la pente de chaque région spectrale à être nulle.
-Afin de prendre en compte les corrélations introduites par cet effet, le champ 
+Du fait que $a_q$ et $b_q$ sont ajustés sur les $f_q(\lambda)$, l'utilisation de l'équation~\ref{eq:diversity2} pour déterminer le continuum force la moyenne et la pente de chaque région spectrale à être nulle. Ainsi le champ $\delta$ mesuré est biaisé, et de fausses corrélations sont induites dans le calcul de la fonction de corrélation.
+Afin de prendre en compte cet effet, le champ $\delta$ est transformé selon la relation
+\begin{equation}
+  \label{eq:deltaF3}
+  \tilde \delta_q(\lambda_i) = \sum\limits_j \eta_{ij}^q \delta_q(\lambda_j)  \; ,
+\end{equation}
+avec
+\begin{equation}
+  \eta^q_{ij}
+  =
+  \delta^K_{ij}
+  - \frac{
+    w_{j}
+  }{
+    \sum\limits_{k} w_{k}
+  }
+  -
+  \frac{
+    w_{j} \left( \Lambda_{i}-\overline \Lambda_{q} \right) \left(\Lambda_j-\overline \Lambda_{q} \right)
+  }{
+    \sum\limits_{k} w_{k} \left( \Lambda_{k}-\overline {\Lambda_{q}} \right)^{2}
+  }
+  \; ,
+  \label{eq::proj1}
+\end{equation}
+où $\delta^K_{ij}$ est le symbole de Kronecker. Grâce à cette transformation, la distorsion due à l'ajustement du continuum est exacte et connue. L'effet sur la fonction de corrélation peut ainsi être modélisé et pris en compte. Sa modélisation passe par le calcul de la \emph{matrice de distorsion}, détaillée dans la section~\ref{prov}.
 
 
-
-
+  
 \bibliography{../source/library}
 \end{document}
