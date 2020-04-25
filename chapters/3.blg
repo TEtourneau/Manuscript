@@ -12,51 +12,52 @@ White space in argument---line 49 of file 3.aux
 I'm skipping whatever remains of this command
 Database file #1: ../source/library.bib
 Warning--I didn't find a database entry for "CITE:dr16"
+Warning--I didn't find a database entry for "CITE:Victoria"
 Warning--empty journal in Ahumada2019
 Warning--empty journal in Bolton2012
 Warning--empty journal in Paris2016
 Warning--empty journal in Busca2018
 Warning--empty journal in Parks2017
 Warning--empty journal in Guo2019
-You've used 6 entries,
+You've used 7 entries,
             2481 wiz_defined-function locations,
-            591 strings with 14062 characters,
-and the built_in function-call counts, 12012 in all, are:
-= -- 170
-> -- 2412
+            601 strings with 14348 characters,
+and the built_in function-call counts, 12426 in all, are:
+= -- 208
+> -- 2433
 < -- 2
-+ -- 810
-- -- 798
-* -- 1692
-:= -- 2651
-add.period$ -- 28
-call.type$ -- 6
-change.case$ -- 12
-chr.to.int$ -- 6
-cite$ -- 12
-duplicate$ -- 108
-empty$ -- 169
-format.name$ -- 808
-if$ -- 1949
++ -- 818
+- -- 804
+* -- 1729
+:= -- 2718
+add.period$ -- 32
+call.type$ -- 7
+change.case$ -- 14
+chr.to.int$ -- 7
+cite$ -- 13
+duplicate$ -- 127
+empty$ -- 205
+format.name$ -- 815
+if$ -- 2035
 int.to.chr$ -- 1
-int.to.str$ -- 7
-missing$ -- 6
-newline$ -- 48
-num.names$ -- 18
-pop$ -- 56
+int.to.str$ -- 8
+missing$ -- 7
+newline$ -- 54
+num.names$ -- 21
+pop$ -- 62
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 7
 quote$ -- 0
-skip$ -- 59
+skip$ -- 68
 stack$ -- 0
-substring$ -- 12
-swap$ -- 12
+substring$ -- 36
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
+type$ -- 49
 warning$ -- 6
-while$ -- 12
+while$ -- 16
 width$ -- 0
-write$ -- 93
+write$ -- 108
 (There were 2 error messages)

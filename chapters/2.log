@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 APR 2020 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 APR 2020 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**1.tex
-(./1.tex
+**2.tex
+(./2.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/report.cls
@@ -705,19 +705,19 @@ Package minitoc Info: I0003
 \mtc@hstrutbox=\box63
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
-\openout3 = `1.mtc0'.
+\openout3 = `2.mtc0'.
 
-\openout3 = `1.mtc'.
+\openout3 = `2.mtc'.
 
- (./1.mtc0)
+ (./2.mtc0)
 Package minitoc Info: I0012
 (minitoc)             Long extensions (Unix-like) will be used.
 Package minitoc Info: I0031
 (minitoc)             ==> this version is configured for UNIX-like 
 (minitoc)                 (long extensions) file names.
-\openout3 = `1.mtc'.
+\openout3 = `2.mtc'.
 
-\openout3 = `1.mtc0'.
+\openout3 = `2.mtc0'.
 
 \c@mtc=\count150
 \c@minitocdepth=\count151
@@ -1972,8 +1972,8 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 225.
 
-) (./1.aux)
-\openout1 = `1.aux'.
+) (./2.aux)
+\openout1 = `2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -2089,9 +2089,9 @@ LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
 
-(./1.out) (./1.out)
+(./2.out) (./2.out)
 \@outlinefile=\write4
-\openout4 = `1.out'.
+\openout4 = `2.out'.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/dicts/translato
@@ -2114,30 +2114,24 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Chapitre 1.
 
-Overfull \hbox (4.86667pt too wide) in paragraph at lines 10--10
+Overfull \hbox (4.86667pt too wide) in paragraph at lines 8--8
 | [] []
  []
 
 Package minitoc Info: I0006
-(minitoc)             1.mtc1 is empty on input line 12.
+(minitoc)             2.mtc1 is empty on input line 10.
 [1
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../figures/intro/cosmohindoue.png, id=88, 111.2958pt x 149.358pt>
-File: ../figures/intro/cosmohindoue.png Graphic file (type png)
-
-<use ../figures/intro/cosmohindoue.png>
-Package pdftex.def Info: ../figures/intro/cosmohindoue.png used on input line 2
-2.
-(pdftex.def)             Requested size: 111.29552pt x 149.35762pt.
-
-<../figures/intro/genese.png, id=90, 117.0774pt x 156.585pt>
-File: ../figures/intro/genese.png Graphic file (type png)
-
-<use ../figures/intro/genese.png>
-Package pdftex.def Info: ../figures/intro/genese.png used on input line 24.
-(pdftex.def)             Requested size: 117.0771pt x 156.58461pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 22.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 22.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2145,51 +2139,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <../figures/intro/cosmohindoue.png> <../figures/intro/genese.png>]
+[2] (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-1.def
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
+[3] <../figures/eBOSS/eBOSStracers.png, id=116, 512.91624pt x 320.19624pt>
+File: ../figures/eBOSS/eBOSStracers.png Graphic file (type png)
 
-LaTeX Warning: Command \' invalid in math mode on input line 48.
+<use ../figures/eBOSS/eBOSStracers.png>
+Package pdftex.def Info: ../figures/eBOSS/eBOSStracers.png used on input line 7
+0.
+(pdftex.def)             Requested size: 256.45749pt x 160.09772pt.
 
-<../figures/intro/univershistory2.png, id=124, 1043.9pt x 653.44125pt>
-File: ../figures/intro/univershistory2.png Graphic file (type png)
-
-<use ../figures/intro/univershistory2.png>
-Package pdftex.def Info: ../figures/intro/univershistory2.png used on input lin
-e 52.
-(pdftex.def)             Requested size: 365.37047pt x 228.70786pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 58.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 58.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Lambda' on input line 58.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 58.
-
-<../figures/intro/lcdm.png, id=126, 575.14874pt x 493.845pt>
-File: ../figures/intro/lcdm.png Graphic file (type png)
-
-<use ../figures/intro/lcdm.png>
-Package pdftex.def Info: ../figures/intro/lcdm.png used on input line 63.
-(pdftex.def)             Requested size: 172.54594pt x 148.15463pt.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -2197,192 +2163,43 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5 <../figures/intro/univershistory2.png> <../figures/intro/lcdm.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6] <../figures/intro/curvature.png, id=169, 519.9425pt x 169.63374pt>
-File: ../figures/intro/curvature.png Graphic file (type png)
-
-<use ../figures/intro/curvature.png>
-Package pdftex.def Info: ../figures/intro/curvature.png used on input line 110.
-
-(pdftex.def)             Requested size: 311.96791pt x 101.78102pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7 <../figures/intro/curvature.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[9]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10] <../figures/intro/evol_omega.png, id=248, 1146.2825pt x 412.54124pt>
-File: ../figures/intro/evol_omega.png Graphic file (type png)
-
-<use ../figures/intro/evol_omega.png>
-Package pdftex.def Info: ../figures/intro/evol_omega.png used on input line 309
-.
-(pdftex.def)             Requested size: 458.50488pt x 165.01357pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[12 <../figures/intro/evol_omega.png>]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 380.
-
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 88.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-
-LaTeX Warning: Command \' invalid in math mode on input line 389.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 425.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 96.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13] <../figures/intro/example_tf.png, id=305, 1013.7875pt x 520.94624pt>
-File: ../figures/intro/example_tf.png Graphic file (type png)
-
-<use ../figures/intro/example_tf.png>
-Package pdftex.def Info: ../figures/intro/example_tf.png used on input line 450
-.
-(pdftex.def)             Requested size: 506.89252pt x 260.47249pt.
-
-Overfull \hbox (23.19565pt too wide) in paragraph at lines 450--451
- [][] 
- []
-
+[5 <../figures/eBOSS/eBOSStracers.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[6] <../figures/eBOSS/SchemaTelescope.png, id=174, 439.6425pt x 432.61626pt>
+File: ../figures/eBOSS/SchemaTelescope.png Graphic file (type png)
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+<use ../figures/eBOSS/SchemaTelescope.png>
+Package pdftex.def Info: ../figures/eBOSS/SchemaTelescope.png used on input lin
+e 149.
+(pdftex.def)             Requested size: 219.82071pt x 216.3076pt.
 
-[15 <../figures/intro/example_tf.png>]
-<../figures/intro/carte_cmb.png, id=323, 1025.8325pt x 582.175pt>
-File: ../figures/intro/carte_cmb.png Graphic file (type png)
+<../figures/eBOSS/CcdSchema.png, id=184, 764.8575pt x 755.82375pt>
+File: ../figures/eBOSS/CcdSchema.png Graphic file (type png)
 
-<use ../figures/intro/carte_cmb.png>
-Package pdftex.def Info: ../figures/intro/carte_cmb.png used on input line 490.
+<use ../figures/eBOSS/CcdSchema.png>
+Package pdftex.def Info: ../figures/eBOSS/CcdSchema.png used on input line 162.
 
-(pdftex.def)             Requested size: 307.75212pt x 174.65384pt.
-
-<../figures/intro/spectre_cmb.png, id=328, 1069.9975pt x 392.46625pt>
-File: ../figures/intro/spectre_cmb.png Graphic file (type png)
-
-<use ../figures/intro/spectre_cmb.png>
-Package pdftex.def Info: ../figures/intro/spectre_cmb.png used on input line 49
-6.
-(pdftex.def)             Requested size: 427.99142pt x 156.9837pt.
-
-
-LaTeX Warning: Command \l invalid in math mode on input line 497.
-
-
-LaTeX Warning: Command \l invalid in math mode on input line 497.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16 <../figures/intro/carte_cmb.png>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 517.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 517.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 517.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 517.
-
-
-LaTeX Warning: Reference `prov' on page 17 undefined on input line 529.
-
-
-LaTeX Warning: Reference `prov' on page 17 undefined on input line 529.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <../figures/intro/spectre_cmb.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18] <../figures/intro/bao_schema.png, id=366, 595.22375pt x 777.90625pt>
-File: ../figures/intro/bao_schema.png Graphic file (type png)
-
-<use ../figures/intro/bao_schema.png>
-Package pdftex.def Info: ../figures/intro/bao_schema.png used on input line 571
-.
-(pdftex.def)             Requested size: 297.61115pt x 388.95216pt.
-
-Underfull \vbox (badness 3058) has occurred while \output is active []
-
+(pdftex.def)             Requested size: 229.45901pt x 226.74887pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2390,18 +2207,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <../figures/intro/bao_schema.png>]
+[7 <../figures/eBOSS/SchemaTelescope.png>]
+<../figures/eBOSS/Filtres.png, id=198, 662.475pt x 664.4825pt>
+File: ../figures/eBOSS/Filtres.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:prov figure CF' on page 20 undefined on input lin
-e 592.
-
-<../figures/intro/bao_dessin.png, id=380, 1053.9375pt x 372.39125pt>
-File: ../figures/intro/bao_dessin.png Graphic file (type png)
-
-<use ../figures/intro/bao_dessin.png>
-Package pdftex.def Info: ../figures/intro/bao_dessin.png used on input line 602
-.
-(pdftex.def)             Requested size: 421.56754pt x 148.95386pt.
+<use ../figures/eBOSS/Filtres.png>
+Package pdftex.def Info: ../figures/eBOSS/Filtres.png used on input line 169.
+(pdftex.def)             Requested size: 264.9853pt x 265.78828pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2409,235 +2221,108 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20 <../figures/intro/bao_dessin.png>]
-Overfull \hbox (9.0798pt too wide) in paragraph at lines 610--612
-\T1/lmr/m/n/10.95 Ainsi, dans la di-rec-tion trans-verse à la di-rec-tion d'ob-
-ser-va-tion, l'ob-ser-va-teur me-sure le rap-port $\OML/lmm/m/it/10.95 D[]\OT1/
-lmr/m/n/10.95 (\OML/lmm/m/it/10.95 z\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 =r[
-]$\T1/lmr/m/n/10.95 .
- []
+[8 <../figures/eBOSS/CcdSchema.png>]
+<../figures/eBOSS/CartoucheImage.png, id=210, 994.71625pt x 393.47pt>
+File: ../figures/eBOSS/CartoucheImage.png Graphic file (type png)
 
-<../figures/intro/h_vs_z.png, id=394, 830.10126pt x 647.41875pt>
-File: ../figures/intro/h_vs_z.png Graphic file (type png)
+<use ../figures/eBOSS/CartoucheImage.png>
+Package pdftex.def Info: ../figures/eBOSS/CartoucheImage.png used on input line
+ 185.
+(pdftex.def)             Requested size: 348.1559pt x 137.71655pt.
 
-<use ../figures/intro/h_vs_z.png>
-Package pdftex.def Info: ../figures/intro/h_vs_z.png used on input line 642.
-(pdftex.def)             Requested size: 290.5398pt x 226.59995pt.
+<../figures/eBOSS/SchemaSpectro.png, id=217, 752.8125pt x 334.24875pt>
+File: ../figures/eBOSS/SchemaSpectro.png Graphic file (type png)
 
+<use ../figures/eBOSS/SchemaSpectro.png>
+Package pdftex.def Info: ../figures/eBOSS/SchemaSpectro.png used on input line 
+193.
+(pdftex.def)             Requested size: 376.40532pt x 167.12396pt.
+
+<../figures/eBOSS/SpectroThroughput.png, id=223, 874.26625pt x 626.34pt>
+File: ../figures/eBOSS/SpectroThroughput.png Graphic file (type png)
+
+<use ../figures/eBOSS/SpectroThroughput.png>
+Package pdftex.def Info: ../figures/eBOSS/SpectroThroughput.png used on input l
+ine 202.
+(pdftex.def)             Requested size: 305.99777pt x 219.22227pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9 <../figures/eBOSS/Filtres.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[10 <../figures/eBOSS/CartoucheImage.png> <../figures/eBOSS/SchemaSpectro.png>]
+<../figures/eBOSS/SpectroResoPower.png, id=244, 787.94376pt x 299.1175pt>
+File: ../figures/eBOSS/SpectroResoPower.png Graphic file (type png)
 
-LaTeX Warning: Command \` invalid in math mode on input line 672.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 674.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22 <../figures/intro/h_vs_z.png>]
-
-LaTeX Warning: Command \` invalid in math mode on input line 677.
-
-<../figures/intro/schema_rsd.png, id=450, 785.93625pt x 335.2525pt>
-File: ../figures/intro/schema_rsd.png Graphic file (type png)
-
-<use ../figures/intro/schema_rsd.png>
-Package pdftex.def Info: ../figures/intro/schema_rsd.png used on input line 695
-.
-(pdftex.def)             Requested size: 314.36893pt x 134.09862pt.
+<use ../figures/eBOSS/SpectroResoPower.png>
+Package pdftex.def Info: ../figures/eBOSS/SpectroResoPower.png used on input li
+ne 211.
+(pdftex.def)             Requested size: 393.97092pt x 149.55838pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[11 <../figures/eBOSS/SpectroThroughput.png>]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+<../figures/eBOSS/DesiVsEboss.png, id=262, 972.63374pt x 593.21625pt>
+File: ../figures/eBOSS/DesiVsEboss.png Graphic file (type png)
 
-LaTeX Warning: Command \` invalid in math mode on input line 720.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 725.
-
-<../figures/intro/schema_qso2.png, id=469, 474.77374pt x 316.18124pt>
-File: ../figures/intro/schema_qso2.png Graphic file (type png)
-
-<use ../figures/intro/schema_qso2.png>
-Package pdftex.def Info: ../figures/intro/schema_qso2.png used on input line 73
+<use ../figures/eBOSS/DesiVsEboss.png>
+Package pdftex.def Info: ../figures/eBOSS/DesiVsEboss.png used on input line 23
 6.
-(pdftex.def)             Requested size: 322.84187pt x 215.0004pt.
-
-<../figures/intro/qso_jets.png, id=475, 627.34375pt x 415.5525pt>
-File: ../figures/intro/qso_jets.png Graphic file (type png)
-
-<use ../figures/intro/qso_jets.png>
-Package pdftex.def Info: ../figures/intro/qso_jets.png used on input line 744.
-(pdftex.def)             Requested size: 250.93304pt x 166.21805pt.
-
+(pdftex.def)             Requested size: 291.79237pt x 177.96625pt.
+ (./2.bbl
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24 <../figures/intro/schema_rsd.png>]
-<../figures/intro/spectre_qso.png, id=492, 1119.18124pt x 434.62375pt>
-File: ../figures/intro/spectre_qso.png Graphic file (type png)
-
-<use ../figures/intro/spectre_qso.png>
-Package pdftex.def Info: ../figures/intro/spectre_qso.png used on input line 75
-3.
-(pdftex.def)             Requested size: 447.66457pt x 173.8464pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 757.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[12 <../figures/eBOSS/SpectroResoPower.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <../figures/intro/schema_qso2.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[26 <../figures/intro/qso_jets.png> <../figures/intro/spectre_qso.png>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 798.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 798.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 798.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 798.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 798.
-
-<../figures/intro/schema_lya.png, id=514, 1092.08pt x 227.85126pt>
-File: ../figures/intro/schema_lya.png Graphic file (type png)
-
-<use ../figures/intro/schema_lya.png>
-Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 808
-.
-(pdftex.def)             Requested size: 436.82426pt x 91.13889pt.
-
-<../figures/intro/foret_lya.png, id=516, 1160.335pt x 669.50125pt>
-File: ../figures/intro/foret_lya.png Graphic file (type png)
-
-<use ../figures/intro/foret_lya.png>
-Package pdftex.def Info: ../figures/intro/foret_lya.png used on input line 821.
-
-(pdftex.def)             Requested size: 406.12334pt x 234.32895pt.
-
-
-Package natbib Warning: Citation `prov:LyaDR16' on page 27 undefined on input l
-ine 826.
-
-
-Package natbib Warning: Citation `prov:LyaDR16' on page 27 undefined on input l
-ine 826.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[27 <../figures/intro/schema_lya.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28 <../figures/intro/foret_lya.png>]
-
-LaTeX Warning: Command \` invalid in math mode on input line 859.
-
-
-Package mathptmx Warning: There are no bold math fonts on input line 864.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 875.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[29]
-
-Package natbib Warning: Citation `CITE DR16' on page 30 undefined on input line
- 906.
-
-
-LaTeX Warning: Reference `prov' on page 30 undefined on input line 910.
-
-<../figures/intro/exemple_dla.png, id=560, 1154.3125pt x 409.53pt>
-File: ../figures/intro/exemple_dla.png Graphic file (type png)
-
-<use ../figures/intro/exemple_dla.png>
-Package pdftex.def Info: ../figures/intro/exemple_dla.png used on input line 91
-3.
-(pdftex.def)             Requested size: 461.71683pt x 163.80908pt.
- (./1.bbl
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[30]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[31 <../figures/intro/exemple_dla.png>] [32
+[13 <../figures/eBOSS/DesiVsEboss.png>] [14
 
 ]
 Overfull \hbox (2.43333pt too wide) in paragraph at lines 1--1
 | []| 
  []
 
-[33]
+[15]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 313--319
-[]$\T1/lmtt/m/n/10.95 http : / / articles . adsabs . harvard . edu / cgi-[]bin 
-/ nph-[]iarticle{_}query ? 1992ApJ . . . 385L . . .
- []
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2645,14 +2330,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35])
+[18]
 
-Package natbib Warning: There were undefined citations.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[19]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
-(minitoc)             Creating the 1.maf file.
-\openout3 = `1.maf'.
+(minitoc)             Creating the 2.maf file.
+\openout3 = `2.maf'.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2660,60 +2364,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 921.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 921.
- (./1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 921.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 921.
-Package rerunfilecheck Info: File `1.out' has not changed.
-(rerunfilecheck)             Checksum: 3E43D8BB5A7638383D518C8C31849E0C;1352.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 921.
+[22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 242.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
+ (./2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 242.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 242.
+Package rerunfilecheck Info: File `2.out' has not changed.
+(rerunfilecheck)             Checksum: 81DFF48EF76B8D9596CC95A784D73824;817.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
  ) 
 Here is how much of TeX's memory you used:
- 29940 strings out of 492995
- 541781 string characters out of 6132704
- 719698 words of memory out of 5000000
- 32655 multiletter control sequences out of 15000+600000
- 143297 words of font info for 115 fonts, out of 8000000 for 9000
+ 30247 strings out of 492995
+ 542871 string characters out of 6132704
+ 725079 words of memory out of 5000000
+ 33093 multiletter control sequences out of 15000+600000
+ 102641 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,21n,50p,10403b,1070s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
-, replaced by a fixed one
+ 42i,13n,50p,10403b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
+st, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
 , replaced by a fixed one
@@ -2734,37 +2404,27 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
-l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017
-/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dis
-t/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dv
-ips/lm/lm-ts1.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mat
-hex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/lm/lmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi
-7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
-7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1.pdf (36 pages, 3649040 bytes).
+l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017
+/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2017/texmf-dist/f
+onts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/d
+vips/lm/lm-rm.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmb
+x10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/lm/lmtt10.pfb>
+Output written on 2.pdf (22 pages, 1612043 bytes).
 PDF statistics:
- 755 PDF objects out of 1000 (max. 8388607)
- 620 compressed objects within 7 object streams
- 199 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

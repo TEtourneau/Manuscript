@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -193,5 +193,14 @@ Zhiyuan Guo and Paul Martini.
 \newblock \doi{10.3847/1538-4357/ab2590}.
 \newblock URL \url{http://arxiv.org/abs/1901.04506
   http://dx.doi.org/10.3847/1538-4357/ab2590}.
+
+\bibitem[McDonald et~al.(2006)McDonald, Seljak, and et~al.
+  Burles]{mcdonald_ly_2006}
+P~McDonald, U~Seljak, and et~al. Burles.
+\newblock {The {\{}Ly$\alpha${\}} {\{}Forest{\}} {\{}Power{\}} {\{}Spectrum{\}}
+  from the {\{}Sloan{\}} {\{}Digital{\}} {\{}Sky{\}} {\{}Survey{\}}}.
+\newblock \emph{{\{}$\backslash$textbackslash{\}}apjs}, 163:\penalty0 80--109,
+  mar 2006.
+\newblock \doi{10.1086/444361}.
 
 \end{thebibliography}
