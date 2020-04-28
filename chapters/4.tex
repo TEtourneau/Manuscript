@@ -1,8 +1,44 @@
 % created on 2019-12-13
 % @author : bmazoyer
 
-\chapter{Chap4}
+%% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
+
+\begin{document}
+%%
+
+\graphicspath{ {../figures/donnees/} }
+
+\chapter{Réalisation des mocks}
 \minitoc
 \newpage
 \thispagestyle{fancy}
 
+Dans ce chapitre, nous présentons la construction des \emph{mocks} : des simulations qui visent à reproduire les données d'eBOSS et de DESI. Ces mocks, nommés \texttt{SaclayMocks}\footnote{https://github.com/igmhub/SaclayMocks} et présentés dans \citet{CITE:mocks}, sont le c{\oe}ur de ce manuscrit. L'utilisation de ces mocks et leur validation seront présentés dans les chapitres suivants.
+
+\section{Objectifs des mocks}
+% Les mocks s'inscrivent dans le projet DESI, et sont utilisés dans l'analyse finale des données eBOSS \citep{CITE:dr16}.
+Contrairement à ce qu'on appelle les simulations, les mocks ne contiennent pas de physique à proprement parler : ils ne sont pas utilisés afin de déduire des paramètres astrophysiques. Certaines simulations, les simulations hydrodynamiques, permettent de mesurer des effets astrophysiques, comme par exemple le biais de l'hydrogêne ou du \lya{}. Mais ces simulations sont très couteuses car elles nécessitent de modéliser les effets physiques qui affectent les paramètres mesurés.
+Les mocks, quant à eux, sont conçus afin de répliquer fidèlement un jeu de données, dans le but de tester l'analyse qui sera appliquée sur ces données.
+% Dans le cas de l'analyse \lya{} d'eBOSS et de DESI, les mocks sont utilisés afin
+Les mocks sont donc utilisés afin
+\begin{itemize}[label=$\bullet$]
+\item de vérifier la mesure des paramètres $\apar{}$, $\aperp{}$ : cette mesure est-elle non biaisée ?
+\item d'identifier les potentielles systématiques : la présence de métaux et d'HCD dans les données est-elle bien modélisée ? Affecte-t-elle la mesure de $\apar{}$, $\aperp{}$ ?
+\item de tester la matrice de distorsion : la distorsion due à l'ajustement du continuum du quasar est-elle correctement prise en compte par la matrice de distorsion ?
+\item de vérifier le calcul de la matrice de covariance : la matrice de covariance, calculée à partir des données, est-elle bien estimée ?
+\end{itemize}
+La production et l'analyse d'un grand nombre de mocks permet de répondre précisément à ces questions. Ces mocks sont donc nécessaires pour pouvoir valider l'analyse menée sur les données.
+
+\paragraph{}
+Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} finale des données eBOSS \citep{CITE:dr16}, et seront utilisés dans l'analyse \lya{} de DESI.
+L'objectif de ces mocks est donc de répliquer fidèlement les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\perh\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\perh\kpc}. Les mocks nécessitent donc de reproduire un volume imense, avec une bonne résolution.
+Les simulations dites N-body sont des simulations qui traitent le problème à N corps. Elles sont initialisées avec une distribution de matière noire, représentée par des particules de masse $\sim 10^{9}$, à un redshift élevé ($z > 100$). Puis, à chaque pas de temps, les particules sont déplacées en considérant uniquement les interactions gravitationnelles. Le champ de matière initial évolue ainsi jusqu'à $z=0$. Ces simulations sont très utiles pour étudier les effets de la gravité à grande échelle. Cependant elles ne sont pas adaptées à notre utilisation : afin d'avoir la résolution et le volume requis, la simulation nécessiterait beaucoup trop de particules pour être réalisable dans un temps raisonnable.
+Les simulations hydrodynamiques fonctionnent de la même manière que les simulations N-body. Elles incluent, en plus des particules de matière noire, la physique baryonique présente dans le milieu galactique. Les baryons sont aussi représentés par des particules. La densité, pression et la tempéature sont tracées dans chaque cellule. Certains effets astrophysiques, comme les supernovae ou les AGN peuvent aussi être présents. Cependant, ces simulations ne sont pas non plus adaptées à notre utilisation car le volume d'univers simulé est bien trop petit : quelques dizaines de \si{\perh\cubic\Mpc}.
+Ainsi, avoir un grand volume et une grande résolution requiert l'utilisation des \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field). Ce sont des champs qui en chaque point prennent une valeur aléatoire selon une statistique gaussienne. Une fois générés, il est possible de donner à ces champs n'importe quelle fonction de corrélation, en utilisant la transformation de Fourier. Les GRF sont donc idéaux pour simuler le champ de matière à grande échelle. Cependant, l'utilisation des GRF ne donne pas accès aux non linéaritées qui peuvent émerger dans l'évolution des similutaions N-body et hydrodynamiques. La seule information provient de la fonction de corrélation que l'on applique au GRF. Mais cela est entièrement suffisant pour l'utilisation que nous en avons dans ce manuscrit.
+
+
+
+\bibliography{../source/library}
+\end{document}
