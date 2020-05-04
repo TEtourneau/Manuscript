@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 APR 2020 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 MAY 2020 11:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1962,15 +1962,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 225.
+(hyperref)                removing `math shift' on input line 226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 225.
+(hyperref)                removing `\alpha' on input line 226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 225.
+(hyperref)                removing `math shift' on input line 226.
 
 ) (./2.aux)
 \openout1 = `2.aux'.
@@ -2190,14 +2190,14 @@ File: ../figures/eBOSS/SchemaTelescope.png Graphic file (type png)
 
 <use ../figures/eBOSS/SchemaTelescope.png>
 Package pdftex.def Info: ../figures/eBOSS/SchemaTelescope.png used on input lin
-e 149.
+e 150.
 (pdftex.def)             Requested size: 219.82071pt x 216.3076pt.
 
 <../figures/eBOSS/CcdSchema.png, id=184, 764.8575pt x 755.82375pt>
 File: ../figures/eBOSS/CcdSchema.png Graphic file (type png)
 
 <use ../figures/eBOSS/CcdSchema.png>
-Package pdftex.def Info: ../figures/eBOSS/CcdSchema.png used on input line 162.
+Package pdftex.def Info: ../figures/eBOSS/CcdSchema.png used on input line 163.
 
 (pdftex.def)             Requested size: 229.45901pt x 226.74887pt.
 
@@ -2212,7 +2212,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: ../figures/eBOSS/Filtres.png Graphic file (type png)
 
 <use ../figures/eBOSS/Filtres.png>
-Package pdftex.def Info: ../figures/eBOSS/Filtres.png used on input line 169.
+Package pdftex.def Info: ../figures/eBOSS/Filtres.png used on input line 170.
 (pdftex.def)             Requested size: 264.9853pt x 265.78828pt.
 
 
@@ -2227,24 +2227,19 @@ File: ../figures/eBOSS/CartoucheImage.png Graphic file (type png)
 
 <use ../figures/eBOSS/CartoucheImage.png>
 Package pdftex.def Info: ../figures/eBOSS/CartoucheImage.png used on input line
- 185.
+ 186.
 (pdftex.def)             Requested size: 348.1559pt x 137.71655pt.
+
+
+Package mathptmx Warning: There are no bold math fonts on input line 192.
 
 <../figures/eBOSS/SchemaSpectro.png, id=217, 752.8125pt x 334.24875pt>
 File: ../figures/eBOSS/SchemaSpectro.png Graphic file (type png)
 
 <use ../figures/eBOSS/SchemaSpectro.png>
 Package pdftex.def Info: ../figures/eBOSS/SchemaSpectro.png used on input line 
-193.
+198.
 (pdftex.def)             Requested size: 376.40532pt x 167.12396pt.
-
-<../figures/eBOSS/SpectroThroughput.png, id=223, 874.26625pt x 626.34pt>
-File: ../figures/eBOSS/SpectroThroughput.png Graphic file (type png)
-
-<use ../figures/eBOSS/SpectroThroughput.png>
-Package pdftex.def Info: ../figures/eBOSS/SpectroThroughput.png used on input l
-ine 202.
-(pdftex.def)             Requested size: 305.99777pt x 219.22227pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2253,37 +2248,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9 <../figures/eBOSS/Filtres.png>]
+<../figures/eBOSS/SpectroThroughput.png, id=233, 874.26625pt x 626.34pt>
+File: ../figures/eBOSS/SpectroThroughput.png Graphic file (type png)
+
+<use ../figures/eBOSS/SpectroThroughput.png>
+Package pdftex.def Info: ../figures/eBOSS/SpectroThroughput.png used on input l
+ine 207.
+(pdftex.def)             Requested size: 305.99777pt x 219.22227pt.
+
+<../figures/eBOSS/SpectroResoPower.png, id=239, 787.94376pt x 299.1175pt>
+File: ../figures/eBOSS/SpectroResoPower.png Graphic file (type png)
+
+<use ../figures/eBOSS/SpectroResoPower.png>
+Package pdftex.def Info: ../figures/eBOSS/SpectroResoPower.png used on input li
+ne 216.
+(pdftex.def)             Requested size: 393.97092pt x 149.55838pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <../figures/eBOSS/CartoucheImage.png> <../figures/eBOSS/SchemaSpectro.png>]
-<../figures/eBOSS/SpectroResoPower.png, id=244, 787.94376pt x 299.1175pt>
-File: ../figures/eBOSS/SpectroResoPower.png Graphic file (type png)
-
-<use ../figures/eBOSS/SpectroResoPower.png>
-Package pdftex.def Info: ../figures/eBOSS/SpectroResoPower.png used on input li
-ne 211.
-(pdftex.def)             Requested size: 393.97092pt x 149.55838pt.
-
+[10 <../figures/eBOSS/CartoucheImage.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <../figures/eBOSS/SpectroThroughput.png>]
-(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
+[11 <../figures/eBOSS/SchemaSpectro.png> <../figures/eBOSS/SpectroThroughput.pn
+g>] (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<../figures/eBOSS/DesiVsEboss.png, id=262, 972.63374pt x 593.21625pt>
+<../figures/eBOSS/DesiVsEboss.png, id=263, 972.63374pt x 593.21625pt>
 File: ../figures/eBOSS/DesiVsEboss.png Graphic file (type png)
 
 <use ../figures/eBOSS/DesiVsEboss.png>
-Package pdftex.def Info: ../figures/eBOSS/DesiVsEboss.png used on input line 23
-6.
+Package pdftex.def Info: ../figures/eBOSS/DesiVsEboss.png used on input line 24
+1.
 (pdftex.def)             Requested size: 291.79237pt x 177.96625pt.
  (./2.bbl
 
@@ -2365,23 +2368,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 242.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
  (./2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 242.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 242.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
 Package rerunfilecheck Info: File `2.out' has not changed.
 (rerunfilecheck)             Checksum: 81DFF48EF76B8D9596CC95A784D73824;817.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
  ) 
 Here is how much of TeX's memory you used:
- 30247 strings out of 492995
- 542871 string characters out of 6132704
- 725079 words of memory out of 5000000
- 33093 multiletter control sequences out of 15000+600000
- 102641 words of font info for 91 fonts, out of 8000000 for 9000
+ 30252 strings out of 492995
+ 542951 string characters out of 6132704
+ 725067 words of memory out of 5000000
+ 33097 multiletter control sequences out of 15000+600000
+ 106912 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,50p,10403b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,50p,10403b,1067s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2409,22 +2412,23 @@ l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017
 onts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/d
 vips/lm/lm-rm.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmb
 x10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
-/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmtt10.pfb>
-Output written on 2.pdf (22 pages, 1612043 bytes).
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmt
+t10.pfb>
+Output written on 2.pdf (22 pages, 1627934 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 349 compressed objects within 4 object streams
+ 424 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
  83 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
