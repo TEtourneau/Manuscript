@@ -786,19 +786,19 @@ La grande luminosité des quasars les rend observables à très grand redshift, 
 Les quasars sont donc des objets idéaux pour construire un relevé spectroscopique étendu et à grand redshift, et ainsi sonder l'échelle BAO sur un grand volume d'univers. De plus, comme expliqué précédemment, les quasars sont des objets qui se forment dans des environnements très dense. Ils constituent donc un traceur très biaisé. Le biais des quasars est mesuré par \citet{Laurent2017}. Nous le paramétrisons ici comme
 % \begin{equation}
 %   \label{eq:b_qso}
-%  b_{QSO}(z) = (0.53 \pm 0.19) + (0.289 \pm 0.035)(1 + z)^2 ,
+%  b_{\textsc{QSO}}(z) = (0.53 \pm 0.19) + (0.289 \pm 0.035)(1 + z)^2 ,
 % \end{equation}
 % ou Laurent et al (ce qu'il y a dans les mocks):
 \begin{equation}
   \label{eq:b_qso}
-b_{QSO}(z) = 3.7 \left(\frac{1+z}{1+2.33}\right)^{1.7}  \; .
+b_{\textsc{QSO}}(z) = 3.7 \left(\frac{1+z}{1+2.33}\right)^{1.7}  \; .
 \end{equation} 
 % ou ce qu'il y a dans picca (et dans le papier DR16):
 % \begin{equation}
 %   \label{eq:b_qso}
-% b_{QSO}(z) = 3.77 ( \frac{1+z}{3.334} )^{1.44} .
+% b_{\textsc{QSO}}(z) = 3.77 ( \frac{1+z}{3.334} )^{1.44} .
 % \end{equation} 
-Le paramètre RSD des quasars est donné par $\beta_{QSO} = f / b_{QSO}$. En bonne approximation, pour $z > 2$, $f = \Omega_m^{\num{0.55}} \sim 1$. 
+Le paramètre RSD des quasars est donné par $\beta_{\textsc{QSO}} = f / b_{\textsc{QSO}}$. En bonne approximation, pour $z > 2$, $f = \Omega_m^{\num{0.55}} \sim 1$. 
 
 
 \subsection{La forêt \lya{}}
@@ -812,14 +812,14 @@ La figure~\ref{fig:schema_lya} schématise la situation.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{schema_lya}
-  \caption{Schéma illustratif de l'absorption le long de la ligne de visée d'un quasar. L'observateur, à $z=0$ est représenté par le télescope. Le quasar, à $z_{QSO}$ est représenté par l'étoile jaune. Les absorbeurs le long de la ligne de visée sont représentés par les nuages, aux redshifts $z_{1}$, $z_{2}$ et $z_{3}$.}
+  \caption{Schéma illustratif de l'absorption le long de la ligne de visée d'un quasar. L'observateur, à $z=0$ est représenté par le télescope. Le quasar, à $z_{\textsc{QSO}}$ est représenté par l'étoile jaune. Les absorbeurs le long de la ligne de visée sont représentés par les nuages, aux redshifts $z_{1}$, $z_{2}$ et $z_{3}$.}
   \label{fig:schema_lya}
 \end{figure}
-Un quasar, situé à un redshift $z_{QSO}$ émet de la lumière jusqu'à un observateur situé sur terre, à $z=0$. Trois absorbeurs sont disposés le long de la ligne de visée, à des redshifts $z_1$, $z_2$ et $z_3$. Ils appartiennent aux structures à grande échelle de l'univers. L'hydrogène neutre et non excité présent dans ces absorbeurs peut absorber les photons issus du quasar.
+Un quasar, situé à un redshift $z_{\textsc{QSO}}$ émet de la lumière jusqu'à un observateur situé sur terre, à $z=0$. Trois absorbeurs sont disposés le long de la ligne de visée, à des redshifts $z_1$, $z_2$ et $z_3$. Ils appartiennent aux structures à grande échelle de l'univers. L'hydrogène neutre et non excité présent dans ces absorbeurs peut absorber les photons issus du quasar.
 % Nous supposons que ces absorbeurs absorbent uniquement en \lya{} :
 D'autres absorptions peuvent avoir lieu. Mais, en première approximation, nous pouvons considérer que ces absorbeurs absorbent uniquement en \lya{}.
 Les photons possédant une longueur d'onde $\lambda_{\mathrm{Ly}\alpha} = \SI{1215.67}{\angstrom}$ dans le référentiel de l'absorbeur sont donc absorbés par l'hydrogène neutre et l'électron de ce dernier effectue une transition électronique des couches $n=1$ à $n=2$. Plus l'absorbeur est dense, plus le nombre de photons absorbés est important. Considérons à présent l'absorbeur 1.
-L'absorption \lya{} s'effectue dans son référentiel à $\lambda_{\mathrm{RF}} = \lambda_{\mathrm{Ly}\alpha}$, ce qui correspond, dans le référentiel de l'observateur, à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{1})$. De plus, la longueur d'onde correspondant à la raie d'émission du \lya{} du quasar dans le référentiel de l'observateur est $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{QSO})$. Ainsi, comme $z_1 < z_{QSO}$, l'observateur identifie une raie d'absorption à une longueur d'onde plus faible que la raie d'émission \lya{} dans le spectre du quasar. Il en est de même pour les 2\up{ème} et 3\up{ème} absorbeurs : le spectre observé présente une raie d'absorption à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{2})$ et à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{3})$. Le mécanisme se généralise pour tous les absorbeurs présents le long de la ligne de visée. Chaque absorbeur crée une raie d'absorption, à une longueur d'onde plus faible que la raie d'émission \lya{}. Ainsi, la région du spectre à gauche de la raie \lya{} contient toute une série de raies d'absorption. Cette région s'appelle la forêt \lya{}. Elle est visible sur la figure~\ref{fig:spectre_qso}. Ce même processus est à l'oeuvre pour la raie \lyb{}, et pour toutes les autres raies d'émission présentes dans le spectre.
+L'absorption \lya{} s'effectue dans son référentiel à $\lambda_{\mathrm{RF}} = \lambda_{\mathrm{Ly}\alpha}$, ce qui correspond, dans le référentiel de l'observateur, à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{1})$. De plus, la longueur d'onde correspondant à la raie d'émission du \lya{} du quasar dans le référentiel de l'observateur est $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{\textsc{QSO}})$. Ainsi, comme $z_1 < z_{\textsc{QSO}}$, l'observateur identifie une raie d'absorption à une longueur d'onde plus faible que la raie d'émission \lya{} dans le spectre du quasar. Il en est de même pour les 2\up{ème} et 3\up{ème} absorbeurs : le spectre observé présente une raie d'absorption à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{2})$ et à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{3})$. Le mécanisme se généralise pour tous les absorbeurs présents le long de la ligne de visée. Chaque absorbeur crée une raie d'absorption, à une longueur d'onde plus faible que la raie d'émission \lya{}. Ainsi, la région du spectre à gauche de la raie \lya{} contient toute une série de raies d'absorption. Cette région s'appelle la forêt \lya{}. Elle est visible sur la figure~\ref{fig:spectre_qso}. Ce même processus est à l'oeuvre pour la raie \lyb{}, et pour toutes les autres raies d'émission présentes dans le spectre.
 % \textbf{Cependant, il est beaucoup plus marqué pour la forêt \lya{}, grâce à la grande section efficace de la transition associée.}
 Cependant, il est beaucoup plus marqué pour la forêt \lya{}. Ceci vient de l'abondance de l'hydrogène dans le milieu intergalactique, et aussi de la grande section efficace de la transition \lya{}.
 \begin{figure}

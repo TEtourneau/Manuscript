@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 MAY 2020 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 MAY 2020 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2162,9 +2162,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
-LaTeX Warning: Reference `prov' on page 4 undefined on input line 75.
-
-
 LaTeX Warning: Reference `subsec:lya' on page 4 undefined on input line 79.
 
 
@@ -2183,7 +2180,7 @@ LaTeX Warning: Command \` invalid in math mode on input line 90.
 LaTeX Warning: Command \` invalid in math mode on input line 90.
 
 
-LaTeX Warning: Reference `eq:delta_z' on page 4 undefined on input line 102.
+LaTeX Warning: Reference `eq:delta_z' on page 4 undefined on input line 103.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2193,22 +2190,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 
-LaTeX Warning: Command \` invalid in math mode on input line 104.
+LaTeX Warning: Command \` invalid in math mode on input line 105.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 107.
+LaTeX Warning: Command \` invalid in math mode on input line 108.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 107.
+LaTeX Warning: Command \` invalid in math mode on input line 108.
 
 
-LaTeX Warning: Reference `prov' on page 5 undefined on input line 128.
+LaTeX Warning: Reference `eq:dist_como' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Reference `eq:dist_como' on page 5 undefined on input line 171.
-
-
-LaTeX Warning: Reference `eq:par_cosmo' on page 5 undefined on input line 171.
+LaTeX Warning: Reference `eq:par_cosmo' on page 5 undefined on input line 174.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2218,34 +2212,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 
-Package caption Warning: \label without proper reference on input line 185.
+Package caption Warning: \label without proper reference on input line 188.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:kz' on page 6 undefined on input line 182.
+LaTeX Warning: Reference `fig:kz' on page 6 undefined on input line 185.
 
-<../figures/mocks/kz.png, id=111, 667.49374pt x 427.5975pt>
+<../figures/mocks/kz.png, id=122, 667.49374pt x 427.5975pt>
 File: ../figures/mocks/kz.png Graphic file (type png)
 
 <use ../figures/mocks/kz.png>
-Package pdftex.def Info: ../figures/mocks/kz.png used on input line 186.
+Package pdftex.def Info: ../figures/mocks/kz.png used on input line 189.
 (pdftex.def)             Requested size: 266.99277pt x 171.03596pt.
 
 
-LaTeX Warning: Reference `fig:dndz_qso' on page 6 undefined on input line 206.
+LaTeX Warning: Reference `fig:dndz_qso' on page 6 undefined on input line 209.
 
-<../figures/mocks/dndz_qso.png, id=115, 604.2575pt x 487.8225pt>
+<../figures/mocks/dndz_qso.png, id=126, 604.2575pt x 487.8225pt>
 File: ../figures/mocks/dndz_qso.png Graphic file (type png)
 
 <use ../figures/mocks/dndz_qso.png>
-Package pdftex.def Info: ../figures/mocks/dndz_qso.png used on input line 209.
+Package pdftex.def Info: ../figures/mocks/dndz_qso.png used on input line 212.
 (pdftex.def)             Requested size: 302.128pt x 243.91064pt.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 226.
+LaTeX Warning: Command \` invalid in math mode on input line 230.
 
 
-LaTeX Warning: Reference `prov' on page 6 undefined on input line 227.
+LaTeX Warning: Reference `prov' on page 6 undefined on input line 231.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2255,10 +2249,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6 <../figures/mocks/kz.png>]
 
-LaTeX Warning: Command \` invalid in math mode on input line 238.
+LaTeX Warning: Command \` invalid in math mode on input line 244.
 
 
-LaTeX Warning: Reference `prov' on page 7 undefined on input line 238.
+LaTeX Warning: Command \` invalid in math mode on input line 251.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2266,7 +2260,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <../figures/mocks/dndz_qso.png>] (./4.bbl
+[7 <../figures/mocks/dndz_qso.png>]
+
+LaTeX Warning: Command \` invalid in math mode on input line 255.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 266.
+
+
+LaTeX Warning: Reference `prov' on page 8 undefined on input line 271.
+
+
+LaTeX Warning: Reference `prov' on page 8 undefined on input line 275.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 284.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 284.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -2274,6 +2286,69 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+
+LaTeX Warning: Reference `prov' on page 9 undefined on input line 290.
+
+
+Package natbib Warning: Citation `Farr2019' on page 9 undefined on input line 2
+93.
+
+
+Package natbib Warning: Citation `Font-Ribera2012' on page 9 undefined on input
+ line 295.
+
+
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+
+Package natbib Warning: Citation `hamilton_measuring_1992' on page 10 undefined
+ on input line 334.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 337.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10] <../figures/mocks/distrib_dla.png, id=194, 1086.0575pt x 445.665pt>
+File: ../figures/mocks/distrib_dla.png Graphic file (type png)
+
+<use ../figures/mocks/distrib_dla.png>
+Package pdftex.def Info: ../figures/mocks/distrib_dla.png used on input line 37
+2.
+(pdftex.def)             Requested size: 412.70613pt x 169.35446pt.
+
+
+LaTeX Warning: Reference `prov' on page 11 undefined on input line 384.
+
+
+LaTeX Warning: Reference `prov' on page 11 undefined on input line 388.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11 <../figures/mocks/distrib_dla.png>] (./4.bbl
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
 Overfull \hbox (2.43333pt too wide) in paragraph at lines 1--1
 | []| 
  []
@@ -2287,32 +2362,41 @@ Package minitoc Info: I0009
 (minitoc)             Creating the 4.maf file.
 \openout3 = `4.maf'.
 
-[9
+[13
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 400.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 400.
  (./4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 400.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 400.
 Package rerunfilecheck Info: File `4.out' has not changed.
-(rerunfilecheck)             Checksum: 7AA216A4E7F454E2B7CEE2FB4E4A8397;519.
+(rerunfilecheck)             Checksum: 3D1EEC5BBEE1C1B6C945095A9DE39DEF;651.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 400.
  ) 
 Here is how much of TeX's memory you used:
- 29248 strings out of 492995
- 530930 string characters out of 6132704
+ 29311 strings out of 492995
+ 531885 string characters out of 6132704
  706254 words of memory out of 5000000
- 32143 multiletter control sequences out of 15000+600000
- 94585 words of font info for 74 fonts, out of 8000000 for 9000
+ 32173 multiletter control sequences out of 15000+600000
+ 103171 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,45p,10403b,807s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
+ 42i,14n,45p,10403b,842s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
@@ -2323,30 +2407,31 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/te
-xlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017
-/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fo
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
+xlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/tex
+mf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fo
 nts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dv
 ips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-
 ts1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy
-6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 4.pdf (9 pages, 394656 bytes).
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy1
+0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on 4.pdf (13 pages, 548849 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 55 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 MAY 2020 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 MAY 2020 09:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2197,6 +2197,10 @@ Package natbib Warning: Citation `CITE:dr16' on page 4 undefined on input line
 87.
 
 
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 96.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
@@ -2308,16 +2312,19 @@ Package rerunfilecheck Info: File `3.out' has not changed.
 (rerunfilecheck)             Checksum: F1244135CE8A32CDF5624A370E6DE4D8;523.
 
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
  ) 
 Here is how much of TeX's memory you used:
- 29269 strings out of 492995
- 530984 string characters out of 6132704
+ 29279 strings out of 492995
+ 531110 string characters out of 6132704
  709254 words of memory out of 5000000
- 32161 multiletter control sequences out of 15000+600000
- 118792 words of font info for 101 fonts, out of 8000000 for 9000
+ 32169 multiletter control sequences out of 15000+600000
+ 130368 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,48p,10403b,1089s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
@@ -2332,27 +2339,28 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
 l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017
 /texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-dis
-t/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/en
-c/dvips/lm/lm-ec.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
+t/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dv
+ips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
 lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-r10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
-msy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 3.pdf (11 pages, 798110 bytes).
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
+ublic/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
+mi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
+sy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on 3.pdf (11 pages, 813199 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
+ 263 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
  48 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
