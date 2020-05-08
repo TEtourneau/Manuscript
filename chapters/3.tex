@@ -17,7 +17,7 @@
 
 Dans le chapitre précédent, nous présentions l'instrument SDSS et le relevé eBOSS.
 % Nous présentons ici, comment des photons acquis avec les CCD, les spectres sont déduits, puis comment du spectre de chaque quasar, le champ d'absortion est reconstruit.
-\textbf{Nous présentons ici comment les spectres sont déduits des photons acquis avec les CCD, puis comment le champ d'absorption est reconstruit à partir de chaque spectre.}
+Nous présentons ici comment les spectres sont déduits des photons acquis par les CCD, puis comment le spectre d'absorption est reconstruit à partir de chaque spectre.
 
 \section{Réduction des données}
 L'observation de chaque plaque fournit des données en deux dimensions : la première correspond aux différentes longueurs d'onde, la seconde aux différentes fibres (voir figure~\ref{fig:photo_ccd}). La chaîne de réduction des données transforme ces informations en une liste de spectres.
@@ -28,7 +28,7 @@ Enfin, pour chaque objet, toutes les expositions sont ajoutées pour former un s
 
 \paragraph{}
 Les données que nous utilisons dans ce manuscript ont été rendues publiques lors de la seixième publication de données SDSS (DR16\footnote{https://www.sdss.org/dr16/}). Elles sont décrites par \citet{Ahumada2019}.
-\begin{figure}
+\begin{figure}[b]
   \centering
   \includegraphics[scale=0.8]{photo_ccd.pdf}
   \caption{Photographie d'un capteur CCD. L'axe des absysses indique le numéro de la fibre optique. L'axe des ordonnées donne la longueur d'onde observée.}
@@ -36,7 +36,7 @@ Les données que nous utilisons dans ce manuscript ont été rendues publiques l
 \end{figure}
 
 \section{Le catalogue de quasar}
-Une fois les spectres extraits, il est important de les classifier afin de construire des catalogues utilisables par les différentes analyses. Pour ce faire, chaque spectre est traité par le pipeline de SDSS, décrite par \citet{bolton_spectral_2012}.
+Une fois les spectres extraits, il est important de les classifier afin de construire des catalogues utilisables par les différentes analyses. Pour ce faire, chaque spectre est traité par le pipeline de SDSS, décrit par \citet{bolton_spectral_2012}.
 % A chaque spectre est ajusté plusieurs modèles d'étoiles, de galaxies et de quasars. Les modèles sont construits en utilisant les \emph{PCA templates} : des spectres typiques qui sont combinés afin d'ajuster au mieux le spectre à classifier.
 \textbf{Plusieurs modèles d'étoiles, de galaxies et de quasars sont ajustés à chaque spectre. Ces modèles sont construits à l'aide de l'analyse en composantes principales (PCA). Cette analyse fournit des spectres typiques de complexités différentes, le moins complexe étant la moyenne. Les différents spectres sont alors pondérés et combinés afin de construire un modèle qui ajuste au mieux le spectre à classifier.}
 Une fois tous les modèles ajustés, ils sont triés selon leur $\chi^{2}$ réduit. Le spectre est alors classifié selon le modèle possédant le plus faible $\chi^{2}$ réduit.
@@ -59,13 +59,12 @@ Tous les quasars du relevé BOSS ont été inspectés visuellement \citep{Paris2
 Cependant, à cause du grand nombre de quasars observés par eBOSS (voir figure~\ref{fig:quasar_number}), l'observation visuelle n'a pas pu être effectuée pour tous ces objets.
 % Une deuxième classification, fondée sur le pipeline de SDSS, est alors appliquée \citep{CITE:Lyke in prep}.
 % Elle est complétée par l'algorithme \texttt{QuasarNET} \citep{Busca2018} afin de réduire le nombre de mauvaises et non-identifications, et donc le nombre d'inspections visuelles nécessaires. Grâce à \texttt{QuasarNET}, ce chiffre est réduit à \SI{0.6}{\percent} des spectres, soit \num{8581} spectres. Une sous-échantillon du superset est alors construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
-\textbf{Afin de vérifier la première identification faite par le pipeline de SDSS, une seconde classification est alors effectuée \citep{CITE:Lyke in prep}. Elle est complétée par l'algorithme \texttt{QuasarNET} \citep{Busca2018}. Ceci réduit le nombre de mauvaises identifications et donc le nombre d'inspections visuelles requises. A la fin, \SI{0.6}{\percent} des spectres, soit \num{8581} spectres, requièrent une inspection visuelle.
-}
+Afin de vérifier la première identification faite par le pipeline de SDSS, une seconde classification est alors effectuée \citep{CITE:Lyke in prep}. Elle est complétée par l'algorithme \texttt{QuasarNET} \citep{Busca2018}. Ceci réduit le nombre d'identifications douteuses et donc le nombre d'inspections visuelles requises. A la fin, \SI{0.6}{\percent} des spectres, soit \num{8581} spectres, requièrent une inspection visuelle.
 
 Une fois les spectres classifiés, un sous-échantillon du superset est construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
 Pour chaque objet, le catalogue fournit plusieurs estimations de redshift. Le pipeline de SDSS produit une première estimation. L'algorithme \texttt{QuasarNET} en fournit une seconde. Les spectres inspectés visuellement possèdent une autre estimation. Enfin, l'algorithme \texttt{redvsblue}\footnote{https://github.com/londumas/redvsblue} produit plusieurs estimations de redshift, parmi lesquelles figurent \texttt{Z\_PCA} et \texttt{Z\_LYAWG}.
 
-Différents algorithmes sont alors appliqués au catalogue, afin d'identifier les DLA et les BAL présents. L'identification \textbf{utilise l'addition des différentes expositions pour chaque objet.}
+Différents algorithmes sont alors appliqués au catalogue, afin d'identifier les DLA et les BAL présents. L'identification utilise l'addition des différentes expositions pour chaque objet.
 Concernant les DLA, l'algorithme de détection est décrit dans \citet{Parks2017}. Il est appliqué sur les quasars à un redshift $2 \leq \texttt{Z\_PCA} \leq 6$, afin d'avoir suffisamment de pixels dans la zone $900 < \lambda_{\mathrm{RF}} < \SI{1346}{\angstrom}$. Parmi les \num{270315} spectres inspectés, \num{39514} DLA ont été identifiés, distribués dans \num{35686} spectres.
 Concernant les BAL, l'algorithme utilisé est très similaire à celui décrit dans \citet{Guo2019}. Les BAL sont recherchés dans les spectres ayant un redshift entre \num{1.57} et \num{5.6}. L'algorithme fournit la probabilité qu'un spectre possède un BAL. Le champ \texttt{BAL\_PROB} du catalogue indique cette probabilité.
 
@@ -90,12 +89,12 @@ Les spectres produits par la chaîne de réduction des données SDSS sont rebinn
 
 L'absorption \lya{} est mesurée dans deux régions disctinctes du spectre. La première, dénommée région \lya{}, correspond aux longueurs d'onde $\num{1040} \leq \lambda_{\mathrm{RF}} \leq \SI{1200}{\angstrom}$, c'est à dire entre les raies d'émission \lyb{} et \lya{}. La seconde, dénommée région \lyb{}, correspond aux longueurs d'onde $\num{920} \leq \lambda_{\mathrm{RF}} \leq \SI{1020}{\angstrom}$, c'est à dire entre la limite de la série de Lyman et la raie d'émission \lyb{}. Les pixels d'absorption \lya{} dans la région \lya{} sont dénommés pixels \lyalya{}, et ceux dans la région \lyb{} sont dénommés pixels \lyalyb{}.
 De plus, l'analyse se limite aux pixels dont la longueur d'onde observée est comprise entre $\num{3600} \leq \lambda_{obs} \leq \SI{6000}{\angstrom}$.
-\textbf{La limite inférieure provient de la sensibilité des CCD et de l'augmentation des absorptions atmosphériques intenses dans l'UV. La limite suppérieur provient des raies d'émission du ciel dans le proche infrarouge qui bruitent le signal.}
+La limite inférieure provient de la sensibilité des CCD et de l'augmentation des absorptions atmosphériques intenses dans l'UV. La limite supérieure provient des raies d'émission du ciel dans le proche infrarouge qui bruitent le signal.
 % à cause notamment des absorptions atmosphériques intenses dans l'UV, et des raies d'émissions du ciel dans le proche infrarouge.
 % Ces limites sur $\lambda_{obs}$ correspondent à un redshift minimal $z_{\textsc{QSO}} = 2$ pour les quasars \lya{}, et $z_{\textsc{QSO}} = 2.53$ pour les quasars \lyb{}. Parmi les \num{341468} quasars utilisés \textbf{comme traceurs pour la corrélation croisée \lya{}-\textsc{QSO}} (dénommés quasars traceurs), \num{256328} sont utilisés pour leurs pixels \lyalya{} (dénommés quasar \lya{}), et \num{103080} sont utilisés pour leurs pixels \lyalyb{} (dénommés quasar \lyb{}).
-\textbf{Ces limites sur $\lambda_{obs}$ correspondent à un redshift minimal $z_{\textsc{QSO}} = 2$ pour les quasars utilisés pour leurs pixels dans la région \lya{} (quasars \lya{}), et $z_{\textsc{QSO}} = 2.53$ pour les quasars utilisés pour leurs pixels dans la région \lyb{} (quasars \lyb{}). Parmi les \num{341468} quasars traceurs, \num{256328} sont des quasars \lya{}, et \num{103080} sont des quasars \lyb{}.}
+Ces limites sur $\lambda_{obs}$ correspondent à un redshift minimal $z_{\textsc{QSO}} = 2$ pour les quasars utilisés pour leurs pixels dans la région \lya{} (quasars \lya{}), et $z_{\textsc{QSO}} = 2.53$ pour les quasars utilisés pour leurs pixels dans la région \lyb{} (quasars \lyb{}). Parmi les \num{341468} quasars traceurs, \num{256328} sont des quasars \lya{}, et \num{103080} sont des quasars \lyb{}.
 
-D'autres sélections sont aussi appliquées. Les quasars pour lesquels la probabilité d'avoir un BAL est supérieure à 0.9 sont écartés. Les mauvaises observations durant BOSS ou eBOSS sont mises de côté. De plus, chaque région nécessite au moins 50 pixels. Cette sélection décale le redshift minimal à $z_{\textsc{QSO}} = 2.10$ pour les quasars \lya{}, et à $z = 2.65$ pour les quasars \lyb{}. \textbf{Enfin, l'ajustement du continuum (voir section suivante) échoue pour environ \SI{2}{\percent} des spectres)}. Ces spectres sont aussi écartés.
+D'autres sélections sont aussi appliquées. Les quasars pour lesquels la probabilité d'avoir un BAL est supérieure à 0.9 sont écartés. Les mauvaises observations durant BOSS ou eBOSS sont mises de côté. De plus, chaque région nécessite au moins 50 pixels. Cette sélection décale le redshift minimal à $z_{\textsc{QSO}} = 2.10$ pour les quasars \lya{}, et à $z = 2.65$ pour les quasars \lyb{}. Enfin, l'ajustement du continuum (voir section suivante) échoue pour environ \SI{2}{\percent} des spectres). Ces spectres sont aussi écartés.
 Après toutes ces sélections, l'échantillon final contient \num{210005} quasars \lya{} et \num{69656} quasars \lyb{}. 
 % La distribution en redshift des pixels et des quasars traceurs est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
 
