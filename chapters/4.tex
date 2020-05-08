@@ -10,12 +10,15 @@
 
 \graphicspath{ {../figures/mocks/} }
 
-\chapter{Réalisation des mocks}
+\chapter{Développement des mocks}
 \minitoc
 \newpage
 \thispagestyle{fancy}
 
-Dans ce chapitre, nous présentons la construction des \emph{mocks} : des simulations qui visent à reproduire les données d'eBOSS et de DESI. Ces mocks, nommés \texttt{SaclayMocks} et présentés dans \citet{CITE:mocks}, sont le c{\oe}ur de ce manuscrit. Le code est écrit en Python\footnote{https://www.python.org/} et se trouve en accès libre sur GitHub\footnote{https://github.com/igmhub/SaclayMocks}. L'utilisation de ces mocks et leur validation seront présentés dans les chapitres suivants.
+\textbf{Dans ce chapitre, nous présentons la construction des \emph{mocks} : des spectres de quasars simulés, dont les forêts \lya{} et le champ de quasars possèdent les bonnes fonctions d'auto corrélation et de corrélation croisée.
+% des simulations qui visent à reproduire les données d'eBOSS et de DESI. Ces mocks, nommés \texttt{SaclayMocks} et présentés dans \citet{CITE:mocks}, sont le c{\oe}ur de ce manuscrit.
+Ces mocks visent à reproduire les données d'eBOSS et de DESI. Ils sont nommés \texttt{SaclayMocks} et présentés dans \citet{CITE:mocks}.}
+Le code est écrit en Python\footnote{https://www.python.org/} et se trouve en accès libre sur GitHub\footnote{https://github.com/igmhub/SaclayMocks}. L'utilisation de ces mocks et leur validation seront présentés dans les chapitres suivants.
 
 \section{Objectifs des mocks}
 % Les mocks s'inscrivent dans le projet DESI, et sont utilisés dans l'analyse finale des données eBOSS \citep{CITE:dr16}.
@@ -26,54 +29,69 @@ Les mocks sont donc utilisés afin
 \begin{itemize}[label=$\bullet$]
 \item de vérifier la mesure des paramètres $\apar{}$, $\aperp{}$ : cette mesure est-elle non biaisée ?
 \item d'identifier les potentielles systématiques : la présence de métaux et d'HCD dans les données est-elle bien modélisée ? Affecte-t-elle la mesure de $\apar{}$, $\aperp{}$ ?
-\item de tester la matrice de distorsion : la distorsion due à l'ajustement du continuum du quasar est-elle correctement prise en compte par la matrice de distorsion ?
-\item de vérifier le calcul de la matrice de covariance : la matrice de covariance, calculée à partir des données, est-elle bien estimée ?
+\item de tester la matrice de distorsion : la distorsion de la fonction de corrélation due à l'ajustement du continuum du quasar est-elle correctement prise en compte par la matrice de distorsion ?
+\item de vérifier l'estimation de la matrice de covariance : la matrice de covariance, calculée à partir des données, est-elle bien estimée ?
 \end{itemize}
 La production et l'analyse d'un grand nombre de mocks permet de répondre précisément à ces questions. Ces mocks sont donc nécessaires pour pouvoir valider l'analyse menée sur les données.
 
 \paragraph{}
 Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \citep{CITE:dr16}, et seront utilisés dans l'analyse \lya{} de DESI.
-L'objectif de ces mocks est donc de répliquer fidèlement les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\perh\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\perh\kpc}. Les mocks nécessitent donc de reproduire un volume imense, avec une bonne résolution.
+L'objectif de ces mocks est donc de répliquer fidèlement les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\perh\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\perh\kpc}. Les mocks nécessitent donc de reproduire un volume immense, avec une bonne résolution.
 Les simulations dites N-body sont des simulations qui traitent le problème à N corps. Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$). Puis, à chaque pas de temps, ces macro-particules sont déplacées en considérant uniquement les interactions gravitationnelles. Le champ de matière initial évolue ainsi jusqu'à $z=0$. Ces simulations sont très utiles pour étudier les effets de la gravité à grande échelle. Cependant elles ne sont pas adaptées à notre utilisation : afin d'avoir la résolution et le volume requis, la simulation nécessiterait beaucoup trop de macro-particules pour être réalisable dans un temps raisonnable.
 
-Les simulations hydrodynamiques fonctionnent de la même manière que les simulations N-body. Elles incluent, en plus des macro-particules de matière noire, la physique baryonique présente dans le milieu galactique. Les baryons sont aussi représentés par des macro-particules. Afin de résoudre l'intérieur des galaxies, les macro-particules utilisées possèdent une masse plus faible que dans le cas des simulations N-body. En contre partie, le volume simulé est plus petit. Dans le cas des simulations hydrodynamiques, la densité, la pression et la tempéature sont tracées dans chaque cellule. Certains effets astrophysiques, comme les supernovae ou les AGN peuvent aussi être présents. Cependant, ces simulations ne sont pas non plus adaptées à notre utilisation car le volume d'univers simulé est bien trop petit : quelques dizaines de \si{\perh\cubic\Mpc}.
+Les simulations hydrodynamiques fonctionnent de la même manière que les simulations N-body. Elles incluent, en plus des macro-particules de matière noire, la physique baryonique présente dans le milieu galactique. Les baryons sont aussi représentés par des macro-particules. Afin de résoudre l'intérieur des galaxies, les macro-particules utilisées possèdent une masse plus faible que dans le cas des simulations N-body. En contrepartie, le volume simulé est plus petit. Dans le cas des simulations hydrodynamiques, la densité, la pression et la tempéature sont tracées dans chaque cellule. Certains effets astrophysiques, comme les supernovae ou les AGN peuvent aussi être présents. Cependant, ces simulations ne sont pas non plus adaptées à notre utilisation car le volume d'univers simulé est bien trop petit : quelques dizaines de \si{\perh\cubic\Mpc}.
+
 Ainsi, avoir un grand volume et une grande résolution requiert l'utilisation des \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field). Ce sont des champs qui en chaque point prennent une valeur aléatoire selon une statistique gaussienne. Une fois générés, il est possible de donner à ces champs n'importe quelle fonction de corrélation, en utilisant la transformation de Fourier. Les GRF sont donc idéaux pour simuler le champ de matière à grande échelle. Cependant, l'utilisation des GRF ne donne pas accès aux non linéaritées qui peuvent émerger dans l'évolution des similutaions N-body et hydrodynamiques. La seule information provient de la fonction de corrélation que l'on applique au GRF. Mais cela est entièrement suffisant pour l'utilisation que nous en avons dans ce manuscrit.
 
 
 \section{Construction des mocks}
-Dans cette section, nous détaillons comment les mocks sont générés. Nous présentons d'abord la génération des champs de densité, puis de ces champs de densité, comment sont tirés les quasars. Nous expliquons ensuite comment, de la position de chaque quasar, nous créons sa ligne de visée. Enfin, nous présentons comment de la densité le long de la ligne de visée nous calculons la fraction de flux transmis et comment nous tirons les HCD.
+\textbf{Dans cette section, nous détaillons comment les mocks sont générés.
+Nous présentons d'abord la génération des champs de densité,
+% puis de ces champs de densité, comment sont tirés les quasars.
+puis comment les quasars sont tirés à partir de ces champs de densité.
+%Nous expliquons ensuite comment, de la position de chaque quasar, nous créons sa ligne de visée.
+Nous expliquons ensuite comment nous calculons la densité le long de la ligne de visée de chaque quasar.
+% Enfin, nous présentons comment de la densité le long de la ligne de visée nous calculons la fraction de flux transmis et comment nous tirons les HCD.
+Enfin, nous présentons comment la densité le long de la ligne de visée est transformée en fraction de flux transmis, et comment nous tirons les HCD.}
 
 
 \subsection{Les champs de densité}
 \label{subsec:densityfields}
-La première étape dans la création des mocks est de générer les boîtes qui contiennent le champ de densité. D'abord, un GRF est généré dans une boite $\num{2560}\times\num{2560}\times\num{1536}$, chaque voxcell faisant  $d_{cell}^3 = (\SI{2.19}{\perh\Mpc})^3$.
-Afin que le champ $\delta$ possède la bonne fonction de corrélation, une transformation de Fourier 3D\footnote{https://github.com/pyFFTW/pyFFTW \# prov ou citer directement FFTW ?} est appliquée sur la boîte, puis le champ $\delta_k$ ainsi obtenu est multiplié par
+La première étape dans la création des mocks est de générer les boîtes qui contiennent le champ de densité $\delta$. D'abord, un GRF est généré dans une boite de $\num{2560}\times\num{2560}\times\num{1536}$ pixel, chaque voxcell faisant  $d_{cell}^3 = (\SI{2.19}{\perh\Mpc})^3$.
+Afin que le champ $\delta$ possède la bonne fonction de corrélation, une transformation de Fourier 3D\footnote{Nous utilisons la librairie pyFFTW (https://github.com/pyFFTW/pyFFTW), une adaptation python de la librairie FFTW (http://www.fftw.org/).} est appliquée sur la boîte, puis le champ $\delta_k$ ainsi obtenu est multiplié par
 \begin{equation}
-  \sqrt{\frac{P(k)}{V_{cell}}} \; ,
+  \sqrt{\frac{P(k)}{d_{cell}^3}} \; ,
 \end{equation}
-où $P(k)$ est le spectre de puissance désiré, et $V_{cell} = (\SI{2.19}{\perh\Mpc})^3$ est le volume d'un voxcell.
-Le GRF pourrait être tiré directement dans l'espace $k$, mais nous ne perdons pas beaucoup de temps CPU\footnote{Le temps CPU (Central Processing Unit) désigne le temps utilisé par les processeurs d'une machine pour exécuter un code.} à procéder comme cela.
-Nous distingons ici deux champs : le champ utilisé pour tirer les quasars, et le champ utilisé pour créer l'absorption \lya{}. Ces deux champs requièrent deux spectres de puissance différents, et donc deux boîtes de densité différentes.
+\textbf{où $P(k)$ est le spectre de puissance désiré. Ce procédé garanti que le champ $\delta_k$ suive le spectre de puissance $P(k)$. Il est ensuite possible d'obtenir le champ $\delta$ dans l'espace réel grâce à une transformation de Fourier inverse du champ $\delta_k$.}
+
+% Le GRF pourrait être tiré directement dans l'espace $k$ mais nous ne perdons pas beaucoup de temps CPU\footnote{Le temps CPU (Central Processing Unit) désigne le temps utilisé par les processeurs d'une machine pour exécuter un code.} à procéder comme cela.
+\textbf{Le GRF pourrait être tiré directement dans l'espace $k$. Dans ce cas, il nous faut tirer deux champs gaussiens : un pour la partie réelle, et un autre pour la partie imaginaire. La transformation de Fourier prenant moins de temps que la génération du champ aléatoire, nous préférons générer le champ dans l'espace réel plutôt que dans l'espace $k$.
+% Nous distingons ici deux champs : le champ utilisé pour tirer les quasars, et le champ utilisé pour créer l'absorption \lya{}. Ces deux champs requièrent deux spectres de puissance différents, et donc deux boîtes de densité différentes.
+Dans la suite nous décrivons les différents champs nécessaires à la construction des mocks : les champs utilsés pour tirer les quasars, le champ utilisé pour créer l'absorption \lya{}, ainsi que les champs de vitesse et de gradient de vitesse. Afin de garantir leur corrélation, tous ces champs sont construits à partir du même champ initial $\delta_k$.}
 
 \subsubsection{Les quasars}
-Comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière. Plutôt que de modéliser ces non linéaritées, nous considérons que les quasars suivent une distribution log-normale.
+\textbf{Afin de construire un relevé de quasars corrélés, nous tirons les quasars selon le champ dans l'espace réel $\delta_{\textsc{QSO}}$, construit à partir de $\delta_k$. Une première solution est de tirer les quasars dans les cellules dont le champ $\delta_{\textsc{QSO}}$ est supérieur à un certain seuil. Cette solution produit une fonction de corrélation correcte aux grandes échelles, mais pas aux petites.
+En effet, comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière, qui se manifeste aux petites échelles.
+Plutôt que de modéliser ces non linéarités, nous considérons une seconde solution : nous considérons que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
+% Comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière. Plutôt que de modéliser ces non linéaritées, nous considérons que les quasars suivent une distribution log-normale.
 Ce choix est souvent fait pour simuler des relevés de galaxies \citep{agrawal_generating_2017}, et est en accord avec ce qui est observé dans les données \citep{Clerkin2016}.
-Ainsi, au lieu de placer les quasars dans les voxcells qui possèdent une densité plus élevé qu'un certain seuil, nous tirons les quasars dans chaque voxcell avec une probabilité
+% Ainsi, au lieu de placer les quasars dans les voxcells qui possèdent une densité plus élevé qu'un certain seuil, nous tirons les quasars dans chaque voxcell avec une probabilité
+Ainsi, dans chaque voxcell, les quasars sont tirés avec une probabilité}
 \begin{equation}
   P \propto \mathrm{e}^{\delta_q} \; ,
 \end{equation}
 où $\delta_q$ est le champ de densité dans le voxcell considéré.
-Afin que les quasars suivent la fonction de corrélation $\xi(r)$, le champ $\delta_q$ doit suivre la fonction de corrélation
+Comme montré par \citet{coles_lognormal_1991}, afin que les quasars suivent la fonction de corrélation $\xi(r)$, le champ $\delta_q$ doit suivre la fonction de corrélation 
 \begin{equation}
   \label{eq:lognormal}
   \xi_q(r) = \ln(1+\xi(r)) \; .
 \end{equation}
-De manière à obtenir un relevé synthétique de quasar dont le biais dépend de $z$, nous utilisons trois champs qui suivent des distributions log-normales, à des redshifts différents. La probabilité pour tirer les quasars dépend de l'interpolation de ces 3 champs. Ces champs sont construits aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Pour chacun des champs, nous partons du spectre de puissance de la matière $P_{matière}(k)$ à $z=0$, fournit par Camb \citep{Lewis1999}. Nous multiplions ensuite ce spectre de puissance par $(b_{\textsc{QSO}}(z_i) G(z_i))^2$, où $i \in [1, 2, 3]$. A l'aide de la transformation de Fourier, nous calculons la fonction de corrélation $\xi_{i}(r)$. Puis, nous déterminons le spectre de puissance $P_{\textsc{QSO},i}(k)$, à appliquer au champ $\delta_k$, comme la transformée de Fourier de $\xi_{\textsc{QSO},i}(r) = \ln(1+\xi_i(r))$ (équation~\ref{eq:cf_tf2}).
+De manière à obtenir un relevé synthétique de quasars dont le biais dépend de $z$, nous utilisons trois champs qui suivent des distributions log-normales, à des redshifts différents. La probabilité pour tirer les quasars dépend de l'interpolation de ces 3 champs. Ces champs sont construits aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Pour chacun des champs, nous partons du spectre de puissance de la matière $P_{matière}(k)$ à $z=0$, fournit par Camb \citep{Lewis1999}. Nous multiplions ensuite ce spectre de puissance par $(b_{\textsc{QSO}}(z_i) G(z_i))^2$, où $i \in [1, 2, 3]$. A l'aide de la transformation de Fourier, nous calculons la fonction de corrélation $\xi_{i}(r)$. Puis, nous déterminons le spectre de puissance $P_{\textsc{QSO},i}(k)$, à appliquer au champ $\delta_k$, comme la transformée de Fourier de $\xi_{\textsc{QSO},i}(r) = \ln(1+\xi_i(r))$ (équation~\ref{eq:cf_tf2}).
 Une fois les trois spectres de puissances $P_{\textsc{QSO},i}(k)$ obtenus, nous construisons 3 champs
 \begin{equation}
   \delta_{k,i}(k)  = \delta_k(k) \sqrt{\frac{P_{\textsc{QSO},i}(k)}{V_{cell}}} \; ,
 \end{equation}
-où $\delta_k$ est le GRF dans l'espace de Fourier. Une fois ces 3 champs construits, nous appliquons à chacun d'entre eux une transformation de Fourier inverse afin d'obtenir les champs $\delta_{\textsc{QSO}, i}$. Ces champs seront interpolés en $z$, puis les quasars seront ensuite tirés avec une probabilité $\propto \exp(\delta_{\textsc{QSO}}(z))$, où $\delta_{\textsc{QSO}}$ est le champ interpolé. Nous expliquons cette étape dans la section~\ref{subsec:qso}.
+où $\delta_k$ est le GRF dans l'espace de Fourier. Une fois ces 3 champs construits, nous appliquons à chacun d'entre eux une transformation de Fourier inverse afin d'obtenir les boîtes $\delta_{\textsc{QSO}, i}$. Ces champs seront interpolés en $z$, puis les quasars seront ensuite tirés avec une probabilité $\propto \exp(\delta_{\textsc{QSO}}(z))$, où $\delta_{\textsc{QSO}}$ est le champ interpolé. Nous expliquons cette étape dans la section~\ref{subsec:qso}.
 
 
 \subsubsection{Le champ \lya{}}
@@ -94,19 +112,19 @@ Les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon
 
 \subsubsection{Les champs des vitesses}
 \label{subsubsec:vitesses}
-Afin d'inclure les RSD dans nos mocks, nous simulons aussi le champ des vitesses. En première approximation, le champs des vitesses $v_{k,n}$ dans l'espace $k$ selon la direction $\vec u_{n}$, avec $n \in [\textsc{x},\textsc{y},\textsc{z}]$, est relié au champ de densité $\delta_k$ par la relation
+Afin d'inclure les RSD dans nos mocks, nous simulons aussi le champ des vitesses. A l'ordre linéaire, le champ des vitesses $v_{k,n}$ dans l'espace $k$ selon la direction $\vec u_{n}$, avec $n \in [\textsc{x},\textsc{y},\textsc{z}]$, est relié au champ de densité $\delta_k$ par la relation (\#prov mettre la démo ?)
 \begin{equation}
   \label{eq:v1}
   v_{k,n}(\vec k) = \frac{ik_n}{k^2} \dot a f \delta_{k}(\vec k) \; .
 \end{equation}
 % Le champ $\delta_{k, matière}$ est le champ de fluctuation de la matière à $z = 0$ dans l'espace $k$ calculé précédemment.
 Il est fréquent de considérer que le champ de vitesse des traceurs est le même que celui de la matière sous-jacente. Autrement dit, le champ de vitesse des traceurs est non biaisé.
-En ce qui concerne les quasars, nous simulons les RSD en les déplaçant proportionnellement à leur vitesse le long de la ligne de visée (équation~\ref{eq:delta_z}). Dans ce but, nous calculons les trois champs de vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$ à $z=0$, comme
+En ce qui concerne les quasars, nous simulons les RSD en déplaçant chaque quasar proportionnellement à sa vitesse le long de la ligne de visée (équation~\ref{eq:delta_z}). Dans ce but, nous calculons les trois champs de vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$ à $z=0$, comme
 \begin{equation}
   v_{k, n}(\vec k) = \frac{- i k_n}{k^2} H_{0} \frac{dG}{dz} \delta_{k, matière}(\vec k) \; ; \hspace{0.5cm} n \in [\textsc{x}, \textsc{y}, \textsc{z}] \; .
 \end{equation}
 Cette équation est équivalente à l'équation~\ref{eq:v1} pour $z=0$.
-Comme précédemment, le champ $\delta_{k, matière}$ est le même que celui utilisé pour construire les champs $\delta_{\textsc{QSO},i}$ des quasars et le champ $\delta_{matière}$ utilisé pour le \lya{}, ceci afin de garantir la corrélation entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier, nous obtenons les trois champs de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$.
+Comme précédemment, le champ $\delta_{k, matière}$ est le même que celui utilisé pour construire les champs $\delta_{\textsc{QSO},i}$ des quasars et le champ $\delta_{matière}$ utilisé pour le \lya{}, ceci afin de garantir la corrélation entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier inverse, nous obtenons les trois champs de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$.
 % A l'aide d'une transformation de Fourier, nous obtenons chaque champ de vitesse dans l'espace réel $v_x$, $v_y$ et $v_z$, ce qui nous permet de calculer la vitesse le long de la ligne de visée
 % \begin{equation}
 %   v_{\parallel}(\vec r) = \frac{\vec r \cdot \vec v}{|| \vec r ||} \; .
@@ -117,7 +135,7 @@ Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une m
   \label{eq:eta1}
   \eta_{nm}(\vec k) = \frac{k_n k_m}{k^2} f \delta_k(\vec k) \; .
 \end{equation}
-Cette équation nous permet de retrouver la formule de kaiser :
+Cette équation permet de retrouver la formule de kaiser :
 \begin{align}
   \label{eq:kaiser5}
   \delta_k^s(\vec k) &= \delta_k(\vec k) + \eta_{\parallel}(\vec k) \; ,   \\
@@ -168,7 +186,7 @@ Le champ $\delta_k$ utilisé est le GRF initial, afin de garantir les corrélati
 \label{subsec:qso}
 % Une fois tous ces champs construits, nous définissons la géométrie du relevé. Les boîtes $\num{2560}\times\num{2560}\times\num{1536}$, où \num{1536} correspond à la dimension de l'axe de la ligne de visée (dénommé $Z$ dans la suite), sont placées à un redshift central $z_0 = 1.70975268202$. Leur dimension selon cet axe permet de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$. Il se trouve au centre dans le plan $(X,Y)$, et les boîtes sont placés à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}).
 Une fois tous ces champs construits, nous définissons la géométrie du relevé. Les boîtes, d'une taille $\num{2560}\times\num{2560}\times\num{1536}$ selon les axes $\textsc{x}$, $\textsc{y}$ et $\textsc{z}$ respectivement, sont placées à un redshift central $z_0 = 1.70975268202$, et à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}). Leurs dimensions permettent de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$, au centre du plan $(\textsc{x},\textsc{y})$.
-Afin de construire le relevé de quasars, nous utilisons les trois champs $\delta_{\textsc{QSO}, i}$ construits précédemment, aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Dans chacun des cas, nous calculons
+Afin de construire le catalogue de quasars, nous utilisons les trois champs $\delta_{\textsc{QSO}, i}$ construits précédemment, aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Dans chacun des cas, nous calculons
 \begin{equation}
   \hat \delta_{\textsc{QSO}, i}(z) = \exp(\delta_{\textsc{QSO},i} \frac{b_{\textsc{QSO}}(z) (1+z_i)}{b_{\textsc{QSO}}(z_i)(1+z)}) \; ,
 \end{equation}
@@ -190,7 +208,7 @@ où $K(z)$ est un coefficient qui varie entre 0 et 1. Il est représenté sur la
   \includegraphics[scale=0.4]{kz}
   \caption{Coefficient $K(z)$ défini dans l'équation~\ref{eq:lognormal_interp}.}
 \end{figure}
-Les quasars sont ensuites tirés dans chaque voxcell, avec une probabilité $P \propto \hat \delta_{\textsc{QSO}}$. Pour ce faire, nous générons un champ $\phi$ aléatoire uniforme entre 0 et 1, et les voxcells pour lesquelles $\phi < N(z) \hat \delta_{\textsc{QSO}}$ hébergent potentiellement un quasar. Le facteur $N(z)$ est un facteur de normalisation. Les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}; \num{3.6}]$ sont écartés.
+Les quasars sont ensuite tirés dans chaque voxcell, avec une probabilité $P \propto \hat \delta_{\textsc{QSO}}$. Pour ce faire, nous générons un champ $\phi$ aléatoire uniforme entre 0 et 1, et les voxcells pour lesquelles $\phi < N(z) \hat \delta_{\textsc{QSO}}$ hébergent potentiellement un quasar. Le facteur $N(z)$ est un facteur de normalisation. Les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}; \num{3.6}]$ sont écartés.
 % Les quasars dont l'ascension droite est en dehors de l'inverval $[ - \Delta \alpha ; \Delta \alpha]$ et dont la déclinaison est en dehors de l'inverval $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 Les quasars dont l'ascension droite et la déclinaison sont en dehors des intervalles $[ - \Delta \alpha ; \Delta \alpha]$ et $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\textsc{y},\textsc{z})$ sont définies comme
@@ -207,7 +225,8 @@ L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\t
            \sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}
            }) \; .
 \end{align}
-Enfin, grâce au facteur de normalisation $N(z)$, les quasars sont tirés selon la distribution en $z$ prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. A la fin, nous obtenons environ \num{100} quasars à $z > \num{2.1}$ par degré carré.
+\textbf{Enfin, grâce au facteur de normalisation $N(z)$, les quasars sont tirés selon la distribution en $z$ normalisée prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous dirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{prov}).}
+A la fin, nous obtenons environ \num{100} quasars à $z > \num{2.1}$ par degré carré.
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{dndz_qso}
@@ -219,17 +238,21 @@ Une fois les quasars tirés, nous les déplaçons proportionnellement à leur vi
 \begin{equation}
   v_{\parallel} = \frac{v_{\textsc{x}} \textsc{x} + v_{\textsc{y}} \textsc{y} + v_{\textsc{z}} \textsc{z}}{\sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}} \; .
 \end{equation}
-Ainsi, un quasar situé à une distance $R$ sera replacé le long de la ligne de visé à une distance
+\textbf{Ainsi, un quasar situé à une distance $R$ sera replacé le long de la ligne de visé à une distance
 \begin{equation}
- R \rightarrow  R + (1+z) \frac{dG}{dz} \frac{1}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
+ R \rightarrow  R + \frac{1}{H(z)} v_{\parallel}(z) \; ,  % (1+z) \frac{dG}{dz} \frac{1}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; ,
 \end{equation}
-Le facteur $(1+z)$ vient de la conversion des distances en distances comobiles. Une fois tous les quasars déplacés, leur redshift est recalculé, puis ils sont stockés dans un catalogue.
+avec
+\begin{equation}
+ v_{\parallel}(z) = (1+z) \frac{dG}{dz} \frac{H(z)}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
+\end{equation}
+Le facteur $(1+z)$ vient de la conversion des distances en distances comobiles. Une fois tous les quasars déplacés, leur redshift est recalculé, puis ils sont stockés dans un catalogue. Pour chaque quasar, le catalogue contient leur position dans le ciel $(\alpha, \delta)$, leur redshift avec et sans RSD, ainsi qu'un identifiant unique.}
 
 
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
 A cette étape, nous disposons d'un catalogue de quasars, corrélé avec le champ de densité $\delta_{matière}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar, et interpoler le champ de densité le long de celles-ci.
-Dans un premier temps, nous commençons par créer le vecteur en longueurs d'onde observées, sur lequel sera interpolé le champ de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (voir ~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels.
+Dans un premier temps, nous commençons par créer le vecteur en longueurs d'onde observées, sur lequel sera interpolé le champ de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (voir ~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels.
 
 Une fois ce vecteur en longueur d'onde obtenu, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
 % pour chaque quasar, nous calculons la position $(X,Y,Z)$ de chaque pixel.
@@ -382,7 +405,7 @@ où $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les champs de vi
 \begin{equation}
    z \rightarrow  z + (1+z) H(z) \frac{dG}{dz} \frac{1}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
 \end{equation}
-Dans les mocks que nous décrivons ici, le profil d'absorption des HCD n'est pas ajouté dans les forêts. Nous produisons uniquement un catalogue qui regroupe tous les HCD tirés. Le profile d'absorption est ajouté au spectre de chaque quasar par le code \texttt{quickquasars} (présenté dans la section~\ref{prov}), qui utilise le catalogue de HCD que nous produisons.
+Dans les mocks que nous décrivons ici, le profil d'absorption des HCD n'est pas ajouté dans les forêts. Nous produisons uniquement un catalogue qui regroupe tous les HCD tirés. Le profile d'absorption est ajouté au spectre de chaque quasar par le code \texttt{quickquasars}, qui utilise le catalogue de HCD que nous produisons.
 
 
 \section{Production des mocks}
