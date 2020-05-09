@@ -122,25 +122,25 @@ Les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon
 
 \subsubsection{Les champs des vitesses}
 \label{subsubsec:vitesses}
-Afin d'inclure les RSD dans nos mocks, nous simulons aussi le champ des vitesses. A l'ordre linéaire, le champ des vitesses $v_{k,n}$ dans l'espace $k$ selon la direction $\vec u_{n}$, avec $n \in [\textsc{x},\textsc{y},\textsc{z}]$, est relié au champ de densité $\delta_k$ par la relation (\#prov mettre la démo ?)
+Afin d'inclure les RSD dans nos mocks, nous simulons aussi le champ des vitesses. A l'ordre linéaire, le champ des vitesses $v_{k,n}$ dans l'espace $k$ selon la direction $\vec u_{n}$, avec $n \in [\textsc{x},\textsc{y},\textsc{z}]$, est relié au champ de densité $\delta_k$ par la relation (\#prov mettre la démo ? voir dodelson)
 \begin{equation}
   \label{eq:v1}
   v_{k,n}(\vec k) = \frac{ik_n}{k^2} \dot a f \delta_{k}(\vec k) \; .
 \end{equation}
 % Le champ $\delta_{k, matière}$ est le champ de fluctuation de la matière à $z = 0$ dans l'espace $k$ calculé précédemment.
-Il est fréquent de considérer que le champ de vitesse des traceurs est le même que celui de la matière sous-jacente. Autrement dit, le champ de vitesse des traceurs est non biaisé.
+Il est fréquent (\#prov approximation réaliste ? mettre une source) de considérer que le champ de vitesse des traceurs est le même que celui de la matière sous-jacente. Autrement dit, le champ de vitesse des traceurs est non biaisé.
 En ce qui concerne les quasars, nous simulons les RSD en déplaçant chaque quasar proportionnellement à sa vitesse le long de la ligne de visée (équation~\ref{eq:delta_z}). Dans ce but, nous calculons les trois boîtes de vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$ à $z=0$, comme
 \begin{equation}
   v_{k, n}(\vec k) = \frac{- i k_n}{k^2} H_{0} \frac{dG}{dz} \delta_{k, matière}(\vec k) \; ; \hspace{0.5cm} n \in [\textsc{x}, \textsc{y}, \textsc{z}] \; .
 \end{equation}
 Cette équation est équivalente à l'équation~\ref{eq:v1} pour $z=0$.
-Comme précédemment, la boîte $\delta_{k, matière}$ est la même que celle utilisée pour construire les boîtes $\delta_{\textsc{QSO},i}$ des quasars et la boîte $\delta_{matière}$ utilisée pour le \lya{}, ceci afin de garantir la corrélation entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier inverse, nous obtenons les trois boîtes de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$.
+Comme précédemment, la boîte $\delta_{k, matière}$ est la même que celle utilisée pour construire les boîtes $\delta_{\textsc{QSO},i}$ des quasars et la boîte $\delta_{matière}$ utilisée pour le \lya{}, ceci afin de garantir la corrélation entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier inverse, nous obtenons les trois boîtes de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$. Le calcul pour obtenir la vitesse parallèle $v_{\parallel}$ à un redshift $z$ est décrit dans la section~\ref{subsec:qso}.
 % A l'aide d'une transformation de Fourier, nous obtenons chaque champ de vitesse dans l'espace réel $v_x$, $v_y$ et $v_z$, ce qui nous permet de calculer la vitesse le long de la ligne de visée
 % \begin{equation}
 %   v_{\parallel}(\vec r) = \frac{\vec r \cdot \vec v}{|| \vec r ||} \; .
 % \end{equation}
 
-Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une modification de la formule FGPA. Pour ce faire, nous nécessitons le gradient de vitesse $\eta_{\parallel}$ à $z=0$. Le gradient $\eta_{nm}$ selon la direction $\vec u_m$ de la vitesse $v_n$ est défini comme
+Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une modification de la formule FGPA. Pour ce faire, nous avons besoin du gradient de vitesse $\eta_{\parallel}$ à $z=0$. Le gradient $\eta_{nm}$ selon la direction $\vec u_m$ de la vitesse $v_n$ est défini comme
 \begin{equation}
   \label{eq:eta1}
   \eta_{nm}(\vec k) = \frac{k_n k_m}{k^2} f \delta_k(\vec k) \; .
@@ -151,7 +151,7 @@ Cette équation permet de retrouver la formule de kaiser :
   \delta_k^s(\vec k) &= \delta_k(\vec k) + \eta_{\parallel}(\vec k) \; ,   \\
                      &= (1 + f \mu_k^2) \delta_k(\vec k)  \; .  \nonumber
 \end{align}
-Nous construisons donc 6 boîtes de gradients de vitesse, à $z=0$, comme
+(\#prov: mettre la fin de la section dans une footnote ou un appendix ?)Nous construisons donc 6 boîtes de gradients de vitesse, à $z=0$, comme
 \begin{equation}
   \label{eq:eta2}
   \eta_{nm}(\vec k) = \frac{k_n k_m}{k^2} \delta_k(\vec k) \; ; \hspace{0.5cm} (n,m) \in [\textsc{x}, \textsc{y}, \textsc{z}]^2 \; .
@@ -195,10 +195,11 @@ La boîte $\delta_k$ utilisée est le GRF initial, afin de garantir les corréla
 \subsection{Le relevé de quasars}
 \label{subsec:qso}
 % Une fois tous ces champs construits, nous définissons la géométrie du relevé. Les boîtes $\num{2560}\times\num{2560}\times\num{1536}$, où \num{1536} correspond à la dimension de l'axe de la ligne de visée (dénommé $Z$ dans la suite), sont placées à un redshift central $z_0 = 1.70975268202$. Leur dimension selon cet axe permet de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$. Il se trouve au centre dans le plan $(X,Y)$, et les boîtes sont placés à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}).
-Une fois toutes ces boîtes construites, nous définissons la géométrie du relevé. Les boîtes, d'une taille $\num{2560}\times\num{2560}\times\num{1536}$ selon les axes $\textsc{x}$, $\textsc{y}$ et $\textsc{z}$ respectivement, sont placées à un redshift central $z_0 = 1.70975268202$, et à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}). Leurs dimensions permettent de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$, au centre du plan $(\textsc{x},\textsc{y})$.
-Afin de construire le catalogue de quasars, nous utilisons les trois boîtes $\delta_{\textsc{QSO}, i}$ construites précédemment, aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Dans chacun des cas, nous calculons
+Une fois toutes ces boîtes construites, nous définissons la géométrie du relevé. Les boîtes, d'une taille $\num{2560}\times\num{2560}\times\num{1536}$ selon les axes $\textsc{x}$, $\textsc{y}$ et $\textsc{z}$ respectivement, sont placées à un redshift central $z_0 = 1.71$, et à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}). Leurs dimensions permettent de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$, au centre du plan $(\textsc{x},\textsc{y})$.
+Afin de construire le catalogue de quasars, nous utilisons les trois boîtes $\delta_{\textsc{QSO}, i}$ construites précédemment, aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Dans chaque cas, nous calculons
 \begin{equation}
   \hat \delta_{\textsc{QSO}, i}(z) = \exp(\delta_{\textsc{QSO},i} \frac{b_{\textsc{QSO}}(z) (1+z_i)}{b_{\textsc{QSO}}(z_i)(1+z)}) \; ,
+  \hspace{1cm} i \in [1, 2, 3] \; ,
 \end{equation}
 où $b_{\textsc{QSO}}$ est le biais des quasars. Le redshift dans chaque voxcell est calculé en utilisant l'équation~\ref{eq:dist_como}. Les paramètres cosmologiques utilisés sont donnés dans l'équation~\ref{eq:par_cosmo}. Toutes les distances sont comobiles.
 Une fois les 3 boîtes $\hat \delta_{\textsc{QSO}, i}$ construites, nous construisons les deux boîtes
@@ -218,7 +219,7 @@ où $K(z)$ est un coefficient qui varie entre 0 et 1. Il est représenté sur la
   \includegraphics[scale=0.4]{kz}
   \caption{Coefficient $K(z)$ défini dans l'équation~\ref{eq:lognormal_interp}.}
 \end{figure}
-Les quasars sont ensuite tirés dans chaque voxcell, avec une probabilité $P \propto \hat \delta_{\textsc{QSO}}$. Pour ce faire, nous générons un champ $\phi$ aléatoire uniforme entre 0 et 1, et les voxcells pour lesquelles $\phi < N(z) \hat \delta_{\textsc{QSO}}$ hébergent potentiellement un quasar. Le facteur $N(z)$ est un facteur de normalisation. Les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}; \num{3.6}]$ sont écartés.
+Les quasars sont ensuite tirés dans chaque voxcell, avec une probabilité $P \propto \hat \delta_{\textsc{QSO}}$. Pour ce faire, nous générons une variable $\phi$ aléatoire uniforme entre 0 et 1 dans chaque cellule. Les voxcells pour lesquelles $\phi < N(z) \hat \delta_{\textsc{QSO}}$ hébergent potentiellement un quasar. Le facteur $N(z)$ est un facteur de normalisation. Les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}; \num{3.6}]$ sont écartés.
 % Les quasars dont l'ascension droite est en dehors de l'inverval $[ - \Delta \alpha ; \Delta \alpha]$ et dont la déclinaison est en dehors de l'inverval $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 Les quasars dont l'ascension droite et la déclinaison sont en dehors des intervalles $[ - \Delta \alpha ; \Delta \alpha]$ et $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\textsc{y},\textsc{z})$ sont définies comme
@@ -262,19 +263,39 @@ Le facteur $(1+z)$ vient de la conversion des distances en distances comobiles. 
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
 A cette étape, nous disposons d'un catalogue de quasars, corrélé avec le champ de densité $\delta_{matière}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar, et interpoler la boîte contenant le champ de densité, le long de ces lignes de visée.
-Dans un premier temps, nous commençons par créer le vecteur en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (voir ~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels.
+Dans un premier temps, nous commençons par créer le vecteur en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.} $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (voir ~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels.
 
 Une fois ce vecteur en longueur d'onde obtenu, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
 % pour chaque quasar, nous calculons la position $(X,Y,Z)$ de chaque pixel.
 D'abord, le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ est placé à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar, et le vecteur est dirigé vers l'observateur. Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_{\textsc{QSO}}$, la position $(\textsc{x}_i, \textsc{y}_i, \textsc{z}_i)$ du pixel est déterminée.
-La boîte est alors interpolé puis lissé. Pour chaque pixel, nous considérons les voxcells appartenant au cube de 7 voxcells de côté, centré sur le voxcell dans lequel se trouve le pixel. Ceci représente donc \num{343} pixel à interpoler puis lisser.
-Le pixel $i$ est alors donné par
+% La boîte est alors interpolé puis lissé.
+\textbf{Une moyenne pondérée avec un lissage gaussien est alors appliquée à la boîte.
+Pour chaque pixel, nous considérons les voxcells appartenant au cube de 7 voxcells de côté, centré sur le voxcell dans lequel se trouve le pixel. Ce cube correspond à considérer les voxcells compris à $\pm 3 \sigma$ du voxcell central, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
+Ceci représente donc, pour chaque pixel, une moyenne de \num{343} voxcells.
+Le pixel $i$ est donné par
+% \begin{equation}
+%   \delta_i = \sum_{j=0}^{342}  \frac{\delta(\vec r_j) \mathrm{e}^{\frac{-(\vec r_j - \vec r_i)^2 }{ \sigma_j^2}}}{\sigma_j^2} \; ,
+% \end{equation}
+% \#prov c'est pas correcte (voir le code)
 \begin{equation}
-  \delta_i = \sum_{j=0}^{342}  \frac{\delta(\vec r_j) \mathrm{e}^{\frac{-(\vec r_j - \vec r_i)^2 }{ \sigma_j^2}}}{\sigma_j^2} \; ,
+  \delta_i = \frac{
+    \sum_{j=0}^{342} \delta(\vec r_j) w_{ij}
+  }{
+    \sum_{j=0}^{342} w_{ij}
+  } \; ,
 \end{equation}
-\#prov c'est pas correcte (voir le code)
-
-où $\vec r_j$ est la position du voxcell $j$, $\vec r_i$ celle du pixel $i$, $\delta$ est la boîte à interpoler, et enfin $\sigma^2 = 2 d_{cell}^2$ est la largeur du lissage gaussien appliqué. Ce lissage est nécessaire afin d'éviter le crénelage aux petites échelles.
+(\#prov c'est pas beau les limites des sommes qui sont pas au dessus/en dessous)
+avec
+\begin{equation}
+  w_{ij} = \exp(\frac{
+    -(\vec r_j - \vec r_i)^2
+  }{
+    \sigma^2
+  }) \; ,
+\end{equation}
+où $\vec r_j$ est la position du voxcell $j$, $\vec r_i$ celle du pixel $i$, $\delta$ est la boîte à interpoler.
+% , et enfin $\sigma^2 = d_{cell}^2$ est la largeur du lissage gaussien appliqué.
+Ce lissage est nécessaire afin d'éviter le crénelage (aliasing) aux petites échelles.}
 Ce calcul est effectué pour tous les pixels qui vérifient $\lambda_i < \lambda_{\textsc{QSO}}$, pour chaque quasar. Les boîtes interpolées sont la boîte $\delta_{matière}$ utilisée pour construire l'absorption \lya{}, les trois boîtes de vitesse utilisées pour ajouter les RSD aux HCD tirés dans chaque ligne de visée (voir section~\ref{subsec:hcd}), et les six boîtes de gradient de vitesse afin d'ajouter les RSD au champ \lya{}.
 
 
