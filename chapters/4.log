@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 MAY 2020 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 MAY 2020 14:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2350,10 +2350,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 
-LaTeX Warning: Command \` invalid in math mode on input line 414.
+LaTeX Warning: Reference `prov' on page 12 undefined on input line 415.
 
 
-LaTeX Warning: Reference `' on page 12 undefined on input line 414.
+LaTeX Warning: Command \` invalid in math mode on input line 416.
+
+
+LaTeX Warning: Reference `' on page 12 undefined on input line 416.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2361,16 +2364,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <../figures/mocks/distrib_dla.png>] (./4.bbl
+[12 <../figures/mocks/distrib_dla.png>]
+
+LaTeX Warning: Reference `prov' on page 13 undefined on input line 433.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13] [14
+[13] (./4.bbl
 
-]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
 Overfull \hbox (2.43333pt too wide) in paragraph at lines 1--1
 | []| 
  []
@@ -2384,12 +2395,14 @@ Package minitoc Info: I0009
 (minitoc)             Creating the 4.maf file.
 \openout3 = `4.maf'.
 
-[15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 426.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 426.
+[15
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 439.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 439.
  (./4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 426.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 426.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 439.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 439.
 Package rerunfilecheck Info: File `4.out' has not changed.
 (rerunfilecheck)             Checksum: 8D498E455172DC7578BAC1E28D4D1A89;653.
 
@@ -2399,14 +2412,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 426.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 439.
  ) 
 Here is how much of TeX's memory you used:
- 29329 strings out of 492995
- 532121 string characters out of 6132704
+ 29337 strings out of 492995
+ 532225 string characters out of 6132704
  707254 words of memory out of 5000000
- 32185 multiletter control sequences out of 15000+600000
- 113746 words of font info for 81 fonts, out of 8000000 for 9000
+ 32190 multiletter control sequences out of 15000+600000
+ 115354 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,45p,10403b,842s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
@@ -2449,12 +2462,13 @@ ublic/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
 r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2017/
 texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmtt10.pfb>
-Output written on 4.pdf (15 pages, 604926 bytes).
+fonts/type1/public/lm/lmtcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmtt10.pfb>
+Output written on 4.pdf (15 pages, 626942 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 88 named destinations out of 1000 (max. 500000)
+ 337 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
+ 89 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
