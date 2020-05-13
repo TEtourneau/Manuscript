@@ -39,7 +39,10 @@ La production et l'analyse d'un grand nombre de mocks permet de répondre préci
 \paragraph{}
 Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \citep{CITE:dr16}, et seront utilisés dans l'analyse \lya{} de DESI.
 L'objectif de ces mocks est donc de répliquer au mieux les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\kpc}. Les mocks nécessitent donc de reproduire un volume immense, avec une bonne résolution.
-Les simulations dites \emph{N-corps} sont des simulations qui traitent le problème à N corps. Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$). Puis, à chaque pas de temps, ces macro-particules sont déplacées en considérant uniquement les interactions gravitationnelles. Le champ de matière initial évolue ainsi jusqu'à $z=0$. Ces simulations sont très utiles pour étudier les effets de la gravité à grande échelle. Cependant elles ne sont pas adaptées à notre utilisation : afin d'avoir la résolution et le volume requis, la simulation nécessiterait beaucoup trop de macro-particules pour être réalisable dans un temps raisonnable.
+Les simulations dites \emph{N-corps} sont des simulations qui traitent le problème à N corps.
+% Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$).
+\textbf{Elles sont initialisées à un redshift élevé ($z > \num{100}$), avec une distribution de matière noire représentée par des macro-particules. Généralement, environ $(\num{10000})^3$ macro-particules sont présentes dans ces simulations. La masse de ces particules dépend du volume simulé. Par exemple, pour un volume d'environ $(\SI{4}{\Gpc})^3$, les particules possèdent une masse $\sim 10^{9} M_{\odot}$ \citep{Heitmann2019}.}
+Puis, à chaque pas de temps, ces macro-particules sont déplacées en considérant uniquement les interactions gravitationnelles. Le champ de matière initial évolue ainsi jusqu'à $z=0$. Ces simulations sont très utiles pour étudier les effets de la gravité à grande échelle. Cependant elles ne sont pas adaptées à notre utilisation : afin d'avoir la résolution et le volume requis, la simulation nécessiterait beaucoup trop de macro-particules pour être réalisable dans un temps raisonnable.
 
 Les simulations hydrodynamiques fonctionnent de la même manière que les simulations N-corps. Elles incluent, en plus des macro-particules de matière noire, la physique baryonique présente dans le milieu galactique. Les baryons sont aussi représentés par des macro-particules. Afin de résoudre l'intérieur des galaxies, les macro-particules utilisées possèdent une masse plus faible que dans le cas des simulations N-corps. En contrepartie, le volume simulé est plus petit. Dans le cas des simulations hydrodynamiques, la densité, la pression et la tempéature sont tracées dans chaque cellule. Certains effets astrophysiques, comme les supernovae ou les AGN peuvent aussi être présents. 
 % Cependant, ces simulations ne sont pas non plus adaptées à notre utilisation car le volume d'univers simulé est bien trop petit : quelques dizaines de \si{\perh\cubic\Mpc}.
@@ -78,6 +81,7 @@ Afin que le champ $\delta$ possède la bonne fonction de corrélation, une trans
 Dans la suite nous décrivons les différentes boîtes nécessaires à la construction des mocks : les boîtes champs utilsées pour tirer les quasars, la boîte utilisée pour créer l'absorption \lya{}, ainsi que les boîtes de vitesse et de gradient de vitesse. Afin de garantir leur corrélation, toutes ces boîtes sont construites à partir de la même boîte initial $\delta_k$.}
 
 \subsubsection{Les quasars}
+\label{subsubsec:boiteqso}
 \textbf{Afin de construire un relevé de quasars corrélés, nous tirons les quasars selon le champ dans l'espace réel $\delta_{\textsc{QSO}}$, construit à partir de $\delta_k$. Une première solution est de tirer les quasars dans les cellules dont le champ $\delta_{\textsc{QSO}}$ est supérieur à un certain seuil. Cette solution produit une fonction de corrélation correcte aux grandes échelles, mais pas aux petites.
 En effet, comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière, qui se manifeste aux petites échelles.
 Plutôt que de modéliser ces non linéarités, nous considérons une seconde solution : nous considérons que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
@@ -196,23 +200,57 @@ La boîte $\delta_k$ utilisée est le GRF initial, afin de garantir les corréla
 \label{subsec:qso}
 % Une fois tous ces champs construits, nous définissons la géométrie du relevé. Les boîtes $\num{2560}\times\num{2560}\times\num{1536}$, où \num{1536} correspond à la dimension de l'axe de la ligne de visée (dénommé $Z$ dans la suite), sont placées à un redshift central $z_0 = 1.70975268202$. Leur dimension selon cet axe permet de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$. Il se trouve au centre dans le plan $(X,Y)$, et les boîtes sont placés à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}).
 Une fois toutes ces boîtes construites, nous définissons la géométrie du relevé. Les boîtes, d'une taille $\num{2560}\times\num{2560}\times\num{1536}$ selon les axes $\textsc{x}$, $\textsc{y}$ et $\textsc{z}$ respectivement, sont placées à un redshift central $z_0 = 1.71$, et à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}). Leurs dimensions permettent de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$, au centre du plan $(\textsc{x},\textsc{y})$.
-Afin de construire le catalogue de quasars, nous utilisons les trois boîtes $\delta_{\textsc{QSO}, i}$ construites précédemment, aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Dans chaque cas, nous calculons
+
+%new
+Afin d'obtenir un biais des quasars qui dépend du redshift, nous pouvons utiliser deux champs log-normaux.
+Considérons $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$, deux champs log-normaux à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$.
+% Pour les redshifts $z_1 < z < z_2$, nous pouvons interpoler les deux champs
+Pour les redshifts $z < z_1$ et $z > z_2$, nous pouvons extrapoler les champs $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$,
+en calculant
 \begin{equation}
+  \label{eq:boiteqsointerp1}
   \hat \delta_{\textsc{QSO}, i}(z) = \exp(\delta_{\textsc{QSO},i} \frac{b_{\textsc{QSO}}(z) (1+z_i)}{b_{\textsc{QSO}}(z_i)(1+z)}) \; ,
-  \hspace{1cm} i \in [1, 2, 3] \; ,
+  \hspace{1cm} i \in [1; 2] \; ,
 \end{equation}
 où $b_{\textsc{QSO}}$ est le biais des quasars. Le redshift dans chaque voxcell est calculé en utilisant l'équation~\ref{eq:dist_como}. Les paramètres cosmologiques utilisés sont donnés dans l'équation~\ref{eq:par_cosmo}. Toutes les distances sont comobiles.
-Une fois les 3 boîtes $\hat \delta_{\textsc{QSO}, i}$ construites, nous construisons les deux boîtes
-\begin{align}
-  \hat \delta_{\textsc{QSO}, 12}(z) &= \hat \delta_{\textsc{QSO}, 1}(z) \frac{z_2 - z}{z_2 - z_1} + \hat \delta_{\textsc{QSO}, 2}(z) \frac{z - z_1}{z_2 - z_1} \; ,\\
-  \hat \delta_{\textsc{QSO}, 23}(z) &= \hat \delta_{\textsc{QSO}, 2}(z) \frac{z_3 - z}{z_3 - z_2} + \hat \delta_{\textsc{QSO}, 3}(z) \frac{z - z_2}{z_3 - z_2} \; ,
-\end{align}
-puis, nous construisons la boîte interpolée
+L'équation précédente nous donne donc le champ $\hat \delta_{\textsc{QSO}, 1}$ à utiliser pour tirer les quasars lorsque $z \leq z_1$, et le champ $\hat \delta_{\textsc{QSO}, 2}$ à utiliser lorsque $z \geq z_2$.
+Pour les redshifts $z_1 < z < z_2$, nous pouvons interpoler les deux champs $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$ en calculant
+\begin{equation}
+  \label{eq:boiteqsointerp2}
+  \hat \delta_{\textsc{QSO}, 12}(z) = \hat \delta_{\textsc{QSO}, 1}(z) \frac{z_2 - z}{z_2 - z_1} + \hat \delta_{\textsc{QSO}, 2}(z) \frac{z - z_1}{z_2 - z_1} \; .
+\end{equation}
+Nous pouvons alors tirer les quasars dans chaque cellule proportionnellement à l'interpolation ou l'extrapolation de ces deux champs.
+La figure~\ref{prov} présente les fonctions de corrélation des champs $\hat \delta_{\textsc{QSO}, 12}$ à $z=\num{2.6}$ (vert) et à $z = \num{2.9}$ (violet), $\hat \delta_{\textsc{QSO}, 1}$ à $z=\num{1.9}$ (bleu) et $\hat \delta_{\textsc{QSO}, 2}$ à $z=\num{3.6}$ (rouge), et $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$ à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$ (orange). Sur le graphique de droite de la figure~\ref{prov}, nous voyons que les fonctions de corrélation obtenues par interpolation possèdent une amplitude trop grande, et celles obtenues par extrapolation une amplitude trop petite.
+% La figure~\ref{prov} présente les fonctions de corrélation des champs obtenus à un redshift $z=\num{2.6}$ (vert) et $z = \num{2.9}$ (violet) par interpolation des deux champs, à un redshift $z=\num{1.9}$ (bleu) et $z=\num{3.6}$ (rouge) par extrapolation des champs $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$, et enfin, la fonction de corrélation des champs $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$ à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$ (orange). Sur le graphique de droite de la figure~\ref{prov}, nous voyons que les fonctions de corrélation obtenues par interpolation possèdent une amplitude trop grande, et celles obtenues par extrapolation une amplitude trop petite.
+De plus, nous pouvons voir sur la figure~\ref{prov} que l'effet dû à l'interpolation (en bleu) est similaire et opposé à celui dû à l'extrapolation (orange). Ainsi, en combinant une interpolation et une extrapolation, nous obtenons une approximation bien plus satisfaisante (vert). Plutôt que d'utiliser deux champs, nous utilisons donc trois champs log-normaux à $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Ces champs sont stockés dans les boîtes construites dans la section~\ref{subsubsec:boiteqso}. Nous construisons les trois boîtes $\hat \delta_{\textsc{QSO}, i}$ définies selon l'équation~\ref{eq:boiteqsointerp1}, puis, nous créons les deux boîtes qui contiennent les champs interpolés $\hat \delta_{\textsc{QSO}, 12}$ et $\hat \delta_{\textsc{QSO}, 23}$ (équation~\ref{eq:boiteqsointerp2}). Enfin, nous construisons la boîte
 \begin{equation}
   \label{eq:lognormal_interp}
  \hat \delta_{\textsc{QSO}}(z) = K(z) \left(\hat \delta_{\textsc{QSO}, 12}(z) - \hat \delta_{\textsc{QSO}, 23}(z)\right) + \hat \delta_{\textsc{QSO}, 23}(z) \; ,
 \end{equation}
-où $K(z)$ est un coefficient qui varie entre 0 et 1. Il est représenté sur la figure~\ref{fig:kz}.
+où $K(z)$ est un coefficient qui varie entre 0 et 1. Il est représenté sur la figure~\ref{fig:kz}. Pour chaque $z$, $K(z)$ est déterminé tel que $K(z)(r_{12} - r_{23}) + r_{23}$ vale 1 à $r = \SI{5}{\perh\Mpc}$, où les rapports $r_{12}$ et $r_{23}$ sont définis comme
+\begin{align}
+  r_{12}(z) &= \frac{\xi_{12}(r)}{\xi_1} \left(\frac{b_1(1+z)}{b_{QSO}(z)(1+z_1)}\right)^2 \; , \\
+  r_{23}(z) &= \frac{\xi_{23}(r)}{\xi_1} \left(\frac{b_1(1+z)}{b_{QSO}(z)(1+z_1)}\right)^2 \; .
+\end{align}
+Ces rapports donnent la déviation de la fonction de corrélation due à l'interpolation et à l'extrapolation. La figure~\ref{prov} donne $r_{12}$ (bleu), $r_{23}$ (orange) et $K(z)(r_{12} - r_{23}) + r_{23}$ (vert) à $z=\num{2.3}$. La courbe verte montre que la fonction de corrélation obtenue avec le champ $\hat \delta_{\textsc{QSO}}$ ne dévie pas de plus de \SI{0.6}{\percent} de la fonction de corrélation visée à chaque redshift.
+% end new
+%Afin de construire le catalogue de quasars, nous utilisons les trois boîtes $\delta_{\textsc{QSO}, i}$ construites précédemment, aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$. Dans chaque cas, nous calculons
+% \begin{equation}
+%   \hat \delta_{\textsc{QSO}, i}(z) = \exp(\delta_{\textsc{QSO},i} \frac{b_{\textsc{QSO}}(z) (1+z_i)}{b_{\textsc{QSO}}(z_i)(1+z)}) \; ,
+%   \hspace{1cm} i \in [1, 2, 3] \; ,
+% \end{equation}
+% où $b_{\textsc{QSO}}$ est le biais des quasars. Le redshift dans chaque voxcell est calculé en utilisant l'équation~\ref{eq:dist_como}. Les paramètres cosmologiques utilisés sont donnés dans l'équation~\ref{eq:par_cosmo}. Toutes les distances sont comobiles.
+% Une fois les 3 boîtes $\hat \delta_{\textsc{QSO}, i}$ construites, nous construisons les deux boîtes
+% \begin{align}
+%   \hat \delta_{\textsc{QSO}, 12}(z) &= \hat \delta_{\textsc{QSO}, 1}(z) \frac{z_2 - z}{z_2 - z_1} + \hat \delta_{\textsc{QSO}, 2}(z) \frac{z - z_1}{z_2 - z_1} \; ,\\
+%   \hat \delta_{\textsc{QSO}, 23}(z) &= \hat \delta_{\textsc{QSO}, 2}(z) \frac{z_3 - z}{z_3 - z_2} + \hat \delta_{\textsc{QSO}, 3}(z) \frac{z - z_2}{z_3 - z_2} \; ,
+% \end{align}
+% puis, nous construisons la boîte interpolée
+% \begin{equation}
+%   \label{eq:lognormal_interp}
+%  \hat \delta_{\textsc{QSO}}(z) = K(z) \left(\hat \delta_{\textsc{QSO}, 12}(z) - \hat \delta_{\textsc{QSO}, 23}(z)\right) + \hat \delta_{\textsc{QSO}, 23}(z) \; ,
+% \end{equation}
+% où $K(z)$ est un coefficient qui varie entre 0 et 1. Il est représenté sur la figure~\ref{fig:kz}.
 \begin{figure}
   \centering
   \label{fig:kz}
@@ -270,9 +308,24 @@ Une fois ce vecteur en longueur d'onde obtenu, nous le positionnons dans les bo�
 D'abord, le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ est placé à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar, et le vecteur est dirigé vers l'observateur. Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_{\textsc{QSO}}$, la position $(\textsc{x}_i, \textsc{y}_i, \textsc{z}_i)$ du pixel est déterminée.
 % La boîte est alors interpolé puis lissé.
 \textbf{Une moyenne pondérée avec un lissage gaussien est alors appliquée à la boîte.
-Pour chaque pixel, nous considérons les voxcells appartenant au cube de 7 voxcells de côté, centré sur le voxcell dans lequel se trouve le pixel. Ce cube correspond à considérer les voxcells compris à $\pm 3 \sigma$ du voxcell central, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
+Ce lissage est nécessaire afin d'éviter le crénelage (\emph{aliasing}) aux petites échelles.
+  Nous choisissons un lissage de largeur $\sigma = d_{cell}$.
+Pour chaque pixel, nous considérons les voxcells appartenant au cube de 7 voxcells de côté, centré sur le voxcell dans lequel se trouve le pixel. Ce cube correspond à considérer les voxcells compris à $\pm 3 \sigma$ du voxcell central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
 Ceci représente donc, pour chaque pixel, une moyenne de \num{343} voxcells.
-Le pixel $i$ est donné par
+La figure~\ref{fig:smoothing11} présente la forêt \lya{} obtenue en considérant les voxcells à $\pm 1 \sigma$. Trop peu de voxcells sont considérés pour le calcul de chaque pixel, et la forêt obtenue contient des discontinuités. La figure~\ref{fig:smoothing23} présente la forêt obtenue en considérant les voxcells à $\pm 2 \sigma$ (orange) et $\pm 3 \sigma$ (bleu). La différence entre les deux est faible, cependant certaines discontinuités subsistent pour la forêt calculée avec $2 \sigma$, comme le montre le zoom sur le graphique de droite. Enfin, nous avons vérifié que les différences entre les forêts obtenues avec $3$ et $4 \sigma$ restent faibles. Nous nous limitons donc aux voxcells compris à $\pm 3 \sigma$ du voxcell central pour limiter le temps CPU.}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{smoothing11}
+  \caption{bla}
+  \label{fig:smoothing11}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{smoothing23}
+  \caption{bla}
+  \label{fig:smoothing23}
+\end{figure}
+\textbf{Le pixel $i$ est donc donné par
 % \begin{equation}
 %   \delta_i = \sum_{j=0}^{342}  \frac{\delta(\vec r_j) \mathrm{e}^{\frac{-(\vec r_j - \vec r_i)^2 }{ \sigma_j^2}}}{\sigma_j^2} \; ,
 % \end{equation}
@@ -295,7 +348,7 @@ avec
 \end{equation}
 où $\vec r_j$ est la position du voxcell $j$, $\vec r_i$ celle du pixel $i$, $\delta$ est la boîte à interpoler.
 % , et enfin $\sigma^2 = d_{cell}^2$ est la largeur du lissage gaussien appliqué.
-Ce lissage est nécessaire afin d'éviter le crénelage (aliasing) aux petites échelles.}
+}
 Ce calcul est effectué pour tous les pixels qui vérifient $\lambda_i < \lambda_{\textsc{QSO}}$, pour chaque quasar. Les boîtes interpolées sont la boîte $\delta_{matière}$ utilisée pour construire l'absorption \lya{}, les trois boîtes de vitesse utilisées pour ajouter les RSD aux HCD tirés dans chaque ligne de visée (voir section~\ref{subsec:hcd}), et les six boîtes de gradient de vitesse afin d'ajouter les RSD au champ \lya{}.
 
 
