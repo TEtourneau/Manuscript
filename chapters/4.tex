@@ -353,6 +353,7 @@ Ce calcul est effectué pour tous les pixels qui vérifient $\lambda_i < \lambda
 
 
 \subsection{De la densité à l'absorption}
+\label{subsec:density2absorption}
 Une fois les lignes de visés interpolées, nous pouvons transformer le champ de densité en absorption \lya{}. Ceci est fait via la formule FGPA :
 \begin{equation}
   \label{eq:fgpa2}
@@ -515,6 +516,12 @@ Une certain nombre de problèmes informatiques, liés au centre de calcul NERSC,
 % Ce temps nous a permis de choisir les paramètres \lya{} souhaités,
 Le temps laissé par les six mois nécessaires à la production nous a permis de choisir les paramètres \lya{} souhaités,
 et d'ajuster les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) en conséquence (voir section~\ref{prov}). Une fois ces paramètres ajustés et la phase de pré-production terminée, nous avons mené la phase de \emph{post-production}. Cette phase consiste à créer les spectres d'absorption à partir des densités interpolées le long des lignes de visée, puis à regrouper tous les fichiers de sortie afin de les mettre au format décrit précédemment. Cette étape est beaucoup plus rapide, elle prend l'équivalent d'environ 6 heures CPU sur un noeud de Cori. Une fois la production complète effectuée, la place sur disque d'une réalisation, sans compter les fichiers temporaires, correspond à environ $\num{15}\,\mathrm{Go}$ sur disque.
+
+
+\section{Ajustement des paramètres}
+Comme expliqué dans la section~\ref{subsec:density2absorption}, le champ d'absorption \lya{} est construit à partir des boîtes $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ grâce à la formule FGPA. L'équation~\ref{eq:fgpa4} nécessite l'ajustement de quatres paramètres :
+$a(z)$, $b(z)$, $c(z)$ et $P_{miss}(z)$.
+
 
 
 
