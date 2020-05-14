@@ -48,10 +48,13 @@ Les simulations hydrodynamiques fonctionnent de la même manière que les simula
 % Cependant, ces simulations ne sont pas non plus adaptées à notre utilisation car le volume d'univers simulé est bien trop petit : quelques dizaines de \si{\perh\cubic\Mpc}.
 \textbf{Ces simulations nécessitent encore plus de temps de calcul que les simulations N-corps. Elles ne sont donc pas non plus adaptées à notre utilisation.}
 
-Ainsi, avoir un grand volume et une grande résolution requiert l'utilisation des \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field). Ce sont des champs qui en chaque point prennent une valeur aléatoire selon une statistique gaussienne.
-Une fois générés, il est possible de donner à ces champs n'importe quelle fonction de corrélation, en utilisant la transformation de Fourier. Les GRF sont donc idéaux pour simuler le champ de matière à grande échelle.
-\textbf{Ces champs sont utilisés notament dans les simulations N-corps, afin de fournir les conditions initiales.}
-Cependant, l'utilisation des GRF ne donne pas accès aux non linéaritées qui peuvent émerger dans l'évolution des similutaions N-corps et hydrodynamiques. La seule information provient de la fonction de corrélation que l'on applique au GRF.
+% Ainsi, avoir un grand volume et une grande résolution requiert l'utilisation des \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field). 
+\textbf{Ainsi, seuls les \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field) permettent de générer un grand volume avec une grande résolution.}
+Ce sont des champs qui en chaque point prennent une valeur aléatoire selon une statistique gaussienne.
+Une fois générés, il est possible de donner à ces champs n'importe quelle fonction de corrélation, en utilisant la transformation de Fourier.
+%Les GRF sont donc idéaux pour simuler le champ de matière à grande échelle.
+\textbf{Ces champs sont utilisés notament dans les simulations à N-corps, afin de fournir les conditions initiales.}
+Cependant, l'utilisation des GRF ne donne pas accès aux non linéaritées qui peuvent émerger dans l'évolution des simulations N-corps et hydrodynamiques. La seule information provient de la fonction de corrélation que l'on applique au GRF.
 \textbf{Mais cela est entièrement suffisant pour l'utilisation que nous en avons dans ce manuscrit : nous générons un champ gaussien destiné à simuler le champ d'absorption \lya{} et le champ de quasars, dont les fonctions d'auto corrélation et de corrélation croisée sont choisies afin de correspondre à ce qui est observé dans les données.}
 
 
@@ -63,12 +66,12 @@ puis comment les quasars sont tirés à partir de ces champs de densité.
 %Nous expliquons ensuite comment, de la position de chaque quasar, nous créons sa ligne de visée.
 Nous expliquons ensuite comment nous calculons la densité le long de la ligne de visée de chaque quasar.
 % Enfin, nous présentons comment de la densité le long de la ligne de visée nous calculons la fraction de flux transmis et comment nous tirons les HCD.
-Enfin, nous présentons comment la densité le long de la ligne de visée est transformée en fraction de flux transmis, et comment nous tirons les HCD.}
+Enfin, nous présentons comment cette densité est transformée en fraction de flux transmis, et comment nous tirons les HCD.}
 
 
 \subsection{Les champs de densité}
 \label{subsec:densityfields}
-La première étape dans la création des mocks est de générer les boîtes qui contiennent le champ de densité $\delta$. D'abord, un GRF est généré dans une boite de $\num{2560}\times\num{2560}\times\num{1536}$ voxcells, chaque voxcell faisant  $d_{cell}^3 = (\SI{2.19}{\perh\Mpc})^3$.
+La première étape dans la création des mocks est de générer les boîtes qui contiennent le champ de densité $\delta$. D'abord, un GRF est généré dans une boite de $\num{2560}\times\num{2560}\times\num{1536}$ voxels, chaque voxel faisant  $d_{cell}^3 = (\SI{2.19}{\perh\Mpc})^3$.
 Afin que le champ $\delta$ possède la bonne fonction de corrélation, une transformation de Fourier 3D\footnote{Nous utilisons la librairie pyFFTW (https://github.com/pyFFTW/pyFFTW), une adaptation python de la librairie FFTW (http://www.fftw.org/).} est appliquée sur la boîte, puis la boîte $\delta_k$ ainsi obtenue est multipliée par
 \begin{equation}
   \sqrt{\frac{P(k)}{d_{cell}^3}} \; ,
@@ -82,17 +85,17 @@ Dans la suite nous décrivons les différentes boîtes nécessaires à la constr
 
 \subsubsection{Les quasars}
 \label{subsubsec:boiteqso}
-\textbf{Afin de construire un relevé de quasars corrélés, nous tirons les quasars selon le champ dans l'espace réel $\delta_{\textsc{QSO}}$, construit à partir de $\delta_k$. Une première solution est de tirer les quasars dans les cellules dont le champ $\delta_{\textsc{QSO}}$ est supérieur à un certain seuil. Cette solution produit une fonction de corrélation correcte aux grandes échelles, mais pas aux petites.
+\textbf{Afin de construire un relevé de quasars corrélés, nous tirons les quasars selon le champ dans l'espace réel $\delta_{\textsc{QSO}}$, construit à partir de $\delta_k$. Une première solution serait de tirer les quasars dans les cellules dont le champ $\delta_{\textsc{QSO}}$ est supérieur à un certain seuil. Cette solution produit une fonction de corrélation correcte aux grandes échelles, mais pas aux petites.
 En effet, comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière, qui se manifeste aux petites échelles.
 Plutôt que de modéliser ces non linéarités, nous considérons une seconde solution : nous considérons que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
 % Comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière. Plutôt que de modéliser ces non linéaritées, nous considérons que les quasars suivent une distribution log-normale.
 Ce choix est souvent fait pour simuler des relevés de galaxies \citep{agrawal_generating_2017}, et est en accord avec ce qui est observé dans les données \citep{Clerkin2016}.
-% Ainsi, au lieu de placer les quasars dans les voxcells qui possèdent une densité plus élevé qu'un certain seuil, nous tirons les quasars dans chaque voxcell avec une probabilité
-Ainsi, dans chaque voxcell, les quasars sont tirés avec une probabilité}
+% Ainsi, au lieu de placer les quasars dans les voxels qui possèdent une densité plus élevé qu'un certain seuil, nous tirons les quasars dans chaque voxel avec une probabilité
+Ainsi, dans chaque voxel, les quasars sont tirés avec une probabilité}
 \begin{equation}
   P \propto \mathrm{e}^{\delta_q} \; ,
 \end{equation}
-où $\delta_q$ est le champ de densité dans le voxcell considéré.
+où $\delta_q$ est le champ de densité dans le voxel considéré.
 Comme montré par \citet{coles_lognormal_1991}, afin que les quasars suivent la fonction de corrélation $\xi(r)$, le champ $\delta_q$ doit suivre la fonction de corrélation 
 \begin{equation}
   \label{eq:lognormal}
@@ -212,7 +215,7 @@ en calculant
   \hat \delta_{\textsc{QSO}, i}(z) = \exp(\delta_{\textsc{QSO},i} \frac{b_{\textsc{QSO}}(z) (1+z_i)}{b_{\textsc{QSO}}(z_i)(1+z)}) \; ,
   \hspace{1cm} i \in [1; 2] \; ,
 \end{equation}
-où $b_{\textsc{QSO}}$ est le biais des quasars. Le redshift dans chaque voxcell est calculé en utilisant l'équation~\ref{eq:dist_como}. Les paramètres cosmologiques utilisés sont donnés dans l'équation~\ref{eq:par_cosmo}. Toutes les distances sont comobiles.
+où $b_{\textsc{QSO}}$ est le biais des quasars. Le redshift dans chaque voxel est calculé en utilisant l'équation~\ref{eq:dist_como}. Les paramètres cosmologiques utilisés sont donnés dans l'équation~\ref{eq:par_cosmo}. Toutes les distances sont comobiles.
 L'équation précédente nous donne donc le champ $\hat \delta_{\textsc{QSO}, 1}$ à utiliser pour tirer les quasars lorsque $z \leq z_1$, et le champ $\hat \delta_{\textsc{QSO}, 2}$ à utiliser lorsque $z \geq z_2$.
 Pour les redshifts $z_1 < z < z_2$, nous pouvons interpoler les deux champs $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$ en calculant
 \begin{equation}
@@ -239,7 +242,7 @@ Ces rapports donnent la déviation de la fonction de corrélation due à l'inter
 %   \hat \delta_{\textsc{QSO}, i}(z) = \exp(\delta_{\textsc{QSO},i} \frac{b_{\textsc{QSO}}(z) (1+z_i)}{b_{\textsc{QSO}}(z_i)(1+z)}) \; ,
 %   \hspace{1cm} i \in [1, 2, 3] \; ,
 % \end{equation}
-% où $b_{\textsc{QSO}}$ est le biais des quasars. Le redshift dans chaque voxcell est calculé en utilisant l'équation~\ref{eq:dist_como}. Les paramètres cosmologiques utilisés sont donnés dans l'équation~\ref{eq:par_cosmo}. Toutes les distances sont comobiles.
+% où $b_{\textsc{QSO}}$ est le biais des quasars. Le redshift dans chaque voxel est calculé en utilisant l'équation~\ref{eq:dist_como}. Les paramètres cosmologiques utilisés sont donnés dans l'équation~\ref{eq:par_cosmo}. Toutes les distances sont comobiles.
 % Une fois les 3 boîtes $\hat \delta_{\textsc{QSO}, i}$ construites, nous construisons les deux boîtes
 % \begin{align}
 %   \hat \delta_{\textsc{QSO}, 12}(z) &= \hat \delta_{\textsc{QSO}, 1}(z) \frac{z_2 - z}{z_2 - z_1} + \hat \delta_{\textsc{QSO}, 2}(z) \frac{z - z_1}{z_2 - z_1} \; ,\\
@@ -257,7 +260,7 @@ Ces rapports donnent la déviation de la fonction de corrélation due à l'inter
   \includegraphics[scale=0.4]{kz}
   \caption{Coefficient $K(z)$ défini dans l'équation~\ref{eq:lognormal_interp}.}
 \end{figure}
-Les quasars sont ensuite tirés dans chaque voxcell, avec une probabilité $P \propto \hat \delta_{\textsc{QSO}}$. Pour ce faire, nous générons une variable $\phi$ aléatoire uniforme entre 0 et 1 dans chaque cellule. Les voxcells pour lesquelles $\phi < N(z) \hat \delta_{\textsc{QSO}}$ hébergent potentiellement un quasar. Le facteur $N(z)$ est un facteur de normalisation. Les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}; \num{3.6}]$ sont écartés.
+Les quasars sont ensuite tirés dans chaque voxel, avec une probabilité $P \propto \hat \delta_{\textsc{QSO}}$. Pour ce faire, nous générons une variable $\phi$ aléatoire uniforme entre 0 et 1 dans chaque voxel. Les voxels pour lesquelles $\phi < N(z) \hat \delta_{\textsc{QSO}}$ hébergent potentiellement un quasar. Le facteur $N(z)$ est un facteur de normalisation. Les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}; \num{3.6}]$ sont écartés.
 % Les quasars dont l'ascension droite est en dehors de l'inverval $[ - \Delta \alpha ; \Delta \alpha]$ et dont la déclinaison est en dehors de l'inverval $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 Les quasars dont l'ascension droite et la déclinaison sont en dehors des intervalles $[ - \Delta \alpha ; \Delta \alpha]$ et $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\textsc{y},\textsc{z})$ sont définies comme
@@ -274,7 +277,7 @@ L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\t
            \sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}
            }) \; .
 \end{align}
-\textbf{Enfin, grâce au facteur de normalisation $N(z)$, les quasars sont tirés selon la distribution en $z$ normalisée prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous dirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{prov}).}
+\textbf{Enfin, grâce au facteur de normalisation $N(z)$, les quasars sont tirés selon la distribution en $z$ normalisée prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous dirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{prov}). De plus, cela permet d'utiliser les mocks pour d'autres projets, comme WEAVE\footnote{WEAVE est spectrographe à fibre multi objet. Il possède \num{1000} fibres avec un champ de vue de $\SI{3.1}{\square\deg}$. Le relevé WEAVE-QSO prévoit d'observer \num{400000} quasars à grand redshift \citep{Pieri2016}.}, qui possèdent une densité de cible plus élevée que DESI.}
 A la fin, nous obtenons environ \num{100} quasars à $z > \num{2.1}$ par degré carré.
 \begin{figure}
   \centering
@@ -293,7 +296,8 @@ Une fois les quasars tirés, nous les déplaçons proportionnellement à leur vi
 \end{equation}
 avec
 \begin{equation}
- v_{\parallel}(z) = (1+z) \frac{dG}{dz} \frac{H(z)}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
+  % v_{\parallel}(z) = (1+z) \frac{dG}{dz} \frac{H(z)}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
+  v_{\parallel}(z) = (1+z) \frac{H(z)}{H_0} \frac{1}{\frac{dG}{dz}(z=0)} \frac{dG}{dz} v_{\parallel} \; .
 \end{equation}
 Le facteur $(1+z)$ vient de la conversion des distances en distances comobiles. Une fois tous les quasars déplacés, leur redshift est recalculé, puis ils sont stockés dans un catalogue. Pour chaque quasar, le catalogue contient leur position dans le ciel $(\alpha, \delta)$, leur redshift avec et sans RSD, ainsi qu'un identifiant unique.}
 
@@ -301,7 +305,7 @@ Le facteur $(1+z)$ vient de la conversion des distances en distances comobiles. 
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
 A cette étape, nous disposons d'un catalogue de quasars, corrélé avec le champ de densité $\delta_{matière}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar, et interpoler la boîte contenant le champ de densité, le long de ces lignes de visée.
-Dans un premier temps, nous commençons par créer le vecteur en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.} $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (voir ~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels.
+Dans un premier temps, nous commençons par créer le vecteur en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
 
 Une fois ce vecteur en longueur d'onde obtenu, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
 % pour chaque quasar, nous calculons la position $(X,Y,Z)$ de chaque pixel.
@@ -310,9 +314,9 @@ D'abord, le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathr
 \textbf{Une moyenne pondérée avec un lissage gaussien est alors appliquée à la boîte.
 Ce lissage est nécessaire afin d'éviter le crénelage (\emph{aliasing}) aux petites échelles.
   Nous choisissons un lissage de largeur $\sigma = d_{cell}$.
-Pour chaque pixel, nous considérons les voxcells appartenant au cube de 7 voxcells de côté, centré sur le voxcell dans lequel se trouve le pixel. Ce cube correspond à considérer les voxcells compris à $\pm 3 \sigma$ du voxcell central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
-Ceci représente donc, pour chaque pixel, une moyenne de \num{343} voxcells.
-La figure~\ref{fig:smoothing11} présente la forêt \lya{} obtenue en considérant les voxcells à $\pm 1 \sigma$. Trop peu de voxcells sont considérés pour le calcul de chaque pixel, et la forêt obtenue contient des discontinuités. La figure~\ref{fig:smoothing23} présente la forêt obtenue en considérant les voxcells à $\pm 2 \sigma$ (orange) et $\pm 3 \sigma$ (bleu). La différence entre les deux est faible, cependant certaines discontinuités subsistent pour la forêt calculée avec $2 \sigma$, comme le montre le zoom sur le graphique de droite. Enfin, nous avons vérifié que les différences entre les forêts obtenues avec $3$ et $4 \sigma$ restent faibles. Nous nous limitons donc aux voxcells compris à $\pm 3 \sigma$ du voxcell central pour limiter le temps CPU.}
+Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
+Ceci représente donc, pour chaque pixel, une moyenne de \num{343} voxels.
+La figure~\ref{fig:smoothing11} présente la forêt \lya{} obtenue en considérant les voxels à $\pm 1 \sigma$. Trop peu de voxels sont considérés pour le calcul de chaque pixel, et la forêt obtenue contient des discontinuités. La figure~\ref{fig:smoothing23} présente la forêt obtenue en considérant les voxels à $\pm 2 \sigma$ (orange) et $\pm 3 \sigma$ (bleu). La différence entre les deux est faible, cependant certaines discontinuités subsistent pour la forêt calculée avec $2 \sigma$, comme le montre le zoom sur le graphique de droite. Enfin, nous avons vérifié que les différences entre les forêts obtenues avec $3$ et $4 \sigma$ restent faibles. Nous nous limitons donc aux voxels compris à $\pm 3 \sigma$ du voxel central pour limiter le temps CPU.}
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{smoothing11}
@@ -325,14 +329,14 @@ La figure~\ref{fig:smoothing11} présente la forêt \lya{} obtenue en considéra
   \caption{bla}
   \label{fig:smoothing23}
 \end{figure}
-\textbf{Le pixel $i$ est donc donné par
+\textbf{Le champ dans le pixel $i$ est donc donné par
 % \begin{equation}
 %   \delta_i = \sum_{j=0}^{342}  \frac{\delta(\vec r_j) \mathrm{e}^{\frac{-(\vec r_j - \vec r_i)^2 }{ \sigma_j^2}}}{\sigma_j^2} \; ,
 % \end{equation}
 % \#prov c'est pas correcte (voir le code)
 \begin{equation}
   \delta_i = \frac{
-    \sum_{j=0}^{342} \delta(\vec r_j) w_{ij}
+    \sum_{j=0}^{342} \delta_j w_{ij}
   }{
     \sum_{j=0}^{342} w_{ij}
   } \; ,
@@ -343,10 +347,10 @@ avec
   w_{ij} = \exp(\frac{
     -(\vec r_j - \vec r_i)^2
   }{
-    \sigma^2
+    2 \sigma^2
   }) \; ,
 \end{equation}
-où $\vec r_j$ est la position du voxcell $j$, $\vec r_i$ celle du pixel $i$, $\delta$ est la boîte à interpoler.
+où $\vec r_j$ est la position du centre du voxel $j$, $\vec r_i$ celle du pixel $i$, $\delta$ est la boîte à interpoler.
 % , et enfin $\sigma^2 = d_{cell}^2$ est la largeur du lissage gaussien appliqué.
 }
 Ce calcul est effectué pour tous les pixels qui vérifient $\lambda_i < \lambda_{\textsc{QSO}}$, pour chaque quasar. Les boîtes interpolées sont la boîte $\delta_{matière}$ utilisée pour construire l'absorption \lya{}, les trois boîtes de vitesse utilisées pour ajouter les RSD aux HCD tirés dans chaque ligne de visée (voir section~\ref{subsec:hcd}), et les six boîtes de gradient de vitesse afin d'ajouter les RSD au champ \lya{}.
@@ -494,12 +498,15 @@ Dans les mocks que nous décrivons ici, le profil d'absorption des HCD n'est pas
 
 
 \section{Production des mocks}
-Comme expliqué au début de ce chapitre, l'objectif des mocks est de reproduire les données d'eBOSS et de DESI. Etant donné que le relevé d'eBOSS est contenu dans le relevé de DESI, nous simulons directement le relevé DESI. Ainsi, lorsque nous avons besoin de simuler le relevé d'eBOSS, nous retirons les quasars qui ne sont pas contenu dans ce relevé. La taille des boîtes choisie ($\num{2560}\times\num{2560}\times\num{1536}$ voxcells) et leur résolution (\SI{2.19}{\perh\Mpc}) ne suffisent pas à couvrir les \num{14000} degrés carrés de DESI. Pour palier ce problème, nous construisons sept \emph{chunks} indépendants, que nous assemblons pour former le relevé de DESI. Le découpage du relevé en sept chunks est montré sur la figure~\ref{prov} (\#prov faire une figure). Ce choix d'assembler sept boîtes de densité plutôt que d'en utiliser une seule a été contraint par la mémoire maximale des noeuds. Les mocks ont été produit grâce au centre de calcul NERSC\footnote{National Energy Research Scientific Computing Center (NERSC), a U.S. Department of Energy Office of Science User Facility operated under Contract No. DE-AC02-05CH11231.}, avec la machine Cori. Sur cette machine, nous avons utilisé les noeuds ``Haswell'', au nombre de \num{2388}. Chaque noeud possède 32 c{\oe}urs, chacun possèdant 2 hyper-threads. Chaque noeud peut donc gérer 64 tâches simultanément. De plus, ces noeuds possèdent $\num{128}\,\mathrm{Go}$ de mémoire vive. De manière à créer nos boîtes de densité, via la transformation de Fourier à trois dimensions, il faut, pour chaque boîte, que l'intégralité de son contenu soit accessible depuis un même endroit. Nous pourrions distribuer la mémoire et effectuer la transformation de Fourier sur plusieurs noeuds à l'aide de la librairie MPI. Cependant nous avons choisi de ne pas utiliser cette librairie et d'effectuer les transformations de Fourier sur un seul noeud, ce qui explique le découpage du relevé en sept chunks indépendants. Nous profitons néanmoins des 64 threads de chaque noeud pour paralléliser notre code.
+Comme expliqué au début de ce chapitre, l'objectif des mocks est de reproduire les données d'eBOSS et de DESI. Etant donné que le relevé d'eBOSS est contenu dans le relevé de DESI, nous simulons directement le relevé DESI. Ainsi, lorsque nous avons besoin de simuler le relevé d'eBOSS, nous retirons les quasars qui ne sont pas contenu dans ce relevé. La taille des boîtes choisie ($\num{2560}\times\num{2560}\times\num{1536}$ voxels) et leur résolution (\SI{2.19}{\perh\Mpc}) ne suffisent pas à couvrir les \num{14000} degrés carrés de DESI. Pour palier ce problème, nous construisons sept \emph{chunks} indépendants, que nous assemblons pour former le relevé de DESI. Le découpage du relevé en sept chunks est montré sur la figure~\ref{prov} (\#prov faire une figure). Ce choix d'assembler sept boîtes de densité plutôt que d'en utiliser une seule a été contraint par la mémoire maximale des noeuds. Les mocks ont été produits grâce au centre de calcul NERSC\footnote{National Energy Research Scientific Computing Center (NERSC), a U.S. Department of Energy Office of Science User Facility operated under Contract No. DE-AC02-05CH11231.}, avec la machine Cori. Sur cette machine, nous avons utilisé les noeuds ``Haswell'', au nombre de \num{2388}. Chaque noeud possède 32 c{\oe}urs, chacun possèdant 2 hyper-threads. Chaque noeud peut donc gérer 64 tâches simultanément. De plus, ces noeuds possèdent $\num{128}\,\mathrm{Go}$ de mémoire vive. De manière à créer nos boîtes de densité, via la transformation de Fourier à trois dimensions, il faut, pour chaque boîte, que l'intégralité de son contenu soit accessible depuis un même endroit. Nous pourrions distribuer la mémoire et effectuer la transformation de Fourier sur plusieurs noeuds à l'aide de la librairie MPI.
+% Cependant nous avons choisi de ne pas utiliser cette librairie et d'effectuer les transformations de Fourier sur un seul noeud, ce qui explique le découpage du relevé en sept chunks indépendants.
+Cependant nous n'avions pas l'expertise nécessaire, et nous avons choisi d'effectuer les transformations de Fourier sur un seul noeud, ce qui explique le découpage du relevé en sept chunks indépendants.
+Nous profitons néanmoins des 64 threads de chaque noeud pour paralléliser notre code.
 
 Dans les lignes qui suivent, nous détaillons les différents éléments du code.
 Le schéma~\ref{prov} résume la situation (\#prov faire le schéma).
-Le première module, \texttt{interpolate\_pk.py} permet de calculer puis d'interpoler les quatres spectres de puissance $P_{\textsc{QSO},i}$ et $P_{matière}$ sur la grille $\num{2560}\times\num{2560}\times\num{1536}$. Le code est lancé séparément sur 16 morceaux de la boîte, puis le code \texttt{merge\_pk.py} permet de rassembler des 16 morceaux des spectres de puissance interpolés et de les sauver au format FITS (Flexible Image Transport System). Cette étape est effectuée une seule fois, car les spectres de puissance sont communs à toutes les réalisations. Le module suivant est \texttt{make\_boxes.py}. Ce code lit les spectres de puissance interpolés puis construit les différentes boîtes de densité, de vitesse et de gradient de vitesse décrits dans la section~\ref{subsec:densityfields}. Ce code est lancé sept fois, afin de produire les boîtes pour les septs chunks. Une fois toutes les boîtes produites, les quasars sont tirés (section~\ref{subsec:qso}) grâce au code \texttt{draw\_qso.py}. Afin d'accélerer la production des mocks, les boîtes sont partagées en \num{512} tranches selon l'axe \textsc{x}. Ces tranches, de taille $\num{5}\times\num{2560}\times\num{1536}$, sont traitées séparément. Ce code est donc tourné en parallèle \num{512} fois, sur 16 noeuds $\times$ 32 threads. Une fois les quasars tirés, les lignes de visée sont interpolées (section~\ref{subsec:los_interp}) avec le code \texttt{make\_spectra.py}. De la même manière que le code précédent, il tourne en parallèle \num{512} fois, sur 16 noeuds $\times$ 32 threads. Une fois tous les quasars traités, les morceaux de ligne de visée sont mis bout à bout grâce au code \texttt{merge\_spectra.py}. Encore une fois, le code tourne en parallèle \num{512} fois. Lorsque les lignes de visée sont reconstruites, la formule FGPA est appliquée afin d'obtenir le champ de transmission $F$ pour chaque ligne de visée.
-La dernière étape consiste à regrouper le résultat de chaque chunk. Le module \texttt{merge\_qso.py} permet de lire tous les quasars tirés dans chaque tranche de chaque chunk et de créer un catalogue global appelé \texttt{master.fits}. Une fois le catalogue construit, le code \texttt{dla\_saclay.py} tire les HCD dans chaque ligne de visée. Le code est tourné sur les septs chunks en parallèle. Puis le module \texttt{merge\_dla.py}, comme pour les quasars, permet de regrouper tous les HCD tirés et de construire le catalogue global \texttt{master\_DLA.fits}. Enfin le code \texttt{make\_transmissions.py} permet de mettre les fichiers contenant les forêts au bon format : les forêts sont regroupées par HEALPix pixel (\#prov expliquer ou mettre une ref ?) et sont stockées dans les fichiers
+Le première module, \texttt{interpolate\_pk.py} permet de calculer puis d'interpoler les quatres spectres de puissance $P_{\textsc{QSO},i}$ et $P_{matière}$ sur la grille $\num{2560}\times\num{2560}\times\num{1536}$ dans l'espace k. Le code est lancé séparément sur 16 morceaux de la boîte, puis le code \texttt{merge\_pk.py} permet de rassembler des 16 morceaux des spectres de puissance interpolés et de les sauver au format FITS (Flexible Image Transport System). Cette étape est effectuée une seule fois, car les spectres de puissance sont communs à toutes les réalisations. Le module suivant est \texttt{make\_boxes.py}. Ce code lit les spectres de puissance interpolés puis construit les différentes boîtes de densité, de vitesse et de gradient de vitesse décrits dans la section~\ref{subsec:densityfields}. Ce code est lancé sept fois, afin de produire les boîtes pour les septs chunks. Une fois toutes les boîtes produites, les quasars sont tirés (section~\ref{subsec:qso}) grâce au code \texttt{draw\_qso.py}. Afin d'accélerer la production des mocks, les boîtes sont partagées en \num{512} tranches selon l'axe \textsc{x}. Ces tranches, de taille $\num{5}\times\num{2560}\times\num{1536}$, sont traitées séparément. Ce code est donc tourné en parallèle \num{512} fois, sur 16 noeuds $\times$ 32 threads. Une fois les quasars tirés, les lignes de visée sont interpolées (section~\ref{subsec:los_interp}) avec le code \texttt{make\_spectra.py}. De la même manière que le code précédent, il tourne en parallèle \num{512} fois, sur 16 noeuds $\times$ 32 threads. Une fois tous les quasars traités, les morceaux de ligne de visée sont mis bout à bout grâce au code \texttt{merge\_spectra.py}. Encore une fois, le code tourne en parallèle \num{512} fois. Lorsque les lignes de visée sont reconstruites, la formule FGPA est appliquée afin d'obtenir le champ de transmission $F$ pour chaque ligne de visée.
+La dernière étape consiste à regrouper le résultat de chaque chunk. Le module \texttt{merge\_qso.py} permet de lire tous les quasars tirés dans chaque tranche de chaque chunk et de créer un catalogue global appelé \texttt{master.fits}. Une fois le catalogue construit, le code \texttt{dla\_saclay.py} tire les HCD le long de chaque ligne de visée. Le code est tourné sur les septs chunks en parallèle. Puis le module \texttt{merge\_dla.py}, comme pour les quasars, permet de regrouper tous les HCD tirés et de construire le catalogue global \texttt{master\_DLA.fits}. Enfin le code \texttt{make\_transmissions.py} permet de mettre les fichiers contenant les forêts au bon format : les forêts sont regroupées par HEALPix pixel (\#prov expliquer ou mettre une ref ?) et sont stockées dans les fichiers
 \begin{equation*}
   \texttt{\textsc{n}/\textsc{pix}/transmission-nside-\textsc{pix}.fits.gz} \; ,
 \end{equation*}
@@ -514,8 +521,8 @@ Une certain nombre de problèmes informatiques, liés au centre de calcul NERSC,
 
 % Celle-ci a nécessité environ six mois avant d'être complète.
 % Ce temps nous a permis de choisir les paramètres \lya{} souhaités,
-Le temps laissé par les six mois nécessaires à la production nous a permis de choisir les paramètres \lya{} souhaités,
-et d'ajuster les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) en conséquence (voir section~\ref{prov}). Une fois ces paramètres ajustés et la phase de pré-production terminée, nous avons mené la phase de \emph{post-production}. Cette phase consiste à créer les spectres d'absorption à partir des densités interpolées le long des lignes de visée, puis à regrouper tous les fichiers de sortie afin de les mettre au format décrit précédemment. Cette étape est beaucoup plus rapide, elle prend l'équivalent d'environ 6 heures CPU sur un noeud de Cori. Une fois la production complète effectuée, la place sur disque d'une réalisation, sans compter les fichiers temporaires, correspond à environ $\num{15}\,\mathrm{Go}$ sur disque.
+Le temps pris par les six mois nécessaires à la production nous a permis de choisir les paramètres \lya{} souhaités,
+et d'ajuster les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) en conséquence. Ceci est expliqué dans la section suivante. Une fois ces paramètres ajustés et la phase de pré-production terminée, nous avons mené la phase de \emph{post-production}. Cette phase consiste à créer les spectres d'absorption à partir des densités interpolées le long des lignes de visée, puis à regrouper tous les fichiers de sortie afin de les mettre au format décrit précédemment. Cette étape est beaucoup plus rapide, elle prend l'équivalent d'environ 6 heures CPU sur un noeud de Cori par réalisation. Une fois la production complète effectuée, la place sur disque d'une réalisation, sans compter les fichiers temporaires, correspond à environ $\num{15}\,\mathrm{Go}$.
 
 
 \section{Ajustement des paramètres}
