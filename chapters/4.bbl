@@ -1,9 +1,21 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Heitmann et~al.(2019)Heitmann, Finkel, Pope, Morozov, Frontiere,
+  Habib, Rangel, Uram, Korytov, Child, Flender, Insley, and
+  Rizzi]{Heitmann2019}
+Katrin Heitmann, Hal Finkel, Adrian Pope, Vitali Morozov, Nicholas Frontiere,
+  Salman Habib, Esteban Rangel, Thomas Uram, Danila Korytov, Hillary Child,
+  Samuel Flender, Joe Insley, and Silvio Rizzi.
+\newblock {The Outer Rim Simulation: A Path to Many-Core Supercomputers}.
+\newblock apr 2019.
+\newblock \doi{10.3847/1538-4365/ab4da1}.
+\newblock URL \url{http://arxiv.org/abs/1904.11970
+  http://dx.doi.org/10.3847/1538-4365/ab4da1}.
 
 \bibitem[Agrawal et~al.(2017)Agrawal, Makiya, Chiang, Jeong, Saito, and
   Komatsu]{agrawal_generating_2017}
@@ -40,6 +52,14 @@ L.~Clerkin, D.~Kirk, M.~Manera, O.~Lahav, F.~Abdalla, A.~Amara, D.~Bacon,
 \newblock URL \url{http://arxiv.org/abs/1605.02036
   http://dx.doi.org/10.1093/mnras/stw2106}.
 
+\bibitem[Coles and Jones(1991)]{coles_lognormal_1991}
+Peter Coles and Bernard Jones.
+\newblock {A lognormal model for the cosmological mass distribution}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  248:\penalty0 1--13, jan 1991.
+\newblock ISSN 0035-8711.
+\newblock URL \url{http://adsabs.harvard.edu/abs/1991MNRAS.248....1C}.
+
 \bibitem[Lewis et~al.(1999)Lewis, Challinor, and Lasenby]{Lewis1999}
 Antony Lewis, Anthony Challinor, and Anthony Lasenby.
 \newblock {Efficient Computation of CMB anisotropies in closed FRW models}.
@@ -47,5 +67,54 @@ Antony Lewis, Anthony Challinor, and Anthony Lasenby.
 \newblock \doi{10.1086/309179}.
 \newblock URL \url{http://arxiv.org/abs/astro-ph/9911177
   http://dx.doi.org/10.1086/309179}.
+
+\bibitem[Pieri et~al.(2016)Pieri, Bonoli, Chaves-Montero, Paris, Fumagalli,
+  Bolton, Viel, Noterdaeme, Miralda-Escud{\'{e}}, Busca, Rahmani, Peroux,
+  Font-Ribera, Trager, and Collaboration]{Pieri2016}
+M.~M. Pieri, S.~Bonoli, J.~Chaves-Montero, I.~Paris, M.~Fumagalli, J.~S.
+  Bolton, M.~Viel, P.~Noterdaeme, J.~Miralda-Escud{\'{e}}, N.~G. Busca,
+  H.~Rahmani, C.~Peroux, A.~Font-Ribera, S.~C. Trager, and The~WEAVE
+  Collaboration.
+\newblock {WEAVE-QSO: A Massive Intergalactic Medium Survey for the William
+  Herschel Telescope}.
+\newblock nov 2016.
+\newblock URL \url{https://arxiv.org/abs/1611.09388}.
+
+\bibitem[Farr et~al.(2019)Farr, Font-Ribera, des Bourboux,
+  Mu{\~{n}}oz-Guti{\'{e}}rrez, Lopez, Pontzen, Gonz{\'{a}}lez-Morales, Alonso,
+  Brooks, Doel, Etourneau, Guy, Goff, de~al Macorra, Palanque-Delabrouille,
+  P{\'{e}}rez-R{\`{a}}fols, Rich, Slosar, Tarle, Yutong, and Zhang]{Farr2019}
+James Farr, Andreu Font-Ribera, H{\'{e}}lion du~Mas des Bourboux, Andrea
+  Mu{\~{n}}oz-Guti{\'{e}}rrez, Francisco Javier~Sanchez Lopez, Andrew Pontzen,
+  Alma~Xochitl Gonz{\'{a}}lez-Morales, David Alonso, David Brooks, Peter Doel,
+  Thomas Etourneau, Julien Guy, Jean-Marc~Le Goff, Axel de~al Macorra, Nathalie
+  Palanque-Delabrouille, Ignasi P{\'{e}}rez-R{\`{a}}fols, James Rich,
+  An{\v{z}}e Slosar, Gregory Tarle, Duan Yutong, and Kai Zhang.
+\newblock {LyaCoLoRe: Synthetic Datasets for Current and Future Ly-alpha Forest
+  BAO Surveys}.
+\newblock dec 2019.
+\newblock \doi{10.1088/1475-7516/2020/03/068}.
+\newblock URL \url{https://arxiv.org/abs/1912.02763}.
+
+\bibitem[Font-Ribera et~al.(2012)Font-Ribera, Mcdonald, and
+  Miralda-Escud{\'{e}}]{Font-Ribera2012}
+Andreu Font-Ribera, Patrick Mcdonald, and Jordi Miralda-Escud{\'{e}}.
+\newblock {Generating mock data sets for large-scale Lyman- $\alpha$ forest
+  correlation measurements Generating mock data sets for large-scale
+  Lyman-$\alpha$ forest correlation measurements}.
+\newblock \emph{Journal of Cosmology and Astroparticle Physics}, 2012.
+\newblock \doi{10.1088/1475-7516/2012/01/001}.
+\newblock URL
+  \url{http://iopscience.iop.org/article/10.1088/1475-7516/2012/01/001/pdf}.
+
+\bibitem[Hamilton(1992)]{hamilton_measuring_1992}
+A~J~S Hamilton.
+\newblock {Measuring {\{}Omega{\}} and the real correlation function from the
+  redshift correlation function}.
+\newblock \emph{The Astrophysical Journal Letters}, 385:\penalty0 L5----L8, jan
+  1992.
+\newblock ISSN 0004-637X.
+\newblock \doi{10.1086/186264}.
+\newblock URL \url{http://adsabs.harvard.edu/abs/1992ApJ...385L...5H}.
 
 \end{thebibliography}
