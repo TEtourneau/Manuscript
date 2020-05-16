@@ -404,7 +404,8 @@ Cependant, ce champ est construit sur une grille de taille $d_{cell} = \SI{2.19}
   Nous manquons donc toutes les fluctuations pour lesquelles $k > k_N$. Sans ces fluctuations le spectre de puissance à une dimension, défini comme
 \begin{equation}
   \label{eq:p1d}
-  P^{1D}(\kpar{}) = \frac{1}{2 \pi} \int_{\kpar{}}^{\infty} k P(k) dk \; ,
+  % P^{1D}(\kpar{}) = \frac{1}{2 \pi} \int_{\kpar{}}^{\infty} k P(k) dk \; ,
+  P^{1D}(\kpar{}) = \frac{1}{2 \pi} \int_{\kpar{}}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; ,
 \end{equation}
 ne possède pas la bonne amplitude. De plus, ce sont ces fluctuations aux petites échelles qui contribuent principalement à la variance du champ. Le champ $F$ construit ne possède donc pas le bon niveau de bruit.
 Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de visée un champ $\delta_s$ (\emph{small scales} : petites échelles) au champ $\delta_{matière}$ que nous appelons désormais $\delta_{l}$ (\emph{large scales} : grandes échelles) :
@@ -423,8 +424,10 @@ où $P_{miss}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}
 \label{subsubsec:rsdlya}
 Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à 3 dimension pour les échelles $k_N < k < k_{max}$, avec
 \begin{equation}
+  \label{eq:kny}
   k_{max} = \frac{2 \pi}{1536 d_{cell}} \sim \SI{1.9e-3}{\h\per\Mpc} \; ,
 \end{equation}
+(\#prov y a un facteur 2 en trop pour kny?)
 ainsi que le bon spectre de puissance à une dimension.
 Cependant, le champ d'absorption $F$ ne possède pas de RSD pour l'instant, car il est construit à partir du spectre de puissance $P_{matière}(k)$ qui est isotrope. Initiallement, nous pensions ajouster les RSD au niveau du spectre de puissance : multiplier le GRF intial par $(1 + \beta \mu^2)P_{matière}(k, \mu)$, avec $\mu = k_z / k$. Cependant, du fait que les lignes de visées ne sont pas parrallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), nous ne pouvons pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$. Nous avons alors choisi d'utilisé le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}. Plusieurs essais (\#prov les détailler ?)  ont été menés afin de savoir comment inclure correctement le champ $\eta_{\parallel}$ dans FGPA. Nous présentons dans les lignes qui suivent la solution retenue.
 Le champ $\eta_{\parallel}$ est ajouté, en plus du champ $\delta_s$, au champ $\delta_l$. Ceci nous permet de retrouver la formule de Kaiser (équation~\ref{eq:kaiser5}). Afin de gérer la quantité de RSD, nous ajoutons un coefficient $c$, qui dépend de $z$. L'ajustement de ce paramètre nous permet d'obtenir la bonne dépendance en $z$ pour $\beta_{\mathrm{Ly}\alpha}$. La formule FGPA devient donc
@@ -435,6 +438,7 @@ Le champ $\eta_{\parallel}$ est ajouté, en plus du champ $\delta_s$, au champ $
 Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$, la dépendance en z étant prise en compte par le facteur $G(z)$. De plus, le facteur $f$ que nous avons laissé de cotê dans la section~\ref{subsubsec:vitesses} n'est pas explicité ici : pour les redshifts $z > 2$, l'univers est dominé par la matière et donc, en bonne approximation, nous avons $f(z) \sim 1$. Les paramètres $a(z)$, $b(z)$, $c(z)$, ainsi que $P_{miss}(z)$ sont ajustés afin d'obtenir le bon $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{1D}_{\mathrm{Ly}\alpha}(z)$. L'ajustement est décrit dans la section~\ref{sec:tuning}.
 
 \subsubsection{La prédiction}
+\label{subsubsec:pred}
 Il aurait été possible d'implémenter les RSD différemment. Une solution serait, par exemple, de déplacer chaque pixel d'absorption proportionnellement à la vitesse particulière du gaz dans la cellule considéré, puis de modifier l'absorption en fonction de gradient de vitesse dans cette cellule. En effet, si le gradient de vitesse est non nul, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque cellule. Cette méthode pour ajouter les RSD dans des mocks \lya{} est la méthode choisie par \citet{Farr2019}.
 % Ce n'est pas la méthode que nous choisissons ici, car celle-ci ne permet pas de prédire la fonction de corrélation obtenue avec les mocks. Dans le cas où $F$ est relié au GRF $\delta$ par une fonction analytique (équation~\ref{eq:fgpa4}), il est possible de relier la fonction de corrélation $\xi_F$ du champ $F$ à la fonction de corrélation $\xi_g$ du champ $\delta$ \citep{Font-Ribera2012}. Ces deux fonctions de corrélations sont reliées par la relation
 La méthode que nous utilisons, décrite dans la section précédente, a l'avantage d'avoir une fonction de corrélation prédictible. C'est pour cela que nous avons fait le choix de cette méthode. Dans les lignes qui suivent, nous expliquons comment calculer la prédiction de la fonction de corrélation. Comme décrit par \citet{Font-Ribera2012}, il est possible de relier la fonction de correlation $\xi_F$ du champ $F$ à la fonction de corrélation $\xi_g$ du champ $\delta_g$. Ces deux fonctions de corrélations sont reliées par
@@ -483,6 +487,7 @@ Afin d'obtenir la prédiction $\xi_F^{pred}(r, \mu)$, nous commençons par calcu
 \end{equation}
 où $W$ est le terme représentant le lissage gaussien appliqué à la boîte $\delta_l$ (voir section~\ref{subsec:los_interp}) :
 \begin{equation}
+  \label{eq:gauss_smoothing}
   W(k) = \mathrm{e}^{- \frac{k^2 d_{cell}^2}{2}} \;.
 \end{equation}
 % (\#prov il y a pas un facteur $\frac{1}{2}$ en trop ? on a $\sigma_{smooth}^2 = 2 d_{cell}^2$)
@@ -600,11 +605,56 @@ et d'ajuster les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) en co
 \label{sec:tuning}
 Comme expliqué dans la section~\ref{subsec:density2absorption}, le champ d'absorption \lya{} est construit à partir des boîtes $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ grâce à la formule FGPA.
 Contrairement aux quasars pour lesquels le biais est choisi, les paramètres physiques du champ d'absorption \lya{} simulé dépendent des quatres paramètres $a(z)$, $b(z)$, $c(z)$ et $P_{miss}(z)$ utilisés dans l'équation~\ref{eq:fgpa4}.
-Nous décrivons dans cette section comment ajuster ces paramètres afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$, $\overline F(z)$ et $P^{1D}(k, z)$. Nous nous servons des données décrites dans la section~\ref{prov} comme référence pour les paramètres du \lya{}.
+Nous décrivons dans cette section comment ajuster ces paramètres (paramètres FGPA dans la suite) afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{1D}(k, z)$ (paramètres \lya{} dans la suite). Nous nous servons des données décrites dans la section~\ref{prov} comme référence pour les paramètres \lya{}.
 
+Afin d'ajuster ces paramètres \lya{}, nous pourions générer un mock avec un jeu de paramètres FGPA, calculer la fonction de corrélation du \lya{}, ajuster cette fonction de corrélation et mesurer les paramètres \lya{}. Puis une fois ces paramètres mesurés, itérer sur les paramètres FGPA afin de nous rapprocher des paramètres \lya{} visés. Cependant cette méthode est très couteuse, car elle nécessite de générer des spectres et de produire la fonction de corrélation à chaque itération.
+Pour accélérer la procédure d'ajustement, nous tirons profit du fait que nos mocks possèdent une fonction de corrélation prédictible.
+Ainsi, au lieu de générer des spectres et calculer la fonction de corrélation sur ces derniers à chaque itération, nous générons la prédiction (section~\ref{subsubsec:pred}) puis nous l'ajustons directement afin de mesurer les paramètres \lya{} correspondant au jeu de paramètres FGPA utilisé.
+Cet ajustement est fait dans 5 bins en redshift $z_1 = \num{1.8}$, $z_2 = \num{2.2}$, $z_3 = \num{2.6}$, $z_4 = \num{3.0}$ et $z_5 = \num{3.6}$.
 
+\paragraph{}
+Dans les lignes qui suivent, nous expliquons comment, dans chaque bin en redshift, nous choisissons le jeu de paramètres FGPA initial pour générer la prédiction.
+Premièrement, nous choississons le paramètre $c$. La somme des champs $\delta_l$ et $\eta_{\parallel}$ permet de retrouver le champ $\delta^s$ dans l'espace des redshifts, via la formule de Kaiser (équation~\ref{eq:kaiser5}). Le champ $\delta^s$ possède un biais de 1, par construction. Son paramètre RSD est donc $\beta = f / b = f$. De plus, à grand redshift, nous pouvons considérer en bonne approximation que $f \sim 1$. Nous avons donc $\beta ~ 1$. Ainsi, lorsque nous considérons la somme des trois champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ dans l'équation~\ref{eq:fgpa4}, le terme $c$ devant $\eta_{\parallel}$ donne, en première approximation, $\beta = c$.
+Dans chaque bin en redshift, nous choisissons donc $c(z) = \beta_{\mathrm{Ly}\alpha}(z)$.
+En ce qui concerne les paramètres $a$ et $b$, ils sont ajustés afin de retrouver le bon $\overline F(z)$ et $P^{1D}(k, z)$ (\#prov décrire).
 
+Une fois les paramètres $a$, $b$ et $c$ choisis, nous déterminons le spectre de puissance $P_{miss}$ à appliquer à $\delta_{k,s}$ afin d'obtenir le bon $P^{1D}$. 
+% Nous commençons par estimer grossièrement la puissance manquante aux petites échelles comme la différence du spectre de puissance à une dimension visé $P^{1D}_{Prats}$ et du spectre de puissance à une dimension du champ $\delta_l + c \eta_{\parallel}$ $P^{1D}_{mock}$.
+Nous commençons par constuire le spectre de puissance $P^{1D}_{modèle}$ sur lequel le $P^{1D}$ des mocks sera ajusté. Tout d'abord, les données provenant de (\#prov On fit les données DR12 sans les oscillations du Si, quel papier ?) sont ajustées, dans la gamme $\num{0.2} < k < {2.0} \si{\h\per\Mpc}$. Les oscillations dans le specte de puissance à une dimension causées par le silicium sont aussi ajustées afin de les retirer de l'ajustement des données et de construire un modèle $P^{1D}_{modèle}$ sans ces oscillations. La fonction ajustée aux données est définie comme
+\begin{equation}
+  \label{eq:p1d_data}
+  f(k) = \exp(- a k + b + \frac{c}{k + d}) \times f_{Si}(k) \; ,
+\end{equation}
+où $a$, $b$, $c$ et $d$ sont quatres paramètres à ajuster, et $f_{Si}$ est la fonction qui prend en compte les oscillations dues au silicium. La forme choisie permet d'avoir $\log(P^{1D}_{modèle})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \citep{Arinyo-i-Prats2015}.
+% L'ajustement est fait dans les cinqs bins en redshift $z_1$, $z_2$, $z_3$, $z_4$ et $z_5$.
+L'ajustement est fait dans les bins en redshift \num{2.2}, \num{2.4}, \num{2.6}, \num{2.8}, \num{3.0}, \num{3.2}, \num{3.4} et \num{3.6}.
+Du fait de la résolution $d_{pix} = \SI{0.2}{\perh\Mpc}$ des spectres simulés, nous avons besoin de calculer le  $P_{miss}$ jusqu'à $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$. Ainsi, le résultat de l'ajustement sur les données est extrapolé de $k = \num{2.0}$ jusqu'à $k = \SI{20}{\h\per\Mpc}$.
+Pour les $k$ plus petits que \SI{0.2}{\h\per\Mpc}, nous utilisons le modèle décrit dans \citet{Arinyo-i-Prats2015} et ajusté sur des simulations hydrodynamiques. Il est défini comme
+\begin{equation}
+  \label{eq:p1d_prats}
+  D_1(k, \mu) = \exp\left[
+    \left(q_1 \Delta^2(k) + q_2 \Delta^4(k) \right) \left(1 - \left(\frac{k}{k_v}\right)^{a_v} \mu^{b_v} \right)
+    - \left(\frac{k}{k_p} \right)^2 
+  \right]
+  \; ,
+\end{equation}
+avec
+\begin{equation}
+  \Delta^2(k) = \frac{1}{2 \pi^2} k^3 P_L(k) \; .
+\end{equation}
+Les termes $q_1 \Delta^2(k)$ et $q_2 \Delta^4(k)$ représente l'augmentation de puissance due aux non-linéarités. L'ajustement que nous utilisons force $q_2 = 0$. L'ajustement des autres paramètres est donné dans la section ``Planck'' de la table 7.
+Le modèle est calculé pour $z = 2.4$. Puis, dans chaque bin en redshift, la forme ajustée aux données et définie dans l'équation~\ref{eq:p1d_data} est prolongée par le modèle donné dans l'équation~\ref{eq:p1d_prats} de $k = \SI{0.2}{\h\per\Mpc}$ jusqu'à $k = 0$. Le modèle est multiplié par une constante de façon à ce que le modèle de l'équation~\ref{eq:p1d_prats} multiplié par cette constante soit égal à l'ajustement fait sur les données à $k = \SI{0.2}{\h\per\Mpc}$.
+La figure~\ref{prov} (\#prov faire la figure : modèle + données superposées. 1 seul bin en z ? Tous ? Seulement 2.2, 2.6, 3.0 et 3.6 ?) montre le modèle ainsi construit, avec les données de \#prov.
+Pour le bin $z = \num{1.8}$, aucune donnée \lya{} n'est disponible. Nous extrapolons donc le modèle à $z = \num{2.2}$. Nous considérons que la forme du modèle est la même, et que l'évolution en redshift de $z = \num{2.4}$ à $z = \num{2.2}$ est la même jusqu'à $z = \num{1.8}$. Le modèle à $z = \num{1.8}$ est donc donné comme
+\begin{equation}
+  P^{1D}_{modèle}(k, z=\num{1.8}) = P^{1D}_{modèle}(k, z=\num{2.2}) \left(\frac{P^{1D}_{modèle}(k, z=\num{2.2})}{P^{1D}_{modèle}(k, z=\num{2.4})} \right)^2 \; .
+\end{equation}
 
+Une fois le spectre de puissance modèle calculé, nous estimons le spectre de puissance à une dimension du champ interpolé $\delta_l + c \eta_{\parallel}$. Nous partons du spectre de puissance fournit par Camb. Nous multiplions ce spectre de puissance par le terme $W$ représentant l'effet du lissage gaussien (équation~\ref{eq:gauss_smoothing}). Enfin, nous calculons le spectre de puissance à une dimension $P^{1D}_{mock}$ grâce à l'équation~\ref{eq:p1d}, en nous restreignant aux $k < k_{max}$.
+Le spectre de puissance à une dimension $P_{miss}$ à appliquer à $\delta_{k,s}$ afin d'obtenir le bon $P^{1D}$ est défini comme
+\begin{equation}
+  P_{miss}(k) = P^{1D}_{modèle}(k) - P^{1D}_{mock}(k) \; .
+\end{equation}
 
 
 \bibliography{../source/library}
