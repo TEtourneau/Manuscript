@@ -107,6 +107,7 @@ Dans cette section, nous décrivons comment, du flux mesuré $f_q(\lambda)$ du q
 La démarche que nous décrivons ici est très bien expliquée dans la thèse \citet{CITE:Victoria}. Nous y référons le lecteur pour plus de détails.
 
 \subsection{Calcul des $\delta$}
+\label{subsec:calcul_delta}
 Comme présenté dans la section~\ref{subsec:lya}, le contraste de l'absorption \lya{} $\delta_q(\lambda)$ est défini comme
 \begin{equation}
   \label{eq:deltaF}
@@ -147,6 +148,7 @@ Une fois cette ajustement fait, $\overline C(\lambda_{\mathrm{RF}})$ est de nouv
 
 
 \subsection{Prise en compte de l'ajustement du continuum}
+\label{subsec:projdelta}
 La procédure décrite dans la section précédente permet d'ajuster le continuum de chaque quasar afin d'estimer le champ $\delta$ dans chaque région d'absorption \lya{}. Cependant, cet ajustement biaise le champ $\delta$ mesuré, et introduit de fausses corrélations lors du calcul des fonctions de corrélation. Il est donc important de prendre en compte cet effet.
 % Dans la suite, $\delta_q$ dénote le champ original, et $\tilde \delta_q$ le champ estimé.
 % La modélisation de la diversité des quasars avec les paramètres $a_q$ et $b_q$ (équation~\ref{eq:diversity}) force la moyenne et la pente des $\\tilde delta_q$ à zéro. 
@@ -189,7 +191,7 @@ avec
     \sum\limits_{k} w_{k} \left( \Lambda_{k}-\overline {\Lambda_{q}} \right)^{2}
   }
   \; ,
-  \label{eq::proj1}
+  \label{eq:proj1}
 \end{equation}
 où $\delta^K_{ij}$ est le symbole de Kronecker.
 Dans ce calcul, les poids $w_q(\lambda)$ sont corrigés de la dépendance en redshift du biais du \lya{} :

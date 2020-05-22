@@ -1,7 +1,145 @@
 % created on 2019-12-13
 % @author : bmazoyer
 
-\chapter{Chap5}
+%% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
+
+\begin{document}
+%%
+
+\graphicspath{ {../figures/mocks/} }
+
+\chapter{Validation des mocks}
 \minitoc
 \newpage
 \thispagestyle{fancy}
+
+
+Ce chapitre a pour vocation de présenter l'anayse menée sur les mocks, afin de valider leur construction et le choix des différents paramètres. Nous présentons d'abord le calcul des diverses fonctions de corrélations, puis l'analyse des 100 réalisations produites. Pour faire cette analyse, nous utilisons le code \texttt{picca} qui permet de calculer les champs $\delta$, les fonctions de corrélations, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.
+
+\section{Les estimateurs}
+Nous présentons ici les estimateurs utilisés pour calculeur la fonction d'auto-corrélation du \lya{}, la fonction de corrélation croisée \lya{}-QSO, ainsi que la fonction d'auto-corrélation d'objets ponctuels tels les quasars.
+Dans le cas des objets ponctuels, la seule information nécessaire au calcul de la fonction de corrélation est le catalogue fournissant pour chaque objet l'ascension droite, la déclinaison et le redshift. Pour le calcul des fonctions de corrélation impliquant le \lya{}, il est nécessaire de calculer au préalable le champ $\delta_F$ (équation~\ref{eq:deltaF}). Nous distingons deux cas : le cas où nous analysons les \emph{raw mocks} et le cas où nous analysons les \emph{cooked mock} ou les données.
+Les raw mocks (les mocks bruts, non préparés) désignent les mocks avant d'avoir tourné le code \texttt{quickquasars}.
+Les fonctions de corrélation sont alors calculées en utilisant directement la fraction de flux transmise $F$ donnée dans les fichiers de transmissions. Etant donné que pour chaque forêt, nous avons directement accèss à $F$, le champ $\delta_F$ est donné par
+\begin{equation}
+  \delta_F = \frac{F}{\overline F} - 1 \; .
+\end{equation}
+Les coocked mocks quant à eux désignent les mocks après avoir appliqué \texttt{quickquasars} à chaque forêt. Dans ce cas, comme pour les données, la fraction de flux transmise $F$ n'est pas accessible. Il faut alors utiliser la procédure d'ajustement du continuum décrite dans la section~\ref{subsec:calcul_delta}.
+Une fois le champ $\delta_F$ calculé, nous pouvons calculer les différentes fonctions de corrélation.
+
+\subsection{L'auto-corrélation \lya{}$\times$\lya{}}
+Comme expliqué dans le chapitre d'introduction, la fonction d'auto-corrélation du champ d'absorption $F$ du \lya{} est définie comme
+\begin{equation}
+  \xi_{\mathrm{Ly}\alpha}(\vec r) = \langle \delta_F(\vec{r'}) \delta_F(\vec{r} + \vec{r'}) \rangle \; .
+\end{equation}
+Elle peut-être mise sous la forme
+\begin{equation}
+  \xi(\vec r) = \langle \delta_i \delta_j \rangle \; ,
+\end{equation}
+où $\langle .\rangle$ désigne la moyenne sur tous les pixels $i$ et $j$ qui vérifient $\vec r_{ij} = \vec r$.
+Afin de calculer $\xi_{\mathrm{Ly}\alpha}$, nous créons une grille en $(\rpar{}, \rperp{})$.
+% Chaque bin de cette grille fait $(\SI{4}{\perh\Mpc})^3$.
+Les bins mesurent \SI{4}{\perh\Mpc} dans chaque direction.
+Cette taille de bin permet à la fois de regrouper suffisamment de pixels pour avoir une bonne statistique dans chaque bin, mais aussi d'avoir suffisamment de bins pour résoudre correctement la région du pic BAO (\#prov est-ce que c'est vrai ? toujours la meme quantite d'info, donc ca ameliore pas le fit?).
+Une fois cette grille construite, nous transformons les coordonnées $(\alpha, \delta, z)$ des pixels $\delta_F$ en distances (\#prov donner les transformations géométriques ?).
+Puis, pour chaque bin $A$ de la grille en $(\rpar{}, \rperp{})$, nous considérons toutes les paires de pixels dont la distance de séparation se trouve dans ce bin $A$. La fonction de corrélation dans ce bin est alors donnée par
+\begin{equation}
+  \label{eq:xiff}
+  \xi_A = \frac{
+    \sum\limits_{(i,j)\in A} w_i w_j \delta_i \delta_j
+  }{
+    \sum\limits_{(i,j)\in A} w_i w_j
+  }
+  \; ,
+\end{equation}
+% où $w_i$ est le poids associé au pixel $i$. Les poids utilisés dans le calcul des fonctions de corrélation sont les poids définis dans l'équation~\ref{eq:weights}, corrigés par la dépendance en redshift du champ d'absorption du \lya{}. Le champ du \lya{} varie comme
+% \begin{equation}
+%   \delta_{\mathrm{Ly}\alpha}(z) = \delta_{\mathrm{Ly}\alpha}(0) \frac{b_{\mathrm{Ly}\alpha}(z) G(z)}{b_{\mathrm{Ly}\alpha}(0)G(0)} \; .
+% \end{equation}
+% Le facteur de croissance varie comme $G(z) \propto (1+z)^{-1}$, et le biais du \lya{} comme $b_{\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$.
+% Le champ $\delta_{\mathrm{Ly}\alpha}(z)$ est donc proportionnel à $(1+z)^{\gamma - 1}$. Le paramètre $\gamma = 2.9$ est mesuré sur le spectre de puissance à une dimension du \lya \citep{McDonald2004} (\#prov j'ai pas trouvé dans le papier à quel endroit était donnée la mesure).
+% Ainsi, les poids utilisés dans l'équation~\ref{eq:xiff} sont donnés par
+% \begin{equation}
+%   \label{eq:weights2}
+%   w_i = (1+z)^{\gamma - 1} \hat w_i \; ,
+% \end{equation}
+% où $\hat w_i$ sont les poids définis dans l'équation~\ref{eq:weights}.
+% Le calcul de la fonction de corrélation est donc effectué à l'aide d'une double boucle sur les pixels.
+où $w_i$ est le poids associé au pixel $i$. Ces poids sont définis dans l'équation~\ref{eq:weights2}. La correction de la dépendance en redshift du biais du \lya{} permet de donner plus de poids aux pixels à grand redshift, où l'amplitude de la fonction de corrélation est plus importante.
+Le calcul de la fonction de corrélation est donc effectué à l'aide d'une double boucle sur les pixels.
+Afin de réduire le temps de calcul, nous calculons la fonction de corrélation uniquement pour les paires de pixels pour lesquelles $\rpar{}$ et $\rperp{}$ sont inclus dans $[0 ; 200] \si{\perh\Mpc}$. La fonction de corrélation est donc calculée dans $50 \times 50 = \num{2500}$ bins.
+Les paires formées par des pixels provenant de la même forêt sont exclues du calcul afin d'éviter que les erreurs sur l'ajustement du continuum biaisent la mesure de la fonction de corrélation.
+
+L'analyse \lya{} des données complète d'eBOSS \citep{prov} utilise deux fonctions de corrélation distinctes : les fonctions de corrélation \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}. La région \lyb{} ne fournit pas suffisamment de pixels pour pouvoir calculer la fonction de corrélation \lyalyb{}$\times$\lyalyb{} et y détecter le pic BAO. L'utilisation de ces deux fonctions de corrélation permet de mesurer la position du pic BAO avec une plus grande précision. Dans ce manuscrit, nous nous intéressons à la mesure de $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ afin de construire correctement nos mocks. Pour limiter les potentielles systématiques, nous considérons donc uniquement la fonction de corrélation \lyalya{}$\times$\lyalya{}.
+Le graphique de droite de la figure~\ref{fig:pixel_number} présente les distributions pondérées en redshift des paires \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}. L'analyse des données DR16 que nous présentons ici considère donc uniquement la distribution indiquée en orange.
+
+
+\subsection{La corrélation croisée \lya{}$\times$QSO}
+Nous donnons dans cette section l'estimateur de la fonction de corrélation croisée \lya{}$\times$QSO. De la même manière que précédemment, le calcul s'effectue dans des bins en $(\rpar{}, \rperp{})$. La fonction de corrélation dans le bin $A$ est donnée par
+\begin{equation}
+  \label{eq:xiqf}
+  \xi_A = \frac{
+    \sum\limits_{(i,j)\in A} w_i w_j \delta_i
+  }{
+    \sum\limits_{(i,j)\in A} w_i w_j
+  }
+  \; ,
+\end{equation}
+où l'indice $i$ court sur les pixels des forêts et $j$ sur les quasars pour lesquels la distance de séparation est comprise dans le bin $A$. Comme précédemment, les paires $ij$ où le pixel $i$ appartient à la forêt du quasar $j$ sont rejetées.
+% Aussi, comme pour le \lya{}, les poids $w_j$ associés aux quasars incluent la dépendance avec le redshift du biais des quasars. Similairement à l'équation~\ref{eq:weights2}, ils sont définis comme
+Les poids $w_j$ associés aux quasars, similairement au \lya{}, favorisent les quasars à plus grand redshift. Ces poids sont définis comme
+\begin{equation}
+  \label{eq:weights3}
+  w_j = \left(\frac{1 + z_j}{1 + \num{2.25}}\right)^{\gamma_{QSO}} \; ,
+\end{equation}
+où $\gamma_{QSO} = \num{1.44} \pm \num{0.08}$ \citep{Bourboux2019}. Dans le calcul de la fonction de corrélation croisée \lya{}$\times$QSO, nous nous restreignons aux paires pour lesquelles $\rperp{} \in [0 ; 200] \si{\perh\Mpc}$.
+Contrairement à l'auto-corrélation du \lya{}, la fonction de corrélation croisée n'est pas symétrique en $\rpar{}$. Nous la calculons donc dans les bins pour lesquels $\rpar{} \in [-200 ; 200] \si{\perh\Mpc}$. La fonction de corrélation croisée est donc calculée dans $50 \times 50 = \num{2500}$ bins.
+
+
+\subsection{Le spectre de puissance à une dimension}
+Comme expliqué dans le chapitre précédent, nous ajustons le spectre de puissance $P_{miss}$ appliqué à $\delta_s$ de façon à obtenir un spectre de puissance à une dimension $P^{1D}$ en accord avec les données. Nous présentons donc maintenant la mesure de ce spectre de puissance. Pour chaque forêt, nous appliquons une transformation de Fourier au champ $\delta_F$ afin d'obtenir le champ $\delta_k$. Puis, le spectre de puissance de cette forêt est obtenu comme
+\begin{equation}
+  P^{1D}(k) = | \delta_k^2 | \; .
+\end{equation}
+Nous répétons cette procédure pour toutes les forêts, puis le spectre de puissance total est obtenu comme la moyenne du spectre de puissance de chaque forêt.
+
+En ce qui concerne les données, la mesure du spectre de puissance à une dimension est plus complexe. Un certain nombre d'effets liés à la mesure doivent être pris en compte. Le bruit, par exemple, doit être estimé afin d'être pris en compte pour ne pas fausser l'estimation du spectre de puissance. Cette analyse est détaillée dans~\citet{Chabanier2018}.
+
+\subsection{La fonction de corrélation à une dimension}
+
+Important / nécessaire ?
+
+
+\section{Les matrices de distorsion}
+L'ajustement du continuum nécessaire au calcul du champ $\delta_F$ dans les données et les coocked mocks biaise le champ mesuré. Cependant, grâce à la transformation (équation~\ref{eq:deltaF3}) décrite dans la section~\ref{subsec:projdelta}), l'effet sur la fonction de corrélation peut-être pris en compte.
+% L'idée est la suivante : plutôt que d'essayer de corriger la distorsion induite par l'ajustement du continuum sur la fonction de corrélation, cette distorsion est calculée et appliquée au modèle qui est ajusté aux données (\#prov pourquoi on inverse pas la dmat?).
+L'idée est la suivante : modéliser la distorsion induite par l'ajustement du continuum et par la transformation~\ref{eq:deltaF3} sur la fonction de corrélation, appliquer cette distorsion au modèle, puis ajuster le modèle ``distordu'' aux données. L'ajustement du continuum et la transformation~\ref{eq:deltaF3} induisent des corrélation le long de la ligne de visée. Au premier ordre, nous pouvons considérer que chaque $\delta_F$ d'une forêt est une combinaison linéaire de tous les $\delta_F$ de cette forêt. La fonction de corrélation distordue dans le bin $A$ peut alors être reliée à la vraie fonction de corrélation comme
+\begin{equation}
+  \xi_{distortion}(A) = \sum_{B} D_{AB}\xi_{vraie}(B) \; , 
+\end{equation}
+où $D_{AB}$ est appelée la \emph{matrice de distorsion}. Celle-ci s'exprime en fonction du projecteur $\eta_{ij}^q$ défini dans l'équation~\ref{eq:proj1}. Pour l'auto-corrélation, elle est défini comme
+\begin{equation}
+  \label{eq:dmat}
+  D_{AB} = \frac{1}{W_A} \sum_{(i,j)\in A} w_i w_j \left( \sum_{(i',j')\in B} \eta_{ii'} \eta_{jj'} \right) \,
+\end{equation}
+où $W_{A} = \sum_{(i,j)\in A} w_i w_j$ est le poids du bin A. Pour la corrélation croisée, la matrice de distorsion est donnée par
+\begin{equation}
+  \label{eq:xdmat}
+  D_{AB} = \frac{1}{W_A} \sum_{(i,j)\in A} w_i w_j \left( \sum_{(i',j')\in B} \eta_{ii'} \right) \, .
+\end{equation}
+Comme précédemment, les indices $i$ correspondent aux pixels des forêts, et $j$ aux quasars. A cause de la double somme, le calcul de la matrice de distorsion est très long. Afin de rendre possible l'estimation de cette dernière, le calcul est fait sur \SI{1}{\percent} des paires, tirées au hasard (\#prov Bautista 2017 montre que c'est OK avec 5\%, est-ce que y a une etude qui montre que c'est ok avec 1\% ? Dans DR14, ils utilisent 5\% je pense).
+% L'étude présentée dans~\citet{bautista_measurement_2017}
+
+La figure~\ref{prov} (\#prov faire la figure) montre l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatres gammes en $\mu$. La courbe noire indique la fonction de corrélation calculée sur les raw mocks, et la courbe bleu la fonction de ....
+\#prov Refaire la figure 11 de Bautista : CF des raw mocks (stack) + CF sur les coocked mocks (stack) avec le fit dans chaque cas.
+
+
+\section{Les matrices de covariance}
+
+
+
+
+\bibliography{../source/library}
+\end{document}
