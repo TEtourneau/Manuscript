@@ -646,10 +646,16 @@ L'ajustement est fait dans les bins en redshift \num{2.2} ; \num{2.4} ; \num{2.6
 % Du fait de la résolution $d_{pix} = \SI{0.2}{\perh\Mpc}$ des spectres simulés, nous avons besoin de calculer le  $P_{miss}$ jusqu'à $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$.
 Pour construire $\delta_s$, nous avons besoin de calculer $P_{miss}$ jusqu'à $k_{Ny}$.
 Le résultat de l'ajustement sur les données est donc extrapolé de $k = \num{2.0}$ jusqu'à $k = \SI{20}{\h\per\Mpc}$.
-Pour les $k$ plus petits que \SI{0.2}{\h\per\Mpc}, nous utilisons le modèle décrit dans \citet{Arinyo-i-Prats2015} et ajusté sur des simulations hydrodynamiques. Il est défini comme
+Pour les $k$ plus petits que \SI{0.2}{\h\per\Mpc}, nous utilisons le modèle décrit dans \citet{Arinyo-i-Prats2015} et ajusté sur des simulations hydrodynamiques.
+Il est défini comme
+\begin{equation}
+  P(k) = b_{\mathrm{Ly}\alpha}^2 (1 + \beta_{\mathrm{Ly}\alpha} \mu_k^2)^2 P_{\mathrm{L}}(k) D(k, \mu) \; ,
+\end{equation}
+où $P_{\mathrm{L}}$ est le spectre de puissance linéaire, donné par Camb, et $D(k,\mu)$ représente les déviations de la théorie linéaire. Le terme $D(k,\mu)$ tend donc vers $1$ à petit $k$. La forme choisie dans \citet{Arinyo-i-Prats2015} diffère de celle utilisée dans \citet{mcdonald_toward_2003}. Cette nouvelle forme pour modéliser les non linéarités permet d'obtenir le bon comportement à petit $k$. Aussi, elle nécessite l'ajustement de moins de paramètres.
+$D(k,\mu)$ est donc défini comme
 \begin{equation}
   \label{eq:p1d_prats}
-  D_1(k, \mu) = \exp\left[
+  D(k, \mu) = \exp\left[
     \left(q_1 \Delta^2(k) + q_2 \Delta^4(k) \right) \left(1 - \left(\frac{k}{k_v}\right)^{a_v} \mu^{b_v} \right)
     - \left(\frac{k}{k_p} \right)^2 
   \right]
@@ -659,7 +665,7 @@ avec
 \begin{equation}
   \Delta^2(k) = \frac{1}{2 \pi^2} k^3 P_L(k) \; .
 \end{equation}
-Les termes $q_1 \Delta^2(k)$ et $q_2 \Delta^4(k)$ représente l'augmentation de puissance due aux non-linéarités. L'ajustement que nous utilisons force $q_2 = 0$. Les autres paramètres ajustés sont donnés dans la section ``Planck'' de la table 7.
+Les termes $q_1 \Delta^2(k)$ et $q_2 \Delta^4(k)$ représente l'augmentation de puissance due aux non-linéarités. L'ajustement que nous utilisons force $q_2 = 0$. Les autres paramètres ajustés sont donnés dans la section ``Planck'' de la table 7 de \citet{Arinyo-i-Prats2015}.
 % Le modèle est calculé pour $z = 2.4$.
 Puis, dans chaque bin en redshift, la forme ajustée aux données et définie dans l'équation~\ref{eq:p1d_data} est prolongée de $k = \SI{0.2}{\h\per\Mpc}$ jusqu'à $k = 0$ par le modèle donné dans l'équation~\ref{eq:p1d_prats}.
 % Ce modèle est multiplié par une constante de façon à ce que ce modèle multiplié par cette constante soit égal à l'ajustement fait sur les données à $k = \SI{0.2}{\h\per\Mpc}$.

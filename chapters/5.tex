@@ -133,10 +133,78 @@ Comme précédemment, les indices $i$ correspondent aux pixels des forêts, et $
 % L'étude présentée dans~\citet{bautista_measurement_2017}
 
 La figure~\ref{prov} (\#prov faire la figure) montre l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatres gammes en $\mu$. La courbe noire indique la fonction de corrélation calculée sur les raw mocks, et la courbe bleu la fonction de ....
-\#prov Refaire la figure 11 de Bautista : CF des raw mocks (stack) + CF sur les coocked mocks (stack) avec le fit dans chaque cas.
+\#prov Refaire la figure 11 de Bautista : CF des raw mocks (stack) + CF sur les coocked mocks (stack) avec le fit sur les raw + fit * DM
+
+
+La matrice de distorsion est un objet uniquement géométrique. Son calcul est indépendant du champ $\delta_F$. Elle ne dépend uniquement de la géométrie du relevé (\#prov comment ?) et de la distribution des poids.
+La figure~\ref{prov} montre la différence entre \#prov montre la difference du fit d'une réa avec sa DM et avec une autre DM et/ou le stack de 10 avec les 10 DM ou dix fois la meme. Est-ce que les DM eboss-0.0 et eboss-0.2 sont différentes ?
+Ainsi, il n'est pas nécessaire de calculer la matrice de distorsion pour les 100 réalisations des mocks.
+Dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois (\#prov ou une fois pour chaque run de quickquasars?). L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.
 
 
 \section{Les matrices de covariance}
+Afin de réalisation l'ajustement de chaque fonction de corrélation, nous avons besoin de calculer les matrices de covariance associées à ces fonctions de corrélation. La covariance de la fonction de corrélation $\xi$ dans le bin $A$ et de $\xi$ dans le bin $B$ est définie comme
+\begin{equation}
+  C_{AB} = \langle \xi_A \xi_B \rangle - \langle \xi_A \rangle \langle \xi_B \rangle \; .
+\end{equation}
+De cette matrice de covariance, nous définissons la matrice de corrélation comme
+\begin{equation}
+  Corr_{AB} = \frac{C_{AB}}{\sqrt{C_{AA} C_{BB}}} \; .
+\end{equation}
+La matrice de corrélation donne la corrélation, comprise dans $[-1 ; 1]$, d'un bin A avec un bin B.
+Afin d'estimer la matrice de covariance, le relevé est divisé en HEALPix pixels, en utilisant $\texttt{nside} = \num{16}$. Cette résolution produit des pixels d'une taille sur le ciel de $\num{3.7} \times \num{3.7} = \SI{13.4}{\square\deg}$, correspondant à $\num{250} \times \num{250} (\si{\perh\Mpc})^2$ à un redshift $z = \num{2.33}$. Ces sous-échantillons sont suffisamment grands pour pouvoir négliger les corrélations entre différents HEALPix pixels et ainsi estimer la matrice de covariance comme la variance d'un sous-échantillon à un autre. La matrice de covariance est donc calculée comme
+\begin{equation}
+  C_{AB} = \frac{1}{W_A W_B} \sum_s W_A^s W_B^s \left( \xi_A^s \xi_B^s - \xi_A \xi_B \right) \; ,
+\end{equation}
+où $s$ est un sous-échantillon, et $W_A^s$ les poids du bin $A$ de ce sous-échantillon.
+Les principaux éléments de cette matrice sont les éléments diagonaux : la variance dans chaque bin. Les éléments non-diagonaux, les covariances entre deux bins distincts, sont faibles (\#prov donner comme Var\_A est modélisé ? Donner comment on modélise les éléments non diag ?). Leur estimation est bruitée. La matrice de covariance est donc lissée après avoir été estimée.
+En ce qui concerne l'auto-corrélation, la matrice de covariance possède $\num{2500} \times \num{2500}$ bins. Pour la corrélation croisée, elle en possède $\num{5000} \times \num{5000}$.
+
+
+
+\section{Modélisation des fonctions de corrélation}
+Dans cette section, nous présentons les modèles utilisés pour ajuster les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO. Nous présentons d'abord les modèles utilisés dans l'analyse des données DR16, puis nous donnons les modèles utilisés pour analyser les mocks.
+
+\subsection{Modélisation des données}
+Pour l'analyse des données DR16, nous utilisons le modèle décrit dans~\citet{prov}. L'analyse décrite dans cette étude est une analyse BAO : l'auto-corrélation et la corrélation croisée sont modélisées de façon à mesurer au mieux les paramètres BAO $\apar{}$ et $\aperp{}$.
+Pour ce faire, le modèle est séparé en deux composantes. La première, $\xi_{smooth}$, correspond à la forme globale de la fonction de corrélation. 
+La seconde, $\xi_{peak}$, correspond au pic BAO. C'est cette seconde composante qui dépend des paramètres BAO :
+\begin{equation}
+  \xi(\rpar{}, \rperp{}, \apar{}, \aperp{}) = \xi_{\mathrm{smooth}}(\rpar{}, \rperp{}) + \xi_{\mathrm{peak}}(\apar{} \rpar{}, \aperp{} \rperp{}) \; .
+\end{equation}
+Cette séparation est opérée au niveau du spectre de puissance. Le modèle de la fonction de corrélation est ensuite obtenue à l'aide d'une transformation de Fourier.
+% Nous donnons dans les lignes qui suivent, comment nous construisons le spectre de puissance utilisé dans la modélisation de la fonction de corrélation des traceurs $i$ et $j$.
+% Celui-ci s'exprime comme
+\subsubsection{Le spectre de puissance}
+Le spectre de puissance utilisé dans la modélisation de la fonction de corrélation des traceurs $i$ et $j$ s'exprime comme
+\begin{equation}
+  P(\vec k) = b_i b_j (1+\beta_i \mu_k^2)(1+\beta_j \mu_k^2) P_{\mathrm{QL}}(\vec k) F_{\mathrm{NL}}(\vec k) G(\vec k) \; .
+\end{equation}
+% où $b_i$ est le biais du traceur $i$, $\beta_i$ le paramètre RSD du traceur $i$. $P_{QL}$ donne le spectre de puissance \emph{quasi-linéaire}. $F_{NL}$ prend en compte les non linéarités.
+Les termes $b_i (1+\beta_i \mu_k^2)$ et $b_j (1+\beta_j \mu_k^2)$ sont les facteurs de Kaiser (équation~\ref{eq:kaiser3}) relatifs aux traceurs $i$ et $j$.
+$P_{\mathrm{QL}}$ est le spectre de puissance \emph{quasi-linéaire}. Il est découpé en deux composantes $P_{smooth}$ et $P_{peak}$ comme
+\begin{equation}
+  P_{\mathrm{QL}}(\vec k, z) = P_{\mathrm{smooth}}(k, z) + \exp(- \frac{k_{\parallel}^2 \Sigma_{\parallel}^2 + k_{\perp}^2 \Sigma_{\perp}^2}{2}) P_{\mathrm{peak}}(k,z) \; .
+\end{equation}
+$P_{\mathrm{smooth}}$ est le spectre de puissance linéaire, sans les BAO. Il est construit à partir du spectre de puissance linéaire $P_{\mathrm{L}}$ donné par Camb, puis les BAO sont retirées en utilisant la technique \emph{side-band} décrite dans \citet{Kirkby2013}.
+Le spectre de puissance $P_{\mathrm{peak}}$ est alors obtenu comme la différence $P_{\mathrm{L}} - P_{\mathrm{smooth}}$ : il contient uniquement les oscillations dues aux BAO présentes dans le spectre de puissance linaire.
+Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$.
+Le terme $F_{\mathrm{NL}}$ prend en compte les non linéarités aux petites échelles. Nous distinguons $F_{\mathrm{NL}}^{\mathrm{auto}}$ et $F_{\mathrm{NL}}^{\mathrm{cross}}$. Pour l'auto-corrélation, les effets non linéaires proviennent de l'élargissement thermique, des vitesses particulières et de la croissance des structures non linéaire.
+Comme lors de la modélisation du $P^{1D}$, nous utilisons le modèle décrit dans \citet{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section ``Planck'' de la table 7 de \citet{Arinyo-i-Prats2015}.
+Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéaires des quasars. Cet effet est modélisé par une lorrentzienne :
+\begin{equation}
+  F_{\mathrm{NL}}^{\mathrm{cross}}(\kpar{}) = \frac{1}{1 + (\kpar{} \sigma_v)^2} \; ,
+\end{equation}
+où l'inverse de la demi-largeur à mi-hauteur $\sigma_v$ est un paramètre libre. L'effet dû aux erreurs statistiques sur la mesure du redshift des quasars étant confondu avec l'effet des vitesses non linéaires des quasars, il est aussi pris en compte par le terme $  F_{\mathrm{NL}}^{\mathrm{cross}}$.
+Enfin, le terme $G(\vec k)$ prend en compte l'effet du binning utilisé lors du calcul de la fonction de corrélation. Il est défini comme
+\begin{equation}
+  G(\vec k) = \mathrm{sinc}(\frac{\kpar{}R_{\parallel}}{2})\mathrm{sinc}(\frac{\kperp{}R_{\perp}}{2}) \; ,
+\end{equation}
+avec $R_{\parallel}$ et $R_{\perp}$ la largeur des bins, soit \SI{4}{\perh\Mpc}.
+
+\subsubsection{Modélisation des HCD}
+
+
 
 
 
