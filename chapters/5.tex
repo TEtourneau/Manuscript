@@ -92,9 +92,9 @@ où l'indice $i$ court sur les pixels des forêts et $j$ sur les quasars pour le
 Les poids $w_j$ associés aux quasars, similairement au \lya{}, favorisent les quasars à plus grand redshift. Ces poids sont définis comme
 \begin{equation}
   \label{eq:weights3}
-  w_j = \left(\frac{1 + z_j}{1 + \num{2.25}}\right)^{\gamma_{QSO}} \; ,
+  w_j = \left(\frac{1 + z_j}{1 + \num{2.25}}\right)^{\gamma_{\textsc{QSO}}} \; ,
 \end{equation}
-où $\gamma_{QSO} = \num{1.44} \pm \num{0.08}$ \citep{Bourboux2019}. Dans le calcul de la fonction de corrélation croisée \lya{}$\times$QSO, nous nous restreignons aux paires pour lesquelles $\rperp{} \in [0 ; 200] \si{\perh\Mpc}$.
+où $\gamma_{\textsc{QSO}} = \num{1.44} \pm \num{0.08}$ \citep{Bourboux2019}. Dans le calcul de la fonction de corrélation croisée \lya{}$\times$QSO, nous nous restreignons aux paires pour lesquelles $\rperp{} \in [0 ; 200] \si{\perh\Mpc}$.
 Contrairement à l'auto-corrélation du \lya{}, la fonction de corrélation croisée n'est pas symétrique en $\rpar{}$. Nous la calculons donc dans les bins pour lesquels $\rpar{} \in [-200 ; 200] \si{\perh\Mpc}$. La fonction de corrélation croisée est donc calculée dans $50 \times 50 = \num{2500}$ bins.
 
 
@@ -175,9 +175,11 @@ La seconde, $\xi_{peak}$, correspond au pic BAO. C'est cette seconde composante 
 Cette séparation est opérée au niveau du spectre de puissance. Le modèle de la fonction de corrélation est ensuite obtenue à l'aide d'une transformation de Fourier.
 % Nous donnons dans les lignes qui suivent, comment nous construisons le spectre de puissance utilisé dans la modélisation de la fonction de corrélation des traceurs $i$ et $j$.
 % Celui-ci s'exprime comme
-\subsubsection{Le spectre de puissance}
+% \subsubsection{Le spectre de puissance}
+\paragraph{}
 Le spectre de puissance utilisé dans la modélisation de la fonction de corrélation des traceurs $i$ et $j$ s'exprime comme
 \begin{equation}
+  \label{eq:pk_model1}
   P(\vec k) = b_i b_j (1+\beta_i \mu_k^2)(1+\beta_j \mu_k^2) P_{\mathrm{QL}}(\vec k) F_{\mathrm{NL}}(\vec k) G(\vec k) \; .
 \end{equation}
 % où $b_i$ est le biais du traceur $i$, $\beta_i$ le paramètre RSD du traceur $i$. $P_{QL}$ donne le spectre de puissance \emph{quasi-linéaire}. $F_{NL}$ prend en compte les non linéarités.
@@ -188,7 +190,7 @@ $P_{\mathrm{QL}}$ est le spectre de puissance \emph{quasi-linéaire}. Il est dé
 \end{equation}
 $P_{\mathrm{smooth}}$ est le spectre de puissance linéaire, sans les BAO. Il est construit à partir du spectre de puissance linéaire $P_{\mathrm{L}}$ donné par Camb, puis les BAO sont retirées en utilisant la technique \emph{side-band} décrite dans \citet{Kirkby2013}.
 Le spectre de puissance $P_{\mathrm{peak}}$ est alors obtenu comme la différence $P_{\mathrm{L}} - P_{\mathrm{smooth}}$ : il contient uniquement les oscillations dues aux BAO présentes dans le spectre de puissance linaire.
-Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$.
+Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO \citep{eisenstein_robustness_2007}. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$.
 Le terme $F_{\mathrm{NL}}$ prend en compte les non linéarités aux petites échelles. Nous distinguons $F_{\mathrm{NL}}^{\mathrm{auto}}$ et $F_{\mathrm{NL}}^{\mathrm{cross}}$. Pour l'auto-corrélation, les effets non linéaires proviennent de l'élargissement thermique, des vitesses particulières et de la croissance des structures non linéaire.
 Comme lors de la modélisation du $P^{1D}$, nous utilisons le modèle décrit dans \citet{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section ``Planck'' de la table 7 de \citet{Arinyo-i-Prats2015}.
 Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéaires des quasars. Cet effet est modélisé par une lorrentzienne :
@@ -196,17 +198,103 @@ Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéai
   F_{\mathrm{NL}}^{\mathrm{cross}}(\kpar{}) = \frac{1}{1 + (\kpar{} \sigma_v)^2} \; ,
 \end{equation}
 où l'inverse de la demi-largeur à mi-hauteur $\sigma_v$ est un paramètre libre. L'effet dû aux erreurs statistiques sur la mesure du redshift des quasars étant confondu avec l'effet des vitesses non linéaires des quasars, il est aussi pris en compte par le terme $  F_{\mathrm{NL}}^{\mathrm{cross}}$.
-Enfin, le terme $G(\vec k)$ prend en compte l'effet du binning utilisé lors du calcul de la fonction de corrélation. Il est défini comme
+Enfin, le terme $G(\vec k)$ prend en compte l'effet du binning utilisé lors du calcul de la fonction de corrélation.
+Il est défini comme le produit des transformés de Fourier de la fonction porte :
 \begin{equation}
   G(\vec k) = \mathrm{sinc}(\frac{\kpar{}R_{\parallel}}{2})\mathrm{sinc}(\frac{\kperp{}R_{\perp}}{2}) \; ,
 \end{equation}
 avec $R_{\parallel}$ et $R_{\perp}$ la largeur des bins, soit \SI{4}{\perh\Mpc}.
 
-\subsubsection{Modélisation des HCD}
 
 
+% \subsubsection{Modélisation des HCD}
+\paragraph{}
+La présence des facteurs de Kaiser dans l'équation~\ref{eq:pk_model1} permet de mesurer le biais et le paramètre RSD de nos traceurs. En ce qui concerne l'auto-corrélation \lya{}$\times$\lya{}, la fonction de corrélation est proportionnelle à $b_{\mathrm{Ly}\alpha}^2(1+\beta_{\mathrm{Ly}\alpha} \mu^2)^2$. Cependant, la présence de HCD dans les données modifie le biais effectif du \lya{}. En effet, l'efficacité de l'algorithme de détection n'étant pas de \SI{100}{\percent}, il subsiste des DLA non identifiés dans les forêts. De plus, les HCD avec $\log n_{HI} < 20.3$ ne sont pas identifiés. Ces deux effets participent à augmenter le biais mesuré du \lya{} significativement. Nous utilisons les paramètres effectifs
+\begin{align}
+  b_{\mathrm{Ly}\alpha}' &= b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}} F_{\textsc{HCD}}(\kpar{}) \; , \\
+  b_{\mathrm{Ly}\alpha}' \beta_{\mathrm{Ly}\alpha}' &= b_{\mathrm{Ly}\alpha} \beta_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}} \beta_{\textsc{HCD}} F_{\textsc{HCD}}(\kpar{})  \; ,
+\end{align}
+où $F_{\textsc{HCD}}$ est une fonction qui dépend de la distribution en $z$ et en $\log n_{HI}$ des HCD \citep{font-ribera_effect_2012}. Cette fonction est estimée sur des simulations hydrodynamiques \citep{Rogers2017}. Nous la modélisons comme
+\begin{equation}
+  F_{\textsc{HCD}}(\kpar{}) = \exp(- L_{\textsc{HCD}} \kpar{}) \; ,
+\end{equation}
+où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLAs dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} à redshift effectif de la mesure. De plus, $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle.
+
+Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, nous tenons compte de la dépendance en redshit de $\delta_F$. Nous avons $\delta_F(z) \propto G(z) b_{\mathrm{Ly}\alpha}(z)$, avec $G(z) \propto (1+z)^{-1}$. Concernant le biais du \lya{}, nous utilisons la même dépendance que celle choisie lors du calcul des poids (équation~\ref{eq:wieghts2}), c'est à dire $b_{\mathrm{Ly}\alpha} \propto (1+z)^{\gamma_{\mathrm{Ly}\alpha}}$, avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \citep{mcdonald_ly_2006}.
+En ce qui concerne $\beta_{\mathrm{Ly}\alpha}$, nous considérons lors de l'ajustement du modèle qu'il est indépendant du redshift. Comme montré dans l'analyse présentée dans le chapitre~\ref{}, $\beta_{\mathrm{Ly}\alpha}$ n'est pas indépendant du redshift. Cependant, le redshift moyen dans chaque bin $(\rpar{}, \rperp)$ varie peu. Lors de l'analyse de l'ensemble des données DR16, il varie dans la gamme $\num{2.31} < z < \num{2.39}$. Cette variation correspond à une variation de $\beta_{\mathrm{Ly}\alpha}$ de moins de \SI{5}{\percent}. De plus, elle est d'autant plus faible lorsque l'analyse est faite dans différents bins en redshift.
+
+La fonction de corrélation croisée \lya{}$\times$QSO est sensible au produit $b_{\mathrm{Ly}\alpha}(1+\beta_{\mathrm{Ly}\alpha} \mu^2) b_{\textsc{QSO}}(1+\beta_{\textsc{QSO}} \mu^2)$. L'ajustement seul de cette fonction de corrélation ne permet donc pas de distinguer les paramètres \lya{} des paramètres des QSO. Nous fixons donc $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$. Concernant le biais, comme pour le \lya{} nous prenant en compte l'évolution avec le redshift. Il est paramétrisé comme
+\begin{equation}
+  b_{\textsc{QSO}}(z) = \num{3.77} \left( \frac{1 + z}{1+\num{2.334}} \right)^{\num{1.44}} \; . 
+\end{equation}
+Cette paramétrisation est sensiblement équivalente à celle utilisée dans les mocks (équation~\ref{eq:b_qso}) dans la gamme $\num{2.31} < z < \num{2.39}$. $\beta_{\textsc{QSO}}$ est choisi constant et vaut $\beta_{\textsc{QSO}} = f / b_{\textsc{QSO}}(\num{2.334}) = \num{0.257}$.
 
 
+\paragraph{}
+Une fois les composantes multiplicatives incluses au modèle, nous pouvons transformer le $P(\vec k)$ modèle définit dans l'équation~\ref{eq:pk_model1} en fonction de corrélation $\xi(r, \mu)$.
+Cette transformation est faite en utilisant FFTLog \citep{Hamilton1999} : la fonction de corrélation est décomposée en polynômes de Legendre $P_l$ jusqu'à $l_{max} = 6$. Pour chaque $l \in [0 ; 2 ; 4; 6]$, une transformation de Fourier est appliquée au spectre de puissance. Etant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog, qui apporte une rapidité d'exécution pour la précision souhaitée.
+Ainsi, en suivant cette procédure, nous obtenons les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ en choisissant $i = j = \mathrm{Ly}\alpha$, et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ en choisissant $i = \mathrm{Ly}\alpha$ et $j = \textsc{QSO}$.
+Afin de pouvoir ajuster les fonctions de corrélation calculées avec les données, nous devons prendre en compte dans nos modèles les corrélations parasites. Ces corrélations s'ajoutent au $\xi$ modèle calculé précédemment.
+A ce stade, nous distingons le modèle utilisé pour l'auto corrélation et la corrélation croisée.
+Le modèle de l'auto corrélation \lya{}$\times$\lya{} est défini comme
+\begin{equation}
+  \label{eq:cf_model1}
+  \xi = \xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha} + \sum_{m} \xi_{\mathrm{Ly}\alpha\times m} + \sum_{m, n} \xi_{m\times n} + \xi_{ciel}  \; ,
+\end{equation}
+où $\xi_{\mathrm{Ly}\alpha\times m}$ est la corrélation du \lya{} avec le métal $m$, $\xi_{m_1\times m_2}$ est la corrélation du métal $m_1$ avec le métal $m_2$, et $\xi_{ciel}$ est la corrélation induite par le masquage des lignes de ciel.
+Le modèle de la corrélation croisée \lya{}$\times$QSO est défini comme
+\begin{equation}
+  \label{eq:xcf_model1}
+  \xi = \xi_{\mathrm{Ly}\alpha\times \textsc{QSO}} + \sum_{m} \xi_{m \times \textsc{QSO}} + \xi_{prox}  \; ,
+\end{equation}
+où $ \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ avec les quasars, et $\xi_{prox}$ donne la corrélation induite par l'effet de proximité des quasars.
+
+Afin de modéliser la corrélation des métaux, nous utilisons le modèle défini précédemment, utilisé pour décrire la corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{\textsc{QSO}}}$. Lors du calcul du spectre de puissance, nous négligeons l'effet des HCD, ce qui revient à utiliser $b_{\textsc{HCD}} = 0$.
+Comme expliqué dans la section~\ref{subsec:contaminants}, toutes les absorptions sont supposées être des absorptions \lya{}. Les absorptions causées par les métaux sont donc reconstruites à un mauvais redshift. Ceci résulte dans un décalage de la fonction de corrélation.
+% Pour la corrélation d'un métal $m$ avec le \lya{}, le décalage se fait le long de la ligne de visée : lorsque la séparation physique du métal et du \lya{} est nulle, la séparation reconstruite est $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{\mathrm{Ly}\alpha} ) / \lambda_{\mathrm{Ly}\alpha}$.
+De manière générale, pour la corrélation d'un absorbeur $m$ avec un autre absorbeur $n$ ($m \neq n$), le décalage se fait le long de la ligne de visée. Lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$. 
+La fonction de corrélation étant maximale pour $r = 0$, nous attentons donc un excès de corrélation pour ces séparations dans les fonctions de corrélation estimées à partir des données. Les métaux étant beaucoup moins présents dans le milieu intergalatique, les corrélations mettant en jeu deux métaux sont beaucoup moins importantes que les corrélations \lya{}$\times m$ ($m \neq$ \lya). L'effet principal vient donc des corrélations \lya{}$\times m$. 
+La table~\ref{tab:metals_in_mocks} donne les séparations associés aux corrélations entre le \lya{} et les métaux ajustés sur les données.
+% Les pics associés à ces séparations sont visibles sur la figure~\ref{prov}.
+En ce qui concerne les corrélations $m \times m$, le décalage est d'origine différente. Une séparation physique $r=0$ correspond bien à une reconstruction $\rpar{} = \rperp{} = 0$. Cependant, le redshift de la paire est mal estimé. Chaque séparation physique $(\rpar{}, \rperp{})$ est donc reconstruite à $(D_H(z_m) / D_H(z))\rpar{}$ et $(D_M(z_m)/D_M(z))\rperp{}$.
+Pour la corrélation $m \times \textsc{QSO}$, le décalage est le même que dans le cas \lya{}$\times m$.
+
+Le décalage de la fonction de corrélation est pris en compte par la \emph{matrice des métaux} $M_{AB}$. Cette matrice permet de relier la fonction de corrélation $\xi_{m\times n}$ de l'absorbeur $m$ avec l'absorbeur $n$ à la fonction de corrélation décalée, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
+\begin{equation}
+  \xi^{modèle}_{m \times n}(A) = \sum_B M_{AB} \xi_{m\times n}(B) \; ,
+\end{equation}
+Les bins $A$ correspondent aux séparations calculées en supposant une absorption \lya{}. Les bins $B$ correspondent aux séparations physiques, calculées en utilisant les redshifts $z_m$ et $z_n$ des absorbeurs.
+La matrice de distorsion $M_{AB}$ est donnée comme
+\begin{equation}
+  M_{AB} = \frac{1}{W_A} \sum_B
+\end{equation}
+\#prov en fait je comprends pas du tout le calcul de la matrice des métaux. Est-ce que c'est nécessaire de donner le détail ?
+
+
+\begin{table}[]
+  \centering
+  \caption{Liste des métaux inclus dans le modèle ajusté aux données. La 3\up{e} colonne donne la séparation reconstruire pour une séparation réelle $r=0$. CIV(eff) indique la raie effective du carbon IV : la résolution du spectrographe d'eBOSS étant trop faible pour distinguer le doublet du CIV, nous ajustons la combinaison des deux raies. La séparation liée au CIV est bien supérieure à \SI{200}{\perh\Mpc}, la corrélation \lya{}$\times$CIV n'a donc pas d'effet sur nos mesures. Nous modélisons cependant l'effet lié à l'auto-corrélation CIV$\times$CIV.}
+  \label{tab:metals_in_mocks}
+  \begin{tabular}{lll}
+    \toprule
+    Raie  & $\lambda_{m} [\si{\angstrom}]$ & $\rpar{}$ [\si{\perh\Mpc}] \\
+    \midrule
+    % $\mathrm{Lyman-}\beta$ & \lyb{}  & \num{1025.72} \\
+    % $\mathrm{Lyman-}\alpha$ & \lya{} & \num{1215.67} \\
+    SiIIa &  \num{1190.4158} & $- 64$ \\
+    SiIIb &  \num{1193.2897} & $- 56$  \\
+    SiIII &  \num{1206.500}  & $- 21$  \\
+    SiIIc &  \num{1260.4221} & $+ 111$ \\
+    CIV(eff) & \num{1549.06} & $> 200$ \\
+    % Silicium IV & SiIV(1394) & \num{1394.76018} \\
+    % Silicium IV & SiIV(1403) & \num{1402.77291} \\
+    % Carbon IV & CIV(1548) & \num{1548.2049} \\
+    % Carbon IV & CIV(1551) & \num{1550.77845} \\
+    % Magnesium II & MgII(2796) & \num{2796.3511} \\
+    % Magnesium II & MgII(2804) & \num{2803.5324}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
 \bibliography{../source/library}
