@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -68,6 +68,21 @@ Antony Lewis, Anthony Challinor, and Anthony Lasenby.
 \newblock URL \url{http://arxiv.org/abs/astro-ph/9911177
   http://dx.doi.org/10.1086/309179}.
 
+\bibitem[Dodelson(2003)]{Dodelson2003}
+Scott Dodelson.
+\newblock \emph{{Modern Cosmology}}.
+\newblock Academic Press, 2003.
+\newblock \doi{10.1023/B:FOOP.0000019699.88151.ed}.
+
+\bibitem[Arinyo-i Prats et~al.(2015)Arinyo-i Prats, Miralda-Escud{\'{e}}, Viel,
+  and Cen]{Arinyo-i-Prats2015}
+Andreu Arinyo-i Prats, Jordi Miralda-Escud{\'{e}}, Matteo Viel, and Renyue Cen.
+\newblock {The Non-Linear Power Spectrum of the Lyman Alpha Forest}.
+\newblock jun 2015.
+\newblock \doi{10.1088/1475-7516/2015/12/017}.
+\newblock URL \url{http://arxiv.org/abs/1506.04519
+  http://dx.doi.org/10.1088/1475-7516/2015/12/017}.
+
 \bibitem[Pieri et~al.(2016)Pieri, Bonoli, Chaves-Montero, Paris, Fumagalli,
   Bolton, Viel, Noterdaeme, Miralda-Escud{\'{e}}, Busca, Rahmani, Peroux,
   Font-Ribera, Trager, and Collaboration]{Pieri2016}
@@ -79,6 +94,20 @@ M.~M. Pieri, S.~Bonoli, J.~Chaves-Montero, I.~Paris, M.~Fumagalli, J.~S.
   Herschel Telescope}.
 \newblock nov 2016.
 \newblock URL \url{https://arxiv.org/abs/1611.09388}.
+
+\bibitem[{Le Goff} et~al.(2011){Le Goff}, Magneville, Rollinde, Peirani,
+  Petitjean, Pichon, Rich, Yeche, Aubourg, Busca, Charlassier, Delubac,
+  Hamilton, {Palanque Delabrouille}, P{\^{a}}ris, and {Vargas
+  Maga{\~{n}}a}]{le_goff_simulations_2011}
+J~M {Le Goff}, C~Magneville, E~Rollinde, S~Peirani, P~Petitjean, C~Pichon,
+  J~Rich, C~Yeche, E~Aubourg, N~Busca, R~Charlassier, T~Delubac, J~C Hamilton,
+  N~{Palanque Delabrouille}, I~P{\^{a}}ris, and M~{Vargas Maga{\~{n}}a}.
+\newblock {Simulations of {\{}BAO{\}} reconstruction with a quasar
+  {\{}Ly{\}}-$\alpha$ survey}.
+\newblock \emph{Astronomy and Astrophysics}, 534:\penalty0 135, oct 2011.
+\newblock ISSN 0004-6361.
+\newblock \doi{10.1051/0004-6361/201117736;}.
+\newblock URL \url{http://adsabs.harvard.edu/abs/2011A{\%}26A...534A.135L}.
 
 \bibitem[Farr et~al.(2019)Farr, Font-Ribera, des Bourboux,
   Mu{\~{n}}oz-Guti{\'{e}}rrez, Lopez, Pontzen, Gonz{\'{a}}lez-Morales, Alonso,
@@ -116,5 +145,15 @@ A~J~S Hamilton.
 \newblock ISSN 0004-637X.
 \newblock \doi{10.1086/186264}.
 \newblock URL \url{http://adsabs.harvard.edu/abs/1992ApJ...385L...5H}.
+
+\bibitem[McDonald(2003)]{mcdonald_toward_2003}
+P~McDonald.
+\newblock {Toward a {\{}Measurement{\}} of the {\{}Cosmological{\}}
+  {\{}Geometry{\}} at z ∼ 2: {\{}Predicting{\}} {\{}Ly$\alpha${\}}
+  {\{}Forest{\}} {\{}Correlation{\}} in {\{}Three{\}} {\{}Dimensions{\}} and
+  the {\{}Potential{\}} of {\{}Future{\}} {\{}Data{\}} {\{}Sets{\}}}.
+\newblock \emph{{\{}$\backslash$textbackslash{\}}apj}, 585:\penalty0 34--51,
+  mar 2003.
+\newblock \doi{10.1086/345945}.
 
 \end{thebibliography}

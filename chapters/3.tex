@@ -75,7 +75,7 @@ A la fin, le catalogue ainsi construit (DR16Q dans la suite de ce manuscrit) con
 
 
 \paragraph{}
-L'analyse \lya{} des données complètes d'eBOSS \citep{CITE:dr16} utilise le catalogue DR16Q. Le redshift des quasars est choisi comme étant \texttt{Z\_LYAWG}. Les quasars sont sélectionnés avec un redshift $1.77 < z \leq 4$. L'échantillon correspondant représente alors \num{341468} objets. La distribution en redshift de ces quasars traceurs (ceux utilisés comme traceurs pour la fonction de corrélation croisée \lya{}-QSO) est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
+L'analyse \lya{} des données complètes d'eBOSS \citep{CITE:dr16} utilise le catalogue DR16Q. Le redshift des quasars est choisi comme étant \texttt{Z\_LYAWG}. Les quasars sont sélectionnés avec un redshift $\num{1.77} < z \leq 4$. L'échantillon correspondant représente alors \num{341468} objets. La distribution en redshift de ces quasars traceurs (ceux utilisés comme traceurs pour la fonction de corrélation croisée \lya{}-QSO) est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{pixel_number}
@@ -85,6 +85,7 @@ L'analyse \lya{} des données complètes d'eBOSS \citep{CITE:dr16} utilise le ca
 
 
 \section{La sélection des forêts}
+\label{sec:selection_forets}
 L'analyse \lya{} des données complètes d'eBOSS, dont nous nous servons dans ce manuscrit, est présentée dans l'article \citet{CITE:dr16}. Les informations que nous donnons dans la suite de ce chapitre sont tirés de cette article. Nous y référons le lecteur pour davantage d'informations.
 
 Les spectres produits par la chaîne de réduction des données SDSS sont rebinnés : 3 pixels du spectre original, d'une taille $\Delta log_{10}(\lambda) \sim 10^{-4}$, sont combinés en 1 seul pixel d'analyse, d'une taille $\Delta log_{10}(\lambda) \sim 3 \times 10^{-4}$. Ceci est fait afin de réduire le temps de calcul nécessaire pour estimer les fonctions de corrélation. Dans la suite, l'utilisation de ``pixel'' réfère à ces pixels d'analyse.
@@ -94,9 +95,9 @@ De plus, l'analyse se limite aux pixels dont la longueur d'onde observée est co
 La limite inférieure provient de la sensibilité des CCD et de l'augmentation des absorptions atmosphériques intenses dans l'UV. La limite supérieure provient des raies d'émission du ciel dans le proche infrarouge qui bruitent le signal.
 % à cause notamment des absorptions atmosphériques intenses dans l'UV, et des raies d'émissions du ciel dans le proche infrarouge.
 % Ces limites sur $\lambda_{obs}$ correspondent à un redshift minimal $z_{\textsc{QSO}} = 2$ pour les quasars \lya{}, et $z_{\textsc{QSO}} = 2.53$ pour les quasars \lyb{}. Parmi les \num{341468} quasars utilisés \textbf{comme traceurs pour la corrélation croisée \lya{}-\textsc{QSO}} (dénommés quasars traceurs), \num{256328} sont utilisés pour leurs pixels \lyalya{} (dénommés quasar \lya{}), et \num{103080} sont utilisés pour leurs pixels \lyalyb{} (dénommés quasar \lyb{}).
-Ces limites sur $\lambda_{obs}$ correspondent à un redshift minimal $z_{\textsc{QSO}} = 2$ pour les quasars utilisés pour leurs pixels dans la région \lya{} (quasars \lya{}), et $z_{\textsc{QSO}} = 2.53$ pour les quasars utilisés pour leurs pixels dans la région \lyb{} (quasars \lyb{}). Parmi les \num{341468} quasars traceurs, \num{256328} sont des quasars \lya{}, et \num{103080} sont des quasars \lyb{}.
+Ces limites sur $\lambda_{obs}$ correspondent à un redshift minimal $z_{\textsc{QSO}} = 2$ pour les quasars utilisés pour leurs pixels dans la région \lya{} (quasars \lya{}), et $z_{\textsc{QSO}} = \num{2.53}$ pour les quasars utilisés pour leurs pixels dans la région \lyb{} (quasars \lyb{}). Parmi les \num{341468} quasars traceurs, \num{256328} sont des quasars \lya{}, et \num{103080} sont des quasars \lyb{}.
 
-D'autres sélections sont aussi appliquées. Les quasars pour lesquels la probabilité d'avoir un BAL est supérieure à 0.9 sont écartés. Les mauvaises observations durant BOSS ou eBOSS sont mises de côté. De plus, chaque région nécessite au moins 50 pixels. Cette sélection décale le redshift minimal à $z_{\textsc{QSO}} = 2.10$ pour les quasars \lya{}, et à $z = 2.65$ pour les quasars \lyb{}. Enfin, l'ajustement du continuum (voir section suivante) échoue pour environ \SI{2}{\percent} des spectres). Ces spectres sont aussi écartés.
+D'autres sélections sont aussi appliquées. Les quasars pour lesquels la probabilité d'avoir un BAL est supérieure à 0.9 sont écartés. Les mauvaises observations durant BOSS ou eBOSS sont mises de côté. De plus, chaque région nécessite au moins 50 pixels. Cette sélection décale le redshift minimal à $z_{\textsc{QSO}} = \num{2.10}$ pour les quasars \lya{}, et à $z = \num{2.65}$ pour les quasars \lyb{}. Le pixel d'absorption \lya{} de plus bas redshift se trouve à $z = \num{1.96}$. Enfin, l'ajustement du continuum (voir section suivante) échoue pour environ \SI{2}{\percent} des spectres). Ces spectres sont aussi écartés.
 Après toutes ces sélections, l'échantillon final contient \num{210005} quasars \lya{} et \num{69656} quasars \lyb{}. 
 % La distribution en redshift des pixels et des quasars traceurs est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
 

@@ -2,6 +2,10 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: 4.aux
 The style file: unsrtnat.bst
+White space in argument---line 136 of file 4.aux
+ : \citation{prov
+ :                alma in prep}
+I'm skipping whatever remains of this command
 Database file #1: ../source/library.bib
 Warning--I didn't find a database entry for "CITE:mocks"
 Warning--I didn't find a database entry for "CITE:dr16"
@@ -9,47 +13,48 @@ Warning--I didn't find a database entry for "prov_cite"
 Warning--empty journal in Heitmann2019
 Warning--empty journal in Clerkin2016
 Warning--empty journal in Lewis1999
+Warning--empty journal in Arinyo-i-Prats2015
 Warning--empty journal in Pieri2016
 Warning--empty journal in Farr2019
-You've used 9 entries,
+You've used 13 entries,
             2481 wiz_defined-function locations,
-            620 strings with 8669 characters,
-and the built_in function-call counts, 5812 in all, are:
-= -- 282
-> -- 769
-< -- 2
-+ -- 266
-- -- 248
-* -- 658
-:= -- 1151
-add.period$ -- 44
-call.type$ -- 9
-change.case$ -- 18
-chr.to.int$ -- 9
-cite$ -- 14
-duplicate$ -- 164
-empty$ -- 266
-format.name$ -- 259
-if$ -- 1056
+            651 strings with 9939 characters,
+and the built_in function-call counts, 7541 in all, are:
+= -- 406
+> -- 909
+< -- 4
++ -- 318
+- -- 292
+* -- 816
+:= -- 1463
+add.period$ -- 63
+call.type$ -- 13
+change.case$ -- 25
+chr.to.int$ -- 13
+cite$ -- 19
+duplicate$ -- 239
+empty$ -- 392
+format.name$ -- 307
+if$ -- 1399
 int.to.chr$ -- 1
-int.to.str$ -- 10
-missing$ -- 9
-newline$ -- 70
-num.names$ -- 27
-pop$ -- 70
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 97
+num.names$ -- 39
+pop$ -- 100
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 13
 quote$ -- 0
-skip$ -- 86
+skip$ -- 124
 stack$ -- 0
-substring$ -- 57
-swap$ -- 21
+substring$ -- 93
+swap$ -- 31
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 63
-warning$ -- 5
-while$ -- 22
+type$ -- 88
+warning$ -- 6
+while$ -- 33
 width$ -- 0
-write$ -- 146
-(There were 8 warnings)
+write$ -- 209
+(There was 1 error message)
