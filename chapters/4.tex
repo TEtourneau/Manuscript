@@ -41,7 +41,10 @@ Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI
 L'objectif de ces mocks est donc de répliquer au mieux les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\kpc}. Les mocks nécessitent donc de reproduire un volume immense, avec une bonne résolution.
 Les simulations dites \emph{N-corps} sont des simulations qui traitent le problème à N corps.
 % Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$).
-Elles sont initialisées à un redshift élevé ($z > \num{100}$), avec une distribution de matière noire représentée par des macro-particules. Généralement, environ $(\num{10000})^3$ macro-particules sont présentes dans ces simulations. La masse de ces particules dépend du volume simulé. \textbf{Par exemple, la simulation Outer Rim simule un volume d'environ $(\SI{4}{\Gpc})^3$, et les particules possèdent une masse $\sim 10^{9} M_{\odot}$ \citep{Heitmann2019}.}
+Elles sont initialisées à un redshift élevé ($z > \num{100}$), avec une distribution de matière noire représentée par des macro-particules.
+% Généralement, environ $(\num{10000})^3$ macro-particules sont présentes dans ces simulations.
+\textbf{Actuellement, les simulations les plus performantes utilisent environ $(\num{10000})^3$ macro-particules.
+La masse de ces particules dépend du volume simulé. Par exemple, la simulation Outer Rim simule un volume d'environ $(\SI{4}{\Gpc})^3$, et les particules possèdent une masse $\sim 10^{9} M_{\odot}$ \citep{Heitmann2019}.}
 Puis, à chaque pas de temps, ces macro-particules sont déplacées en considérant uniquement les interactions gravitationnelles. Le champ de matière initial évolue ainsi jusqu'à $z=0$. Ces simulations sont très utiles pour étudier les effets de la gravité à grande échelle. Cependant elles ne sont pas adaptées à notre utilisation : afin d'avoir la résolution et le volume requis, la simulation nécessiterait beaucoup trop de macro-particules pour être réalisable dans un temps raisonnable.
 
 Les simulations hydrodynamiques fonctionnent de la même manière que les simulations N-corps. Elles incluent, en plus des macro-particules de matière noire, la physique baryonique présente dans le milieu galactique. Les baryons sont aussi représentés par des macro-particules. Afin de résoudre l'intérieur des galaxies, les macro-particules utilisées possèdent une masse plus faible que dans le cas des simulations N-corps. En contrepartie, le volume simulé est plus petit. Dans le cas des simulations hydrodynamiques, la densité, la pression et la tempéature sont tracées dans chaque cellule. Certains effets astrophysiques, comme les supernovae ou les AGN peuvent aussi être présents. 
@@ -138,7 +141,10 @@ Afin d'inclure les RSD dans nos mocks, nous simulons aussi le champ des vitesses
   v_{k,n}(\vec k) = \frac{ik_n}{k^2}  a H f \delta_{k}(\vec k) \; .
 \end{equation}
 % Le champ $\delta_{k, matière}$ est le champ de fluctuation de la matière à $z = 0$ dans l'espace $k$ calculé précédemment.
-Il est fréquent (\#prov approximation réaliste ? mettre une source ; j'ai demandé a Etienne : theorie lineaire pas de biais, c'est ce qui est utilisé pour la reconstruction. Y a des gens qui regardent dans les simu nbody si y a un biais des vitesses qui apparait, dans les simus eBOSS y a rien de convainquant, mais le papier est tres peu fournit a ce sujet) de considérer que le champ de vitesse des traceurs est le même que celui de la matière sous-jacente. Autrement dit, le champ de vitesse des traceurs est non biaisé.
+% Il est fréquent
+% (\#prov approximation réaliste ? mettre une source ; j'ai demandé a Etienne : theorie lineaire pas de biais, c'est ce qui est utilisé pour la reconstruction. Y a des gens qui regardent dans les simu nbody si y a un biais des vitesses qui apparait, dans les simus eBOSS y a rien de convainquant, mais le papier est tres peu fournit a ce sujet)
+% de considérer que le champ de vitesse des traceurs est le même que celui de la matière sous-jacente. Autrement dit, le champ de vitesse des traceurs est non biaisé.
+\textbf{En théorie linéaire, les traceurs sont considérés avoir la même vitesse que le champ de matière sous-jacent. Autrement dit, le champ de vitesse des traceurs est non biaisé. Nous adoptons ici cette hypothèse.}
 En ce qui concerne les quasars, nous simulons les RSD en déplaçant chaque quasar proportionnellement à sa vitesse le long de la ligne de visée (équation~\ref{eq:delta_z}). Dans ce but, nous calculons les trois boîtes de vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$ à $z=0$, comme
 \begin{equation}
   \label{eq:v2}
@@ -222,7 +228,7 @@ Une fois toutes ces boîtes construites, nous définissons la géométrie du rel
 Enfin, l'observateur est considéré être à $z=0$, au centre du plan $(\textsc{x},\textsc{y})$.
 
 %new
-Afin d'obtenir un biais des quasars qui dépend du redshift, nous pouvons utiliser deux champs log-normaux.
+Afin d'obtenir un biais des quasars qui dépend (\#prov dépende ?) du redshift, nous pouvons utiliser deux champs log-normaux.
 Considérons $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$, deux champs log-normaux à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$.
 % Pour les redshifts $z_1 < z < z_2$, nous pouvons interpoler les deux champs
 Pour les redshifts $z < z_1$ et $z > z_2$, nous pouvons extrapoler les champs $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$,
@@ -349,12 +355,14 @@ Le facteur $(1+z)$ vient de la conversion des distances en distances comobiles. 
 
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
-A cette étape, nous disposons d'un catalogue de quasars corrélés avec le champ de densité $\delta_{matière}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar, et interpoler la boîte contenant le champ de densité, le long de ces lignes de visée.
-Dans un premier temps, nous commençons par définir le vecteur en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
+A cette étape, nous disposons d'un catalogue de quasars corrélés avec le champ de densité $\delta_{matière}$ qui sera utilisé pour construire l'absorption \lya{}. \textbf{Nous pouvons donc créer les lignes de visées à partir de chaque quasar et jusqu'à l'observateur, puis interpoler la boîte contenant le champ de densité le long de ces lignes de visée.
+Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité.} Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
 
-Une fois ce tableau en longueur d'onde défini, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
+% Une fois ce tableau en longueur d'onde défini, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
 % pour chaque quasar, nous calculons la position $(X,Y,Z)$ de chaque pixel.
-D'abord, le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ est placé à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar, et le vecteur est dirigé vers l'observateur. Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_{\textsc{QSO}}$, la position $(\textsc{x}_i, \textsc{y}_i, \textsc{z}_i)$ du pixel est déterminée.
+% D'abord, le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ est placé à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar, et le vecteur est dirigé vers l'observateur.
+\textbf{Une fois ce tableau en longueur d'onde défini, nous faisons correspondre le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar.
+Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_{\textsc{QSO}}$, la position $(\textsc{x}_i, \textsc{y}_i, \textsc{z}_i)$ du pixel est déterminée.}
 % La boîte est alors interpolé puis lissé.
 % Une moyenne pondérée avec un lissage gaussien est alors appliquée à la boîte.
 Pour chaque pixel, nous calculons une moyenne pondérée des voxels voisins avec un lissage gaussien.
@@ -443,7 +451,7 @@ Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de vis
   % F = \exp( - a(z) \mathrm{e}^{b(z) G(z) (\delta_l + \delta_s)}) ;.
   F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s))\right] ;.
 \end{equation}
-Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à 3 dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}. Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, de la taille de la forêt. Puis, nous multiplions $\delta_{k,s}$ par
+Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à 3 dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}. Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, de la taille de la forêt (\#prov c'est pas exactement ca : entre la taille et 2 fois la taille). Puis, nous multiplions $\delta_{k,s}$ par
 \begin{equation}
   \sqrt{\frac{P_{miss}(k)}{d_{pix}}} \; ,
 \end{equation}
@@ -451,13 +459,14 @@ où $P_{miss}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}
 
 \subsubsection{Les RSD}
 \label{subsubsec:rsdlya}
-Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à 3 dimension pour les échelles $k_N < k < k_{max}$, avec
-\begin{equation}
-  \label{eq:kny}
-  k_{max} = \frac{2 \pi}{1536 d_{cell}} \sim \SI{1.9e-3}{\h\per\Mpc} \; ,
-\end{equation}
-(\#prov y a un facteur 2 en trop pour kny?)
-ainsi que le bon spectre de puissance à une dimension.
+% Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à 3 dimension pour les échelles $k_N < k < k_{max}$, avec
+% \begin{equation}
+%   \label{eq:kny}
+%   k_{max} = \frac{2 \pi}{1536 d_{cell}} \sim \SI{1.9e-3}{\h\per\Mpc} \; ,
+% \end{equation}
+% (\#prov y a un facteur 2 en trop pour kny?)
+% ainsi que le bon spectre de puissance à une dimension.
+Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à 3 dimensions, ains ique le bon spectre de puissance à une dimension.
 Cependant, le champ d'absorption $F$ ne possède pas de RSD pour l'instant, car il est construit à partir du spectre de puissance $P_{matière}(k)$ qui est isotrope. Initiallement, nous pensions ajouster les RSD au niveau du spectre de puissance : multiplier le GRF intial par $(1 + \beta \mu^2)P_{matière}(k, \mu)$, avec $\mu = k_z / k$. Cependant, du fait que les lignes de visées ne sont pas parrallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), nous ne pouvons pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
 % \textbf{Une autre solution est d'utiliser le champ de vitesse}
 Nous avons alors choisi d'utilisé le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}. Plusieurs essais (\#prov les détailler ? oui)  ont été menés afin de savoir comment inclure correctement le champ $\eta_{\parallel}$ dans FGPA. Nous présentons dans les lignes qui suivent la solution retenue.
@@ -626,7 +635,7 @@ Lorsque les lignes de visée sont toutes reconstruites, la formule FGPA est appl
 La dernière étape consiste à regrouper le résultat de tous les chunks. Le module \texttt{merge\_qso.py} permet de lire tous les quasars tirés dans chaque tranche de chaque chunk et de créer un catalogue global appelé \texttt{master.fits}. Une fois le catalogue construit, le code \texttt{dla\_saclay.py} tire les HCD le long de chaque ligne de visée. Le code est tourné sur les sept chunks en parallèle. Puis le module \texttt{merge\_dla.py}, comme pour les quasars, permet de regrouper tous les HCD tirés et de construire le catalogue global \texttt{master\_DLA.fits}.
 Enfin le code \texttt{make\_transmissions.py} permet de mettre les fichiers contenant les forêts au bon format :
 % les forêts sont regroupées par HEALPix pixel (\#prov expliquer ou mettre une ref ?) et sont stockées dans les fichiers
-Les forêts sont regroupées par HEALPix pixel (\#prov expliquer ou mettre une ref ?) dans des fichiers FITS, puis ces fichiers FITS sont regroupés par 100 selon leur HEALPix pixel :
+Les forêts sont regroupées par HEALPix pixel \citep{Gorski2004} dans des fichiers FITS, puis ces fichiers FITS sont regroupés par 100 selon leur HEALPix pixel :
 \begin{equation*}
   \texttt{\textsc{n}/\textsc{pix}/transmission-nside-\textsc{pix}.fits.gz} \; ,
 \end{equation*}

@@ -252,7 +252,7 @@ où $ \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ avec les qu
 Afin de modéliser la corrélation des métaux, nous utilisons le modèle défini précédemment, utilisé pour décrire la corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{\textsc{QSO}}}$. Lors du calcul du spectre de puissance, nous négligeons l'effet des HCD, ce qui revient à utiliser $b_{\textsc{HCD}} = 0$.
 Comme expliqué dans la section~\ref{subsec:contaminants}, toutes les absorptions sont supposées être des absorptions \lya{}. Les absorptions causées par les métaux sont donc reconstruites à un mauvais redshift. Ceci résulte dans un décalage de la fonction de corrélation.
 % Pour la corrélation d'un métal $m$ avec le \lya{}, le décalage se fait le long de la ligne de visée : lorsque la séparation physique du métal et du \lya{} est nulle, la séparation reconstruite est $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{\mathrm{Ly}\alpha} ) / \lambda_{\mathrm{Ly}\alpha}$.
-De manière générale, pour la corrélation d'un absorbeur $m$ avec un autre absorbeur $n$ ($m \neq n$), le décalage se fait le long de la ligne de visée. Lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$. 
+De manière générale, pour la corrélation d'un absorbeur $m$ avec un autre absorbeur $n$ ($m \neq n$), le décalage se fait le long de la ligne de visée. Lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
 La fonction de corrélation étant maximale pour $r = 0$, nous attentons donc un excès de corrélation pour ces séparations dans les fonctions de corrélation estimées à partir des données. Les métaux étant beaucoup moins présents dans le milieu intergalatique, les corrélations mettant en jeu deux métaux sont beaucoup moins importantes que les corrélations \lya{}$\times m$ ($m \neq$ \lya). L'effet principal vient donc des corrélations \lya{}$\times m$. 
 La table~\ref{tab:metals_in_mocks} donne les séparations associés aux corrélations entre le \lya{} et les métaux ajustés sur les données.
 % Les pics associés à ces séparations sont visibles sur la figure~\ref{prov}.
@@ -269,7 +269,6 @@ La matrice de distorsion $M_{AB}$ est donnée comme
   M_{AB} = \frac{1}{W_A} \sum_B
 \end{equation}
 \#prov en fait je comprends pas du tout le calcul de la matrice des métaux. Est-ce que c'est nécessaire de donner le détail ?
-
 
 \begin{table}[]
   \centering
@@ -295,6 +294,8 @@ La matrice de distorsion $M_{AB}$ est donnée comme
     \bottomrule
   \end{tabular}
 \end{table}
+
+
 
 
 \bibliography{../source/library}

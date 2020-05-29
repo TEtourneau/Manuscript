@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: 4.aux
 The style file: unsrtnat.bst
-White space in argument---line 136 of file 4.aux
+White space in argument---line 140 of file 4.aux
  : \citation{prov
  :                alma in prep}
 I'm skipping whatever remains of this command
@@ -16,45 +16,46 @@ Warning--empty journal in Lewis1999
 Warning--empty journal in Arinyo-i-Prats2015
 Warning--empty journal in Pieri2016
 Warning--empty journal in Farr2019
-You've used 13 entries,
+Warning--empty journal in Gorski2004
+You've used 14 entries,
             2481 wiz_defined-function locations,
-            651 strings with 9939 characters,
-and the built_in function-call counts, 7541 in all, are:
-= -- 406
-> -- 909
+            658 strings with 10276 characters,
+and the built_in function-call counts, 7993 in all, are:
+= -- 435
+> -- 954
 < -- 4
-+ -- 318
-- -- 292
-* -- 816
-:= -- 1463
-add.period$ -- 63
-call.type$ -- 13
-change.case$ -- 25
-chr.to.int$ -- 13
-cite$ -- 19
-duplicate$ -- 239
-empty$ -- 392
-format.name$ -- 307
-if$ -- 1399
++ -- 334
+- -- 306
+* -- 861
+:= -- 1547
+add.period$ -- 68
+call.type$ -- 14
+change.case$ -- 27
+chr.to.int$ -- 14
+cite$ -- 21
+duplicate$ -- 257
+empty$ -- 420
+format.name$ -- 322
+if$ -- 1486
 int.to.chr$ -- 1
-int.to.str$ -- 14
-missing$ -- 14
-newline$ -- 97
-num.names$ -- 39
-pop$ -- 100
+int.to.str$ -- 15
+missing$ -- 15
+newline$ -- 104
+num.names$ -- 42
+pop$ -- 109
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 14
 quote$ -- 0
-skip$ -- 124
+skip$ -- 133
 stack$ -- 0
-substring$ -- 93
-swap$ -- 31
+substring$ -- 95
+swap$ -- 33
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 6
-while$ -- 33
+type$ -- 95
+warning$ -- 7
+while$ -- 35
 width$ -- 0
-write$ -- 209
+write$ -- 224
 (There was 1 error message)
