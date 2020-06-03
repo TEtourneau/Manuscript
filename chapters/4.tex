@@ -540,7 +540,7 @@ Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de vis
   % F = \exp( - a(z) \mathrm{e}^{b(z) G(z) (\delta_l + \delta_s)}) ;.
   F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s))\right] ;.
 \end{equation}
-Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à 3 dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}. Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, de la taille de la forêt (\#prov c'est pas exactement ca : entre la taille et 2 fois la taille). Puis, nous multiplions $\delta_{k,s}$ par
+Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à 3 dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}. \textbf{Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, d'une taille supérieure à celle de la forêt pour éviter les corrélations d'une extrémité à l'autre}. Puis, nous multiplions $\delta_{k,s}$ par
 \begin{equation}
   \sqrt{\frac{P_{miss}(k)}{d_{pix}}} \; ,
 \end{equation}
@@ -667,14 +667,33 @@ Puis, nous calculons la fonction de corrélation dans l'espace des redshifts $\x
 
 \subsection{Ajout des HCD}
 \label{subsec:hcd}
-Les HCD ont un effet important sur les fonctions de corrélation, nous simulons donc aussi leur présence. De manière à avoir une corrélation entre les HCD et les autres traceurs des mocks, nous utilisons la boîte de densité $\delta_l$ pour tirer les HCD. Nous ne considérons pas la somme $\delta_l + \delta_s$ car les HCD sont des surdensités qui se situent dans les structures à grandes échelles : une résolution de \SI{2.19}{\perh\Mpc} est suffisante. De plus, l'ajout de $\delta_s$ bruiterait la corrélation entre les HCD et les autres traceurs.
+Les HCD ont un effet important sur les fonctions de corrélation, nous simulons donc aussi leur présence. De manière à avoir une corrélation entre les HCD et les autres traceurs des mocks, nous utilisons la boîte de densité $\delta_l$ pour tirer les HCD. Nous ne considérons pas la somme $\delta_l + \delta_s$ car les HCD sont des surdensités qui se situent dans les structures à grandes échelles : une résolution de \SI{2.19}{\perh\Mpc} est suffisante. \textbf{De plus, l'ajout de $\delta_s$ bruiterait la corrélation entre les HCD et les autres traceurs. En effet, l'écart type $\sigma_s$ du champ $\delta_s$ est entre 4 et 6 fois plus important que celui du champ $\delta_l$. L'écart $\sigma_g^2$ est dominé à plus de \SI{95}{\percent} par l'écart type $\sigma_s$.}
 
 % Nous commençons donc avec le champ de densité $\delta_l$ interpolé le long de la ligne de visée. Pour chaque ligne de visée,
-Contrairement aux quasars, les HCD sont tirés proportionnellement au champ $\delta_l$. Nous identifions les pixels dans lesquelles $\delta_l$ est au dessus d'un certain seuil, puis les HCD sont tirés dans ces pixels selon une loi de Poisson. Le seuil $\nu$ est défini en fonction du biais souhaité pour les HCD. Pour un seuil $\nu$, le biais obtenu est donné par (\#prov ref Font + expliquer, cf mail JM)
+\textbf{Contrairement aux quasars, les HCD sont tirés proportionnellement au champ $\delta_l$. Nous identifions les pixels dans lesquelles $\delta_l$ est au dessus d'un certain seuil, puis les HCD sont tirés dans ces pixels selon une loi de Poisson.
+Le seuil $\nu$ est défini en fonction du biais souhaité pour les HCD.
+L'appendice A de \citet{font-ribera_effect_2012} relie le rapport $b_{\nu} / b_g$ au seuil $\nu$ :
 \begin{equation}
-  b_{\nu} = \frac{pdf(\nu)}{cdf(-\nu)} \; ,
+  \label{eq:biais_seuil}
+  b_{\nu}^2 = \frac{p_g(\nu)}{\left( \int_{\nu}^{\infty} d\delta_g p_g(\delta_g) \right)^2} \int_{\nu}^{\infty} dy_1 p_g(y_1) y_1 \; ,
 \end{equation}
-où $pdf(\nu)$ donne la densité de probabilité de $\nu$, et $cdf(-\nu)$ est la fonction de répartition : la probabilité d'être au dessus du seuil $\nu$. % Ainsi, pour avoir un biais de 2, il faut que la probabilité que le champ prenne la valeur $\nu$ soit 2 fois plus grande que la probabilité que le champ soit au dessus du seuil $\nu$.
+où $b_{\nu}$ est le biais obtenu avec le seuil $\nu$ et $p_g$ donne la densité de probabilité du champ gaussien de variance 1.
+% , et $\nu$ est défini comme
+% \begin{equation}
+%   \nu = \int_{\nu}^{\infty} d\delta_g p_g(\delta_g) \; .
+% \end{equation}
+Nous pouvons remarquer que l'intégrale au numérateur de l'équation~\ref{eq:biais_seuil} donne la densité probabilité du champ gaussien $p_g(\nu)$ évaluée au seuil $\nu$.
+L'équation~\ref{eq:biais_seuil} est donc équivalente à
+\begin{equation}
+ b_{\nu} = \frac{p_g(\nu)}{\int_{\nu}^{\infty} d\delta_g p_g(\delta_g)} \; .
+\end{equation}
+}
+% old
+% Pour un seuil $\nu$, le biais obtenu est donné par (\#prov ref Font + expliquer, cf mail JM)
+% \begin{equation}
+%   b_{\nu} = \frac{pdf(\nu)}{cdf(-\nu)} \; ,
+% \end{equation}
+% où $pdf(\nu)$ donne la densité de probabilité de $\nu$, et $cdf(-\nu)$ est la fonction de répartition : la probabilité d'être au dessus du seuil $\nu$. % Ainsi, pour avoir un biais de 2, il faut que la probabilité que le champ prenne la valeur $\nu$ soit 2 fois plus grande que la probabilité que le champ soit au dessus du seuil $\nu$.
 % Afin d'obtenir le seuil pour un biais donné, nous calculons $b_{\nu}$ pour une large gamme de seuils $\nu$ puis nous interpolons $b_{\nu}$ sur $\nu$.
 % Ainsi, pour un biais $b$, nous connaissons le seuil $\nu(b)$ à choisir.
 \textbf{Afin d'obtenir le seuil pour un biais donné, nous tabulons $b_{\nu}$ pour une large gamme de seuils $\nu$, puis nous interpolons $b_{\nu}$ en fonction de $\nu$.

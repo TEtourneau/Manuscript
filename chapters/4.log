@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 JUN 2020 18:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  3 JUN 2020 18:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2387,21 +2387,17 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 670.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<../figures/mocks/bnu_lambda.png, id=301, 1091.07625pt x 405.515pt>
+
+Package natbib Warning: Citation `font-ribera_effect_2012' on page 15 undefined
+ on input line 690.
+
+<../figures/mocks/bnu_lambda.png, id=303, 1091.07625pt x 405.515pt>
 File: ../figures/mocks/bnu_lambda.png Graphic file (type png)
 
 <use ../figures/mocks/bnu_lambda.png>
-Package pdftex.def Info: ../figures/mocks/bnu_lambda.png used on input line 684
+Package pdftex.def Info: ../figures/mocks/bnu_lambda.png used on input line 703
 .
 (pdftex.def)             Requested size: 458.2489pt x 170.31512pt.
-
-<../figures/mocks/distrib_dla.png, id=306, 1086.0575pt x 445.665pt>
-File: ../figures/mocks/distrib_dla.png Graphic file (type png)
-
-<use ../figures/mocks/distrib_dla.png>
-Package pdftex.def Info: ../figures/mocks/distrib_dla.png used on input line 69
-7.
-(pdftex.def)             Requested size: 412.70613pt x 169.35446pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2409,23 +2405,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15] <../figures/mocks/chunks.png, id=321, 613.29124pt x 459.7175pt>
-File: ../figures/mocks/chunks.png Graphic file (type png)
+[15] <../figures/mocks/distrib_dla.png, id=320, 1086.0575pt x 445.665pt>
+File: ../figures/mocks/distrib_dla.png Graphic file (type png)
 
-<use ../figures/mocks/chunks.png>
-Package pdftex.def Info: ../figures/mocks/chunks.png used on input line 719.
-(pdftex.def)             Requested size: 306.64487pt x 229.85818pt.
-
-<../figures/mocks/schema_prod.png, id=326, 830.10126pt x 786.94pt>
-File: ../figures/mocks/schema_prod.png Graphic file (type png)
-
-<use ../figures/mocks/schema_prod.png>
-Package pdftex.def Info: ../figures/mocks/schema_prod.png used on input line 74
-5.
-(pdftex.def)             Requested size: 456.55711pt x 432.81834pt.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 749.
+<use ../figures/mocks/distrib_dla.png>
+Package pdftex.def Info: ../figures/mocks/distrib_dla.png used on input line 71
+6.
+(pdftex.def)             Requested size: 412.70613pt x 169.35446pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2434,6 +2420,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16 <../figures/mocks/bnu_lambda.png> <../figures/mocks/distrib_dla.png>]
+<../figures/mocks/chunks.png, id=331, 613.29124pt x 459.7175pt>
+File: ../figures/mocks/chunks.png Graphic file (type png)
+
+<use ../figures/mocks/chunks.png>
+Package pdftex.def Info: ../figures/mocks/chunks.png used on input line 738.
+(pdftex.def)             Requested size: 306.64487pt x 229.85818pt.
+
+<../figures/mocks/schema_prod.png, id=336, 830.10126pt x 786.94pt>
+File: ../figures/mocks/schema_prod.png Graphic file (type png)
+
+<use ../figures/mocks/schema_prod.png>
+Package pdftex.def Info: ../figures/mocks/schema_prod.png used on input line 76
+4.
+(pdftex.def)             Requested size: 456.55711pt x 432.81834pt.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 768.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2442,33 +2446,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17 <../figures/mocks/chunks.png>]
 
+LaTeX Warning: Reference `subsec:lya' on page 18 undefined on input line 792.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 792.
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18 <../figures/mocks/schema_prod.png>]
-
-LaTeX Warning: Reference `subsec:lya' on page 19 undefined on input line 773.
-
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 773.
-
-Underfull \vbox (badness 7203) has occurred while \output is active []
-
-
+[18]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[19 <../figures/mocks/schema_prod.png>]
 
-LaTeX Warning: Reference `prov' on page 20 undefined on input line 789.
-
-
-LaTeX Warning: Reference `prov' on page 20 undefined on input line 797.
+LaTeX Warning: Reference `prov' on page 20 undefined on input line 808.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2478,13 +2475,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 
-LaTeX Warning: Command \` invalid in math mode on input line 827.
+LaTeX Warning: Reference `prov' on page 21 undefined on input line 816.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 827.
+Underfull \vbox (badness 1019) has occurred while \output is active []
 
-
-LaTeX Warning: Command \` invalid in math mode on input line 832.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2494,25 +2489,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Reference `prov' on page 22 undefined on input line 862.
+LaTeX Warning: Command \` invalid in math mode on input line 846.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 865.
+LaTeX Warning: Command \` invalid in math mode on input line 846.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 865.
+LaTeX Warning: Command \` invalid in math mode on input line 851.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 865.
+LaTeX Warning: Reference `prov' on page 22 undefined on input line 881.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 865.
+LaTeX Warning: Command \` invalid in math mode on input line 884.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 871.
+LaTeX Warning: Command \` invalid in math mode on input line 884.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 880.
+LaTeX Warning: Command \` invalid in math mode on input line 884.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 884.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2520,35 +2518,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22] <../figures/mocks/params.png, id=410, 1057.9525pt x 297.11pt>
+[22]
+
+LaTeX Warning: Command \` invalid in math mode on input line 890.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 899.
+
+<../figures/mocks/params.png, id=411, 1057.9525pt x 297.11pt>
 File: ../figures/mocks/params.png Graphic file (type png)
 
 <use ../figures/mocks/params.png>
-Package pdftex.def Info: ../figures/mocks/params.png used on input line 895.
+Package pdftex.def Info: ../figures/mocks/params.png used on input line 914.
 (pdftex.def)             Requested size: 476.07423pt x 133.69826pt.
 
-<../figures/mocks/p1dmiss.png, id=412, 1133.23375pt x 480.79625pt>
+<../figures/mocks/p1dmiss.png, id=413, 1133.23375pt x 480.79625pt>
 File: ../figures/mocks/p1dmiss.png Graphic file (type png)
 
 <use ../figures/mocks/p1dmiss.png>
-Package pdftex.def Info: ../figures/mocks/p1dmiss.png used on input line 903.
+Package pdftex.def Info: ../figures/mocks/p1dmiss.png used on input line 922.
 (pdftex.def)             Requested size: 453.28548pt x 192.31508pt.
 
 
-LaTeX Warning: Reference `prov' on page 23 undefined on input line 909.
-
-
-Package natbib Warning: Citation `prov alma in prep' on page 23 undefined on in
-put line 917.
-
-(./4.bbl
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
+ Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [23 <../figures/mocks/params.png>]
+
+LaTeX Warning: Reference `prov' on page 24 undefined on input line 928.
+
+
+Package natbib Warning: Citation `prov alma in prep' on page 24 undefined on in
+put line 936.
+
+(./4.bbl
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -2580,11 +2585,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 922.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 922.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 941.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 941.
  (./4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 922.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 922.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 941.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 941.
 Package rerunfilecheck Info: File `4.out' has not changed.
 (rerunfilecheck)             Checksum: 8649EA639D7224D26943057303764012;794.
 
@@ -2594,13 +2599,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 922.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 941.
  ) 
 Here is how much of TeX's memory you used:
- 30094 strings out of 492995
- 542375 string characters out of 6132704
- 714254 words of memory out of 5000000
- 32866 multiletter control sequences out of 15000+600000
+ 30097 strings out of 492995
+ 542431 string characters out of 6132704
+ 712254 words of memory out of 5000000
+ 32868 multiletter control sequences out of 15000+600000
  136057 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,48p,10403b,927s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2660,10 +2665,10 @@ onts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
 mtcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 4.pdf (26 pages, 1385936 bytes).
+Output written on 4.pdf (26 pages, 1387745 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 494 compressed objects within 5 object streams
- 145 named destinations out of 1000 (max. 500000)
+ 580 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
