@@ -152,7 +152,7 @@ De cette matrice de covariance, nous définissons la matrice de corrélation com
   Corr_{AB} = \frac{C_{AB}}{\sqrt{C_{AA} C_{BB}}} \; .
 \end{equation}
 La matrice de corrélation donne la corrélation, comprise dans $[-1 ; 1]$, d'un bin A avec un bin B.
-Afin d'estimer la matrice de covariance, le relevé est divisé en HEALPix pixels, en utilisant $\texttt{nside} = \num{16}$. Cette résolution produit des pixels d'une taille sur le ciel de $\num{3.7} \times \num{3.7} = \SI{13.4}{\square\deg}$, correspondant à $\num{250} \times \num{250} (\si{\perh\Mpc})^2$ à un redshift $z = \num{2.33}$. Ces sous-échantillons sont suffisamment grands pour pouvoir négliger les corrélations entre différents HEALPix pixels et ainsi estimer la matrice de covariance comme la variance d'un sous-échantillon à un autre. La matrice de covariance est donc calculée comme
+Afin d'estimer la matrice de covariance, le relevé est divisé en HEALPix pixels, en utilisant $\texttt{nside} = \num{16}$. Cette résolutivon produit des pixels d'une taille sur le ciel de $\num{3.7} \times \num{3.7} = \SI{13.4}{\square\deg}$, correspondant à $\num{250} \times \num{250} (\si{\perh\Mpc})^2$ à un redshift $z = \num{2.33}$. Ces sous-échantillons sont suffisamment grands pour pouvoir négliger les corrélations entre différents HEALPix pixels et ainsi estimer la matrice de covariance comme la variance d'un sous-échantillon à un autre. La matrice de covariance est donc calculée comme
 \begin{equation}
   C_{AB} = \frac{1}{W_A W_B} \sum_s W_A^s W_B^s \left( \xi_A^s \xi_B^s - \xi_A \xi_B \right) \; ,
 \end{equation}
@@ -221,7 +221,7 @@ où $F_{\textsc{HCD}}$ est une fonction qui dépend de la distribution en $z$ et
 où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLAs dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} à redshift effectif de la mesure. De plus, $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle.
 
 Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, nous tenons compte de la dépendance en redshit de $\delta_F$. Nous avons $\delta_F(z) \propto G(z) b_{\mathrm{Ly}\alpha}(z)$, avec $G(z) \propto (1+z)^{-1}$. Concernant le biais du \lya{}, nous utilisons la même dépendance que celle choisie lors du calcul des poids (équation~\ref{eq:wieghts2}), c'est à dire $b_{\mathrm{Ly}\alpha} \propto (1+z)^{\gamma_{\mathrm{Ly}\alpha}}$, avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \citep{mcdonald_ly_2006}.
-En ce qui concerne $\beta_{\mathrm{Ly}\alpha}$, nous considérons lors de l'ajustement du modèle qu'il est indépendant du redshift. Comme montré dans l'analyse présentée dans le chapitre~\ref{}, $\beta_{\mathrm{Ly}\alpha}$ n'est pas indépendant du redshift. Cependant, le redshift moyen dans chaque bin $(\rpar{}, \rperp)$ varie peu. Lors de l'analyse de l'ensemble des données DR16, il varie dans la gamme $\num{2.31} < z < \num{2.39}$. Cette variation correspond à une variation de $\beta_{\mathrm{Ly}\alpha}$ de moins de \SI{5}{\percent}. De plus, elle est d'autant plus faible lorsque l'analyse est faite dans différents bins en redshift.
+En ce qui concerne $\beta_{\mathrm{Ly}\alpha}$, nous considérons lors de l'ajustement du modèle qu'il est indépendant du redshift. Comme montré dans l'analyse présentée dans le chapitre~\ref{prov}, $\beta_{\mathrm{Ly}\alpha}$ n'est pas indépendant du redshift. Cependant, le redshift moyen dans chaque bin $(\rpar{}, \rperp)$ varie peu. Lors de l'analyse de l'ensemble des données DR16, il varie dans la gamme $\num{2.31} < z < \num{2.39}$. Cette variation correspond à une variation de $\beta_{\mathrm{Ly}\alpha}$ de moins de \SI{5}{\percent}. De plus, elle est d'autant plus faible lorsque l'analyse est faite dans différents bins en redshift.
 
 La fonction de corrélation croisée \lya{}$\times$QSO est sensible au produit $b_{\mathrm{Ly}\alpha}(1+\beta_{\mathrm{Ly}\alpha} \mu^2) b_{\textsc{QSO}}(1+\beta_{\textsc{QSO}} \mu^2)$. L'ajustement seul de cette fonction de corrélation ne permet donc pas de distinguer les paramètres \lya{} des paramètres des QSO. Nous fixons donc $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$. Concernant le biais, comme pour le \lya{} nous prenant en compte l'évolution avec le redshift. Il est paramétrisé comme
 \begin{equation}
@@ -239,36 +239,47 @@ A ce stade, nous distingons le modèle utilisé pour l'auto corrélation et la c
 Le modèle de l'auto corrélation \lya{}$\times$\lya{} est défini comme
 \begin{equation}
   \label{eq:cf_model1}
-  \xi = \xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha} + \sum_{m} \xi_{\mathrm{Ly}\alpha\times m} + \sum_{m, n} \xi_{m\times n} + \xi_{ciel}  \; ,
+  % \xi = \xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha} + \sum_{m} \xi_{\mathrm{Ly}\alpha\times m} + \sum_{m, n} \xi_{m\times n} + \xi_{ciel}  \; ,
+  \xi = \xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}  + \sum_{m, n} \tilde \xi_{m\times n} + \xi_{ciel}  \; ,
 \end{equation}
-où $\xi_{\mathrm{Ly}\alpha\times m}$ est la corrélation du \lya{} avec le métal $m$, $\xi_{m_1\times m_2}$ est la corrélation du métal $m_1$ avec le métal $m_2$, et $\xi_{ciel}$ est la corrélation induite par le masquage des lignes de ciel.
+% où $\xi_{\mathrm{Ly}\alpha\times m}$ est la corrélation du \lya{} avec le métal $m$, $\xi_{m_1\times m_2}$ est la corrélation du métal $m_1$ avec le métal $m_2$, et $\xi_{ciel}$ est la corrélation induite par le masquage des lignes de ciel.
+où $\tilde \xi_{m \times n}$ est la corrélation de l'absorbeur $m$ avec l'absorbeur $n$, interprétés comme des absorptions \lya{}. Ces absorbeurs peuvent être du \lya{} ou des métaux ($m$ et $n$ ne peuvent pas être tous les deux du \lya{}). Le tableau~\ref{tab:metals_in_mocks} liste les métaux ajustés dans les données. $\xi_{ciel}$ est la corrélation induite par le masquage des lignes de ciel.
 Le modèle de la corrélation croisée \lya{}$\times$QSO est défini comme
 \begin{equation}
   \label{eq:xcf_model1}
-  \xi = \xi_{\mathrm{Ly}\alpha\times \textsc{QSO}} + \sum_{m} \xi_{m \times \textsc{QSO}} + \xi_{prox}  \; ,
+  \xi = \xi_{\mathrm{Ly}\alpha\times \textsc{QSO}} + \sum_{m} \tilde \xi_{m \times \textsc{QSO}} + \xi_{prox}  \; ,
 \end{equation}
-où $ \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ avec les quasars, et $\xi_{prox}$ donne la corrélation induite par l'effet de proximité des quasars.
+où $\tilde \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ avec les quasars, et $\xi_{prox}$ donne la corrélation induite par l'effet de proximité des quasars.
 
-Afin de modéliser la corrélation des métaux, nous utilisons le modèle défini précédemment, utilisé pour décrire la corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{\textsc{QSO}}}$. Lors du calcul du spectre de puissance, nous négligeons l'effet des HCD, ce qui revient à utiliser $b_{\textsc{HCD}} = 0$.
+\paragraph{}
+Afin de modéliser la corrélation des métaux, nous utilisons le modèle défini précédemment, utilisé pour décrire la corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{\textsc{QSO}}}$.
+% Lors du calcul du spectre de puissance, nous négligeons l'effet des HCD, ce qui revient à utiliser $b_{\textsc{HCD}} = 0$.
 Comme expliqué dans la section~\ref{subsec:contaminants}, toutes les absorptions sont supposées être des absorptions \lya{}. Les absorptions causées par les métaux sont donc reconstruites à un mauvais redshift. Ceci résulte dans un décalage de la fonction de corrélation.
 % Pour la corrélation d'un métal $m$ avec le \lya{}, le décalage se fait le long de la ligne de visée : lorsque la séparation physique du métal et du \lya{} est nulle, la séparation reconstruite est $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{\mathrm{Ly}\alpha} ) / \lambda_{\mathrm{Ly}\alpha}$.
 De manière générale, pour la corrélation d'un absorbeur $m$ avec un autre absorbeur $n$ ($m \neq n$), le décalage se fait le long de la ligne de visée. Lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
 La fonction de corrélation étant maximale pour $r = 0$, nous attentons donc un excès de corrélation pour ces séparations dans les fonctions de corrélation estimées à partir des données. Les métaux étant beaucoup moins présents dans le milieu intergalatique, les corrélations mettant en jeu deux métaux sont beaucoup moins importantes que les corrélations \lya{}$\times m$ ($m \neq$ \lya). L'effet principal vient donc des corrélations \lya{}$\times m$. 
-La table~\ref{tab:metals_in_mocks} donne les séparations associés aux corrélations entre le \lya{} et les métaux ajustés sur les données.
+Le tableau~\ref{tab:metals_in_mocks} donne les séparations associés aux corrélations entre le \lya{} et les métaux ajustés sur les données.
 % Les pics associés à ces séparations sont visibles sur la figure~\ref{prov}.
 En ce qui concerne les corrélations $m \times m$, le décalage est d'origine différente. Une séparation physique $r=0$ correspond bien à une reconstruction $\rpar{} = \rperp{} = 0$. Cependant, le redshift de la paire est mal estimé. Chaque séparation physique $(\rpar{}, \rperp{})$ est donc reconstruite à $(D_H(z_m) / D_H(z))\rpar{}$ et $(D_M(z_m)/D_M(z))\rperp{}$.
-Pour la corrélation $m \times \textsc{QSO}$, le décalage est le même que dans le cas \lya{}$\times m$.
+Pour la corrélation $m \times \textsc{QSO}$, le décalage est le même que dans le cas $m\times n$, en prenant $z_n = z_{\textsc{QSO}}$.
 
-Le décalage de la fonction de corrélation est pris en compte par la \emph{matrice des métaux} $M_{AB}$. Cette matrice permet de relier la fonction de corrélation $\xi_{m\times n}$ de l'absorbeur $m$ avec l'absorbeur $n$ à la fonction de corrélation décalée, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
+% Le décalage de la fonction de corrélation est pris en compte par la \emph{matrice des métaux} $M_{AB}^{m\times n}$. Cette matrice permet de relier la fonction de corrélation $\xi_{m\times n}$ de l'absorbeur $m$ avec l'absorbeur $n$ à la fonction de corrélation décalée, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
+% \begin{equation}
+%   \xi^{modèle}_{m \times n}(A) = \sum_B M_{AB}^{m\times n} \xi_{m\times n}(B) \; ,
+% \end{equation}
+% Les bins $A$ correspondent aux séparations calculées en supposant une absorption \lya{}. Les bins $B$ correspondent aux séparations physiques, calculées en utilisant les redshifts $z_m$ et $z_n$ des absorbeurs.
+% Le calcul de la matrice des métaux n'est pas détaillé ici
+% Ainsi, pour chaque couple $m\times n$, la matrice $M_{AB}^{m\times n}$ est calculée.
+
+Pour chaque couple $(m, n)$, le décalage de la fonction de corrélation $\xi_{m\times n}$ est pris en compte par la matrice des métaux $M_{AB}^{m\times n}$. Cette matrice permet donc de prendre en compte le décalage des séparations décrit précédemment. Nous ne détaillons pas sont calcul ici, mais il est donné dans la thèse \citet{CITE:Victoria}. La matrice des métaux permet donc de relier la fonction de corrélation $\xi_{m\times n}$ à la fonction de corrélation $\tilde \xi_{m\times n}$, où les absorbeurs $m$ et $n$ sont interprétés comme des absorptions \lya{}, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
 \begin{equation}
-  \xi^{modèle}_{m \times n}(A) = \sum_B M_{AB} \xi_{m\times n}(B) \; ,
+  \tilde \xi_{m \times n}(A) = \sum_B M_{AB}^{m\times n} \xi_{m\times n}(B) \; ,
 \end{equation}
 Les bins $A$ correspondent aux séparations calculées en supposant une absorption \lya{}. Les bins $B$ correspondent aux séparations physiques, calculées en utilisant les redshifts $z_m$ et $z_n$ des absorbeurs.
-La matrice de distorsion $M_{AB}$ est donnée comme
-\begin{equation}
-  M_{AB} = \frac{1}{W_A} \sum_B
-\end{equation}
-\#prov en fait je comprends pas du tout le calcul de la matrice des métaux. Est-ce que c'est nécessaire de donner le détail ?
+Ainsi, pour chaque couple $(m, n)$, la matrice des métaux $M_{AB}^{m\times n}$ est calculée, puis la fonction de corrélation $\tilde \xi_{m \times n}$ est estimée et ajoutée à la fonction de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ (équation~\ref{eq:cf_model1}).
+Dans le cas de la corrélation croisée, la matrice est calculée pour tous les couples $(m, \textsc{QSO})$, puis la fonction de corrélation $\tilde \xi_{m \times \textsc{QSO}}$ et estimée et ajoutée à la fonction de corrélation $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ (équation~\ref{eq:xcf_model1}).
+
+Le modèle utilisé pour construire les fonctions de corrélation $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$ et le même que celui utilisé pour construire les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ (équation~\ref{eq:pk_model1}). Les paramètres $b_i$, $b_j$, $\beta_i$ et $\beta_j$ sont choisis comme étant ceux des métaux. Du fait que les métaux sont mesurables principalement le long de la ligne de visée, il est difficile d'ajuster à la fois le biais et le paramètre RSD de chaque métal. Nous ajustons donc uniquement le biais de chaque métal, le paramètre RSD étant fixé à $\beta_m = \num{0.5}$. Aussi, nous négligeons l'impact des HCD sur les fonctions de corrélations $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
 
 \begin{table}[]
   \centering
@@ -296,6 +307,30 @@ La matrice de distorsion $M_{AB}$ est donnée comme
 \end{table}
 
 
+\paragraph{}
+Le terme additionnel suivant est le terme $\xi_{ciel}$. Ce terme prend en compte les corrélations induites par la soustraction du fond de ciel. Lors de la réduction des données, décrite dans la section~\ref{sec:reduction_donnees}, le fond de ciel est soustrait à tous les spectres d'une même demi-plaque. Ceci induit alors des corrélations dans tous ces spectres pour $\rpar{} = 0$. A cause de la distorsion induite par l'ajustement du continuum, cette effet ne se limite pas à $\rpar{} = 0$.
+L'effet est modélisé par une fonction gausienne de $\rperp{}$ :
+\begin{equation}
+  \xi_{ciel}(\rpar{}, \rperp{}) =
+  \left\{
+    \begin{array}{ll}
+      \frac{A_{sky}}{\sqrt{2 \pi \sigma_{sky}^{2}}} \exp(- \frac{\rperp{}^2}{2 \sigma_{sky}^2}) & , \hspace{0.2cm} \mathrm{si} \hspace{0.2cm} \rpar{} = 0 \\
+      0 & ,  \hspace{0.2cm} \mathrm{si} \hspace{0.2cm}  \rpar{} \neq 0
+    \end{array}
+\right.  \; .
+\end{equation}
+Les paramètres $A_{sky}$ et $\sigma_{sky}$ sont laissés libres lors de l'ajustement des données. Ils donnent l'amplitude et la largeur de la gausienne.
+Le terme $\xi_{ciel}$ n'est présent que dans l'ajustement de l'auto corrélation, car ces corrélations parasides ne sont induites que lorsqu'on corrèle des pixels d'absorption issus de deux spectres présents sur la même demi-plaque. Cet effet n'a donc pas lieu d'être pour la corrélation croisée.
+
+\paragraph{}
+Enfin, le dernier terme additionnel est le terme $\xi_{prox}$. Ce terme n'est présent que dans la fonction de corrélation croisée $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$. Il prend en compte l'effet du rayonnement produit par le quasar sur l'hydrogène environnant. En effet, à cause de leur grande luminosité, et en particulier selon la direction de leur jet, les quasars ionise le gas qui les entoure. Ceci réduit donc la fraction d'hydrogène neutre au voisinage de chaque quasar, ce qui induit des corrélations supplémentaire entre le champ d'absorption \lya{} et la position des quasars. Cet effet est modélisé comme \citep{font-ribera_large-scale_2013} :
+\begin{equation}
+  \xi_{prox} = \xi_{0,prox} \left(\frac{\SI{1}{\perh\Mpc}}{r} \right)^2 \exp( - \frac{r}{\lambda_{UV}}) \; ,
+\end{equation}
+où $\xi_{0,prox}$ donne l'amplitude de l'effet. L'émission est supposée isotrope, et le paramètre $\lambda_{UV}$ est fixé à \SI{300}{\perh\Mpc}.
+
+
+\subsection{Modélisation des mocks}
 
 
 \bibliography{../source/library}

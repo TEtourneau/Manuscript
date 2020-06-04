@@ -23,7 +23,7 @@ Nous présentons ici comment les spectres sont déduits des photons acquis par l
 \label{sec:reduction_donnees}
 L'observation de chaque plaque fournit des données en deux dimensions : la première correspond aux différentes longueurs d'onde, la seconde aux différentes fibres (voir figure~\ref{fig:photo_ccd}). La chaîne de réduction des données transforme ces informations en une liste de spectres.
 Premièrement, chaque spectre est extrait de l'image acquise par le CCD. Le spectre est étalonné en longueur d'onde à l'aide de lampes à arc. Le flux est calibré en utilisant les spectres des fibres dédiées à des étoiles standards.
-Puis le fond du ciel, estimé dans chaque demi plaque grâce aux fibres dédiées, est soustrait à chaque spectre.
+Puis le fond du ciel, estimé dans chaque demi-plaque grâce aux fibres dédiées, est soustrait à chaque spectre.
 La variance dans chaque pixel est ensuite estimée. Elle prend en compte le bruit de photon et le bruit de l'électronique. Les pixels affectés par des rayons cosmiques sont rejetés.
 Enfin, pour chaque objet, toutes les expositions sont ajoutées pour former un seul et même spectre, avec un plus grand rapport signal sur bruit. Le nombre typique d'expositions par objet varie entre 4 et 6.
 
