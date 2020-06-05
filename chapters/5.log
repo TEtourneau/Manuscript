@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 JUN 2020 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 JUN 2020 11:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2281,6 +2281,9 @@ LaTeX Warning: Reference `eq:kaiser3' on page 6 undefined on input line 186.
 
 LaTeX Warning: Reference `eq:p1d_prats' on page 6 undefined on input line 195.
 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-1.def
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2289,13 +2292,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: Reference `eq:wieghts2' on page 7 undefined on input line 223.
+LaTeX Warning: Reference `eq:wieghts2' on page 7 undefined on input line 227.
 
 
-LaTeX Warning: Reference `prov' on page 7 undefined on input line 224.
+LaTeX Warning: Reference `prov' on page 7 undefined on input line 228.
 
 
-LaTeX Warning: Reference `eq:b_qso' on page 7 undefined on input line 230.
+LaTeX Warning: Reference `eq:b_qso' on page 7 undefined on input line 234.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
@@ -2309,19 +2312,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [7]
 
 LaTeX Warning: Reference `subsec:contaminants' on page 8 undefined on input lin
-e 257.
+e 261.
 
 
 Package natbib Warning: Citation `CITE:Victoria' on page 8 undefined on input l
-ine 274.
+ine 278.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 284.
+               Default added (so using `tbp') on input line 288.
 
 
 LaTeX Warning: Reference `sec:reduction_donnees' on page 8 undefined on input l
-ine 311.
+ine 315.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2332,7 +2335,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [8]
 
 Package natbib Warning: Citation `font-ribera_large-scale_2013' on page 9 undef
-ined on input line 326.
+ined on input line 330.
 
 (./5.bbl
 
@@ -2358,24 +2361,24 @@ Package minitoc Info: I0009
 \openout3 = `5.maf'.
 
 [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
  (./5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
 Package rerunfilecheck Info: File `5.out' has not changed.
-(rerunfilecheck)             Checksum: 6A94D4358484CF5A235D92F03FDFA59D;799.
+(rerunfilecheck)             Checksum: 94A01D3E6881987086B0E41D93E60B50;878.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
  ) 
 Here is how much of TeX's memory you used:
- 29563 strings out of 492995
- 534655 string characters out of 6132704
+ 30171 strings out of 492995
+ 540849 string characters out of 6132704
  707254 words of memory out of 5000000
- 32434 multiletter control sequences out of 15000+600000
+ 33037 multiletter control sequences out of 15000+600000
  125165 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,17n,50p,10403b,1072s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2400,10 +2403,10 @@ blic/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
 sy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 5.pdf (11 pages, 313878 bytes).
+Output written on 5.pdf (11 pages, 315482 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 249 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

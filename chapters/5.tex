@@ -26,7 +26,7 @@ Les fonctions de corrélation sont alors calculées en utilisant directement la 
 \begin{equation}
   \delta_F = \frac{F}{\overline F} - 1 \; .
 \end{equation}
-Les coocked mocks quant à eux désignent les mocks après avoir appliqué \texttt{quickquasars} à chaque forêt. Dans ce cas, comme pour les données, la fraction de flux transmise $F$ n'est pas accessible. Il faut alors utiliser la procédure d'ajustement du continuum décrite dans la section~\ref{subsec:calcul_delta}.
+Les cooked mocks quant à eux désignent les mocks après avoir appliqué \texttt{quickquasars} à chaque forêt. Dans ce cas, comme pour les données, la fraction de flux transmise $F$ n'est pas accessible. Il faut alors utiliser la procédure d'ajustement du continuum décrite dans la section~\ref{subsec:calcul_delta}.
 Une fois le champ $\delta_F$ calculé, nous pouvons calculer les différentes fonctions de corrélation.
 
 \subsection{L'auto-corrélation \lya{}$\times$\lya{}}
@@ -205,7 +205,11 @@ Il est défini comme le produit des transformés de Fourier de la fonction porte
 \end{equation}
 avec $R_{\parallel}$ et $R_{\perp}$ la largeur des bins, soit \SI{4}{\perh\Mpc}.
 
-
+Afin de modéliser la corrélation croiśee \lya{}$\times$QSO, nous ajoutons le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$, inclus comme
+\begin{equation}
+  \rpar{} = \rpar{}_{mesure} + \Delta_{\rpar{}, \textsc{QSO}} \; ,
+\end{equation}
+où $\rpar{}_{mesure}$ est la séparation mesurée des paires $(i,j)$, et $\rpar{}$ est la séparation utilisée dans le modèle de la corrélation croisée. L'ajout de ce paramètre permet de prendre en compte les erreurs systématiques sur la mesure du redshift des quasars, qui rendent assymétrique la fonction de corrélation \lya{}$\times$QSO.
 
 % \subsubsection{Modélisation des HCD}
 \paragraph{}
@@ -330,7 +334,32 @@ Enfin, le dernier terme additionnel est le terme $\xi_{prox}$. Ce terme n'est pr
 où $\xi_{0,prox}$ donne l'amplitude de l'effet. L'émission est supposée isotrope, et le paramètre $\lambda_{UV}$ est fixé à \SI{300}{\perh\Mpc}.
 
 
+\#prov Matrice de distorsion
+
 \subsection{Modélisation des mocks}
+Afin d'analyser les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO des mocks, nous utilisons les modèles ajustés sur les données et décrits dans la section précédente. Cependant, un certain nombre d'effets modélisés dans les données ne sont pas présents dans les mocks. Nous modifions donc légèrement les modèles décrits précédemment.
+
+Premièrement, nous n'incluons pas l'élargissement non linéaire du pic BAO dans les mocks. Cet effet n'est pas non plus inclus par \texttt{quickquasars}. Lors du fit des mocks, nous forçons donc $\Sigma_{\perp} = \Sigma_{\parallel} = 0$.
+Les non-linéarités prises en compte par le terme $F_{NL}$ ne sont pas non plus présentes dans nos mocks. Ainsi, le spectre de puissance défini dans l'équation~\ref{eq:pk_model1} et utilisé comme modèle pour l'auto corrélation ne contient pas le terme $F_{NL}^{\mathrm{auto}}$. Cependant, le code \texttt{quickquasars} ajoute une vitesse particulière à chaque quasar. Ceci a pour effet d'ajouter une erreur statistique sur la mesure du redshfit des quasars. Nous gardons donc le terme $F_{NL}^{\mathrm{cross}}$ lorsque nous ajustons la corrélation \lya{}$\times$QSO issues des mocks avec \texttt{quickquasars}. Ce terme n'est pas présent dans le modèle utilisé pour ajuster les raw mocks.
+L'effet instrumental causé par la soustraction du fond de ciel sur l'auto corrélation n'est pas modélisé par \texttt{quickquasars}. Nous n'ajoutons donc pas le terme $\xi_{ciel}$ à $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ dans l'ajustement de l'auto corrélation.
+L'effet de proximité des quasars sur le champ \lya{} environnant n'est ajouté ni dans les mocks, ni dans \texttt{quickquasars}. Le terme
+$\xi_{prox}$ n'est donc pas inclu dans le modèle de la corrélation croisée.
+
+En ce qui concerne l'ajustement des HCD et des métaux, cela dépend de la version des mocks analysée.
+Pour les raw mocks comme pour les mocks eboss-0.0, ni les HCD ni les métaux sont présents. Nous n'incluons donc pas leur modélisation dans ces versions des mocks.
+Les versions eboss-0.2 incluent les HCD, nous modélisons donc leur présence comme décrit dans la section précédente.
+Les versions eboss-0.3 incluent à la fois les HCD et les métaux. L'ajustement des fonctions de corrélation issues de ces mocks contient donc les paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$. De plus, nous calculons la matrice des métaux pour ces versions et ajoutons au modèle les termes $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
+
+Pour l'ajustement des corrélations croisées \lya{}$\times$QSO, nous gardons le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$. Même si \texttt{quickquasars} ajoute une erreur statistique sur les redshifts des quasars, cette erreur est nulle en moyenne. Nous nous attendons donc à obtenir $\Delta_{\rpar{}, \textsc{QSO}} = 0$ dans l'ajustement des différentes versions des mocks. Ainsi, $\Delta_{\rpar{}, \textsc{QSO}}$ sert de test de la construction des mocks, pour vérifier par exemple que les lignes de visées sont placées correctement à partir de chaque quasar.
+
+\paragraph{}
+Comme pour les données, les fonctions de corrélations sont construites sur une grille de séparation d'intervale \SI{4}{\perh\Mpc}. Nous gardons donc le terme $G(\vec k)$ dans la modélisation des mocks.
+Dans le cas des mocks, nous incluons un terme similaire qui prend en compte le lissage gaussien appliqué au champ $\delta_l$ interpolé. Ce terme est donné par
+\begin{equation}
+  W(\kpar{}, \kperp{}) = \exp(- \frac{\kpar{} \sigma_{smooth, \parallel} + \kper{} \sigma_{smooth, \perp}}{2}) \; .
+\end{equation}
+Le spectre de puissance modèle $P(\kpar{}, \kper{})$ est donc multiplié par $W^2(\kpar{}, \kper{})$.
+
 
 
 \bibliography{../source/library}
