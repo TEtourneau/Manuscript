@@ -23,7 +23,7 @@ Nous présentons ici comment les spectres sont déduits des photons acquis par l
 \label{sec:reduction_donnees}
 L'observation de chaque plaque fournit des données en deux dimensions : la première correspond aux différentes longueurs d'onde, la seconde aux différentes fibres (voir figure~\ref{fig:photo_ccd}). La chaîne de réduction des données transforme ces informations en une liste de spectres.
 Premièrement, chaque spectre est extrait de l'image acquise par le CCD. Le spectre est étalonné en longueur d'onde à l'aide de lampes à arc. Le flux est calibré en utilisant les spectres des fibres dédiées à des étoiles standards.
-Puis le fond du ciel, estimé dans chaque demi plaque grâce aux fibres dédiées, est soustrait à chaque spectre.
+Puis le fond du ciel, estimé dans chaque demi-plaque grâce aux fibres dédiées, est soustrait à chaque spectre.
 La variance dans chaque pixel est ensuite estimée. Elle prend en compte le bruit de photon et le bruit de l'électronique. Les pixels affectés par des rayons cosmiques sont rejetés.
 Enfin, pour chaque objet, toutes les expositions sont ajoutées pour former un seul et même spectre, avec un plus grand rapport signal sur bruit. Le nombre typique d'expositions par objet varie entre 4 et 6.
 
@@ -80,7 +80,7 @@ L'analyse \lya{} des données complètes d'eBOSS \citep{CITE:dr16} utilise le ca
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{pixel_number}
-  \caption{Gauche : distribution en redshift des pixels \lyalya{} (bleu) et des pixels\lyalyb{} (noir) (nombres divisés par 50), ainsi que celle des quasars traceurs (rouge). Droite : distribution pondérée du redshift efficace de chaque paire de pixels utilisée pour le calcul de la fonction corrélation du \lya{}. La distibution orange présente les paires de pixels \lyalya{}-\lyalya{}, la verte les paires de pixels \lyalya{}-\lyalyb{}, et la bleu la somme des deux. Les paires représentés sont celles nécessaires pour la mesure de la position du pic BAO, c'est à dire avec une séparation $r \in [\num{80} ; \num{120}] \si{\perh\Mpc}$. La ligne en pointillés indique le redshift effectif de la mesure, c'est à dire la moyenne de la distribution bleue.}
+  \caption{Gauche : distribution en redshift des pixels \lyalya{} (bleu) et des pixels\lyalyb{} (noir) (nombres divisés par 50), ainsi que celle des quasars traceurs (rouge). Droite : distribution pondérée du redshift efficace de chaque paire de pixels utilisée pour le calcul de la fonction corrélation du \lya{}. La distibution orange présente les paires de pixels \lyalya{}-\lyalya{}, la verte les paires de pixels \lyalya{}-\lyalyb{}, et la bleu la somme des deux. Les paires représentés sont celles nécessaires pour la mesure de la position du pic BAO, c'est à dire avec une séparation $r \in [\num{80} \,; \num{120}] \si{\perh\Mpc}$. La ligne en pointillés indique le redshift effectif de la mesure, c'est à dire la moyenne de la distribution bleue. Il vaut $z_{eff} = \num{2.334}$.}
   \label{fig:pixel_number}
 \end{figure}
 

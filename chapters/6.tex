@@ -1,3 +1,37 @@
+% created on 2019-12-13
+% @author : bmazoyer
 
-\chapter{Conclusion}
+%% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
+
+\begin{document}
+%%
+
+\graphicspath{ {../figures/mocks/} }
+
+\chapter{Analyse des données et résultats}
+\minitoc
+\newpage
 \thispagestyle{fancy}
+
+Dans ce chapitre, nous présentons les diverses analyses que nous avons mené sur les données, avec les mocks comme support de référence.
+Un élément clé à la construction des mocks a été de déterminer quels paramètres \lya{} nous souhaitions avoir dans nos mocks. En produisant l'analyse des données DR16 en quatre bins en redshift, nous nous sommes rendus compte que les paramètres \lya{} obtenus dépendaient fortement de la modélisation des HCD. Nous avons dû faire un choix quant à cette modélisation.
+Nous présentons donc d'abord l'analyse des données qui a servi de référence pour l'ajustement des paramètres des mocks. Puis, nous discutons la modélisation des HCD et présentons des modélisations alternatives.
+\#prov finir de donner les autres sections
+
+
+
+\section{L'analyse des données DR16}
+L'analyse des données finale d'eBOSS (DR16), dont nous avons déjà parlé et qui est présentée dans \citet{prov}, analyse les fonctions de corrélation \lya$\times$\lya{} et \lya{}$\times$QSO construites sur l'ensemble des données. Les paramètres ajustés sont donc donnés uniquement pour le redshift effectif $z_{eff} = \num{2.334}$ de la mesure. L'appendice F de \citet{prov} présente cependant l'analyse des données DR16 dans deux bins en redshift. Mais ces deux bins ne sont pas suffisant pour estimer les paramètres \lya{} dans toute la gamme en redshift $1.9 < z  < 3.6$.
+Afin d'estimer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons calculé la fonction de corrélation \lya{}$\times$\lya{} dans quatres bins en redshift.
+Pour chacun des bins, nous calculons la fonction de corrélation pour les forêts dont le redshift du quasar se trouve dans l'intervale en redshift considéré (voir Appendice B de \citet{Agathe2019a}).
+Ces intervales sont $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$.
+Nous calculons aussi la matrice de distorsion dans chacun de ces bins.
+Enfin, nous procédons à l'ajustement des quatres fonctions de corrélation. Le modèle utilisé pour cet ajustement est le même que celui utilisé pour l'analyse des données finale d'eBOSS \citep{prov}, il est présenté dans la section~\ref{subsec:model_donnees}.
+
+
+
+
+\bibliography{../source/library}
+\end{document}
