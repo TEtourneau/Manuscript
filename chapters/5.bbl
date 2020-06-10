@@ -1,14 +1,14 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[des Bourboux et~al.(2019)des Bourboux, Dawson, Busca, Blomqvist,
-  Agathe, Balland, Bautista, Guy, Kamble, Myers, P{\'{e}}rez-R{\`{a}}fols,
-  Pieri, Rich, Schneider, and Slosar]{Bourboux2019}
-H{\'{e}}lion du~Mas des Bourboux, Kyle~S. Dawson, Nicol{\'{a}}s~G. Busca,
+\bibitem[{du Mas des Bourboux} et~al.(2019){du Mas des Bourboux}, Dawson,
+  Busca, Blomqvist, Agathe, Balland, Bautista, Guy, Kamble, Myers,
+  P{\'{e}}rez-R{\`{a}}fols, Pieri, Rich, Schneider, and Slosar]{Bourboux2019}
+H{\'{e}}lion {du Mas des Bourboux}, Kyle~S. Dawson, Nicol{\'{a}}s~G. Busca,
   Michael Blomqvist, Victoria de~Sainte Agathe, Christophe Balland, Julian~E.
   Bautista, Julien Guy, Vikrant Kamble, Adam~D. Myers, Ignasi
   P{\'{e}}rez-R{\`{a}}fols, Matthew~M. Pieri, James Rich, Donald~P. Schneider,
@@ -20,11 +20,12 @@ H{\'{e}}lion du~Mas des Bourboux, Kyle~S. Dawson, Nicol{\'{a}}s~G. Busca,
 
 \bibitem[Chabanier et~al.(2018)Chabanier, Palanque-Delabrouille, Y{\`{e}}che,
   Goff, Armengaud, Bautista, Blomqvist, Busca, Dawson, Etourneau, Font-Ribera,
-  Lee, des Bourboux, Pieri, Rich, Rossi, Schneider, and Slosar]{Chabanier2018}
+  Lee, {du Mas des Bourboux}, Pieri, Rich, Rossi, Schneider, and
+  Slosar]{Chabanier2018}
 Sol{\`{e}}ne Chabanier, Nathalie Palanque-Delabrouille, Christophe Y{\`{e}}che,
   Jean-Marc~Le Goff, Eric Armengaud, Julian Bautista, Michael Blomqvist,
   Nicolas Busca, Kyle Dawson, Thomas Etourneau, Andreu Font-Ribera, Youngbae
-  Lee, H{\'{e}}lion du~Mas des Bourboux, Matthew Pieri, James Rich, Graziano
+  Lee, H{\'{e}}lion {du Mas des Bourboux}, Matthew Pieri, James Rich, Graziano
   Rossi, Donald Schneider, and An{\v{z}}e Slosar.
 \newblock {The one-dimensional power spectrum from the SDSS DR14 Ly-alpha
   forests}.
@@ -106,5 +107,21 @@ A.~J.~S. Hamilton.
 \newblock \doi{10.1046/j.1365-8711.2000.03071.x}.
 \newblock URL \url{http://arxiv.org/abs/astro-ph/9905191
   http://dx.doi.org/10.1046/j.1365-8711.2000.03071.x}.
+
+\bibitem[Font-Ribera et~al.(2013)Font-Ribera, Arnau, Miralda-Escud{\'{e}},
+  Rollinde, Brinkmann, Brownstein, Lee, Myers, Palanque-Delabrouille,
+  P{\^{a}}ris, Petitjean, Rich, Ross, Schneider, and
+  White]{font-ribera_large-scale_2013}
+Andreu Font-Ribera, Eduard Arnau, Jordi Miralda-Escud{\'{e}}, Emmanuel
+  Rollinde, J~Brinkmann, Joel~R Brownstein, Khee-Gan Lee, Adam~D Myers,
+  Nathalie Palanque-Delabrouille, Isabelle P{\^{a}}ris, Patrick Petitjean,
+  James Rich, Nicholas~P Ross, Donald~P Schneider, and Martin White.
+\newblock {The large-scale quasar-{\{}Lyman{\}} $\alpha$ forest
+  cross-correlation from {\{}BOSS{\}}}.
+\newblock \emph{Journal of Cosmology and Astroparticle Physics}, 2013\penalty0
+  (05):\penalty0 18, may 2013.
+\newblock ISSN 1475-7516.
+\newblock \doi{10.1088/1475-7516/2013/05/018}.
+\newblock URL \url{http://iopscience.iop.org/1475-7516/2013/05/018}.
 
 \end{thebibliography}
