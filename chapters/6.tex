@@ -23,8 +23,9 @@ Nous présentons donc d'abord l'analyse des données qui a servi de référence 
 
 
 \section{L'analyse des données DR16}
-L'analyse des données finale d'eBOSS (DR16), dont nous avons déjà parlé et qui est présentée dans \citet{prov}, analyse les fonctions de corrélation \lya$\times$\lya{} et \lya{}$\times$QSO construites sur l'ensemble des données. Les paramètres ajustés sont donc donnés uniquement pour le redshift effectif $z_{eff} = \num{2.334}$ de la mesure. L'appendice F de \citet{prov} présente cependant l'analyse des données DR16 dans deux bins en redshift. Mais ces deux bins ne sont pas suffisant pour estimer les paramètres \lya{} dans toute la gamme en redshift $1.9 < z  < 3.6$.
-Afin d'estimer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons calculé la fonction de corrélation \lya{}$\times$\lya{} dans quatres bins en redshift.
+L'analyse des données finale d'eBOSS (DR16), dont nous avons déjà parlé et qui est présentée dans \citet{prov}, analyse les fonctions de corrélation \lya(\lya{})$\times$\lya{}(\lya{}), \lya{}(\lya{})$\times$\lya{}(\lyb{}), \lya{}(\lya{})$\times$QSO et \lya{}(\lyb{})$\times$QSO. Ces fonctions de corrélation sont construites sur l'ensemble des données, les paramètres ajustés sont donc donnés uniquement pour le redshift effectif $z_{eff} = \num{2.334}$ de la mesure. L'appendice F de \citet{prov} présente cependant l'analyse des données DR16 dans deux bins en redshift. Mais ces deux bins ne sont pas suffisant pour estimer les paramètres \lya{} dans toute la gamme en redshift $1.9 < z  < 3.6$.
+% Afin d'estimer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons calculé la fonction de corrélation \lya{}$\times$\lya{} dans quatres bins en redshift.
+Afin d'estimer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons reproduit cette analyse dans quatres bins en redshift. De manière à limiter les potentielles systématiques, nous nous limitons à l'analyse de la fonction de corrélation \lya{}(\lya{})$\times$\lya{}(\lya{}) (abrégée en \lya{}$\times$\lya{} dans la suite de ce chapitre).
 Pour chacun des bins, nous calculons la fonction de corrélation pour les forêts dont le redshift du quasar se trouve dans l'intervale en redshift considéré (voir Appendice B de \citet{Agathe2019a}).
 Ces intervales sont $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$.
 Nous calculons aussi la matrice de distorsion dans chacun de ces bins.
@@ -35,14 +36,14 @@ La figure~\ref{prov} présente les fonctions de corrélation et leur modèle aju
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{dr16_4bins}
-  \caption{bla}
+  \caption{Fonctions de corrélation \lya{}$\times$\lya{} dans chacun des bins en redshift de l'analyse. Les courbes en trait plein donne le meilleur ajustement du modèle obtenu avec \texttt{picca}. Chaque graphique correspond à un bin en redshift. Pour chacun des bins, la fonction de corrélation et l'ajustement sont montrées dans quatre bins en $\mu$.}
   \label{fig:dr16_4bins}
 \end{figure}
 
 \begin{table}[]
   \centering
-  \caption{}
-  \label{}
+  \caption{Résultats de l'ajustement fait avec \texttt{picca} des fonctions de corrélation \lya{}$\times$\lya{} calculées sur les données DR16. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1590}$. Le modèle comporte \num{13} paramètres libres. Enfin, la dernière section donne le biais et le biais effectif du \lya{}. Ils sont reliés aux paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ par les équations~\ref{prov}}
+  \label{tab:dr16_4bins}
   \begin{tabular}{lllll}
     \toprule
     Paramètre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$ \\
