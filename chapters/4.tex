@@ -43,8 +43,8 @@ Les simulations dites \emph{N-corps} sont des simulations qui traitent le probl�
 % Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$).
 Elles sont initialisées à un redshift élevé ($z > \num{100}$), avec une distribution de matière noire représentée par des macro-particules.
 % Généralement, environ $(\num{10000})^3$ macro-particules sont présentes dans ces simulations.
-\textbf{Actuellement, les simulations les plus performantes utilisent environ $(\num{10000})^3$ macro-particules.
-La masse de ces particules dépend du volume simulé. Par exemple, la simulation Outer Rim \citep{Heitmann2019} simule un volume d'environ $(\SI{4}{\Gpc})^3$, et les particules possèdent une masse $\sim 10^{9} M_{\odot}$.}
+Actuellement, les simulations les plus performantes utilisent environ $(\num{10000})^3$ macro-particules.
+La masse de ces particules dépend du volume simulé. Par exemple, la simulation Outer Rim \citep{Heitmann2019} simule un volume d'environ $(\SI{4}{\Gpc})^3$, et les particules possèdent une masse $\sim 10^{9} M_{\odot}$.
 Puis, à chaque pas de temps, ces macro-particules sont déplacées en considérant uniquement les interactions gravitationnelles. Le champ de matière initial évolue ainsi jusqu'à $z=0$. Ces simulations sont très utiles pour étudier les effets de la gravité à grande échelle. Cependant elles ne sont pas adaptées à notre utilisation : afin d'avoir la résolution et le volume requis, la simulation nécessiterait beaucoup trop de macro-particules pour être réalisable dans un temps raisonnable.
 
 Les simulations hydrodynamiques fonctionnent de la même manière que les simulations N-corps. Elles incluent, en plus des macro-particules de matière noire, la physique baryonique présente dans le milieu galactique. Les baryons sont aussi représentés par des macro-particules. Afin de résoudre l'intérieur des galaxies, les macro-particules utilisées possèdent une masse plus faible que dans le cas des simulations N-corps. En contrepartie, le volume simulé est plus petit. Dans le cas des simulations hydrodynamiques, la densité, la pression et la tempéature sont tracées dans chaque cellule. Certains effets astrophysiques, comme les supernovae ou les AGN peuvent aussi être présents. 
@@ -97,7 +97,7 @@ Une solution alternative consiste à considérer que les quasars suivent une dis
 Ce choix est souvent fait pour simuler des relevés de galaxies \citep{agrawal_generating_2017}, et est en accord avec ce qui est observé dans les données \citep{Clerkin2016}.
 % Ainsi, au lieu de placer les quasars dans les voxels qui possèdent une densité plus élevé qu'un certain seuil, nous tirons les quasars dans chaque voxel avec une probabilité
 % Ainsi, dans chaque voxel, les quasars sont tirés avec une probabilité
-\textbf{Nous optons donc pour cette seconde solution. Ainsi, les quasars sont tirés dans chaque voxel avec une probabilité}
+Nous optons donc pour cette seconde solution. Ainsi, les quasars sont tirés dans chaque voxel avec une probabilité
 \begin{equation}
   \label{eq:proba_qso}
   P \propto \mathrm{e}^{\delta_q} \; ,
@@ -121,12 +121,12 @@ où $\delta_k$ est le GRF dans l'espace de Fourier. Une fois ces 3 boîtes const
 \subsubsection{Le champ \lya{}}
 Afin de construire le champ d'absorption \lya{}, nous avons besoin du champ de densité de l'hydrogène neutre. Comme expliqué dans la section~\ref{subsec:lya}, la fraction de flux transmis $F$ est reliée à la profondeur obtique $\tau$ par
 \begin{equation}
-  F = exp(- \tau) \; .
+  F = \exp(- \tau) \; .
 \end{equation}
 De plus, la formule FGPA (Fluctuating Gunn Peterson Approximation) permet de relier la profondeur optique $\tau$ au contraste de densité $\delta$ à $z = 0$ :
 \begin{equation}
   \label{eq:fgpa1}
-  \tau(z) = a(z) \mathrm{e}^{b(z) G(z) \delta} \;
+  \tau(z) = a(z) \exp(b(z) G(z) \delta) \;
 \end{equation}
 Les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon biais du \lya{} et la bonne transmission moyenne $\overline F$. Leur détermination est décrite dans la section~\ref{sec:tuning}. Le facteur de croissance $G$ prend en compte l'évolution avec le redshift du champ de densité $\delta$. Ainsi il nous suffit de construire un GRF qui suit la fonction de corrélation à $z=0$ pour simuler le champ d'absorption du \lya{}. Pour ce faire, nous partons de la même boîte $\delta_k$ utilisée pour construire les 3 boîtes log-normales des quasars. Ceci garanti la corrélation croisée entre les quasars et le champ d'absorption \lya{}. Le spectre de puissance de la matière $P_{matière}(k)$ à $z=0$ est ensuite appliqué à la boîte $\delta_k$. Enfin, nous obtenons la boîte de densité $\delta_{matière}$ à $z = 0$ qui servira au calcul du champ d'absorption du \lya{} en effectuant la transformée de Fourier de la boîte
 \begin{equation}
@@ -145,29 +145,29 @@ Afin d'inclure les RSD dans nos mocks, nous simulons aussi le champ des vitesses
 % Il est fréquent
 % (\#prov approximation réaliste ? mettre une source ; j'ai demandé a Etienne : theorie lineaire pas de biais, c'est ce qui est utilisé pour la reconstruction. Y a des gens qui regardent dans les simu nbody si y a un biais des vitesses qui apparait, dans les simus eBOSS y a rien de convainquant, mais le papier est tres peu fournit a ce sujet)
 % de considérer que le champ de vitesse des traceurs est le même que celui de la matière sous-jacente. Autrement dit, le champ de vitesse des traceurs est non biaisé.
-\textbf{En théorie linéaire, les traceurs sont considérés avoir la même vitesse que le champ de matière sous-jacent. Autrement dit, le champ de vitesse des traceurs est non biaisé. Nous adoptons ici cette hypothèse.}
-En ce qui concerne les quasars, nous simulons les RSD en déplaçant chaque quasar proportionnellement à sa vitesse le long de la ligne de visée (équation~\ref{eq:delta_z}). Dans ce but, nous calculons les trois boîtes de vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$ à $z=0$, comme
+En théorie linéaire, les traceurs sont considérés avoir la même vitesse que le champ de matière sous-jacent. Autrement dit, le champ de vitesse des traceurs est non biaisé. Nous adoptons ici cette hypothèse.
+\textbf{En ce qui concerne les quasars, nous simulons les RSD en déplaçant chaque quasar proportionnellement à sa vitesse le long de la ligne de visée (équation~\ref{eq:delta_z}). Dans ce but, nous calculons les trois boîtes de vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$, comme}
 \begin{equation}
   \label{eq:v2}
-  v_{k, n}(\vec k) = \frac{- i k_n}{k^2} H_{0} \frac{dG}{dz} \delta_{k, matière}(\vec k) \; ; \hspace{0.5cm} n \in [\textsc{x} \, ; \textsc{y} \, ; \textsc{z}] \; .
+  v_{k, n}(\vec k, z) = \frac{- i k_n}{k^2} H(z) \frac{dG}{dz}(z) \delta_{k, matière}(\vec k) \; ; \hspace{0.5cm} n \in [\textsc{x} \, ; \textsc{y} \, ; \textsc{z}] \; .
 \end{equation}
-\textbf{Cette équation est équivalente à l'équation~\ref{eq:v1} pour $z=0$, car}
+\textbf{Ces boîtes sont construites pour $z = 0$. Cette équation est équivalente à l'équation~\ref{eq:v1}, car}
 \begin{equation}
   f=\frac{d \ln G}{d \ln a}=\frac{a}{G} \frac{dG}{da}=-\frac{1}{aG}\frac{dG}{dz}
 \end{equation}
-Comme précédemment, la boîte $\delta_{k, matière}$ est la même que celle utilisée pour construire les boîtes $\delta_{\textsc{QSO},i}$ des quasars et la boîte $\delta_{matière}$ utilisée pour le \lya{}, ceci afin de garantir la corrélation entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier inverse, nous obtenons les trois boîtes de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$. Le calcul pour obtenir la vitesse parallèle $v_{\parallel}$ à un redshift $z$ est décrit dans la section~\ref{subsec:qso}.
+Comme précédemment, la boîte $\delta_{k, matière}$ est la même que celle utilisée pour construire les boîtes $\delta_{\textsc{QSO},i}$ des quasars et la boîte $\delta_{matière}$ utilisée pour le \lya{}, ceci afin de garantir la correspondance entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier inverse, nous obtenons les trois boîtes de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$. Le calcul pour obtenir la vitesse parallèle $v_{\parallel}$ à un redshift $z$ est décrit dans la section~\ref{subsec:qso}.
 % A l'aide d'une transformation de Fourier, nous obtenons chaque champ de vitesse dans l'espace réel $v_x$, $v_y$ et $v_z$, ce qui nous permet de calculer la vitesse le long de la ligne de visée
 % \begin{equation}
 %   v_{\parallel}(\vec r) = \frac{\vec r \cdot \vec v}{|| \vec r ||} \; .
 % \end{equation}
 
 Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une modification de la formule FGPA. Pour ce faire, nous avons besoin du gradient de vitesse $\eta_{\parallel}$ à $z=0$.
-\textbf{Nous utilisons la définition donnée dans l'équation 2.2 de \citet{Arinyo-i-Prats2015} :
+Nous utilisons la définition donnée dans l'équation 2.2 de \citet{Arinyo-i-Prats2015} :
 \begin{equation}
   \eta = - \frac{1}{aH} \frac{\partial v_p}{\partial x_p} \; ,
 \end{equation}
 où $\eta$ est le gradient sans dimension de la vitesse $v_p$ le long de la ligne de visée, et $x_p$ est la coordonnées comobile le long de cette ligne de visée.
-En utilisant la définition précédente, et l'équation~\ref{eq:v1}, nous obtenons le gradient $\eta_{nm}$ de la vitesse $v_n$ selon la direction $\vec u_m$ en fonction du champ $\delta_k$ :}
+En utilisant la définition précédente, et l'équation~\ref{eq:v1}, nous obtenons le gradient $\eta_{nm}$ de la vitesse $v_n$ selon la direction $\vec u_m$ en fonction du champ $\delta_k$ :
 % Le gradient $\eta_{nm}$ selon la direction $\vec u_m$ de la vitesse $v_n$ est défini comme
 \begin{equation}
   \label{eq:eta1}
@@ -228,30 +228,47 @@ Une fois toutes ces boîtes construites, nous définissons la géométrie du rel
 Cette limite basse est choisie de manière à pouvoir inclure les absorptions du CIV. Comme indiqué dans la section~\ref{sec:selection_forets}, le pixel d'absorption de plus bas redshift dans la région \lya{}  se trouve à $z = \num{1.96}$. Si cette absorption est causée par du CIV, l'absorbeur se situe à un redshift $z = (1+\num{1.96}) \lambda_{\mathrm{Ly}\alpha} / \lambda_{CIV} - 1 \sim \num{1.32}$.
 Enfin, l'observateur est considéré être à $z=0$, au centre du plan $(\textsc{x},\textsc{y})$.
 
-Afin d'obtenir un biais des quasars qui dépend (\#prov dépende ?) du redshift, nous pouvons modifier l'équation~\ref{eq:proba_qso} et inclure une facteur $\alpha(z)$ qui prend en compte l'évolution avec le redshift du champ $\delta_q$ associé aux quasars :
+Afin d'obtenir un biais des quasars qui dépend du redshift, nous pouvons modifier l'équation~\ref{eq:proba_qso} et inclure une facteur $\alpha(z)$ qui prend en compte l'évolution avec le redshift du champ $\delta_q$ associé aux quasars :
 \begin{equation}
   \label{eq:proba_qso2}
   P \propto \exp(\alpha(z)\delta_q) \; ,
 \end{equation}
 où $\alpha(z)$ est donné par
 \begin{equation}
-  \alpha(z) = \left(\frac{b_{\textsc{QSO}}(z) (1+z_0)}{b_{\textsc{QSO}}(z_0)(1+z)}\right) \; ,
+  \alpha(z) = \frac{b_{\textsc{QSO}}(z) (1+z_0)}{b_{\textsc{QSO}}(z_0)(1+z)} \; ,
 \end{equation}
-et $z_0$ est le redshift auquel est construit le champ log-normal $\delta_q$, avec $b_{\textsc{QSO}}$ son biais. La paramétrisation que nous utilisons pour le biais des quasars est donnée dans l'équation~\ref{eq:b_qso}.
+et $z_0$ est le redshift auquel est construit le champ log-normal $\delta_q$, avec $b_{\textsc{QSO}}$ son biais.
+\textbf{
+  La paramétrisation que nous utilisons pour le biais des quasars est donnée dans l'équation~\ref{eq:b_qso}.
+  La fonction de corrélation $\xi_i$ à un redshift $z_i$ est alors obtenue à partir de l'équation~\ref{eq:lognormal}, et s'exprime comme
+  \begin{equation}
+    \label{eq:lognormal2}
+    \xi_i = \exp(\alpha^2(z_i) \ln (1 + \xi_0)) - 1 \; ,
+  \end{equation}
+  où $\xi_0$ est la fonction de corrélation à $z_0 = \num{2.33}$, obtenue comme la transformation de Fourier du spectre de puissance $P_{matière}(k)$ à $z=0$ fourni par Camb, et multipliée par le facteur de croissance $G$ et le biais des quasars $b_{\textsc{QSO}}$ au redshit $z_0$.
+  Dans la limite où $\xi_0 \ll 1$ ou $|1 - \alpha | \ll 1$, nous obtenons comme souhaité $\xi_i = \alpha^2(z_i) \xi_0$.
+}
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{qsolognormal1}
   \caption{Gauche : fonctions de corrélation $\xi_i$ obtenues à partir de l'équation~\ref{eq:lognormal2} et normalisées par un facteur $1 / \alpha^2(z_i)$. La fonction de référence $\xi_0$ est calculée à un redshift $z_0 = \num{2.33}$. Droite : rapports $\xi_i / \alpha^2(z_i) \xi_0$.}
   \label{fig:qsolognormal1}
 \end{figure}
-La figure~\ref{fig:qsolognormal1} montre les fonctions de corrélation $\xi_i$ à différents redshifts $z_i$ que produit cette méthode. Ces fonctions de corrélation sont obtenues en utilisant l'approximation lognormal :
-\begin{equation}
-  \label{eq:lognormal2}
-  \xi_i(z) = \exp(\alpha^2(z_i) \ln (1 + \xi_0)) - 1 \; ,
-\end{equation}
-où $\xi_0$ est la fonction de corrélation à $z_0 = \num{2.33}$, obtenue comme la transformation de Fourier inverse du spectre de puissance $P_{matière}(k)$ à $z=0$ fourni par Camb, et multipliée par le facteur de croissance $G$ et le biais des quasars $b_{\textsc{QSO}}$ au redshit $z_0$. Les fonctions de corrélation $\xi_i$ tracées sont normalisées par un facteur $1/\alpha^2(z_i)$ afin de pouvoir comparer leur amplitude. Sur la figure~\ref{fig:qsolognormal1}, nous pouvons voir que plus le redshift $z_i$ est éloigné de $z_0$, et plus l'écart entre $\xi_i$ et $\xi_0$ est grand. Ceci est d'autant plus vrai pour les petites séparations $r$, pour lesquelles $\xi$ n'est pas négligeable devant 1, et donc pour lesquelles l'approximation lognormal (équation~\ref{eq:lognormal2}) n'est plus valable. Nous pouvons aussi remarquer sur le graphique de droite de la figure~\ref{fig:qsolognormal1} que les formes des rapports $\xi_i / \xi_0$ pour $z_i > z_0$ et $z_i < z_0$ sont semblables et de signe opposé. Nous pouvons donc combiner ces fonction de corrélation afin d'avoir un résultat plus satisfaisant.
+% La figure~\ref{fig:qsolognormal1} montre les fonctions de corrélation $\xi_i$, à différents redshifts $z_i$, produites avec cette méthode.
+% Ces fonctions de corrélation sont obtenues en utilisant l'approximation lognormal :
+% \begin{equation}
+%   \label{eq:lognormal2}
+%   \xi_i(z) = \exp(\alpha^2(z_i) \ln (1 + \xi_0)) - 1 \; ,
+% \end{equation}
+% où $\xi_0$ est la fonction de corrélation à $z_0 = \num{2.33}$, obtenue comme la transformation de Fourier inverse du spectre de puissance $P_{matière}(k)$ à $z=0$ fourni par Camb, et multipliée par le facteur de croissance $G$ et le biais des quasars $b_{\textsc{QSO}}$ au redshit $z_0$.
+% Les fonctions de corrélation $\xi_i$ tracées sont normalisées par un facteur $1/\alpha^2(z_i)$ afin de pouvoir comparer leur amplitude.
+\textbf{
+La figure~\ref{fig:qsolognormal1} compare les fonctions de corrélation $\xi_i / \alpha^2(z_i)$ avec la fonction de corrélation de référence $\xi_0$.
+Nous pouvons remarquer que plus le redshift $z_i$ est éloigné de $z_0$, et plus l'écart entre $\xi_i / \alpha^2(z_i)$ et $\xi_0$ est grand.
+Ceci est d'autant plus vrai pour les petites séparations $r$, pour lesquelles $\xi_0$ n'est pas négligeable devant 1. %, et donc pour lesquelles l'approximation lognormal (équation~\ref{eq:lognormal2}) n'est plus valable.
+Nous pouvons aussi remarquer sur le graphique de droite de la figure~\ref{fig:qsolognormal1} que les formes des rapports $\xi_i / \alpha^2(z_i)\xi_0$ pour $z_i > z_0$ et $z_i < z_0$ sont semblables et de signe opposé. Nous pouvons donc combiner ces fonction de corrélation afin d'avoir un résultat plus satisfaisant.}
 
-Nous considérons donc maintenant le cas de deux champs log-normaux $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$ à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$. Pour chaque champ, comme précédemment, nous construisons le champ
+Nous considérons donc maintenant deux champs log-normaux $\delta_{\textsc{QSO},1}$ et $\delta_{\textsc{QSO},2}$ à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$. Pour chaque champ, comme précédemment, nous construisons le champ
 \begin{equation}
   \label{eq:boiteqsointerp1}
   \hat  \delta_{\textsc{QSO}, i}(z) = \exp(\alpha(z) \delta_{\textsc{QSO},i}) \; ,
@@ -272,7 +289,7 @@ La figure~\ref{fig:qsolognormal2} montre les fonctions de corrélation normalis�
 Nous pouvons remarquer sur cette figure~\ref{fig:qsolognormal2} que l'écart entre les fonctions de corrélation $\xi_1$ et $\xi_2$ (en rouge) et les fonctions de corrélation interpolées est moins important que dans le cas avec un seul champ lognormal. La courbe orange montre la fonction de corrélation $\xi_i$ au redshift $z_i = \num{3.0}$ pour lequel l'écart avec $\xi_1$ et $\xi_2$ est maximal.
 Comme précédemment, nous pouvons constater que l'effet entre une interpolation (orange) et une extrapolation (vert, par exemple) et similaire et de signe opposé. Afin d'affiner encore l'évolution avec le redshift du champ utilisé pour tirer les quasars, nous pouvons considérer trois champs log-normaux, et combiner une interpolation et une extrapolation obtenues à partir de ces trois champs.
 
-Nous considérons donc finalement le cas de trois champs log-normaux $\delta_{\textsc{QSO},1}$, $\delta_{\textsc{QSO},2}$ et $\delta_{\textsc{QSO},3}$  à $z_1 = \num{1.9}$ ,  $z_2 = \num{2.75}$  et $z_3 = \num{3.6}$. C'est la solution qui a été choisie et implémentée dans les mocks. Ces trois champs sont stockés dans les boîtes construites dans la section~\ref{subsubsec:boiteqso}. A partir de ces trois boîtes, nous construisons les 3 boîtes $\hat \delta_{\textsc{QSO},1}$, $\hat \delta_{\textsc{QSO},2}$ et $\hat \delta_{\textsc{QSO},3}$ (équation~\ref{eq:boiteqsointerp1}), puis les deux boîtes interpolées $\hat \delta_{\textsc{QSO},12}$ et $\hat \delta_{\textsc{QSO},23}$ (équation~\ref{eq:boiteqsointerp2}). Enfin, nous construisons la boîte
+Nous considérons donc finalement trois champs log-normaux $\delta_{\textsc{QSO},1}$, $\delta_{\textsc{QSO},2}$ et $\delta_{\textsc{QSO},3}$  à $z_1 = \num{1.9}$,  $z_2 = \num{2.75}$  et $z_3 = \num{3.6}$. C'est la solution qui a été choisie et implémentée dans les mocks. Ces trois champs sont stockés dans les boîtes construites dans la section~\ref{subsubsec:boiteqso}. A partir de ces trois boîtes, nous construisons les 3 boîtes $\hat \delta_{\textsc{QSO},1}$, $\hat \delta_{\textsc{QSO},2}$ et $\hat \delta_{\textsc{QSO},3}$ (équation~\ref{eq:boiteqsointerp1}), puis les deux boîtes interpolées $\hat \delta_{\textsc{QSO},12}$ et $\hat \delta_{\textsc{QSO},23}$ (équation~\ref{eq:boiteqsointerp2}). Enfin, nous construisons la boîte
 \begin{equation}
   \label{eq:boiteqsointerp3}
   \hat \delta_{\textsc{QSO}}(z) = K(z) \hat \delta_{\textsc{QSO}, 12}(z) + (1 - K(z)) \hat \delta_{\textsc{QSO}, 23}(z) \; ,
@@ -382,7 +399,7 @@ Le facteur $N(z)$ contient l'évolution avec le redshift du nombre de quasars pa
 Les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}\, ; \num{3.6}]$ sont écartés.
 % Les quasars dont l'ascension droite est en dehors de l'inverval $[ - \Delta \alpha ; \Delta \alpha]$ et dont la déclinaison est en dehors de l'inverval $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 Les quasars dont l'ascension droite et la déclinaison sont en dehors des intervalles $[ - \Delta \alpha \, ; \Delta \alpha]$ et $[ - \Delta \delta \, ; \Delta \delta]$ sont aussi écartés.
-L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\textsc{y},\textsc{z})$ sont définies comme
+L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\textsc{y},\textsc{z})$ sont données par
 \begin{align}
   \label{eq:radec}
   \alpha &= \arctan(\frac{
@@ -406,18 +423,18 @@ A la fin, nous obtenons environ \num{100} quasars à $z > \num{2.1}$ par degré 
 \end{figure}
 
 \paragraph{}
-\textbf{Une fois les quasars tirés, nous les déplaçons proportionnellement à leur vitesse $v_{\parallel}(z)$ le long de la ligne de visée.
-La vitesse, à $z=0$, le long de la ligne de vitesse est obtenue comme}
+Une fois les quasars tirés, nous les déplaçons proportionnellement à leur vitesse $v_{\parallel}(z)$ le long de la ligne de visée.
+La vitesse, à $z=0$, le long de la ligne de vitesse est obtenue comme
 \begin{equation}
   \label{eq:vpar1}
   v_{\parallel} = \frac{v_{\textsc{x}} \textsc{x} + v_{\textsc{y}} \textsc{y} + v_{\textsc{z}} \textsc{z}}{\sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}} \; ,
 \end{equation}
-\textbf{où les vitesses $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les vitesses obtenus par transformation de Fourier inverse des vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$, définies dans l'équation~\ref{eq:v2}.}
+où les vitesses $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les vitesses obtenus par transformation de Fourier inverse des vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$, définies dans l'équation~\ref{eq:v2}.
 Ainsi, un quasar situé à une distance $R$ sera replacé le long de la ligne de visée à une distance
 \begin{equation}
  R \rightarrow  R + \frac{(1+z)}{H(z)} v_{\parallel}(z) \; ,  % (1+z) \frac{dG}{dz} \frac{1}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; ,
 \end{equation}
-avec
+\textbf{où $v_{\parallel}(z)$ est relié à $v_{\parallel}$ à $z = 0$ par (voir équation~\ref{eq:v2})}
 \begin{equation}
   % v_{\parallel}(z) = (1+z) \frac{dG}{dz} \frac{H(z)}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
   % v_{\parallel}(z) = (1+z) \frac{H(z)}{H_0} \frac{1}{\frac{dG}{dz}(z=0)} \frac{dG}{dz} v_{\parallel} \; .
@@ -429,14 +446,14 @@ Le facteur $(1+z)$ vient de la conversion des distances en distances comobiles. 
 
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
-A cette étape, nous disposons d'un catalogue de quasars corrélés avec le champ de densité $\delta_{matière}$ qui sera utilisé pour construire l'absorption \lya{}. \textbf{Nous pouvons donc créer les lignes de visées à partir de chaque quasar et jusqu'à l'observateur, puis interpoler la boîte contenant le champ de densité le long de ces lignes de visée.
-Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité.} Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
+A cette étape, nous disposons d'un catalogue de quasars corrélés avec le champ de densité $\delta_{matière}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar et jusqu'à l'observateur, puis interpoler la boîte contenant le champ de densité le long de ces lignes de visée.
+Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
 
 % Une fois ce tableau en longueur d'onde défini, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
 % pour chaque quasar, nous calculons la position $(X,Y,Z)$ de chaque pixel.
 % D'abord, le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ est placé à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar, et le vecteur est dirigé vers l'observateur.
-\textbf{Une fois ce tableau en longueur d'onde défini, nous faisons correspondre le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar.
-Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_{\textsc{QSO}}$, la position $(\textsc{x}_i, \textsc{y}_i, \textsc{z}_i)$ du pixel est déterminée.}
+Une fois ce tableau en longueur d'onde défini, nous faisons correspondre le pixel $\lambda_{\textsc{QSO}} = (1+z_{\textsc{QSO}}) \lambda_{\mathrm{Ly}\alpha}$ à la position $(\textsc{x}_{\textsc{QSO}}, \textsc{y}_{\textsc{QSO}}, \textsc{z}_{\textsc{QSO}})$ du quasar.
+Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_{\textsc{QSO}}$, la position $(\textsc{x}_i, \textsc{y}_i, \textsc{z}_i)$ du pixel est déterminée.
 % La boîte est alors interpolé puis lissé.
 % Une moyenne pondérée avec un lissage gaussien est alors appliquée à la boîte.
 Pour chaque pixel, nous calculons une moyenne pondérée des voxels voisins avec un lissage gaussien.
@@ -446,7 +463,7 @@ Pour chaque pixel, nous calculons une moyenne pondérée des voxels voisins avec
   Nous appliquons donc un lissage gaussien, de largeur $\sigma = d_{cell}$.
 % Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
 % Ceci représente donc, pour chaque pixel, une moyenne sur \num{343} voxels.
-La figure~\ref{fig:smoothing11} présente le champ interpolé en considérant uniquement les voxels à $\pm 1 \sigma$. Trop peu de voxels sont considérés pour le calcul de chaque pixel, et le champ obtenu contient des discontinuités. La figure~\ref{fig:smoothing23} présente le champ interpolé en considérant les voxels à $\pm 2 \sigma$ (orange) et $\pm 3 \sigma$ (bleu). La différence entre les deux est faible, cependant certaines discontinuités subsistent pour le champ calculé avec $2 \sigma$, comme le montre le zoom sur le graphique de droite. Enfin, nous avons vérifié que les différences entre les champs obtenus avec $3$ et $4 \sigma$ restent faibles. Nous nous limitons donc aux voxels compris à $\pm 3 \sigma$ du voxel central pour limiter le temps CPU.
+La figure~\ref{fig:smoothing11} présente le champ interpolé en considérant uniquement les voxels à $\pm 1 \sigma$. Trop peu de voxels sont considérés pour le calcul de chaque pixel, et le champ obtenu contient des discontinuités. La figure~\ref{fig:smoothing23} présente le champ interpolé en considérant les voxels à $\pm 2 \sigma$ (orange) et $\pm 3 \sigma$ (bleu). La différence entre les deux est faible, cependant certaines discontinuités subsistent pour le champ calculé avec $2 \sigma$, comme le montre le zoom sur le graphique de droite. \textbf{Enfin, nous avons vérifié que les différences entre les champs obtenus avec $3$ et $4 \sigma$ sont plus faibles que $10^{-2}$}. Nous nous limitons donc aux voxels compris à $\pm 3 \sigma$ du voxel central pour limiter le temps CPU.
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{smoothing11}
@@ -459,9 +476,9 @@ La figure~\ref{fig:smoothing11} présente le champ interpolé en considérant un
   \caption{Exemple de champ interpolé en utilisant les voxels à $\pm 2 \sigma$ (orange) et à $\pm 3 \sigma$ (bleu) du voxel central. Les discontinuitées sont beaucoup moins nombreuses que pour le champ interpolé avec $\pm 1 \sigma$ (figure~\ref{fig:smoothing11}). Cependant, certaines sont encore visibles sur le zoom, présenté sur le graphique de droite.}
   \label{fig:smoothing23}
 \end{figure}
-\textbf{Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. % Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
+Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. % Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
 Ceci représente donc, pour chaque pixel, une moyenne sur \num{343} voxels.
-Le champ dans le pixel $i$ est alors donné par}
+Le champ dans le pixel $i$ est alors donné par
 % \begin{equation}
 %   \delta_i = \sum_{j=0}^{342}  \frac{\delta(\vec r_j) \mathrm{e}^{\frac{-(\vec r_j - \vec r_i)^2 }{ \sigma_j^2}}}{\sigma_j^2} \; ,
 % \end{equation}
@@ -514,7 +531,7 @@ Nous manquons donc toutes les fluctuations pour lesquelles $k > k_N$.
 % \textbf{Ces fluctuations ne sont pas importante pour la corrélation à trois dimensions. En effet, nous calculons cette dernière pour mesurer l'échelle BAO, qui se situe à beaucoup plus grand échelle ($\sim \SI{100}{\perh\Mpc}$). De plus, comme expliqué dans la section~\ref{prov}, nous moyennons la fonction de corrélation à trois dimensions dans des bins de \SI{4}{\perh\Mpc} de large.
 % }
 \textbf{
-  Ces fluctuations ne sont pas importantes pour la corrélation à trois dimensions. La figure~\ref{prov} (\#prov faire la figure) montre le spectre de puissance de la matière $P_{matière}(k)$ à $z=0$, obtenu avec Camb, ainsi que l'effet de la résolution de la grille et l'effet du lissage gaussien appliqué aux voxels. La courbe \#prov donne le spectre de puissance $P_{grille}(k)$ qui inclut l'effet de la résolution de la grille. Celui s'exprime par
+  Ces fluctuations ne sont pas importantes pour la corrélation à trois dimensions. La figure~\ref{prov} (\#prov faire la figure) montre le spectre de puissance de la matière $P_{matière}(k)$ à $z=0$, obtenu avec Camb, ainsi que l'effet de la résolution de la grille et l'effet du lissage gaussien appliqué aux voxels. La courbe \#prov donne le spectre de puissance $P_{grille}(k)$ qui inclut l'effet de la résolution de la grille. Celui-ci s'exprime par
   \begin{equation}
     P_{grille}(k) =  \mathrm{sinc}^2(\frac{k d_{cell}}{2}) P_{matière}(k) \; .
   \end{equation}
@@ -527,24 +544,31 @@ Nous manquons donc toutes les fluctuations pour lesquelles $k > k_N$.
   Ainsi, ces fluctuations à petite échelle ne sont pas importantes pour la fonction de corrélation à trois dimension.
 }
 \textbf{
-  Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci donne la puissance mesurée uniquement le long de la ligne de visée. Pour un mode $\kpar{}$ donné, il correspond à l'intégrale du spectre de puissance à 3 dimensions sur la direction transverse à la ligne de visée :
+  Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, il correspond à l'intégrale du spectre de puissance à 3 dimensions sur la direction transverse à la ligne de visée :
 \begin{equation}
   \label{eq:p1d}
-  % P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{\kpar{}}^{\infty} k P(k) dk \; ,
-  P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{\kpar{}}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; .
+  P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{0}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; .
 \end{equation}
-Sans les fluctuations à petite échelle, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.}
+Avec la taille non nulle des voxels, l'intégrale s'effectue seulement jusqu'à $k_N$. De plus, le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ réduit davantage l'amplitude de ce spectre de puissance. Ces deux effets sont représentés sur la figure~\ref{prov} (\#prov faire la figure). Contrairement au cas à trois dimension, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
+En effet, ce spectre de puissance le long d'une ligne de visée est beaucoup plus sensible au bruit que le spectre de puissance calculé sur une colonne de section de $(\SI{2.19}{\perh\Mpc})^2$.
+A cause de ces deux effets, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
+% Sans les fluctuations à petite échelle, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
+% Lorsque ce spectre de puissance est calculé dans des voxels
+}
 Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de visée un champ $\delta_s$ (\emph{small scales} : petites échelles) au champ $\delta_{matière}$ que nous appelons désormais $\delta_{l}$ (\emph{large scales} : grandes échelles) :
 \begin{equation}
   \label{eq:fgpa3}
   % F = \exp( - a(z) \mathrm{e}^{b(z) G(z) (\delta_l + \delta_s)}) ;.
   F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s))\right] ;.
 \end{equation}
-Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à 3 dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}. \textbf{Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, d'une taille supérieure à celle de la forêt pour éviter les corrélations d'une extrémité à l'autre}. Puis, nous multiplions $\delta_{k,s}$ par
+Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à 3 dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}.
+% Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, d'une taille supérieure à celle de la forêt pour éviter les corrélations d'une extrémité à l'autre.
+Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$.
+Puis, nous multiplions ce champ par
 \begin{equation}
   \sqrt{\frac{P_{miss}(k)}{d_{pix}}} \; ,
 \end{equation}
-où $P_{miss}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}$ afin que $F$ possède le bon $P^{\mathrm{1D}}$. La détermination de $P_{miss}$ est détaillé dans la section~\ref{sec:tuning}. Enfin, nous obtenons $\delta_s$ à l'aide de la transformation de Fourier inverse de $\delta_{k,s}$.
+\textbf{où $P_{miss}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}$ afin que $F$ possède le bon $P^{\mathrm{1D}}$. $\delta_{k,s}$ est créé avec une taille supérieure à celle de la forêt, pour éviter les corrélations d'une extrémité à l'autre. La détermination de $P_{miss}$ est détaillé dans la section~\ref{sec:tuning}. Enfin, nous obtenons $\delta_s$ à l'aide de la transformation de Fourier inverse de $\delta_{k,s}$.}
 
 \subsubsection{Les RSD}
 \label{subsubsec:rsdlya}
@@ -555,20 +579,19 @@ où $P_{miss}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}
 % \end{equation}
 % (\#prov y a un facteur 2 en trop pour kny?)
 % ainsi que le bon spectre de puissance à une dimension.
-\textbf{Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à trois dimensions, ainsi que le bon spectre de puissance à une dimension.
+Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à trois dimensions, ainsi que le bon spectre de puissance à une dimension.
 Cependant, le champ d'absorption $F$ ne possède pas de RSD pour l'instant, car il est construit à partir du spectre de puissance $P_{matière}(k)$ qui est isotrope.
 Initiallement, nous pensions ajouter les RSD au niveau du spectre de puissance : multiplier le GRF intial $\delta_k$ par $(1 + \beta \mu^2)P_{matière}(k, \mu)$, avec $\mu = k_z / k$.
 Mais cette solution n'est pas envisageable car les lignes de visées ne sont pas parallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), et nous ne pouvons donc pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
 Une autre solution est d'utiliser le champ de vitesse défini dans l'équation~\ref{eq:v1}. Chaque pixel d'absorption est alors déplacé proportionnellement à la vitesse particulière du gaz dans la cellule considérée. Puis l'absorption est modifiée en fonction de la différence des vitesses des pixels voisins. En effet, si cette différence est non nulle, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque pixel.
 Cette méthode pour ajouter les RSD dans les mocks \lya{} est la méthode choisie par \citet{le_goff_simulations_2011} et \citet{Farr2019}.
 Ce n'est pas la solution que nous utilisons ici. Afin d'inclure les RSD dans le champ d'absorption $F$, nous utilisons le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}.
-Cette solution, contrairement à la méthode qui utilise le champ de vitesse, permet de prédire la fonction de corrélation des mocks. Nous décrivons cette prédiction dans la section suivante.
+\textbf{Contrairement à la méthode qui utilise le champ de vitesse, la solution qui ajoute le champ $\eta_{\parallel}$ au champ $\delta_l$ permet de prédire la fonction de corrélation des mocks. Nous décrivons cette prédiction dans la section suivante.}
 % Cependant, du fait que les lignes de visées ne sont pas parrallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), nous ne pouvons pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
 % \textbf{Une autre solution est d'utiliser le champ de vitesse}
 % Nous avons alors choisi d'utilisé le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}.
-}
 
-\textbf{
+
 Plusieurs essais ont été menés afin de savoir comment inclure correctement le champ $\eta_{\parallel}$ dans FGPA.
 La première solution envisagée était de modifier la profondeur optique $\tau$. Comme $\delta_{\tau} = \tau / \overline \tau - 1$ est conservée lors du passage dans l'espace des redshifts, nous modifiions $\tau$ (équation~\ref{eq:fgpa1}) comme
 \begin{equation}
@@ -581,15 +604,15 @@ La profondeur optique était alors donnée par
   \tau = a \exp\left[b G (\delta_l + \delta_s)\right] + \overline \tau (\eta_l + \eta_s) \; .
 \end{equation}
 Cette solution produisait la bonnne quantité de RSD. Cependant, la profondeur optique était négative pour un nombre non négligeable de pixels, résultant en une absorption $F > 1$ non physique pour ces pixels.
-Finalement, nous avons décidé d'inclure le gradient de vitesse directement au niveau du champ $\delta$.}
+Finalement, nous avons décidé d'inclure le gradient de vitesse directement au niveau du champ $\delta$.
 % Nous présentons dans les lignes qui suivent la solution retenue.
 Le champ $\eta_{\parallel}$ est donc ajouté, en plus du champ $\delta_s$, au champ $\delta_l$. Ceci nous permet de retrouver la formule de Kaiser (équation~\ref{eq:kaiser5}). De plus, cette solution ne produit pas de pixel avec $F > 1$.
-Afin de gérer la quantité de RSD, nous ajoutons un coefficient $c$, qui dépend de $z$. L'ajustement de ce paramètre nous permet d'obtenir la bonne dépendance en $z$ pour $\beta_{\mathrm{Ly}\alpha}$. La formule FGPA devient donc
+Afin de gérer la bonne quantité de RSD, nous ajoutons un coefficient $c$, qui dépend de $z$. L'ajustement de ce paramètre nous permet d'obtenir la bonne dépendance en $z$ pour $\beta_{\mathrm{Ly}\alpha}$. La formule FGPA devient donc
 \begin{equation}
   \label{eq:fgpa4}
   F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s + c(z)\eta_{\parallel}))\right] ;.  
 \end{equation}
-Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$, la dépendance en z étant prise en compte par le facteur $G(z)$. De plus, le facteur $f$ que nous avons laissé de côté dans la section~\ref{subsubsec:vitesses} n'est pas explicité ici : pour les redshifts $z > 2$, l'univers est dominé par la matière et donc, en bonne approximation, nous avons $f(z) \sim 1$. Les paramètres $a(z)$, $b(z)$, $c(z)$, ainsi que $P_{miss}(k,z)$ sont ajustés afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{\mathrm{1D}}_{\mathrm{Ly}\alpha}(k,z)$. L'ajustement est décrit dans la section~\ref{sec:tuning}.
+Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$. De plus, le facteur $f$ que nous avons laissé de côté dans la section~\ref{subsubsec:vitesses} n'est pas explicité ici : pour les redshifts $z > 2$, l'univers est dominé par la matière et donc, en bonne approximation, nous avons $f(z) \sim 1$. Les paramètres $a(z)$, $b(z)$, $c(z)$, ainsi que $P_{miss}(k,z)$ sont ajustés afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{\mathrm{1D}}_{\mathrm{Ly}\alpha}(k,z)$. L'ajustement est décrit dans la section~\ref{sec:tuning}.
 
 \subsubsection{La prédiction}
 \label{subsubsec:pred}
@@ -597,7 +620,7 @@ Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$,
 % Il aurait été possible d'implémenter les RSD différemment. Une solution serait, par exemple, de déplacer chaque pixel d'absorption proportionnellement à la vitesse particulière du gaz dans la cellule considéré, puis de modifier l'absorption en fonction du gradient de vitesse dans cette cellule. En effet, si le gradient de vitesse est non nul, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque cellule. Cette méthode pour ajouter les RSD dans des mocks \lya{} est la méthode choisie par \citet{le_goff_simulations_2011} et \citet{Farr2019}.
 % Ce n'est pas la méthode que nous choisissons ici, car celle-ci ne permet pas de prédire la fonction de corrélation obtenue avec les mocks. Dans le cas où $F$ est relié au GRF $\delta$ par une fonction analytique (équation~\ref{eq:fgpa4}), il est possible de relier la fonction de corrélation $\xi_F$ du champ $F$ à la fonction de corrélation $\xi_g$ du champ $\delta$ \citep{Font-Ribera2012}. Ces deux fonctions de corrélations sont reliées par la relation
 % La méthode que nous utilisons, décrite dans la section précédente, a l'avantage d'avoir une fonction de corrélation prédictible. C'est pour cela que nous avons fait le choix de cette méthode.
-\textbf{La méthode que nous utilisons pour ajouter les RSD, décrite dans la section précédente, a l'avantage d'avoir une fonction de corrélation prédictible. C'est pour cela que nous avons fait le choix de cette méthode.
+La méthode que nous utilisons pour ajouter les RSD, décrite dans la section précédente, a l'avantage d'avoir une fonction de corrélation prédictible.% C'est pour cela que nous avons fait le choix de cette méthode.
 Dans les lignes qui suivent, nous expliquons comment calculer la prédiction de la fonction de corrélation. Comme décrit par \citet{Font-Ribera2012}, dans le cas où le champ $\delta_F$ est une fonction d'un champ gaussien $\delta_g$, il est possible de relier la fonction de correlation $\xi_F$ du champ $\delta_F$ à la fonction de corrélation $\xi_g$ du champ $\delta_g$. La fonction de corrélation $\xi_F(r_{12})$ pour la séparation $r_{12}$ est reliée à $\xi_g(r_{12})$ par
 \begin{equation}
   \label{eq:xig2xif}
@@ -617,16 +640,24 @@ Dans les lignes qui suivent, nous expliquons comment calculer la prédiction de 
 \end{equation}
 où $\delta_g$ est un GRF de variance $1$ et $\delta_F$ est le champ d'absorption calculé à partir du champ gaussien.
 % , et $r_{12}$ est la distance qui sépare les deux points où sont évalués les champs $\delta_g$ et $\delta_F$.
-Dans notre cas, le champ $\delta_g$ représente le champ $\delta_l + \delta_s + c(z)\eta_{\parallel}$. Ce champ est un champ gaussien, de valeur moyenne nulle et de variance $\sigma_g^2$. Cette variance est dominé par la variance de $\delta_s$. }
+Dans notre cas, le champ $\delta_g$ représente le champ $\delta_l + \delta_s + c(z)\eta_{\parallel}$. Ce champ est un champ gaussien, de valeur moyenne nulle et de variance $\sigma_g^2$. Cette variance est dominé par la variance de $\delta_s$.
 Nous compensons le fait que $\sigma_g^2 \neq 1$ en remplaçant $\xi_g$ par $\xi_g / \sigma_g^2$ dans l'équation~\ref{eq:xig2xif}. % Ainsi, grâce à l'équation~\ref{eq:xig2xif}, pour chaque valeur de $\xi_g \in [-1 ; 1]$, nous pouvons déterminer $\xi_F$.
-Dans cette équation, $\xi_F(r_{12})$ ne dépend que de la valeur de $\xi_g(r_{12})$. Nous construisons donc une table qui permet de relier chaque valeur de $\xi_g \in [-1 \, ; 1]$ à la valeur $\xi_F$ correspondante.
+Dans cette équation, $\xi_F(r_{12})$ ne dépend que de la valeur de $\xi_g(r_{12})/ \sigma_g^2$. Nous construisons donc une table qui permet de relier chaque valeur de $\xi_g/ \sigma_g^2 \in [-1 \, ; 1]$ à la valeur $\xi_F$ correspondante.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{xiF_vs_xig}
+  \caption{La fonction de corrélation $\xi_F$ obtenue à l'aide de l'équation~\ref{eq:xig2xif} pour chaque valeur de $\xi_g/ \sigma_g^2 \in [-1 \, ; 1]$.}
+  \label{fig:xiF_vs_xig}
+\end{figure}
+\textbf{La figure~\ref{fig:xiF_vs_xig} montre la fonction de corrélation $\xi_F$ obtenue, en fonction de $\xi_g/ \sigma_g^2$.
 % Afin d'obtenir la prédiction pour $\xi(r, \mu)$, nous utilisons les formules décrites dans \citet{hamilton_measuring_1992} :
 % Afin d'obtenir la prédiction dans l'espace des redshifts, nous commençons par relier $\xi_g(r, \mu)$ à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
-De plus, nous pouvons relier la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
+% De plus, nous pouvons relier la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
+  Par ailleurs, puisque $\delta_s$ ne participe pas à la fonction de corrélation à trois dimension du champ $\delta_g$, nous relions la fonction de corrélation dans l'espace de sredshift $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :}
 \begin{equation}
   \label{eq:hamilton1}
   % \xi(r, \mu) = \xi_0(r) + \frac{1}{2}\left(3 \mu^2 - 1\right) \xi_2(r) + \frac{1}{8}\left(35 \mu^4 - 30 \mu^2 + 3\right) \xi_4(r) \; ,
-  \xi(r, \mu) = \xi_0(r) + \frac{1}{2} P_2(\mu) \xi_2(r) + \frac{1}{8} P_4(\mu) \xi_4(r) \; ,
+  \xi_g(r, \mu) = \xi_0(r) +  P_2(\mu) \xi_2(r) +  P_4(\mu) \xi_4(r) \; ,
 \end{equation}
 avec
 \begin{align}
@@ -643,7 +674,7 @@ et
 \end{align}
 Les $P_l(\mu)$ sont les polynômes de Legendre :
 \begin{equation}
-  P_0(\mu) = 1 \hspace{0.2cm} ; \hspace{0.8cm} P_2(\mu) = 3 \mu^2 - 1 \hspace{0.2cm} ; \hspace{0.8cm}   P_4(\mu) = 35 \mu^4 - 30 \mu^2 + 3 \; ,
+  P_0(\mu) = 1 \hspace{0.2cm} ; \hspace{0.8cm} P_2(\mu) = \frac{1}{2} (3 \mu^2 - 1) \hspace{0.2cm} ; \hspace{0.8cm}   P_4(\mu) = \frac{1}{8} (35 \mu^4 - 30 \mu^2 + 3) \; ,
 \end{equation}
 et $\beta$ est le paramètre RSD du \lya{}.
 Ces équations sont tirés de la publication de \citet{hamilton_measuring_1992}.
@@ -657,23 +688,22 @@ où $W$ est le terme représentant le lissage gaussien appliqué à l'interpolat
   % W(k) = \mathrm{e}^{- \frac{k^2 d_{cell}^2}{2}} \;.
   W(k) = \exp(- \frac{k^2 d_{cell}^2}{2}) \;.
 \end{equation}
-\# prov Expliquer pourquoi on ne prend pas en compte le terme lié à la résolution de la boîte ?
+\# prov Expliquer pourquoi on ne prend pas en compte le terme lié à la résolution de la boîte ? Regarder si l'effet est négligeable
 % (\#prov il y a pas un facteur $\frac{1}{2}$ en trop ? on a $\sigma_{smooth}^2 = 2 d_{cell}^2$)
-\textbf{A l'aide d'une transformation de Fourier inverse, nous obtenons la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ obtenu par interpolation avec lissage des boîtes.}
+A l'aide d'une transformation de Fourier, nous obtenons la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ obtenu par interpolation avec lissage des boîtes.
 % Nous définissons le champ $\delta_g$ comme
 % \begin{equation}
 %   \delta_g = G(z)(\delta_l + \delta_c + c(z)\eta_{\parallel}) \; .
 % \end{equation}
 Puis, nous calculons la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$ que suit le champ $\delta_g$ gràce à l'équation~\ref{eq:hamilton1}. Enfin, pour tous les couples $(r,\mu)$ nécessaires, nous obtenons la fonction de corrélation $\xi_F(r, \mu)$ du champ $\delta_F$ comme la valeur correspondante à la valeur tabulée $\xi_g(r, \mu) / \sigma_g^2$ pour $\xi_g$.
-(\#prov Faire un plot xi\_F vs xi\_g)
 
 
 \subsection{Ajout des HCD}
 \label{subsec:hcd}
-Les HCD ont un effet important sur les fonctions de corrélation, nous simulons donc aussi leur présence. De manière à avoir une corrélation entre les HCD et les autres traceurs des mocks, nous utilisons la boîte de densité $\delta_l$ pour tirer les HCD. Nous ne considérons pas la somme $\delta_l + \delta_s$ car les HCD sont des surdensités qui se situent dans les structures à grandes échelles : une résolution de \SI{2.19}{\perh\Mpc} est suffisante. \textbf{De plus, l'ajout de $\delta_s$ bruiterait la corrélation entre les HCD et les autres traceurs. En effet, l'écart type $\sigma_s$ du champ $\delta_s$ est entre 4 et 6 fois plus important que celui du champ $\delta_l$, et L'écart type $\sigma_g^2$ est dominé à plus de \SI{95}{\percent} par $\sigma_s$. Du fait que $\delta_s$ ne possède pas de corrélation à 3 dimensions, les HCD se situeraient principalement dans des pics de bruit non corrélés.}
+Les HCD ont un effet important sur les fonctions de corrélation, nous simulons donc aussi leur présence. De manière à avoir une corrélation entre les HCD et les autres traceurs des mocks, nous utilisons la boîte de densité $\delta_l$ pour tirer les HCD. Nous ne considérons pas la somme $\delta_l + \delta_s$ car les HCD sont des surdensités qui se situent dans les structures à grandes échelles : une résolution de \SI{2.19}{\perh\Mpc} est suffisante. De plus, l'ajout de $\delta_s$ bruiterait la corrélation entre les HCD et les autres traceurs. En effet, l'écart type $\sigma_s$ du champ $\delta_s$ est entre 4 et 6 fois plus important que celui du champ $\delta_l$, et L'écart type $\sigma_g$ est dominé à plus de \SI{95}{\percent} par $\sigma_s$. Du fait que $\delta_s$ ne possède pas de corrélation à 3 dimensions, les HCD se situeraient principalement dans des pics de bruit non corrélés.
 
 % Nous commençons donc avec le champ de densité $\delta_l$ interpolé le long de la ligne de visée. Pour chaque ligne de visée,
-\textbf{Contrairement aux quasars, les HCD sont tirés proportionnellement au champ $\delta_l$. Nous identifions les pixels dans lesquelles $\delta_l$ est au dessus d'un certain seuil, puis les HCD sont tirés dans ces pixels selon une loi de Poisson.
+\textbf{Contrairement aux quasars, les HCD sont tirés selon les pics du champ $\delta_l$ : nous identifions les pixels dans lesquelles $\delta_l$ est au dessus d'un certain seuil, puis les HCD sont tirés dans ces pixels selon une loi de Poisson.}
 Le seuil $\nu$ est défini en fonction du biais souhaité pour les HCD.
 L'appendice A de \citet{font-ribera_effect_2012} relie le rapport $b_{\nu} / b_g$ au seuil $\nu$ :
 \begin{equation}
@@ -685,7 +715,17 @@ où $b_{\nu}$ est le biais obtenu avec le seuil $\nu$, $b_g$ est le biais du cha
 % \begin{equation}
 %   \nu = \int_{\nu}^{\infty} d\delta_g p_g(\delta_g) \; .
 % \end{equation}
-Nous pouvons remarquer que l'intégrale au numérateur de l'équation~\ref{eq:biais_seuil} donne la densité probabilité du champ gaussien $p_g(\nu)$ évaluée au seuil $\nu$.
+% Nous pouvons remarquer que l'intégrale au numérateur de l'équation~\ref{eq:biais_seuil} donne la densité probabilité du champ gaussien $p_g(\nu)$ évaluée au seuil $\nu$.
+% L'équation~\ref{eq:biais_seuil} est donc équivalente à
+% \begin{equation}
+%  b_{\nu} = \frac{p_g(\nu)}{\int_{\nu}^{\infty} d\delta_g p_g(\delta_g)} \; .
+% \end{equation}
+\textbf{En utilisant le changement de variable $u = y_1^2 / 2$, l'intégrale au dénominateur de l'équation~\ref{eq:biais_seuil} vaut simplement $p_g(\nu)$ :
+\begin{equation}
+  \label{eq:biais_seuil2}
+  \int_{\nu}^\infty dy_1 p_g(y_1)y_1 = 
+\int_{\nu}^\infty dy_1 \frac{\exp(-y_1^2/2)}{\sqrt{2\pi}}  y_1 = \int_{\nu^2/2}^\infty du \frac{\exp(-u)}{\sqrt{2\pi}}=\frac{\exp(-\nu^2/2)}{\sqrt{2\pi}}=p_g(\nu) \; .
+\end{equation}
 L'équation~\ref{eq:biais_seuil} est donc équivalente à
 \begin{equation}
  b_{\nu} = \frac{p_g(\nu)}{\int_{\nu}^{\infty} d\delta_g p_g(\delta_g)} \; .
@@ -699,20 +739,20 @@ L'équation~\ref{eq:biais_seuil} est donc équivalente à
 % où $pdf(\nu)$ donne la densité de probabilité de $\nu$, et $cdf(-\nu)$ est la fonction de répartition : la probabilité d'être au dessus du seuil $\nu$. % Ainsi, pour avoir un biais de 2, il faut que la probabilité que le champ prenne la valeur $\nu$ soit 2 fois plus grande que la probabilité que le champ soit au dessus du seuil $\nu$.
 % Afin d'obtenir le seuil pour un biais donné, nous calculons $b_{\nu}$ pour une large gamme de seuils $\nu$ puis nous interpolons $b_{\nu}$ sur $\nu$.
 % Ainsi, pour un biais $b$, nous connaissons le seuil $\nu(b)$ à choisir.
-\textbf{Afin d'obtenir le seuil pour un biais donné, nous tabulons $b_{\nu}$ pour une large gamme de seuils $\nu$, puis nous interpolons $b_{\nu}$ en fonction de $\nu$.
-  Le graphique de gauche de la figure~\ref{fig:bnu_lambda} montre le biais $b_{\nu}$ en fonction du seuil $\nu$.}
+Afin d'obtenir le seuil pour un biais donné, nous tabulons $b_{\nu}$ pour une large gamme de seuils $\nu$, puis nous interpolons  $\nu$ en fonction de $b_{\nu}$.
+  Le graphique de gauche de la figure~\ref{fig:bnu_lambda} montre le biais $b_{\nu}$ en fonction du seuil $\nu$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.42]{bnu_lambda}
   \caption{Le graphique de gauche montre le biais $b_{\nu}$ obtenu pour un seuil $\nu$. Le graphique de droite montre le paramètre $\lambda(z)$, utilisé pour tirer les HCD.}
   \label{fig:bnu_lambda}
 \end{figure}
-Dans notre cas, le champ $\delta_l$ suit une densité de probabilité gaussienne. Cependant, sa variance n'est pas égale à 1. De plus, le champ $\delta_l$ interpolé le long des lignes de visée correspond au champ de matière à $z=0$. Ainsi, pour obtenir un biais $b_{\textsc{HCD}}$, pour chaque redshift nous  calculons le seuil $\nu$ comme si nous visions un biais $b = b_{\textsc{HCD}} \sigma_l G(z)$. Le terme $\sigma_l$ prend en compte la variance du champ $\delta_l$, et $G(z)$ le fait que $\delta_l$ soit construit à $z=0$.
+Dans notre cas, le champ $\delta_l$ suit une distribution de probabilité gaussienne. Cependant, sa variance n'est pas égale à 1. De plus, le champ $\delta_l$ interpolé le long des lignes de visée correspond au champ de matière à $z=0$. Ainsi, pour obtenir un biais $b_{\textsc{HCD}}$, pour chaque redshift nous  calculons le seuil $\nu$ comme si nous visions un biais $b = b_{\textsc{HCD}} \sigma_l G(z)$. Le terme $\sigma_l$ prend en compte la variance du champ $\delta_l$, et $G(z)$ le fait que $\delta_l$ soit construit à $z=0$.
 Une fois les pixels pouvant héberger un HCD identifiées, nous tirons dans chacune d'entre elles les HCD avec une loi de poisson de paramètre
 \begin{equation}
   \lambda(z) = \frac{N(z)}{cdf(-\nu(z))} \; ,
 \end{equation}
-où $N(z)$ donne le nombre moyen de HCD attendu par pixel et $\nu(z)$ le seuil au redshift $z$. Le nombre de HCD attendu est donné par la librairie \texttt{pyigm}\footnote{https://github.com/pyigm}. La distribution en redshift des HCD est présentée sur le graphique de gauche de la figure~\ref{fig:distrib_dla}, \textbf{et le paramètre $\lambda(z)$ sur le graphique de droite de la figure~\ref{fig:bnu_lambda}. En pratique, du fait que $\lambda(z) << 1$, il est très rare d'avoir plus d'un HCD par pixel.}
+où $N(z)$ donne le nombre moyen de HCD attendu par pixel et $\nu(z)$ le seuil au redshift $z$. Le nombre de HCD attendu est donné par la librairie \texttt{pyigm}\footnote{https://github.com/pyigm}. La distribution en redshift des HCD est présentée sur le graphique de gauche de la figure~\ref{fig:distrib_dla}, et le paramètre $\lambda(z)$ sur le graphique de droite de la figure~\ref{fig:bnu_lambda}. En pratique, du fait que $\lambda(z) \ll 1$, il est très rare d'avoir plus d'un HCD par pixel.
 Une fois tous les HCD tirés, nous leur assignons une densité de colonne dans la gamme $\num{17.2} < \log(n_{HI}) < \num{22.5}$, selon la distribution donnée par \texttt{pyigm}. Cette distribution est présentée sur le graphique de droite de la figure~\ref{fig:distrib_dla}.
 \begin{figure}
   \centering
@@ -720,18 +760,18 @@ Une fois tous les HCD tirés, nous leur assignons une densité de colonne dans l
   \caption{Gauche : distribution normalisée en redshift des HCD. Droite : distribution normalisée de $\log(n_{HI})$ des HCD. Ces distributions proviennent de la librairie \texttt{pyigm}.}
   \label{fig:distrib_dla}
 \end{figure}
-\textbf{Enfin, nous ajoutons les RSD aux HCD tirés. Chaque HCD tiré est déplacé le long de la ligne de visée proportionnellement à la vitesse $v_{\parallel}(z)$. Comme pour les quasars, la vitesse le long de la ligne de visée à $z=0$ est donnée par}
+Enfin, nous ajoutons les RSD aux HCD tirés. Chaque HCD tiré est déplacé le long de la ligne de visée proportionnellement à la vitesse $v_{\parallel}(z)$. Comme pour les quasars, la vitesse le long de la ligne de visée à $z=0$ est donnée par
 \begin{equation}
 v_{\parallel} = \frac{v_{\textsc{x}} \textsc{x} + v_{\textsc{y}} \textsc{y} + v_{\textsc{z}} \textsc{z}}{\sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}} \; .
 \end{equation}
 % où $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les boîtes de vitesse interpolées le long de la ligne de visée.
-\textbf{où, cette fois ci, $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les vitesses le long de la ligne de visée provenant de l'interpolation des boîtes de vitesse (voir section~\ref{subsec:los_interp}).}
+où, cette fois ci, $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les vitesses le long de la ligne de visée provenant de l'interpolation des boîtes de vitesse (voir section~\ref{subsec:los_interp}).
 Ainsi, un HCD à un redshift $z$ sera déplacé à un redshift
 \begin{equation}
   % z \rightarrow  z + (1+z) H(z) \frac{dG}{dz} \frac{1}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
   z \rightarrow  z + \frac{(1+z)}{c} \frac{H(z) dG/dz}{[H(z) dG/dz]_{z=0}} v_{\parallel} \; .
 \end{equation}
-Dans les mocks que nous décrivons ici, le profil d'absorption des HCD n'est pas ajouté dans les forêts. Nous produisons uniquement un catalogue qui regroupe tous les HCD tirés. Le profile d'absorption est ajouté au spectre de chaque quasar par le code \texttt{quickquasars}, qui utilise le catalogue de HCD que nous produisons.
+Dans les mocks que nous décrivons ici, le profil d'absorption des HCD n'est pas ajouté dans les forêts. Nous produisons uniquement un catalogue qui regroupe tous les HCD tirés. Le profil d'absorption est ajouté au spectre de chaque quasar par le code \texttt{quickquasars}, qui utilise le catalogue de HCD que nous produisons.
 
 
 \section{Production des mocks}
@@ -752,14 +792,13 @@ Les mocks ont été produits au centre de calcul NERSC\footnote{National Energy 
 % Nous profitons néanmoins des \num{32} c{\oe}urs par n{\oe}ud pour paralléliser notre code. Chaque c{\oe}ur possède 2 hyper-threads, ce qui permet de gérer 64 tâches simultanément sur un même n{\oe}ud.
 % \#prov taille des boites : \num{37.5} Go (box) + \num{37.5}/2 Go (boxk) + \num{37.5}/2 Go (k) : 75 Go. On est loin des 128 Go.
 Sur cette machine, nous avons utilisé les n{\oe}uds ``Haswell''.
-\textbf{
 Ces n{\oe}uds possèdent $\num{128}\,\mathrm{Go}$ de mémoire vive. De manière à créer nos boîtes de densité, via la transformation de Fourier à trois dimensions, il faut, pour chaque boîte, que l'intégralité de son contenu soit accessible depuis un même endroit.
 Nous pourrions distribuer la mémoire et effectuer la transformation de Fourier sur plusieurs n{\oe}uds à l'aide de la librairie MPI.
 Cependant nous n'avions pas l'expertise nécessaire. Nous effectuons donc les transformations de Fourier sur un seul n{\oe}ud.
 Nous profitons néanmoins des \num{32} c{\oe}urs par n{\oe}ud pour paralléliser notre code. Chaque c{\oe}ur possède 2 hyper-threads, ce qui permet de gérer 64 tâches simultanément sur un même n{\oe}ud.
-Lors de la construction des boîtes (voir section~\ref{subsec:densityfields}), nous avons besoin de stocker en mémoire la boîte dans l'espace réel, la boîte dans l'espace $k$, et la boîte contenant la norme de $k$. Etant donné la mémoire disponible sur chaque n{\oe}ud, les boîtes ne doivent pas dépasser $\num{42}\,\mathrm{Go}$. Cette mémoire disponible et la résolution choisie (\SI{2.19}{\perh\Mpc}) ne permettent pas de générer l'entièreté du relevé DESI avec une seule boîte.
+\textbf{Lors de la construction des boîtes (voir section~\ref{subsec:densityfields}), nous avons besoin de stocker en mémoire la boîte dans l'espace réel, la boîte dans l'espace $k$, et la boîte contenant la norme de $k$, cette dernière étant utilisée pour construire les boîtes de vitesses et de gradients de vitesse (équations~\ref{eq:v2} et~\ref{eq:eta1}).}
+Etant donné la mémoire disponible sur chaque n{\oe}ud, les boîtes ne doivent pas dépasser $\num{42}\,\mathrm{Go}$. Cette mémoire disponible et la taille des voxels choisie (\SI{2.19}{\perh\Mpc}) ne permettent pas de générer l'entièreté du relevé DESI avec une seule boîte.
 Nous choisissons donc de découper le relevé en sept chunks indépendants, chacun étant généré par une boîte de $\num{2560}\times\num{2560}\times\num{1536}$ voxels. Chacune des boîtes représente un volume de $\num{37.5}\,\mathrm{Go}$. A la fin de la production, ces sept chunks sont assemblés pour reconstruire le relevé de DESI. Le découpage du relevé en sept chunks est montré sur la figure~\ref{fig:chunks}.
-}
 Dans les lignes qui suivent, nous détaillons les différents éléments du code.
 Le schéma~\ref{fig:schema_prod} résume la situation.
 \begin{figure}
@@ -789,26 +828,31 @@ Les forêts sont regroupées par pixel HEALPix \citep{Gorski2004} dans des fichi
 où $\texttt{nside} = \num{16}$ est la résolution du schéma HEALPix utilisé, \texttt{\textsc{pix}} donne le numéro du pixel HEALPix, et $\texttt{\textsc{n}}$ est le résultat de la division euclidienne de \texttt{\textsc{pix}} par \num{100}.
 Cette dernière étape est effectuée sur un n{\oe}ud, \texttt{make\_transmissions.py} étant lancé en parallèle sur 64 sous-échantillons des pixels HEALPix.
 
-\textbf{
-Comme expliqué à la fin de la section~\ref{subsec:lya}, le calcul de l'auto corrélation des traceurs objets, tels les quasars, nécessite l'estimateur de Landy-Szalay. Afin d'utiliser cette estimateur, nous avons besoin de catalogues de quasars et de HCD qui suivent une distribution aléatoire. Les vrais catalogues sont ensuite comparés à ces catalogues aléatoires. Pour constuire ces catalogues aléatoires de quasars et HCD, nous utilisons les codes \texttt{draw\_qso.py} et \texttt{dla\_saclay.py}. Une option nous permet de tirer les objets sans tenir compte de la densité dans chaque voxcel ou pixel. Les quasars sont donc tirés uniformément dans la boîte. Les HCD sont tirés uniformément dans chaque ligne de visée, avec $z_{\textsc{HCD}} < z_{\textsc{QSO}}$ où $z_{\textsc{QSO}}$ est le redshift du quasar hôte. Dans les deux cas, nous tirons plus de quasars et de HCD pour les distributions aléatoires, afin que la statistique des fonctions de corrélation soit limitée uniquement par les vrais catalogues. A la fin, les catalogues aléatoires de quasars et HCD contiennent environ 10 et 3 fois plus d'objets que les vrais catalogues.
-}
+Comme expliqué à la fin de la section~\ref{subsec:lya}, le calcul de l'auto corrélation des traceurs objets, tels les quasars et les HCD, nécessite l'estimateur de Landy-Szalay (voir calcul section~\ref{prov}). Afin d'utiliser cette estimateur, nous avons besoin de catalogues de quasars et de HCD qui suivent une distribution aléatoire.
+% Les vrais catalogues sont ensuite comparés à ces catalogues aléatoires.
+Les distributions issues des vrais catalogues sont ensuite comparées aux distributions issues des catalogues aléatoires.
+Pour constuire ces catalogues aléatoires de quasars et HCD, nous utilisons les codes \texttt{draw\_qso.py} et \texttt{dla\_saclay.py}. Une option nous permet de tirer les objets sans tenir compte de la densité dans chaque voxel ou pixel. Les quasars sont donc tirés uniformément dans la boîte. Les HCD sont tirés uniformément le long de chaque ligne de visée, avec $z_{\textsc{HCD}} < z_{\textsc{QSO}}$ où $z_{\textsc{QSO}}$ est le redshift du quasar hôte. Dans les deux cas, nous tirons plus de quasars et de HCD pour les distributions aléatoires que pour les vrais catalogues, afin que la statistique des fonctions de corrélation soit limitée uniquement par les vrais catalogues. A la fin, les catalogues aléatoires de quasars et de HCD contiennent respectivement environ 10 et 3 fois plus d'objets que les vrais catalogues.
+
 
 \paragraph{}
 Pour les analyses \lya{} d'eBOSS et de DESI, nous avons décidé de produire \num{100} réalisations des mocks, afin d'avoir suffisamment de statistique pour étudier finement les potentielles systématiques. Nous avons organisé la production de ces 100 réalisations en deux étapes. Premièrement, nous avons effectué la \emph{pré-production}. Cette étape consiste à créer les boîtes contenant les différents GRF, puis à tirer les quasars et enfin interpoler la densité, les vitesses et gradients de vitesse, le long de chaque ligne de visée. Ceci correspond aux codes \texttt{make\_boxes.py}, \texttt{draw\_qso.py} et \texttt{make\_spectra.ppy}. Cette étape est la plus coûteuse en temps de calcul : environ 43 heures CPU sur un n{\oe}ud de Cori pour produire les sept chunks d'une réalisation. L'ensemble des fichiers temporaires propres à une réalisation pré-produite représente $\sim 7 \times \num{550}\,\mathrm{Go}$ sur disque.
 % Cependant, nous stockons uniquement les lignes de visée interpolées, et la boîte $\delta_k$, ce qui représente $\sim \num{340}\,\mathrm{Go}$ sur disque, par réalisation.
-\textbf{La majorité de cet espace disque est pris par les différentes boîtes. Afin de réduire cet espace disque, la seule boîte que nous sauvons est la boîte contenant $\delta_k$, car nous pouvons reconstruire toutes les autres boîtes à partir de celle-ci. Ainsi, pour chaque réalisation pré-produite, nous stockons les lignes de visée interpolées et la boîte $\delta_k$, ce qui représente $\sim \num{340}\,\mathrm{Go}$ sur disque.}
+\textbf{La majorité de cet espace disque est pris par les différentes boîtes. Afin de réduire cet espace disque, la seule boîte que nous sauvons est la boîte contenant $\delta_k$.  % , car nous pouvons reconstruire toutes les autres boîtes à partir de celle-ci. Ceci nous permet de pouvoir reproduire une réalisation si nous avons un doute sur sa production.
+  A partir de cette boîte $\delta_k$, nous pouvons reconstruire toutes les autres boîtes, puis reconstruire le relevé de quasars et les lignes de visée. Ceci nous permet de vérifier la production des réalisations.
+  Ainsi, pour chaque réalisation pré-produite, nous stockons les lignes de visée interpolées et la boîte $\delta_k$, ce qui représente $\sim \num{340}\,\mathrm{Go}$ sur disque.}
 
 Une certain nombre de problèmes informatiques, liés au centre de calcul NERSC, ont ralenti la phase de pré-production. Le principal problème venait du temps de lecture et d'écriture, qui par moment pouvait être multiplié par un facteur cent. Plus de trentes secondes étaient parfois nécessaires pour accéder à un simple fichier. Ce problème a été identifié comme venant du transfert des \emph{meta data} sur le centre de calcul. Le code le plus affecté est \texttt{make\_boxes.py}, car il écrit énormément de fichiers différents, correspondant aux différents slices des boîtes, et destinés à être lus par les codes \texttt{draw\_qso.py} et \texttt{make\_spectra.py}. Pour palier ce problème, nous avons décidé d'essayer de faire tourner les codes sur les n{\oe}uds de Cori appelés \emph{Burst Buffer}. Ces n{\oe}uds possèdent des disques SSD (Solid-State drive), ce qui permet une lecture et une écriture très rapide. Une fois les codes exécutés, les données produites sont déplacées sur les disques durs habituels. Les n{\oe}uds Burst Buffer ont permis d'accélérer l'exécution du code \texttt{make\_boxes.py} par un facteur $\sim \num{2}$, passant d'environ deux heures à une heure seulement. Une vintaine de réalisation ont été produites en utilisant ces n{\oe}uds. Cependant, ils sont devenus instables au cours de la production. D'autre part, les problèmes liés aux transferts des meta data avaient été stabilisés entre temps. Nous sommes donc retournés à l'utilisation des n{\oe}uds classiques de Cori pour finir la production. Pour les 40 dernières réalisations, le temps d'exécution de \texttt{make\_boxes.py} variait entre trois et quatres heures.
 
 % Celle-ci a nécessité environ six mois avant d'être complète.
 % Ce temps nous a permis de choisir les paramètres \lya{} souhaités,
 \textbf{
-  Le temps pris par les six mois nécessaires à la production nous a permis de
+  Le temps pris par les six mois nécessaires à la production\footnote{Dans de bonnes conditions, le temps de production de 100 réalisations est estimé à 4 à 6 semaines. \#prov ça serait mieux dans le texte} nous a permis de
 % choisir les paramètres \lya{} souhaités, et d'ajuster les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) en conséquence.
-choisir sur quelle modélisation des données nous voulions ajuster les paramètres \lya{}. En effet, la modélisation des HCD dans les données est complexe et mal comprise. Les paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ sont très corrélés avec ceux du \lya{}. Selon les modélisations, les paramètres \lya{} obtenus grâce à l'ajustement des données ne sont pas les mêmes. L'étude de ces modélisations est donnée dans la section~\ref{prov}.
+  choisir sur quelle modélisation des données nous voulions ajuster les paramètres \lya{}.}
+  En effet, la modélisation des HCD dans les données est complexe et mal comprise. Les paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ sont très corrélés avec ceux du \lya{}. Selon les modélisations, les paramètres \lya{} obtenus grâce à l'ajustement des données ne sont pas les mêmes. L'étude de ces modélisations est présentée dans la section~\ref{prov}.
 % Une fois les paramètres \lya{} souhaités bien définis, nous avons ajusté les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) pour obtenir ces paramètres \lya{}.
-Une fois avoir bien défini les paramètres \lya{} que nous visons, nous avons ajusté les paramètres de la formule FGPA afin d'obtenir les paramètres \lya{} souhaités dans les mocks.
-}
+Après avoir bien défini les paramètres \lya{} que nous visons, nous avons ajusté les paramètres de la formule FGPA afin d'obtenir les paramètres \lya{} souhaités dans les mocks.
+
 Ceci est expliqué dans la section suivante. Une fois ces paramètres ajustés et la phase de pré-production terminée, nous avons mené la phase de \emph{post-production}. Cette phase consiste à créer les spectres d'absorption à partir des densités interpolées le long des lignes de visée, puis à regrouper tous les fichiers de sortie afin de les mettre au format décrit précédemment. Cette étape est beaucoup plus rapide, elle prend l'équivalent d'environ 6 heures CPU sur un n{\oe}ud de Cori par réalisation. Une fois la production complète effectuée, la place sur disque d'une réalisation, sans compter les fichiers temporaires, correspond à environ $\num{15}\,\mathrm{Go}$.
 
 
