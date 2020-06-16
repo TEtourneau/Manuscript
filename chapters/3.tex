@@ -28,7 +28,7 @@ La variance dans chaque pixel est ensuite estimée. Elle prend en compte le brui
 Enfin, pour chaque objet, toutes les expositions sont ajoutées pour former un seul et même spectre, avec un plus grand rapport signal sur bruit. Le nombre typique d'expositions par objet varie entre 4 et 6.
 
 \paragraph{}
-Les données que nous utilisons dans ce manuscript ont été rendues publiques lors de la seixième publication de données SDSS (DR16\footnote{https://www.sdss.org/dr16/}). Elles sont décrites par \citet{Ahumada2019}.
+Les données que nous utilisons dans ce manuscript ont été rendues publiques lors de la seixième publication de données SDSS (DR16\footnote{https://www.sdss.org/dr16/}). Elles sont décrites par \textcite{Ahumada2019}.
 \begin{figure}[b]
   \centering
   \includegraphics[scale=0.8]{photo_ccd.pdf}
@@ -37,7 +37,7 @@ Les données que nous utilisons dans ce manuscript ont été rendues publiques l
 \end{figure}
 
 \section{Le catalogue de quasar}
-Une fois les spectres extraits, il est important de les classifier afin de construire des catalogues utilisables par les différentes analyses. Pour ce faire, chaque spectre est traité par le pipeline de SDSS, décrit par \citet{bolton_spectral_2012}.
+Une fois les spectres extraits, il est important de les classifier afin de construire des catalogues utilisables par les différentes analyses. Pour ce faire, chaque spectre est traité par le pipeline de SDSS, décrit par \textcite{Bolton2012}.
 % A chaque spectre est ajusté plusieurs modèles d'étoiles, de galaxies et de quasars. Les modèles sont construits en utilisant les \emph{PCA templates} : des spectres typiques qui sont combinés afin d'ajuster au mieux le spectre à classifier.
 \textbf{Plusieurs modèles d'étoiles, de galaxies et de quasars sont ajustés à chaque spectre.
 %   Ces modèles sont construits à l'aide de l'analyse en composantes principales (PCA). Cette analyse fournit des spectres typiques de complexités différentes, le moins complexe étant la moyenne. Les différents spectres sont alors pondérés et combinés afin de construire un modèle qui ajuste au mieux le spectre à classifier.}
@@ -46,7 +46,7 @@ Une fois tous les modèles ajustés, ils sont triés selon leur $\chi^{2}$ rédu
 Tous les spectres mesurés par SDSS et classifiés comme quasar constituent l'échantillon \emph{superset}. Il contient \num{1440627} objets.
 
 Certains quasars peuvent être difficiles à classifier à cause d'absorptions intenses comme les DLA ou les BAL\footnote{Les BAL (Broad Absorption Line) sont des quasars qui présentent des absorptions intenses au voisinage de leurs raies d'émission. Cette absorption est interprétée comme étant due à un absorbeur dense situé juste devant le quasar. La figure~\ref{fig:exemple_bal} présente un spectre de quasar avec un BAL.}.
-Tous les quasars du relevé BOSS ont été inspectés visuellement \citep{Paris2016} afin de confirmer la classification du pipeline de SDSS, et d'estimer leur redshifts. Cet échantillon représente \num{297301} objets.
+Tous les quasars du relevé BOSS ont été inspectés visuellement \autocite{Paris2016} afin de confirmer la classification du pipeline de SDSS, et d'estimer leur redshifts. Cet échantillon représente \num{297301} objets.
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{quasar_number}
@@ -60,23 +60,23 @@ Tous les quasars du relevé BOSS ont été inspectés visuellement \citep{Paris2
   \label{fig:exemple_bal}
 \end{figure}
 Cependant, à cause du grand nombre de quasars observés par eBOSS (voir figure~\ref{fig:quasar_number}), l'observation visuelle n'a pas pu être effectuée pour tous ces objets.
-% Une deuxième classification, fondée sur le pipeline de SDSS, est alors appliquée \citep{CITE:Lyke in prep}.
-% Elle est complétée par l'algorithme \texttt{QuasarNET} \citep{Busca2018} afin de réduire le nombre de mauvaises et non-identifications, et donc le nombre d'inspections visuelles nécessaires. Grâce à \texttt{QuasarNET}, ce chiffre est réduit à \SI{0.6}{\percent} des spectres, soit \num{8581} spectres. Une sous-échantillon du superset est alors construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
-Afin de vérifier la première identification faite par le pipeline de SDSS, une seconde classification est alors effectuée \citep{CITE:Lyke in prep}. Elle est complétée par l'algorithme \texttt{QuasarNET} \citep{Busca2018}. Ceci réduit le nombre d'identifications douteuses et donc le nombre d'inspections visuelles requises. A la fin, \SI{0.6}{\percent} des spectres, soit \num{8581} spectres, requièrent une inspection visuelle.
+% Une deuxième classification, fondée sur le pipeline de SDSS, est alors appliquée \autocite{CITE:Lyke in prep}.
+% Elle est complétée par l'algorithme \texttt{QuasarNET} \autocite{Busca2018} afin de réduire le nombre de mauvaises et non-identifications, et donc le nombre d'inspections visuelles nécessaires. Grâce à \texttt{QuasarNET}, ce chiffre est réduit à \SI{0.6}{\percent} des spectres, soit \num{8581} spectres. Une sous-échantillon du superset est alors construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
+Afin de vérifier la première identification faite par le pipeline de SDSS, une seconde classification est alors effectuée \autocite{CITE:Lyke in prep}. Elle est complétée par l'algorithme \texttt{QuasarNET} \autocite{Busca2018}. Ceci réduit le nombre d'identifications douteuses et donc le nombre d'inspections visuelles requises. A la fin, \SI{0.6}{\percent} des spectres, soit \num{8581} spectres, requièrent une inspection visuelle.
 
 Une fois les spectres classifiés, un sous-échantillon du superset est construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
 Pour chaque objet, le catalogue fournit plusieurs estimations de redshift. Le pipeline de SDSS produit une première estimation. L'algorithme \texttt{QuasarNET} en fournit une seconde. Les spectres inspectés visuellement possèdent une autre estimation. Enfin, l'algorithme \texttt{redvsblue}\footnote{https://github.com/londumas/redvsblue} produit plusieurs estimations de redshift, parmi lesquelles figurent \texttt{Z\_PCA} et \texttt{Z\_LYAWG}.
 
 Différents algorithmes sont alors appliqués au catalogue, afin d'identifier les DLA et les BAL présents. L'identification utilise l'addition des différentes expositions pour chaque objet.
-Concernant les DLA, l'algorithme de détection est décrit dans \citet{Parks2017}. Il est appliqué sur les quasars à un redshift $2 \leq \texttt{Z\_PCA} \leq 6$, afin d'avoir suffisamment de pixels dans la zone $900 < \lambda_{\mathrm{RF}} < \SI{1346}{\angstrom}$. Parmi les \num{270315} spectres inspectés, \num{39514} DLA ont été identifiés, distribués dans \num{35686} spectres.
-Concernant les BAL, l'algorithme utilisé est très similaire à celui décrit dans \citet{Guo2019}. Les BAL sont recherchés dans les spectres ayant un redshift entre \num{1.57} et \num{5.6}. L'algorithme fournit la probabilité qu'un spectre possède un BAL. Le champ \texttt{BAL\_PROB} du catalogue indique cette probabilité.
+Concernant les DLA, l'algorithme de détection est décrit dans \textcite{Parks2017}. Il est appliqué sur les quasars à un redshift $2 \leq \texttt{Z\_PCA} \leq 6$, afin d'avoir suffisamment de pixels dans la zone $900 < \lambda_{\mathrm{RF}} < \SI{1346}{\angstrom}$. Parmi les \num{270315} spectres inspectés, \num{39514} DLA ont été identifiés, distribués dans \num{35686} spectres.
+Concernant les BAL, l'algorithme utilisé est très similaire à celui décrit dans \textcite{Guo2019}. Les BAL sont recherchés dans les spectres ayant un redshift entre \num{1.57} et \num{5.6}. L'algorithme fournit la probabilité qu'un spectre possède un BAL. Le champ \texttt{BAL\_PROB} du catalogue indique cette probabilité.
 
-A la fin, le catalogue ainsi construit (DR16Q dans la suite de ce manuscrit) contient \num{750426} quasars confirmés. Nous référons le lecteur à l'article \citet{CITE:Lyke in prep} pour davantage d'informations.
+A la fin, le catalogue ainsi construit (DR16Q dans la suite de ce manuscrit) contient \num{750426} quasars confirmés. Nous référons le lecteur à l'article \textcite{CITE:Lyke in prep} pour davantage d'informations.
 
 
 
 \paragraph{}
-L'analyse \lya{} des données complètes d'eBOSS \citep{CITE:dr16} utilise le catalogue DR16Q. Le redshift des quasars est choisi comme étant \texttt{Z\_LYAWG}. Les quasars sont sélectionnés avec un redshift $\num{1.77} < z \leq 4$. L'échantillon correspondant représente alors \num{341468} objets. La distribution en redshift de ces quasars traceurs (ceux utilisés comme traceurs pour la fonction de corrélation croisée \lya{}-QSO) est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
+L'analyse \lya{} des données complètes d'eBOSS \autocite{CITE:dr16} utilise le catalogue DR16Q. Le redshift des quasars est choisi comme étant \texttt{Z\_LYAWG}. Les quasars sont sélectionnés avec un redshift $\num{1.77} < z \leq 4$. L'échantillon correspondant représente alors \num{341468} objets. La distribution en redshift de ces quasars traceurs (ceux utilisés comme traceurs pour la fonction de corrélation croisée \lya{}-QSO) est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{pixel_number}
@@ -87,7 +87,7 @@ L'analyse \lya{} des données complètes d'eBOSS \citep{CITE:dr16} utilise le ca
 
 \section{La sélection des forêts}
 \label{sec:selection_forets}
-L'analyse \lya{} des données complètes d'eBOSS, dont nous nous servons dans ce manuscrit, est présentée dans l'article \citet{CITE:dr16}. Les informations que nous donnons dans la suite de ce chapitre sont tirés de cette article. Nous y référons le lecteur pour davantage d'informations.
+L'analyse \lya{} des données complètes d'eBOSS, dont nous nous servons dans ce manuscrit, est présentée dans l'article \textcite{CITE:dr16}. Les informations que nous donnons dans la suite de ce chapitre sont tirés de cette article. Nous y référons le lecteur pour davantage d'informations.
 
 Les spectres produits par la chaîne de réduction des données SDSS sont rebinnés : 3 pixels du spectre original, d'une taille $\Delta log_{10}(\lambda) \sim 10^{-4}$, sont combinés en 1 seul pixel d'analyse, d'une taille $\Delta log_{10}(\lambda) \sim 3 \times 10^{-4}$. Ceci est fait afin de réduire le temps de calcul nécessaire pour estimer les fonctions de corrélation. Dans la suite, l'utilisation de ``pixel'' réfère à ces pixels d'analyse.
 
@@ -102,11 +102,11 @@ D'autres sélections sont aussi appliquées. Les quasars pour lesquels la probab
 Après toutes ces sélections, l'échantillon final contient \num{210005} quasars \lya{} et \num{69656} quasars \lyb{}. 
 % La distribution en redshift des pixels et des quasars traceurs est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
 
-Enfin, des corrections sur le flux et la variance du flux sont appliquées afin de corriger les imperfections de la chaîne de réduction. De plus, certaines régions spectrales en longueur d'onde observée sont masquées, à cause de l'augmentation de la variance du flux causée par les raies du ciel. Tout ceci est décrit en détail dans \citet{CITE:dr16}.
+Enfin, des corrections sur le flux et la variance du flux sont appliquées afin de corriger les imperfections de la chaîne de réduction. De plus, certaines régions spectrales en longueur d'onde observée sont masquées, à cause de l'augmentation de la variance du flux causée par les raies du ciel. Tout ceci est décrit en détail dans \textcite{CITE:dr16}.
 
 \section{Définition du champ d'absorption}
 Dans cette section, nous décrivons comment, du flux mesuré $f_q(\lambda)$ du quasar $q$ à la longueur d'onde observée $\lambda$, nous pouvons déduire les fluctuations du champ d'absorption \lya{}.
-La démarche que nous décrivons ici est très bien expliquée dans la thèse \citet{CITE:Victoria}. Nous y référons le lecteur pour plus de détails.
+La démarche que nous décrivons ici est très bien expliquée dans la thèse \textcite{CITE:Victoria}. Nous y référons le lecteur pour plus de détails.
 
 \subsection{Calcul des $\delta$}
 \label{subsec:calcul_delta}
@@ -207,7 +207,7 @@ Dans ce calcul, les poids $w_q(\lambda)$ sont corrigés de la dépendance en red
   \sigma_q^{-2}(\lambda_i)
   \left( \frac{1+z_{i}}{1+2.25} \right)^{\gamma_{\mathrm{Ly}\alpha} -1} \;,
 \end{equation}
-avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \citep{mcdonald_ly_2006}.
+avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \autocite{McDonald2004}.
 % Grâce à cette transformation, la distorsion due à l'ajustement du continuum est exacte et connue.
 Grâce à cette transformation, l'effet sur la fonction de corrélation peut ainsi être modélisé et pris en compte. Sa modélisation passe par le calcul de la \emph{matrice de distorsion}, détaillée dans la section~\ref{prov}.
 
@@ -220,5 +220,8 @@ Dans la suite de ce manuscript, lorsque nous parlons du champ $\delta$, nous ré
 
 
   
-\bibliography{../source/library}
+% \bibliography{../source/library}
+\printbibliography
+
+
 \end{document}

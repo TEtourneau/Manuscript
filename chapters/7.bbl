@@ -1,0 +1,175 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nyt/global/}
+  \entry{Chabanier2018}{article}{}
+    \name{author}{18}{}{%
+      {{hash=CS}{%
+         family={Chabanier},
+         familyi={C\bibinitperiod},
+         given={Sol{\`{e}}ne},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PDN}{%
+         family={Palanque-Delabrouille},
+         familyi={P\bibinitperiod-D\bibinitperiod},
+         given={Nathalie},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Y{\`{e}}che},
+         familyi={Y\bibinitperiod},
+         given={Christophe},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GJML}{%
+         family={Goff},
+         familyi={G\bibinitperiod},
+         given={Jean-Marc\bibnamedelima Le},
+         giveni={J\bibinitperiod-M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=AE}{%
+         family={Armengaud},
+         familyi={A\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Bautista},
+         familyi={B\bibinitperiod},
+         given={Julian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Blomqvist},
+         familyi={B\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BN}{%
+         family={Busca},
+         familyi={B\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=DK}{%
+         family={Dawson},
+         familyi={D\bibinitperiod},
+         given={Kyle},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=ET}{%
+         family={Etourneau},
+         familyi={E\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=FRA}{%
+         family={Font-Ribera},
+         familyi={F\bibinitperiod-R\bibinitperiod},
+         given={Andreu},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Youngbae},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=dH}{%
+         family={{du Mas des Bourboux}},
+         familyi={d\bibinitperiod},
+         given={H{\'{e}}lion},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pieri},
+         familyi={P\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rich},
+         familyi={R\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Rossi},
+         familyi={R\bibinitperiod},
+         given={Graziano},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Schneider},
+         familyi={S\bibinitperiod},
+         given={Donald},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Slosar},
+         familyi={S\bibinitperiod},
+         given={An{\v{z}}e},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CS+1}
+    \strng{fullhash}{CSPDNYCGJMLAEBJBMBNDKETFRALYdHPMRJRGSDSA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    We present a measurement of the 1D Ly{\$}\backslashalpha{\$} forest flux
+  power spectrum, using the complete Baryon Oscillation Spectroscopic Survey
+  (BOSS) and first extended-BOSS (eBOSS) quasars at {\$}z{\_}{\{}\backslashrm
+  qso{\}}{\textgreater}2.1{\$}, corresponding to the fourteenth data release
+  (DR14) of the Sloan Digital Sky Survey (SDSS). Our results cover thirteen
+  bins in redshift from {\$}z{\_}{\{}\backslashrm Ly\backslashalpha{\}}=2.2{\$}
+  to 4.6, and scales up to {\$}k=0.02\backslashrm
+  \backslash,(km/s){\^{}}{\{}-1{\}}{\$}. From a parent sample of 180,413
+  visually inspected spectra, we selected the 43,751 quasars with the best
+  quality; this data set improves the previous result from the ninth data
+  release (DR9), both in statistical precision (achieving a reduction by a
+  factor of two) and in redshift coverage. We also present a thorough
+  investigation of identified sources of systematic uncertainties that affect
+  the measurement. The resulting 1D power spectrum of this work is in excellent
+  agreement with the one from the BOSS DR9 data.%
+    }
+    \verb{doi}
+    \verb 10.1088/1475-7516/2019/07/017
+    \endverb
+    \verb{eprint}
+    \verb 1812.03554
+    \endverb
+    \field{title}{{The one-dimensional power spectrum from the SDSS DR14
+  Ly-alpha forests}}
+    \verb{url}
+    \verb http://arxiv.org/abs/1812.03554 http://dx.doi.org/10.1088/1475-7516/2
+    \verb 019/07/017
+    \endverb
+    \verb{file}
+    \verb ::
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+\endsortlist
+\endinput

@@ -1,182 +1,1224 @@
-\begin{thebibliography}{15}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Heitmann et~al.(2019)Heitmann, Finkel, Pope, Morozov, Frontiere,
-  Habib, Rangel, Uram, Korytov, Child, Flender, Insley, and
-  Rizzi]{Heitmann2019}
-Katrin Heitmann, Hal Finkel, Adrian Pope, Vitali Morozov, Nicholas Frontiere,
-  Salman Habib, Esteban Rangel, Thomas Uram, Danila Korytov, Hillary Child,
-  Samuel Flender, Joe Insley, and Silvio Rizzi.
-\newblock {The Outer Rim Simulation: A Path to Many-Core Supercomputers}.
-\newblock apr 2019.
-\newblock \doi{10.3847/1538-4365/ab4da1}.
-\newblock URL \url{http://arxiv.org/abs/1904.11970
-  http://dx.doi.org/10.3847/1538-4365/ab4da1}.
 
-\bibitem[Agrawal et~al.(2017)Agrawal, Makiya, Chiang, Jeong, Saito, and
-  Komatsu]{agrawal_generating_2017}
-Aniket Agrawal, Ryu Makiya, Chi-Ting Chiang, Donghui Jeong, Shun Saito, and
-  Eiichiro Komatsu.
-\newblock {Generating {\{}Log{\}}-normal {\{}Mock{\}} {\{}Catalog{\}} of
-  {\{}Galaxies{\}} in {\{}Redshift{\}} {\{}Space{\}}}.
-\newblock \emph{arXiv:1706.09195 [astro-ph]}, jun 2017.
-\newblock URL \url{http://arxiv.org/abs/1706.09195}.
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{agrawal_generating_2017}{article}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=4815ab9d31c28d95a2eaa412a2dd793a}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Aniket},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=631bfe11dfc86aa4e5bece900da993e8}{%
+           family={Makiya},
+           familyi={M\bibinitperiod},
+           given={Ryu},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=1d72c1c2c0a5cd08e1d4266929f41aa8}{%
+           family={Chiang},
+           familyi={C\bibinitperiod},
+           given={Chi-Ting},
+           giveni={C\bibinithyphendelim T\bibinitperiod}}}%
+        {{uniquename=0,hash=3326ca74c1b11350b758b6bf0ee8d82d}{%
+           family={Jeong},
+           familyi={J\bibinitperiod},
+           given={Donghui},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=db6cd891c15262eb856f4d20180b7442}{%
+           family={Saito},
+           familyi={S\bibinitperiod},
+           given={Shun},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=135516db87ee56c2a51db728170bf0c8}{%
+           family={Komatsu},
+           familyi={K\bibinitperiod},
+           given={Eiichiro},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{945aaee8289352ae8cbdf172a3e7bdfd}
+      \strng{fullhash}{11ae1f09005b6c0b5b38dba9f3e2a544}
+      \strng{authornamehash}{945aaee8289352ae8cbdf172a3e7bdfd}
+      \strng{authorfullhash}{11ae1f09005b6c0b5b38dba9f3e2a544}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a public code to generate a mock galaxy catalog in redshift space assuming a log-normal probability density function (PDF) of galaxy and matter density fields. We draw galaxies by Poisson-sampling the log-normal field, and calculate the velocity field from the linearised continuity equation of matter fields, assuming zero vorticity. This procedure yields a PDF of the pairwise velocity fields that is qualitatively similar to that of N-body simulations. We check fidelity of the catalog, showing that the measured two-point correlation function and power spectrum in real space agree with the input precisely. We find that a linear bias relation in the power spectrum does not guarantee a linear bias relation in the density contrasts, leading to a cross-correlation coefficient of matter and galaxies deviating from unity on small scales. We also find that linearising the Jacobian of the real-to-redshift space mapping provides a poor model for the two-point statistics in redshift space. That is, non-linear redshift-space distortion is dominated by non-linearity in the Jacobian. The power spectrum in redshift space shows a damping on small scales that is qualitatively similar to that of the well-known Fingers-of-God (FoG) effect due to random velocities, except that the log-normal mock does not include random velocities. This damping is a consequence of non-linearity in the Jacobian, and thus attributing the damping of the power spectrum solely to FoG, as commonly done in the literature, is misleading.}
+      \field{annotation}{Comment: 36 pages, 14 figures, code publicly available as "lognormal{\_}galaxies" at http://wwwmpa.mpa-garching.mpg.de/{\{}$\backslash$textasciitilde{\}}komatsu/codes.html arXiv: 1706.09195}
+      \field{journaltitle}{arXiv:1706.09195 [astro-ph]}
+      \field{month}{6}
+      \field{title}{{Generating {\{}Log{\}}-normal {\{}Mock{\}} {\{}Catalog{\}} of {\{}Galaxies{\}} in {\{}Redshift{\}} {\{}Space{\}}}}
+      \field{year}{2017}
+      \verb{url}
+      \verb http://arxiv.org/abs/1706.09195
+      \endverb
+      \keyw{Astrophysics - Cosmology and Nongalactic Astrophys}
+    \endentry
+    \entry{Arinyo-i-Prats2015}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=f0d2adbac6a1cf0ebacd93f64945cfcb}{%
+           family={Arinyo-i-Prats},
+           familyi={A\bibinithyphendelim i\bibinithyphendelim P\bibinitperiod},
+           given={Andreu},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=b6eefd9924b3160e4588534dcb8d95d8}{%
+           family={Miralda-Escudé},
+           familyi={M\bibinithyphendelim E\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=5728eaa822896cf6d958ddb252712f65}{%
+           family={Viel},
+           familyi={V\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=fc0b4bcb65992fbd3ce2dc6c3e4926c0}{%
+           family={Cen},
+           familyi={C\bibinitperiod},
+           given={Renyue},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8228f5d2a2289632c0084955f904d3ea}
+      \strng{fullhash}{75f700b5605a7b49fe1e743879fae3ed}
+      \strng{authornamehash}{8228f5d2a2289632c0084955f904d3ea}
+      \strng{authorfullhash}{75f700b5605a7b49fe1e743879fae3ed}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Lyman alpha forest power spectrum has been measured on large scales by the BOSS survey in SDSS-III at {\$}z\backslashsim 2.3{\$}, has been shown to agree well with linear theory predictions, and has provided the first measurement of Baryon Acoustic Oscillations at this redshift. However, the power at small scales, affected by non-linearities, has not been well examined so far. We present results from a variety of hydrodynamic simulations to predict the redshift space non-linear power spectrum of the Lyman Alpha transmission for several models, testing the dependence on resolution and box size. A new fitting formula is introduced to facilitate the comparison of our simulation results with observations and other simulations. The non-linear power spectrum has a generic shape determined by a transition scale from linear to non-linear anisotropy, and a Jeans scale below which the power drops rapidly. In addition, we predict the two linear bias factors of the Lyman Alpha forest and provide a better physical interpretation of their values and redshift evolution. The dependence of these bias factors and the non-linear power on the amplitude and slope of the primordial fluctuations power spectrum, the temperature-density relation of the intergalactic medium, and the mean Lyman Alpha transmission, as well as the redshift evolution, is investigated and discussed in detail. A preliminary comparison to the observations shows that the predicted redshift distortion parameter is in good agreement with the recent determination of Blomqvist et al., but the density bias factor is lower than observed. We make all our results publicly available in the form of tables of the non-linear power spectrum that is directly obtained from all our simulations, and parameters of our fitting formula.}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{title}{{The Non-Linear Power Spectrum of the Lyman Alpha Forest}}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2015/12/017
+      \endverb
+      \verb{eprint}
+      \verb 1506.04519
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Arinyo-i-Prats et al. - 2015 - The Non-Linear Power Spectrum of the Lyman Alpha Forest.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1506.04519%20http://dx.doi.org/10.1088/1475-7516/2015/12/017
+      \endverb
+    \endentry
+    \entry{Clerkin2016}{article}{}
+      \name{author}{60}{}{%
+        {{uniquename=0,hash=6c537db3cca6fe52fe66aa9b160df83b}{%
+           family={Clerkin},
+           familyi={C\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{uniquename=0,hash=dd3f25e81fada6af1e0318ea070a095c}{%
+           family={Kirk},
+           familyi={K\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=96a52b96bea6d73d9fe76132816a5255}{%
+           family={Manera},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=fff861307e97480541bc640195d0105d}{%
+           family={Lahav},
+           familyi={L\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{uniquename=0,hash=70adf0af41a1cedc19d5406a127c9d0e}{%
+           family={Abdalla},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{uniquename=0,hash=aec8948362d43f0bb347d9c393a9aedf}{%
+           family={Amara},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=97fec346c6f909009c8d9c9a80a48dbb}{%
+           family={Bacon},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=abaccc65869162d69bcbab26dd882299}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=75e45501d451a1f6985e01431d4eebd7}{%
+           family={Gaztañaga},
+           familyi={G\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=6e75cb5a21bcfb191d859e34db62e81b}{%
+           family={Hawken},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=fab5a4694c813c41a52ab6d300555a58}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{uniquename=0,hash=e667a73d65eedf06bd3ed7a78bde4b0d}{%
+           family={Joachimi},
+           familyi={J\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{uniquename=0,hash=44f66cdf9350a557d122c4e54971a447}{%
+           family={Vikram},
+           familyi={V\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{uniquename=0,hash=5774dd72b0fc8ad4a25915dc3b3559c8}{%
+           family={Abbott},
+           familyi={A\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=1f190d9c2878751a74caf76b3a8d28fe}{%
+           family={Allam},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=063c0f301dd865031ce685cf818f9da8}{%
+           family={Armstrong},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=70e5f209e91ef55a928ed264b6d04238}{%
+           family={Benoit-Lévy},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=c246c11d6ac3006dc902ca4e34560858}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={G.\bibnamedelimi M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=f197e5a7d566e95ecba11311c48a4961}{%
+           family={Bertin},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=6e104710dc73cfde51947ae30fffab51}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=6da876685ea3b9c05d1aaad152c3fd24}{%
+           family={Burk},
+           familyi={B\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{uniquename=0,hash=cb4eb97c9647efede8f27a08e3df9de0}{%
+           family={Rosell},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi Carnero},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=b373aff32a2e15a2e4e4ca0a1215b2b2}{%
+           family={Kind},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi Carrasco},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=bb572b9fe879f732e680427cf4ec85c8}{%
+           family={Crocce},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=c8eb9928692d5f57f119ea07cf16ebf5}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=9f8f03506fd2c95548d617377aa4c3c5}{%
+           family={D'Andrea},
+           familyi={D\bibinitperiod},
+           given={C.\bibnamedelimi B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{uniquename=0,hash=c66df7d5c6b7add22e0913a8faee10bc}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi N.},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+           prefix={da},
+           prefixi={d\bibinitperiod}}}%
+        {{uniquename=0,hash=399e114b7f90a95d805722167455077f}{%
+           family={Desai},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=be4d184c5e1bb16047a5233b7aae9f4f}{%
+           family={Diehl},
+           familyi={D\bibinitperiod},
+           given={H.\bibnamedelimi T.},
+           giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{uniquename=0,hash=502268ce4ef8644f40fedb3494999b54}{%
+           family={Dietrich},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{uniquename=0,hash=15889896c13bcda4af46fa394d53223e}{%
+           family={Eifler},
+           familyi={E\bibinitperiod},
+           given={T.\bibnamedelimi F.},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{uniquename=0,hash=02b8764a8f258dd745773f772762c98d}{%
+           family={Evrard},
+           familyi={E\bibinitperiod},
+           given={A.\bibnamedelimi E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=6fffa9802f0fffbbed4d51cf7048976e}{%
+           family={Flaugher},
+           familyi={F\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{uniquename=0,hash=8c2c591114bbf9aff4edf963896d85e3}{%
+           family={Fosalba},
+           familyi={F\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=f23df0d61248d9f1d86e1a2f7664ff64}{%
+           family={Frieman},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=faf5130187ba36a3b5849b24a0d04758}{%
+           family={Gerdes},
+           familyi={G\bibinitperiod},
+           given={D.\bibnamedelimi W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{uniquename=0,hash=9b6b88e06f65d392c8e92fe35df12790}{%
+           family={Gruen},
+           familyi={G\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=c0d308f98ed5bdd036986d67c9052dfa}{%
+           family={Gruendl},
+           familyi={G\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=efd511ea69091d016fe184425ea2a692}{%
+           family={Gutierrez},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{uniquename=0,hash=717016eabf747916e2f974df16467337}{%
+           family={Honscheid},
+           familyi={H\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{uniquename=0,hash=998df2dfbeb5e302eaf9812557ecd793}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={D.\bibnamedelimi J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=9f0b389549bf18898d489465f073f872}{%
+           family={Kent},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=f592ee342ecbda9a75d722eb1bafe13c}{%
+           family={Kuehn},
+           familyi={K\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{uniquename=0,hash=79f52d274b4cb58c02416508032f603f}{%
+           family={Kuropatkin},
+           familyi={K\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=217d6ba566cda94ef0599fe77f0aecb1}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=6b8fcdfcaf06addce0e020af5d02461e}{%
+           family={Melchior},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=d9c0419ce5bc9db9919d411f5ef2d8bc}{%
+           family={Miquel},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=18c6745d159ea896b858e4c46f1da765}{%
+           family={Nord},
+           familyi={N\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{uniquename=0,hash=dd9b4bf93947bf31862f8b5d870ff0a9}{%
+           family={Plazas},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=e5877d30dc028821ab3dbf121843392c}{%
+           family={Romer},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{uniquename=0,hash=75bbcc4f3fc9045a45201f830610ef4b}{%
+           family={Sanchez},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=ba1544f10e487eff668c7013f8059221}{%
+           family={Schubnell},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=86335c3855ddd4f88a9f3c08cc910ed6}{%
+           family={Sevilla-Noarbe},
+           familyi={S\bibinithyphendelim N\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=d507e2b6d1a9eba5ccd522600a9c65b8}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=b316f0dce425acc68409a492588230f8}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi Soares},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{uniquename=0,hash=dd5f9fee08a1328734e9e195752dd041}{%
+           family={Sobreira},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{uniquename=0,hash=0e671212ca2d55e04053046b6b1a4aec}{%
+           family={Suchyta},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=711d406b536999f46b2727c8803d4101}{%
+           family={Swanson},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi E.\bibnamedelimi C.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=57032f5ef523c84558b93b7b4f24549f}{%
+           family={Tarle},
+           familyi={T\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{uniquename=0,hash=3a478ba7e12c53f8e20928073ad61f9b}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={A.\bibnamedelimi R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{cea57bbcf0d895bb0f5077ea08d56cd7}
+      \strng{fullhash}{d64c472f44d850e5cbd4d4d5423e08fc}
+      \strng{authornamehash}{cea57bbcf0d895bb0f5077ea08d56cd7}
+      \strng{authorfullhash}{d64c472f44d850e5cbd4d4d5423e08fc}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is well known that the probability distribution function (PDF) of galaxy density contrast is approximately lognormal; whether the PDF of mass fluctuations derived from weak lensing convergence (kappa{\_}WL) is lognormal is less well established. We derive PDFs of the galaxy and projected matter density distributions via the Counts in Cells (CiC) method. We use maps of galaxies and weak lensing convergence produced from the Dark Energy Survey (DES) Science Verification data over 139 deg{\^{}}2. We test whether the underlying density contrast is well described by a lognormal distribution for the galaxies, the convergence and their joint PDF. We confirm that the galaxy density contrast distribution is well modeled by a lognormal PDF convolved with Poisson noise at angular scales from 10-40 arcmin (corresponding to physical scales of 3-10 Mpc). We note that as kappa{\_}WL is a weighted sum of the mass fluctuations along the line of sight, its PDF is expected to be only approximately lognormal. We find that the kappa{\_}WL distribution is well modeled by a lognormal PDF convolved with Gaussian shape noise at scales between 10 and 20 arcmin, with a best-fit chi{\^{}}2/DOF of 1.11 compared to 1.84 for a Gaussian model, corresponding to p-values 0.35 and 0.07 respectively, at a scale of 10 arcmin. Above 20 arcmin a simple Gaussian model is sufficient. The joint PDF is also reasonably fitted by a bivariate lognormal. As a consistency check we compare the variances derived from the lognormal modelling with those directly measured via CiC. Our methods are validated against maps from the MICE Grand Challenge N-body simulation.}
+      \field{eprinttype}{arXiv}
+      \field{month}{5}
+      \field{title}{{Testing the lognormality of the galaxy and weak lensing convergence distributions from Dark Energy Survey maps}}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1093/mnras/stw2106
+      \endverb
+      \verb{eprint}
+      \verb 1605.02036
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Clerkin et al. - 2016 - Testing the lognormality of the galaxy and weak lensing convergence distributions from Dark Energy Survey maps.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1605.02036%20http://dx.doi.org/10.1093/mnras/stw2106
+      \endverb
+    \endentry
+    \entry{coles_lognormal_1991}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=f82d0e70da265f1bc6efe05f2f622024}{%
+           family={Coles},
+           familyi={C\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=743e1a3c07b4b3facc58e84e9091b8a0}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{a39dc592210d1020f5dc317b7f90ccdb}
+      \strng{fullhash}{a39dc592210d1020f5dc317b7f90ccdb}
+      \strng{authornamehash}{a39dc592210d1020f5dc317b7f90ccdb}
+      \strng{authorfullhash}{a39dc592210d1020f5dc317b7f90ccdb}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The use of a lognormal (LN) random field, non-Gaussian random field as a model for the distribution of matter in the universe is discussed. As the general LN field includes the Gaussian case in the limit of zero rms fluctuation it is possible to perform a statistical decomposition. The statistical properties of the model can be formulated in terms of one covariance function. Difficulties with the statistical treatment of density perturbations such as the fact that the LN model is not completely specified by its moments have been revealed by analysis of the model. It is shown that for discriminating between Gaussian and non-Gaussian fluctuations the method of representing the three- and four-point correlation functions of galaxies in terms of the parameters Q and R is not useful. Parameterizations in terms of the skewness and kurtosis are proposed.}
+      \field{issn}{0035-8711}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{1}
+      \field{title}{{A lognormal model for the cosmological mass distribution}}
+      \field{volume}{248}
+      \field{year}{1991}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
+      \verb{url}
+      \verb http://adsabs.harvard.edu/abs/1991MNRAS.248....1C
+      \endverb
+      \keyw{ASTRONOMICAL MODELS,COSMOLOGY,Density Distribution,Galactic Evolution,MONTE CARLO METHOD,Mass Distribution,NORMAL DENSITY FUNCTIONS,Statistical Distributions}
+    \endentry
+    \entry{Dodelson2003}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=d3698fbc1727820bb2fd421387b59c1b}{%
+           family={Dodelson},
+           familyi={D\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{d3698fbc1727820bb2fd421387b59c1b}
+      \strng{fullhash}{d3698fbc1727820bb2fd421387b59c1b}
+      \strng{authornamehash}{d3698fbc1727820bb2fd421387b59c1b}
+      \strng{authorfullhash}{d3698fbc1727820bb2fd421387b59c1b}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Modern Cosmology}}
+      \field{year}{2003}
+      \verb{doi}
+      \verb 10.1023/B:FOOP.0000019699.88151.ed
+      \endverb
+    \endentry
+    \entry{Farr2019}{article}{}
+      \name{author}{21}{}{%
+        {{uniquename=0,hash=38ce25e7aa7b91d216d068a0e9574ee8}{%
+           family={Farr},
+           familyi={F\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=a1471d6d4f092fecd93ee513589b480e}{%
+           family={Font-Ribera},
+           familyi={F\bibinithyphendelim R\bibinitperiod},
+           given={Andreu},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=1a3520767d5b0bfde2a47877874d511f}{%
+           family={{du Mas des Bourboux}},
+           familyi={d\bibinitperiod},
+           given={Hélion},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=bbc741628712caf211a1d802e64d0881}{%
+           family={Muñoz-Gutiérrez},
+           familyi={M\bibinithyphendelim G\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=15ac832dfdc20eb8a7e9156839d17fc9}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={Francisco\bibnamedelimb Javier\bibnamedelima Sanchez},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{uniquename=0,hash=6ccf7afd5eecb64b614f0ba5d19616db}{%
+           family={Pontzen},
+           familyi={P\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=82927b2aa9190b3d6aff0039107d2ca9}{%
+           family={González-Morales},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Alma\bibnamedelima Xochitl},
+           giveni={A\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{uniquename=0,hash=616de3263b076cfa5c29bf8927a1b333}{%
+           family={Alonso},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=d423f545c47a8c65a465fcd5649bcbbc}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=7b38a4be1c22fcb5eb9299512aff8f91}{%
+           family={Doel},
+           familyi={D\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=566bd9c5a481bf7512dd2cb657ba63d2}{%
+           family={Etourneau},
+           familyi={E\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=46589f54037e22176a562b1985af9adb}{%
+           family={Guy},
+           familyi={G\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=1271d2260e627a106fd6f00d0ce9b2d4}{%
+           family={Goff},
+           familyi={G\bibinitperiod},
+           given={Jean-Marc\bibnamedelima Le},
+           giveni={J\bibinithyphendelim M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{uniquename=0,hash=16fcc04d913b4425d251a12de799ace9}{%
+           family={Macorra},
+           familyi={M\bibinitperiod},
+           given={Axel},
+           giveni={A\bibinitperiod},
+           prefix={de\bibnamedelima al},
+           prefixi={d\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+        {{uniquename=0,hash=38134cb811ce61dc2bd312017614dafa}{%
+           family={Palanque-Delabrouille},
+           familyi={P\bibinithyphendelim D\bibinitperiod},
+           given={Nathalie},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=d9d75bb4881ffebd22a1ce8d3a38e348}{%
+           family={Pérez-Ràfols},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={Ignasi},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=3eb4881ae1c93d5acc00b3b1f6d63455}{%
+           family={Rich},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=beb3f859a96da33927cb568b795add6c}{%
+           family={Slosar},
+           familyi={S\bibinitperiod},
+           given={Anže},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=d8bfea94055f639ba4dcf0ce47f9e245}{%
+           family={Tarle},
+           familyi={T\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{uniquename=0,hash=3af4781ba4a58ba12991fd2639ff67ee}{%
+           family={Yutong},
+           familyi={Y\bibinitperiod},
+           given={Duan},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=accfaf086a407bfb746d7875478d9130}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{9836491b2bdf19f658ad511621a4bff1}
+      \strng{fullhash}{3ae9706d71b7135d3b099e48f478fd2b}
+      \strng{authornamehash}{9836491b2bdf19f658ad511621a4bff1}
+      \strng{authorfullhash}{3ae9706d71b7135d3b099e48f478fd2b}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{month}{12}
+      \field{title}{{LyaCoLoRe: Synthetic Datasets for Current and Future Lyman-alpha Forest BAO Surveys}}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2020/03/068
+      \endverb
+      \verb{eprint}
+      \verb 1912.02763
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Farr et al. - 2019 - LyaCoLoRe Synthetic Datasets for Current and Future Lyman-{\$}{\{}alpha{\}}{\$} Forest BAO Surveys.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1912.02763
+      \endverb
+    \endentry
+    \entry{Font-Ribera2012}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=a1471d6d4f092fecd93ee513589b480e}{%
+           family={Font-Ribera},
+           familyi={F\bibinithyphendelim R\bibinitperiod},
+           given={Andreu},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=8d7f90538c508d38d852d23c0177be69}{%
+           family={Mcdonald},
+           familyi={M\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=b6eefd9924b3160e4588534dcb8d95d8}{%
+           family={Miralda-Escudé},
+           familyi={M\bibinithyphendelim E\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{45b287d58675920f020978e0e1651d87}
+      \strng{fullhash}{45b287d58675920f020978e0e1651d87}
+      \strng{authornamehash}{45b287d58675920f020978e0e1651d87}
+      \strng{authorfullhash}{45b287d58675920f020978e0e1651d87}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To cite this article: Andreu Font-Ribera et al JCAP01(2012)001 View the article online for updates and enhancements. Related content The effect of high column density systems on the measurement of the Lyman-forest correlation function Andreu Font-Ribera and Jordi Miralda-Escudé -The Lyman-forest in three dimensions: measurements of large scale flux correlations from BOSS 1st-year data Anže Slosar, Andreu Font-Ribera, Matthew M. Pieri et al. -How to estimate the 3D power spectrum of the Lyman-forest Andreu Font-Ribera, Patrick McDonald and Anže Slosar -Recent citations How to estimate the 3D power spectrum of the Lyman-forest Andreu Font-Ribera et al -Baryon acoustic oscillations from the complete SDSS-III Ly-quasar cross-correlation function at z = 2.4 Hélion du Mas des Bourboux et al -Modeling the Ly Forest in Collisionless Simulations Daniele Sorini et al. -This content was downloaded from IP address 132.166.28.42 on 13/03/2018 at 15:11 Abstract. Massive spectroscopic surveys of high-redshift quasars yield large numbers of correlated Ly$\alpha$ absorption spectra that can be used to measure large-scale structure. Simu-lations of these surveys are required to accurately interpret the measurements of correlations and correct for systematic errors. An efficient method to generate mock realizations of Ly$\alpha$ forest surveys is presented which generates a field over the lines of sight to the survey sources only, instead of having to generate it over the entire three-dimensional volume of the survey. The method can be calibrated to reproduce the power spectrum and one-point distribution function of the transmitted flux fraction, as well as the redshift evolution of these quantities, and is easily used for modeling any survey systematic effects. We present an example of how these mock surveys are applied to predict the measurement errors in a survey with similar parameters as the BOSS quasar survey in SDSS-III.}
+      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
+      \field{title}{{Generating mock data sets for large-scale Lyman- $\alpha$ forest correlation measurements Generating mock data sets for large-scale Lyman-$\alpha$ forest correlation measurements}}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2012/01/001
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Font-Ribera, Mcdonald, Miralda-Escud{\'{e}} - 2012 - Generating mock data sets for large-scale Lyman- $\alpha$ forest correlation measurements Gen.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://iopscience.iop.org/article/10.1088/1475-7516/2012/01/001/pdf
+      \endverb
+      \keyw{()}
+    \endentry
+    \entry{font-ribera_effect_2012}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=a1471d6d4f092fecd93ee513589b480e}{%
+           family={Font-Ribera},
+           familyi={F\bibinithyphendelim R\bibinitperiod},
+           given={Andreu},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=b6eefd9924b3160e4588534dcb8d95d8}{%
+           family={Miralda-Escudé},
+           familyi={M\bibinithyphendelim E\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8533f75fea4b3e8322e11b1b320e8bb5}
+      \strng{fullhash}{8533f75fea4b3e8322e11b1b320e8bb5}
+      \strng{authornamehash}{8533f75fea4b3e8322e11b1b320e8bb5}
+      \strng{authorfullhash}{8533f75fea4b3e8322e11b1b320e8bb5}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a study of the effect of High Column Density (HCD) systems on the Lyman {\{}$\backslash$textbackslash{\}}alpha forest correlation function on large scales. We study the effect both numerically, by inserting HCD systems on mock spectra for a specific model, and analytically, in the context of two-point correlations and linear theory. We show that the presence of HCDs substantially contributes to the noise of the correlation function measurement, and systematically alters the measured redshift-space correlation function of the Lyman {\{}$\backslash$textbackslash{\}}alpha forest, increasing the value of the density bias factor and decreasing the redshift distortion parameter $\backslash${\$}{\{}\backslashtextbackslash{\}}beta\backslash{\_}{\{}\backslashtextbackslash{\}}alpha{\$} of the Lyman {\{}$\backslash$textbackslash{\}}alpha forest. We provide simple formulae for corrections on these derived parameters, as a function of the mean effective optical depth and bias factor of the host halos of the HCDs, and discuss the conditions under which these expressions should be valid. In practice, precise corrections to the measured parameters of the Lyman {\{}$\backslash$textbackslash{\}}alpha forest correlation for the HCD effects are more complex than the simple analytical approximations we present, owing to non-linear effects of the damped wings of the HCD systems and the presence of three-point terms. However, we conclude that an accurate correction for these HCD effects can be obtained numerically and calibrated with observations of the HCD-Lyman {\{}$\backslash$textbackslash{\}}alpha cross-correlation. We also discuss an analogous formalism to treat and correct for the contaminating effect of metal lines overlapping the Lyman {\{}$\backslash$textbackslash{\}}alpha forest spectra.}
+      \field{annotation}{Comment: 26 pages, 11 figures}
+      \field{issn}{1475-7516}
+      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
+      \field{month}{7}
+      \field{number}{07}
+      \field{title}{{The {\{}Effect{\}} of {\{}High{\}} {\{}Column{\}} {\{}Density{\}} {\{}Systems{\}} on the {\{}Measurement{\}} of the {\{}Lyman{\}} {\{}$\backslash$textbackslash{\}}alpha {\{}Forest{\}} {\{}Correlation{\}} {\{}Function{\}}}}
+      \field{volume}{2012}
+      \field{year}{2012}
+      \field{pages}{28}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2012/07/028
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1205.2018
+      \endverb
+      \keyw{Astrophysics - Cosmology and Nongalactic Astrophys}
+    \endentry
+    \entry{Gorski2004}{article}{}
+      \name{author}{7}{}{%
+        {{uniquename=0,hash=2acb17fd304e3c1851a82a93c8550fd6}{%
+           family={Gorski},
+           familyi={G\bibinitperiod},
+           given={K.\bibnamedelimi M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=6e7b85eb79a8379c151e2ab139a14f22}{%
+           family={Hivon},
+           familyi={H\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=bd656e3cd85f42dc7deef2dfc6ad43a8}{%
+           family={Banday},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=703624cd8ba627a1c408705274c3989b}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{uniquename=0,hash=d90bd8bc310f267b17706e4da0fa89fc}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={F.\bibnamedelimi K.},
+           giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{uniquename=0,hash=7f308160dcdf192f0d81cde161035c90}{%
+           family={Reinecke},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=6e8ee96bc5f6181668a6a21479a44696}{%
+           family={Bartelman},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2671fec1347e376178968aa8c35d185e}
+      \strng{fullhash}{dbfda7ee5ca99cc66acaf0c1f521866a}
+      \strng{authornamehash}{2671fec1347e376178968aa8c35d185e}
+      \strng{authorfullhash}{dbfda7ee5ca99cc66acaf0c1f521866a}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{HEALPix -- the Hierarchical Equal Area iso-Latitude Pixelization -- is a versatile data structure with an associated library of computational algorithms and visualization software that supports fast scientific applications executable directly on very large volumes of astronomical data and large area surveys in the form of discretized spherical maps. Originally developed to address the data processing and analysis needs of the present generation of cosmic microwave background (CMB) experiments (e.g. BOOMERanG, WMAP), HEALPix can be expanded to meet many of the profound challenges that will arise in confrontation with the observational output of future missions and experiments, including e.g. Planck, Herschel, SAFIR, and the Beyond Einstein CMB polarization probe. In this paper we consider the requirements and constraints to be met in order to implement a sufficient framework for the efficient discretization and fast analysis/synthesis of functions defined on the sphere, and summarise how they are satisfied by HEALPix.}
+      \field{eprintclass}{astro-ph}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{title}{{HEALPix -- a Framework for High Resolution Discretization, and Fast Analysis of Data Distributed on the Sphere}}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.1086/427976
+      \endverb
+      \verb{eprint}
+      \verb 0409513
+      \endverb
+      \verb{file}
+      \verb ::
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/astro-ph/0409513%20http://dx.doi.org/10.1086/427976
+      \endverb
+    \endentry
+    \entry{hamilton_measuring_1992}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=77c9e77b01a8e6bc54e2181c52bdc779}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={A\bibnamedelima J\bibnamedelima S},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{77c9e77b01a8e6bc54e2181c52bdc779}
+      \strng{fullhash}{77c9e77b01a8e6bc54e2181c52bdc779}
+      \strng{authornamehash}{77c9e77b01a8e6bc54e2181c52bdc779}
+      \strng{authorfullhash}{77c9e77b01a8e6bc54e2181c52bdc779}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Peculiar velocities distort the correlation function of galaxies in redshift space. In the linear regime, the distortion has a characteristic quadrupole plus hexadecapole form. The amplitude of the distortion depends on the cosmological density parameter Omega. Practical formulas are derived here which can be applied to redshift galaxy catalogs to measure Omega in the linear regime. The formulas also yield the real underlying correlation function in the linear regime, corrected for peculiar velocities.}
+      \field{annotation}{@ARTICLE{\{}$\backslash$vphantom{\{}$\backslash${\}}{\}}1992ApJ...385L...5H, author = {\{}{\{}Hamilton{\}}, A.{\{}$\backslash$textasciitilde{\}}J.{\{}$\backslash$textasciitilde{\}}S.{\}}, title = "{\{}Measuring Omega and the real correlation function from the redshift correlation function{\}}", journal = $\backslash${\{}{\{}$\backslash$textbackslash{\}}apjl{\}}, keywords = {\{}Correlation, Cosmology, Galactic Clusters, Red Shift, Computational Astrophysics, Power Spectra{\}}, year = 1992, month = jan, volume = 385, pages = {\{}L5-L8{\}}, doi = {\{}10.1086/186264{\}}, adsurl = {\{}http://adsabs.harvard.edu/abs/1992ApJ...385L...5H{\}}, adsnote = {\{}Provided by the SAO/NASA Astrophysics Data System{\}} $\backslash$vphantom{\{}$\backslash${\{}{\}}$\backslash${\}}}
+      \field{issn}{0004-637X}
+      \field{journaltitle}{The Astrophysical Journal Letters}
+      \field{month}{1}
+      \field{title}{{Measuring {\{}Omega{\}} and the real correlation function from the redshift correlation function}}
+      \field{volume}{385}
+      \field{year}{1992}
+      \field{pages}{L5\bibrangedash L8}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1086/186264
+      \endverb
+      \verb{url}
+      \verb http://adsabs.harvard.edu/abs/1992ApJ...385L...5H
+      \endverb
+      \keyw{COMPUTATIONAL ASTROPHYSICS,COSMOLOGY,Correlation,GALACTIC CLUSTERS,POWER SPECTRA,RED SHIFT}
+    \endentry
+    \entry{Heitmann2019}{article}{}
+      \name{author}{13}{}{%
+        {{uniquename=0,hash=6626f44b0d4c5b02b4eae0f799f97659}{%
+           family={Heitmann},
+           familyi={H\bibinitperiod},
+           given={Katrin},
+           giveni={K\bibinitperiod}}}%
+        {{uniquename=0,hash=61b05ed91826db0fa514e1774c64bde4}{%
+           family={Finkel},
+           familyi={F\bibinitperiod},
+           given={Hal},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=d1c8e5a464ea8c23f6797962e5e80f65}{%
+           family={Pope},
+           familyi={P\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=67f4d6a36e12713c5ef36d1729a9b3d7}{%
+           family={Morozov},
+           familyi={M\bibinitperiod},
+           given={Vitali},
+           giveni={V\bibinitperiod}}}%
+        {{uniquename=0,hash=7fc734cf7b8d684e28fb78a1f59cb2b3}{%
+           family={Frontiere},
+           familyi={F\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=bcf20ee6192169060fcc42993d6ca8cb}{%
+           family={Habib},
+           familyi={H\bibinitperiod},
+           given={Salman},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=392ca01ba8b1733906fff7c61749821d}{%
+           family={Rangel},
+           familyi={R\bibinitperiod},
+           given={Esteban},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=1d8d74d8dd0cf30b1649a96036cfcfa8}{%
+           family={Uram},
+           familyi={U\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=2465319ea4328d1d4916fa038881feea}{%
+           family={Korytov},
+           familyi={K\bibinitperiod},
+           given={Danila},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=47e20df3380ab443cdaee698aed656b8}{%
+           family={Child},
+           familyi={C\bibinitperiod},
+           given={Hillary},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=281608325bdaeb225ac6896568be9a90}{%
+           family={Flender},
+           familyi={F\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=75882e8c9c162dcaa2807ff1ef1de027}{%
+           family={Insley},
+           familyi={I\bibinitperiod},
+           given={Joe},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=18bcf5f59147089e40689262834c766b}{%
+           family={Rizzi},
+           familyi={R\bibinitperiod},
+           given={Silvio},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{03f032083401f9cee397c345f55b3929}
+      \strng{fullhash}{0b04042e6ca90c6d3cf0f5c5f92d4c09}
+      \strng{authornamehash}{03f032083401f9cee397c345f55b3929}
+      \strng{authorfullhash}{0b04042e6ca90c6d3cf0f5c5f92d4c09}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe the Outer Rim cosmological simulation, one of the largest high-resolution N-body simulations performed to date, aimed at promoting science to be carried out with large-scale structure surveys. The simulation covers a volume of (4.225Gpc){\^{}}3 and evolves more than one trillion particles. It was executed on Mira, a BlueGene/Q system at the Argonne Leadership Computing Facility. We discuss some of the computational challenges posed by a system like Mira, a many-core supercomputer, and how the simulation code, HACC, has been designed to overcome these challenges. We have carried out a large range of analyses on the simulation data and we report on the results as well as the data products that have been generated. The full data set generated by the simulation totals more than 5PB of data, making data curation and data handling a large challenge in of itself. The simulation results have been used to generate synthetic catalogs for large-scale structure surveys, including DESI and eBOSS, as well as CMB experiments. A detailed catalog for the LSST DESC data challenges has been created as well. We publicly release some of the Outer Rim halo catalogs, downsampled particle information, and lightcone data.}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{title}{{The Outer Rim Simulation: A Path to Many-Core Supercomputers}}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.3847/1538-4365/ab4da1
+      \endverb
+      \verb{eprint}
+      \verb 1904.11970
+      \endverb
+      \verb{file}
+      \verb ::
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1904.11970%20http://dx.doi.org/10.3847/1538-4365/ab4da1
+      \endverb
+    \endentry
+    \entry{le_goff_simulations_2011}{article}{}
+      \name{author}{16}{}{%
+        {{uniquename=0,hash=fc7d42243843497288632d91650ae9a9}{%
+           family={{Le Goff}},
+           familyi={L\bibinitperiod},
+           given={J\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=49baea94acf7c55f8639fc173696c28f}{%
+           family={Magneville},
+           familyi={M\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=d58111ca8eacd70479dfe58bca7e1548}{%
+           family={Rollinde},
+           familyi={R\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=066f0f4a094d6a4bda5c034cc8c09559}{%
+           family={Peirani},
+           familyi={P\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=f4d47fac5a3b7bfdaf9851a73f394a47}{%
+           family={Petitjean},
+           familyi={P\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=3bd09a06f688a1b46f1e59ee43f9bcd3}{%
+           family={Pichon},
+           familyi={P\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=4443aca9b47698268d5ecbe5d6464aca}{%
+           family={Rich},
+           familyi={R\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=d5dc7b65a07248511c40b7903d83f56d}{%
+           family={Yeche},
+           familyi={Y\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=628b0b7baa83cdf6e7e69a970e23411b}{%
+           family={Aubourg},
+           familyi={A\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=f07cfa7782e3d0c434f2804f335c8f38}{%
+           family={Busca},
+           familyi={B\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=4179c0d02f7832701ea2e324cb7abfb2}{%
+           family={Charlassier},
+           familyi={C\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=241746084f43018d1ccb29edb56c2606}{%
+           family={Delubac},
+           familyi={D\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=03161d19f7504cba6a311ab74f0bebc3}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={J\bibnamedelima C},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=0de108175cafc301d6f8408f230dcb1c}{%
+           family={{Palanque Delabrouille}},
+           familyi={P\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=e6a4f07895ac0b043612efd5af637891}{%
+           family={Pâris},
+           familyi={P\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=2283074133ce9fc142f796423656398e}{%
+           family={{Vargas Magaña}},
+           familyi={V\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ceddecf591bcb8eeb07d73f0faf81ce2}
+      \strng{fullhash}{50c2850298ee04b4637a58cd48efd823}
+      \strng{authornamehash}{ceddecf591bcb8eeb07d73f0faf81ce2}
+      \strng{authorfullhash}{50c2850298ee04b4637a58cd48efd823}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Context. The imprint of baryonic acoustic oscillations (BAO) on the matter power spectrum can be constrained using the neutral hydrogen density in the intergalactic medium (IGM) as a tracer of the matter density. One of the goals of the baryon oscillation spectroscopic survey (BOSS) of the Sloan Digital Sky Survey (SDSS-III) is to derive the Hubble expansion rate and the angular scale from the BAO signal in the IGM. To this aim, the Lyman-$\alpha$ forest about 150 000 quasars will be observed in the redshift range 2.2 {<}z {<}3.5 and over {\{}$\backslash$textasciitilde{\}}10 000 deg2. Aims: We simulated the BOSS QSO survey to estimate the statistical accuracy on the BAO scale determination provided by such a large-scale survey. In particular, we discuss the effect of the poorly constrained estimate of the quasar's unabsorbed intrinsic spectrum. Methods: The volume of current N-body simulations being too small for such studies, we resorted to Gaussian random field (GRF) simulations. We validated the use of GRFs by comparing the output of GRF simulations with that of the Horizon-4$\Pi$ N-body dark-matter-only simulation with the same initial conditions. Realistic mock samples of QSO Lyman-$\alpha$ forest were generated and their power spectrum computed and fitted to obtain the BAO scale. The rms of the results for 100 different simulations provides an estimate of the statistical error expected from the BOSS survey. Results: We confirm the results from the Fisher matrix estimate. In the absence of error on the quasar's unabsorbed spectrum, our simulations give an expected uncertainty of 2.3{\%} for the BOSS quasar survey measurement of the BAO scale. The expected uncertainties for the transverse and radial BAO scales are 6.8{\%} and 3.9{\%}, respectively. The significance of the BAO detection is assessed by an average $\Delta$$\chi$2 = 17 but $\Delta$$\chi$2 ranges from 2 to 35 for individual realizations. The error on the quasar's unabsorbed spectrum increases the error on the BAO scale by 10 to 20{\%} and results in a subpercent bias.}
+      \field{issn}{0004-6361}
+      \field{journaltitle}{Astronomy and Astrophysics}
+      \field{month}{10}
+      \field{title}{{Simulations of {\{}BAO{\}} reconstruction with a quasar {\{}Ly{\}}-$\alpha$ survey}}
+      \field{volume}{534}
+      \field{year}{2011}
+      \field{pages}{135}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1051/0004-6361/201117736;
+      \endverb
+      \verb{url}
+      \verb http://adsabs.harvard.edu/abs/2011A%7B%5C%%7D26A...534A.135L
+      \endverb
+      \keyw{dark energy,intergalactic medium,large-scale structure of Universe,method: numerical,quasars: absorption lines}
+    \endentry
+    \entry{Lewis1999}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=4b11fc59f6fb126c1f7f69d42064a356}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Antony},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=05c475e793d06005a93c58b1dd3384c9}{%
+           family={Challinor},
+           familyi={C\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=3d6a44a7c9dc85a209077335498afa1b}{%
+           family={Lasenby},
+           familyi={L\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{89881c7d2679dd7505005cb4ffad9b06}
+      \strng{fullhash}{89881c7d2679dd7505005cb4ffad9b06}
+      \strng{authornamehash}{89881c7d2679dd7505005cb4ffad9b06}
+      \strng{authorfullhash}{89881c7d2679dd7505005cb4ffad9b06}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We implement the efficient line of sight method to calculate the anisotropy and polarization of the cosmic microwave background for scalar and tensor modes in almost-Friedmann-Robertson-Walker models with positive spatial curvature. We present new results for the polarization power spectra in such models.}
+      \field{eprintclass}{astro-ph}
+      \field{eprinttype}{arXiv}
+      \field{month}{11}
+      \field{title}{{Efficient Computation of CMB anisotropies in closed FRW models}}
+      \field{year}{1999}
+      \verb{doi}
+      \verb 10.1086/309179
+      \endverb
+      \verb{eprint}
+      \verb 9911177
+      \endverb
+      \verb{file}
+      \verb ::
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/astro-ph/9911177%20http://dx.doi.org/10.1086/309179
+      \endverb
+    \endentry
+    \entry{mcdonald_toward_2003}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8a26877f60ab9e34ef8ef3090dd05c99}{%
+           family={McDonald},
+           familyi={M\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a26877f60ab9e34ef8ef3090dd05c99}
+      \strng{fullhash}{8a26877f60ab9e34ef8ef3090dd05c99}
+      \strng{authornamehash}{8a26877f60ab9e34ef8ef3090dd05c99}
+      \strng{authorfullhash}{8a26877f60ab9e34ef8ef3090dd05c99}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{\{}$\backslash$textbackslash{\}}apj}
+      \field{month}{3}
+      \field{title}{{Toward a {\{}Measurement{\}} of the {\{}Cosmological{\}} {\{}Geometry{\}} at z ∼ 2: {\{}Predicting{\}} {\{}Ly$\alpha${\}} {\{}Forest{\}} {\{}Correlation{\}} in {\{}Three{\}} {\{}Dimensions{\}} and the {\{}Potential{\}} of {\{}Future{\}} {\{}Data{\}} {\{}Sets{\}}}}
+      \field{volume}{585}
+      \field{year}{2003}
+      \field{pages}{34\bibrangedash 51}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1086/345945
+      \endverb
+      \keyw{COSMOLOGY: LARGE-SCALE STRUCTURE OF UNIVERSE,COSMOLOGY: THEORY,Galaxies: Intergalactic Medium,Galaxies: Quasars: Absorption Lines,methods: N-body simulations}
+    \endentry
+    \entry{Pieri2016}{article}{}
+      \name{author}{15}{}{%
+        {{uniquename=0,hash=ae5007464ab331f38510fbfc3d24254a}{%
+           family={Pieri},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=9d9c23a96e8a08894fd3adf75e0beac4}{%
+           family={Bonoli},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=c266bde9e14d61d16c22daeeb06ca413}{%
+           family={Chaves-Montero},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=a300ec831c70ba5a928d762dc14f0210}{%
+           family={Paris},
+           familyi={P\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=541f48e738b1bae4bab9b7f9683e2d7f}{%
+           family={Fumagalli},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=160ca07ef68864d396753595c2577c28}{%
+           family={Bolton},
+           familyi={B\bibinitperiod},
+           given={J.\bibnamedelimi S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{uniquename=0,hash=6b7e7c114cea42378368f53c2acf5073}{%
+           family={Viel},
+           familyi={V\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=5218d8161b83721df2a99f1a1d21885a}{%
+           family={Noterdaeme},
+           familyi={N\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=49985a859b0143755c777cf3cb84cdcb}{%
+           family={Miralda-Escudé},
+           familyi={M\bibinithyphendelim E\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=55baed480c9c4dbf26aaa5cd4e0255c1}{%
+           family={Busca},
+           familyi={B\bibinitperiod},
+           given={N.\bibnamedelimi G.},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{uniquename=0,hash=4150791f2b9c3657162dec2389d1fe6d}{%
+           family={Rahmani},
+           familyi={R\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=68d0c551f3c885c3704b2e7976b2d80e}{%
+           family={Peroux},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=5807d4c85d7571e781979cab60b0ae91}{%
+           family={Font-Ribera},
+           familyi={F\bibinithyphendelim R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=f323a594ca45bc08405f8eea5b8dcc00}{%
+           family={Trager},
+           familyi={T\bibinitperiod},
+           given={S.\bibnamedelimi C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=e93775f4a5d318293e735a877d5ecbdd}{%
+           family={{The WEAVE Collaboration}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab8b304dbb95cb1b7f8c099e8d5dd0cd}
+      \strng{fullhash}{1a3912ac94ab20602be0c8861b8057cd}
+      \strng{authornamehash}{ab8b304dbb95cb1b7f8c099e8d5dd0cd}
+      \strng{authorfullhash}{1a3912ac94ab20602be0c8861b8057cd}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{month}{11}
+      \field{title}{{WEAVE-QSO: A Massive Intergalactic Medium Survey for the William Herschel Telescope}}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1611.09388
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Pieri et al. - 2016 - WEAVE-QSO A Massive Intergalactic Medium Survey for the William Herschel Telescope.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1611.09388
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{prov_cite}
+  \missing{CITE:dr16}
+  \missing{prov alma in prep}
+  \missing{CITE:mocks}
+\endrefsection
+\endinput
 
-\bibitem[Clerkin et~al.(2016)Clerkin, Kirk, Manera, Lahav, Abdalla, Amara,
-  Bacon, Chang, Gazta{\~{n}}aga, Hawken, Jain, Joachimi, Vikram, Abbott, Allam,
-  Armstrong, Benoit-L{\'{e}}vy, Bernstein, Bertin, Brooks, Burk, Rosell, Kind,
-  Crocce, Cunha, D'Andrea, da~Costa, Desai, Diehl, Dietrich, Eifler, Evrard,
-  Flaugher, Fosalba, Frieman, Gerdes, Gruen, Gruendl, Gutierrez, Honscheid,
-  James, Kent, Kuehn, Kuropatkin, Lima, Melchior, Miquel, Nord, Plazas, Romer,
-  Sanchez, Schubnell, Sevilla-Noarbe, Smith, Santos, Sobreira, Suchyta,
-  Swanson, Tarle, and Walker]{Clerkin2016}
-L.~Clerkin, D.~Kirk, M.~Manera, O.~Lahav, F.~Abdalla, A.~Amara, D.~Bacon,
-  C.~Chang, E.~Gazta{\~{n}}aga, A.~Hawken, B.~Jain, B.~Joachimi, V.~Vikram,
-  T.~Abbott, S.~Allam, R.~Armstrong, A~Benoit-L{\'{e}}vy, G.~M. Bernstein,
-  E.~Bertin, D.~Brooks, D.~L. Burk, A.~Carnero Rosell, M.~Carrasco Kind,
-  M.~Crocce, C.~E. Cunha, C.~B. D'Andrea, L.~N. da~Costa, S.~Desai, H.~T.
-  Diehl, J.~P. Dietrich, T.~F. Eifler, A.~E. Evrard, B.~Flaugher, P.~Fosalba,
-  J.~Frieman, D.~W. Gerdes, D.~Gruen, R.~A. Gruendl, G.~Gutierrez,
-  K.~Honscheid, D.~J. James, S.~Kent, K.~Kuehn, N.~Kuropatkin, M.~Lima,
-  P.~Melchior, R.~Miquel, B.~Nord, A.~A. Plazas, A.~K. Romer, E.~Sanchez,
-  M.~Schubnell, I.~Sevilla-Noarbe, R.~C. Smith, M.~Soares Santos, F.~Sobreira,
-  E.~Suchyta, M.~E.~C. Swanson, G.~Tarle, and A.~R. Walker.
-\newblock {Testing the lognormality of the galaxy and weak lensing convergence
-  distributions from Dark Energy Survey maps}.
-\newblock may 2016.
-\newblock \doi{10.1093/mnras/stw2106}.
-\newblock URL \url{http://arxiv.org/abs/1605.02036
-  http://dx.doi.org/10.1093/mnras/stw2106}.
-
-\bibitem[Coles and Jones(1991)]{coles_lognormal_1991}
-Peter Coles and Bernard Jones.
-\newblock {A lognormal model for the cosmological mass distribution}.
-\newblock \emph{Monthly Notices of the Royal Astronomical Society},
-  248:\penalty0 1--13, jan 1991.
-\newblock ISSN 0035-8711.
-\newblock URL \url{http://adsabs.harvard.edu/abs/1991MNRAS.248....1C}.
-
-\bibitem[Lewis et~al.(1999)Lewis, Challinor, and Lasenby]{Lewis1999}
-Antony Lewis, Anthony Challinor, and Anthony Lasenby.
-\newblock {Efficient Computation of CMB anisotropies in closed FRW models}.
-\newblock nov 1999.
-\newblock \doi{10.1086/309179}.
-\newblock URL \url{http://arxiv.org/abs/astro-ph/9911177
-  http://dx.doi.org/10.1086/309179}.
-
-\bibitem[Dodelson(2003)]{Dodelson2003}
-Scott Dodelson.
-\newblock \emph{{Modern Cosmology}}.
-\newblock Academic Press, 2003.
-\newblock \doi{10.1023/B:FOOP.0000019699.88151.ed}.
-
-\bibitem[Arinyo-i Prats et~al.(2015)Arinyo-i Prats, Miralda-Escud{\'{e}}, Viel,
-  and Cen]{Arinyo-i-Prats2015}
-Andreu Arinyo-i Prats, Jordi Miralda-Escud{\'{e}}, Matteo Viel, and Renyue Cen.
-\newblock {The Non-Linear Power Spectrum of the Lyman Alpha Forest}.
-\newblock jun 2015.
-\newblock \doi{10.1088/1475-7516/2015/12/017}.
-\newblock URL \url{http://arxiv.org/abs/1506.04519
-  http://dx.doi.org/10.1088/1475-7516/2015/12/017}.
-
-\bibitem[Pieri et~al.(2016)Pieri, Bonoli, Chaves-Montero, Paris, Fumagalli,
-  Bolton, Viel, Noterdaeme, Miralda-Escud{\'{e}}, Busca, Rahmani, Peroux,
-  Font-Ribera, Trager, and Collaboration]{Pieri2016}
-M.~M. Pieri, S.~Bonoli, J.~Chaves-Montero, I.~Paris, M.~Fumagalli, J.~S.
-  Bolton, M.~Viel, P.~Noterdaeme, J.~Miralda-Escud{\'{e}}, N.~G. Busca,
-  H.~Rahmani, C.~Peroux, A.~Font-Ribera, S.~C. Trager, and The~WEAVE
-  Collaboration.
-\newblock {WEAVE-QSO: A Massive Intergalactic Medium Survey for the William
-  Herschel Telescope}.
-\newblock nov 2016.
-\newblock URL \url{https://arxiv.org/abs/1611.09388}.
-
-\bibitem[{Le Goff} et~al.(2011){Le Goff}, Magneville, Rollinde, Peirani,
-  Petitjean, Pichon, Rich, Yeche, Aubourg, Busca, Charlassier, Delubac,
-  Hamilton, {Palanque Delabrouille}, P{\^{a}}ris, and {Vargas
-  Maga{\~{n}}a}]{le_goff_simulations_2011}
-J~M {Le Goff}, C~Magneville, E~Rollinde, S~Peirani, P~Petitjean, C~Pichon,
-  J~Rich, C~Yeche, E~Aubourg, N~Busca, R~Charlassier, T~Delubac, J~C Hamilton,
-  N~{Palanque Delabrouille}, I~P{\^{a}}ris, and M~{Vargas Maga{\~{n}}a}.
-\newblock {Simulations of {\{}BAO{\}} reconstruction with a quasar
-  {\{}Ly{\}}-$\alpha$ survey}.
-\newblock \emph{Astronomy and Astrophysics}, 534:\penalty0 135, oct 2011.
-\newblock ISSN 0004-6361.
-\newblock \doi{10.1051/0004-6361/201117736;}.
-\newblock URL \url{http://adsabs.harvard.edu/abs/2011A{\%}26A...534A.135L}.
-
-\bibitem[Farr et~al.(2019)Farr, Font-Ribera, des Bourboux,
-  Mu{\~{n}}oz-Guti{\'{e}}rrez, Lopez, Pontzen, Gonz{\'{a}}lez-Morales, Alonso,
-  Brooks, Doel, Etourneau, Guy, Goff, de~al Macorra, Palanque-Delabrouille,
-  P{\'{e}}rez-R{\`{a}}fols, Rich, Slosar, Tarle, Yutong, and Zhang]{Farr2019}
-James Farr, Andreu Font-Ribera, H{\'{e}}lion du~Mas des Bourboux, Andrea
-  Mu{\~{n}}oz-Guti{\'{e}}rrez, Francisco Javier~Sanchez Lopez, Andrew Pontzen,
-  Alma~Xochitl Gonz{\'{a}}lez-Morales, David Alonso, David Brooks, Peter Doel,
-  Thomas Etourneau, Julien Guy, Jean-Marc~Le Goff, Axel de~al Macorra, Nathalie
-  Palanque-Delabrouille, Ignasi P{\'{e}}rez-R{\`{a}}fols, James Rich,
-  An{\v{z}}e Slosar, Gregory Tarle, Duan Yutong, and Kai Zhang.
-\newblock {LyaCoLoRe: Synthetic Datasets for Current and Future Ly-alpha Forest
-  BAO Surveys}.
-\newblock dec 2019.
-\newblock \doi{10.1088/1475-7516/2020/03/068}.
-\newblock URL \url{https://arxiv.org/abs/1912.02763}.
-
-\bibitem[Font-Ribera et~al.(2012)Font-Ribera, Mcdonald, and
-  Miralda-Escud{\'{e}}]{Font-Ribera2012}
-Andreu Font-Ribera, Patrick Mcdonald, and Jordi Miralda-Escud{\'{e}}.
-\newblock {Generating mock data sets for large-scale Lyman- $\alpha$ forest
-  correlation measurements Generating mock data sets for large-scale
-  Lyman-$\alpha$ forest correlation measurements}.
-\newblock \emph{Journal of Cosmology and Astroparticle Physics}, 2012.
-\newblock \doi{10.1088/1475-7516/2012/01/001}.
-\newblock URL
-  \url{http://iopscience.iop.org/article/10.1088/1475-7516/2012/01/001/pdf}.
-
-\bibitem[Hamilton(1992)]{hamilton_measuring_1992}
-A~J~S Hamilton.
-\newblock {Measuring {\{}Omega{\}} and the real correlation function from the
-  redshift correlation function}.
-\newblock \emph{The Astrophysical Journal Letters}, 385:\penalty0 L5----L8, jan
-  1992.
-\newblock ISSN 0004-637X.
-\newblock \doi{10.1086/186264}.
-\newblock URL \url{http://adsabs.harvard.edu/abs/1992ApJ...385L...5H}.
-
-\bibitem[Font-Ribera and Miralda-Escud{\'{e}}(2012)]{font-ribera_effect_2012}
-Andreu Font-Ribera and Jordi Miralda-Escud{\'{e}}.
-\newblock {The {\{}Effect{\}} of {\{}High{\}} {\{}Column{\}} {\{}Density{\}}
-  {\{}Systems{\}} on the {\{}Measurement{\}} of the {\{}Lyman{\}}
-  {\{}$\backslash$textbackslash{\}}alpha {\{}Forest{\}} {\{}Correlation{\}}
-  {\{}Function{\}}}.
-\newblock \emph{Journal of Cosmology and Astroparticle Physics}, 2012\penalty0
-  (07):\penalty0 28, jul 2012.
-\newblock ISSN 1475-7516.
-\newblock \doi{10.1088/1475-7516/2012/07/028}.
-\newblock URL \url{http://arxiv.org/abs/1205.2018}.
-
-\bibitem[Gorski et~al.(2004)Gorski, Hivon, Banday, Wandelt, Hansen, Reinecke,
-  and Bartelman]{Gorski2004}
-K.~M. Gorski, E.~Hivon, A.~J. Banday, B.~D. Wandelt, F.~K. Hansen, M.~Reinecke,
-  and M.~Bartelman.
-\newblock {HEALPix -- a Framework for High Resolution Discretization, and Fast
-  Analysis of Data Distributed on the Sphere}.
-\newblock sep 2004.
-\newblock \doi{10.1086/427976}.
-\newblock URL \url{http://arxiv.org/abs/astro-ph/0409513
-  http://dx.doi.org/10.1086/427976}.
-
-\bibitem[McDonald(2003)]{mcdonald_toward_2003}
-P~McDonald.
-\newblock {Toward a {\{}Measurement{\}} of the {\{}Cosmological{\}}
-  {\{}Geometry{\}} at z ∼ 2: {\{}Predicting{\}} {\{}Ly$\alpha${\}}
-  {\{}Forest{\}} {\{}Correlation{\}} in {\{}Three{\}} {\{}Dimensions{\}} and
-  the {\{}Potential{\}} of {\{}Future{\}} {\{}Data{\}} {\{}Sets{\}}}.
-\newblock \emph{{\{}$\backslash$textbackslash{\}}apj}, 585:\penalty0 34--51,
-  mar 2003.
-\newblock \doi{10.1086/345945}.
-
-\end{thebibliography}

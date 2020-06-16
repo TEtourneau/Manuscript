@@ -18,9 +18,9 @@
 
 \textbf{Ce chapitre a pour vocation de présenter l'anayse menée sur les mocks, afin de valider leur construction et le choix des différents paramètres.
 Nous présentons d'abord le calcul des diverses fonctions de corrélations, puis les modèles ajustés sur celles-ci.
-Nous donnons premièrement le modèle ajusté sur les données et présenté dans \citet{prov}, puis le modèle modifié et ajusté sur les mocks.
+Nous donnons premièrement le modèle ajusté sur les données et présenté dans \textcite{prov}, puis le modèle modifié et ajusté sur les mocks.
 Enfin, nous présenton l'analyse des 100 réalisations des mocks produites. L'analyse des données est présentée dans le chapitre suivant.
-Pour faire ces analyses, nous utilisons le code \texttt{picca}. Ce code permet de calculer les champs $\delta$, les fonctions de corrélations, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.}
+Ces analyses sont produites avec le code \texttt{picca}. Ce code permet de calculer les champs $\delta$, les fonctions de corrélations, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.}
 
 \section{Les estimateurs}
 Nous présentons ici les estimateurs utilisés pour calculer la fonction d'auto-corrélation du \lya{}, la fonction de corrélation croisée \lya{}-QSO, ainsi que la fonction d'auto-corrélation d'objets ponctuels tels les quasars.
@@ -45,7 +45,7 @@ Elle peut-être mise sous la forme
   \xi(\vec r) = \langle \delta_i \delta_j \rangle \; ,
 \end{equation}
 où $\langle .\rangle$ désigne la moyenne sur tous les pixels $i$ et $j$ qui vérifient $\vec r_{ij} = \vec r$.
-Afin de calculer $\xi_{\mathrm{Ly}\alpha}$, nous créons une grille en $(\rpar{}, \rperp{})$.
+Afin de calculer $\xi_{\mathrm{Ly}\alpha}$, une grille en $(\rpar{}, \rperp{})$ est créée.
 % Chaque bin de cette grille fait $(\SI{4}{\perh\Mpc})^3$.
 Les bins mesurent \SI{4}{\perh\Mpc} dans chaque direction.
 % Cette taille de bin permet à la fois de regrouper suffisamment de pixels pour avoir une bonne statistique dans chaque bin, mais aussi d'avoir suffisamment de bins pour résoudre correctement la région du pic BAO (\#prov est-ce que c'est vrai ? toujours la meme quantite d'info, donc ca ameliore pas le fit?).
@@ -61,7 +61,7 @@ Une fois cette grille construite, la séparation de chaque paires $(\Delta \thet
   \right. 
 \end{equation}
 où $D_C$ est la distance comobile le long de la ligne de visée, et $D_M$ la distance comobile transverse (voir section~\ref{subsec:descri_mod}, paragraphe \emph{Les distances}). $z_i$ et $z_j$ sont les redshifts des traceurs $i$ et $j$.}
-Puis, pour chaque bin $A$ de la grille en $(\rpar{}, \rperp{})$, nous considérons toutes les paires de pixels dont la distance de séparation se trouve dans ce bin $A$. La fonction de corrélation dans ce bin est alors donnée par
+Puis, pour chaque bin $A$ de la grille en $(\rpar{}, \rperp{})$, toutes les paires de pixels dont la distance de séparation se trouve dans ce bin $A$ sont considérées. La fonction de corrélation dans ce bin est alors donnée par
 \begin{equation}
   \label{eq:xiff}
   \xi_A = \frac{
@@ -76,7 +76,7 @@ Puis, pour chaque bin $A$ de la grille en $(\rpar{}, \rperp{})$, nous considéro
 %   \delta_{\mathrm{Ly}\alpha}(z) = \delta_{\mathrm{Ly}\alpha}(0) \frac{b_{\mathrm{Ly}\alpha}(z) G(z)}{b_{\mathrm{Ly}\alpha}(0)G(0)} \; .
 % \end{equation}
 % Le facteur de croissance varie comme $G(z) \propto (1+z)^{-1}$, et le biais du \lya{} comme $b_{\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$.
-% Le champ $\delta_{\mathrm{Ly}\alpha}(z)$ est donc proportionnel à $(1+z)^{\gamma - 1}$. Le paramètre $\gamma = 2.9$ est mesuré sur le spectre de puissance à une dimension du \lya \citep{McDonald2004} (\#prov j'ai pas trouvé dans le papier à quel endroit était donnée la mesure).
+% Le champ $\delta_{\mathrm{Ly}\alpha}(z)$ est donc proportionnel à $(1+z)^{\gamma - 1}$. Le paramètre $\gamma = 2.9$ est mesuré sur le spectre de puissance à une dimension du \lya \autocite{McDonald2004} (\#prov j'ai pas trouvé dans le papier à quel endroit était donnée la mesure).
 % Ainsi, les poids utilisés dans l'équation~\ref{eq:xiff} sont donnés par
 % \begin{equation}
 %   \label{eq:weights2}
@@ -86,13 +86,13 @@ Puis, pour chaque bin $A$ de la grille en $(\rpar{}, \rperp{})$, nous considéro
 % Le calcul de la fonction de corrélation est donc effectué à l'aide d'une double boucle sur les pixels.
 où $w_i$ est le poids associé au pixel $i$. Ces poids sont définis dans l'équation~\ref{eq:weights2}. La correction de la dépendance en redshift du biais du \lya{} permet de donner plus de poids aux pixels à grand redshift, où l'amplitude de la fonction de corrélation est plus importante.
 Le calcul de la fonction de corrélation est donc effectué à l'aide d'une double boucle sur les pixels.
-Afin de réduire le temps de calcul, nous calculons la fonction de corrélation uniquement pour les paires de pixels pour lesquelles $\rpar{}$ et $\rperp{}$ sont inclus dans $[0 \, ; 200] \si{\perh\Mpc}$. La fonction de corrélation est donc calculée dans $50 \times 50 = \num{2500}$ bins.
+Afin de réduire le temps de calcul, la fonction de corrélation est calculée uniquement pour les paires de pixels pour lesquelles $\rpar{}$ et $\rperp{}$ sont inclus dans $[0 \, ; 200] \si{\perh\Mpc}$. La fonction de corrélation est donc calculée dans $50 \times 50 = \num{2500}$ bins.
 Les paires formées par des pixels provenant de la même forêt sont exclues du calcul afin d'éviter que les erreurs sur l'ajustement du continuum biaisent la mesure de la fonction de corrélation.
 
-L'analyse \lya{} des données complète d'eBOSS \citep{prov} utilise deux fonctions de corrélation distinctes : les fonctions de corrélation \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}.
+L'analyse \lya{} des données complète d'eBOSS \autocite{prov} utilise deux fonctions de corrélation distinctes : les fonctions de corrélation \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}.
 La région \lyb{} ne fournit pas suffisamment de pixels pour pouvoir calculer la fonction de corrélation \lyalyb{}$\times$\lyalyb{} et y détecter le pic BAO. De plus, le gain de statistique que représente cette fonction de corrélation est négligeable.
 L'utilisation de ces deux fonctions de corrélation permet de mesurer la position du pic BAO avec une plus grande précision. Dans ce manuscrit, nous nous intéressons à la mesure de $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ afin de construire correctement nos mocks. Pour limiter les potentielles systématiques, nous considérons donc uniquement la fonction de corrélation \lyalya{}$\times$\lyalya{}.
-Le graphique de droite de la figure~\ref{fig:pixel_number} présente les distributions pondérées en redshift des paires \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}. L'analyse des données DR16 que nous présentons ici considère donc uniquement la distribution indiquée en orange.
+Le graphique de droite de la figure~\ref{fig:pixel_number} présente les distributions pondérées en redshift des paires \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}. L'analyse des données DR16 présentée dans ce manuscrit considère donc uniquement la distribution indiquée en orange.
 
 
 \subsection{La corrélation croisée \lya{}$\times$QSO}
@@ -113,10 +113,10 @@ Similairement au \lya{}, les poids $w_j$ associés aux quasars favorisent les qu
   \label{eq:weights3}
   w_j = \left(\frac{1 + z_j}{1 + \num{2.25}}\right)^{\gamma_{\textsc{QSO}}} \; ,
 \end{equation}
-où $\gamma_{\textsc{QSO}} = \num{1.44} \pm \num{0.08}$ \citep{Bourboux2019}. Dans le calcul de la fonction de corrélation croisée \lya{}$\times$QSO, nous nous restreignons aux paires pour lesquelles $\rperp{} \in [0 \, ; 200] \si{\perh\Mpc}$.
+où $\gamma_{\textsc{QSO}} = \num{1.44} \pm \num{0.08}$ \autocite{Bourboux2019}. Dans le calcul de la fonction de corrélation croisée \lya{}$\times$QSO, nous nous restreignons aux paires pour lesquelles $\rperp{} \in [0 \, ; 200] \si{\perh\Mpc}$.
 Contrairement à l'auto-corrélation du \lya{}, la fonction de corrélation croisée n'est pas symétrique en $\rpar{}$.
 \textbf{Cette assymétrie est produite par l'erreur systématique sur la mesure du redshift des quasars, et aussi par le rayonnement des quasars qui n'est pas isotrope.
-Nous calculons donc la fonction de corrélation croisée dans les bins pour lesquels $\rpar{} \in [-200 \, ; 200] \si{\perh\Mpc}$. Ceci représente $100 \times 50 = \num{5000}$ bins.
+La fonction de corrélation croisée est donc calculée dans les bins pour lesquels $\rpar{} \in [-200 \, ; 200] \si{\perh\Mpc}$. Ceci représente $100 \times 50 = \num{5000}$ bins.
 }
 
 
@@ -127,7 +127,7 @@ Comme expliqué dans le chapitre précédent, nous ajustons le spectre de puissa
 \end{equation}
 Nous répétons cette procédure pour toutes les forêts, puis le spectre de puissance total est obtenu comme la moyenne du spectre de puissance de chaque forêt.
 
-En ce qui concerne les données et les cooked mocks, la mesure du spectre de puissance à une dimension est plus complexe. Un certain nombre d'effets liés à la mesure doivent être pris en compte. En particulier, le bruit et la résolution doivent être estimés et pris en compte pour ne pas fausser l'estimation du spectre de puissance. Cette analyse est détaillée dans~\citet{Chabanier2018}.
+En ce qui concerne les données et les cooked mocks, la mesure du spectre de puissance à une dimension est plus complexe. Un certain nombre d'effets liés à la mesure doivent être pris en compte. En particulier, le bruit et la résolution doivent être estimés et pris en compte pour ne pas fausser l'estimation du spectre de puissance. Cette analyse est détaillée dans~\textcite{Chabanier2018}.
 
 \subsection{La fonction de corrélation à une dimension}
 
@@ -158,7 +158,7 @@ où $W_{A} = \sum_{(i,j)\in A} w_i w_j$ est le poids du bin A. Pour la corrélat
   D_{AB} = \frac{1}{W_A} \sum_{(i,j)\in A} w_i w_j \left( \sum_{(i',j')\in B} \eta_{ii'} \right) \, .
 \end{equation}
 Comme précédemment, les indices $i$ correspondent aux pixels des forêts, et $j$ aux quasars. A cause de la double somme, le calcul de la matrice de distorsion est très long. Afin de rendre possible l'estimation de cette dernière, le calcul est fait sur \SI{1}{\percent} des paires, tirées au hasard (\#prov Bautista 2017 montre que c'est OK avec 5\%, est-ce que y a une etude qui montre que c'est ok avec 1\% ? Dans DR14, ils utilisent 5\% je pense).
-% L'étude présentée dans~\citet{bautista_measurement_2017}
+% L'étude présentée dans~\textcite{bautista_measurement_2017}
 
 La figure~\ref{prov} (\#prov faire la figure) montre l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatres gammes en $\mu$. La courbe noire indique la fonction de corrélation calculée sur les raw mocks, et la courbe bleu la fonction de ....
 \#prov Refaire la figure 11 de Bautista : CF des raw mocks (stack) + CF sur les coocked mocks (stack) avec le fit sur les raw + fit * DM
@@ -175,7 +175,7 @@ Afin de réaliser l'ajustement de chaque fonction de corrélation, nous avons be
 \begin{equation}
   C_{AB} = \langle \xi_A \xi_B \rangle - \langle \xi_A \rangle \langle \xi_B \rangle \; .
 \end{equation}
-De cette matrice de covariance, nous définissons la matrice de corrélation comme
+De cette matrice de covariance, la matrice de corrélation est définie comme
 \begin{equation}
   Corr_{AB} = \frac{C_{AB}}{\sqrt{C_{AA} C_{BB}}} \; .
 \end{equation}
@@ -195,7 +195,7 @@ Dans cette section, nous présentons les modèles utilisés pour ajuster les fon
 
 \subsection{Modélisation des données}
 \label{subsec:model_donnees}
-Pour l'analyse des données DR16, nous utilisons le modèle décrit dans~\citet{prov}. L'analyse décrite dans cette étude est une analyse BAO : l'auto-corrélation et la corrélation croisée sont modélisées de façon à mesurer au mieux les paramètres BAO $\apar{}$ et $\aperp{}$.
+Pour l'analyse des données DR16, dont les résultats sont présentés dans le chapitre suivant, nous utilisons le modèle décrit dans~\textcite{prov}. L'analyse décrite dans cette étude est une analyse BAO : l'auto-corrélation et la corrélation croisée sont modélisées de façon à mesurer au mieux les paramètres BAO $\apar{}$ et $\aperp{}$.
 Pour ce faire, le modèle est séparé en deux composantes. La première, $\xi_{smooth}$, correspond à la forme globale de la fonction de corrélation. 
 La seconde, $\xi_{peak}$, correspond au pic BAO. C'est cette seconde composante qui dépend des paramètres BAO :
 \begin{equation}
@@ -218,11 +218,11 @@ $P_{\mathrm{QL}}$ est le spectre de puissance \emph{quasi-linéaire}. Il est dé
 \begin{equation}
   P_{\mathrm{QL}}(\vec k, z) = P_{\mathrm{smooth}}(k, z) + \exp(- \frac{k_{\parallel}^2 \Sigma_{\parallel}^2 + k_{\perp}^2 \Sigma_{\perp}^2}{2}) P_{\mathrm{peak}}(k,z) \; .
 \end{equation}
-$P_{\mathrm{smooth}}$ est le spectre de puissance linéaire, sans les BAO. Il est construit à partir du spectre de puissance linéaire $P_{\mathrm{L}}$ donné par Camb, puis les BAO sont retirées en utilisant la technique \emph{side-band} décrite dans \citet{Kirkby2013}.
+$P_{\mathrm{smooth}}$ est le spectre de puissance linéaire, sans les BAO. Il est construit à partir du spectre de puissance linéaire $P_{\mathrm{L}}$ donné par Camb, puis les BAO sont retirées en utilisant la technique \emph{side-band} décrite dans \textcite{Kirkby2013}.
 Le spectre de puissance $P_{\mathrm{peak}}$ est alors obtenu comme la différence $P_{\mathrm{L}} - P_{\mathrm{smooth}}$ : il contient uniquement les oscillations dues aux BAO présentes dans le spectre de puissance linaire.
-Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$  \citep{eisenstein_robustness_2007}.
+Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$  \autocite{eisenstein_robustness_2007}.
 Le terme $F_{\mathrm{NL}}$ prend en compte les non linéarités aux petites échelles. Nous distinguons $F_{\mathrm{NL}}^{\mathrm{auto}}$ et $F_{\mathrm{NL}}^{\mathrm{cross}}$. Pour l'auto-corrélation, les effets non linéaires proviennent de l'élargissement thermique, des vitesses particulières et de la croissance des structures non linéaire.
-Comme lors de la modélisation du $P^{1D}$, nous utilisons le modèle décrit dans \citet{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section ``Planck'' de la table 7 de \citet{Arinyo-i-Prats2015}.
+Comme lors de la modélisation du $P^{1D}$, nous utilisons le modèle décrit dans \textcite{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section ``Planck'' de la table 7 de \textcite{Arinyo-i-Prats2015}.
 Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéaires des quasars. Cet effet est modélisé par une lorrentzienne :
 \begin{equation}
   F_{\mathrm{NL}}^{\mathrm{cross}}(\kpar{}) = \frac{1}{1 + (\kpar{} \sigma_v)^2} \; ,
@@ -243,20 +243,20 @@ où $\rpar{}_{mesure}$ est la séparation mesurée des paires $(i,j)$, et $\rpar
 
 % \subsubsection{Modélisation des HCD}
 \paragraph{}
-La présence des facteurs de Kaiser dans l'équation~\ref{eq:pk_model1} permet de mesurer le biais et le paramètre RSD de nos traceurs. En ce qui concerne l'auto-corrélation \lya{}$\times$\lya{}, la fonction de corrélation est proportionnelle à $b_{\mathrm{Ly}\alpha}^2(1+\beta_{\mathrm{Ly}\alpha} \mu^2)^2$. Cependant, la présence de HCD dans les données modifie le biais et le paramètre RSD du \lya{}. En effet, l'efficacité de l'algorithme de détection n'étant pas de \SI{100}{\percent}, il subsiste des DLA non identifiés dans les forêts. De plus, les HCD avec $\log n_{HI} < 20.3$ ne sont pas identifiés. Ces deux effets participent à augmenter le biais mesuré du \lya{} significativement. Nous utilisons les paramètres effectifs
+La présence des facteurs de Kaiser dans l'équation~\ref{eq:pk_model1} permet de mesurer le biais et le paramètre RSD de nos traceurs. En ce qui concerne l'auto-corrélation \lya{}$\times$\lya{}, la fonction de corrélation est proportionnelle à $b_{\mathrm{Ly}\alpha}^2(1+\beta_{\mathrm{Ly}\alpha} \mu^2)^2$. Cependant, la présence de HCD dans les données modifie le biais et le paramètre RSD du \lya{}. En effet, l'efficacité de l'algorithme de détection n'étant pas de \SI{100}{\percent}, il subsiste des DLA non identifiés dans les forêts. De plus, les HCD avec $\log n_{\textsc{HI}} < \num{20.3}$ ne sont pas identifiés. Ces deux effets participent à augmenter le biais mesuré du \lya{} significativement. Nous utilisons les paramètres effectifs
 \begin{align}
   b_{\mathrm{Ly}\alpha}' &= b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}} F_{\textsc{HCD}}(\kpar{}) \; , \\
   b_{\mathrm{Ly}\alpha}' \beta_{\mathrm{Ly}\alpha}' &= b_{\mathrm{Ly}\alpha} \beta_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}} \beta_{\textsc{HCD}} F_{\textsc{HCD}}(\kpar{})  \; ,
 \end{align}
-où $F_{\textsc{HCD}}$ est une fonction qui dépend de la distribution en $z$ et en $\log n_{HI}$ des HCD \citep{font-ribera_effect_2012}. Cette fonction est estimée sur des simulations hydrodynamiques \citep{Rogers2017}. Nous la modélisons comme
+où $F_{\textsc{HCD}}$ est une fonction qui dépend de la distribution en $z$ et en $\log n_{\textsc{HI}}$ des HCD \autocite{Font-Ribera2012a}. Cette fonction est estimée sur des simulations hydrodynamiques \autocite{Rogers2017}. Elle est modélisée comme
 \begin{equation}
   F_{\textsc{HCD}}(\kpar{}) = \exp(- L_{\textsc{HCD}} \kpar{}) \; ,
 \end{equation}
 où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLAs dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} au redshift effectif de la mesure. Par ailleurs , $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons donc sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle.
 
-Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, nous tenons compte de la dépendance en redshit de $\delta_F$.
-\textbf{Si nous considérons que $\beta_{\mathrm{Ly}\alpha}$ est constant avec le redshift, nous avons $\delta_F(z) \propto G(z) b_{\mathrm{Ly}\alpha}(z)$, avec $G(z) \propto (1+z)^{-1}$.}
-Concernant le biais du \lya{}, nous utilisons la même dépendance que celle choisie lors du calcul des poids (équation~\ref{eq:wieghts2}), c'est à dire $b_{\mathrm{Ly}\alpha} \propto (1+z)^{\gamma_{\mathrm{Ly}\alpha}}$, avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \citep{mcdonald_ly_2006}.
+Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, la dépendance en redshit de $\delta_F$ est prise en compte.
+\textbf{En considérant que $\beta_{\mathrm{Ly}\alpha}$ est constant avec le redshift, nous avons $\delta_F(z) \propto G(z) b_{\mathrm{Ly}\alpha}(z)$, avec $G(z) \propto (1+z)^{-1}$.}
+Concernant le biais du \lya{}, nous utilisons la même dépendance que celle choisie lors du calcul des poids (équation~\ref{eq:wieghts2}), c'est à dire $b_{\mathrm{Ly}\alpha} \propto (1+z)^{\gamma_{\mathrm{Ly}\alpha}}$, avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \autocite{McDonald2004}.
 En ce qui concerne $\beta_{\mathrm{Ly}\alpha}$, nous considérons lors de l'ajustement du modèle qu'il est indépendant du redshift. Comme montré dans l'analyse présentée dans le chapitre~\ref{prov}, $\beta_{\mathrm{Ly}\alpha}$ n'est pas indépendant du redshift. Cependant, le redshift moyen dans chaque bin $(\rpar{}, \rperp)$ varie peu. Lors de l'analyse de l'ensemble des données DR16, il varie dans la gamme $\num{2.31} < z < \num{2.39}$. Cette variation correspond à une variation de $\beta_{\mathrm{Ly}\alpha}$ de moins de \SI{5}{\percent}. De plus, elle est d'autant plus faible lorsque l'analyse est faite dans différents bins en redshift.
 
 La fonction de corrélation croisée \lya{}$\times$QSO est sensible au produit $b_{\mathrm{Ly}\alpha}(1+\beta_{\mathrm{Ly}\alpha} \mu^2) b_{\textsc{QSO}}(1+\beta_{\textsc{QSO}} \mu^2)$.
@@ -266,14 +266,14 @@ Nous fixons donc $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$. Concernant le bia
   b_{\textsc{QSO}}(z) = \num{3.77} \left( \frac{1 + z}{1+\num{2.334}} \right)^{\num{1.44}} \; . 
 \end{equation}
 % Cette paramétrisation est sensiblement équivalente à celle utilisée dans les mocks (équation~\ref{eq:b_qso}) dans la gamme $\num{2.31} < z < \num{2.39}$. $\beta_{\textsc{QSO}}$ est choisi constant et vaut $\beta_{\textsc{QSO}} = f / b_{\textsc{QSO}}(\num{2.334}) = \num{0.257}$.
-\textbf{Cette paramétrisation est celle choisie dans \citet{prov}. Nous gardons cette paramétrisation pour notre analyse des données, présentée dans le chapitre suivant. Cependant, lorsque nous analysons les mocks, nous utilisons la paramétrisation adoptée pour construire les mocks. Elle est donnée dans l'équation~\ref{eq:b_qso}.
+\textbf{Cette paramétrisation est celle choisie dans \textcite{prov}. Nous gardons cette paramétrisation pour notre analyse des données, présentée dans le chapitre suivant. Cependant, lorsque nous analysons les mocks, nous utilisons la paramétrisation adoptée pour construire les mocks. Elle est donnée dans l'équation~\ref{eq:b_qso}.
 $\beta_{\textsc{QSO}}$ est choisi constant et vaut $\beta_{\textsc{QSO}} = f / b_{\textsc{QSO}}(z_{eff})$, où $z_{eff}$ est le redshift effectif de la mesure. Le taux de croissance $f$ est aussi choisi constant avec le redshift, et vaut $f = \num{0.9704}$.}
 
 \paragraph{}
 Une fois les composantes multiplicatives incluses au modèle, nous pouvons transformer le $P(\vec k)$ modèle définit dans l'équation~\ref{eq:pk_model1} en fonction de corrélation $\xi(r, \mu)$.
-% Cette transformation est faite en utilisant FFTLog \citep{Hamilton1999} :
+% Cette transformation est faite en utilisant FFTLog \autocite{Hamilton1999} :
 Pour ce faire,
-la fonction de corrélation est décomposée en polynômes de Legendre $P_l$ jusqu'à $l_{max} = 6$. Pour chaque $l \in [0 \, ; 2 \, ; 4\, ; 6]$, une transformation de Fourier est appliquée au spectre de puissance (\#prov en fait c'est plutôt une intégrale avec une fonction de Bessel. Donner une ref du papier d'Hamilton ? C'est aussi dans le papier Kirkby, eq 2.7 - 2.9). Etant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog \citep{Hamilton1999}, qui apporte à la fois rapidité et précision.
+la fonction de corrélation est décomposée en polynômes de Legendre $P_l$ jusqu'à $l_{max} = 6$. Pour chaque $l \in [0 \, ; 2 \, ; 4\, ; 6]$, une transformation de Fourier est appliquée au spectre de puissance (\#prov en fait c'est plutôt une intégrale avec une fonction de Bessel. Donner une ref du papier d'Hamilton ? C'est aussi dans le papier Kirkby, eq 2.7 - 2.9). Etant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog \autocite{Hamilton1999}, qui apporte à la fois rapidité et précision.
 Ainsi, en suivant cette procédure, nous obtenons les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ en choisissant $i = j = \mathrm{Ly}\alpha$, et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ en choisissant $i = \mathrm{Ly}\alpha$ et $j = \textsc{QSO}$.
 Afin de pouvoir ajuster les fonctions de corrélation calculées avec les données, nous devons prendre en compte dans nos modèles les corrélations parasites. Ces corrélations s'ajoutent au $\xi$ modèle calculé précédemment.
 A ce stade, nous distingons le modèle utilisé pour l'auto-corrélation et la corrélation croisée.
@@ -281,14 +281,14 @@ Le modèle de l'auto-corrélation \lya{}$\times$\lya{} est défini comme
 \begin{equation}
   \label{eq:cf_model1}
   % \xi = \xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha} + \sum_{m} \xi_{\mathrm{Ly}\alpha\times m} + \sum_{m, n} \xi_{m\times n} + \xi_{ciel}  \; ,
-  \xi = \xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}  + \sum_{m, n} \tilde \xi_{m\times n} + \xi_{ciel}  \; ,
+  \xi = \xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}  + \sum_{m, n} \tilde \xi_{m\times n} + \xi_{ciel}  \; ,
 \end{equation}
 % où $\xi_{\mathrm{Ly}\alpha\times m}$ est la corrélation du \lya{} avec le métal $m$, $\xi_{m_1\times m_2}$ est la corrélation du métal $m_1$ avec le métal $m_2$, et $\xi_{ciel}$ est la corrélation induite par le masquage des lignes de ciel.
 \textbf{où $\tilde \xi_{m \times n}$ est la corrélation de l'absorbeur $m$ avec l'absorbeur $n$, interprétés comme des absorptions \lya{}. Ces absorbeurs peuvent être du \lya{} ou des métaux ($m$ et $n$ ne peuvent pas être tous les deux du \lya{}). Le tableau~\ref{tab:metals_in_mocks} liste les métaux ajustés dans les données. $\xi_{ciel}$ est la corrélation induite par la soustraction du fond de ciel. Ces termes sont décrits dans les prochains paragraphes.}
 Le modèle de la corrélation croisée \lya{}$\times$QSO est défini comme
 \begin{equation}
   \label{eq:xcf_model1}
-  \xi = \xi_{\mathrm{Ly}\alpha\times \textsc{QSO}} + \sum_{m} \tilde \xi_{m \times \textsc{QSO}} + \xi_{prox}  \; ,
+  \xi = \xi_{\mathrm{Ly}\alpha\times \textsc{QSO}} + \sum_{m} \tilde \xi_{m \times \textsc{QSO}} + \xi_{prox} \; ,
 \end{equation}
 où $\tilde \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ avec les quasars, et $\xi_{prox}$ donne la corrélation induite par l'effet de proximité des quasars. Cest termes sont décrits dans les prochains paragraphes.
 
@@ -318,7 +318,7 @@ Pour la corrélation $\xi_{m \times \textsc{QSO}}$, le décalage est le même qu
 
 Pour chaque couple $(m, n)$, le décalage de la fonction de corrélation $\xi_{m\times n}$ est pris en compte par la matrice des métaux $M_{AB}^{m\times n}$.
 % Cette matrice inclut donc le calcule du décalage des séparations décrit précédemment.
-Nous ne détaillons pas sont calcul ici, mais il est donné dans la thèse \citet{CITE:Victoria}. La matrice des métaux permet donc de relier la fonction de corrélation $\xi_{m\times n}$ à la fonction de corrélation $\tilde \xi_{m\times n}$, où les absorbeurs $m$ et $n$ sont interprétés comme des absorptions \lya{}, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
+Nous ne détaillons pas sont calcul ici, mais il est donné dans la thèse \textcite{CITE:Victoria}. La matrice des métaux permet donc de relier la fonction de corrélation $\xi_{m\times n}$ à la fonction de corrélation $\tilde \xi_{m\times n}$, où les absorbeurs $m$ et $n$ sont interprétés comme des absorptions \lya{}, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
 \begin{equation}
   \tilde \xi_{m \times n}(A) = \sum_B M_{AB}^{m\times n} \xi_{m\times n}(B) \; ,
 \end{equation}
@@ -370,7 +370,7 @@ Les paramètres $A_{sky}$ et $\sigma_{sky}$ sont laissés libres lors de l'ajust
 Le terme $\xi_{ciel}$ n'est présent que dans l'ajustement de l'auto-corrélation, car ces corrélations parasides ne sont induites que lorsqu'on corrèle des pixels d'absorption issus de deux spectres présents sur la même demi-plaque. Cet effet n'a donc pas lieu d'être pour la corrélation croisée.
 
 \paragraph{}
-Enfin, le dernier terme additionnel est le terme $\xi_{prox}$. Ce terme n'est présent que dans la fonction de corrélation croisée $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$. Il prend en compte l'effet du rayonnement produit par les quasars sur l'hydrogène environnant. En effet, à cause de leur grande luminosité, et en particulier selon la direction de leur jet, les quasars ionisent le gas qui les entoure. Ceci réduit donc la fraction d'hydrogène neutre au voisinage de chaque quasar, ce qui induit des corrélations supplémentaire entre le champ d'absorption \lya{} et la position des quasars. Cet effet est modélisé comme \citep{font-ribera_large-scale_2013} :
+Enfin, le dernier terme additionnel est le terme $\xi_{prox}$. Ce terme n'est présent que dans la fonction de corrélation croisée $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$. Il prend en compte l'effet du rayonnement produit par les quasars sur l'hydrogène environnant. En effet, à cause de leur grande luminosité, et en particulier selon la direction de leur jet, les quasars ionisent le gas qui les entoure. Ceci réduit donc la fraction d'hydrogène neutre au voisinage de chaque quasar, ce qui induit des corrélations supplémentaire entre le champ d'absorption \lya{} et la position des quasars. Cet effet est modélisé comme \autocite{Font-Ribera2013} :
 \begin{equation}
   \xi_{prox} = \xi_{0,prox} \left(\frac{\SI{1}{\perh\Mpc}}{r} \right)^2 \exp( - \frac{r}{\lambda_{UV}}) \; ,
 \end{equation}
@@ -549,9 +549,10 @@ Cette section présente l'analyse des mocks eboss-0.3. Ces mocks sont obtenus co
 
 \subsubsection{Le spectre de puissance à une dimension}
 \#prov montrer le P1D ?
-Pourquoi pas, pour montrer les metaux ? Ou alors le xi_1d
+Pourquoi pas, pour montrer les metaux ? Ou alors le xi1d
 
 
 
-\bibliography{../source/library}
+% \bibliography{../source/library}
+\printbibliography
 \end{document}

@@ -1,13 +1,24 @@
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 
 %Bibliography style
 % \usepackage[square, numbers]{natbib}
-\usepackage[round]{natbib}
-\bibliographystyle{unsrtnat}
+% \usepackage[round]{natbib}
+% \usepackage{biblatex}
+% \bibliographystyle{unsrtnat}
+% \bibliographystyle{unsrt}
 % \bibliographystyle{plain}
 % \bibliographystyle{aa}
+% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
+\usepackage[
+backend=biber,
+style=authoryear,
+url=false
+]{biblatex}
+\addbibresource{../source/library.bib}
+
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
+\usepackage{csquotes}  % used for citations (recommended when using biblatex)
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 \usepackage{mathptmx}

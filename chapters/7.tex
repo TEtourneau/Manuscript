@@ -1,3 +1,24 @@
+% created on 2019-12-13
+% @author : bmazoyer
+
+%% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
+% \usepackage{biblatex}
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
+\addbibresource{../source/library.bib}
+\begin{document}
+%%
+
+% \graphicspath{ {../figures/donnees/} }
 
 \chapter{Conclusion}
-\thispagestyle{fancy}
+% \thispagestyle{fancy}
+
+Blablabla je cite rien.
+
+Blablabla je cite \cite{Chabanier2018}
+
+
+\printbibliography
+\end{document}
