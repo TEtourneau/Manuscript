@@ -484,7 +484,7 @@ Le spectre de puissance du contraste de densité de la matière est alors défin
   \label{eq:def_pow_spec}
   P(\vec{k}) = | \delta(\vec k)^{2} |  \; .
 \end{equation}
-Etant donné que l'isotropie est supposée en cosmologie, le spectre de puissance dépend uniquement de $k$, la norme de $\vec{k}$. La figure~\#prov montre le spectre de puissance de la matière à $z=0$, elle est discuté dans la section suivante.
+Etant donné que l'isotropie est supposée en cosmologie, le spectre de puissance dépend uniquement de $k$, la norme de $\vec{k}$. La figure~\ref{fig:pk_camb} montre le spectre de puissance de la matière à $z=0$, elle est discuté dans la section suivante.
 
 \paragraph{}
 Similairement au spectre de puissance du contraste de densité, il est possible de calculer celui des fluctuations primordiales de densité, accessibles via l'observation du CMB. Le formalisme est cependant légèrement différent : plutôt que de faire une transmormation de Fourier, les fluctuations primordiales sont décomposées sur la sphère céleste à l'aide des harmoniques sphériques. Dans un tel cas, la variable analogue à $k$ est notée $l$. La figure~\ref{fig:carte_cmb} présente la carte des fluctuations en température mesurée par Planck, et la figure~\ref{fig:spectre_cmb} le spectre de puissance de ces fluctuations.
@@ -501,6 +501,19 @@ Similairement au spectre de puissance du contraste de densité, il est possible 
   \label{fig:spectre_cmb}
 \end{figure}
 Ce dernier présente un pic à $l \sim 200$, qui correspond à une taille angulaire sur le ciel d'environ \ang{1}. Cette taille caractéristique correspond à l'horizon acoustique au moment de la recombinaison, elle est expliquée dans la section~\ref{sec:bao}.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.32]{pk_camb}
+  \caption{Spectre de puissance de la matière à $z = 0$. Ce spectre de puissance est obtenu avec le code Camb~\autocite{Lewis1999}. Il est calculé en considérant les perturbations linéaires. Les oscillations dues aux oscillations acoustiques de baryon sont visibles pour $k \in [\num{0.003} \,; \num{0.3}] \si{\h\per\Mpc}$.}
+  \label{fig:pk_camb}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.45, angle=270]{xi_camb}
+  \caption{Fonction de corrélation de la matière à $z = 0$. Elle est obtenu comme la transformation de Fourier du spectre de puissance de la matière, lui même obtenu avec le code Camb~\autocite{Lewis1999}. Les oscillations présentes dans le spectre de puissance et dues aux oscillations acoustiques de baryon se traduisent par un pic à $r \sim \SI{100}{\perh\Mpc}$. Ce pic est davantage visible lorsqu'on multiplie la fonction de corrélation $\xi$ par $r$ (graphique du milieu), ou encore mieux, par $r^2$ (graphique du bas).}
+  \label{fig:xi_camb}
+\end{figure}
 
 \subsection{La fonction de corrélation}
 
@@ -529,7 +542,7 @@ ce qui donne, une fois l'isotropie supposée,
   \label{eq:cf_tf2}
   P(k) = \frac{i}{4 \pi^2 k} \int_{-\infty}^{+\infty} e^{- i k r} r \xi(r) dr  \; .
 \end{equation}
-La figure~\ref{prov} présente le spectre de puissance et~\ref{prov} la fonction de corrélation de la matière aujourd'hui. (\#prov mettre la figure)
+Les figures~\ref{fig:pk_camb} et~\ref{fig:xi_camb} présentent respectivement le spectre de puissance et la fonction de corrélation de la matière aujourd'hui.
 Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grandes échelles (petits $k$) se comporte comme $P(k) \propto k^{n_s}$, où $n_s$ est l'indice spectrale.
 Ces modes à grande échelle ne sont pas affectés par la physique qui se déroule durant la domination de la radiation. Ils sondent donc directement les fluctuations primordiales de densité.
 Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les grandes et petites échelles est dû au fait que les modes $k > k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, possèdent une taille caractéristique plus petite que l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout événement en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} au moment de l'égalité radiation-matière : ces modes sont donc entrés dans l'horizon durant la phase de domination de la radiation, et ont donc été affectés par la physique qui s'y déroule.

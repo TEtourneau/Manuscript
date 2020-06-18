@@ -121,17 +121,30 @@ La fonction de corrélation croisée est donc calculée dans les bins pour lesqu
 
 
 \subsection{Le spectre de puissance à une dimension}
-Comme expliqué dans le chapitre précédent, nous ajustons le spectre de puissance $P_{miss}$ appliqué à $\delta_s$ de façon à obtenir un spectre de puissance à une dimension $P^{1D}$ en accord avec les données. Nous présentons donc maintenant la mesure de ce spectre de puissance sur les raw mocks. Pour chaque forêt, nous appliquons une transformation de Fourier au champ $\delta_F$ afin d'obtenir le champ $\delta_k$. Puis, le spectre de puissance de cette forêt est obtenu comme
+Comme expliqué dans le chapitre précédent, nous ajustons le spectre de puissance $P_{miss}$ appliqué à $\delta_s$ de façon à obtenir un spectre de puissance à une dimension $P^{\mathrm{1D}}$ en accord avec les données. Nous présentons donc maintenant la mesure de ce spectre de puissance sur les raw mocks. Pour chaque forêt, nous appliquons une transformation de Fourier au champ $\delta_F$ afin d'obtenir le champ $\delta_k$. Puis, le spectre de puissance de cette forêt est obtenu comme
 \begin{equation}
-  P^{1D}(k) = | \delta_k^2 | \; .
+  P^{\mathrm{1D}}(k) = | \delta_k^2 | \; .
 \end{equation}
 Nous répétons cette procédure pour toutes les forêts, puis le spectre de puissance total est obtenu comme la moyenne du spectre de puissance de chaque forêt.
 
 En ce qui concerne les données et les cooked mocks, la mesure du spectre de puissance à une dimension est plus complexe. Un certain nombre d'effets liés à la mesure doivent être pris en compte. En particulier, le bruit et la résolution doivent être estimés et pris en compte pour ne pas fausser l'estimation du spectre de puissance. Cette analyse est détaillée dans~\textcite{Chabanier2018}.
 
 \subsection{La fonction de corrélation à une dimension}
-
-Important / nécessaire ? Oui : métaux ; dans ce cas là, il faut la calculer sur eboss-0.3
+\textbf{
+  Nous présentons maintenant le calcul de la fonction de corrélation à une dimension. Similairement au $P^{\mathrm{1D}}$, cette fonction de corrélation est calculée en considérant uniquement les paires de pixels appartenant à la même forêt.
+  Elle est donnée par
+  \begin{equation}
+    \xi^{\mathrm{1D}}_A  = \frac{
+      \sum\limits_{(i,j)\in A} w_i w_j \delta_i \delta_j
+    }{
+      \sum\limits_{(i,j)\in A} w_i w_j
+    }
+    \; ,
+  \end{equation}
+  où $w_i$ est le poids associé au pixel $i$. Ces poids sont définis dans l'équation~\ref{eq:weights2}
+  La fonction de corrélation à une dimension $\xi^{\mathrm{1D}}$ permet de mettre en avant les autres absorbeurs présents dans le champ d'absorption utilisé pour calculer le champ $\delta_F$. Ces absorbeurs produisent des pics dans la fonction de corrélation à une dimension. Ces pics sont aussi visibles dans les bins le long de la ligne de visée de la fonction de corrélation à trois dimensions (voir l'explication de la matrice des métaux, section~\ref{subsec:model_donnees}). 
+  Elle est très affectée par les distorsions dues à l'ajustement du continu \#prov
+}
 
 
 
@@ -222,7 +235,7 @@ $P_{\mathrm{smooth}}$ est le spectre de puissance linéaire, sans les BAO. Il es
 Le spectre de puissance $P_{\mathrm{peak}}$ est alors obtenu comme la différence $P_{\mathrm{L}} - P_{\mathrm{smooth}}$ : il contient uniquement les oscillations dues aux BAO présentes dans le spectre de puissance linaire.
 Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$  \autocite{eisenstein_robustness_2007}.
 Le terme $F_{\mathrm{NL}}$ prend en compte les non linéarités aux petites échelles. Nous distinguons $F_{\mathrm{NL}}^{\mathrm{auto}}$ et $F_{\mathrm{NL}}^{\mathrm{cross}}$. Pour l'auto-corrélation, les effets non linéaires proviennent de l'élargissement thermique, des vitesses particulières et de la croissance des structures non linéaire.
-Comme lors de la modélisation du $P^{1D}$, nous utilisons le modèle décrit dans \textcite{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section ``Planck'' de la table 7 de \textcite{Arinyo-i-Prats2015}.
+Comme lors de la modélisation du $P^{\mathrm{1D}}$, nous utilisons le modèle décrit dans \textcite{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section ``Planck'' de la table 7 de \textcite{Arinyo-i-Prats2015}.
 Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéaires des quasars. Cet effet est modélisé par une lorrentzienne :
 \begin{equation}
   F_{\mathrm{NL}}^{\mathrm{cross}}(\kpar{}) = \frac{1}{1 + (\kpar{} \sigma_v)^2} \; ,
@@ -551,6 +564,8 @@ Cette section présente l'analyse des mocks eboss-0.3. Ces mocks sont obtenus co
 \#prov montrer le P1D ?
 Pourquoi pas, pour montrer les metaux ? Ou alors le xi1d
 
+\subsubsection{La fonction de corrélation à une dimension}
+Comparer les mocks et les données
 
 
 % \bibliography{../source/library}

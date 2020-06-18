@@ -19,7 +19,7 @@ Dans ce chapitre, nous présentons la construction des \emph{mocks} : des spectr
 sont corrélées entre elles et avec le champ de quasars sous-jacent.
 %  et le champ de quasars possèdent les bonnes fonctions d'auto corrélation et de corrélation croisée.
 % des simulations qui visent à reproduire les données d'eBOSS et de DESI. Ces mocks, nommés \texttt{SaclayMocks} et présentés dans \textcite{CITE:mocks}, sont le c{\oe}ur de ce manuscrit.
-Ces mocks visent à reproduire les données d'eBOSS et de DESI. Ils sont nommés \texttt{SaclayMocks} et présentés dans \textcite{CITE:mocks}.
+Ces mocks visent à reproduire les données d'eBOSS et de DESI. Ils sont nommés \texttt{SaclayMocks} et présentés dans \textcite{prov}.
 Le code est écrit en Python\footnote{https://www.python.org/} et se trouve en accès libre sur GitHub\footnote{https://github.com/igmhub/SaclayMocks}. L'utilisation de ces mocks et leur validation seront présentés dans les chapitres suivants.
 
 \section{Objectifs des mocks}
@@ -37,7 +37,7 @@ Les mocks sont donc utilisés afin
 La production et l'analyse d'un grand nombre de mocks permet de répondre précisément à ces questions. Ces mocks sont donc nécessaires pour pouvoir valider l'analyse menée sur les données.
 
 \paragraph{}
-Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \autocite{CITE:dr16}, et seront utilisés dans l'analyse \lya{} de DESI.
+Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \autocite{prov}, et seront utilisés dans l'analyse \lya{} de DESI.
 L'objectif de ces mocks est donc de répliquer au mieux les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\kpc}. Les mocks nécessitent donc de reproduire un volume immense, avec une bonne résolution.
 Les simulations dites \emph{N-corps} sont des simulations qui traitent le problème à N corps.
 % Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$).
@@ -90,11 +90,11 @@ Dans la suite nous décrivons les différentes boîtes nécessaires à la constr
 \label{subsubsec:boiteqso}
 Afin de construire un relevé de quasars corrélés, nous tirons les quasars selon le champ dans l'espace réel $\delta_{\textsc{QSO}}$, construit à partir de $\delta_k$. Une première solution serait de tirer les quasars dans les voxels dont le champ $\delta_{\textsc{QSO}}$ est supérieur à un certain seuil. Cette solution produit une fonction de corrélation correcte aux grandes échelles, mais pas aux petites.
 % En effet, comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière, qui se manifeste aux petites échelles.
-En effet, comme montré dans \textcite{prov_cite}, les objets tirés aux endroits où la densité est supérieure à un certain seuil suivent la fonction de corrélation de la densité sous-jacente, avec un biais qui dépend du seuil choisi, si et seulement si la fonction de corrélation est petite devant 1. La fonction de corrélation ainsi obtenue est correcte, sauf pour les petites échelles pour lesquelles la fonction de corrélation est importante.
+En effet, comme montré dans \textcite{prov}, les objets tirés aux endroits où la densité est supérieure à un certain seuil suivent la fonction de corrélation de la densité sous-jacente, avec un biais qui dépend du seuil choisi, si et seulement si la fonction de corrélation est petite devant 1. La fonction de corrélation ainsi obtenue est correcte, sauf pour les petites échelles pour lesquelles la fonction de corrélation est importante.
 % Plutôt que de modéliser ces non linéarités, nous considérons une seconde solution : nous considérons que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
 Une solution alternative consiste à considérer que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
 % Comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière. Plutôt que de modéliser ces non linéaritées, nous considérons que les quasars suivent une distribution log-normale.
-Ce choix est souvent fait pour simuler des relevés de galaxies \autocite{agrawal_generating_2017}, et est en accord avec ce qui est observé dans les données \autocite{Clerkin2016}.
+Ce choix est souvent fait pour simuler des relevés de galaxies \autocite{Agrawal2017}, et est en accord avec ce qui est observé dans les données \autocite{Clerkin2016}.
 % Ainsi, au lieu de placer les quasars dans les voxels qui possèdent une densité plus élevé qu'un certain seuil, nous tirons les quasars dans chaque voxel avec une probabilité
 % Ainsi, dans chaque voxel, les quasars sont tirés avec une probabilité
 Nous optons donc pour cette seconde solution. Ainsi, les quasars sont tirés dans chaque voxel avec une probabilité
@@ -110,7 +110,7 @@ Comme montré par \textcite{coles_lognormal_1991}, afin que les quasars suivent 
 \end{equation}
 Nous verrons section~\ref{subsec:qso} que, de manière à obtenir un relevé synthétique de quasars dont le biais dépend de $z$, nous utilisons trois boîtes qui suivent des distributions log-normales, à des redshifts différents. La probabilité pour tirer les quasars dépend de l'interpolation entre ces 3 boîtes.
 % Ces champs sont construits aux redshits $z_1 = \num{1.9}$, $z_2 = \num{2.75}$, et $z_3 = \num{3.6}$.
-Pour chacune des boîtes, nous partons du spectre de puissance de la matière $P_{matière}(k)$ à $z=0$, fourni par Camb \autocite{Lewis1999}. Nous multiplions ensuite ce spectre de puissance par $(b_{\textsc{QSO}}(z_i) G(z_i))^2$, où $i \in [1\, ; 2\, ; 3]$. A l'aide de la transformation de Fourier, nous calculons la fonction de corrélation $\xi_{i}(r)$. Puis, nous déterminons le spectre de puissance $P_{\textsc{QSO},i}(k)$, à appliquer à la boîte $\delta_k$, comme la transformée de Fourier de $\xi_{\textsc{QSO},i}(r) = \ln(1+\xi_i(r))$ (équation~\ref{eq:cf_tf2}).
+Pour chacune des boîtes, nous partons du spectre de puissance de la matière $P_{matière}(k)$ à $z=0$, fourni par Camb~\autocite{Lewis1999}. Nous multiplions ensuite ce spectre de puissance par $(b_{\textsc{QSO}}(z_i) G(z_i))^2$, où $i \in [1\, ; 2\, ; 3]$. A l'aide de la transformation de Fourier, nous calculons la fonction de corrélation $\xi_{i}(r)$. Puis, nous déterminons le spectre de puissance $P_{\textsc{QSO},i}(k)$, à appliquer à la boîte $\delta_k$, comme la transformée de Fourier de $\xi_{\textsc{QSO},i}(r) = \ln(1+\xi_i(r))$ (équation~\ref{eq:cf_tf2}).
 Une fois les trois spectres de puissances $P_{\textsc{QSO},i}(k)$ obtenus, nous construisons 3 boîtes
 \begin{equation}
   \delta_{k,i}(k)  = \delta_k(k) \sqrt{\frac{P_{\textsc{QSO},i}(k)}{V_{cell}}} \; ,
@@ -584,7 +584,7 @@ Cependant, le champ d'absorption $F$ ne possède pas de RSD pour l'instant, car 
 Initiallement, nous pensions ajouter les RSD au niveau du spectre de puissance : multiplier le GRF intial $\delta_k$ par $(1 + \beta \mu^2)P_{matière}(k, \mu)$, avec $\mu = k_z / k$.
 Mais cette solution n'est pas envisageable car les lignes de visées ne sont pas parallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), et nous ne pouvons donc pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
 Une autre solution est d'utiliser le champ de vitesse défini dans l'équation~\ref{eq:v1}. Chaque pixel d'absorption est alors déplacé proportionnellement à la vitesse particulière du gaz dans la cellule considérée. Puis l'absorption est modifiée en fonction de la différence des vitesses des pixels voisins. En effet, si cette différence est non nulle, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque pixel.
-Cette méthode pour ajouter les RSD dans les mocks \lya{} est la méthode choisie par \textcite{le_goff_simulations_2011} et \textcite{Farr2019}.
+Cette méthode pour ajouter les RSD dans les mocks \lya{} est la méthode choisie par \textcite{LeGoff2011} et \textcite{Farr2019}.
 Ce n'est pas la solution que nous utilisons ici. Afin d'inclure les RSD dans le champ d'absorption $F$, nous utilisons le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}.
 \textbf{Contrairement à la méthode qui utilise le champ de vitesse, la solution qui ajoute le champ $\eta_{\parallel}$ au champ $\delta_l$ permet de prédire la fonction de corrélation des mocks. Nous décrivons cette prédiction dans la section suivante.}
 % Cependant, du fait que les lignes de visées ne sont pas parrallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), nous ne pouvons pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
@@ -677,7 +677,7 @@ Les $P_l(\mu)$ sont les polynômes de Legendre :
   P_0(\mu) = 1 \hspace{0.2cm} ; \hspace{0.8cm} P_2(\mu) = \frac{1}{2} (3 \mu^2 - 1) \hspace{0.2cm} ; \hspace{0.8cm}   P_4(\mu) = \frac{1}{8} (35 \mu^4 - 30 \mu^2 + 3) \; ,
 \end{equation}
 et $\beta$ est le paramètre RSD du \lya{}.
-Ces équations sont tirés de la publication de \textcite{hamilton_measuring_1992}.
+Ces équations sont tirés de la publication de \textcite{Hamilton1992}.
 Afin d'obtenir la prédiction $\xi_F^{pred}(r, \mu)$, nous commençons par calculer  le spectre de puissance que suit la boîte $\delta_l$ :
 \begin{equation}
   P(k) = W^2(k)P_{matière}(z=0) \; ,
@@ -705,7 +705,7 @@ Les HCD ont un effet important sur les fonctions de corrélation, nous simulons 
 % Nous commençons donc avec le champ de densité $\delta_l$ interpolé le long de la ligne de visée. Pour chaque ligne de visée,
 \textbf{Contrairement aux quasars, les HCD sont tirés selon les pics du champ $\delta_l$ : nous identifions les pixels dans lesquelles $\delta_l$ est au dessus d'un certain seuil, puis les HCD sont tirés dans ces pixels selon une loi de Poisson.}
 Le seuil $\nu$ est défini en fonction du biais souhaité pour les HCD.
-L'appendice A de \textcite{font-ribera_effect_2012} relie le rapport $b_{\nu} / b_g$ au seuil $\nu$ :
+L'appendice A de \textcite{Font-Ribera2012a} relie le rapport $b_{\nu} / b_g$ au seuil $\nu$ :
 \begin{equation}
   \label{eq:biais_seuil}
   \left(\frac{b_{\nu}}{b_g}\right)^2 = \frac{p_g(\nu)}{\left( \int_{\nu}^{\infty} d\delta_g p_g(\delta_g) \right)^2} \int_{\nu}^{\infty} dy_1 p_g(y_1) y_1 \; ,
@@ -906,7 +906,7 @@ Il est défini comme
 \begin{equation}
   P(k) = b_{\mathrm{Ly}\alpha}^2 (1 + \beta_{\mathrm{Ly}\alpha} \mu_k^2)^2 P_{\mathrm{L}}(k) D(k, \mu) \; ,
 \end{equation}
-où $P_{\mathrm{L}}$ est le spectre de puissance linéaire, donné par Camb, et $D(k,\mu)$ représente les déviations de la théorie linéaire. Le terme $D(k,\mu)$ tend donc vers $1$ à petit $k$. La forme choisie dans \textcite{Arinyo-i-Prats2015} diffère de celle utilisée dans \textcite{mcdonald_toward_2003}. Cette nouvelle forme permet d'obtenir le bon comportement à petit $k$. Aussi, elle nécessite l'ajustement de moins de paramètres.
+où $P_{\mathrm{L}}$ est le spectre de puissance linéaire, donné par Camb, et $D(k,\mu)$ représente les déviations de la théorie linéaire. Le terme $D(k,\mu)$ tend donc vers $1$ à petit $k$. La forme choisie dans \textcite{Arinyo-i-Prats2015} diffère de celle utilisée dans \textcite{McDonald2003}. Cette nouvelle forme permet d'obtenir le bon comportement à petit $k$. Aussi, elle nécessite l'ajustement de moins de paramètres.
 $D(k,\mu)$ est donc défini comme
 \begin{equation}
   \label{eq:p1d_prats}
@@ -974,7 +974,7 @@ Une fois que cette procédure itérative a convergé dans les cinqs bins en reds
   \label{fig:params}
 \end{figure}
 % Concernant les cinqs spectres de puissance $P_{miss}(k)$ construits précédemment dans chaque bin en redshift, nous créons une grille $(k, z)$ sur laquelle nous interpolons cubiquement de ces spectres de puissance
-En ce qui concerne les cinqs spectres de puissance $P_{miss}(k)$ construits précédemment dans chaque bin en redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$. Puis, $P_{miss}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{miss}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{miss}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{miss}(k)$ pour différentes valeurs de $z$. 
+En ce qui concerne les cinqs spectres de puissance $P_{miss}(k)$ construits précédemment dans chaque bin en redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$. Puis, $P_{miss}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{miss}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{miss}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{miss}(k)$ pour différentes valeurs de $z$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{p1dmiss}
@@ -991,10 +991,10 @@ Le résultat de la procédure d'ajustement décrite précédemment a été utili
 \label{sec:quickquasars}
 %Les mocks décrits précédemment produisent un relevé de quasars avec, pour chaque quasar, une forêt d'absorption $F$ variant entre 0 et 1. Afin de simuler complètement la chaîne d'analyse, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres simulés. Le code utilisé est le code \texttt{quickquasars}, il est décrit dans \textcite{prov:Alma in prep}. Ce code a pour but de reproduire les données prises avec eBOSS et DESI. Le code simule donc les différents effets propres à chaque instrument comme par exemple la résolution des spectrographes ou le bruit instrumental. Il simule aussi les effets astrophysiques, comme la distribution en magnitude des quasars ou les erreurs de mesure de redshift de ces derniers.
 
-Une fois les mocks produits, l'idée est d'inclure les forêts simulés dans des spectres synthétiques. En effet, à ce stade nous disposons uniquement d'un relevé de quasars, et pour chacun d'entre deux, une forêt contenant le champ d'absorption $F$ variant entre 0 et 1. Ainsi, afin de simuler complètement les données, nous devons ajouter un continuum à ces forêts, puis les inclures dans des spectres synthétiques. Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov alma in prep}. Ce code utilise 
+Une fois les mocks produits, l'idée est d'inclure les forêts simulés dans des spectres synthétiques. En effet, à ce stade nous disposons uniquement d'un relevé de quasars, et pour chacun d'entre deux, une forêt contenant le champ d'absorption $F$ variant entre 0 et 1. Ainsi, afin de simuler complètement les données, nous devons ajouter un continuum à ces forêts, puis les inclures dans des spectres synthétiques. Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. Ce code utilise 
 
 
 
 % \bibliography{../source/library}
-% \printbibliography
+\printbibliography
 \end{document}
