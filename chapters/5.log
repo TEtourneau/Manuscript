@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 JUN 2020 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 JUN 2020 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2906,17 +2906,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Warning: Reference `eq:weights2' on page 4 undefined on input line 151.
 
 
-LaTeX Warning: Reference `eq:deltaF3' on page 4 undefined on input line 157.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 154.
 
 
-LaTeX Warning: Reference `subsec:projdelta' on page 4 undefined on input line 1
-57.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\times' on input line 154.
 
 
-LaTeX Warning: Reference `eq:deltaF3' on page 4 undefined on input line 159.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 154.
 
 
 LaTeX Warning: Reference `eq:deltaF3' on page 4 undefined on input line 161.
+
+
+LaTeX Warning: Reference `subsec:projdelta' on page 4 undefined on input line 1
+61.
+
+
+LaTeX Warning: Reference `eq:deltaF3' on page 4 undefined on input line 163.
+
+
+LaTeX Warning: Reference `eq:deltaF3' on page 4 undefined on input line 165.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2926,13 +2938,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 
-LaTeX Warning: Reference `eq:proj1' on page 5 undefined on input line 167.
+LaTeX Warning: Reference `eq:proj1' on page 5 undefined on input line 171.
 
 
-LaTeX Warning: Reference `prov' on page 5 undefined on input line 180.
+LaTeX Warning: Reference `prov' on page 5 undefined on input line 184.
 
 
-LaTeX Warning: Reference `prov' on page 5 undefined on input line 185.
+LaTeX Warning: Reference `prov' on page 5 undefined on input line 189.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2942,10 +2954,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 
-LaTeX Warning: Reference `eq:kaiser3' on page 6 undefined on input line 233.
+LaTeX Warning: Reference `eq:kaiser3' on page 6 undefined on input line 237.
 
 
-LaTeX Warning: Reference `eq:p1d_prats' on page 6 undefined on input line 242.
+LaTeX Warning: Reference `eq:p1d_prats' on page 6 undefined on input line 246.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2962,17 +2974,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 
-LaTeX Warning: Reference `eq:wieghts2' on page 8 undefined on input line 276.
+LaTeX Warning: Reference `eq:wieghts2' on page 8 undefined on input line 280.
 
 
-LaTeX Warning: Reference `prov' on page 8 undefined on input line 277.
+LaTeX Warning: Reference `prov' on page 8 undefined on input line 281.
 
 
-LaTeX Warning: Reference `eq:b_qso' on page 8 undefined on input line 287.
+LaTeX Warning: Reference `eq:b_qso' on page 8 undefined on input line 291.
 
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 287.
+(Font)              using `T1/lmr/bx/n' instead on input line 291.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2983,11 +2995,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [8]
 
 LaTeX Warning: Reference `subsec:contaminants' on page 9 undefined on input lin
-e 329.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 350.
+e 333.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2997,8 +3005,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 354.
+
+
 LaTeX Warning: Reference `sec:reduction_donnees' on page 10 undefined on input 
-line 377.
+line 381.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3016,25 +3028,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [11]
 
 LaTeX Warning: Reference `sec:quickquasars' on page 12 undefined on input line 
-443.
+447.
 
 
-LaTeX Warning: Reference `prov' on page 12 undefined on input line 454.
+LaTeX Warning: Reference `prov' on page 12 undefined on input line 458.
 
 
-LaTeX Warning: Reference `prov' on page 12 undefined on input line 465.
+LaTeX Warning: Reference `prov' on page 12 undefined on input line 469.
 
 
-LaTeX Warning: Reference `prov' on page 12 undefined on input line 466.
+LaTeX Warning: Reference `prov' on page 12 undefined on input line 470.
 
 
-LaTeX Warning: Reference `prov' on page 12 undefined on input line 467.
+LaTeX Warning: Reference `prov' on page 12 undefined on input line 471.
 
 
-LaTeX Warning: Reference `prov' on page 12 undefined on input line 468.
+LaTeX Warning: Reference `prov' on page 12 undefined on input line 472.
 
 
-LaTeX Warning: Reference `prov' on page 12 undefined on input line 468.
+LaTeX Warning: Reference `prov' on page 12 undefined on input line 472.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3044,16 +3056,50 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 
-LaTeX Warning: Reference `prov' on page 13 undefined on input line 475.
+LaTeX Warning: Reference `prov' on page 13 undefined on input line 479.
 
 
-LaTeX Warning: Reference `prov' on page 13 undefined on input line 481.
+LaTeX Warning: Reference `prov' on page 13 undefined on input line 485.
 
 
-LaTeX Warning: Reference `prov' on page 13 undefined on input line 482.
+LaTeX Warning: Reference `prov' on page 13 undefined on input line 486.
 
 
-LaTeX Warning: Reference `subsec:qso' on page 13 undefined on input line 483.
+LaTeX Warning: Reference `subsec:qso' on page 13 undefined on input line 487.
+
+
+LaTeX Warning: Reference `prov' on page 13 undefined on input line 499.
+
+<../figures/mocks_ana/auto_qso_4bins.png, id=225, 869.2475pt x 676.5275pt>
+File: ../figures/mocks_ana/auto_qso_4bins.png Graphic file (type png)
+
+<use ../figures/mocks_ana/auto_qso_4bins.png>
+Package pdftex.def Info: ../figures/mocks_ana/auto_qso_4bins.png used on input 
+line 504.
+(pdftex.def)             Requested size: 434.62268pt x 338.26291pt.
+
+
+LaTeX Warning: Reference `eq:b_qso' on page 13 undefined on input line 513.
+
+
+LaTeX Warning: Reference `eq:par_cosmo' on page 13 undefined on input line 516.
+
+
+<../figures/mocks_ana/bias_auto_qso.png, id=230, 1098.1025pt x 407.5225pt>
+File: ../figures/mocks_ana/bias_auto_qso.png Graphic file (type png)
+
+<use ../figures/mocks_ana/bias_auto_qso.png>
+Package pdftex.def Info: ../figures/mocks_ana/bias_auto_qso.png used on input l
+ine 519.
+(pdftex.def)             Requested size: 439.23322pt x 163.0061pt.
+
+<../figures/mocks_ana/bias_auto_qso_fixed_f.png, id=231, 1098.1025pt x 407.5225
+pt>
+File: ../figures/mocks_ana/bias_auto_qso_fixed_f.png Graphic file (type png)
+ <use ../figures/mocks_ana/bias_auto_qso_fixed_f.png>
+Package pdftex.def Info: ../figures/mocks_ana/bias_auto_qso_fixed_f.png used on
+ input line 525.
+(pdftex.def)             Requested size: 439.23322pt x 163.0061pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3068,17 +3114,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[14 <../figures/mocks_ana/auto_qso_4bins.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15] [16
+[15 <../figures/mocks_ana/bias_auto_qso.png> <../figures/mocks_ana/bias_auto_qs
+o_fixed_f.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17] [18
 
 ]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 579--579
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 611--611
 | []| 
  []
 
@@ -3087,14 +3148,14 @@ Package minitoc Info: I0009
 (minitoc)             Creating the 5.maf file.
 \openout5 = `5.maf'.
 
-[17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 579.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 579.
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 611.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 611.
  (./5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 579.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 579.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 611.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 611.
 Package rerunfilecheck Info: File `5.out' has not changed.
-(rerunfilecheck)             Checksum: 110B31E34F26990759B14A4E9F68D15B;1260.
+(rerunfilecheck)             Checksum: F297A88D5C63C79534A3A1A8F2D43CA7;1342.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3107,10 +3168,10 @@ Package logreq Info: Writing requests to '5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35513 strings out of 492995
- 646429 string characters out of 6132704
- 1165229 words of memory out of 5000000
- 38286 multiletter control sequences out of 15000+600000
+ 35542 strings out of 492995
+ 647260 string characters out of 6132704
+ 1164343 words of memory out of 5000000
+ 38304 multiletter control sequences out of 15000+600000
  151527 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,17n,56p,10403b,1970s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3138,10 +3199,10 @@ lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb><
 17/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/public/lm/lmtt10.pfb>
-Output written on 5.pdf (17 pages, 395037 bytes).
+Output written on 5.pdf (19 pages, 929679 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
- 103 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 406 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
+ 109 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 

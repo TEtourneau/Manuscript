@@ -8,7 +8,7 @@
 \begin{document}
 %%
 
-\graphicspath{ {../figures/mocks/} }
+\graphicspath{ {../figures/mocks_ana/} }
 
 \chapter{Validation des mocks}
 \minitoc
@@ -19,7 +19,7 @@
 \textbf{Ce chapitre a pour vocation de présenter l'analyse menée sur les mocks, afin de valider leur construction et le choix des différents paramètres.
 Nous présentons d'abord les estimateurs des diverses fonctions de corrélations, puis les modèles ajustés sur celles-ci.
 Nous donnons premièrement le modèle ajusté sur les données et présenté dans \textcite{prov}, puis le modèle modifié ajusté sur les mocks.
-Enfin, nous présenton l'analyse des 100 réalisations de mocks produites. L'analyse des données est présentée dans le chapitre suivant.
+Enfin, nous présentons l'analyse des 100 réalisations de mocks produites. L'analyse des données est présentée dans le chapitre suivant.
 Ces analyses sont produites avec le code \texttt{picca}. Ce code permet de calculer les champs $\delta$, les fonctions de corrélations, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.}
 
 \section{Les estimateurs}
@@ -149,6 +149,10 @@ En ce qui concerne les données et les cooked mocks, la mesure du spectre de pui
   La fonction de corrélation à une dimension $\xi^{\mathrm{1D}}$ permet de mettre en avant les autres absorbeurs présents dans le champ d'absorption utilisé pour calculer le champ $\delta_F$. Ces absorbeurs produisent des pics dans la fonction de corrélation à une dimension. Ces pics sont aussi visibles dans les bins le long de la ligne de visée de la fonction de corrélation à trois dimensions (voir l'explication de la matrice des métaux, section~\ref{subsec:model_donnees}). 
   Elle est très affectée par les distorsions dues à l'ajustement du continu \#prov
 }
+
+
+\subsection{L'auto-corrélation QSO$\times$QSO}
+To write
 
 
 
@@ -492,10 +496,38 @@ oui
 
 
 \subsubsection{L'auto-corrélation QSO$\times$QSO}
+Nous présentons ici la mesure de l'auto-corrélation QSO$\times$QSO, estimée grâce à l'équation~\ref{prov}.
+Comme pour les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO, la fonction de corrélation QSO$\times$QSO est estimée puis ajustée dans les quatre bins en redshift $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$.
+Nous estimons la corrélation de dix réalisations des raw mocks, puis nous calculons et ajustons l'addition de ces dix fonctions de corrélation. La figure~\ref{fig:auto_qso_4bins} montre l'addition des dix fonctions de corrélation et leur modèle ajusté dans chaque bin en redshift. Pour chacun des bins, la fonction de corrélation est montrée dans trois bins en $\mu$.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{auto_qso_4bins}
+  \caption{bla}
+  \label{fig:auto_qso_4bins}
+\end{figure}
+Le modèle utilisé pour ajuster la corrélation QSO$\times$QSO est le même que celui utilisé pour ajuster la corrélation \lya{}$\times$\lya{}, à la différence que nous n'incluons pas le terme représentant le lissage gaussien. % Le biais et le paramètre RSD ajustés donnent les paramètres des quasars. Ils sont représentés sur la figure~\ref{prov}.
+Dans le cas de la corrélation QSO$\times$QSO, contrairement au cas du \lya{}, nous avons la relation $b_{\textsc{QSO}} \beta_{\textsc{QSO}} = f$, où $f$ est le taux de croissance des structures. Lors de l'ajustement, nous fixons donc le paramètre $b_{\eta, \textsc{QSO}} = 1$, et nous ajustons les paramètres $\beta_{\textsc{QSO}}$ et $f$.
 
-\#prov montrer l'auto des QSO des raw mocks ?
-oui
+Sur la figure~\ref{fig:auto_qso_4bins}, nous pouvons remarquer que les mocks sont en très bon accord avec le modèle ajusté par picca. Une légère différence est visible à petit $r$. Cette différence dépend de $\mu$ : l'amplitude est trop faible le long de la ligne de visée, et trop importante perpendiculairement à cette dernière. Ceci semble provenir des RSD aux petites échelles.
+La figure~\ref{fig:bias_auto_qso} montre $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$ obtenus avec l'ajustement de l'addition des dix fonctions de corrélation.
+La ligne bleue donne la paramétrisation utilisée dans les mocks (équation~\ref{eq:b_qso}).
+Pour les petits redshifts, $b_{\textsc{QSO}}$ est trop faible et $\beta_{\textsc{QSO}}$ est trop grand grand.
+Cependant, les valeurs ajustées de $\beta_{\textsc{QSO}}$ et $f$ sont corrélées à plus de \SI{99}{\percent}. Ceci vient du fait que, pour les quasars, le paramètre RSD est faible. Il y a donc peu de différences entre la corrélation le long de la ligne de visée et perpendiculairement à cette dernière.
+Lorsque nous fixons $f$ à ce qui est donné par la cosmologie utilisée (équation~\ref{eq:par_cosmo}), nous obtenons un biais et un paramètre RSD en très bon accord avec la paramétrisation utilisée. La figure~\ref{fig:bias_auto_qso_fixed_f} montre $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$ obtenus avec un tel ajustement.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{bias_auto_qso}
+  \caption{bla}
+  \label{fig:bias_auto_qso}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{bias_auto_qso_fixed_f}
+  \caption{bla}
+  \label{fig:bias_auto_qso_fixed_f}
+\end{figure}
 
+% La mesure de $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$ est montrée sur la figure~\ref{prov}.
 
 \subsubsection{La corrélation croisée \lya$\times$DLA}
 
