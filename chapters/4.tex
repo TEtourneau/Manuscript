@@ -899,7 +899,7 @@ En ce qui concerne les paramètres $a$ et $b$, ils sont ajustés afin de retrouv
 
 Une fois les paramètres $a$, $b$ et $c$ choisis, nous déterminons le spectre de puissance $P_{s}$ à appliquer à $\delta_{k,s}$ afin d'obtenir le bon $P_{mock}^{\mathrm{1D}}$.
 % Il nous faut $P_{s}$ avant de calculer la prédiction car nous avons besoin de connaître $\sigma_g$.
-Nous avons besoin de $P_{s}$ car il nous faut connaître $\sigma_g$, qui lui même requiert $\sigma_s$, dans chaque bin en redshift afin de calculer la prédiction.
+Nous avons besoin de $P_{s}$ car il nous faut connaître $\sigma_g$, qui lui même requiert $\sigma_s$, pour chaque valeur du redshift afin de calculer la prédiction.
 La variance du champ $g = \delta_l + \delta_s + c(z)\eta_{\parallel}$ est donnée par
 \begin{equation}
   \label{eq:sigma_g}
@@ -926,8 +926,8 @@ La fonction ajustée aux données est définie comme
   f(k) = \exp(- a k + b + \frac{c}{k + d}) \times f_{\mathrm{Si}}(k) \; ,
 \end{equation}
 où $a$, $b$, $c$ et $d$ sont quatres paramètres à ajuster.
-La fonction $f_{\mathrm{Si}}$ prend en compte les oscillations dues au silicium. Une fois la fonction $f$ de l'équation~\ref{eq:p1d_data} ajustée sur les données, nous utilisons comme modèle pour le spectre de puissance à une dimension la fonction $f$ sans la contribution du silicium $f_{\mathrm{Si}}$.
-La forme choisie permet d'avoir $\log(P^{\mathrm{1D}}_{modèle})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \autocite{Arinyo-i-Prats2015}.}
+La fonction $f_{\mathrm{Si}}$ prend en compte les oscillations dues au silicium. Une fois la fonction $f$ de l'équation~\ref{eq:p1d_data} ajustée sur les données, nous utilisons comme modèle pour le spectre de puissance à une dimension la fonction $f$ sans la contribution du silicium $f_{\mathrm{Si}}$. Ceci nous permet de nous affranchir des oscillations dues au silicium dans notre modèle.
+La forme choisie pour $f$ permet d'avoir $\log(P^{\mathrm{1D}}_{modèle})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \autocite{Arinyo-i-Prats2015}.}
 % L'ajustement est fait dans les cinqs bins en redshift $z_1$, $z_2$, $z_3$, $z_4$ et $z_5$.
 % L'ajustement est fait dans les bins en redshift \num{2.2} ; \num{2.4} ; \num{2.6} ; \num{2.8} ; \num{3.0} ; \num{3.2} ; \num{3.4} et \num{3.6}.
 % Du fait de la résolution $d_{pix} = \SI{0.2}{\perh\Mpc}$ des spectres simulés, nous avons besoin de calculer le  $P_{s}$ jusqu'à $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$.
@@ -954,10 +954,10 @@ avec
 \end{equation}
 Les termes $q_1 \Delta^2(k)$ et $q_2 \Delta^4(k)$ représente l'augmentation de puissance aux petites échelles due aux non-linéarités. L'ajustement que nous utilisons force $q_2 = 0$. Les autres paramètres ajustés sont donnés dans la section ``Planck'' de la table 7 de \textcite{Arinyo-i-Prats2015}.
 % Le modèle est calculé pour $z = 2.4$.
-Puis, dans chaque bin en redshift, la forme ajustée aux données et définie dans l'équation~\ref{eq:p1d_data} est prolongée de $k = \SI{0.2}{\h\per\Mpc}$ jusqu'à $k = 0$ par le modèle donné dans l'équation~\ref{eq:p1d_prats}.
+Puis, pour chaque valeur du redshift, la forme ajustée aux données et définie dans l'équation~\ref{eq:p1d_data} est prolongée de $k = \SI{0.2}{\h\per\Mpc}$ jusqu'à $k = 0$ par le modèle donné dans l'équation~\ref{eq:p1d_prats}.
 % Ce modèle est multiplié par une constante de façon à ce que ce modèle multiplié par cette constante soit égal à l'ajustement fait sur les données à $k = \SI{0.2}{\h\per\Mpc}$.
-Pour ce faire, nous calculons le modèle à $z = \num{2.4}$, puis nous le multiplions par une constante, dépendant du bin en redshift, de façon à ce que le prolongement en $k = \SI{0.2}{\h\per\Mpc}$ soit continu.
-La figure~\ref{fig:p1d_data} montre le modèle ainsi construit, avec les données de \#prov.
+Pour ce faire, nous calculons le modèle à $z = \num{2.4}$, puis nous le multiplions par une constante, dépendant de la valeur du redshift, de façon à ce que le prolongement en $k = \SI{0.2}{\h\per\Mpc}$ soit continu.
+\textbf{La figure~\ref{fig:p1d_data} montre le modèle ainsi construit, avec les données de \#prov.}
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{p1d_model_data}
@@ -992,12 +992,12 @@ Afin de corriger ces différences, nous ajustons itérativement la forme de $P_{
       }
   \; .
 \end{equation}
-\textbf{Quelques itérations sont suffisantes pour obtenir un $P_{s}$ qui donne un $P^{\mathrm{1D}}_{mock}$ en accord avec les données. Nous en effectuons dix pour chaque bin en redshift.}
+\textbf{Quelques itérations sont suffisantes pour obtenir un $P_{s}$ qui donne un $P^{\mathrm{1D}}_{mock}$ en accord avec les données. Nous en effectuons dix pour chaque valeur du redshift.}
 
 % A ce stade, nous disposons des informations nécessaires pour générer la prédiction. Nous générons donc la prédiction, puis nous l'ajustons avec le code \picca{}.
 \textbf{A ce stade, nous disposons des informations nécessaires pour calculer la prédiction. Afin de mesurer les paramètres \lya{} prédits, nous générons une pseudo-fonction de corrélation qui suit la prédiction calculée avec le jeu de paramètres. Nous ajustons ensuite cette pseudo-fonction de corrélation avec le code picca, comme nous le ferions avec les mocks.}
 \textbf{
-Comme nous le verrons dans le chapitre~\ref{prov}, les paramètres \lya{} sont corrélés entre eux.
+Dans le chapitre~\ref{prov}, nous verrons que les paramètres \lya{} sont corrélés entre eux.
 Ainsi, afin de comparer au mieux la prédiction avec les données, plutôt que de mesurer les paramètres $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$, nous mesurons les paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$.
 Le biais effectif $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ est relié au biais et au paramètre RSD du \lya{} par
 \begin{equation}
@@ -1015,12 +1015,12 @@ Enfin, nous mesurons aussi $\overline F$ dans la prédiction, et nous comparons 
 
 \textbf{
 L'estimation initiale que nous faisons des paramètres $b$ et $c$ donnent des valeurs de $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ proches de ce qui est mesuré dans les données. Cependant, la valeur de $a$ est surestimée : les paramètres $a$ et $b$ sont estimés à partir des mesures de $P^{\mathrm{1D}}$ et $\overline F$ dans les données. Comme nous le verrons dans la section~\ref{subsec:model_donnees}, la présence de HCD dans les données a pour effet d'augmenter le biais effectif mesuré. Ainsi, l'estimation du paramètre $a$, est faite avec un $P^{\mathrm{1D}}$ qui possède un biais trop grand. Ceci résulte en une surestimation du paramètre $a$, et donc un biais effectif trop grand dans les mocks.
-Nous itérons alors sur les paramètres $a$, $b$ et $c$ : nous diminuons $a$, et si besoin modifions légèrement $b$ et $c$ % afin de converger vers les bons $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$.
+Nous itérons alors sur les paramètres $a$, $b$ et $c$ : nous diminuons $a$, et si besoin modifions légèrement $b$ et $c$ afin d'affiner les valeurs de $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ des mocks.  % afin de converger vers les bons $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$.
 Puis, nous recalculons le nouveau $P_{s}^{10}$ afin de générer la nouvelle prédiction. Nous ajustons de nouveau la prédiction avec \picca{} et comparons les valeurs de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ mesurées aux données. Ces itérations sont faites jusqu'à obtenir des valeurs en accord avec les données.
 }
 
 % Une fois que cette procédure itérative a convergé dans les cinqs bins en redshift, nous ajustons les paramètres $a(z)$, $b(z)$ et $c(z)$ afin d'obtenir une fonction continue de ces paramètres sur $z \in [\num{1.8} \, ; \num{3.6}]$. Les paramètres $\log a(z)$ et $\log b(z)$ sont ajustés par des polynômes de degré 4 de $\log z$. Ceci est fait dans le but d'éviter les valeurs négatives pour $a(z)$, ainsi que les points d'inflection. Le paramètre $c(z)$ est ajusté par un polynôme de degré 4 de $z$.
-\textbf{Une fois que cette procédure itérative a convergé dans les cinq bins en redshift, nous créons des fonctions continues des paramètres $a(z)$, $b(z)$ et $c(z)$ sur $z \in [\num{1.8} \, ; \num{3.6}]$. Pour $a(z)$ et $b(z)$, nous calculons les polynômes de degré quatre de $\log z$ qui passent par les cinq points $\log a(z)$ et $\log b(z)$. Ceci est fait dans le but d'éviter les valeurs négatives pour $a(z)$, ainsi que les points d'inflection. Pour le paramètre $c(z)$, nous calculons le polynôme de $z$ qui passe par les cinq points $c(z)$.
+\textbf{Une fois que cette procédure itérative a convergé pour les cinq valeurs du redshift, nous créons des fonctions continues des paramètres $a(z)$, $b(z)$ et $c(z)$ sur $z \in [\num{1.8} \, ; \num{3.6}]$. Pour $a(z)$ et $b(z)$, nous calculons les polynômes de degré quatre de $\log z$ qui passent par les cinq points $\log a(z)$ et $\log b(z)$. Ceci est fait dans le but d'éviter les valeurs négatives pour $a(z)$, ainsi que les points d'inflection. Pour le paramètre $c(z)$, nous calculons le polynôme de $z$ qui passe par les cinq points $c(z)$.
 La figure~\ref{fig:params} présente les fonctions continues ainsi obtenues.}
 \begin{figure}
   \centering
@@ -1029,11 +1029,11 @@ La figure~\ref{fig:params} présente les fonctions continues ainsi obtenues.}
   \label{fig:params}
 \end{figure}
 % Concernant les cinqs spectres de puissance $P_{s}(k)$ construits précédemment dans chaque bin en redshift, nous créons une grille $(k, z)$ sur laquelle nous interpolons cubiquement de ces spectres de puissance
-En ce qui concerne les cinq spectres de puissance $P_{s}(k)$ construits précédemment dans chaque bin en redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$. Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
+En ce qui concerne les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$. Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{p1dmiss}
-  \caption{Gauche : les cinqs spectres de puissance $P_{s}(k)$ ajustés dans chaque bin en redshift. Droite : interpolation cubique de ces cinqs spectres de puissance sur une grille $(k, z)$.}
+  \caption{Gauche : les cinqs spectres de puissance $P_{s}(k)$ ajustés pour chaque valeur du redshift. Droite : interpolation cubique de ces cinqs spectres de puissance sur une grille $(k, z)$.}
   \label{fig:p1dmiss}
 \end{figure}
 

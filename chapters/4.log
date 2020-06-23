@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 JUN 2020 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 JUN 2020 09:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3188,35 +3188,35 @@ LaTeX Warning: Command \` invalid in math mode on input line 969.
 LaTeX Warning: Command \` invalid in math mode on input line 969.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24 <../figures/mocks/p1d_model_data.png>]
-
 LaTeX Warning: Command \` invalid in math mode on input line 975.
 
 
 LaTeX Warning: Command \` invalid in math mode on input line 992.
 
 
-LaTeX Warning: Reference `prov' on page 25 undefined on input line 1007.
+LaTeX Warning: Reference `prov' on page 24 undefined on input line 1007.
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24]
 
 LaTeX Warning: Reference `subsec:model_donnees' on page 25 undefined on input l
 ine 1020.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1020.
-<../figures/mocks/params.png, id=422, 1114.1625pt x 283.0575pt>
+<../figures/mocks/params.png, id=424, 1114.1625pt x 283.0575pt>
 File: ../figures/mocks/params.png Graphic file (type png)
 
 <use ../figures/mocks/params.png>
 Package pdftex.def Info: ../figures/mocks/params.png used on input line 1027.
 (pdftex.def)             Requested size: 445.6571pt x 113.22098pt.
 
-<../figures/mocks/p1dmiss.png, id=424, 1133.23375pt x 480.79625pt>
+<../figures/mocks/p1dmiss.png, id=426, 1133.23375pt x 480.79625pt>
 File: ../figures/mocks/p1dmiss.png Graphic file (type png)
 
 <use ../figures/mocks/p1dmiss.png>
@@ -3229,7 +3229,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[25 <../figures/mocks/p1d_model_data.png>]
 
 LaTeX Warning: Reference `prov' on page 26 undefined on input line 1041.
 
@@ -3285,7 +3285,7 @@ Package logreq Info: Writing requests to '4.run.xml'.
 Here is how much of TeX's memory you used:
  35724 strings out of 492995
  651054 string characters out of 6132704
- 1179062 words of memory out of 5000000
+ 1179065 words of memory out of 5000000
  38426 multiletter control sequences out of 15000+600000
  153521 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3349,7 +3349,7 @@ onts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 public/lm/lmtcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
 m/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.p
 fb>
-Output written on 4.pdf (29 pages, 1584969 bytes).
+Output written on 4.pdf (29 pages, 1585004 bytes).
 PDF statistics:
  607 PDF objects out of 1000 (max. 8388607)
  512 compressed objects within 6 object streams
