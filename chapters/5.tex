@@ -466,20 +466,27 @@ Enfin, similairement à la modélisation des données, le modèle ajusté sur le
 \section{Analyse des mocks}
 Comme expliqué dans la section~\ref{sec:quickquasars}, nous produisons différentes versions des mocks : les raw mocks, pour lesquels le champ $\delta_F$ est obtenu directement à partir des vrais transmissions, et les mocks après l'utilisation de \texttt{quickquasars} : eboss-0.0, eboss-0.2 et eboss-0.3.
 Nous présentons dans cette section l'analyse des différentes versions des mocks.
-
+% Pour chacune des versions, nous calculons les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO. 
 
 \subsection{Analyse des raw mocks}
 % Nous présentons premièrement l'analyse des raw mocks.
 % Pour les cents réalisations produites, nous avons calculé l'auto corrélation et la corrélation croisée des raw mocks.
-Pour chacune des cent réalisations produites, nous avons calculé les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO des raw mocks.
+Pour chacune des \num{100} réalisations produites, nous avons calculé les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO des raw mocks.
 L'analyse de ces fonctions de corrélation permet d'identifier plus facilement les problèmes qui peuvent exister au niveau de la construction des mocks, car les effets astrophysiques et instrumentaux introduits par \texttt{quickquasars} ne sont pas présents. Nous commençons donc par valider la construction des mocks, via l'étude des raw mocks, puis nous présenterons l'analyse des versions des mocks avec quickquasars.
 
-\subsubsection{L'auto-corrélation \lya{}$\times$\lya{}}
-La figure~\ref{prov} (\#prov faire la figure) donne l'addition des cent fonctions de corrélation \lya{}$\times$\lya{} des raw mocks.
-La figure montre la fonction de corrélation dans quatre bins en $\mu$ différents. Le bin $\num{0.95} < \mu < 1$ correspond aux paires avec une séparation le long de la ligne de visée. Le bin $\num{0} < \mu < \num{0.5}$ correspond aux paires perpendiculaires à la ligne de visée.
-Sur cette figure, nous pouvons voir la fonction de corrélation des raw mocks (couleur), ainsi que l'ajustement du modèle produit par \texttt{picca} (couleur) et la prédiction des mocks (couleur).
-\#prov  conclusions
+Toutes les fonctions de corrélation présentées ici, à l'exception de la fonction de corrélation à une dimension, sont estimées dans quatre bins en redshift. Ces bins sont les mêmes que ceux choisis pour analyser les données et déterminer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ à utiliser pour la construction des mocks (voir chapitre~\ref{prov}). Ces bins sont : $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$. Nous utilisons les mêmes bins pour faciliter la comparaison entre les mocks et les données.
 
+\subsubsection{L'auto-corrélation \lya{}$\times$\lya{}}
+La figure~\ref{fig:cf_eboss00_4bins} donne l'addition des \num{100} fonctions de corrélation \lya{}$\times$\lya{} des raw mocks dans chaque bin en redshift.
+Pour chaque bin en redshift, la fonction de corrélation est montrée dans quatre bins en $\mu$ différents. Le bin $\num{0.95} < \mu < 1$ correspond aux paires avec une séparation le long de la ligne de visée. Le bin $\num{0} < \mu < \num{0.5}$ correspond aux paires perpendiculaires à la ligne de visée.
+Les lignes continues donnent le meilleur ajustement du modèle produit par \texttt{picca}.
+Les raw mocks sont en excellent accord avec le modèle de picca.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{cf_eboss00_4bins}
+  \caption{L'auto-corrélation \lya{}$\times$\lya{} calculée sur les raw mocks. Chaque graphique donne l'addition des fonctions de corrélation calculées dans chaque bins en redshift pour chaque réalisation. Les fonctions de corrélation sont montrées dans quatre bins en $\mu$. Les lignes continues donnent le meilleur ajustement du modèle produit par \texttt{picca}.}
+  \label{fig:cf_eboss00_4bins}
+\end{figure}
 
 \paragraph{}
 \#prov Est-ce qu'il faut pas que le paragraphe qui suit soit pour l'ajustement combiné de la CF et XCF ?

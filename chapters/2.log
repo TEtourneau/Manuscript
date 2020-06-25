@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 JUN 2020 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 JUN 2020 10:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2468,15 +2468,15 @@ File: ttlkeys.def 2016/03/15
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 237.
+(hyperref)                removing `math shift' on input line 238.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 237.
+(hyperref)                removing `\alpha' on input line 238.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 237.
+(hyperref)                removing `math shift' on input line 238.
 
 )
 Package biblatex Info: Trying to load language 'french'...
@@ -2898,6 +2898,10 @@ ne 216.
 (pdftex.def)             Requested size: 393.97092pt x 149.55838pt.
 
 
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 232.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
@@ -2916,7 +2920,7 @@ File: ../figures/eBOSS/DesiVsEboss.png Graphic file (type png)
 
 <use ../figures/eBOSS/DesiVsEboss.png>
 Package pdftex.def Info: ../figures/eBOSS/DesiVsEboss.png used on input line 24
-1.
+6.
 (pdftex.def)             Requested size: 291.79237pt x 177.96625pt.
 
 
@@ -2935,7 +2939,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [13 <../figures/eBOSS/DesiVsEboss.png>] [14
 
 ]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 248--248
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 253--253
 | []| 
  []
 
@@ -2953,22 +2957,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
  (./2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
 Package rerunfilecheck Info: File `2.out' has not changed.
 (rerunfilecheck)             Checksum: 81DFF48EF76B8D9596CC95A784D73824;817.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package logreq Info: Writing requests to '2.run.xml'.
 \openout1 = `2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35531 strings out of 492995
- 648005 string characters out of 6132704
- 1309649 words of memory out of 5000000
- 38329 multiletter control sequences out of 15000+600000
+ 35533 strings out of 492995
+ 648035 string characters out of 6132704
+ 1309714 words of memory out of 5000000
+ 38331 multiletter control sequences out of 15000+600000
  106901 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,13n,57p,10403b,1969s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3012,7 +3020,7 @@ f-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
 blic/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmt
 t10.pfb>
-Output written on 2.pdf (16 pages, 1610078 bytes).
+Output written on 2.pdf (16 pages, 1615145 bytes).
 PDF statistics:
  380 PDF objects out of 1000 (max. 8388607)
  319 compressed objects within 4 object streams

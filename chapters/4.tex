@@ -413,7 +413,7 @@ L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\t
            \sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}
            }) \; .
 \end{align}
-Enfin, grâce au facteur $N(z)$, les quasars sont tirés selon la distribution en $z$ prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous tirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{prov}). De plus, cela permet d'utiliser les mocks pour d'autres projets, comme WEAVE\footnote{WEAVE est un spectrographe à fibre multi objet. Il possède \num{1000} fibres avec un champ de vue de $\SI{3.1}{\square\deg}$. Le relevé WEAVE-QSO prévoit d'observer \num{350000} quasars à grand redshift, sur un relevé de $\SI{6000}{\square\deg}$ \autocite{Pieri2016}.}, qui possèdent une densité de cible plus élevée que DESI (\#prov pas tellement en fait : \num{350000} sur 6000 sq deg ca fait 60 par sq deg).
+Enfin, grâce au facteur $N(z)$, les quasars sont tirés selon la distribution en $z$ prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous tirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{prov}). De plus, cela permet d'utiliser les mocks pour d'autres projets, comme WEAVE\footnote{WEAVE est un spectrographe à fibre multi objet. Il possède \num{1000} fibres avec un champ de vue de $\SI{3.1}{\square\deg}$. Le relevé WEAVE-QSO prévoit d'observer \num{350000} quasars à grand redshift, sur un relevé de $\SI{6000}{\square\deg}$ \autocite{Pieri2016}.}, qui possèdent une densité de cible plus élevée que celle de DESI.
 A la fin, nous obtenons environ \num{100} quasars à $z > \num{2.1}$ par degré carré.
 \begin{figure}
   \centering
@@ -531,25 +531,50 @@ Nous manquons donc toutes les fluctuations pour lesquelles $k > k_N$.
 % \textbf{Ces fluctuations ne sont pas importante pour la corrélation à trois dimensions. En effet, nous calculons cette dernière pour mesurer l'échelle BAO, qui se situe à beaucoup plus grand échelle ($\sim \SI{100}{\perh\Mpc}$). De plus, comme expliqué dans la section~\ref{prov}, nous moyennons la fonction de corrélation à trois dimensions dans des bins de \SI{4}{\perh\Mpc} de large.
 % }
 \textbf{
-  Ces fluctuations ne sont pas importantes pour la corrélation à trois dimensions. La figure~\ref{prov} (\#prov faire la figure) montre le spectre de puissance de la matière $P_{matière}(k)$ à $z=0$, obtenu avec Camb, ainsi que l'effet de la résolution de la grille et l'effet du lissage gaussien appliqué aux voxels. La courbe \#prov donne le spectre de puissance $P_{grille}(k)$ qui inclut l'effet de la résolution de la grille. Celui-ci s'exprime par
+  Ces fluctuations ne sont pas importantes pour la corrélation à trois dimensions. La figure~\ref{fig:pk_smoothing} montre le spectre de puissance de la matière $P_{matière}(k)$ à $z=0$ (noir), obtenu avec Camb, ainsi que l'effet du lissage gaussien appliqué aux voxels et l'effet de la taille non nulle de ces voxels.
+  La courbe bleu donne le spectre de puissance qui inclut l'effet du lissage gaussien. Il s'exprime comme
   \begin{equation}
-    P_{grille}(k) =  \mathrm{sinc}^2(\frac{k d_{cell}}{2}) P_{matière}(k) \; .
+    P(k) =  W^2(k) P_{matière}(k) \; ,
   \end{equation}
-  La courbe \#prov donne le spectre de puissance $P_{lissage}(k)$ qui inclut l'effet du lissage gaussien. Il s'exprime par
+  où $W(k)$ est le terme représentant le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ :
   \begin{equation}
-    P_{lissage}(k) =  \exp^2(- \frac{k d_{cell}}{2}) P_{matière}(k) \; .
+    \label{eq:gauss_smoothing}
+    W(k) = \exp(- \frac{k d_{cell}}{2}) \; .
   \end{equation}
-  La courbe \#prov donne le spectre de puissance qui inclut ces deux effets.
-  La figure~\ref{prov} (\#prov faire la figure) montre la transformation de Fourier de ces spectres de puissance. L'effet est faible (\#prov combien ?) et principalement localisé à petit $r$.
+  La courbe verte donne le spectre de puissance qui inclut l'effet de la taille des voxels. Celui-ci s'exprime comme
+  \begin{equation}
+    P(k) =   G^2(k) P_{matière}(k) \; ,
+  \end{equation}
+  où $G(k)$ est le terme qui prend en compte la taille des voxcels :
+  \begin{equation}
+    \label{eq:effet_reso}
+    G(k) = \mathrm{sinc}(\frac{k d_{cell}}{2})  \; .
+  \end{equation}
+  La courbe rouge donne le spectre de puissance qui inclut ces deux effets, c'est à dire multiplié par $W^2(k)G^2(k)$.
+  La figure~\ref{fig:xi_smoothing} montre la transformation de Fourier de ces spectres de puissance.
+  % L'effet est faible (\#prov combien ?) et principalement localisé à petit $r$.
+  Les effets liés au lissage gaussien et à la taille des voxels sont principalement localisés à petit $r$ et autour du pic BAO. Ces effets sont faibles, en particulier celui produit par la taille non nulle des voxels.
   Ainsi, ces fluctuations à petite échelle ne sont pas importantes pour la fonction de corrélation à trois dimension.
 }
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.35]{pk_smoothing}
+  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur le spectre de puissance. La courbe noire donne le spectre de puissance de la matière, obtenu avec Camb. La courbe bleu donne le spectre de la matière multiplié par $W^2(k)$ (équation~\ref{eq:gauss_smoothing}). La courbe verte donne le spectre de puissance multiplié par $G^2(k)$ (équation~\ref{eq:gauss_smoothing}). Enfin la courbe rouge donne le spectre de puissance multiplié par $W^2(k) G^2(k)$.}
+  \label{fig:pk_smoothing}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.38]{xi_smoothing}
+  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur la fonction de corrélation des mocks. Le graphique du haut montre les fonctions de corrélation obtenues à partir du spectre de puissance de Camb (noir), du spectre de puissance de Camb multiplié par $W^2(k)$ en bleu, du spectre de puissance de Camb multiplié par $G^2(k)$ en vert, et du spectre de puissance de Camb multiplié par $W^2(k)G^2(k)$ en rouge (voir équations~\ref{eq:gauss_smoothing} et~\ref{eq:effet_reso}). Le graphique du bas montre la différence entre les courbes bleue et noire, en bleu, entre les courbes vert et noire, en vert, ainsi qu'entre les courbes rouge et noire, en rouge.}
+  \label{fig:xi_smoothing}
+\end{figure}
 \textbf{
-  Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, il correspond à l'intégrale du spectre de puissance à 3 dimensions sur la direction transverse à la ligne de visée :
+  Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, il correspond à l'intégrale du spectre de puissance à trois dimensions sur la direction transverse à la ligne de visée :
 \begin{equation}
   \label{eq:p1d}
   P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{0}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; .
 \end{equation}
-Avec la taille non nulle des voxels, l'intégrale s'effectue seulement jusqu'à $k_N$. De plus, le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ réduit davantage l'amplitude de ce spectre de puissance. Ces deux effets sont représentés sur la figure~\ref{prov} (\#prov faire la figure). Contrairement au cas à trois dimension, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
+Avec la taille non nulle des voxels, l'intégrale s'effectue seulement jusqu'à $k_N$. De plus, le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ réduit davantage l'amplitude de ce spectre de puissance. Ces deux effets sont représentés sur la figure~\ref{prov} (\#prov faire la figure). Contrairement au cas à trois dimensions, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
 En effet, ce spectre de puissance le long d'une ligne de visée est beaucoup plus sensible au bruit que le spectre de puissance calculé sur une colonne de section de $(\SI{2.19}{\perh\Mpc})^2$.
 A cause de ces deux effets, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
 % Sans les fluctuations à petite échelle, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
@@ -561,14 +586,25 @@ Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de vis
   % F = \exp( - a(z) \mathrm{e}^{b(z) G(z) (\delta_l + \delta_s)}) ;.
   F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s))\right] ;.
 \end{equation}
-Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à 3 dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}.
+Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à trois dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}.
 % Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, d'une taille supérieure à celle de la forêt pour éviter les corrélations d'une extrémité à l'autre.
 Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$.
 Puis, nous multiplions ce champ par
 \begin{equation}
-  \sqrt{\frac{P_{s}(k)}{d_{pix}}} \; ,
+  \sqrt{\frac{P_{s}(k,z_{\mathrm{eff}})}{d_{pix}}} \; ,
 \end{equation}
-\textbf{où $P_{s}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}$ afin que $F$ possède le bon $P^{\mathrm{1D}}$. $\delta_{k,s}$ est créé avec une taille supérieure à celle de la forêt, pour éviter les corrélations d'une extrémité à l'autre. La détermination de $P_{s}$ est détaillé dans la section~\ref{sec:tuning}. Enfin, nous obtenons $\delta_s$ à l'aide de la transformation de Fourier inverse de $\delta_{k,s}$.}
+\textbf{où $z_{\mathrm{eff}}$ est le redshift moyen de la forêt, et $P_{s}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}$ afin que $\delta_F$ possède le bon $P^{\mathrm{1D}}$. $\delta_{k,s}$ est créé avec une taille supérieure à celle de la forêt, pour éviter les corrélations d'une extrémité à l'autre. La détermination de $P_{s}$ est détaillée dans la section~\ref{sec:tuning}. Puis, nous obtenons $\delta_s$ à l'aide de la transformation de Fourier inverse de $\delta_{k,s}$.
+  Avant d'ajouter $\delta_s$ à $\delta_l$, nous corrigeons la dépendance en $z$ de chacun des $\delta_s$ de la forêt. En effet, $\delta_s$ est construit de façon à obtenir le bon spectre de puissance à une dimension au redshift moyen de la forêt. Les pixels situés en bord de forêt n'auront donc pas le bon $P^{\mathrm{1D}}$. Ainsi, nous corrigeons chaque $\delta_s$ comme :
+  \begin{equation}
+    \delta_s(z) \rightarrow \delta_s(z) \frac{\sigma_s(z)}{\sigma_s(z_{\mathrm{eff}})} \; ,
+  \end{equation}
+  où $\sigma_s$ est l'écart type du champ $\delta_s$. Celui-ci est relié au spectre de puissance $P_{s}$ comme :
+  \begin{equation}
+    \label{eq:sigma_s}
+    \sigma_s = \frac{1}{d_{pix}N} \left( P_{s}(0) + P_{s}(k_{Ny}) + 2 \sum_{j=1}^{\frac{N}{2} - 1}P_{s}\left(\frac{2 \pi}{d_{pix}N} j\right)\right) \; ,
+  \end{equation}
+  où $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$ est le mode de Nyquist : c'est le mode maximal accessible pour une résolution donnée.
+}
 
 \subsubsection{Les RSD}
 \label{subsubsec:rsdlya}
@@ -689,18 +725,19 @@ et $\beta$ est le paramètre RSD du \lya{}.
 \begin{equation}
   P(k) = W^2(k)P_{matière}(z=0) \; ,
 \end{equation}
-où $W(k)$ est le terme représentant le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ (voir section~\ref{subsec:los_interp}) :
-\begin{equation}
-  \label{eq:gauss_smoothing}
-  % W(k) = \mathrm{e}^{- \frac{k^2 d_{cell}^2}{2}} \;.
-  W(k) = \exp(- \frac{k^2 d_{cell}^2}{2}) \;.
-\end{equation}
+où $W(k)$ est le terme représentant le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ (équation~\ref{eq:gauss_smoothing}).
+% \begin{equation}
+%   \label{eq:gauss_smoothing}
+%   % W(k) = \mathrm{e}^{- \frac{k^2 d_{cell}^2}{2}} \;.
+%   W(k) = \exp(- \frac{k^2 d_{cell}^2}{2}) \;.
+% \end{equation}
 % \# prov Expliquer pourquoi on ne prend pas en compte le terme lié à la résolution de la boîte ? Regarder si l'effet est négligeable
-Nous négligeons ici l'effet de la taille non nulle des voxels sur le spectre de puissance. Cet effet peut être modélisé en multipliant le spectre de puissance précédent par $G^2(k)$, où $G(k)$ s'exprime comme
-\begin{equation}
-  \label{eq:effet_reso}
-  G(k) = \mathrm{sinc}\left(\frac{k d_{cell}}{2}\right) \;.
-\end{equation}
+Nous négligeons ici l'effet de la taille non nulle des voxels sur le spectre de puissance (équation~\ref{eq:effet_reso}).
+% Cet effet peut être modélisé en multipliant le spectre de puissance précédent par $G^2(k)$, où $G(k)$ s'exprime comme
+% \begin{equation}
+%   \label{eq:effet_reso}
+%   G(k) = \mathrm{sinc}\left(\frac{k d_{cell}}{2}\right) \;.
+% \end{equation}
 La figure~\ref{fig:xi_smoothing} montre l'effet de $W(k)$ et $G(k)$ sur la fonction de corrélation. L'effet lié à $G(k)$ est nettement moins important que celui lié à $W(k)$.
 % (\#prov il y a pas un facteur $\frac{1}{2}$ en trop ? on a $\sigma_{smooth}^2 = 2 d_{cell}^2$)
 Puis, à l'aide d'une transformation de Fourier du spectre de puissance, nous obtenons la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ obtenu par interpolation avec lissage des boîtes.}
@@ -710,12 +747,6 @@ Puis, à l'aide d'une transformation de Fourier du spectre de puissance, nous ob
 % \end{equation}
 Nous calculons ensuite la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$ que suit le champ $\delta_g$ gràce à l'équation~\ref{eq:hamilton1}. La figure~\ref{prov} (\#prov faire la figure) présente cette fonction de corrélation mesurée sur une réalisation. Enfin, pour tous les couples $(r,\mu)$ nécessaires, nous obtenons la fonction de corrélation $\xi_F(r, \mu)$ du champ $\delta_F$ comme la valeur correspondante à la valeur tabulée $\xi_g(r, \mu) / \sigma_g^2$ pour $\xi_g$.
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.45]{xi_smoothing}
-  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur la fonction de corrélation des mocks. Le graphique du haut montre les fonctions de corrélation obtenues à partir du spectre de puissance de Camb (noir), du spectre de puissance de Camb multiplié par $W^2(k)$ (bleu) et du spectre de puissance de camb multiplié par $W^2(k)G^2(k)$ (voir équations~\ref{eq:gauss_smoothing} et ~\ref{eq:effet_reso}). Le graphique du bas montre la différence entre les courbes bleue et noire, en bleu, entre les courbes rouge et noire, en rouge, ainsi qu'entre les courbes rouge et bleue, en vert.}
-  \label{fig:xi_smoothing}
-\end{figure}
 
 
 \subsection{Ajout des HCD}
@@ -906,11 +937,13 @@ La variance du champ $g = \delta_l + \delta_s + c(z)\eta_{\parallel}$ est donné
   \sigma_g^2(z) = \langle \delta_l^2 \rangle + \langle \delta_s^2 \rangle + c^2(z) \langle \eta_{\parallel}^2 \rangle +
   c(z) \left( \langle \delta_l \eta_{\parallel} \rangle - \langle \delta_l \rangle \langle \eta_{\parallel} \rangle \right)\; .
 \end{equation}
-Le terme entre parenthèses est la covariance des champs $\delta_l$ et $\eta_{\parallel}$. La variance $\sigma_s$ du champ $\delta_s$ est reliée à son spectre de puissance $P_{s}$ par
-\begin{equation}
-  \sigma_s = \frac{1}{d_{pix}N} \left( P_{s}(0) + P_{s}(k_{Ny}) + 2 \sum_{j=1}^{\frac{N}{2} - 1}P_{s}\left(\frac{2 \pi}{d_{pix}N} j\right)\right) \; ,
-\end{equation}
-où $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$ est le mode de Nyquist : c'est le mode maximal accessible pour une résolution donnée.
+Le terme entre parenthèses est la covariance des champs $\delta_l$ et $\eta_{\parallel}$.
+% La variance $\sigma_s$ du champ $\delta_s$ est reliée à son spectre de puissance $P_{s}$ par
+% \begin{equation}
+%   \sigma_s = \frac{1}{d_{pix}N} \left( P_{s}(0) + P_{s}(k_{Ny}) + 2 \sum_{j=1}^{\frac{N}{2} - 1}P_{s}\left(\frac{2 \pi}{d_{pix}N} j\right)\right) \; ,
+% \end{equation}
+% où $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$ est le mode de Nyquist : c'est le mode maximal accessible pour une résolution donnée.
+La variance $\sigma_s$ du champ $\delta_s$ est reliée à son spectre de puissance $P_{s}$ par l'équation~\ref{eq:sigma_s}.
 Dans le but de calculer $\sigma_s$ puis la prédiction,
 nous commençons donc par constuire le spectre de puissance $P^{\mathrm{1D}}_{modèle}$ sur lequel le $P_{mock}^{\mathrm{1D}}$ des mocks sera ajusté.
 % Tout d'abord, les données provenant de (\#prov On fit les données DR12 sans les oscillations du Si, quel papier ?) sont ajustées dans la gamme $\num{0.2} < k < {2.0} \si{\h\per\Mpc}$. Les oscillations dans le spectre de puissance à une dimension causées par le silicium sont aussi ajustées afin de les retirer et de construire un modèle $P^{\mathrm{1D}}_{modèle}$ sans ces oscillations. La fonction ajustée aux données est définie comme
@@ -1046,7 +1079,14 @@ Le résultat de la procédure d'ajustement décrite précédemment a été utili
 \label{sec:quickquasars}
 %Les mocks décrits précédemment produisent un relevé de quasars avec, pour chaque quasar, une forêt d'absorption $F$ variant entre 0 et 1. Afin de simuler complètement la chaîne d'analyse, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres simulés. Le code utilisé est le code \texttt{quickquasars}, il est décrit dans \textcite{prov:Alma in prep}. Ce code a pour but de reproduire les données prises avec eBOSS et DESI. Le code simule donc les différents effets propres à chaque instrument comme par exemple la résolution des spectrographes ou le bruit instrumental. Il simule aussi les effets astrophysiques, comme la distribution en magnitude des quasars ou les erreurs de mesure de redshift de ces derniers.
 
-Une fois les mocks produits, l'idée est d'inclure les forêts simulés dans des spectres synthétiques \#prov mal dit. En effet, à ce stade nous disposons uniquement d'un relevé de quasars, et pour chacun d'entre deux, une forêt contenant le champ d'absorption $F$ variant entre 0 et 1. Ainsi, afin de simuler complètement les données, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres synthétiques. Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. Ce code utilise 
+% Une fois les mocks produits, l'idée est d'inclure les forêts simulés dans des spectres synthétiques \#prov mal dit.
+Les mocks décrits précédemment produisent un relevé de quasars avec, pour chaque quasar, une forêt d'absorption $F$ variant entre 0 et 1.
+Afin de reproduire complètement les données et pouvoir simuler la chaîne d'analyse, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres simulés.
+Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. 
+
+
+
+% En effet, à ce stade nous disposons uniquement d'un relevé de quasars, et pour chacun d'entre deux, une forêt contenant le champ d'absorption $F$ variant entre 0 et 1. Ainsi, afin de simuler complètement les données, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres synthétiques. Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. Ce code utilise 
 
 
 
