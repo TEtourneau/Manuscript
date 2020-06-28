@@ -659,6 +659,51 @@
       \verb https://arxiv.org/abs/1301.3456
       \endverb
     \endentry
+    \entry{Landy1993}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=7ad0a92e69b4ac96af0fcba3bd982680}{%
+           family={Landy},
+           familyi={L\bibinitperiod},
+           given={Stephen\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{uniquename=0,hash=8ad6653683a00b429cf29410bafdc3d8}{%
+           family={Szalay},
+           familyi={S\bibinitperiod},
+           given={Alexander\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{384017f57ceccd46e439d16bd5f640d3}
+      \strng{fullhash}{384017f57ceccd46e439d16bd5f640d3}
+      \strng{authornamehash}{384017f57ceccd46e439d16bd5f640d3}
+      \strng{authorfullhash}{384017f57ceccd46e439d16bd5f640d3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a general method for calculating the bias and variance of estimators for w($\theta$) based on galaxy-galaxy (DD), random-random (RR), and galaxy-random (DR) pair counts and describe a procedure for quickly estimating these quantities given an arbitrary two-point correlation function and sampling geometry. These results, based conditionally upon the number counts, are accurate for both high and low number counts. We show explicit analytical results for the variances in the estimators DD/RR, DD/DR, which turn out to be considerably larger than the common wisdom Poisson estimate and report a small bias in DD/DR in addition to that due to the integral constraint. Further, we introduce and recommend an improved estimator (DD - 2DR + RR)/RR, whose variance is nearly Poisson.}
+      \field{issn}{0004-637X}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{7}
+      \field{title}{{Bias and variance of angular correlation functions}}
+      \field{volume}{412}
+      \field{year}{1993}
+      \field{pages}{64}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/172900
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Landy, Szalay - 1993 - Bias and variance of angular correlation functions.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb https://ui.adsabs.harvard.edu/abs/1993ApJ...412...64L/abstract
+      \endverb
+      \keyw{Angular Correlation,Astrophysics,Bias,Computational Astrophysics,Correlation Coefficients,GALAXIES: CLUSTERING,Galactic Clusters,METHODS: NUMERICAL,Monte Carlo Method,Random Variables,Variance}
+    \endentry
     \entry{McDonald2004}{article}{}
       \name{author}{11}{}{%
         {{uniquename=0,hash=e17fc9e37496521118556f81d6b84bc9}{%

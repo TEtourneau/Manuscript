@@ -37,6 +37,7 @@ Les quatres intervales choisis pour construire les bins en redshift sont $[\num{
 % Nous calculons aussi la matrice de distorsion dans chacun de ces bins.
 Dans chacun des bins, nous calculons la fonction de corrélation \lya{}$\times$\lya{}, ainsi que la matrice de distorsion et la matrice des métaux.
 Enfin, nous procédons à l'ajustement des quatres fonctions de corrélation. Le modèle utilisé pour cet ajustement est le même que celui utilisé pour l'analyse des données finale d'eBOSS \autocite{prov}, il est présenté dans la section~\ref{subsec:model_donnees}.
+Le modèle est ajusté pour $\num{10} \leq r \leq \SI{180}{\perh\Mpc}$.
 Chacune des fonctions de corrélation est ajustée au redshift effectif de la mesure. Ces redshifts sont $z_1 = \num{2.136}$, $z_2 = \num{2.276}$, $z_3 = \num{2.551}$ et $z_4 = \num{2.914}$.
 
 \begin{figure}
@@ -48,12 +49,12 @@ Chacune des fonctions de corrélation est ajustée au redshift effectif de la me
 
 \begin{table}[]
   \centering
-  \caption{Résultats de l'ajustement fait avec \texttt{picca} des fonctions de corrélation \lya{}$\times$\lya{} calculées sur les données DR16. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1590}$. Le modèle comporte \num{13} paramètres libres. Enfin, la dernière section donne le biais et le biais effectif du \lya{}. Ils sont reliés aux paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ par les équations~\ref{eq:def_bias} et~\ref{eq:def_bias_eff}.}
+  \caption{Résultats de l'ajustement fait avec \texttt{picca} des fonctions de corrélation \lya{}$\times$\lya{} calculées sur les données DR16. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1590}$. Le modèle comporte \num{13} paramètres libres. Enfin, la dernière section donne le biais et le biais effectif du \lya{}. Ils sont reliés aux paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ par les équations~\ref{eq:def_bias} et~\ref{eq:def_bias_eff}.}
   \label{tab:dr16_4bins}
   \begin{tabular}{lcccc}
-    \toprule
-    Paramètre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$ \\
-    \midrule
+    % \toprule
+    % Paramètre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$ \\
+    % \midrule
     % $\apar{}$ & 1.0626413422656635 +/- 0.06560781661781079 & 1.0188646800560925 +/- 0.041362422911403685 & 1.029148212201299 +/- 0.07242396192712802 & 1.1200171298229007 +/- 0.08091370899309824 \\
     % $\aper{}$ & 1.0632375535901253 +/- 0.10810794059323114 & 0.9652958910718991 +/- 0.057180394974236104 & 1.0159330757036005 +/- 0.05784775528375763 0.9255146850435335 +/- 0.07206257341759192 \\
     % $b_{\eta, \mathrm{Ly}\alpha}$ & -0.1795977211203897 +/- 0.005769053847991895 & -0.19377778657236358 +/- 0.00526939132784233 & -0.2236876829818197 +/- 0.008421287322167362 & -0.2928514012382003 +/- 0.018740373333761263 \\
@@ -84,25 +85,25 @@ Chacune des fonctions de corrélation est ajustée au redshift effectif de la me
     % $\sigma_{sky}$ & 32.542936141293126 +/- 1.7910999585024947 & 31.590693919063543 +/- 2.5612829757179214 & 31.930967631996463 +/- 4.270238324140993
     % \bottomrule & 34.1693831220765 +/- 16.09450395736028 \\
 
-    $\apar{} $ & $ 1.063 \pm 0.066 $ & $ 1.019 \pm 0.041 $ & $ 1.029 \pm 0.072 $ & $ 1.120 \pm 0.081 $ \\
-    $\aperp{} $ & $ 1.063 \pm 0.108 $ & $ 0.965 \pm 0.057 $ & $ 1.016 \pm 0.058 $ & $ 0.926 \pm 0.072 $ \\
-    $b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1796 \pm 0.0058 $ & $ -0.1938 \pm 0.0053 $ & $ -0.2239 \pm 0.0084 $ & $ -0.2929 \pm 0.0187 $ \\
-    $\beta_{\mathrm{Ly}\alpha} $ & $ 2.094 \pm 0.210 $ & $ 1.711 \pm 0.133 $ & $ 1.427 \pm 0.138 $ & $ 1.264 \pm 0.194 $ \\
-    $10^3 b_{\eta, SiII(1190)} $ & $ -1.83 \pm 1.10 $ & $ -3.66 \pm 0.68 $ & $ -2.80 \pm 1.01 $ & $ 0.36 \pm 1.64 $ \\
-    $10^3 b_{\eta, SiII(1193)} $ & $ -4.83 \pm 1.10 $ & $ -1.94 \pm 0.69 $ & $ -0.78 \pm 0.97 $ & $ -2.13 \pm 1.72 $\\
-    $10^3 b_{\eta, SiII(1260)} $ & $ -3.38 \pm 1.33 $ & $  -1.97 \pm 0.80 $ & $ -1.32 \pm 1.05 $ & $ 0.90 \pm 1.79 $\\
-    $10^3 b_{\eta, SiIII(1207)} $ & $  -7.87 \pm 1.10 $ & $ -4.52 \pm 0.74 $ & $ -2.11 \pm 1.05 $ & $ -2.90 \pm 1.74 $\\
-    $10^3 b_{\eta, CIV(\mathrm{eff})} $ & $ -4.77 \pm 2.54 $ & $ -5.15 \pm 2.64 $ & $ -5.06 \pm 2.62 $ & $ -5.02 \pm 2.61 $\\
-    $b_{\textsc{HCD}} $ & $ -0.0596 \pm 0.0070 $ & $ -0.0452 \pm 0.0060 $ & $ -0.0665 \pm 0.0100 $ & $ -0.0228 \pm 0.0218 $\\
-    $\beta_{\textsc{HCD}} $ & $ 0.551 \pm 0.086 $ & $ 0.560 \pm 0.086 $ & $ 0.508 \pm 0.088 $ & $ 0.503 \pm 0.090 $\\
-    $10^2 A_{sky} $ & $ 1.585 \pm 0.098 $ & $ 0.870 \pm 0.082 $ & $ 0.729 \pm 0.133 $ & $ 0.645 \pm 0.338 $\\
-    $\sigma_{sky} $ & $ 32.5 \pm 1.7 $ & $ 31.6 \pm 2.6 $ & $ 31.9 \pm 4.3 $ & $ 34.2 \pm 16.1 $\\
-    \midrule
-    $\chi^2$ & 1568.33 & 1512.33 & 1680.82 & 1674.59 \\
-    \midrule
-    $b_{\mathrm{Ly}\alpha} $ & $ -0.0832 \pm -0.0065 $ & $ -0.1099 \pm -0.0063 $ & $ -0.1521 \pm -0.01025 $ & $ -0.2248 \pm -0.0230 $\\
-    $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1506 \pm 0.0046 $ & $ -0.1814 \pm 0.0045 $ & $ -0.2336 \pm 0.0074 $ & $ -0.3305 \pm 0.0169 $\\
-    \bottomrule
+%     $\apar{} $ & $ 1.063 \pm 0.066 $ & $ 1.019 \pm 0.041 $ & $ 1.029 \pm 0.072 $ & $ 1.120 \pm 0.081 $ \\
+%     $\aperp{} $ & $ 1.063 \pm 0.108 $ & $ 0.965 \pm 0.057 $ & $ 1.016 \pm 0.058 $ & $ 0.926 \pm 0.072 $ \\
+%     $b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1796 \pm 0.0058 $ & $ -0.1938 \pm 0.0053 $ & $ -0.2239 \pm 0.0084 $ & $ -0.2929 \pm 0.0187 $ \\
+%     $\beta_{\mathrm{Ly}\alpha} $ & $ 2.094 \pm 0.210 $ & $ 1.711 \pm 0.133 $ & $ 1.427 \pm 0.138 $ & $ 1.264 \pm 0.194 $ \\
+%     $10^3 b_{\eta, SiII(1190)} $ & $ -1.83 \pm 1.10 $ & $ -3.66 \pm 0.68 $ & $ -2.80 \pm 1.01 $ & $ 0.36 \pm 1.64 $ \\
+%     $10^3 b_{\eta, SiII(1193)} $ & $ -4.83 \pm 1.10 $ & $ -1.94 \pm 0.69 $ & $ -0.78 \pm 0.97 $ & $ -2.13 \pm 1.72 $\\
+%     $10^3 b_{\eta, SiII(1260)} $ & $ -3.38 \pm 1.33 $ & $  -1.97 \pm 0.80 $ & $ -1.32 \pm 1.05 $ & $ 0.90 \pm 1.79 $\\
+%     $10^3 b_{\eta, SiIII(1207)} $ & $  -7.87 \pm 1.10 $ & $ -4.52 \pm 0.74 $ & $ -2.11 \pm 1.05 $ & $ -2.90 \pm 1.74 $\\
+%     $10^3 b_{\eta, CIV(\mathrm{eff})} $ & $ -4.77 \pm 2.54 $ & $ -5.15 \pm 2.64 $ & $ -5.06 \pm 2.62 $ & $ -5.02 \pm 2.61 $\\
+%     $b_{\textsc{HCD}} $ & $ -0.0596 \pm 0.0070 $ & $ -0.0452 \pm 0.0060 $ & $ -0.0665 \pm 0.0100 $ & $ -0.0228 \pm 0.0218 $\\
+%     $\beta_{\textsc{HCD}} $ & $ 0.551 \pm 0.086 $ & $ 0.560 \pm 0.086 $ & $ 0.508 \pm 0.088 $ & $ 0.503 \pm 0.090 $\\
+%     $10^2 A_{sky} $ & $ 1.585 \pm 0.098 $ & $ 0.870 \pm 0.082 $ & $ 0.729 \pm 0.133 $ & $ 0.645 \pm 0.338 $\\
+%     $\sigma_{sky} $ & $ 32.5 \pm 1.7 $ & $ 31.6 \pm 2.6 $ & $ 31.9 \pm 4.3 $ & $ 34.2 \pm 16.1 $\\
+%     \midrule
+%     $\chi^2$ & 1568.33 & 1512.33 & 1680.82 & 1674.59 \\
+%     \midrule
+%     $b_{\mathrm{Ly}\alpha} $ & $ -0.0832 \pm -0.0065 $ & $ -0.1099 \pm -0.0063 $ & $ -0.1521 \pm -0.01025 $ & $ -0.2248 \pm -0.0230 $\\
+%     $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1506 \pm 0.0046 $ & $ -0.1814 \pm 0.0045 $ & $ -0.2336 \pm 0.0074 $ & $ -0.3305 \pm 0.0169 $\\
+%     \bottomrule
 \toprule
 Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$ \\
 \midrule
@@ -123,7 +124,7 @@ $\sigma_{sky} $ & $ 32.5 \pm 1.8$ & $ 31.6 \pm 2.6$ & $ 31.9 \pm 4.3$ & $ 34.1 \
 $\chi^2$ & $ 1568 $ & $ 1512 $ & $ 1681 $ & $ 1675 $ \\
 $z_{\mathrm{eff}}$ & $ 2.136 $ & $ 2.276 $ & $ 2.551 $ & $ 2.914 $ \\
 \midrule
-$b_{\mathrm{Ly}\alpha} $ & $ -0.0832 \pm -0.0065$ & $ -0.1099 \pm -0.0063$ & $ -0.1521 \pm -0.0103$ & $ -0.2247 \pm -0.023$ \\
+$b_{\mathrm{Ly}\alpha} $ & $ -0.0832 \pm 0.0065$ & $ -0.1099 \pm 0.0063$ & $ -0.1521 \pm 0.0103$ & $ -0.2247 \pm 0.023$ \\
 $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1506 \pm 0.0046$ & $ -0.1814 \pm 0.0045$ & $ -0.2336 \pm 0.0074$ & $ -0.3305 \pm 0.0168$ \\
 \bottomrule
 
@@ -132,7 +133,7 @@ $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1506 \pm 0.0046$ & $ -0.1814 \pm 0
 \end{table}
 
 
-La figure~\ref{prov} présente les fonctions de corrélation et leur modèle ajusté dans chacun des bins en redshift. Les différents graphiques montrent les différents bins en redshift. Dans chaque graphique, la fonction de corrélation est affichée dans plusieurs bins en $\mu$. Le tableau~\ref{prov} donne le résultat de l'ajustement dans chacun des bins en redshift. La première section du tableau donne les paramètres ajustés, la deuxième donne le $\chi^2$ obtenu. Le nombre de bins dans lesquels la fonction de corrélation est ajustée est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté de $d.o.f. = \num{1590} - \num{13} = \num{1577}$. Enfin, la troisième colonne donne le biais et le biais effectif du \lya{}.
+La figure~\ref{prov} présente les fonctions de corrélation et leur modèle ajusté dans chacun des bins en redshift. Les différents graphiques montrent les différents bins en redshift. Dans chaque graphique, la fonction de corrélation est affichée dans plusieurs bins en $\mu$. Le tableau~\ref{prov} donne le résultat de l'ajustement dans chacun des bins en redshift. La première section du tableau donne les paramètres ajustés, la deuxième donne le redshift effectif $z_{\mathrm{eff}}$ et le $\chi^2$ obtenu. Le nombre de bins dans lesquels la fonction de corrélation est ajustée est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté de $d.o.f. = \num{1590} - \num{13} = \num{1577}$. Enfin, la troisième colonne donne le biais et le biais effectif du \lya{}.
 % Le biais $b_{\mathrm{Ly}\alpha} $ est obtenu comme
 % \begin{equation}
 %   \label{eq:def_bias}

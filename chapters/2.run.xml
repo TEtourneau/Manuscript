@@ -44,7 +44,8 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>2.bcf</file>
+      <file>2.aux</file>
+      <file>2-blx.bib</file>
     </provides>
     <requires type="dynamic">
       <file>2.bbl</file>
@@ -52,7 +53,9 @@
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
+      <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
+      <file>blx-natbib.def</file>
       <file>authoryear.bbx</file>
       <file>standard.bbx</file>
       <file>authoryear.cbx</file>
@@ -61,13 +64,14 @@
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
-    <generic>biber</generic>
+    <generic>bibtex</generic>
     <cmdline>
-      <binary>biber</binary>
+      <binary>bibtex</binary>
+      <option>-min-crossrefs 2</option>
       <infile>2</infile>
     </cmdline>
     <input>
-      <file>2.bcf</file>
+      <file>2.aux</file>
     </input>
     <output>
       <file>2.bbl</file>
@@ -76,10 +80,14 @@
       <file>2.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>2.bcf</file>
+      <file>2.aux</file>
+      <file>2-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>../source/library.bib</file>
+    </requires>
+    <requires type="static">
+      <file>biblatex.bst</file>
     </requires>
   </external>
 </requests>

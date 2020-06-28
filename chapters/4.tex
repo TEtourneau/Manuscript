@@ -1030,14 +1030,21 @@ Afin de corriger ces différences, nous ajustons itérativement la forme de $P_{
 % A ce stade, nous disposons des informations nécessaires pour générer la prédiction. Nous générons donc la prédiction, puis nous l'ajustons avec le code \picca{}.
 \textbf{A ce stade, nous disposons des informations nécessaires pour calculer la prédiction. Afin de mesurer les paramètres \lya{} prédits, nous générons une pseudo-fonction de corrélation qui suit la prédiction calculée avec le jeu de paramètres. Nous ajustons ensuite cette pseudo-fonction de corrélation avec le code picca, comme nous le ferions avec les mocks.}
 \textbf{
-Dans le chapitre~\ref{prov}, nous verrons que les paramètres \lya{} sont corrélés entre eux.
-Ainsi, afin de comparer au mieux la prédiction avec les données, plutôt que de mesurer les paramètres $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$, nous mesurons les paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$.
-Le biais effectif $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ est relié au biais et au paramètre RSD du \lya{} par
-\begin{equation}
-  b_{\mathrm{eff},\mathrm{Ly}\alpha} = b_{\mathrm{Ly}\alpha} \sqrt{1 + \frac{2}{3} \beta_{\mathrm{Ly}\alpha} + \frac{1}{5} \beta_{\mathrm{Ly}\alpha}^2} \; .
-\end{equation}
-Il est sensible à l'amplitude de la fonction de corrélation, et est moins corrélé avec $\beta_{\mathrm{Ly}\alpha}$ que l'est $b_{\eta, \mathrm{Ly}\alpha}$ ou $b_{\mathrm{Ly}\alpha}$.
-Enfin, nous mesurons aussi $\overline F$ dans la prédiction, et nous comparons sa valeur à ce qui est mesuré dans les données (\#prov Papier de White, mais lequel ?).}
+  Le code picca ajuste les paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$. Le biais $b_{\mathrm{Ly}\alpha}$ est relié à ces deux paramètres par la relation
+  \begin{equation}
+    \label{eq:def_bias}
+    b_{\mathrm{Ly}\alpha}  = \frac{b_{\eta, \mathrm{Ly}\alpha} f}{\beta_{\mathrm{Ly}\alpha}} \; ,
+  \end{equation}
+  où $f$ est le taux de croissance des structures.
+  Dans le chapitre~\ref{prov}, nous verrons que les paramètres \lya{} sont corrélés entre eux.
+  Ainsi, afin de comparer au mieux la prédiction avec les données, plutôt que de mesurer les paramètres $b_{\eta, \mathrm{Ly}\alpha}$ ou $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$, nous mesurons les paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$.
+  Le biais effectif $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ est relié au biais et au paramètre RSD du \lya{} par
+  \begin{equation}
+    \label{eq:def_bias_eff}
+    b_{\mathrm{eff},\mathrm{Ly}\alpha} = b_{\mathrm{Ly}\alpha} \sqrt{1 + \frac{2}{3} \beta_{\mathrm{Ly}\alpha} + \frac{1}{5} \beta_{\mathrm{Ly}\alpha}^2} \; .
+  \end{equation}
+  Il est sensible à l'amplitude de la fonction de corrélation, et est moins corrélé avec $\beta_{\mathrm{Ly}\alpha}$ que l'est $b_{\eta, \mathrm{Ly}\alpha}$ ou $b_{\mathrm{Ly}\alpha}$.
+  Enfin, nous mesurons aussi $\overline F$ dans la prédiction, et nous comparons sa valeur à ce qui est mesuré dans les données (\#prov Papier de White, mais lequel ?).}
 % Nous comparons la mesure de $b_{\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ à ce qui est mesuré dans les données.
 % Toute ces étapes constituent une itération complète de la procédure d'ajustement.
 % Dans le cas où les paramètres \lya{} mesurés sur la prédiction ne sont pas en accord avec ce qui est mesuré dans les données, nous relançons une nouvelle itération :
