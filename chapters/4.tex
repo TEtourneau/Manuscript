@@ -798,7 +798,7 @@ Afin d'obtenir le seuil pour un biais donné, nous tabulons $b_{\nu}$ pour une l
   \caption{Le graphique de gauche montre le biais $b_{\nu}$ obtenu pour un seuil $\nu$. Le graphique de droite montre le paramètre $\lambda(z)$, utilisé pour tirer les HCD.}
   \label{fig:bnu_lambda}
 \end{figure}
-Dans notre cas, le champ $\delta_l$ suit une distribution de probabilité gaussienne. Cependant, sa variance n'est pas égale à 1. De plus, le champ $\delta_l$ interpolé le long des lignes de visée correspond au champ de matière à $z=0$. Ainsi, pour obtenir un biais $b_{\textsc{HCD}}$, pour chaque redshift nous  calculons le seuil $\nu$ comme si nous visions un biais $b = b_{\textsc{HCD}} \sigma_l G(z)$. Le terme $\sigma_l$ prend en compte la variance du champ $\delta_l$, et $G(z)$ le fait que $\delta_l$ soit construit à $z=0$.
+Dans notre cas, le champ $\delta_l$ suit une distribution de probabilité gaussienne. Cependant, sa variance n'est pas égale à 1. De plus, le champ $\delta_l$ interpolé le long des lignes de visée correspond au champ de matière à $z=0$. Ainsi, pour obtenir un biais $b_{\textsc{HCD}}$, pour chaque redshift nous  calculons le seuil $\nu$ comme si nous visions un biais $b = b_{\textsc{HCD}} \sigma_l G(z)$. Le terme $\sigma_l$ prend en compte la variance du champ $\delta_l$, et $G(z)$ le fait que $\delta_l$ soit construit à $z=0$. Nous choisissons de tirer les HCD avec un biais $b_{\textsc{HCD}} = 2$.
 Une fois les pixels pouvant héberger un HCD identifiées, nous tirons dans chacune d'entre elles les HCD avec une loi de poisson de paramètre
 \begin{equation}
   \lambda(z) = \frac{N(z)}{cdf(-\nu(z))} \; ,
@@ -1091,7 +1091,35 @@ Les mocks décrits précédemment produisent un relevé de quasars avec, pour ch
 Afin de reproduire complètement les données et pouvoir simuler la chaîne d'analyse, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres simulés.
 Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. 
 
+Le continuum des quasars est généré à l'aide du module \texttt{SIMQSO}, du package \texttt{desisim}. Le modèle utilisé est composé par des lois de puissance qui sont mises bout à bout. Les raies d'émission sont ajoutées en utilisant un modèle fondé sur les spectres des quasars observés par BOSS.
+Une option permet d'ajouter des BAL aux spectres de quasars simulés. Nous n'utilisons pas cette option.
+Le code permet aussi d'ajouter des HCD et des métaux. Les HCD sont ajoutés dans les spectres aux positions indiquées par le catalogue de HCD que nous générons (voir section~\ref{subsec:hcd)}). Pour chaque HCD, un profil de Voigt, dont la profondeur dépend de la densité de colonne, est créé puis ajouté au spectre.
+En ce qui concerne les métaux, ils sont ajoutés en utilisant la transmission du \lya{} : pour chaque métal, la forêt \lya{} est décalée en longueurs d'onde observées par un facteur $\lambda_m / \lambda_{\mathrm{Ly}\alpha}$, où $\lambda_m$ est la longueur d'onde du métal considéré.
+Puis, l'absorption est modifiée : 
+le flux de chaque absorption est corrigé par un facteur $A_m$, où $A_m$ relie la profondeur optique de la raie d'absorption du métal à la profondeur optique du \lya{} : $\tau_m = A_m \tau_{\mathrm{Ly}\alpha}$. Le paramètre $A_m$ est ajusté afin d'obtenir le bon biais pour chaque métal.
+% où $\tau_m$ est la profondeur optique de la raie d'absorption, et $A_m$ un paramètre qui est ajusté pour chaque métal afin d'obtenir le bon biais pour le métal considéré.
+Enfin, le code ajoute les spécificités propres à l'instrument ou au relevé (eBOSS ou DESI), comme par exmemple la réponse des spectrographes, le temps d'exposition pour chaque spectre, ou encore la distribution en magnitude des quasars.
+La figure~\ref{fig:quickquasars_spectra} présente le spectre d'un quasar simulé. Le graphique du bas montre les régions des forêts \lya{} et \lyb{} en bleu, superposées à la fraction de flux transmis en vert. Cette dernière est multipliée par 30 pour des raisons de visibilité. Le spectre synthétique possède un DLA à $\lambda_{\mathrm{RF}} \sim \SI{1135}{\angstrom}$.
 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.55]{quickquasars_spectra}
+  \caption{Spectre d'un quasar synthétique généré par \texttt{quickqasars}. Le quasar se trouve à un redshift $z = \num{3.121}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure.
+  Le graphique du bas montre le spectre dans les régions des forêts \lya{} et \lyb{} (bleu), superposées à la fraction de flux transmis multipliée par 30 (vert), en fonction de la longueur d'onde au repos. Les pointillés gris indiquent les raies \lya{} et \lyb{}. Un DLA est visible dans le spectre synthétique pour $\lambda_{\mathrm{RF}} \sim \SI{1135}{\angstrom}$.}
+  \label{fig:quickquasars_spectra}
+\end{figure}
+
+\paragraph{}
+A l'aide du code \texttt{quickquasars}, nous produisons plusieurs versions différentes des mocks :
+\begin{itemize}
+\item les \emph{raw mocks},
+\item les mocks \emph{eboss-0.0}, 
+\item les mocks \emph{eboss-0.2},
+\item les mocks \emph{eboss-0.3}.
+\end{itemize}
+Les raw mocks sont les mocks bruts, sans l'utilisation de \texttt{quickquasars}. Ces mocks sont analysés en estimant les fonctions de corrélation directement à partir des fichiers de transmission (voir chapitre~\ref{prov}). Ceci nous permet de vérifier la construction des mocks et les différentes fonctions de corrélation, sans que celles-ci soient affectées par l'ajustement du continuum ou les effets astrophysiques et instrumentaux.
+Les versions eboss-0.0, eboss-0.2 et eboss-0.3 sont les versions des mocks après avoir utilisé \texttt{quickquasars} pour produire les spectres synthétiques. La version eboss-0.0 correspond à l'ajout du continuum et du bruit. La version eboss-0.2 est la version eboss-0.0 à laquelle les HCD sont ajoutés. La version eboss-0.3 ajoute le continuum, le bruit, les HCD ainsi que les métaux.
+Nous présentons l'analyse de ces différentes versions des mocks dans le chapitre suivant.
 
 % En effet, à ce stade nous disposons uniquement d'un relevé de quasars, et pour chacun d'entre deux, une forêt contenant le champ d'absorption $F$ variant entre 0 et 1. Ainsi, afin de simuler complètement les données, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres synthétiques. Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. Ce code utilise 
 
