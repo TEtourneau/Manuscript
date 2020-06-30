@@ -570,12 +570,13 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
 \end{figure}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{p1d_smoothing}
-  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur le spectre de puissance à une dimension. La courbe noire donne le spectre de puissance à une dimension obtenu à partir du spectre de puissance de la matière (équation~\ref{eq:p1d}). La courbe bleu donne $P^{\mathrm{1D}}$ obtenu à partir du spectre de puissance de la matière multiplié par $W^2(k)$ (équation~\ref{eq:gauss_smoothing}). La courbe verte donne $P^{\mathrm{1D}}$ obtenu à partir du spectre de puissance  de la matière multiplié par $G^2(k)$ (équation~\ref{eq:gauss_smoothing}). Enfin la courbe rouge donne $P^{\mathrm{1D}}$ obtenu à partir du spectre de puissance de la matière multiplié par $W^2(k) G^2(k)$.}
+  \includegraphics[scale=0.35]{p1d_smoothing}
+  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur le spectre de puissance à une dimension. La courbe noire donne le spectre de puissance à une dimension obtenu à partir du spectre de puissance de la matière (équation~\ref{eq:p1d}). La courbe bleu donne $P^{\mathrm{1D}}$ obtenu à partir du spectre de puissance de la matière multiplié par $W^2(k)$ (équation~\ref{eq:gauss_smoothing}). La courbe verte donne $P^{\mathrm{1D}}$ obtenu à partir du spectre de puissance  de la matière multiplié par $G^2(k)$ (équation~\ref{eq:gauss_smoothing}). Enfin la courbe rouge donne $P^{\mathrm{1D}}$ obtenu à partir du spectre de puissance de la matière multiplié par $W^2(k) G^2(k)$.
+  L'effet dominant sur le spectre de puissance à une dimension est l'effet du lissage gaussien.}
   \label{fig:p1d_smoothing}
 \end{figure}
 
-\textbf{Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, on peut montrer que le spectre de puissance à une dimension est donné par l'intégrale du spectre de puissance à trois dimensions sur la direction transverse à la ligne de visée :}
+\textbf{Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, on peut montrer que le spectre de puissance à une dimension est donné par l'intégrale du spectre de puissance à trois dimensions sur la direction transverse à la ligne de visée \autocite{lumsden_clustering_1989} :}
 \begin{equation}
   \label{eq:p1d}
   P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{0}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; .
@@ -583,9 +584,13 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
 % Avec la taille non nulle des voxels, l'intégrale s'effectue seulement jusqu'à $k_N$. De plus, le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ réduit davantage l'amplitude de ce spectre de puissance. Ces deux effets sont représentés sur la figure~\ref{prov} (\#prov faire la figure). Contrairement au cas à trois dimensions, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
 % En effet, ce spectre de puissance le long d'une ligne de visée est beaucoup plus sensible au bruit que le spectre de puissance calculé sur une colonne de section de $(\SI{2.19}{\perh\Mpc})^2$.
 % A cause de ces deux effets, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
-Dans notre cas, le spectre de puissance à trois dimensions $P(\kpar{}, \kperp{})$ à intégrer est le spectre de puissance de la matière $P_{\mathrm{matière}}(\kpar{}, \kperp{})$ multiplié par $G^2(\kpar{}, \kperp{})W^2(\kpar{}, \kperp{})$. Contrairement au cas à trois dimensions, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
-En effet, le spectre de puissance le long d'une ligne de visée est beaucoup plus sensible aux petites échelles (grands $k$), 
-Ces deux effets sont représentés sur la figure~\ref{prov}
+\textbf{
+  Dans notre cas, le spectre de puissance à trois dimensions $P(\kpar{}, \kperp{})$ à intégrer est le spectre de puissance de la matière $P_{\mathrm{matière}}(\kpar{}, \kperp{})$ multiplié par $G^2(\kpar{}, \kperp{})W^2(\kpar{}, \kperp{})$.
+  L'effet de $G^2$ et $W^2$ sur $P^{\mathrm{1D}}$ est présenté sur la figure~\ref{fig:p1d_smoothing}.
+  Contrairement au cas à trois dimensions, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension : les termes $G^2$ et $W^2$ réduisent l'amplitude des modes aux petites échelles, qui ont une contribution importante pour tous les $\kpar{}$ lors du calcul de l'intégrale de l'équation~\ref{eq:p1d}.
+Autrement dit, le spectre de puissance le long d'une ligne de visée est beaucoup plus sensible aux petites échelles que le spectre de puissance calculé sur une colonne de section de $(\SI{2.19}{\perh\Mpc})^2$, car dans le cas de ce dernier, les fluctuations liées aux modes perpendiculaires à la colonne et plus petits que $k = \pi / \SI{2.19}{\h\per\Mpc}$ sont moyennées. Ces fluctuations ne sont donc pas importantes dans ce cas là, mais le sont pour le spectre de puissance à une dimension. Lorsque les fluctuations aux petites échelles sont manquantes, l'amplitude du spectre de puissance à une dimension n'est pas correcte, et la variance du champ, donnée par l'intégrale de $P^{\mathrm{1D}}$, n'est pas correcte non plus.
+}
+% En effet, le spectre de puissance le long d'une ligne de visée est beaucoup plus sensible aux petites échelles (grands $k$) que le spectre de puissance calculée sur une colonne de section $(\SI{2.19}{\perh\Mpc})^2$ : les termes $G^2$ et $W^2$ réduisent l'amplitude des modes aux petites échelles, qui sont importants 
 % Sans les fluctuations à petite échelle, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
 % Lorsque ce spectre de puissance est calculé dans des voxels
 Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de visée un champ $\delta_s$ (\emph{small scales} : petites échelles) au champ $\delta_{\mathrm{matière}}$ que nous appelons désormais $\delta_{l}$ (\emph{large scales} : grandes échelles) :
@@ -698,8 +703,10 @@ La figure~\ref{fig:xiF_vs_xig} montre la fonction de corrélation $\xi_F$ obtenu
 % Afin d'obtenir la prédiction dans l'espace des redshifts, nous commençons par relier $\xi_g(r, \mu)$ à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
 % De plus, nous pouvons relier la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
 % Par ailleurs, puisque $\delta_s$ ne participe pas à la fonction de corrélation à trois dimension du champ $\delta_g$, nous relions la fonction de corrélation dans l'espace de sredshift $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
-  Par ailleurs, puisque $\delta_s$ n'est pas corrélé d'une forêt à une autre, il ne participe pas au spectre de puissance à trois dimensions. Le champ $\delta_g$ suit alors le spectre de puissance
-  \begin{equation}
+Par ailleurs, puisque $\delta_s$ n'est pas corrélé d'une forêt à une autre, il ne participe pas au spectre de puissance à trois dimensions.
+Le champ $\delta_g$ suit alors le spectre de puissance \#prov inclure plot $\xi_g$ et discuter
+\begin{equation}
+  \label{eq:pk_g}
     P_g(k) = (1 + c \mu_k^2)^2 P_l(k) \; ,
   \end{equation}
   où $P_l$ est le spectre de puissance que suit le champ $\delta_l$.
@@ -809,7 +816,7 @@ Une fois les pixels pouvant héberger un HCD identifiées, nous tirons dans chac
 \begin{equation}
   \lambda(z) = \frac{N(z)}{cdf(-\nu(z))} \; ,
 \end{equation}
-où $N(z)$ donne le nombre moyen de HCD attendu par pixel et $\nu(z)$ le seuil au redshift $z$. Le nombre de HCD attendu est donné par la librairie \texttt{pyigm}\footnote{https://github.com/pyigm}. La distribution en redshift des HCD est présentée sur le graphique de gauche de la figure~\ref{fig:distrib_dla}, et le paramètre $\lambda(z)$ sur le graphique de droite de la figure~\ref{fig:bnu_lambda}. En pratique, du fait que $\lambda(z) \ll 1$, il est très rare d'avoir plus d'un HCD par pixel.
+où $N(z)$ donne le nombre moyen de HCD attendu par pixel et $\nu(z)$ le seuil au redshift $z$. Le nombre de HCD attendu est donné par la librairie \texttt{pyigm}\footnote{https://github.com/pyigm}. La distribution en redshift des HCD est présentée sur le graphique de gauche de la figure~\ref{fig:distrib_dla}, et le paramètre $\lambda(z)$ sur le graphique de droite de la figure~\ref{fig:bnu_lambda}. En pratique, du fait que $\lambda(z) \ll 1$, il est très rare d'avoir plus d'un HCD par pixel\footnote{Lorsqu'un pixel contient plusieurs HCD, ces HCD sont gardés et une densité de colonne leur est assignée. Ces deux HCD sont alors ajoutés au spectre synthétique par \texttt{quickquasars} (voir section~\ref{sec:quickquasars}), ce qui résulte en un seul HCD avec une densité de colonne valant la somme des densités de colonne des deux HCD tirés dans le pixel.}.
 Une fois tous les HCD tirés, nous leur assignons une densité de colonne dans la gamme $\num{17.2} < \log(n_{\textsc{HI}}) < \num{22.5}$, selon la distribution donnée par \texttt{pyigm}. Cette distribution est présentée sur le graphique de droite de la figure~\ref{fig:distrib_dla}.
 \begin{figure}
   \centering
@@ -925,11 +932,12 @@ Cet ajustement est fait pour les cinq valeurs du redshift $z_1 = \num{1.8}$ ; $z
 
 \paragraph{}
 Dans les lignes qui suivent, nous expliquons comment, pour chaque valeur du redshift, nous choisissons le jeu de paramètres FGPA initial pour générer la prédiction à la première itération.
-\textbf{Premièrement, nous choississons le paramètre $c$.
+Premièrement, nous choississons le paramètre $c$.
 % La somme des champs $\delta_l$ et $\eta_{\parallel}$ permet de retrouver le champ $\delta^s$ dans l'espace des redshifts, via la formule de Kaiser (équation~\ref{eq:kaiser5}).
-Comme expliqué dans la section~\ref{subsubsec:pred}, le champ $\delta_s$ ne participe pas à la corrélation à trois dimension. De plus, la somme des champs $\delta_l$ et $\eta_{\parallel}$ permet de retrouver le champ $\delta$ dans l'espace des redshifts, via la formule de Kaiser (équation~\ref{eq:kaiser5}).
-Ce champ $\delta$ dans l'espace des redshift possède un biais de 1, par construction. Son paramètre RSD est donc $\beta = f / b = f$. De plus, à grand redshift, nous pouvons considérer en bonne approximation que $f \sim 1$. Nous avons donc $\beta \sim 1$. Ainsi, lorsque nous considérons la somme des trois champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ dans l'équation~\ref{eq:fgpa4}, le terme $c$ devant $\eta_{\parallel}$ donne, en première approximation, $\beta = c$.
-Pour chaque valeur du redshift, nous choisissons donc $c(z) = \beta_{\mathrm{Ly}\alpha}(z)$.}
+% Comme expliqué dans la section~\ref{subsubsec:pred}, le champ $\delta_s$ ne participe pas à la corrélation à trois dimension. De plus, la somme des champs $\delta_l$ et $\eta_{\parallel}$ permet de retrouver le champ $\delta$ dans l'espace des redshifts, via la formule de Kaiser (équation~\ref{eq:kaiser5}).
+% Ce champ $\delta$ dans l'espace des redshift possède un biais de 1, par construction. Son paramètre RSD est donc $\beta = f / b = f$. De plus, à grand redshift, nous pouvons considérer en bonne approximation que $f \sim 1$. Nous avons donc $\beta \sim 1$. Ainsi, lorsque nous considérons la somme des trois champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ dans l'équation~\ref{eq:fgpa4}, le terme $c$ devant $\eta_{\parallel}$ donne, en première approximation, $\beta = c$.
+% Pour chaque valeur du redshift, nous choisissons donc $c(z) = \beta_{\mathrm{Ly}\alpha}(z)$.
+\textbf{Comme expliqué dans la section~\ref{subsubsec:pred}, le champ $\delta_s$ ne participe pas à la corrélation à trois dimension et le champ $g$ suit le spectre de puissance de l'équation~\ref{eq:pk_g}. Le paramètre RSD du champ $g$ vaut donc $\beta_g = c$, et donc, en première approximation, le paramètre RSD du champ $F$ vaut $c$ aussi. Pour chaque valeur du redshift, nous choisissons alors $c(z) = \beta_{\mathrm{Ly}\alpha}(z)$.}
 
 En ce qui concerne les paramètres $a$ et $b$, ils sont ajustés afin de retrouver le bon $\overline F(z)$ et $P^{\mathrm{1D}}(k, z)$ (\#prov décrire).
 
@@ -957,19 +965,24 @@ nous commençons donc par constuire le spectre de puissance $P^{\mathrm{1D}}_{\m
 %   f(k) = \exp(- a k + b + \frac{c}{k + d}) \times f_{Si}(k) \; ,
 % \end{equation}
 % où $a$, $b$, $c$ et $d$ sont quatres paramètres à ajuster, et $f_{Si}$ est la fonction qui prend en compte les oscillations dues au silicium. La forme choisie permet d'avoir $\log(P^{\mathrm{1D}}_{modèle})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \autocite{Arinyo-i-Prats2015}.
-Tout d'abord, les données provenant de (\#prov On fit les données DR12 sans les oscillations du Si, quel papier ?) sont ajustées dans la gamme $\num{0.2} < k < {2.0} \si{\h\per\Mpc}$.
+% Tout d'abord, les données provenant de (\#prov On fit les données DR12 sans les oscillations du Si, quel papier ?) sont ajustées dans la gamme $\num{0.2} < k < {2.0} \si{\h\per\Mpc}$.
+\textbf{
+Tout d'abord, le spectre de puissance à une dimension provenant des données DR12 dans lequel les oscillations dues au silicium ont été retirées (Nathalie Palanque-Delabrouille, communication privée) est ajusté dans la gamme $\num{0.2} < k < {2.0} \si{\h\per\Mpc}$.
 La fonction ajustée aux données est définie comme
 \begin{equation}
   \label{eq:p1d_data}
-  f(k) = \exp(- a k + b + \frac{c}{k + d}) \times f_{\mathrm{Si}}(k) \; ,
+  % f(k) = \exp(- a k + b + \frac{c}{k + d}) \times f_{\mathrm{Si}}(k) \; ,
+  f(k) = \exp(- a k + b + \frac{c}{k + d})  \; ,
 \end{equation}
 où $a$, $b$, $c$ et $d$ sont quatres paramètres à ajuster.
-La fonction $f_{\mathrm{Si}}$ prend en compte les oscillations dues au silicium. Une fois la fonction $f$ de l'équation~\ref{eq:p1d_data} ajustée sur les données, nous utilisons comme modèle pour le spectre de puissance à une dimension la fonction $f$ sans la contribution du silicium $f_{\mathrm{Si}}$. Ceci nous permet de nous affranchir des oscillations dues au silicium dans notre modèle.
+% La fonction $f_{\mathrm{Si}}$ prend en compte les oscillations dues au silicium.
+% Une fois la fonction $f$ de l'équation~\ref{eq:p1d_data} ajustée sur les données, nous utilisons comme modèle pour le spectre de puissance à une dimension la fonction $f$ sans la contribution du silicium $f_{\mathrm{Si}}$. Ceci nous permet de nous affranchir des oscillations dues au silicium dans notre modèle.
 La forme choisie pour $f$ permet d'avoir $\log(P^{\mathrm{1D}}_{\mathrm{modèle}})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \autocite{Arinyo-i-Prats2015}.
 % L'ajustement est fait dans les cinqs bins en redshift $z_1$, $z_2$, $z_3$, $z_4$ et $z_5$.
 % L'ajustement est fait dans les bins en redshift \num{2.2} ; \num{2.4} ; \num{2.6} ; \num{2.8} ; \num{3.0} ; \num{3.2} ; \num{3.4} et \num{3.6}.
 % Du fait de la résolution $d_{pix} = \SI{0.2}{\perh\Mpc}$ des spectres simulés, nous avons besoin de calculer le  $P_{s}$ jusqu'à $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$.
-Pour construire $\delta_s$, nous avons besoin de calculer $P_{s}$ jusqu'à $k_{Ny}$.
+Afin de construire $\delta_s$, nous avons besoin de calculer $P_{s}$ jusqu'à $k_{Ny}$.
+}
 Le résultat de l'ajustement sur les données est donc extrapolé de $k = \num{2.0}$ jusqu'à $k = \SI{20}{\h\per\Mpc}$.
 Pour les $k$ plus petits que \SI{0.2}{\h\per\Mpc}, nous utilisons le modèle décrit dans \textcite{Arinyo-i-Prats2015} et ajusté sur des simulations hydrodynamiques.
 Il est défini comme
@@ -999,7 +1012,7 @@ La figure~\ref{fig:p1d_data} montre le modèle ainsi construit, avec les donnée
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{p1d_model_data}
-  \caption{Modèle du spectre de puissance à une dimension, pour différentes valeurs du redshift $z$, utilisé dans les mocks. Le modèle, donné par les lignes continues, est ajusté sur les données \autocite{prov}, représentées par les points. Ce modèle est décrit dans le texte.}
+  \caption{Modèle du spectre de puissance à une dimension, pour différentes valeurs du redshift $z$, utilisé dans les mocks. Le modèle, donné par les lignes continues, est ajusté sur les données (Nathalie Palanque-Delabrouille, communication privée), représentées par les points. Ce modèle est décrit dans le texte.}
   \label{fig:p1d_data}
 \end{figure}
 Pour le bin $z = \num{1.8}$, aucune donnée \lya{} n'est disponible. Nous extrapolons donc le modèle à $z = \num{2.2}$. Nous considérons que la forme du modèle reste la même. Nous considérons aussi que l'évolution en redshift de $z = \num{2.4}$ à $z = \num{2.2}$ est la même jusqu'à $z = \num{1.8}$. Le modèle à $z = \num{1.8}$ est donc donné par
@@ -1057,7 +1070,11 @@ A ce stade, nous disposons des informations nécessaires pour calculer la prédi
 % Ces itérations sont répétées dans chaque bin en redshift jusqu'à obtenir des valeurs de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ compatibles avec les données.
 % Toutes ces étapes constituent une itération complète de la procédure d'ajustement.
 
-L'estimation initiale que nous faisons des paramètres $b$ et $c$ donnent des valeurs de $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ proches de ce qui est mesuré dans les données. Cependant, la valeur de $a$ est surestimée : les paramètres $a$ et $b$ sont estimés à partir des mesures de $P^{\mathrm{1D}}$ et $\overline F$ dans les données. Comme nous le verrons dans la section~\ref{subsec:model_donnees}, la présence de HCD dans les données a pour effet d'augmenter le biais effectif mesuré. Ainsi, l'estimation du paramètre $a$, est faite avec un $P^{\mathrm{1D}}$ qui possède un biais trop grand. Ceci résulte en une surestimation du paramètre $a$, et donc un biais effectif trop grand dans les mocks.
+\textbf{L'estimation initiale que nous faisons des paramètres $b$ et $c$ donnent des valeurs de $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ proches de ce qui est mesuré dans les données.
+  Cependant, la valeur de $a$ obtenue est trop grande : les paramètres $a$ et $b$ sont estimés à partir des mesures de $P^{\mathrm{1D}}$ et $\overline F$ dans les données.
+  Comme nous le verrons dans la section~\ref{subsec:model_donnees}, la présence de HCD dans les données a pour effet d'augmenter le biais effectif mesuré.
+  Ainsi, l'estimation du paramètre $a$ est faite avec un $P^{\mathrm{1D}}$ qui possède un biais effectif surestimé.
+  Ceci résulte en une valeur de $a$ trop grande qui produit un biais effectif trop grand dans nos mocks.}
 Nous itérons alors sur les paramètres $a$, $b$ et $c$ : nous diminuons $a$, et si besoin modifions légèrement $b$ et $c$ afin d'affiner les valeurs de $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ des mocks.  % afin de converger vers les bons $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$.
 Puis, nous recalculons le nouveau $P_{s}^{10}$ afin de générer la nouvelle prédiction. Nous ajustons de nouveau la prédiction avec \picca{} et comparons les valeurs de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ mesurées aux données. Ces itérations sont faites jusqu'à obtenir des valeurs en accord avec les données.
 

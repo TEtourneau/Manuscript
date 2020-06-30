@@ -1,102 +1,103 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is '4.blg'
-[50] biber-darwin:303> INFO - === Thu Jun 18, 2020, 15:51:24
-[90] Biber.pm:359> INFO - Reading '4.bcf'
-[207] Biber.pm:835> INFO - Found 16 citekeys in bib section 0
-[233] Biber.pm:3670> INFO - Processing section 0
-[262] Biber.pm:3840> INFO - Looking for bibtex format file '../source/library.bib' for section 0
-[433] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[774] bibtex.pm:1292> INFO - Found BibTeX data source '../source/library.bib'
-[967] Utils.pm:164> WARN - month field 'apr' in entry 'Heitmann2019' is not an integer - this will probably not sort properly.
-[977] Utils.pm:164> WARN - month field 'jun' in entry 'Agrawal2017' is not an integer - this will probably not sort properly.
-[996] Utils.pm:164> WARN - month field 'may' in entry 'Clerkin2016' is not an integer - this will probably not sort properly.
-[998] Utils.pm:164> WARN - month field 'jan' in entry 'coles_lognormal_1991' is not an integer - this will probably not sort properly.
-[1000] Utils.pm:164> WARN - month field 'nov' in entry 'Lewis1999' is not an integer - this will probably not sort properly.
-[1002] Utils.pm:164> WARN - month field 'jun' in entry 'Arinyo-i-Prats2015' is not an integer - this will probably not sort properly.
-[1007] Utils.pm:164> WARN - month field 'nov' in entry 'Pieri2016' is not an integer - this will probably not sort properly.
-[1015] Utils.pm:164> WARN - month field 'jul' in entry 'LeGoff2011' is not an integer - this will probably not sort properly.
-[1022] Utils.pm:164> WARN - month field 'dec' in entry 'Farr2019' is not an integer - this will probably not sort properly.
-[1028] Utils.pm:164> WARN - month field 'may' in entry 'Font-Ribera2012a' is not an integer - this will probably not sort properly.
-[1031] Utils.pm:164> WARN - month field 'sep' in entry 'Gorski2004' is not an integer - this will probably not sort properly.
-[1032] Utils.pm:164> WARN - month field 'mar' in entry 'McDonald2003' is not an integer - this will probably not sort properly.
-[1034] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 6, warning: 176 characters of junk seen at toplevel
-[1034] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 211, warning: possible runaway string started at line 210
-[1034] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 359, warning: possible runaway string started at line 358
-[1034] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 695, warning: possible runaway string started at line 694
-[1074] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 925, warning: possible runaway string started at line 924
-[1074] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1207, warning: possible runaway string started at line 1206
-[1075] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1352, warning: possible runaway string started at line 1343
-[1075] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1356, warning: possible runaway string started at line 1355
-[1075] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1399, warning: possible runaway string started at line 1398
-[1075] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1708, warning: possible runaway string started at line 1692
-[1134] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1725, warning: possible runaway string started at line 1724
-[1135] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1820, warning: possible runaway string started at line 1819
-[1135] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 1998, warning: possible runaway string started at line 1997
-[1135] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 2100, warning: possible runaway string started at line 2099
-[1135] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 2225, warning: possible runaway string started at line 2220
-[1136] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 2230, warning: possible runaway string started at line 2229
-[1194] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 2680, warning: possible runaway string started at line 2672
-[1194] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 2690, warning: possible runaway string started at line 2689
-[1194] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 2919, warning: possible runaway string started at line 2918
-[1195] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 3315, warning: possible runaway string started at line 3314
-[1195] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 3370, warning: possible runaway string started at line 3344
-[1195] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 3372, warning: possible runaway string started at line 3371
-[1253] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 3538, warning: possible runaway string started at line 3537
-[1253] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 3799, warning: possible runaway string started at line 3798
-[1253] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 4284, warning: possible runaway string started at line 4283
-[1254] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 4539, warning: possible runaway string started at line 4538
-[1254] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 4688, warning: possible runaway string started at line 4687
-[1254] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 4823, warning: possible runaway string started at line 4822
-[1292] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5049, warning: possible runaway string started at line 5048
-[1293] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5223, warning: possible runaway string started at line 5222
-[1293] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5437, warning: possible runaway string started at line 5436
-[1293] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5518, warning: possible runaway string started at line 5517
-[1294] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5646, warning: possible runaway string started at line 5645
-[1374] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5677, warning: possible runaway string started at line 5676
-[1375] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5890, warning: possible runaway string started at line 5889
-[1375] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 5944, warning: possible runaway string started at line 5943
-[1375] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 6148, warning: possible runaway string started at line 6147
-[1376] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 6343, warning: possible runaway string started at line 6342
-[1376] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 6411, warning: possible runaway string started at line 6410
-[1438] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 6873, warning: possible runaway string started at line 6872
-[1438] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7030, warning: possible runaway string started at line 7029
-[1439] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7193, warning: possible runaway string started at line 7192
-[1439] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7281, warning: possible runaway string started at line 7280
-[1439] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7421, warning: possible runaway string started at line 7420
-[1440] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7515, warning: possible runaway string started at line 7514
-[1505] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7563, warning: possible runaway string started at line 7562
-[1505] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7716, warning: possible runaway string started at line 7715
-[1505] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 7881, warning: possible runaway string started at line 7880
-[1505] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 8273, warning: possible runaway string started at line 8272
-[1506] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 8340, warning: possible runaway string started at line 8339
-[1506] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 8390, warning: possible runaway string started at line 8389
-[1572] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 8467, warning: possible runaway string started at line 8466
-[1573] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 8826, warning: possible runaway string started at line 8825
-[1573] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 8938, warning: possible runaway string started at line 8937
-[1574] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 8989, warning: possible runaway string started at line 8988
-[1574] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 9596, warning: possible runaway string started at line 9595
-[1574] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 9626, warning: possible runaway string started at line 9625
-[1641] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 9689, warning: possible runaway string started at line 9688
-[1642] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 9728, warning: possible runaway string started at line 9727
-[1642] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 10254, warning: possible runaway string started at line 10253
-[1643] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 10317, warning: possible runaway string started at line 10316
-[1643] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 10419, warning: possible runaway string started at line 10418
-[1643] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 10725, warning: possible runaway string started at line 10724
-[1705] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 10805, warning: possible runaway string started at line 10804
-[1706] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 11573, warning: possible runaway string started at line 11572
-[1706] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 11799, warning: possible runaway string started at line 11798
-[1707] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 11883, warning: possible runaway string started at line 11882
-[1707] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 12212, warning: possible runaway string started at line 12211
-[1707] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 12523, warning: possible runaway string started at line 12522
-[1775] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 12633, warning: possible runaway string started at line 12632
-[1775] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 13009, warning: possible runaway string started at line 13008
-[1776] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 13184, warning: possible runaway string started at line 13183
-[1776] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/p_9FRu4cqM/library.bib_54200.utf8, line 13539, warning: possible runaway string started at line 13538
-[1778] Utils.pm:164> WARN - I didn't find a database entry for 'prov' (section 0)
-[1947] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1947] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1947] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'fr-FR'
-[1947] Biber.pm:3505> INFO - No sort tailoring available for locale 'fr-FR'
-[1971] bbl.pm:608> INFO - Writing '4.bbl' with encoding 'UTF-8'
-[1979] bbl.pm:712> INFO - Output to 4.bbl
-[1979] Biber.pm:109> INFO - WARNINGS: 86
+[47] biber-darwin:303> INFO - === Tue Jun 30, 2020, 14:24:09
+[91] Biber.pm:359> INFO - Reading '4.bcf'
+[201] Biber.pm:835> INFO - Found 17 citekeys in bib section 0
+[217] Biber.pm:3670> INFO - Processing section 0
+[249] Biber.pm:3840> INFO - Looking for bibtex format file '../source/library.bib' for section 0
+[424] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[788] bibtex.pm:1292> INFO - Found BibTeX data source '../source/library.bib'
+[1036] Utils.pm:164> WARN - month field 'apr' in entry 'Heitmann2019' is not an integer - this will probably not sort properly.
+[1049] Utils.pm:164> WARN - month field 'jun' in entry 'Agrawal2017' is not an integer - this will probably not sort properly.
+[1070] Utils.pm:164> WARN - month field 'may' in entry 'Clerkin2016' is not an integer - this will probably not sort properly.
+[1072] Utils.pm:164> WARN - month field 'jan' in entry 'coles_lognormal_1991' is not an integer - this will probably not sort properly.
+[1074] Utils.pm:164> WARN - month field 'nov' in entry 'Lewis1999' is not an integer - this will probably not sort properly.
+[1078] Utils.pm:164> WARN - month field 'jun' in entry 'Arinyo-i-Prats2015' is not an integer - this will probably not sort properly.
+[1083] Utils.pm:164> WARN - month field 'nov' in entry 'Pieri2016' is not an integer - this will probably not sort properly.
+[1088] Utils.pm:164> WARN - month field 'may' in entry 'lumsden_clustering_1989' is not an integer - this will probably not sort properly.
+[1098] Utils.pm:164> WARN - month field 'jul' in entry 'LeGoff2011' is not an integer - this will probably not sort properly.
+[1105] Utils.pm:164> WARN - month field 'dec' in entry 'Farr2019' is not an integer - this will probably not sort properly.
+[1111] Utils.pm:164> WARN - month field 'may' in entry 'Font-Ribera2012a' is not an integer - this will probably not sort properly.
+[1115] Utils.pm:164> WARN - month field 'sep' in entry 'Gorski2004' is not an integer - this will probably not sort properly.
+[1116] Utils.pm:164> WARN - month field 'mar' in entry 'McDonald2003' is not an integer - this will probably not sort properly.
+[1118] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 6, warning: 176 characters of junk seen at toplevel
+[1118] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 204, warning: possible runaway string started at line 203
+[1118] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 352, warning: possible runaway string started at line 351
+[1147] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 688, warning: possible runaway string started at line 687
+[1147] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 918, warning: possible runaway string started at line 917
+[1148] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1200, warning: possible runaway string started at line 1199
+[1148] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1345, warning: possible runaway string started at line 1336
+[1148] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1349, warning: possible runaway string started at line 1348
+[1148] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1392, warning: possible runaway string started at line 1391
+[1206] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1701, warning: possible runaway string started at line 1685
+[1206] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1718, warning: possible runaway string started at line 1717
+[1206] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1813, warning: possible runaway string started at line 1812
+[1206] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 1991, warning: possible runaway string started at line 1990
+[1207] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 2093, warning: possible runaway string started at line 2092
+[1207] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 2218, warning: possible runaway string started at line 2213
+[1261] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 2223, warning: possible runaway string started at line 2222
+[1261] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 2673, warning: possible runaway string started at line 2665
+[1261] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 2683, warning: possible runaway string started at line 2682
+[1262] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 2912, warning: possible runaway string started at line 2911
+[1262] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 3308, warning: possible runaway string started at line 3307
+[1262] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 3363, warning: possible runaway string started at line 3337
+[1321] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 3365, warning: possible runaway string started at line 3364
+[1321] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 3531, warning: possible runaway string started at line 3530
+[1321] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 3792, warning: possible runaway string started at line 3791
+[1321] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 4277, warning: possible runaway string started at line 4276
+[1321] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 4532, warning: possible runaway string started at line 4531
+[1321] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 4681, warning: possible runaway string started at line 4680
+[1335] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 4816, warning: possible runaway string started at line 4815
+[1335] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5042, warning: possible runaway string started at line 5041
+[1335] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5229, warning: possible runaway string started at line 5228
+[1336] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5443, warning: possible runaway string started at line 5442
+[1336] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5524, warning: possible runaway string started at line 5523
+[1336] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5652, warning: possible runaway string started at line 5651
+[1418] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5683, warning: possible runaway string started at line 5682
+[1418] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5896, warning: possible runaway string started at line 5895
+[1418] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 5950, warning: possible runaway string started at line 5949
+[1418] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 6154, warning: possible runaway string started at line 6153
+[1419] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 6349, warning: possible runaway string started at line 6348
+[1419] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 6417, warning: possible runaway string started at line 6416
+[1489] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 6879, warning: possible runaway string started at line 6878
+[1490] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7036, warning: possible runaway string started at line 7035
+[1490] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7199, warning: possible runaway string started at line 7198
+[1490] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7287, warning: possible runaway string started at line 7286
+[1490] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7427, warning: possible runaway string started at line 7426
+[1490] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7521, warning: possible runaway string started at line 7520
+[1556] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7569, warning: possible runaway string started at line 7568
+[1556] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7722, warning: possible runaway string started at line 7721
+[1557] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 7887, warning: possible runaway string started at line 7886
+[1557] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 8279, warning: possible runaway string started at line 8278
+[1557] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 8346, warning: possible runaway string started at line 8345
+[1557] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 8396, warning: possible runaway string started at line 8395
+[1623] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 8473, warning: possible runaway string started at line 8472
+[1624] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 8832, warning: possible runaway string started at line 8831
+[1624] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 8944, warning: possible runaway string started at line 8943
+[1624] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 8995, warning: possible runaway string started at line 8994
+[1624] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 9602, warning: possible runaway string started at line 9601
+[1689] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 9632, warning: possible runaway string started at line 9631
+[1692] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 9695, warning: possible runaway string started at line 9694
+[1693] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 9734, warning: possible runaway string started at line 9733
+[1693] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 10260, warning: possible runaway string started at line 10259
+[1693] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 10323, warning: possible runaway string started at line 10322
+[1693] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 10425, warning: possible runaway string started at line 10424
+[1756] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 10731, warning: possible runaway string started at line 10730
+[1757] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 10811, warning: possible runaway string started at line 10810
+[1757] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 11579, warning: possible runaway string started at line 11578
+[1757] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 11805, warning: possible runaway string started at line 11804
+[1757] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 11889, warning: possible runaway string started at line 11888
+[1758] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 12234, warning: possible runaway string started at line 12233
+[1822] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 12545, warning: possible runaway string started at line 12544
+[1823] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 12655, warning: possible runaway string started at line 12654
+[1824] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 13031, warning: possible runaway string started at line 13030
+[1825] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 13206, warning: possible runaway string started at line 13205
+[1825] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/w5/sx17gnh138vfqg2f7wv8bn3m0000gr/T/8eqXd0jNW2/library.bib_33893.utf8, line 13561, warning: possible runaway string started at line 13560
+[1826] Utils.pm:164> WARN - I didn't find a database entry for 'prov' (section 0)
+[2017] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2017] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2018] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'fr-FR'
+[2018] Biber.pm:3505> INFO - No sort tailoring available for locale 'fr-FR'
+[2045] bbl.pm:608> INFO - Writing '4.bbl' with encoding 'UTF-8'
+[2054] bbl.pm:712> INFO - Output to 4.bbl
+[2054] Biber.pm:109> INFO - WARNINGS: 87

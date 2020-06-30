@@ -28,6 +28,7 @@ p1d_camb_smooth = powerspectrum.P_1D(k, pk_camb*smooth**2).P1D(k)
 p1d_camb_cut_smooth = powerspectrum.P_1D(k, pk_camb*cut**2*smooth**2).P1D(k)
 
 
+
 # plt.plot(k, pk_camb)
 # plt.plot(k, pk_camb*smooth)
 # plt.xlabel(r'$k$ [h/Mpc]')
@@ -65,9 +66,9 @@ p1d_camb_cut_smooth = powerspectrum.P_1D(k, pk_camb*cut**2*smooth**2).P1D(k)
 
 f1, ax1 = plt.subplots()
 ax1.plot(k, p1d_camb, color='black')
-ax1.plot(k, p1d_camb*smooth**2, color='blue')
-ax1.plot(k, p1d_camb*cut**2, color='green')
-ax1.plot(k, p1d_camb*smooth**2*cut**2, color='red')
+ax1.plot(k, p1d_camb_smooth, color='blue')
+ax1.plot(k, p1d_camb_cut, color='green')
+ax1.plot(k, p1d_camb_cut_smooth, color='red')
 ax1.set_xlabel(r'$k \; [h \; \mathrm{Mpc}^{-1}]$')
 ax1.set_ylabel(r'$P^{\mathrm{1D}}(k) \; [(h^{-1} \mathrm{Mpc})]$')
 ax1.grid()
