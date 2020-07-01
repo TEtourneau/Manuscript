@@ -282,6 +282,50 @@ Enfin, nous observons de nouveau un écart entre les valeurs de $b_{\mathrm{eff}
 L'écart mesuré sur $\beta_{\mathrm{Ly}\alpha}$ est plus important. Les valeurs obtenues dans l'ajustement des mocks eboss-0.2 ne sont pas compatibles avec celles mesurées dans les données DR16. Nous suspectons les HCD d'être à l'origine de cet écart. Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, les paramètres \lya{} sont très corrélés avec ceux des HCD. Nous aurions pu par exemple choisir un $L_{\textsc{HCD}}$ plus faible dans l'ajustement des mocks eboss-0.2, ce qui aurait permis d'avoir des mesures compatibles de $\beta_{\mathrm{Ly}\alpha}$ entre les mocks eboss-0.0 et eboss-0.2 (voir figure~\ref{fig:bias_lya_vs_L0}).
 
 
+
+\subsection{Effet du masquage des HCD}
+
+Dans l'analyse des mocks eboss-0.2, comme pour les données, les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués lors du calcul des $\delta_F$. Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, le masquage des HCD dans les données s'effectue selon le résultat de l'agorithme d'identification, alors que dans les mocks, les HCD sont masqués à partir du ``vrai'' catalogue. Nous étudions ici l'effet du masquage à partir du catalogue produit par l'algorithme d'identification.
+Pour ce faire, nous produisons l'analyse d'une réalisation de mock eboss-0.2, pour laquelle nous utilisons l'algorithme d'identification pour créer un catalogue de HCD. Le champ $\delta_F$ est calculé en masquant les HCD identifiés par l'algorithme, puis la fonction de corrélation \lya{}$\times$\lya{} est estimée dans les quatre bins en redshift utilisés jusqu'ici. Nous nommons cette analyse \emph{eboss-0.2\_finder}.
+La figure~\ref{prov} présente la fonction de corrélation \lya{}$\times$\lya{} estimée à partir de la même réalisation des mocks, en version eboss-0.0, eboss-0.2 et eboss-0.2\_finder.
+Les fonctions de corrélations affichées sont la moyenne des fonctions de corrélations estimées dans les quatre bins en redshift.
+Dans les trois versions, le code \texttt{quickquasars} utilise les mêmes quasars pour produire les spectres synthétiques, et ajoute le même bruit à ces spectres dans les trois cas. Ceci nous permet d'avoir les mêmes fluctuations statistiques dans le calcul de la corrélation \lya{}$\times$\lya{}, et ainsi d'avoir des mesures de biais comparables.
+L'effet des HCD (avec $\num{17.2} < \log n_{\textsc{HI}} < \num{20.3}$) est visible en comparant la corrélation montrée en bleu à celle montrée en rouge. Comme expliqué dans la section~\ref{subsec:model_donnees}, l'effet principal des HCD est d'augmenter le biais effectif.
+De plus, le fait que l'effet des HCD soit légèrement plus important sur la corrélation de la version eboss-0.2 que sur celle de la version  eboss-0.2\_finder suggère que l'algorithme d'identification identifie correctement les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$, et identifie des HCD avec $\log n_{\textsc{HI}} < \num{20.3}$ et les reconstruit avec $\log n_{\textsc{HI}} > \num{20.3}$. Ceci a pour effet de masquer des HCD qui ne possèdent pas une densité de colonne supérieure à \num{20.3}.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{cf_finder_vs_true}
+  \caption{Fonctions de corrélation \lya{}$\times$\lya{} estimées à partir d'une réalisation des mocks eboss-0.0 (bleu), eboss-0.2 (rouge) et eboss-0.2\_finder (vert). La version eboss-0.2\_finder correspond aux mocks eboss-0.2, dans lesquels les HCD ont été masqués en utilisant le catalogue de HCD produit par l'algorithme d'identification.}
+  \label{fig:cf_finder_vs_true}
+\end{figure}
+
+Le tableau~\ref{prov} donne les résultats des ajustements des trois corrélations présentées sur la figure~\ref{fig:cf_finder_vs_true}. La statistique d'une seule réalisation n'est pas suffisante pour identifier des potentielles systématiques. Cependant, la précision de la mesure des paramètres \lya{} dans les données DR16 étant comparable à la celle des mocks eboss-0.2, les potentielles systématiques sont inférieures à l'erreur statistique sur cette mesure.
+Il serait tout de même intéressant de mener cette analyse sur un plus grand nombre de réalisations.
+
+
+\begin{table}[]
+  \centering
+  \caption{Résultat de l'ajustement de la corrélation \lya{}$\times$\lya{} estimées à partir d'une réalisation des mocks eboss-0.0 (bleu), eboss-0.2 (rouge) et eboss-0.2\_finder (vert). La version eboss-0.2\_finder correspond aux mocks eboss-0.2, dans lesquels les HCD ont été masqués en utilisant le catalogue de HCD produit par l'algorithme d'identification.}
+  \label{tab:finder_vs_true}
+  \begin{tabular}{lcccc}
+    \toprule
+    version & $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ & $\beta_{\mathrm{Ly}\alpha}$ & $b_{\textsc{HCD}}$ & $\beta_{\textsc{HCD}}$ \\
+    \midrule
+    eboss-0.0 & $-0.1970 \pm 0.0009$ & $ 1.641 \pm 0.039$ & & \\
+    eboss-0.2 & $-0.1979 \pm 0.0038$ & $1.578 \pm 0.069$ & $-0.0201 \pm 0.0053$ & $0.499 \pm 0.090$ \\
+    eboss-0.2\_finder & $-0.1951 \pm 0.0039$ & $1.592 \pm 0.074$ & $-0.0186 \pm 0.0054$ & $0.494 \pm 0.091$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\subsection{Modélisation alternative des HCD}
+
+
+
+
+
 \#prov comparer les bhcd eboss-0.2 et DR16 : beaucoup plus faible dans les mocks, malgré qu'on pense avoir la bonne distribution, au moins pour nhi > 20.3.
 Il faudrait multiplier le nombre de HCD par X pour que les mesures soit en accord (bhcd prop to number HCD)
 

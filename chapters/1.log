@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 JUN 2020 13:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 JUL 2020 17:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,20 +549,10 @@ Package biblatex Info: ... file 'blx-compat.def' found.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 )
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-bibtex.def
-File: blx-bibtex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
-
-
-Package biblatex Warning: Using fall-back BibTeX(8) backend:
-(biblatex)                functionality may be reduced/unavailable.
-
-)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 \c@textcitecount=\count199
 \c@textcitetotal=\count266
@@ -571,12 +561,6 @@ File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 \c@biburlucpenalty=\count269
 \c@biburllcpenalty=\count270
 \c@smartand=\count271
-)
-Package biblatex Info: Trying to load natbib compatibility...
-Package biblatex Info: ... file 'blx-natbib.def' found.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-natbib.def
-File: blx-natbib.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
@@ -2484,15 +2468,15 @@ File: ttlkeys.def 2016/03/15
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 240.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 239.
+(hyperref)                removing `\alpha' on input line 240.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 240.
 
 )
 Package biblatex Info: Trying to load language 'french'...
@@ -2529,10 +2513,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' specified.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout4 = `1-blx.bib'.
+\openout4 = `1.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '1.bbl' found.
@@ -3350,10 +3331,10 @@ Package logreq Info: Writing requests to '1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35957 strings out of 492995
- 655596 string characters out of 6132704
- 1166337 words of memory out of 5000000
- 38604 multiletter control sequences out of 15000+600000
+ 35893 strings out of 492995
+ 654490 string characters out of 6132704
+ 1186686 words of memory out of 5000000
+ 38547 multiletter control sequences out of 15000+600000
  142890 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,21n,79p,10403b,2277s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3436,10 +3417,10 @@ sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1.pdf (36 pages, 3859389 bytes).
+Output written on 1.pdf (36 pages, 3852201 bytes).
 PDF statistics:
- 778 PDF objects out of 1000 (max. 8388607)
- 650 compressed objects within 7 object streams
+ 747 PDF objects out of 1000 (max. 8388607)
+ 619 compressed objects within 7 object streams
  204 named destinations out of 1000 (max. 500000)
  258 words of extra memory for PDF output out of 10000 (max. 10000000)
 
