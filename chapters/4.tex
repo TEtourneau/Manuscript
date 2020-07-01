@@ -703,13 +703,21 @@ La figure~\ref{fig:xiF_vs_xig} montre la fonction de corrélation $\xi_F$ obtenu
 % Afin d'obtenir la prédiction dans l'espace des redshifts, nous commençons par relier $\xi_g(r, \mu)$ à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
 % De plus, nous pouvons relier la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
 % Par ailleurs, puisque $\delta_s$ ne participe pas à la fonction de corrélation à trois dimension du champ $\delta_g$, nous relions la fonction de corrélation dans l'espace de sredshift $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
-Par ailleurs, puisque $\delta_s$ n'est pas corrélé d'une forêt à une autre, il ne participe pas au spectre de puissance à trois dimensions.
-Le champ $\delta_g$ suit alors le spectre de puissance \#prov inclure plot $\xi_g$ et discuter
+\textbf{Par ailleurs, puisque $\delta_s$ n'est pas corrélé d'une forêt à une autre, il ne participe pas au spectre de puissance à trois dimensions.
+D'après la formule de Kaiser (équation~\ref{eq:kaiser5}), le champ $\delta_g$ suit le spectre de puissance
 \begin{equation}
   \label{eq:pk_g}
     P_g(k) = (1 + c \mu_k^2)^2 P_l(k) \; ,
   \end{equation}
   où $P_l$ est le spectre de puissance que suit le champ $\delta_l$.
+  La figure~\ref{fig:xi_g} montre la fonction de corrélation du champ $\delta_g$ mesuré dans les mocks ainsi que la fonction de corrélation obtenue à partir du spectre de puissance de l'équation~\ref{eq:pk_g} (voir le passage de $P_g(k)$ à $\xi_g(r,\mu)$ dans les lignes qui suivent). Nous vérifions que ces deux fonctions de corrélation sont en accord. Nous observons cependant une différence le long de la ligne de visée. Cela pourrait être dû à l'effet de la taille des voxels ou du lissage gaussien sur $\eta_{\parallel}$.}
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{xi_g}
+    \caption{Fonctions de corrélation du champ $\delta_g$ (points) et prédiction de cette fonction de corrélation (équations~\ref{eq:pk_g} et~\ref{eq:hamilton1}. Le graphique de gauche montre les corrélations dans quatre bins en $\mu$. Celui de droite montre les corrélations dans la gamme $0 < \mu < 1$. La corrélation mesurée sur le champ $\delta_g$ est en bon accord avec la corrélation prédite, même s'il existe un écart le long de la ligne de visée.}
+    \label{fig:xi_g}
+  \end{figure}
+
   Afin de relier la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$ que suit le champ $\delta_g$ à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$, nous utilisons les formules données dans \textcite{Hamilton1992} :
 \begin{equation}
   \label{eq:hamilton1}

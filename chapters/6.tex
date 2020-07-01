@@ -15,10 +15,10 @@
 \newpage
 \thispagestyle{fancy}
 
-Dans ce chapitre, nous présentons les diverses analyses que nous avons mené sur les données, avec les mocks comme support de référence.
+Dans ce chapitre, nous présentons les diverses analyses que nous avons menées sur les données, avec les mocks comme support de référence.
 Un élément clé à la construction des mocks a été de déterminer quels paramètres \lya{} nous souhaitions avoir dans nos mocks.
 % En produisant l'analyse des données DR16 en quatre bins en redshift, nous nous sommes rendus compte que les paramètres \lya{} obtenus dépendaient fortement de la modélisation des HCD. Nous avons dû faire un choix quant à cette modélisation.
-Ceci nous a conduit une mener une analyse des données DR16 dans quatre bins en redshift.
+Ceci nous a conduit à mener une analyse des données DR16 dans quatre bins en redshift.
 En produisant cette analyse, nous nous sommes rendus compte que les paramètres \lya{} obtenus dépendaient fortement de la modélisation des HCD. Nous avons dû faire un choix quant à cette modélisation.
 Nous présentons donc d'abord l'analyse des données qui a servi de référence pour l'ajustement des paramètres des mocks. Puis, nous discutons la modélisation des HCD et présentons des modélisations alternatives.
 \#prov finir de donner les autres sections
@@ -27,9 +27,9 @@ Nous présentons donc d'abord l'analyse des données qui a servi de référence 
 
 \section{L'analyse des données DR16}
 \subsection{Résultats}
-L'analyse des données finale d'eBOSS (DR16), dont nous avons déjà parlé et qui est présentée dans \textcite{prov}, analyse les fonctions de corrélation \lya(\lya{})$\times$\lya{}(\lya{}), \lya{}(\lya{})$\times$\lya{}(\lyb{}), \lya{}(\lya{})$\times$QSO et \lya{}(\lyb{})$\times$QSO. Ces fonctions de corrélation sont construites sur l'ensemble des données, les paramètres ajustés sont donc donnés uniquement pour le redshift effectif $z_{\mathrm{eff}} = \num{2.334}$ de la mesure. L'appendice F de \textcite{prov} présente cependant l'analyse des données DR16 dans deux bins en redshift. Mais ces deux bins ne sont pas suffisant pour estimer les paramètres \lya{} dans toute la gamme en redshift $\num{1.9} < z  < \num{3.6}$.
+L'analyse des données finale d'eBOSS (DR16), dont nous avons déjà parlé et qui est présentée dans \textcite{prov}, analyse les fonctions de corrélation \lya(\lya{})$\times$\lya{}(\lya{}), \lya{}(\lya{})$\times$\lya{}(\lyb{}), \lya{}(\lya{})$\times$QSO et \lya{}(\lyb{})$\times$QSO. Ces fonctions de corrélation sont construites sur l'ensemble des données, les paramètres ajustés sont donc donnés uniquement pour le redshift effectif $z_{\mathrm{eff}} = \num{2.334}$ de la mesure. L'appendice F de \textcite{prov} présente cependant l'analyse des données DR16 dans deux bins en redshift. Mais ces deux bins ne sont pas suffisant pour estimer l'évolution des paramètres \lya{} dans la gamme en redshift $\num{1.9} < z  < \num{3.6}$.
 % Afin d'estimer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons calculé la fonction de corrélation \lya{}$\times$\lya{} dans quatres bins en redshift.
-Afin d'estimer $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons reproduit cette analyse dans quatres bins en redshift. De manière à limiter les potentielles systématiques, nous nous limitons à l'analyse de la fonction de corrélation \lya{}(\lya{})$\times$\lya{}(\lya{}) (abrégée en \lya{}$\times$\lya{} dans la suite de ce chapitre).
+Afin d'estimer $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons produit l'analyse des données DR16 dans quatres bins en redshift. De manière à limiter les potentielles systématiques, nous nous limitons à l'analyse de la fonction de corrélation \lya{}(\lya{})$\times$\lya{}(\lya{}) (abrégée en \lya{}$\times$\lya{} dans la suite de ce chapitre).
 % Pour chacun des bins, nous calculons la fonction de corrélation pour les forêts dont le redshift du quasar se trouve dans l'intervale en redshift considéré. Ceci permet d'éviter des corrélations  (voir Appendice B de \textcite{Agathe2019a}).
 % Pour constituer chacun des bins en redshift, plutôt que de considérer le redshift effectif de chaque paire de pixels, nous divisons l'échantillon de forêts selon le redshift des quasars. Ceci nous permet d'éviter les corrélations induites
 Pour constituer chacun des bins en redshift, nous pourions séparer les paires de pixels selon leur redshift effectif. Cependant, à cause de l'ajustement du continuum, cette stratégie induit des corrélations parasites lorsqu'une forêt se trouve dans deux bins en redshift à la fois. Pour palier ce problème, nous divisons l'échantillon de forêts selon le redshift des quasars (voir Appendice B de \textcite{Agathe2019a}).
@@ -42,8 +42,8 @@ Chacune des fonctions de corrélation est ajustée au redshift effectif de la me
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.5]{dr16_4bins}
-  \caption{Fonctions de corrélation \lya{}$\times$\lya{} dans chacun des bins en redshift de l'analyse. Les courbes en trait plein donne le meilleur ajustement du modèle obtenu avec \texttt{picca}. Chaque graphique correspond à un bin en redshift. Pour chacun des bins, la fonction de corrélation et l'ajustement sont montrées dans quatre bins en $\mu$.}
+  \includegraphics[scale=0.4]{dr16_4bins}
+  \caption{Fonctions de corrélation \lya{}$\times$\lya{} dans chacun des bins en redshift de l'analyse. Les courbes en trait plein donne le meilleur ajustement du modèle obtenu avec \texttt{picca}. Chaque graphique correspond à un bin en redshift. Pour chacun des bins, la fonction de corrélation et l'ajustement sont montrés dans quatre bins en $\mu$.}
   \label{fig:dr16_4bins}
 \end{figure}
 
@@ -104,6 +104,29 @@ Chacune des fonctions de corrélation est ajustée au redshift effectif de la me
 %     $b_{\mathrm{Ly}\alpha} $ & $ -0.0832 \pm -0.0065 $ & $ -0.1099 \pm -0.0063 $ & $ -0.1521 \pm -0.01025 $ & $ -0.2248 \pm -0.0230 $\\
 %     $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1506 \pm 0.0046 $ & $ -0.1814 \pm 0.0045 $ & $ -0.2336 \pm 0.0074 $ & $ -0.3305 \pm 0.0169 $\\
 %     \bottomrule
+% \toprule
+% Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$ \\
+% \midrule
+% $\apar{} $ & $ 1.063 \pm 0.066$ & $ 1.019 \pm 0.041$ & $ 1.029 \pm 0.072$ & $ 1.12 \pm 0.081$ \\
+% $\aperp{} $ & $ 1.063 \pm 0.108$ & $ 0.965 \pm 0.057$ & $ 1.016 \pm 0.058$ & $ 0.926 \pm 0.072$ \\
+% $b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1796 \pm 0.0058$ & $ -0.1938 \pm 0.0053$ & $ -0.2237 \pm 0.0084$ & $ -0.2929 \pm 0.0187$ \\
+% $\beta_{\mathrm{Ly}\alpha} $ & $ 2.094 \pm 0.21$ & $ 1.711 \pm 0.133$ & $ 1.427 \pm 0.138$ & $ 1.265 \pm 0.194$ \\
+% $10^3 b_{\eta, SiII(1190)} $ & $ -1.83 \pm 1.1$ & $ -3.66 \pm 0.68$ & $ -2.8 \pm 1.01$ & $ 0.36 \pm 1.64$ \\
+% $10^3 b_{\eta, SiII(1193)} $ & $ -4.83 \pm 1.1$ & $ -1.94 \pm 0.69$ & $ -0.79 \pm 0.97$ & $ -2.13 \pm 1.72$ \\
+% $10^3 b_{\eta, SiII(1260)} $ & $ -3.38 \pm 1.33$ & $ -1.97 \pm 0.8$ & $ -1.32 \pm 1.05$ & $ 0.9 \pm 1.79$ \\
+% $10^3 b_{\eta, SiIII(1207)} $ & $ -7.87 \pm 1.1$ & $ -4.52 \pm 0.75$ & $ -2.11 \pm 1.05$ & $ -2.89 \pm 1.74$ \\
+% $10^3 b_{\eta, CIV(\mathrm{eff})} $ & $ -4.77 \pm 2.54$ & $ -5.15 \pm 2.64$ & $ -5.06 \pm 2.62$ & $ -5.02 \pm 2.61$ \\
+% $b_{\textsc{HCD}} $ & $ -0.0596 \pm 0.007$ & $ -0.0452 \pm 0.006$ & $ -0.0665 \pm 0.01$ & $ -0.0228 \pm 0.0218$ \\
+% $\beta_{\textsc{HCD}} $ & $ 0.551 \pm 0.086$ & $ 0.56 \pm 0.086$ & $ 0.508 \pm 0.088$ & $ 0.502 \pm 0.09$ \\
+% $10^2 A_{sky} $ & $ 1.585 \pm 0.098$ & $ 0.87 \pm 0.082$ & $ 0.729 \pm 0.133$ & $ 0.646 \pm 0.338$ \\
+% $\sigma_{sky} $ & $ 32.5 \pm 1.8$ & $ 31.6 \pm 2.6$ & $ 31.9 \pm 4.3$ & $ 34.1 \pm 16.0$ \\
+% \midrule
+% $\chi^2$ & $ 1568 $ & $ 1512 $ & $ 1681 $ & $ 1675 $ \\
+% $z_{\mathrm{eff}}$ & $ 2.136 $ & $ 2.276 $ & $ 2.551 $ & $ 2.914 $ \\
+% \midrule
+% $b_{\mathrm{Ly}\alpha} $ & $ -0.0832 \pm 0.0065$ & $ -0.1099 \pm 0.0063$ & $ -0.1521 \pm 0.0103$ & $ -0.2247 \pm 0.023$ \\
+% $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1506 \pm 0.0046$ & $ -0.1814 \pm 0.0045$ & $ -0.2336 \pm 0.0074$ & $ -0.3305 \pm 0.0168$ \\
+% \bottomrule
 \toprule
 Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$ \\
 \midrule
@@ -127,13 +150,11 @@ $z_{\mathrm{eff}}$ & $ 2.136 $ & $ 2.276 $ & $ 2.551 $ & $ 2.914 $ \\
 $b_{\mathrm{Ly}\alpha} $ & $ -0.0832 \pm 0.0065$ & $ -0.1099 \pm 0.0063$ & $ -0.1521 \pm 0.0103$ & $ -0.2247 \pm 0.023$ \\
 $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1506 \pm 0.0046$ & $ -0.1814 \pm 0.0045$ & $ -0.2336 \pm 0.0074$ & $ -0.3305 \pm 0.0168$ \\
 \bottomrule
-
-
 \end{tabular}
 \end{table}
 
 
-La figure~\ref{prov} présente les fonctions de corrélation et leur modèle ajusté dans chacun des bins en redshift. Les différents graphiques montrent les différents bins en redshift. Dans chaque graphique, la fonction de corrélation est affichée dans plusieurs bins en $\mu$. Le tableau~\ref{prov} donne le résultat de l'ajustement dans chacun des bins en redshift. La première section du tableau donne les paramètres ajustés, la deuxième donne le redshift effectif $z_{\mathrm{eff}}$ et le $\chi^2$ obtenu. Le nombre de bins dans lesquels la fonction de corrélation est ajustée est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté de $d.o.f. = \num{1590} - \num{13} = \num{1577}$. Enfin, la troisième colonne donne le biais et le biais effectif du \lya{}.
+La figure~\ref{fig:dr16_4bins} présente la fonction de corrélation et le meilleur ajustement du modèle dans chacun des bins en redshift. Les différents graphiques montrent les différents bins en redshift. Dans chaque graphique, la fonction de corrélation est affichée dans plusieurs bins en $\mu$. Le tableau~\ref{tab:dr16_4bins} donne le résultat de l'ajustement dans chacun des bins en redshift. La première section du tableau donne les paramètres ajustés, la deuxième donne le redshift effectif $z_{\mathrm{eff}}$ et le $\chi^2$ obtenu. Le nombre de bins dans lesquels la fonction de corrélation est ajustée est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté $N_{d.o.f.} = \num{1590} - \num{13} = \num{1577}$. Enfin, la troisième colonne donne le biais et le biais effectif du \lya{}.
 % Le biais $b_{\mathrm{Ly}\alpha} $ est obtenu comme
 % \begin{equation}
 %   \label{eq:def_bias}
@@ -146,7 +167,7 @@ La figure~\ref{prov} présente les fonctions de corrélation et leur modèle aju
 % \end{equation}
 % Il est sensible à l'amplitude de la fonction de corrélation, et est moins corrélé avec $\beta_{\mathrm{Ly}\alpha}$ que l'est $b_{\eta, \mathrm{Ly}\alpha}$ ou $b_{\mathrm{Ly}\alpha}$ (\#prov doublon avec le chap4).
 
-Une fois cette analyse produite, et toujours dans le but d'obtenir $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ pour $\num{1.9} < z  < \num{3.6}$, nous ajustons les paramètres \lya{} mesurés dans les données par une loi de puissance. La figure~\ref{prov} donne les mesures $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans les quatre bins en redshift, ainsi que l'ajustement fait sur ces quatres points. Pour le biais effectif, nous obtenons $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$ avec $\gamma = \num{3.474} \pm \num{0.025}$. Pour le paramètre RSD, nous obtenons $\beta_{\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$ avec $\gamma = - \num{2.32} \pm \num{1.97}$. Ces deux ajustements sont utilisés comme référence pour l'ajustement des paramètres des mocks (section~\ref{sec:tuning}). Ils sont extrapolés de $z = \num{1.9}$ jusqu'à $z = \num{3.6}$.
+Une fois cette analyse produite, et toujours dans le but d'obtenir $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ pour $\num{1.9} < z  < \num{3.6}$, nous ajustons les paramètres \lya{} mesurés dans les données par une loi de puissance. La figure~\ref{fig:bias_vs_z} donne les mesures $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans les quatre bins en redshift, ainsi que l'ajustement fait sur ces quatres points. Pour le biais effectif, nous obtenons $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$ avec $\gamma = \num{3.474} \pm \num{0.025}$. Pour le paramètre RSD, nous obtenons $\beta_{\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$ avec $\gamma = - \num{2.32} \pm \num{1.97}$. Ces deux ajustements sont utilisés comme référence pour l'ajustement des paramètres des mocks (section~\ref{sec:tuning}). Ils sont extrapolés de $z = \num{1.9}$ jusqu'à $z = \num{3.6}$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.44]{bias_vs_z}
@@ -159,6 +180,7 @@ Une fois cette analyse produite, et toujours dans le but d'obtenir $b_{\mathrm{e
 
 
 \subsection{Stabilité des paramètres \lya{}}
+\label{subsec:stab_pars_lya}
 
 
 \begin{table}[]
@@ -210,8 +232,9 @@ Une fois cette analyse produite, et toujours dans le but d'obtenir $b_{\mathrm{e
     \bottomrule
 \end{tabular}
 \end{table}
-Une fois avoir produit les ajustements présentés dans la section précédente, nous avons cherché à savoir si la mesure des paramètres \lya{} était fiable. Nous avons donc d'abord regardé la corrélation des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres du modèle. Le tableau~\ref{prov} et~\ref{prov} donne respectivement les corrélations de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres.
+Une fois avoir produit les ajustements présentés dans la section précédente, nous avons cherché à savoir si la mesure des paramètres \lya{} était fiable. Nous avons donc d'abord regardé la corrélation des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres du modèle. Les tableaux~\ref{tab:corr_bias_lya} et~\ref{tab:corr_beta_lya} donnent respectivement les corrélations de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres du modèle.
 Premièrement, nous pouvons remarquer que les paramètres \lya{} sont très corrélés entre eux. Ceci vient du fait que le paramètre RSD du \lya{} est très important : le signal se trouve principalement le long de la ligne de visée. Avec peu de signal perpendiculairement à la ligne de visée, il est difficile de décorréler le biais du paramètre RSD du traceur.
+
 Deuxièmement, les paramètres du \lya{} sont très corrélés avec ceux des HCD, notament $\beta_{\mathrm{Ly}\alpha}$ qui est corrélé à \SI{-75}{\percent} avec $b_{\textsc{HCD}}$. Ceci pose plusieurs problèmes : d'abord, la modélisation des HCD choisie dans \textcite{prov} et utilisée ici consiste à identifier puis masquer les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$, les HCD non masqués étant pris en compte par le terme $F_{\textsc{HCD}}$ (voir section~\ref{subsec:model_donnees}). Cependant, l'algorithme utilisé ne possède pas une efficacité de \SI{100}{\percent} (\#prov ref papier solene). Des HCD avec une grande densité de colonne ne sont donc pas masqués.
 Ces HCD produisent des absorptions intenses, non prises en compte par le terme $F_{\textsc{HCD}}$, ce qui a pour effet d'augmenter le biais du \lya{}.
 De plus, le paramètre $L_{\textsc{HCD}}$ est fixé à \SI{10}{\perh\Mpc} car il est corrélé avec les autres paramètres.
@@ -221,18 +244,19 @@ Du fait des corrélations avec les autres paramètres, les paramètres des HCD o
 La figure~\ref{fig:bias_hcd_vs_L0} montre la dépendance de $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ avec $L_{\textsc{HCD}}$.
 A cause des corrélations entre les paramètres liés aux HCD et ceux liés au \lya{}, le fait de changer $L_{\textsc{HCD}}$ change aussi les paramètres \lya{} obtenus.
 La figure~\ref{fig:bias_lya_vs_L0} montre la dépendance de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec $L_{\textsc{HCD}}$. Ainsi, le paramètre RSD $\beta_{\mathrm{Ly}\alpha}$ est très corrélé avec $L_{\textsc{HCD}}$. Lorsque nous laissons libre $L_{\textsc{HCD}}$, en utilisant un prior gaussien centré sur \SI{10}{\perh\Mpc} et avec une largeur $\sigma = \SI{1}{\perh\Mpc}$, nous mesurons une corrélation entre $L_{\textsc{HCD}}$ et $\beta_{\mathrm{Ly}\alpha}$ de \SI{-38}{\percent}. Lorsque $L_{\textsc{HCD}}$ est laissé totalement libre, il est corrélé, en valeur absolue, à plus de \SI{85}{\percent} avec les paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$, $b_{\textsc{HCD}}$ et $b_{\eta, SiIII(1207)}$.
-Enfin, le modèle des HCD choisi influence la mesure des paramètres \lya{}. Toujours dans le but d'avoir une mesure robuste des paramètres \lya{}, nous avons essayé d'utiliser un autre modèle pour les HCD, développé par Edmond Chaussidon et Julien Guy (modèle C-G). Nous détaillons l'analyse en utilisant ce modèle dans la section~\ref{}.
+
+Enfin, le modèle des HCD choisi influence la mesure des paramètres \lya{}. Toujours dans le but d'avoir une mesure robuste des paramètres \lya{}, nous avons essayé d'utiliser un autre modèle pour les HCD, développé par Edmond Chaussidon et Julien Guy (modèle C-G). Nous détaillons l'analyse en utilisant ce modèle dans la section~\ref{prov}.
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.45]{bias_hcd_vs_L0}
-  \caption{bla}
+  \caption{Evolution des mesures des paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement. Le biais des HCD est corrélé avec la valeur de $L_{\textsc{HCD}}$.}
   \label{fig:bias_hcd_vs_L0}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[scale=0.45]{bias_lya_vs_L0}
-  \caption{bla}
+  \caption{Evolution des mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement. Le paramètre RSD du \lya{} est très corrélé avec la valeur de $L_{\textsc{HCD}}$.}
   \label{fig:bias_lya_vs_L0}
 \end{figure}
 
@@ -242,10 +266,24 @@ Enfin, le modèle des HCD choisi influence la mesure des paramètres \lya{}. Tou
 % Suite aux différents points énoncés dans la section précédente, nous avons mené une analyse sur les mocks, afin de mieux comprendre la modélisation des HCD, et d'essayer d'identifier les potentielles systématiques qui affectent la mesure des paramètres \lya{}.
 Suite aux différents points énoncés dans la section précédente, nous avons étudié l'effet qu'ont les HCD sur le \lya{} dans les mocks.
 En effet, les mocks sont l'outil parfait pour ce genre d'analyse : ils permettent, contrairement aux données, de connaître la quantité de \lya{} et de HCD présents, et de comparer cette quantité à ce qui est mesuré par l'ajustement.
-Dans cette section, nous comparons les paramètres \lya{} mesurés dans les mocks avec HCD (eboss-0.2 et eboss-0.3 \#prov) et sans HCD (raw mocks, eboss-0.0). Nous comparons aussi les paramètres \lya{} mesurés en utilisant différentes modélisations des HCD.
+Dans cette section, nous comparons les paramètres \lya{} mesurés dans les mocks sans HCD (raw mocks, eboss-0.0) et avec HCD (eboss-0.2 et eboss-0.3 \#prov). Nous comparons aussi les paramètres \lya{} mesurés en utilisant différentes modélisations des HCD.
 
 \subsection{Comparaison des mocks}
+Comme expliqué dans le chapitre~\ref{prov}, nous avons analysé \num{30} réalisations des raw mocks, des mocks eboss-0.0 et des mocks eboss-0.2.
+Dans chacun des cas, nous ajustons le modèle sur $20 < r < \SI{180}{\perh\Mpc}$, et mesurons les paramètres du \lya{}.
+La figure~\ref{fig:bias_cf} présente les mesures de ces paramètres dans chaque bin en redshift pour chacune des versions des mocks.
+Nous pouvons remarquer que les valeurs des paramètres \lya{} mesurés changent selon la version des mocks.
+Les paramètres mesurés dans les raw mocks sont très proches des paramètres visés, mesurés dans les données. Ceci montre que la procédure d'ajustement des paramètres des mocks que nous avons mise en place est efficace pour obtenir les bons $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$.
 
+Lorsque nous comparons maintenant les valeurs de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ mesurées dans les raw mocks à celle mesurées dans les mocks eboss-0.0, nous observons un écart statistiquement significatif. L'effet sur $\beta_{\mathrm{Ly}\alpha}$ est faible, et les valeurs de $\beta_{\mathrm{Ly}\alpha}$ mesurées dans les mocks eboss-0.0 restent compatibles avec les données DR16.
+Cependant, l'effet sur le biais effectif $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ est important et statistiquement significatif. Cela implique que l'ajout du continuum et du bruit par quickquasars, l'ajustement du continuum ou la prise en compte des effets liés à cet ajustement par la matrice de distorsion affecte la mesure de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$. Nous suspectons la matrice de distorsion de ne pas capturer tous les effets produits par l'ajustement du continuum, ce qui pourrait expliquer l'écart entre les raw mocks et les mocks eboss-0.0.
+
+Enfin, nous observons de nouveau un écart entre les valeurs de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ mesurées dans les mocks eboss-0.0 et eboss-0.2. L'écart mesuré pour $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ entre les mocks eboss-0.2 et eboss-0.0 est comparable à celui mesuré entre les mocks eboss-0.0 et les raw mocks.
+L'écart mesuré sur $\beta_{\mathrm{Ly}\alpha}$ est plus important. Les valeurs obtenues dans l'ajustement des mocks eboss-0.2 ne sont pas compatibles avec celles mesurées dans les données DR16. Nous suspectons les HCD d'être à l'origine de cet écart. Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, les paramètres \lya{} sont très corrélés avec ceux des HCD. Nous aurions pu par exemple choisir un $L_{\textsc{HCD}}$ plus faible dans l'ajustement des mocks eboss-0.2, ce qui aurait permis d'avoir des mesures compatibles de $\beta_{\mathrm{Ly}\alpha}$ entre les mocks eboss-0.0 et eboss-0.2 (voir figure~\ref{fig:bias_lya_vs_L0}).
+
+
+\#prov comparer les bhcd eboss-0.2 et DR16 : beaucoup plus faible dans les mocks, malgré qu'on pense avoir la bonne distribution, au moins pour nhi > 20.3.
+Il faudrait multiplier le nombre de HCD par X pour que les mesures soit en accord (bhcd prop to number HCD)
 
 
 

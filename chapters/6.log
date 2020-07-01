@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 JUN 2020 10:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 JUN 2020 19:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2489,7 +2489,11 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
 
-(./6.aux)
+(./6.aux
+
+LaTeX Warning: Label `tab:corr_beta_lya' multiply defined.
+
+)
 \openout1 = `6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -2784,13 +2788,13 @@ $\OML/lmm/m/it/10.95 $\T1/lmr/m/n/10.95 )$\OMS/lmsy/m/n/10.95 ^^B$\T1/lmr/m/n/
 10.95 QSO
  []
 
-<../figures/data_ana/dr16_4bins.png, id=37, 936.49875pt x 685.56125pt>
+<../figures/data_ana/dr16_4bins.png, id=37, 1076.02pt x 760.8425pt>
 File: ../figures/data_ana/dr16_4bins.png Graphic file (type png)
 
 <use ../figures/data_ana/dr16_4bins.png>
 Package pdftex.def Info: ../figures/data_ana/dr16_4bins.png used on input line 
 45.
-(pdftex.def)             Requested size: 468.24823pt x 342.77979pt.
+(pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 46.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -2815,54 +2819,53 @@ LaTeX Warning: Reference `eq:def_bias_eff' on page 2 undefined on input line 52
 .
 
 
-LaTeX Warning: Reference `prov' on page 2 undefined on input line 136.
+Package caption Warning: \label without proper reference on input line 174.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `prov' on page 2 undefined on input line 136.
+LaTeX Warning: Reference `fig:bias_vs_z' on page 2 undefined on input line 170.
 
 
-LaTeX Warning: Reference `prov' on page 2 undefined on input line 149.
 
+LaTeX Warning: Reference `sec:tuning' on page 2 undefined on input line 170.
 
-LaTeX Warning: Reference `sec:tuning' on page 2 undefined on input line 149.
-
-<../figures/data_ana/bias_vs_z.png, id=39, 1061.9675pt x 394.47375pt>
+<../figures/data_ana/bias_vs_z.png, id=42, 1061.9675pt x 394.47375pt>
 File: ../figures/data_ana/bias_vs_z.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_vs_z.png>
 Package pdftex.def Info: ../figures/data_ana/bias_vs_z.png used on input line 1
-52.
+73.
 (pdftex.def)             Requested size: 467.26714pt x 173.56898pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 161.
+(Font)              <12> on input line 182.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 161.
+(Font)              <9> on input line 182.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 161.
+(Font)              <7> on input line 182.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 161.
+(hyperref)                removing `math shift' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 161.
+(hyperref)                removing `\alpha' on input line 182.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 161.
+(hyperref)                removing `math shift' on input line 182.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 164.
+               Default added (so using `tbp') on input line 185.
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 175.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 196.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2890,62 +2893,65 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 189.
-
-
-LaTeX Warning: Reference `prov' on page 5 undefined on input line 213.
-
-
-LaTeX Warning: Reference `prov' on page 5 undefined on input line 213.
+               Default added (so using `tbp') on input line 210.
 
 
 LaTeX Warning: Reference `subsec:model_donnees' on page 5 undefined on input li
-ne 215.
+ne 237.
 
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 224.
+LaTeX Warning: Reference `prov' on page 5 undefined on input line 247.
 
-<../figures/data_ana/bias_hcd_vs_L0.png, id=70, 995.72pt x 371.3875pt>
+<../figures/data_ana/bias_hcd_vs_L0.png, id=75, 995.72pt x 371.3875pt>
 File: ../figures/data_ana/bias_hcd_vs_L0.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_hcd_vs_L0.png>
 Package pdftex.def Info: ../figures/data_ana/bias_hcd_vs_L0.png used on input l
-ine 228.
+ine 251.
 (pdftex.def)             Requested size: 448.06987pt x 167.12282pt.
 
-<../figures/data_ana/bias_lya_vs_L0.png, id=71, 1043.9pt x 388.45125pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5] <../figures/data_ana/bias_lya_vs_L0.png, id=88, 1043.9pt x 388.45125pt>
 File: ../figures/data_ana/bias_lya_vs_L0.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_lya_vs_L0.png>
 Package pdftex.def Info: ../figures/data_ana/bias_lya_vs_L0.png used on input l
-ine 234.
+ine 257.
 (pdftex.def)             Requested size: 469.75066pt x 174.80144pt.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `prov' on page 6 undefined on input line 271.
 
-[5]
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `fig:bias_cf' on page 6 undefined on input line 273.
 
-[6 <../figures/data_ana/bias_hcd_vs_L0.png> <../figures/data_ana/bias_lya_vs_L0
-.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 279.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] [8
+[6]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <../figures/data_ana/bias_hcd_vs_L0.png> <../figures/data_ana/bias_lya_vs_L0
+.png>] [8
 
 ]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 254--254
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 298--298
 | []| 
  []
 
@@ -2955,29 +2961,32 @@ Package minitoc Info: I0009
 \openout5 = `6.maf'.
 
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
  (./6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 254.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 298.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 298.
 Package rerunfilecheck Info: File `6.out' has not changed.
 (rerunfilecheck)             Checksum: 72C61F08A84C00EAFDCD62EE3762E23D;454.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to '6.run.xml'.
 \openout1 = `6.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35349 strings out of 492995
- 644071 string characters out of 6132704
- 1176436 words of memory out of 5000000
+ 35350 strings out of 492995
+ 644097 string characters out of 6132704
+ 1176605 words of memory out of 5000000
  38202 multiletter control sequences out of 15000+600000
  121520 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,15n,48p,10403b,1765s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,15n,48p,10403b,1771s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2017/
 texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist
@@ -2994,10 +3003,10 @@ lic/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8
 /local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 6.pdf (9 pages, 826540 bytes).
+Output written on 6.pdf (9 pages, 531599 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
