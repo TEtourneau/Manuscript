@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 JUL 2020 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 JUL 2020 22:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3031,49 +3031,23 @@ LaTeX Warning: Reference `fig:xi_smoothing' on page 12 undefined on input line
 472.
 
 
-LaTeX Warning: Reference `prov' on page 12 undefined on input line 489.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [12]
+<../figures/mocks_ana/chi2_vs_rmin.png, id=232, 771.88374pt x 793.96625pt>
+File: ../figures/mocks_ana/chi2_vs_rmin.png Graphic file (type png)
 
-LaTeX Warning: Reference `sec:quickquasars' on page 13 undefined on input line 
-492.
-
-
-LaTeX Warning: Reference `prov' on page 13 undefined on input line 502.
-
-
-<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=232, 1076.02pt x 760.8425p
-t>
-File: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png Graphic file (type png)
- <use ../figures/mocks_ana/cf_ebossraw_4bins_pred.png>
-Package pdftex.def Info: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png used o
-n input line 519.
-(pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 524.
-
-<../figures/mocks_ana/bias_pred.png, id=234, 1094.0875pt x 404.51125pt>
-File: ../figures/mocks_ana/bias_pred.png Graphic file (type png)
-
-<use ../figures/mocks_ana/bias_pred.png>
-Package pdftex.def Info: ../figures/mocks_ana/bias_pred.png used on input line 
-548.
-(pdftex.def)             Requested size: 437.62724pt x 161.80162pt.
-
-
-LaTeX Warning: Reference `prov' on page 13 undefined on input line 561.
+<use ../figures/mocks_ana/chi2_vs_rmin.png>
+Package pdftex.def Info: ../figures/mocks_ana/chi2_vs_rmin.png used on input li
+ne 500.
+(pdftex.def)             Requested size: 463.13382pt x 476.38342pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
+ Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -3084,29 +3058,76 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <../figures/mocks_ana/cf_ebossraw_4bins_pred.png>]
+[14 <../figures/mocks_ana/chi2_vs_rmin.png>]
 
-LaTeX Warning: Reference `prov' on page 15 undefined on input line 599.
+LaTeX Warning: Reference `sec:quickquasars' on page 15 undefined on input line 
+507.
 
-<../figures/mocks_ana/cf1d_ebossraw.png, id=253, 831.105pt x 304.13625pt>
+
+LaTeX Warning: Reference `prov' on page 15 undefined on input line 517.
+
+
+LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 526.
+
+
+LaTeX Warning: Reference `eq:xig2xif' on page 15 undefined on input line 526.
+
+
+<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=246, 1076.02pt x 760.8425p
+t>
+File: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png Graphic file (type png)
+ <use ../figures/mocks_ana/cf_ebossraw_4bins_pred.png>
+Package pdftex.def Info: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png used o
+n input line 535.
+(pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 540.
+
+<../figures/mocks_ana/bias_pred.png, id=247, 1147.28625pt x 425.59pt>
+File: ../figures/mocks_ana/bias_pred.png Graphic file (type png)
+
+<use ../figures/mocks_ana/bias_pred.png>
+Package pdftex.def Info: ../figures/mocks_ana/bias_pred.png used on input line 
+564.
+(pdftex.def)             Requested size: 458.90637pt x 170.23297pt.
+
+
+LaTeX Warning: Reference `prov' on page 15 undefined on input line 577.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16 <../figures/mocks_ana/cf_ebossraw_4bins_pred.png>]
+
+LaTeX Warning: Reference `prov' on page 17 undefined on input line 614.
+
+<../figures/mocks_ana/cf1d_ebossraw.png, id=265, 840.13875pt x 307.1475pt>
 File: ../figures/mocks_ana/cf1d_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf1d_ebossraw.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf1d_ebossraw.png used on input l
-ine 603.
-(pdftex.def)             Requested size: 415.55148pt x 152.06775pt.
+ine 622.
+(pdftex.def)             Requested size: 420.06834pt x 153.57336pt.
 
-<../figures/mocks_ana/auto_qso_4bins.png, id=256, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/auto_qso_4bins.png, id=268, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/auto_qso_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_qso_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/auto_qso_4bins.png used on input 
-line 615.
+line 639.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 621.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3114,47 +3135,62 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <../figures/mocks_ana/bias_pred.png>]
+[17 <../figures/mocks_ana/bias_pred.png>]
 
-LaTeX Warning: Reference `eq:b_qso' on page 16 undefined on input line 645.
+LaTeX Warning: Reference `eq:def_bias' on page 18 undefined on input line 650.
 
-<../figures/mocks_ana/bias_auto_qso.png, id=271, 1129.21875pt x 416.55624pt>
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 652.
+
+<../figures/mocks_ana/auto_qso.png, id=281, 1147.28625pt x 444.66125pt>
+File: ../figures/mocks_ana/auto_qso.png Graphic file (type png)
+
+<use ../figures/mocks_ana/auto_qso.png>
+Package pdftex.def Info: ../figures/mocks_ana/auto_qso.png used on input line 6
+74.
+(pdftex.def)             Requested size: 458.90637pt x 177.86134pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18 <../figures/mocks_ana/cf1d_ebossraw.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19 <../figures/mocks_ana/auto_qso_4bins.png> <../figures/mocks_ana/auto_qso.pn
+g>]
+
+LaTeX Warning: Reference `eq:b_qso' on page 20 undefined on input line 683.
+
+<../figures/mocks_ana/bias_auto_qso.png, id=300, 1126.2075pt x 417.56pt>
 File: ../figures/mocks_ana/bias_auto_qso.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_auto_qso.png>
 Package pdftex.def Info: ../figures/mocks_ana/bias_auto_qso.png used on input l
-ine 654.
-(pdftex.def)             Requested size: 451.6795pt x 166.61954pt.
+ine 692.
+(pdftex.def)             Requested size: 473.00394pt x 175.374pt.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `subsec:hcd' on page 20 undefined on input line 713.
 
-[16 <../figures/mocks_ana/cf1d_ebossraw.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <../figures/mocks_ana/auto_qso_4bins.png>]
-<../figures/mocks_ana/auto_hcd.png, id=286, 834.11626pt x 622.325pt>
+<../figures/mocks_ana/auto_hcd.png, id=303, 1090.0725pt x 415.5525pt>
 File: ../figures/mocks_ana/auto_hcd.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_hcd.png>
-Package pdftex.def Info: ../figures/mocks_ana/auto_hcd.png used on input line 6
-76.
-(pdftex.def)             Requested size: 333.6406pt x 248.92558pt.
+Package pdftex.def Info: ../figures/mocks_ana/auto_hcd.png used on input line 7
+17.
+(pdftex.def)             Requested size: 457.82733pt x 174.53085pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 682.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+               Default added (so using `tbp') on input line 723.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3162,59 +3198,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18 <../figures/mocks_ana/bias_auto_qso.png>]
-<../figures/mocks_ana/cf_eboss00_4bins.png, id=300, 1076.02pt x 759.83875pt>
+[20 <../figures/mocks_ana/bias_auto_qso.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21 <../figures/mocks_ana/auto_hcd.png>]
+<../figures/mocks_ana/cf_eboss00_4bins.png, id=322, 1076.02pt x 759.83875pt>
 File: ../figures/mocks_ana/cf_eboss00_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf_eboss00_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_eboss00_4bins.png used on inpu
-t line 725.
+t line 766.
 (pdftex.def)             Requested size: 430.40038pt x 303.93011pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 730.
+               Default added (so using `tbp') on input line 771.
 
-
-Underfull \vbox (badness 3735) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19 <../figures/mocks_ana/auto_hcd.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20 <../figures/mocks_ana/cf_eboss00_4bins.png>]
-<../figures/mocks_ana/xcf_eboss00_4bins.png, id=318, 1076.02pt x 760.8425pt>
-File: ../figures/mocks_ana/xcf_eboss00_4bins.png Graphic file (type png)
-
-<use ../figures/mocks_ana/xcf_eboss00_4bins.png>
-Package pdftex.def Info: ../figures/mocks_ana/xcf_eboss00_4bins.png used on inp
-ut line 765.
-(pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 770.
-
-
-LaTeX Warning: Reference `prov' on page 21 undefined on input line 816.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21 <../figures/mocks_ana/xcf_eboss00_4bins.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3222,50 +3225,83 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
-<../figures/mocks_ana/cf_eboss02_4bins.png, id=334, 1077.02374pt x 761.84625pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23 <../figures/mocks_ana/cf_eboss00_4bins.png>]
+<../figures/mocks_ana/xcf_eboss00_4bins.png, id=340, 1076.02pt x 760.8425pt>
+File: ../figures/mocks_ana/xcf_eboss00_4bins.png Graphic file (type png)
+
+<use ../figures/mocks_ana/xcf_eboss00_4bins.png>
+Package pdftex.def Info: ../figures/mocks_ana/xcf_eboss00_4bins.png used on inp
+ut line 809.
+(pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 814.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24 <../figures/mocks_ana/xcf_eboss00_4bins.png>]
+
+LaTeX Warning: Reference `prov' on page 25 undefined on input line 860.
+
+
+<../figures/mocks_ana/cf_eboss02_4bins.png, id=350, 1077.02374pt x 761.84625pt>
 File: ../figures/mocks_ana/cf_eboss02_4bins.png Graphic file (type png)
 <use ../figures/mocks_ana/cf_eboss02_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_eboss02_4bins.png used on inpu
-t line 831.
+t line 879.
 (pdftex.def)             Requested size: 430.80186pt x 304.7331pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 836.
+               Default added (so using `tbp') on input line 884.
 
-<../figures/mocks_ana/bias_cf.png, id=335, 1129.21875pt x 415.5525pt>
+<../figures/mocks_ana/bias_cf.png, id=351, 1111.15125pt x 412.54124pt>
 File: ../figures/mocks_ana/bias_cf.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_cf.png>
-Package pdftex.def Info: ../figures/mocks_ana/bias_cf.png used on input line 86
-2.
-(pdftex.def)             Requested size: 474.26865pt x 174.53085pt.
+Package pdftex.def Info: ../figures/mocks_ana/bias_cf.png used on input line 91
+0.
+(pdftex.def)             Requested size: 477.78572pt x 177.38927pt.
 
-<../figures/mocks_ana/xcf_eboss02_4bins.png, id=338, 1076.02pt x 760.8425pt>
+Underfull \vbox (badness 1796) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26 <../figures/mocks_ana/cf_eboss02_4bins.png>]
+<../figures/mocks_ana/xcf_eboss02_4bins.png, id=367, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_eboss02_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_eboss02_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_eboss02_4bins.png used on inp
-ut line 878.
+ut line 926.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23 <../figures/mocks_ana/cf_eboss02_4bins.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24 <../figures/mocks_ana/bias_cf.png>]
-
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 883.
+               Default added (so using `tbp') on input line 931.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3273,24 +3309,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <../figures/mocks_ana/xcf_eboss02_4bins.png>]
+[27 <../figures/mocks_ana/bias_cf.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[28 <../figures/mocks_ana/xcf_eboss02_4bins.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27] [28
+[29] [30
 
 ]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 955--955
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 1003--1003
 | []| 
  []
 
@@ -3299,12 +3335,13 @@ Package minitoc Info: I0009
 (minitoc)             Creating the 5.maf file.
 \openout5 = `5.maf'.
 
-[29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 955.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 955.
+[31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1003.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1003.
  (./5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 955.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 955.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1003.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1003.
+
 Package rerunfilecheck Info: File `5.out' has not changed.
 (rerunfilecheck)             Checksum: F297A88D5C63C79534A3A1A8F2D43CA7;1342.
 
@@ -3314,15 +3351,22 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to '5.run.xml'.
 \openout1 = `5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35650 strings out of 492995
- 649962 string characters out of 6132704
- 1178003 words of memory out of 5000000
- 38372 multiletter control sequences out of 15000+600000
+ 35671 strings out of 492995
+ 650448 string characters out of 6132704
+ 1180155 words of memory out of 5000000
+ 38387 multiletter control sequences out of 15000+600000
  152645 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,17n,56p,10403b,1973s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3350,10 +3394,10 @@ lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb><
 17/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/public/lm/lmtt10.pfb>
-Output written on 5.pdf (29 pages, 1935634 bytes).
+Output written on 5.pdf (31 pages, 2118196 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
- 138 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 527 PDF objects out of 1000 (max. 8388607)
+ 442 compressed objects within 5 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -189,7 +189,7 @@ Les spectrographes utilisés dans eBOSS sont les mêmes que ceux utilisés dans 
 \end{figure}
 L'instrument dispose de deux spectrographes. Ils sont schématisés sur la figure~\ref{fig:SchemaSpectro}.
 % Chacun des spectrographes reçoit via les slitheads \num{500} fibres optiques.
-\textbf{Les \num{1000} fibres des plaques sont séparées en deux. Chaque lot de \num{500} fibres constitue une \emph{demi-plaque}. Chaque spectrographe reçoit donc les fibres optiques de chaque demi-plaque, via les slitheads.}
+Les \num{1000} fibres d'une plaque sont séparées en deux. Chaque lot de \num{500} fibres constitue une \emph{demi-plaque}. Chaque spectrographe reçoit donc les fibres optiques d'une demi-plaque, via les slitheads.
 L'ensemble de ces \num{500} fibres optiques est appelé demi-plaque : chaque spectrogr
 La lumière issue de ces fibres est collimatée grâce à un miroir sphérique. Le faisceau parallèle ainsi créé passe à travers un miroir semi-réfléchissant, permettant de séparer les longueurs d'onde plus petites des longueurs d'onde plus grandes que $\SI{6050}{\angstrom}$. Enfin, chaque demi-faisceau passe au travers d'un grisme\footnote{Association d'un prisme et d'un réseau de diffraction. Le grisme permet de décomposer la lumière tout en gardant le faisceau parallèle.}, et arrive sur la caméra bleue pour les longueurs d'onde plus petites que $\SI{6050}{\angstrom}$, ou sur la caméra rouge pour les longueurs d'onde plus grandes. 
 Après avoir traversé toutes les pièces d'optique, la lumière arrive sur des CCD de \num{4000x4000} pixels, avec une taille de pixel de $\SI{15}{\micro\meter}$. Ainsi une des dimensions du CCD correspond à la longueur d'onde observée, selon l'axe de dispersion, l'autre dimension parcours les différentes fibres. Selon cette dimension, chaque spectre possède un profil de 3 pixels de large et  est séparé de son voisin par 6 pixels afin d'éviter le cross-talk (\#prov).
@@ -210,7 +210,10 @@ Les améliorations apportées à l'instrument pour BOSS ont permis d'augmenter l
   \label{fig:SpectroThroughput}
 \end{figure}
 
-Le pouvoir de résolution traduit la capacité de l'instrument à identifier et mesurer des raies spectrales. Pour mesurer ce pouvoir de résolution, le spectre de lampes à arc dédiées à la calibration est mesuré, puis chaque raie d'émission est ajustée par une gaussienne de largeur $\sigma_\lambda$. Ce $\sigma_\lambda$ est ensuite ajusté par un polynome en fonction de $\lambda$, ce qui donne une estimation de la largeur d'une raie spectrale en fonction de la longueur d'onde observée. Enfin, le pouvoir de résolution est défini comme $R = \frac{\lambda}{2,35 \times \sigma_\lambda}$. La résolution est donnée par le dénominateur : la largeur à mi-hauteur de la gaussienne. Le pouvoir de résolution a été mesuré sur \num{100} plaques SDSS et \num{100} plaques BOSS. La comparaison est présentée sur la figure~\ref{fig:SpectroResoPower}. Le pouvoir de résolution est sensiblement moins grand pour BOSS que pour SDSS, mais reste au dessus des prérequis.
+Le pouvoir de résolution traduit la capacité de l'instrument à identifier et mesurer des raies spectrales. Pour mesurer ce pouvoir de résolution, le spectre de lampes à arc dédiées à la calibration est mesuré, puis chaque raie d'émission est ajustée par une gaussienne de largeur $\sigma_\lambda$. Ce $\sigma_\lambda$ est ensuite ajusté par un polynome en fonction de $\lambda$, ce qui donne une estimation de la largeur d'une raie spectrale en fonction de la longueur d'onde observée.
+Enfin, le pouvoir de résolution est défini comme $R = \frac{\lambda}{FWHM}$, où la largeur à mi-hauteur FWHM (pour \emph{Full Width at Half Maximum}) vaut $\num{2.36}\sigma_{\lambda}$ et donne la résolution de l'instrument.
+% La résolution est donnée par le dénominateur : la largeur à mi-hauteur de la gaussienne.
+Le pouvoir de résolution a été mesuré sur \num{100} plaques SDSS et \num{100} plaques BOSS. La comparaison est présentée sur la figure~\ref{fig:SpectroResoPower}. Le pouvoir de résolution est sensiblement moins grand pour BOSS que pour SDSS, mais reste au dessus des prérequis.
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{SpectroResoPower}
@@ -219,12 +222,13 @@ Le pouvoir de résolution traduit la capacité de l'instrument à identifier et 
 \end{figure}
 
 
+\newpage
 \subsection{Résultats}
-Le relevé eBOSS fournit les mesures de l'échelle BAO et du taux de croissance $f \sigma_8$ les plus précises à ce jour. Ces mesures, grâce à la diversité de traceurs utilisés, sont réparties dans une large gamme en redshift, allant de l'univers local $z \sim 0.15$ à $z \sim 2.4$.
+Le relevé eBOSS fournit les mesures de l'échelle BAO et du taux de croissance $f \sigma_8$ les plus précises à ce jour. Ces mesures, grâce à la diversité de traceurs utilisés, sont réparties dans une large gamme en redshift, allant de $z \sim 0.15$ avec les galaxies locales à $z \sim 2.4$ avec le \lya{}.
 La figure~\ref{fig:exp_hist} présente l'ensemble de ces mesures.
 Parmi les nombreux résultats produits par eBOSS, nous pouvons citer la mesure de l'échelle BAO qui favorise une densité d'énergie noire non nulle à plus de 8 sigmas. % de la densité d'énergie noire qui est non nulle à plus de 8 sigmas.
-La figure~\ref{fig:olambda_om} montre les contraintes apportées par la mesure de l'échelle BAO sur les paramètres $\Omega_{\Lambda}$ et $\Omega_{m}$.
-La mesure de l'échelle BAO faite par eBOSS produit une mesure de $H_0$ en accord avec les mesures de Planck, et en tension avec les mesures directes.
+La figure~\ref{fig:olambda_om} montre les contraintes sur les paramètres $\Omega_{\Lambda}$ et $\Omega_{m}$ apportées uniquement par la mesure de l'échelle BAO.
+En ajoutant les mesures de la BBN (\emph{Big Band Nucleosynthesis}), la mesure de l'échelle BAO faite par eBOSS produit une mesure de $H_0$ en accord avec les mesures de Planck, et en tension avec les mesures directes.
 La figure~\ref{fig:h0_om} montre les contraintes sur les paramètres $H_0$ et $\Omega_{m}$ apportées par la mesure de l'échelle BAO. La combinaison des mesures à $z > 1$ et $z < 1$ permet de mesurer à la fois $H_0$ et $\Omega_{m}$. La zone horizontale grise montre la mesure de $H_0$ faite par~\textcite{Riess2019}.
 Enfin, eBOSS permet de réduire la limite suppérieure de la somme des masses des neutrinos à $\num{0.115}\; \mathrm{eV}$.
 Tous les résultats et contraintes cosmologiques produits par eBOSS sont présentés et discutés dans~\textcite{prov}.
@@ -247,26 +251,25 @@ Tous les résultats et contraintes cosmologiques produits par eBOSS sont présen
 \begin{figure}
   \centering
   \includegraphics[scale=0.45]{hzero_om}
-  \caption{Contraintes cosmologiques sur les paramètres $H_0$ et $\Omega_{m}$ produites par la mesure de l'échelle BAO avec l'ensemble des relevés SDSS, en supposant un modèle \lcdm{} plat. Les contours rouges et bleus indiquent les contraintes à 1 et 2 sigmas produites par les mesures à $z > 1$ et $z < 1$ respectivement. Les contours bleus indiquent la combinaison de tous les mesures. Enfin, la zone horizontale grise montre la mesure de $H_0$ faite par \textcite{Riess2019}.}
+  \caption{Contraintes cosmologiques sur les paramètres $H_0$ et $\Omega_{m}$ produites par la mesure de l'échelle BAO avec l'ensemble des relevés SDSS, en supposant un modèle \lcdm{} plat. Les contours rouges et gris indiquent les contraintes à 1 et 2 sigmas produites par les mesures à $z > 1$ et $z < 1$ respectivement. Les contours bleus indiquent la combinaison de tous les mesures. Enfin, la zone horizontale grise montre la mesure de $H_0$ faite par \textcite{Riess2019}.}
   \label{fig:h0_om}
 \end{figure}
 
 
 \section{DESI}
 
-\textbf{
 Le \emph{Dark Energy Spectroscopic Instrument} (DESI, \textcite{DESICollaboration2016}) est un projet américain de mesure d'énergie noire de génération 4.
 Il a vu sa première lumière en octobre 2019. % et devrait commencer la prise de données en juillet 2020. (\#prov Commissionning octobre 2019 - fev 2020 puis 3 mois de SV pour tester la TS, qualité des spectres pour la détermination du redshift (temps d'exposition), puis dernier mois de SV o\`u on fait \SI{1}{\percent} du survey avec la config choisie (TS entre autre). A la fin de ce mois là, soit on garde et on continue le survey, soit on retouche la TS par exemple, et on part pour le survey (dans ce cas le \SI{1}{\percent} est perdu).)
-Le début de la prise de données devait avoir lieu en juillet 2020. Cependant, à cause de la pandémie de 2020, les phases de \emph{commissioning} et \emph{survey validation} durant laquelle l'instrument et  la qualité des données sont testés ont pris du retard. Actuellement, le début de la prise de données est estimé à janvier 2021.
-}
+Le début de la prise de données devait avoir lieu en juillet 2020. Cependant, à cause de la pandémie de 2020, les phases de \emph{commissioning} et \emph{survey validation} durant laquelle l'instrument et  la qualité des données sont testés ont été intérompues. Actuellement, le début de la prise de données est estimé à janvier 2021.
 
-Comme eBOSS, DESI étudie les BAO et la croissance des structures à l'aide d'un très grand relevé de galaxies et de quasars. A l'issue des 5 ans d'observation prévus, DESI aura mesuré plus de 30 millions de spectres, distribués sur un relevé de plus de $\SI{14000}{\square\deg}$. \\
-Pour atteindre ses objectifs, DESI utilise le télescope Mayall, mesurant $\SI{4}{\meter}$ de diamètre et situé au Kitt Peak en Arizona. Le champ de vue du télescope est le même que celui de SDSS : $\SI{3}{\deg}$ de diamètre sur le ciel. L'instrument inclut aussi un système de fibre optique, au nombre de \num{5000}, mais celles ci sont placées au plan focal à l'aide de robots qui ajustent la position de chaque fibre avant chaque exposition. Dix spectrographes reçoivent ces fibres, chacun comportant 3 caméras et couvrant les longueurs d'onde de \num{3600} à $\SI{9800}{\angstrom}$. \\
+
+Comme eBOSS, DESI étudie les BAO et la croissance des structures à l'aide d'un très grand relevé de galaxies et de quasars. A l'issue des 5 ans d'observation prévus, DESI aura mesuré plus de 30 millions de spectres, distribués sur un relevé de plus de $\SI{14000}{\square\deg}$.
+Pour atteindre ses objectifs, DESI utilise le télescope Mayall, mesurant $\SI{4}{\meter}$ de diamètre et situé au Kitt Peak en Arizona. Le champ de vue du télescope est le même que celui de SDSS : $\SI{3}{\deg}$ de diamètre sur le ciel. L'instrument inclut un système de fibre optique, au nombre de \num{5000}, mais celles ci sont placées au plan focal à l'aide de robots qui ajustent la position de chaque fibre avant chaque exposition. Dix spectrographes reçoivent ces fibres, chacun comportant 3 caméras et couvrant les longueurs d'onde de \num{3600} à $\SI{9800}{\angstrom}$.
 % L'instrument inclut \num{5000} fibres, dont le placement au plan focal est robotisé. Les fibres sont envoyés vers 10 spectrographes, chacun comportant 3 caméras et couvrant les longueurs d'onde de \num{3600} à $\SI{9800}{\angstrom}$. \\
 ‌‌DESI observe les 4 mêmes traceurs qu'eBOSS : les LRG jusqu'à $z=\num{1,0}$, les ELG jusqu'à $z=\num{1,7}$, ainsi que les quasars en tant que traceurs directs de la matière et les quasars \lya{} sur la gamme $\num{2,1} < z < \num{3,5}$. La densité visée de quasars \lya{} est de \num{50} par $\si{\square\deg}$.
 En plus de ces traceurs, DESI obervera des galaxies brillantes (BG : \emph{Bright Galaxies}) pendant le grey time (\#prov). Le relevé de ces galaxies contiendra 10 millions d'objets, avec un redshift moyen $z=\num{0,2}$.
 
-A la fin des 5 ans d'observations, DESI fournira plus de 30 points de mesure de distance, chacun avec une précision plus petite que le pourcent, et couvrant la gamme $\num{0}< z < \num{3.5}$. La figure~\ref{fig:DesiVsEboss} illustre la différence entre BOSS et DESI pour la mesure du taux d'expansion $H(z)$.\\
+A la fin des 5 ans d'observations, DESI fournira plus de 30 points de mesure des distances cosmologiques, chacun avec une précision meilleure que le pourcent, et couvrant la gamme $\num{0}< z < \num{3.5}$. La figure~\ref{fig:DesiVsEboss} illustre la différence entre BOSS et DESI pour la mesure du taux d'expansion $H(z)$.
 De plus, DESI donnera une mesure de la somme des masses des neutrinos, avec une incentitude de $\num{0,020}\,\mathrm{eV}$. Cette précision est suffisante pour exclure la hiérarchie de masse inversée à $3\,\sigma$.
 
 

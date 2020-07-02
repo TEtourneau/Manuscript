@@ -74,10 +74,13 @@ Ou alors un chapitre Objetitfs avant l'intro ? Ou dans l'abstract ?
 
 - rajouter la XCF des raw mocks pour 0 < z < 10 et expliquer qu'on comprend pas pourquoi ca converge pas vers 0 dans chaque bin en z, mais que cest a peu pres ok pour le coadd des 4 bins
 
-- rajouter le plot de xi_g
 
 - mettre un plot qui montre l'évolution de delta_l à F puis le spectre de quickquasars ?
 
 - rajouter les 0 dans tous les tableaux
 
 - agencer un peu mieux les parties resultats : rapprocher les figures et tableaux du texte (utiliser des \newpage)
+
+- rajouter la prediction de la cf1d
+
+- comparer le fit de la cf eboss-0.2 avec un modele sans HCD au fit eboss-0.0 (en particulier les biais et chi2)

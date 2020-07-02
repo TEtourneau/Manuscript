@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 JUN 2020 13:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 JUL 2020 09:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,20 +549,10 @@ Package biblatex Info: ... file 'blx-compat.def' found.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 )
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-bibtex.def
-File: blx-bibtex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
-
-
-Package biblatex Warning: Using fall-back BibTeX(8) backend:
-(biblatex)                functionality may be reduced/unavailable.
-
-)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 \c@textcitecount=\count199
 \c@textcitetotal=\count266
@@ -571,12 +561,6 @@ File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 \c@biburlucpenalty=\count269
 \c@biburllcpenalty=\count270
 \c@smartand=\count271
-)
-Package biblatex Info: Trying to load natbib compatibility...
-Package biblatex Info: ... file 'blx-natbib.def' found.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-natbib.def
-File: blx-natbib.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
@@ -2484,15 +2468,15 @@ File: ttlkeys.def 2016/03/15
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 240.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 239.
+(hyperref)                removing `\alpha' on input line 240.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 240.
 
 )
 Package biblatex Info: Trying to load language 'french'...
@@ -2529,10 +2513,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' specified.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout4 = `2-blx.bib'.
+\openout4 = `2.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '2.bbl' found.
@@ -2882,9 +2863,6 @@ Package pdftex.def Info: ../figures/eBOSS/CartoucheImage.png used on input line
  186.
 (pdftex.def)             Requested size: 348.1559pt x 137.71655pt.
 
-
-Package mathptmx Warning: There are no bold math fonts on input line 192.
-
 <../figures/eBOSS/SchemaSpectro.png, id=191, 752.8125pt x 334.24875pt>
 File: ../figures/eBOSS/SchemaSpectro.png Graphic file (type png)
 
@@ -2900,7 +2878,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9 <../figures/eBOSS/Filtres.png>]
-<../figures/eBOSS/SpectroThroughput.png, id=205, 874.26625pt x 626.34pt>
+<../figures/eBOSS/SpectroThroughput.png, id=204, 874.26625pt x 626.34pt>
 File: ../figures/eBOSS/SpectroThroughput.png Graphic file (type png)
 
 <use ../figures/eBOSS/SpectroThroughput.png>
@@ -2908,19 +2886,13 @@ Package pdftex.def Info: ../figures/eBOSS/SpectroThroughput.png used on input l
 ine 207.
 (pdftex.def)             Requested size: 305.99777pt x 219.22227pt.
 
-<../figures/eBOSS/SpectroResoPower.png, id=209, 787.94376pt x 299.1175pt>
+<../figures/eBOSS/SpectroResoPower.png, id=208, 787.94376pt x 299.1175pt>
 File: ../figures/eBOSS/SpectroResoPower.png Graphic file (type png)
 
 <use ../figures/eBOSS/SpectroResoPower.png>
 Package pdftex.def Info: ../figures/eBOSS/SpectroResoPower.png used on input li
-ne 216.
+ne 219.
 (pdftex.def)             Requested size: 393.97092pt x 149.55838pt.
-
-
-LaTeX Warning: Citation 'Riess2019' on page 10 undefined on input line 228.
-
-
-LaTeX Warning: Citation 'prov' on page 10 undefined on input line 230.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2936,46 +2908,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11 <../figures/eBOSS/SchemaSpectro.png> <../figures/eBOSS/SpectroThroughput.pn
-g>] <../figures/eBOSS/exp_history.png, id=233, 972.63374pt x 611.28375pt>
+g>]
+
+LaTeX Warning: Citation 'Riess2019' on page 12 undefined on input line 232.
+
+
+LaTeX Warning: Citation 'prov' on page 12 undefined on input line 234.
+
+<../figures/eBOSS/exp_history.png, id=228, 972.63374pt x 611.28375pt>
 File: ../figures/eBOSS/exp_history.png Graphic file (type png)
 
 <use ../figures/eBOSS/exp_history.png>
 Package pdftex.def Info: ../figures/eBOSS/exp_history.png used on input line 23
-5.
+9.
 (pdftex.def)             Requested size: 408.50339pt x 256.73743pt.
 
-<../figures/eBOSS/olambda_om.png, id=234, 685.56125pt x 524.96124pt>
+<../figures/eBOSS/olambda_om.png, id=229, 685.56125pt x 524.96124pt>
 File: ../figures/eBOSS/olambda_om.png Graphic file (type png)
 
 <use ../figures/eBOSS/olambda_om.png>
-Package pdftex.def Info: ../figures/eBOSS/olambda_om.png used on input line 242
+Package pdftex.def Info: ../figures/eBOSS/olambda_om.png used on input line 246
 .
 (pdftex.def)             Requested size: 308.49971pt x 236.23038pt.
 
-<../figures/eBOSS/hzero_om.png, id=235, 674.52pt x 514.92375pt>
+<../figures/eBOSS/hzero_om.png, id=230, 674.52pt x 514.92375pt>
 File: ../figures/eBOSS/hzero_om.png Graphic file (type png)
 
 <use ../figures/eBOSS/hzero_om.png>
-Package pdftex.def Info: ../figures/eBOSS/hzero_om.png used on input line 249.
+Package pdftex.def Info: ../figures/eBOSS/hzero_om.png used on input line 253.
 (pdftex.def)             Requested size: 303.53119pt x 231.71355pt.
 
 
-LaTeX Warning: Citation 'Riess2019' on page 12 undefined on input line 250.
+LaTeX Warning: Citation 'Riess2019' on page 12 undefined on input line 254.
 
 
-LaTeX Warning: Citation 'Riess2019' on page 12 undefined on input line 250.
-
-
-LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 261.
-
-<../figures/eBOSS/DesiVsEboss.png, id=238, 972.63374pt x 593.21625pt>
-File: ../figures/eBOSS/DesiVsEboss.png Graphic file (type png)
-
-<use ../figures/eBOSS/DesiVsEboss.png>
-Package pdftex.def Info: ../figures/eBOSS/DesiVsEboss.png used on input line 27
-5.
-(pdftex.def)             Requested size: 291.79237pt x 177.96625pt.
+LaTeX Warning: Citation 'Riess2019' on page 12 undefined on input line 254.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2991,20 +2958,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13 <../figures/eBOSS/exp_history.png> <../figures/eBOSS/olambda_om.png>]
+<../figures/eBOSS/DesiVsEboss.png, id=249, 972.63374pt x 593.21625pt>
+File: ../figures/eBOSS/DesiVsEboss.png Graphic file (type png)
+
+<use ../figures/eBOSS/DesiVsEboss.png>
+Package pdftex.def Info: ../figures/eBOSS/DesiVsEboss.png used on input line 27
+8.
+(pdftex.def)             Requested size: 291.79237pt x 177.96625pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <../figures/eBOSS/hzero_om.png> <../figures/eBOSS/DesiVsEboss.png>]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 282--282
+[14 <../figures/eBOSS/hzero_om.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15 <../figures/eBOSS/DesiVsEboss.png>] [16
+
+]
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 285--285
 | []| 
  []
 
-[15
-
-]
+[17]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the 2.maf file.
@@ -3017,23 +2999,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+[18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
  (./2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
 Package rerunfilecheck Info: File `2.out' has not changed.
 (rerunfilecheck)             Checksum: 81DFF48EF76B8D9596CC95A784D73824;817.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
 
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
+Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                2
 (biblatex)                and rerun LaTeX afterwards.
 
@@ -3042,11 +3021,11 @@ Package logreq Info: Writing requests to '2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35618 strings out of 492995
- 649705 string characters out of 6132704
- 1290853 words of memory out of 5000000
- 38403 multiletter control sequences out of 15000+600000
- 106901 words of font info for 92 fonts, out of 8000000 for 9000
+ 35552 strings out of 492995
+ 648555 string characters out of 6132704
+ 1311234 words of memory out of 5000000
+ 38343 multiletter control sequences out of 15000+600000
+ 102630 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,13n,57p,10403b,1969s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
@@ -3070,29 +3049,27 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
-l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017
-/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2017/texmf-dist/f
-onts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/d
-vips/lm/lm-rm.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmb
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
+xlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2017/te
+xmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/f
+onts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips
+/lm/lm-mathit.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmb
 x10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
-blic/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmt
-t10.pfb>
-Output written on 2.pdf (16 pages, 1765657 bytes).
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/lm/lmtt10.pfb>
+Output written on 2.pdf (18 pages, 1740181 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
