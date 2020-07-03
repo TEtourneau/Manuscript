@@ -626,6 +626,7 @@ Du fait qu'elle est estimée à partir des raw mocks, elle ne possède ni les di
 
 
 \subsubsection{L'auto-corrélation QSO$\times$QSO}
+\label{subsubsec:auto_qso}
 Nous présentons ici la mesure de l'auto-corrélation QSO$\times$QSO, estimée grâce à l'équation~\ref{eq:estimateur_co}.
 Comme pour les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO, la fonction de corrélation QSO$\times$QSO est estimée puis ajustée dans les quatre bins en redshift $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$.
 La corrélation est estimée à partir de 10 réalisations.
@@ -798,11 +799,17 @@ Contrairement à l'auto-corrélation \lya{}$\times$\lya{}, la corrélation \lya{
 Ainsi, pour obtenir chaque bin en $\mu$, nous moyennons la fonction de corrélation pour les valeurs positives et négatives de $\mu$.
 % Dans chacun des bins en redshift, la corrélation est ajustée dans la gamme $r \in [20;\;180] \si{\perh\Mpc}$, ce qui correspond à un nombre de bins en $(\rpar{}, \rperp{})$ $N_{bin} = \num{3148}$, soit le double du nombre de bins utilisés pour ajuster l'auto-corrélation \lya{}$\times$\lya{}.
 Comme pour les autres corrélations, la corrélation \lya{}$\times$QSO est ajustée dans la gamme $r \in [20;\;180] \si{\perh\Mpc}$, ce qui correspond à un nombre de bins en $(\rpar{}, \rperp{})$ $N_{bin} = \num{3148}$, soit le double du nombre de bins utilisés pour ajuster l'auto-corrélation \lya{}$\times$\lya{}.
-Comme pour l'auto-corrélation, le modèle ajusté par picca décrit très bien la corrélation croisée \lya{}$\times$QSO.
+
+\textbf{Comme expliqué dans la section~\ref{subsec:model_donnees}, à cause de la dégénérescence entre les paramètres du \lya{} et ceux des quasars, nous fixons les paramètres $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$. Ces paramètres sont fixés à la valeur donnée par la paramétrisation (équation~\ref{eq:b_qso}) évaluée au redshift effectif de chaque ajustement. Ceci est validé par la mesure de $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$ avec l'auto-corrélation QSO$\times$QSO, qui est en accord avec la paramétrisation utilisée (voir section~\ref{subsubsec:auto_qso}).
+Nous pouvons remarquer sur la figure~\ref{fig:xcf_eboss00_4bins} que, comme pour l'auto-corrélation \lya$\times$\lya{}, le modèle ajusté par picca décrit très bien la corrélation croisée \lya{}$\times$QSO.}
 % Comme pour l'auto-corrélation, la corrélation croisée \lya{}$\times$QSO est en très bon accord avec le modèle ajusté par \texttt{picca}.
+
 Le tableau~\ref{tab:xcf_eboss00_4bins} présente le résultat de l'ajustement dans chaque bin de redshift.
 Nous pouvons noter que le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$ est compatible avec 0, ce à quoi nous nous attendons. Une légère tension ($\num{2.3}\sigma$) est visible pour le bin $\num{2.65} < z < \num{3.05}$, nous attribuons cela à une fluctuation statistique.
-Aussi, comme dans le cas de l'auto-corrélation, les paramètres $\apar{}$ et $\aperp{}$ sont compatibles avec 1.
+\textbf{Aussi, comme dans le cas de l'auto-corrélation, les paramètres $\apar{}$ et $\aperp{}$ sont compatibles avec 1.
+Cependant, les paramètres du \lya{} mesurés dans la corrélation croisée ne sont pas compatibles avec ceux mesurés dans l'auto-corrélation \lya{}$\times$\lya{}. Pourtant, du fait que les paramètres des quasars mesurés sur la corrélation QSO$\times$QSO sont en accord avec la paramétrisation du biais des quasars utilisée dans les mocks, nous nous attendons à mesurer les mêmes $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans l'auto-corrélation \lya{}$\times$\lya{} et dans la corrélation croisée \lya{}$\times$QSO.
+Nous avons essayé de fixer $\Delta_{\rpar{}, \textsc{QSO}} = 0$ dans les ajustements des corrélations croisées. Nous avons aussi essayé de réduire $r_{\mathrm{min}}$ à \SI{10}{\perh\Mpc} dans l'ajustement des corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO.
+Mais ces essais ne réduisent pas les tensions observés.}
 
 \begin{figure}
   \centering
@@ -866,10 +873,12 @@ Les lignes continues donnent le meilleur ajustement du modèle produit par \text
 Le tableau~\ref{tab:cf_eboss02_4bins} donne le résultat de l'ajustement dans chaque bin en redshift.
 A cause du masquage des DLA, le nombre de paires de pixels utilisées pour estimer la corrélation \lya{}$\times$\lya{} est réduit, ce qui résulte dans une augmentation légère des barres d'erreurs.
 Cependant, nous pouvons noter que les $\chi^2$ augmentent légèrement par rapport à l'ajustement de la corrélation \lya{}$\times$\lya{} estimée à partir des mocks eboss-0.0, ce qui suggère que la modélisation des HCD n'est pas parfaite.
-
-\#prov le biais HCD est compatible avec 0 dans les 4 bins en z ... \\
-En prenant rmin = 10, j'obtiens un biais 2 fois plus grand : -35 +/- 10 contre -15 +/- 15 \\
-Faire juste une remarque que le biais HCD est compatible avec 0 est dire qu'on regarde ca dans le chapitre suivant ?
+\textbf{Le biais des HCD mesuré dans chaque bin en redshift est compatible avec 0.
+Nous pensons que ceci est dû à un manque de statistique : lorsque nous ajustons la moyenne pondérée des quatre bins en redshift, nous mesurons $b_{\textsc{HCD}} = \num{-0.0082} \pm \num{0.0008}$.
+Par ailleurs, nous n'observons pas de changement significatif dans l'ajustement de cette corrélation lorsque nous l'ajustons avec $r_{\mathrm{min}} = \SI{10}{\perh\Mpc}$.}
+% \#prov le biais HCD est compatible avec 0 dans les 4 bins en z ... \\
+% En prenant rmin = 10, j'obtiens un biais 2 fois plus grand : -35 +/- 10 contre -15 +/- 15 \\
+% Faire juste une remarque que le biais HCD est compatible avec 0 est dire qu'on regarde ca dans le chapitre suivant ?
 
 La figure~\ref{fig:bias_cf} présente les paramètres  $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ mesurés dans l'auto-corrélation \lya{}$\times$\lya{} estimée à partir des mocks eboss-0.2. Nous pouvons remarquer que la mesure de ces paramètres est très affectée par la présence des HCD. Ceci nous laisse croire que la mesure de $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans les données DR16, sur laquelle nous avons fondé l'ajustement de nos mocks, n'est pas robuste. Ceci est étudié en détail dans le chapitre suivant.
 
@@ -916,9 +925,12 @@ La figure~\ref{fig:bias_cf} présente les paramètres  $b_{\mathrm{Ly}\alpha}$ e
 
 \subsubsection{La corrélation croisée \lya{}$\times$QSO}
 La figure~\ref{fig:xcf_eboss02_4bins} présente la mesure de la corrélation croisée \lya{}$\times$QSO. Celle ci est estimée sur \Nmocks{} réalisations eboss-0.2 et dans quatre bins en redshift. Pour chacun des bins en redshift, la fonction de corrélation est présentée dans quatre bins en $\mu$.
-Les lignes continues donnent le meilleur ajustement du modèle produit par \texttt{picca}.
+Les lignes continues donnent le meilleur ajustement du modèle produit par \texttt{picca}. Il décrit correctement la corrélation estimée dans les mocks.
 Le tableau~\ref{tab:xcf_eboss02_4bins} donne le résultat des ajustements dans chaque bin en redshift.
 Comme pour les mocks eboss-0.0, la mesure de $\Delta_{\rpar{}, \textsc{QSO}}$ est compatible avec 0.
+\textbf{Nous pouvons remarquer dans ce tableau que, comme pour les mocks eboss-0.0, la mesure des paramètres \lya{} dans la corrélation croisée \lya{}$\times$QSO n'est pas compatible avec la mesure faite sur l'auto-corrélation \lya{}$\times$\lya{}.
+Aussi, les mesures de $b_{\textsc{HCD}}$ faites sur les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO ne sont pas compatibles. Le biais des HCD mesuré dans la corrélation croisée est beaucoup plus important. L'ajustement de la moyenne pondérée des quatre bins en redshift donne $b_{\textsc{HCD}} = -0.0377 \pm 0.0020$, comparé à $b_{\textsc{HCD}} = \num{-0.0082} \pm \num{0.0008}$ mesuré dans l'auto-corrélation.
+Ceci est investigué dans le chapitre suivant.}
 
 
 \begin{figure}
@@ -973,7 +985,7 @@ $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1495 \pm 0.0019$ & $ -0.1915 \pm 0
 \end{table}
 
 
-
+\newpage
 \subsection{Analyse des mocks eboss-0.3}
 Cette section présente l'analyse des mocks eboss-0.3. Ces mocks sont obtenus comme les mocks eboss-0.2, analysés précédemment, à la différence que le code \texttt{quickquasars} ajoute les métaux dans les spectres synthétiques. Nous incluons donc les termes $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$ dans la modélisation des fonctions de corrélation.
 
