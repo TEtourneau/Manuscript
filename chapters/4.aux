@@ -130,11 +130,11 @@
 \newlabel{fig:p1d_smoothing}{{1.9}{14}{Effet du lissage gaussien et de la taille non nulle des pixels sur le spectre de puissance à une dimension. La courbe noire donne le spectre de puissance à une dimension obtenu à partir du spectre de puissance de la matière (équation~\ref {eq:p1d}). La courbe bleu donne $P^{\mathrm {1D}}$ obtenu à partir du spectre de puissance de la matière multiplié par $W^2(k)$ (équation~\ref {eq:gauss_smoothing}). La courbe verte donne $P^{\mathrm {1D}}$ obtenu à partir du spectre de puissance de la matière multiplié par $G^2(k)$ (équation~\ref {eq:gauss_smoothing}). Enfin la courbe rouge donne $P^{\mathrm {1D}}$ obtenu à partir du spectre de puissance de la matière multiplié par $W^2(k) G^2(k)$. L'effet dominant sur le spectre de puissance à une dimension est l'effet du lissage gaussien.\relax }{figure.caption.15}{}}
 \abx@aux@page{9}{14}
 \newlabel{eq:p1d}{{1.33}{14}{Les petites échelles}{equation.1.2.33}{}}
+\newlabel{eq:fgpa3}{{1.34}{14}{Les petites échelles}{equation.1.2.34}{}}
 \abx@aux@cite{LeGoff2011}
 \abx@aux@segm{0}{0}{LeGoff2011}
 \abx@aux@cite{Farr2019}
 \abx@aux@segm{0}{0}{Farr2019}
-\newlabel{eq:fgpa3}{{1.34}{15}{Les petites échelles}{equation.1.2.34}{}}
 \FN@pp@footnote@aux{7}{15}
 \newlabel{eq:sigma_s}{{1.37}{15}{Les petites échelles}{equation.1.2.37}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Les RSD}{15}{subsubsection*.16}}
@@ -163,17 +163,17 @@
 \newlabel{fig:xi_g}{{1.11}{18}{Fonctions de corrélation du champ $\delta _g$ (points) et prédiction de cette fonction de corrélation (équations~\ref {eq:pk_g} et~\ref {eq:hamilton1}. Le graphique de gauche montre les corrélations dans quatre bins en $\mu $. Celui de droite montre les corrélations dans la gamme $0 < \mu < 1$. La corrélation mesurée sur le champ $\delta _g$ est en bon accord avec la corrélation prédite, même s'il existe un écart le long de la ligne de visée.\relax }{figure.caption.19}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Ajout des HCD}{18}{subsection.1.2.5}}
 \newlabel{subsec:hcd}{{2.5}{18}{Ajout des HCD}{subsection.1.2.5}{}}
+\abx@aux@page{14}{18}
+\newlabel{eq:biais_seuil}{{1.51}{18}{Ajout des HCD}{equation.1.2.51}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces Le graphique de gauche montre le biais $b_{\nu }$ obtenu pour un seuil $\nu $. Le graphique de droite montre le param\IeC {\`e}tre $\lambda (z)$, utilis\IeC {\'e} pour tirer les HCD.\relax }}{19}{figure.caption.20}}
 \newlabel{fig:bnu_lambda}{{1.12}{19}{Le graphique de gauche montre le biais $b_{\nu }$ obtenu pour un seuil $\nu $. Le graphique de droite montre le paramètre $\lambda (z)$, utilisé pour tirer les HCD.\relax }{figure.caption.20}{}}
-\abx@aux@page{14}{19}
-\newlabel{eq:biais_seuil}{{1.51}{19}{Ajout des HCD}{equation.1.2.51}{}}
 \newlabel{eq:biais_seuil2}{{1.52}{19}{Ajout des HCD}{equation.1.2.52}{}}
 \FN@pp@footnote@aux{8}{19}
+\FN@pp@footnote@aux{9}{19}
 \abx@aux@cite{Gorski2004}
 \abx@aux@segm{0}{0}{Gorski2004}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces Gauche : distribution normalis\IeC {\'e}e en redshift des HCD. Droite : distribution normalis\IeC {\'e}e de $\log (n_{\textsc  {HI}})$ des HCD. Ces distributions proviennent de la librairie \texttt  {pyigm}.\relax }}{20}{figure.caption.21}}
 \newlabel{fig:distrib_dla}{{1.13}{20}{Gauche : distribution normalisée en redshift des HCD. Droite : distribution normalisée de $\log (n_{\textsc {HI}})$ des HCD. Ces distributions proviennent de la librairie \texttt {pyigm}.\relax }{figure.caption.21}{}}
-\FN@pp@footnote@aux{9}{20}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Production des mocks}{20}{section.1.3}}
 \FN@pp@footnote@aux{10}{20}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces D\IeC {\'e}coupage du relev\IeC {\'e} de DESI en 7 chunks.\relax }}{21}{figure.caption.22}}
@@ -185,54 +185,62 @@
 \FN@pp@footnote@aux{11}{24}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Ajustement des param\IeC {\`e}tres}{24}{section.1.4}}
 \newlabel{sec:tuning}{{4}{24}{Ajustement des paramètres}{section.1.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.25}}
+\abx@aux@cite{Faucher-Giguere2008}
+\abx@aux@segm{0}{0}{Faucher-Giguere2008}
+\abx@aux@segm{0}{0}{Faucher-Giguere2008}
+\abx@aux@segm{0}{0}{Faucher-Giguere2008}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Fraction de flux transmis moyenne en fonction du redshift. Les points noirs donnent la mesure faite par \textcite {Faucher-Giguere2008}. La ligne tiret\IeC {\'e}e bleue donne la param\IeC {\'e}trisation de $\overline  F(z)$ que nous utilisons dans les mocks.\relax }}{25}{figure.caption.26}}
+\newlabel{fig:mean_trans}{{1.16}{25}{Fraction de flux transmis moyenne en fonction du redshift. Les points noirs donnent la mesure faite par \textcite {Faucher-Giguere2008}. La ligne tiretée bleue donne la paramétrisation de $\overline F(z)$ que nous utilisons dans les mocks.\relax }{figure.caption.26}{}}
+\newlabel{eq:mean_trans}{{1.57}{25}{}{equation.1.4.57}{}}
+\abx@aux@page{16}{25}
+\newlabel{eq:sigma_g}{{1.58}{25}{}{equation.1.4.58}{}}
 \abx@aux@segm{0}{0}{Arinyo-i-Prats2015}
 \abx@aux@segm{0}{0}{Arinyo-i-Prats2015}
 \abx@aux@segm{0}{0}{Arinyo-i-Prats2015}
 \abx@aux@cite{McDonald2003}
 \abx@aux@segm{0}{0}{McDonald2003}
 \abx@aux@segm{0}{0}{Arinyo-i-Prats2015}
-\@writefile{toc}{\contentsline {paragraph}{}{25}{paragraph*.25}}
-\newlabel{eq:sigma_g}{{1.57}{25}{}{equation.1.4.57}{}}
-\newlabel{eq:p1d_data}{{1.58}{25}{}{equation.1.4.58}{}}
-\abx@aux@page{16}{25}
-\abx@aux@page{17}{25}
-\abx@aux@page{18}{25}
-\abx@aux@page{19}{25}
-\newlabel{eq:p1d_prats}{{1.60}{25}{}{equation.1.4.60}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Mod\IeC {\`e}le du spectre de puissance \IeC {\`a} une dimension, pour diff\IeC {\'e}rentes valeurs du redshift $z$, utilis\IeC {\'e} dans les mocks. Le mod\IeC {\`e}le, donn\IeC {\'e} par les lignes continues, est ajust\IeC {\'e} sur les donn\IeC {\'e}es (Nathalie Palanque-Delabrouille, communication priv\IeC {\'e}e), repr\IeC {\'e}sent\IeC {\'e}es par les points. Ce mod\IeC {\`e}le est d\IeC {\'e}crit dans le texte.\relax }}{26}{figure.caption.26}}
-\newlabel{fig:p1d_data}{{1.16}{26}{Modèle du spectre de puissance à une dimension, pour différentes valeurs du redshift $z$, utilisé dans les mocks. Le modèle, donné par les lignes continues, est ajusté sur les données (Nathalie Palanque-Delabrouille, communication privée), représentées par les points. Ce modèle est décrit dans le texte.\relax }{figure.caption.26}{}}
+\newlabel{eq:p1d_data}{{1.59}{26}{}{equation.1.4.59}{}}
+\abx@aux@page{19}{26}
 \abx@aux@page{20}{26}
-\newlabel{eq:def_bias}{{1.65}{27}{}{equation.1.4.65}{}}
-\newlabel{eq:def_bias_eff}{{1.66}{27}{}{equation.1.4.66}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces R\IeC {\'e}sultat de la proc\IeC {\'e}dure d'ajustement des param\IeC {\`e}tres FGPA.\relax }}{28}{figure.caption.27}}
-\newlabel{fig:params}{{1.17}{28}{Résultat de la procédure d'ajustement des paramètres FGPA.\relax }{figure.caption.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.18}{\ignorespaces Gauche : les cinqs spectres de puissance $P_{s}(k)$ ajust\IeC {\'e}s pour chaque valeur du redshift. Droite : interpolation cubique de ces cinqs spectres de puissance sur une grille $(k, z)$.\relax }}{28}{figure.caption.28}}
-\newlabel{fig:p1dmiss}{{1.18}{28}{Gauche : les cinqs spectres de puissance $P_{s}(k)$ ajustés pour chaque valeur du redshift. Droite : interpolation cubique de ces cinqs spectres de puissance sur une grille $(k, z)$.\relax }{figure.caption.28}{}}
+\abx@aux@page{21}{26}
+\abx@aux@page{22}{26}
+\newlabel{eq:p1d_prats}{{1.61}{26}{}{equation.1.4.61}{}}
+\abx@aux@page{23}{26}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces Mod\IeC {\`e}le du spectre de puissance \IeC {\`a} une dimension, pour diff\IeC {\'e}rentes valeurs du redshift $z$, utilis\IeC {\'e} dans les mocks. Le mod\IeC {\`e}le, donn\IeC {\'e} par les lignes continues, est ajust\IeC {\'e} sur les donn\IeC {\'e}es (Nathalie Palanque-Delabrouille, communication priv\IeC {\'e}e), repr\IeC {\'e}sent\IeC {\'e}es par les points. Ce mod\IeC {\`e}le est d\IeC {\'e}crit dans le texte.\relax }}{27}{figure.caption.27}}
+\newlabel{fig:p1d_data}{{1.17}{27}{Modèle du spectre de puissance à une dimension, pour différentes valeurs du redshift $z$, utilisé dans les mocks. Le modèle, donné par les lignes continues, est ajusté sur les données (Nathalie Palanque-Delabrouille, communication privée), représentées par les points. Ce modèle est décrit dans le texte.\relax }{figure.caption.27}{}}
+\newlabel{eq:def_bias}{{1.66}{27}{}{equation.1.4.66}{}}
+\newlabel{eq:def_bias_eff}{{1.67}{27}{}{equation.1.4.67}{}}
 \abx@aux@segm{0}{0}{prov}
-\@writefile{toc}{\contentsline {paragraph}{}{29}{paragraph*.29}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Expansion des mocks}{29}{section.1.5}}
-\newlabel{sec:quickquasars}{{5}{29}{Expansion des mocks}{section.1.5}{}}
-\FN@pp@footnote@aux{12}{29}
-\@writefile{toc}{\contentsline {paragraph}{}{29}{paragraph*.31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.18}{\ignorespaces R\IeC {\'e}sultat de la proc\IeC {\'e}dure d'ajustement des param\IeC {\`e}tres FGPA.\relax }}{28}{figure.caption.28}}
+\newlabel{fig:params}{{1.18}{28}{Résultat de la procédure d'ajustement des paramètres FGPA.\relax }{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{28}{paragraph*.30}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Expansion des mocks}{28}{section.1.5}}
+\newlabel{sec:quickquasars}{{5}{28}{Expansion des mocks}{section.1.5}{}}
+\FN@pp@footnote@aux{12}{28}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.19}{\ignorespaces Gauche : les cinqs spectres de puissance $P_{s}(k)$ ajust\IeC {\'e}s pour chaque valeur du redshift. Droite : interpolation cubique de ces cinqs spectres de puissance sur une grille $(k, z)$.\relax }}{29}{figure.caption.29}}
+\newlabel{fig:p1dmiss}{{1.19}{29}{Gauche : les cinqs spectres de puissance $P_{s}(k)$ ajustés pour chaque valeur du redshift. Droite : interpolation cubique de ces cinqs spectres de puissance sur une grille $(k, z)$.\relax }{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{29}{paragraph*.32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.20}{\ignorespaces Spectre d'un quasar synth\IeC {\'e}tique g\IeC {\'e}n\IeC {\'e}r\IeC {\'e} par \texttt  {quickqasars}. Le quasar se trouve \IeC {\`a} un redshift $z = \num {3.121}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilit\IeC {\'e}, nous avons r\IeC {\'e}duit la zone de recouvrement des deux spectrographes dans cette figure. Le graphique du bas montre le spectre dans les r\IeC {\'e}gions des for\IeC {\^e}ts Ly$\alpha ${} et Ly$\beta ${} (bleu), superpos\IeC {\'e}es \IeC {\`a} la fraction de flux transmis multipli\IeC {\'e}e par 30 (vert), en fonction de la longueur d'onde au repos. Les pointill\IeC {\'e}s gris indiquent les raies Ly$\alpha ${} et Ly$\beta ${}. Un DLA est visible dans le spectre synth\IeC {\'e}tique pour $\lambda _{\mathrm  {RF}} \sim \SI {1135}{\angstrom }$.\relax }}{30}{figure.caption.31}}
+\newlabel{fig:quickquasars_spectra}{{1.20}{30}{Spectre d'un quasar synthétique généré par \texttt {quickqasars}. Le quasar se trouve à un redshift $z = \num {3.121}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure. Le graphique du bas montre le spectre dans les régions des forêts \lya {} et \lyb {} (bleu), superposées à la fraction de flux transmis multipliée par 30 (vert), en fonction de la longueur d'onde au repos. Les pointillés gris indiquent les raies \lya {} et \lyb {}. Un DLA est visible dans le spectre synthétique pour $\lambda _{\mathrm {RF}} \sim \SI {1135}{\angstrom }$.\relax }{figure.caption.31}{}}
 \FN@pp@footnotehinttrue 
-\@writefile{lof}{\contentsline {figure}{\numberline {1.19}{\ignorespaces Spectre d'un quasar synth\IeC {\'e}tique g\IeC {\'e}n\IeC {\'e}r\IeC {\'e} par \texttt  {quickqasars}. Le quasar se trouve \IeC {\`a} un redshift $z = \num {3.121}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilit\IeC {\'e}, nous avons r\IeC {\'e}duit la zone de recouvrement des deux spectrographes dans cette figure. Le graphique du bas montre le spectre dans les r\IeC {\'e}gions des for\IeC {\^e}ts Ly$\alpha ${} et Ly$\beta ${} (bleu), superpos\IeC {\'e}es \IeC {\`a} la fraction de flux transmis multipli\IeC {\'e}e par 30 (vert), en fonction de la longueur d'onde au repos. Les pointill\IeC {\'e}s gris indiquent les raies Ly$\alpha ${} et Ly$\beta ${}. Un DLA est visible dans le spectre synth\IeC {\'e}tique pour $\lambda _{\mathrm  {RF}} \sim \SI {1135}{\angstrom }$.\relax }}{30}{figure.caption.30}}
-\newlabel{fig:quickquasars_spectra}{{1.19}{30}{Spectre d'un quasar synthétique généré par \texttt {quickqasars}. Le quasar se trouve à un redshift $z = \num {3.121}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure. Le graphique du bas montre le spectre dans les régions des forêts \lya {} et \lyb {} (bleu), superposées à la fraction de flux transmis multipliée par 30 (vert), en fonction de la longueur d'onde au repos. Les pointillés gris indiquent les raies \lya {} et \lyb {}. Un DLA est visible dans le spectre synthétique pour $\lambda _{\mathrm {RF}} \sim \SI {1135}{\angstrom }$.\relax }{figure.caption.30}{}}
 \@writefile{@@@}{\chapterbegin }
-\abx@aux@page{21}{31}
-\abx@aux@page{22}{31}
-\abx@aux@page{23}{31}
-\abx@aux@page{24}{31}
-\abx@aux@page{25}{31}
-\abx@aux@page{26}{31}
-\abx@aux@page{27}{31}
-\abx@aux@page{28}{31}
-\abx@aux@page{29}{31}
-\abx@aux@page{30}{31}
-\abx@aux@page{31}{31}
-\abx@aux@page{32}{31}
-\abx@aux@page{33}{31}
-\abx@aux@page{34}{31}
-\abx@aux@page{35}{31}
+\abx@aux@page{24}{33}
+\abx@aux@page{25}{33}
+\abx@aux@page{26}{33}
+\abx@aux@page{27}{33}
+\abx@aux@page{28}{33}
+\abx@aux@page{29}{33}
+\abx@aux@page{30}{33}
+\abx@aux@page{31}{33}
+\abx@aux@page{32}{33}
+\abx@aux@page{33}{33}
+\abx@aux@page{34}{33}
+\abx@aux@page{35}{33}
+\abx@aux@page{36}{33}
+\abx@aux@page{37}{33}
+\abx@aux@page{38}{33}
 \abx@aux@refcontextdefaultsdone
 \abx@aux@defaultrefcontext{0}{Agrawal2017}{nyt/global/}
 \abx@aux@defaultrefcontext{0}{Arinyo-i-Prats2015}{nyt/global/}
@@ -240,6 +248,7 @@
 \abx@aux@defaultrefcontext{0}{coles_lognormal_1991}{nyt/global/}
 \abx@aux@defaultrefcontext{0}{Dodelson2003}{nyt/global/}
 \abx@aux@defaultrefcontext{0}{Farr2019}{nyt/global/}
+\abx@aux@defaultrefcontext{0}{Faucher-Giguere2008}{nyt/global/}
 \abx@aux@defaultrefcontext{0}{Font-Ribera2012}{nyt/global/}
 \abx@aux@defaultrefcontext{0}{Font-Ribera2012a}{nyt/global/}
 \abx@aux@defaultrefcontext{0}{Gorski2004}{nyt/global/}
@@ -251,4 +260,5 @@
 \abx@aux@defaultrefcontext{0}{McDonald2003}{nyt/global/}
 \abx@aux@defaultrefcontext{0}{Pieri2016}{nyt/global/}
 \global\mtcsecondpartfalse
-\abx@aux@page{36}{32}
+\abx@aux@page{39}{34}
+\abx@aux@page{40}{34}

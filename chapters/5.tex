@@ -285,6 +285,7 @@ où $\rpar{}_{mesure}$ est la séparation mesurée des paires $(i,j)$, et $\rpar
 \paragraph{}
 La présence des facteurs de Kaiser dans l'équation~\ref{eq:pk_model1} permet de mesurer le biais et le paramètre RSD de nos traceurs. En ce qui concerne l'auto-corrélation \lya{}$\times$\lya{}, la fonction de corrélation est proportionnelle à $b_{\mathrm{Ly}\alpha}^2(1+\beta_{\mathrm{Ly}\alpha} \mu^2)^2$. Cependant, la présence de HCD dans les données modifie le biais et le paramètre RSD du \lya{}. En effet, l'efficacité de l'algorithme de détection n'étant pas de \SI{100}{\percent}, il subsiste des DLA non identifiés dans les forêts. De plus, les HCD avec $\log n_{\textsc{HI}} < \num{20.3}$ ne sont pas identifiés. Ces deux effets participent à augmenter le biais mesuré du \lya{} significativement. Nous utilisons les paramètres effectifs
 \begin{align}
+  \label{eq:bias_hcd_def}
   b_{\mathrm{Ly}\alpha}' &= b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}} F_{\textsc{HCD}}(\kpar{}) \; , \\
   b_{\mathrm{Ly}\alpha}' \beta_{\mathrm{Ly}\alpha}' &= b_{\mathrm{Ly}\alpha} \beta_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}} \beta_{\textsc{HCD}} F_{\textsc{HCD}}(\kpar{})  \; ,
 \end{align}
@@ -807,7 +808,7 @@ Nous pouvons remarquer sur la figure~\ref{fig:xcf_eboss00_4bins} que, comme pour
 Le tableau~\ref{tab:xcf_eboss00_4bins} présente le résultat de l'ajustement dans chaque bin de redshift.
 Nous pouvons noter que le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$ est compatible avec 0, ce à quoi nous nous attendons. Une légère tension ($\num{2.3}\sigma$) est visible pour le bin $\num{2.65} < z < \num{3.05}$, nous attribuons cela à une fluctuation statistique.
 \textbf{Aussi, comme dans le cas de l'auto-corrélation, les paramètres $\apar{}$ et $\aperp{}$ sont compatibles avec 1.
-Cependant, les paramètres du \lya{} mesurés dans la corrélation croisée ne sont pas compatibles avec ceux mesurés dans l'auto-corrélation \lya{}$\times$\lya{}. Pourtant, du fait que les paramètres des quasars mesurés sur la corrélation QSO$\times$QSO sont en accord avec la paramétrisation du biais des quasars utilisée dans les mocks, nous nous attendons à mesurer les mêmes $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans l'auto-corrélation \lya{}$\times$\lya{} et dans la corrélation croisée \lya{}$\times$QSO.
+Cependant, les paramètres du \lya{} mesurés dans la corrélation croisée sont en tension avec ceux mesurés dans l'auto-corrélation \lya{}$\times$\lya{}. Pourtant, du fait que les paramètres des quasars mesurés sur la corrélation QSO$\times$QSO sont en accord avec la paramétrisation du biais des quasars utilisée dans les mocks, nous nous attendons à mesurer les mêmes $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans l'auto-corrélation \lya{}$\times$\lya{} et dans la corrélation croisée \lya{}$\times$QSO.
 Nous avons essayé de fixer $\Delta_{\rpar{}, \textsc{QSO}} = 0$ dans les ajustements des corrélations croisées. Nous avons aussi essayé de réduire $r_{\mathrm{min}}$ à \SI{10}{\perh\Mpc} dans l'ajustement des corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO.
 Mais ces essais ne réduisent pas les tensions observés.}
 
@@ -928,9 +929,11 @@ La figure~\ref{fig:xcf_eboss02_4bins} présente la mesure de la corrélation cro
 Les lignes continues donnent le meilleur ajustement du modèle produit par \texttt{picca}. Il décrit correctement la corrélation estimée dans les mocks.
 Le tableau~\ref{tab:xcf_eboss02_4bins} donne le résultat des ajustements dans chaque bin en redshift.
 Comme pour les mocks eboss-0.0, la mesure de $\Delta_{\rpar{}, \textsc{QSO}}$ est compatible avec 0.
-\textbf{Nous pouvons remarquer dans ce tableau que, comme pour les mocks eboss-0.0, la mesure des paramètres \lya{} dans la corrélation croisée \lya{}$\times$QSO n'est pas compatible avec la mesure faite sur l'auto-corrélation \lya{}$\times$\lya{}.
-Aussi, les mesures de $b_{\textsc{HCD}}$ faites sur les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO ne sont pas compatibles. Le biais des HCD mesuré dans la corrélation croisée est beaucoup plus important. L'ajustement de la moyenne pondérée des quatre bins en redshift donne $b_{\textsc{HCD}} = -0.0377 \pm 0.0020$, comparé à $b_{\textsc{HCD}} = \num{-0.0082} \pm \num{0.0008}$ mesuré dans l'auto-corrélation.
-Ceci est investigué dans le chapitre suivant.}
+\textbf{Nous pouvons remarquer dans ce tableau que, comme pour les mocks eboss-0.0, la mesure des paramètres \lya{} dans la corrélation croisée \lya{}$\times$QSO est en tension avec la mesure faite sur l'auto-corrélation \lya{}$\times$\lya{}.
+  Aussi, les mesures de $b_{\textsc{HCD}}$ faites sur les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO ne sont pas compatibles. Le biais des HCD mesuré dans la corrélation croisée est beaucoup plus important. L'ajustement de la moyenne pondérée des quatre bins en redshift donne $b_{\textsc{HCD}} = -0.0377 \pm 0.0020$, comparé à $b_{\textsc{HCD}} = \num{-0.0082} \pm \num{0.0008}$ mesuré dans l'auto-corrélation.
+  Nous pensons que cet écart provient du fait qu'il est difficile lors de l'ajustement du modèle de distinguer l'effet du \lya de celui des HCD. Une partie des HCD est interprétée comme du \lya{}, et vice versa. La proportion de HCD et le \lya{} identifiés dans les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO est différente. Ceci est investigué plus en détails dans le chapitre suivant.
+  Nous pouvons cependant remarquer que les quantités $b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}$ et $b_{\mathrm{Ly}\alpha}\beta_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}\beta_{\textsc{HCD}}$ (équation~\ref{eq:bias_hcd_def}) mesurés dans les données DR16, ainsi que dans les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO sont compatibles. Ces mesures sont présentées sur la figure~\ref{prov}.
+}
 
 
 \begin{figure}
@@ -984,6 +987,12 @@ $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1495 \pm 0.0019$ & $ -0.1915 \pm 0
   \end{tabular}
 \end{table}
 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{sum_bias}
+  \caption{Mesures des paramètres $b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}$ et $b_{\mathrm{Ly}\alpha}\beta_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}\beta_{\textsc{HCD}}$ dans la corrélation \lya{}$\times$\lya{} estimée à partir des données DR16 (noir), dans la corrélations \lya{}$\times$\lya{} estimée à partir des mocks eboss-0.2 (points rouges) et dans la corrélation \lya{}$\times$QSO estimée à partir des mocks eboss-0.2 (croix rouges).}
+  \label{fig:sum_bias}
+\end{figure}
 
 \newpage
 \subsection{Analyse des mocks eboss-0.3}

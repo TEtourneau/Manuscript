@@ -659,6 +659,56 @@
       \verb https://arxiv.org/abs/1912.02763
       \endverb
     \endentry
+    \entry{Faucher-Giguere2008}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=7f5a2adf1653136a9313efb98c3cee75}{%
+           family={Faucher-Giguere},
+           familyi={F\bibinithyphendelim G\bibinitperiod},
+           given={C.\bibnamedelimi -A.},
+           giveni={C\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinithyphendelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=327f709cd504c350158ac2c5a1273d1a}{%
+           family={Lidz},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=49883980adbb993066f572123bf76ac1}{%
+           family={Hernquist},
+           familyi={H\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{uniquename=0,hash=2838c6fb7390e0af26f8fce7ccd338e5}{%
+           family={Zaldarriaga},
+           familyi={Z\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4bc2d0bf6e075fbd347ce65c4267f0d}
+      \strng{fullhash}{c4a5f40a74b13db47f588ac5e16c4bdc}
+      \strng{authornamehash}{f4bc2d0bf6e075fbd347ce65c4267f0d}
+      \strng{authorfullhash}{c4a5f40a74b13db47f588ac5e16c4bdc}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the implications of the intergalactic opacity for the evolution of the cosmic UV luminosity density and its sources. Our main constraint is our measurement of the Lya forest opacity at redshifts 2{<}z{<}4.2 from 86 high-resolution quasar spectra. In addition, we impose the requirements that HI must be reionized by z=6 and HeII by z{\~{}}3, and consider estimates of the hardness of the ionizing background from HI to HeII column density ratios. The derived hydrogen photoionization rate is remarkably flat over the Lya forest redshift range covered. Because the quasar luminosity function is strongly peaked near z{\~{}}2, the lack of redshift evolution indicates that star-forming galaxies likely dominate the photoionization rate at z{>}{\~{}}3. Combined with direct measurements of the galaxy UV luminosity function, this requires only a small fraction f{\_}esc{\~{}}0.5{\%} of galactic hydrogen ionizing photons to escape their source for galaxies to solely account for the entire ionizing background. Under the assumption that the galactic UV emissivity traces the star formation rate, current state-of-the-art observational estimates of the star formation rate density appear to underestimate the total photoionization rate at z{\~{}}4 by a factor {\~{}}4, are in tension with recent determinations of the UV luminosity function, and fail to reionize the Universe by z{\~{}}6 if extrapolated to arbitrarily high redshift. A theoretical star formation history peaking earlier fits the Lya forest photoionization rate well, reionizes the Universe in time, and is in better agreement with the rate of z{\~{}}4 gamma-ray bursts observed by Swift. Quasars suffice to doubly ionize helium by z{\~{}}3 and likely contribute a non-negligible and perhaps dominant fraction of the hydrogen ionizing background at their z{\~{}}2 peak. [Abridged]}
+      \field{eprinttype}{arXiv}
+      \field{month}{7}
+      \field{title}{{Evolution of the Intergalactic Opacity: Implications for the Ionizing Background, Cosmic Star Formation, and Quasar Activity}}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1086/592289
+      \endverb
+      \verb{eprint}
+      \verb 0807.4177
+      \endverb
+      \verb{file}
+      \verb ::
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0807.4177%20http://dx.doi.org/10.1086/592289
+      \endverb
+    \endentry
     \entry{Font-Ribera2012}{article}{}
       \name{author}{3}{}{%
         {{uniquename=0,hash=a1471d6d4f092fecd93ee513589b480e}{%
@@ -1132,7 +1182,7 @@
       \field{issn}{0035-8711}
       \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
       \field{month}{5}
-      \field{title}{{The clustering of peaks in a random {\{}Gaussian{\}} field}}
+      \field{title}{{The clustering of peaks in a random Gaussian field}}
       \field{volume}{238}
       \field{year}{1989}
       \field{pages}{293\bibrangedash 318}

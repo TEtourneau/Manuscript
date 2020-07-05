@@ -20,6 +20,8 @@ kn = np.pi / d_cell
 cut = np.sinc(k*d_cell/(2*np.pi))
 r2,xi_camb_cut = powerspectrum.xi_from_pk(k, pk_camb*cut**2)
 p1d_camb_cut = powerspectrum.P_1D(k, pk_camb*cut**2).P1D(k)
+msk = k < kn
+p1d_camb_cut2 = powerspectrum.P_1D(k[msk], pk_camb[msk]).P1D(k)
 
 smooth = np.exp(- k**2 * d_cell**2 / 2)
 r3,xi_camb_smooth = powerspectrum.xi_from_pk(k, pk_camb*smooth**2)
@@ -68,6 +70,7 @@ f1, ax1 = plt.subplots()
 ax1.plot(k, p1d_camb, color='black')
 ax1.plot(k, p1d_camb_smooth, color='blue')
 ax1.plot(k, p1d_camb_cut, color='green')
+ax1.plot(k, p1d_camb_cut2, color='magenta')
 ax1.plot(k, p1d_camb_cut_smooth, color='red')
 ax1.set_xlabel(r'$k \; [h \; \mathrm{Mpc}^{-1}]$')
 ax1.set_ylabel(r'$P^{\mathrm{1D}}(k) \; [(h^{-1} \mathrm{Mpc})]$')
