@@ -662,6 +662,18 @@ Afin de gérer la bonne quantité de RSD, nous ajoutons un coefficient $c$, qui 
 \end{equation}
 Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$. De plus, le facteur $f$ que nous avons laissé de côté dans la section~\ref{subsubsec:vitesses} n'est pas explicité ici : pour les redshifts $z > 2$, l'univers est dominé par la matière et donc, en bonne approximation, nous avons $f(z) \sim 1$. Les paramètres $a(z)$, $b(z)$, $c(z)$, ainsi que $P_{s}(k,z)$ sont ajustés afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{\mathrm{1D}}_{\mathrm{Ly}\alpha}(k,z)$. L'ajustement est décrit dans la section~\ref{sec:tuning}.
 
+
+\paragraph{}
+\textbf{Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, les graphiques de cette figure représentent : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{building_trans.pdf}
+  \caption{De haut en bas : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Le quasar est situé à un redshift $z=\num{3.167}$.}
+  \label{fig:building_trans}
+\end{figure}
+
+
 \subsubsection{La prédiction}
 \label{subsubsec:pred}
 
@@ -1144,14 +1156,21 @@ Puis, l'absorption est modifiée :
 le flux de chaque absorption est corrigé par un facteur $A_m$, où $A_m$ relie la profondeur optique de la raie d'absorption du métal à la profondeur optique du \lya{} : $\tau_m = A_m \tau_{\mathrm{Ly}\alpha}$. Le paramètre $A_m$ est ajusté afin d'obtenir le bon biais pour chaque métal.
 % où $\tau_m$ est la profondeur optique de la raie d'absorption, et $A_m$ un paramètre qui est ajusté pour chaque métal afin d'obtenir le bon biais pour le métal considéré.
 Enfin, le code ajoute les spécificités propres à l'instrument ou au relevé (eBOSS ou DESI), comme par exmemple la réponse des spectrographes, le temps d'exposition pour chaque spectre, ou encore la distribution en magnitude des quasars.
-La figure~\ref{fig:quickquasars_spectra} présente le spectre d'un quasar simulé. Le graphique du bas montre les régions des forêts \lya{} et \lyb{} en bleu, superposées à la fraction de flux transmis en vert. Cette dernière est multipliée par 30 pour des raisons de visibilité. Le spectre synthétique possède un DLA à $\lambda_{\mathrm{RF}} \sim \SI{1135}{\angstrom}$.
+La figure~\ref{fig:quickquasars_spectrum} présente le spectre d'un quasar simulé. Un agrandissement de la forêt \lya{} de ce spectre est visible sur la figure~\ref{fig:building_trans}.
+% Le graphique du bas montre les régions des forêts \lya{} et \lyb{} en bleu, superposées à la fraction de flux transmis en vert. Cette dernière est multipliée par 30 pour des raisons de visibilité. Le spectre synthétique possède un DLA à $\lambda_{\mathrm{RF}} \sim \SI{1135}{\angstrom}$.
 
+% \begin{figure}
+%   \centering
+%   \includegraphics[scale=0.55]{quickquasars_spectra}
+%   \caption{Spectre d'un quasar synthétique généré par \texttt{quickqasars}. Le quasar se trouve à un redshift $z = \num{3.121}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure.
+%   Le graphique du bas montre le spectre dans les régions des forêts \lya{} et \lyb{} (bleu), superposées à la fraction de flux transmis multipliée par 30 (vert), en fonction de la longueur d'onde au repos. Les pointillés gris indiquent les raies \lya{} et \lyb{}. Un DLA est visible dans le spectre synthétique pour $\lambda_{\mathrm{RF}} \sim \SI{1135}{\angstrom}$.}
+%   \label{fig:quickquasars_spectra}
+% \end{figure}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.55]{quickquasars_spectra}
-  \caption{Spectre d'un quasar synthétique généré par \texttt{quickqasars}. Le quasar se trouve à un redshift $z = \num{3.121}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure.
-  Le graphique du bas montre le spectre dans les régions des forêts \lya{} et \lyb{} (bleu), superposées à la fraction de flux transmis multipliée par 30 (vert), en fonction de la longueur d'onde au repos. Les pointillés gris indiquent les raies \lya{} et \lyb{}. Un DLA est visible dans le spectre synthétique pour $\lambda_{\mathrm{RF}} \sim \SI{1135}{\angstrom}$.}
-  \label{fig:quickquasars_spectra}
+  \includegraphics[scale=0.4]{quickquasars_spectrum}
+  \caption{Spectre d'un quasar synthétique généré par \texttt{quickqasars}. Le quasar se trouve à un redshift $z = \num{3.167}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure.}
+  \label{fig:quickquasars_spectrum}
 \end{figure}
 
 \paragraph{}

@@ -322,7 +322,14 @@ Il serait tout de même intéressant de mener cette analyse sur un plus grand no
 
 \subsection{Modélisation alternative des HCD}
 
-
+% Dans le but de tester la modélisation des HCD, nous avons ajustés les mocks et les données en utilisant une modélisation différente des HCD.
+Toujours dans l'optique de tester la robustesse de la mesure des paramètres \lya{}, nous avons utilisés une modélisation des HCD différente de celle décrite dans la section~\ref{subsec:model_donnees} et utilisée jusqu'ici pour modéliser les mocks et les données.
+Ce modèle est développé par Edmond Chaussidon et Julien Guy, au sein du groupe \lya{} de la collaboration DESI.
+Nous faisons référence à ce modèle via le num \emph{modèle C-G}.
+Ce modèle, contrairement au modèle décrit dans la section~\ref{subsec:model_donnees}, ne masque pas les HCD identifiés par l'algorithme et vérifiant $\log n_{\textsc{HI}} > 20.3$.
+Ce choix est fait dans le but de s'affranchir des potentiels systématiques produites par l'utilisation de l'algorithme de détection.
+Ainsi, le modèle C-G prend en compte les effets sur les corrélations \lya{}$\times$\lya{} et \lya{}$\times$QSO produits par l'ensemble des HCD dans les données.
+Pour ce faire, le modèle calcule le profile de Voigt équivalent résultant
 
 
 
