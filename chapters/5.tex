@@ -19,19 +19,20 @@
 \textbf{Ce chapitre a pour vocation de présenter l'analyse menée sur les mocks, afin de valider leur construction et le choix des différents paramètres.
 Nous présentons d'abord les estimateurs des diverses fonctions de corrélations, puis les modèles ajustés sur celles-ci.
 Nous donnons premièrement le modèle ajusté sur les données et présenté dans \textcite{prov}, puis le modèle modifié ajusté sur les mocks.
-Enfin, nous présentons l'analyse des 100 réalisations de mocks produites. Le résultat de l'analyse des données, utilisée pour choisir les paramètres \lya{} des mocks, est présentée dans le chapitre suivant.
+Enfin, nous présentons l'analyse des \Nmocks{} réalisations de mocks produites. Le résultat de l'analyse des données, utilisée pour choisir les paramètres \lya{} des mocks, est présentée dans le chapitre suivant.
 Toutes ces analyses sont produites avec le code \texttt{picca}. Ce code permet de calculer les champs $\delta$, les fonctions de corrélations, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.}
 
 \section{Les estimateurs}
 Nous présentons ici les estimateurs utilisés pour calculer la fonction d'auto-corrélation du \lya{}, la fonction de corrélation croisée \lya{}-QSO, ainsi que la fonction d'auto-corrélation d'objets ponctuels tels les quasars.
 % Dans le cas des objets ponctuels, la seule information nécessaire au calcul de la fonction de corrélation est le catalogue fournissant pour chaque objet l'ascension droite, la déclinaison et le redshift.
 \textbf{
-  Dans le cas des objets ponctuels, il est nécessaire de produire un catalogue aléatoire d'objets qui prend en compte la complétude du relevé. %, ainsi que les effets liés à la sélection des cibles afin de calculer correctement la fonction d'auto-corrélation. % Un tel catalogue est produit pour chaque réalisation des mocks.
-  Il est aussi nécessaire d'estimer l'homogénéité de la sélection des cibles, afin de pondéré chaque quasar par un poids qui tient compte de celle-ci.
+  Dans le cas des objets ponctuels, il est nécessaire de produire un catalogue aléatoire d'objets qui prend en compte la complétude\footnote{La complétude donne la proportion de cibles observées en spectroscopie par rapport au nombre de cibles détectées avec le relevé photométrique.} du relevé spectrométrique. %, ainsi que les effets liés à la sélection des cibles afin de calculer correctement la fonction d'auto-corrélation. % Un tel catalogue est produit pour chaque réalisation des mocks.
+  Il est aussi nécessaire d'estimer l'inhomogénéité de la sélection des cibles, afin de pondéré chaque quasar par un poids qui vise à la corriger.
 }
 % Pour le calcul des fonctions de corrélation impliquant le \lya{}, il est nécessaire de calculer au préalable le champ $\delta_F$ (équation~\ref{eq:deltaF}).
-\textbf{Pour le calcul des fonctions de corrélation impliquant le \lya{}, il n'est pas utile d'avoir un catalogue aléatoire. En effet, le champ $\delta_F$ nous donne directement accès, à un biais près, au contraste de densité. Nous pouvons donc calculer la fonction de corrélation avec une formule du type de l'équation~\ref{eq:def_cf}, ce qui n'est pas possible dans le cas des objets ponctuels.
-Ceci nous permet aussi de ne pas tenir compte de l'homogénéité de la sélection des cibles, et donc d'utiliser des poids qui servent uniquement à maximiser le rapport signal sur bruit.}
+\textbf{Pour le calcul des fonctions de corrélation impliquant le \lya{}, il n'est pas utile d'avoir un catalogue aléatoire. En effet, le champ $\delta_F$ nous donne directement accès, à un biais près, au contraste de densité. Nous pouvons donc calculer la fonction de corrélation avec une formule du type de l'équation~\ref{eq:def_cf}, ce qui n'est pas possible dans le cas des objets ponctuels, et nous n'avons pas besoin de tenir compte de l'homogénéité de la sélection des cibles. Les poids servent donc uniquement à maximiser le rapport signal sur bruit.
+  % Ceci nous permet aussi de ne pas tenir compte de l'homogénéité de la sélection des cibles, et donc d'utiliser des poids qui servent uniquement à maximiser le rapport signal sur bruit.}
+  }
 
 Pour le calcul du champ $\delta_F$, nous distingons deux cas : le cas où nous analysons les \emph{raw mocks} et le cas où nous analysons les \emph{cooked mock} ou les données.
 Les raw mocks (les mocks bruts, non préparés) désignent les mocks avant d'avoir tourné le code \texttt{quickquasars}.
@@ -57,7 +58,7 @@ Afin d'estimer $\xi_{\mathrm{Ly}\alpha}$, une grille en $(\rpar{}, \rperp{})$ es
 % Chaque bin de cette grille fait $(\SI{4}{\perh\Mpc})^3$.
 Les bins mesurent \SI{4}{\perh\Mpc} dans chaque direction.
 % Cette taille de bin permet à la fois de regrouper suffisamment de pixels pour avoir une bonne statistique dans chaque bin, mais aussi d'avoir suffisamment de bins pour résoudre correctement la région du pic BAO (\#prov est-ce que c'est vrai ? toujours la meme quantite d'info, donc ca ameliore pas le fit?).
-\textbf{Cette taille de bin est choisie de façon à avoir suffisamment de bins pour résoudre correctement la région du pic BAO, mais aussi de façon à ne pas avoir trop de bins pour le calcul de la matrice de covariance. La taille de bin choisie et la gamme en $r$ utilisée produisent déjà une matrice de covariance de \num{2500}$\times$\num{2500} bins. }
+Cette taille de bin est choisie de façon à avoir suffisamment de bins pour résoudre correctement la région du pic BAO, mais aussi de façon à ne pas avoir trop de bins pour le calcul de la matrice de covariance. La taille de bin choisie et la gamme en $r$ utilisée produisent déjà une matrice de covariance de \num{2500}$\times$\num{2500} bins.
 % Une fois cette grille construite, nous transformons les coordonnées $(\alpha, \delta, z)$ des pixels $\delta_F$ en distances.
 Une fois cette grille construite, la séparation de chaque paires $(\Delta \theta, \Delta z)$ est transformée en distance comobile afin d'obtenir la séparation $(\rpar{}, \rperp{})$ :
 \begin{equation}
@@ -206,7 +207,7 @@ La figure~\ref{prov} (\#prov faire la figure) montre l'effet de la distorsion su
 
 La matrice de distorsion est un objet uniquement géométrique. Son calcul est indépendant du champ $\delta_F$. Elle ne dépend uniquement de la géométrie du relevé et de la distribution des poids.
 La figure~\ref{prov} montre la différence entre ... \#prov montrer la difference du fit d'une réa avec sa DM et avec une autre DM et/ou le stack de 10 avec les 10 DM ou dix fois la meme. Est-ce que les DM eboss-0.0 et eboss-0.2 sont différentes ?\\
-Ainsi, il n'est pas nécessaire de calculer la matrice de distorsion pour les 100 réalisations des mocks.
+Ainsi, il n'est pas nécessaire de calculer la matrice de distorsion pour les \Nmocks réalisations des mocks.
 Dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois (\#prov ou une fois pour chaque run de quickquasars?). L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.
 
 
@@ -291,6 +292,7 @@ La présence des facteurs de Kaiser dans l'équation~\ref{eq:pk_model1} permet d
 \end{align}
 où $F_{\textsc{HCD}}$ est une fonction qui dépend de la distribution en $z$ et en $\log n_{\textsc{HI}}$ des HCD \autocite{Font-Ribera2012a}. Cette fonction est estimée sur des simulations hydrodynamiques \autocite{Rogers2017}. Elle est modélisée comme
 \begin{equation}
+  \label{eq:f_hcd_def}
   F_{\textsc{HCD}}(\kpar{}) = \exp(- L_{\textsc{HCD}} \kpar{}) \; ,
 \end{equation}
 où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLAs dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} au redshift effectif de la mesure. Par ailleurs , $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons donc sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle.
@@ -345,13 +347,12 @@ Comme expliqué dans la section~\ref{subsec:contaminants}, toutes les absorption
 % Pour la corrélation d'un métal $m$ avec le \lya{}, le décalage se fait le long de la ligne de visée : lorsque la séparation physique du métal et du \lya{} est nulle, la séparation reconstruite est $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{\mathrm{Ly}\alpha} ) / \lambda_{\mathrm{Ly}\alpha}$.
 % De manière générale, pour la corrélation d'un absorbeur $m$ avec un autre absorbeur $n$ ($m \neq n$), le décalage se fait le long de la ligne de visée. Lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
 % La fonction de corrélation étant maximale pour $r = 0$, nous attentons donc un excès de corrélation pour ces séparations dans les fonctions de corrélation estimées à partir des données. Les métaux étant beaucoup moins présents que l'hydrogène dans le milieu intergalatique, les corrélations mettant en jeu deux métaux sont beaucoup moins importantes que les corrélations \lya{}$\times m$ ($m \neq$ \lya). L'effet principal vient donc des corrélations \lya{}$\times m$.
-\textbf{
 Considérons deux absorbeurs $m$ et $n$ ($m \neq n$).
 % La fonction de corrélation $\xi_{m \times n}$ de ces deux absorbeurs étant maximale pour les séparations $r = 0$, nous attentons un excès de corrélation pour ces séparations.
 % Cependant, lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
 La fonction de corrélation $\xi_{m \times n}$ de ces deux absorbeurs est maximale pour les séparations $r = 0$.
-Cependant, en supposant que ces deux absorptions sont causées par le \lya{}, cette séparation $r = 0$ est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
-Ainsi, l'excès de corrélation observé n'est pas situé à $r = 0$, mais se trouve décalé le long de la ligne de visée.}
+Cependant, puisque l'analyse suppose que ces deux absorptions sont causées par le \lya{}, cette séparation $r = 0$ est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
+Ainsi, l'excès de corrélation observé n'est pas situé à $r = 0$, mais se trouve décalé le long de la ligne de visée.
 Le tableau~\ref{tab:metals_in_mocks} donne les séparations associées aux corrélations entre le \lya{} et les métaux ajustés sur les données.
 Les métaux étant beaucoup moins présents que l'hydrogène dans le milieu intergalactique, les corrélations mettant en jeu deux métaux sont beaucoup moins importantes que les corrélations mettant en jeu un métal et le \lya{}. % \lya{}$\times m$ ($m \neq$ \lya).
 L'effet principal vient donc des corrélations $\xi_{\mathrm{Ly}\alpha \times m}$. % \lya{}$\times m$.
@@ -379,7 +380,7 @@ Dans le cas de la corrélation croisée, la matrice est calculée pour tous les 
 
 Le modèle utilisé pour construire les fonctions de corrélation $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$ et le même que celui utilisé pour construire les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ (équation~\ref{eq:pk_model1}) mais avec les paramètres $b_i$, $b_j$, $\beta_i$ et $\beta_j$ qui sont ceux des métaux. Du fait que les métaux sont mesurables principalement le long de la ligne de visée, il est difficile d'ajuster à la fois le biais et le paramètre RSD de chaque métal. Nous ajustons donc uniquement le biais de chaque métal, le paramètre RSD étant fixé à $\beta_m = \num{0.5}$.
 % De plus, nous négligeons l'impact des HCD sur les fonctions de corrélations $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
-\textbf{De plus, comme la quantité de métaux dans le milieu intergalactique est bien moins importante que celle de l'hydrogène, il n'existe pas ou peu de structures denses constituées de métaux. Nous n'incluons donc pas la modélisation des HCD dans les fonctions de corrélations $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.}
+De plus, comme la quantité de métaux dans le milieu intergalactique est bien moins importante que celle de l'hydrogène, il n'existe pas ou peu de structures denses constituées de métaux. Nous n'incluons donc pas la modélisation des HCD dans les fonctions de corrélations $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
 
 \begin{table}[]
   \centering
@@ -466,11 +467,10 @@ Dans le cas des mocks, nous incluons un terme supplémentaire, qui prend en comp
   % W(\kpar{}, \kperp{}) = \exp(- \frac{(\kpar{} \sigma^{smooth}_{\parallel})^2 + (\kperp{} \sigma^{smooth}_{\perp})^2}{2}) \; .
   W(\kpar{}, \kperp{}) = \exp(- \frac{k^2 \sigma_{\mathrm{smooth}}^2}{2}) \; .
 \end{equation}
-\textbf{Comme montré sur la figure~\ref{fig:xi_smoothing}, l'effet du lissage gaussien sur la fonction de corrélation est important surtout à petit $r$. Les mocks n'étant pas en très bon accord avec le modèle à petit $r$, % et le paramètre $\sigma_{\mathrm{smooth}}$ étant dégénéré avec d'autres paramètres du modèle, nous fixons $\sigma_{\mathrm{smooth}}$ à la taille des voxels, soit \SI{2.19}{\perh\Mpc}.}
-  la modélisation du lissage gaussien a tendance à corriger ces écarts lorsque le paramètre $\sigma_{\mathrm{smooth}}$ est laissé libre.
+Comme montré sur la figure~\ref{fig:xi_smoothing}, l'effet du lissage gaussien sur la fonction de corrélation est important surtout à petit $r$. Les mocks n'étant pas en très bon accord avec le modèle à petit $r$, % et le paramètre $\sigma_{\mathrm{smooth}}$ étant dégénéré avec d'autres paramètres du modèle, nous fixons $\sigma_{\mathrm{smooth}}$ à la taille des voxels, soit \SI{2.19}{\perh\Mpc}.}
+  la modélisation du lissage gaussien a tendance à corriger ces désaccords lorsque le paramètre $\sigma_{\mathrm{smooth}}$ est laissé libre.
   De plus, $\sigma_{\mathrm{smooth}}$ est dégénéré avec d'autres paramètres du modèle.
   Nous fixons donc $\sigma_{\mathrm{smooth}}$ à la taille des voxels, soit \SI{2.19}{\perh\Mpc} lors des ajustements.
-  }
 Le spectre de puissance modèle $P(\kpar{}, \kperp{})$ est ainsi multiplié par $W^2(\kpar{}, \kperp{})$.
 
 Enfin, similairement à la modélisation des données, le modèle ajusté sur les mocks est multiplié par la matrice de distorsion $D_{AB}$ (équation~\ref{eq:model_dist}). Cependant, dans le cas des raw mocks, les fonctions corrélation ne sont pas affectées par la distorsion due à l'ajustement du continuum puisque nous avons accès directement au champ $\delta_F$. Dans ce cas, la matrice de distorsion $D_{AB}$ vaut la matrice identité.
@@ -639,7 +639,7 @@ Pour chacun des bins, la fonction de corrélation est présentée dans trois bin
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{auto_qso_4bins}
-  \caption{L'auto-corrélation QSO$\times$QSO calculée sur les mocks. Chaque graphique donne la moyenne des dix fonctions de corrélation calculées dans chaque bin en redshift. Les fonctions de corrélation sont présentées dans trois bins en $\mu$. Les lignes continues donnent le meilleur ajustement du modèle.}
+  \caption{L'auto-corrélation QSO$\times$QSO calculée sur 10 réalisations des mocks. Chaque graphique donne la moyenne des dix fonctions de corrélation calculées dans chaque bin en redshift. Les fonctions de corrélation sont présentées dans trois bins en $\mu$. Les lignes continues donnent le meilleur ajustement du modèle.}
   \label{fig:auto_qso_4bins}
 \end{figure}
 
@@ -674,7 +674,7 @@ Nous pouvons voir dans ce tableau que les paramètres $\apar{}$ et $\aperp{}$ so
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{auto_qso}
-  \caption{L'auto-corrélation QSO$\times$QSO calculée sur les mocks. Le graphique de gauche présente la corrélation dans trois bins en $\mu$. Celui de droite présente la corrélation moyennée sur toute la gamme en $\mu$. Les lignes continues donnent le meilleur ajustement du modèle. Les lignes en pointillés donnent la prédiction.}
+  \caption{L'auto-corrélation QSO$\times$QSO calculée sur 10 réalisations des mocks et moyennée sur les quatres bins en redshift. Le graphique de gauche présente la corrélation dans trois bins en $\mu$. Celui de droite présente la corrélation moyennée sur toute la gamme en $\mu$. Les lignes continues donnent le meilleur ajustement du modèle. Les lignes en pointillés donnent la prédiction.}
   \label{fig:auto_qso}
 \end{figure}
 
