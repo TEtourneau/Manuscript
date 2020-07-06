@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 JUL 2020 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 JUL 2020 23:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2774,16 +2774,11 @@ Package minitoc Info: I0006
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package mathptmx Warning: There are no bold math fonts on input line 23.
-
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 23.
+
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 23.
-
 
 LaTeX Warning: Reference `eq:def_cf' on page 2 undefined on input line 35.
 
@@ -3026,6 +3021,9 @@ LaTeX Warning: Reference `fig:xi_smoothing' on page 12 undefined on input line
 470.
 
 
+Package mathptmx Warning: There are no bold math fonts on input line 492.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -3037,7 +3035,7 @@ File: ../figures/mocks_ana/chi2_vs_rmin.png Graphic file (type png)
 
 <use ../figures/mocks_ana/chi2_vs_rmin.png>
 Package pdftex.def Info: ../figures/mocks_ana/chi2_vs_rmin.png used on input li
-ne 501.
+ne 506.
 (pdftex.def)             Requested size: 463.13382pt x 476.38342pt.
 
 
@@ -3056,40 +3054,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [14 <../figures/mocks_ana/chi2_vs_rmin.png>]
 
 LaTeX Warning: Reference `sec:quickquasars' on page 15 undefined on input line 
-508.
+513.
 
 
-LaTeX Warning: Reference `prov' on page 15 undefined on input line 518.
+LaTeX Warning: Reference `prov' on page 15 undefined on input line 523.
 
 
-LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 527.
+LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 532.
 
 
-LaTeX Warning: Reference `eq:xig2xif' on page 15 undefined on input line 527.
+LaTeX Warning: Reference `eq:xig2xif' on page 15 undefined on input line 532.
 
 
-<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=247, 1076.02pt x 760.8425p
+<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=251, 1076.02pt x 760.8425p
 t>
 File: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png Graphic file (type png)
  <use ../figures/mocks_ana/cf_ebossraw_4bins_pred.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png used o
-n input line 536.
+n input line 541.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 541.
-
-<../figures/mocks_ana/bias_pred.png, id=248, 1147.28625pt x 425.59pt>
+<../figures/mocks_ana/bias_pred.png, id=252, 1147.28625pt x 425.59pt>
 File: ../figures/mocks_ana/bias_pred.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_pred.png>
 Package pdftex.def Info: ../figures/mocks_ana/bias_pred.png used on input line 
-565.
+585.
 (pdftex.def)             Requested size: 458.90637pt x 170.23297pt.
 
 
-LaTeX Warning: Reference `prov' on page 15 undefined on input line 578.
+LaTeX Warning: Reference `prov' on page 15 undefined on input line 598.
+
+
+LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 608.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3104,25 +3101,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16 <../figures/mocks_ana/cf_ebossraw_4bins_pred.png>]
+[16 <../figures/mocks_ana/cf_ebossraw_4bins_pred.png> <../figures/mocks_ana/bia
+s_pred.png>]
 
-LaTeX Warning: Reference `prov' on page 17 undefined on input line 615.
+LaTeX Warning: Reference `prov' on page 17 undefined on input line 638.
 
-<../figures/mocks_ana/cf1d_ebossraw.png, id=266, 840.13875pt x 307.1475pt>
+<../figures/mocks_ana/cf1d_ebossraw.png, id=275, 840.13875pt x 307.1475pt>
 File: ../figures/mocks_ana/cf1d_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf1d_ebossraw.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf1d_ebossraw.png used on input l
-ine 623.
+ine 646.
 (pdftex.def)             Requested size: 420.06834pt x 153.57336pt.
-
-<../figures/mocks_ana/auto_qso_4bins.png, id=269, 1076.02pt x 760.8425pt>
-File: ../figures/mocks_ana/auto_qso_4bins.png Graphic file (type png)
-
-<use ../figures/mocks_ana/auto_qso_4bins.png>
-Package pdftex.def Info: ../figures/mocks_ana/auto_qso_4bins.png used on input 
-line 641.
-(pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3130,24 +3120,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17 <../figures/mocks_ana/bias_pred.png>]
+[17 <../figures/mocks_ana/cf1d_ebossraw.png>]
+<../figures/mocks_ana/auto_qso_4bins.png, id=287, 1076.02pt x 760.8425pt>
+File: ../figures/mocks_ana/auto_qso_4bins.png Graphic file (type png)
 
-LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 652.
+<use ../figures/mocks_ana/auto_qso_4bins.png>
+Package pdftex.def Info: ../figures/mocks_ana/auto_qso_4bins.png used on input 
+line 664.
+(pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
-LaTeX Warning: Reference `eq:def_bias' on page 18 undefined on input line 652.
+LaTeX Warning: Reference `eq:def_bias' on page 18 undefined on input line 673.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 654.
+               Default added (so using `tbp') on input line 678.
 
-<../figures/mocks_ana/auto_qso.png, id=282, 1147.28625pt x 444.66125pt>
+<../figures/mocks_ana/auto_qso.png, id=289, 1147.28625pt x 444.66125pt>
 File: ../figures/mocks_ana/auto_qso.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_qso.png>
-Package pdftex.def Info: ../figures/mocks_ana/auto_qso.png used on input line 6
-76.
+Package pdftex.def Info: ../figures/mocks_ana/auto_qso.png used on input line 7
+13.
 (pdftex.def)             Requested size: 458.90637pt x 177.86134pt.
 
 
@@ -3156,40 +3150,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18 <../figures/mocks_ana/cf1d_ebossraw.png>]
+[18 <../figures/mocks_ana/auto_qso_4bins.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <../figures/mocks_ana/auto_qso_4bins.png> <../figures/mocks_ana/auto_qso.pn
-g>]
+[19 <../figures/mocks_ana/auto_qso.png>]
 
-LaTeX Warning: Reference `eq:b_qso' on page 20 undefined on input line 685.
+LaTeX Warning: Reference `eq:b_qso' on page 20 undefined on input line 722.
 
-<../figures/mocks_ana/bias_auto_qso.png, id=302, 1126.2075pt x 417.56pt>
+<../figures/mocks_ana/bias_auto_qso.png, id=309, 1126.2075pt x 417.56pt>
 File: ../figures/mocks_ana/bias_auto_qso.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_auto_qso.png>
 Package pdftex.def Info: ../figures/mocks_ana/bias_auto_qso.png used on input l
-ine 694.
+ine 731.
 (pdftex.def)             Requested size: 473.00394pt x 175.374pt.
 
 
-LaTeX Warning: Reference `subsec:hcd' on page 20 undefined on input line 715.
+LaTeX Warning: Reference `subsec:hcd' on page 20 undefined on input line 752.
 
-<../figures/mocks_ana/auto_hcd.png, id=305, 1090.0725pt x 415.5525pt>
+<../figures/mocks_ana/auto_hcd.png, id=312, 1090.0725pt x 415.5525pt>
 File: ../figures/mocks_ana/auto_hcd.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_hcd.png>
 Package pdftex.def Info: ../figures/mocks_ana/auto_hcd.png used on input line 7
-19.
+56.
 (pdftex.def)             Requested size: 457.82733pt x 174.53085pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 725.
+               Default added (so using `tbp') on input line 762.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3205,17 +3198,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21 <../figures/mocks_ana/auto_hcd.png>]
-<../figures/mocks_ana/cf_eboss00_4bins.png, id=324, 1076.02pt x 759.83875pt>
+<../figures/mocks_ana/cf_eboss00_4bins.png, id=331, 1076.02pt x 759.83875pt>
 File: ../figures/mocks_ana/cf_eboss00_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf_eboss00_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_eboss00_4bins.png used on inpu
-t line 768.
+t line 818.
 (pdftex.def)             Requested size: 430.40038pt x 303.93011pt.
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 773.
+LaTeX Warning: Reference `eq:b_qso' on page 22 undefined on input line 869.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3231,20 +3223,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23 <../figures/mocks_ana/cf_eboss00_4bins.png>]
-
-LaTeX Warning: Reference `eq:b_qso' on page 24 undefined on input line 805.
-
-<../figures/mocks_ana/xcf_eboss00_4bins.png, id=345, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/xcf_eboss00_4bins.png, id=352, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_eboss00_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_eboss00_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_eboss00_4bins.png used on inp
-ut line 817.
+ut line 884.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 822.
+               Default added (so using `tbp') on input line 889.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3252,35 +3241,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
+[24 <../figures/mocks_ana/xcf_eboss00_4bins.png>]
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[25 <../figures/mocks_ana/xcf_eboss00_4bins.png>]
-
-LaTeX Warning: Reference `prov' on page 26 undefined on input line 868.
+LaTeX Warning: Reference `prov' on page 25 undefined on input line 952.
 
 
-<../figures/mocks_ana/cf_eboss02_4bins.png, id=361, 1077.02374pt x 761.84625pt>
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 963.
+
+
+<../figures/mocks_ana/cf_eboss02_4bins.png, id=364, 1077.02374pt x 761.84625pt>
 File: ../figures/mocks_ana/cf_eboss02_4bins.png Graphic file (type png)
 <use ../figures/mocks_ana/cf_eboss02_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_eboss02_4bins.png used on inpu
-t line 889.
+t line 973.
 (pdftex.def)             Requested size: 430.80186pt x 304.7331pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 894.
+               Default added (so using `tbp') on input line 978.
 
-<../figures/mocks_ana/bias_cf.png, id=362, 1111.15125pt x 412.54124pt>
+<../figures/mocks_ana/bias_cf.png, id=365, 1111.15125pt x 412.54124pt>
 File: ../figures/mocks_ana/bias_cf.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_cf.png>
-Package pdftex.def Info: ../figures/mocks_ana/bias_cf.png used on input line 92
-0.
+Package pdftex.def Info: ../figures/mocks_ana/bias_cf.png used on input line 10
+21.
 (pdftex.def)             Requested size: 477.78572pt x 177.38927pt.
 
 
@@ -3289,35 +3275,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[25]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27 <../figures/mocks_ana/cf_eboss02_4bins.png> <../figures/mocks_ana/bias_cf.p
-ng>]
-<../figures/mocks_ana/xcf_eboss02_4bins.png, id=380, 1076.02pt x 760.8425pt>
+[26 <../figures/mocks_ana/cf_eboss02_4bins.png>]
+<../figures/mocks_ana/xcf_eboss02_4bins.png, id=386, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_eboss02_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_eboss02_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_eboss02_4bins.png used on inp
-ut line 941.
+ut line 1042.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 946.
+               Default added (so using `tbp') on input line 1047.
 
-<../figures/mocks_ana/sum_bias.png, id=381, 1140.26pt x 426.59375pt>
+<../figures/mocks_ana/sum_bias.png, id=387, 1140.26pt x 426.59375pt>
 File: ../figures/mocks_ana/sum_bias.png Graphic file (type png)
 
 <use ../figures/mocks_ana/sum_bias.png>
-Package pdftex.def Info: ../figures/mocks_ana/sum_bias.png used on input line 9
-92.
+Package pdftex.def Info: ../figures/mocks_ana/sum_bias.png used on input line 1
+112.
 (pdftex.def)             Requested size: 456.09592pt x 170.63446pt.
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27 <../figures/mocks_ana/bias_cf.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3331,15 +3323,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <../figures/mocks_ana/sum_bias.png>]
+[29 <../figures/mocks_ana/sum_bias.png>] [30
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[30]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 1024--1024
+]
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 1144--1144
 | []| 
  []
 
@@ -3348,14 +3335,12 @@ Package minitoc Info: I0009
 (minitoc)             Creating the 5.maf file.
 \openout5 = `5.maf'.
 
-[31
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1024.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1024.
+[31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1144.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1144.
  (./5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1024.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1024.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1144.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1144.
 
 Package rerunfilecheck Info: File `5.out' has not changed.
 (rerunfilecheck)             Checksum: F297A88D5C63C79534A3A1A8F2D43CA7;1342.
@@ -3371,21 +3356,24 @@ Package logreq Info: Writing requests to '5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35686 strings out of 492995
- 650750 string characters out of 6132704
- 1178404 words of memory out of 5000000
- 38398 multiletter control sequences out of 15000+600000
- 155642 words of font info for 117 fonts, out of 8000000 for 9000
+ 35691 strings out of 492995
+ 650801 string characters out of 6132704
+ 1184629 words of memory out of 5000000
+ 38402 multiletter control sequences out of 15000+600000
+ 167020 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,17n,56p,10403b,1973s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/t
-exlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/te
-xmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/f
-onts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips
-/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mat
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/loca
+l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017
+/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2017/texmf-dist/f
+onts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/d
+vips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mat
 hex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/201
@@ -3394,22 +3382,26 @@ ist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
 lic/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmm
 i12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/lm/lmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-r8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
-/lmtt10.pfb>
-Output written on 5.pdf (31 pages, 2230419 bytes).
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
+lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr7.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/lm/lmsy5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
+lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/lm/lmtt9.pfb>
+Output written on 5.pdf (31 pages, 2255824 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 453 compressed objects within 5 object streams
- 144 named destinations out of 1000 (max. 500000)
+ 569 PDF objects out of 1000 (max. 8388607)
+ 476 compressed objects within 5 object streams
+ 145 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
