@@ -1124,17 +1124,28 @@ La figure~\ref{fig:params} présente les interpolations ainsi obtenues.
   \label{fig:params}
 \end{figure}
 % Concernant les cinqs spectres de puissance $P_{s}(k)$ construits précédemment dans chaque bin en redshift, nous créons une grille $(k, z)$ sur laquelle nous interpolons cubiquement de ces spectres de puissance
-En ce qui concerne les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$. Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
+% Les cinq spectres de puissance $P_{s}(k)$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{prov}. Ces spectres sont en très bon accord avec le modèle. Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.
+% En ce qui concerne les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.
+\textbf{Les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift produisent des spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ en très bon accord avec le modèle. Les cinq $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{fig:p1d_tuning}. Les lignes continues donnent le modèle pour chaque valeur du redshift.
+Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.}
+Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{p1dmiss}
   \caption{Gauche : les cinqs spectres de puissance $P_{s}(k)$ ajustés pour chaque valeur du redshift. Droite : interpolation cubique de ces cinqs spectres de puissance sur une grille $(k, z)$.}
   \label{fig:p1dmiss}
 \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{p1d_tuning}
+  \caption{Les spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift à la fin de la procédure d'ajustement. Les lignes continues donnent le modèle pour chaque valeur du redshift. Les mocks sont en train bon accord avec le modèle.}
+  \label{fig:p1d_tuning}
+\end{figure}
 
 \paragraph{}
-Le résultat de la procédure d'ajustement décrite précédemment a été utilisé pour produire \num{100} réalisations indépendantes des mocks. Les figures~\ref{prov} présentent les paramètres \lya{} obtenus avec la prédiction (couleur), sur le stack des 100 rea (couleur) et mesuré dans les données (couleur). \#prov montrer biais(z), beta(z), <F>(z) et P1D(z).
-
+\textbf{Le résultat de la procédure d'ajustement décrite précédemment a été utilisé pour produire \num{50} réalisations indépendantes des mocks. Nous prévoyons de terminer la post-production des \num{50} autres réalisations pré-produites dans les prochains moins.
+  Parmis les \num{50} réalisations produites, \num{30} sont analysées. Le chapitre~\ref{prov} présente cette analyse.}
+% Les figures~\ref{prov} présentent les paramètres \lya{} obtenus avec la prédiction (couleur), sur le stack des 100 rea (couleur) et mesuré dans les données (couleur). \#prov montrer biais(z), beta(z), <F>(z) et P1D(z).
 
 
 \section{Expansion des mocks}
