@@ -1,8 +1,8 @@
 %% Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \begin{document}
 %%
 
 \graphicspath{ {../figures/intro/} }
@@ -269,7 +269,7 @@ En intégrant cette équation et en utilisant l'équation d'état~\ref{eq:etat},
 \end{equation}
 où $\rho_{i,0}$ est la densité du fluide $i$ aujourd'hui.
 
-Selon le fluide, la valeur de $w$ est différente. Nous pouvons déjà distinguer les particules relativistes\footnote{Une particule est dite relativiste lorsque sa vitesse est proche de celle de la lumière dans le vide. \#prov ca reste la ?} des particules non relativistes. La matière non relativiste $(m)$ ou simplement matière, se compose de la matière baryonique $(b)$ et de la matière noire froide $(c)$.
+Selon le fluide, la valeur de $w$ est différente. Nous pouvons déjà distinguer les particules relativistes\footnote{Une particule est dite relativiste lorsque sa vitesse est proche de celle de la lumière dans le vide.} des particules non relativistes. La matière non relativiste $(m)$ ou simplement matière, se compose de la matière baryonique $(b)$ et de la matière noire froide $(c)$.
 La matière baryonique peut être vue comme un gaz de galaxies n'interagissant entre elles  que via la gravitation.
 De la même manière, les constituants de la matière noire froide n'interagissent les uns avec les autres que via la gravitation.
 Ainsi, le fluide décrivant la matière possède une pression nulle, son paramètre d'état est donc $w_m = 0$. Nous avons alors : $\rho_m \propto a^{-3}$. \\
@@ -317,7 +317,7 @@ Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvon
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{evol_omega}
-  \caption{Evolution en fonction du redshift des densités relatives d'énergie pour un univers plat. Sont indiqués en pointillés le redshift d'égalité radiation-matière $z_{eq} = 3387 \pm 21$, le redshift d'émission du CMB $z_{\ast} = \num{1089.80} \pm \num{0.21}$, et le redshift aujourd'hui $z = 0$ \autocite{Collaboration2018}. Crédits : Thèse de Pauline Zarrouk \#prov.}
+  \caption{Evolution en fonction du redshift des densités relatives d'énergie pour un univers plat. Sont indiqués en pointillés le redshift d'égalité radiation-matière $z_{eq} = 3387 \pm 21$, le redshift d'émission du CMB $z_{\ast} = \num{1089.80} \pm \num{0.21}$, et le redshift aujourd'hui $z = 0$ \autocite{Collaboration2018}. Crédits : \textcite{Zarrouk2018a}.}
 \label{fig:evol_omega}
 \end{figure}
 
@@ -612,7 +612,7 @@ et sa valeur mesurée par \textcite{Collaboration2018} est $r_{d} = \SI{99.16(20
 
 Ce processus a laissé des traces dans la distribution de matière à grande échelle : à chaque surdensité primordiale est associée une sphère de surdensité de rayon comobile $\SI{150}{\Mpc}$.
 Il y a donc un excès de probabilité de trouver deux traceurs de densité de matière, comme par exemple des galaxies, séparés par une distance  comobile d'environ $\SI{150}{\Mpc}$.
-Cet excès est traduit par le pic BAO présent dans la fonction de corrélation de la matière, montrée sur la figure~\ref{fig:prov figure CF}
+Cet excès est traduit par le pic BAO présent dans la fonction de corrélation de la matière, montrée sur la figure~\ref{fig:xi_camb}
 
 
 \subsection{Mesurer l'échelle BAO}
@@ -755,7 +755,7 @@ De cette équation, nous déduisons la relation entre le spectre de puissance $P
 où $\beta_i = f / b_i$ est le paramètre RSD du traceur $i$.
 Du fait de l'isotropie dans la direction transverse à la ligne de visée, $P_i^s$ ne dépend que de la norme de $\vec \kperp{}$. Il en va de même pour le vecteur $\vec r$, qui est décomposé en $\vec r =  \rpar{} \vec u + \vec \rperp{}$. Nous avons alors $\mu = \rpar{} / r$, et la fonction de corrélation $\xi_i^s$ ne dépend que de $\rpar{}$ et de la norme de $\vec \rperp{}$. Son expression, que nous ne donnons pas ici, est calculée dans \textcite{Hamilton1992}.
 
-L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f \sim \Omega_{m}^{\num{0.55}}$ \autocite{Linder2007}. La mesure de $f$ est donc un test direct de la relativité générale. (\#prov nécessite une source ? Besoin de détailler plus les analyses RSD ? Parler de sigma8 ?)
+L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f \sim \Omega_{m}^{\num{0.55}}$ \autocite{Linder2007}. La mesure de $f$ est donc un test direct de la relativité générale.
 
 \subsection{Les quasars}
 Les quasars, pour \emph{quasi - star}, sont parmi les objets les plus lumineux de l'univers. Ils font partie des noyaux actifs de galaxie, abrégées AGN (\emph{Active galatic nuclei}). Ces galaxies hébergent en leur centre un trou noir supermassif, de quelques millions à plusieurs milliards de masses solaires. La figure~\ref{fig:schema_qso} schématise le noyau actif. 
@@ -851,7 +851,7 @@ Cependant, il est beaucoup plus marqué pour la forêt \lya{}. Ceci vient de l'a
     Les pointillés gris à droite indique la raie \lya{}, et celle de gauche la raie \lyb{}.
     Les lignes continues donnent les deux meilleurs ajustements indépendants de $C_{q}(\lambda_{\mathrm{RF}})\overline F(z)$ (le continu du spectre sans absorption multiplié par l'absorption moyenne à ce redshift) pour la forêt \lya (bleu) et \lyb{} (orange).
     Les lignes continues donnent le continu $C_{q}(\lambda_{\mathrm{RF}})$ en supposant $\overline F(z)$ mesuré par \textcite{Calura2012}, pour la forêt \lya{} et \lyb{}. L'identifiant du quasar est $\mathrm{Thing\_id} = 498518806$.
-  Crédits : \textcite{prov:LyaDR16}}
+  Crédits : \textcite{DuMasdesBourboux2020}}
   \label{fig:foret_lya}
 \end{figure}
 \paragraph{}
@@ -903,7 +903,7 @@ Nous pouvons tout de même définir le paramètre RSD du \lya{} comme
   \delta_{\mathrm{Ly}\alpha}^{s}(\vec k, z) = b_{\mathrm{Ly}\alpha}(z) (1+ \beta_{\mathrm{Ly}\alpha}(z) \mu^2) \delta_{matière}(\vec k, z)   \; .
 \end{equation}
 Mais, dans ce cas, $ \beta_{\mathrm{Ly}\alpha} \neq f / b_{\mathrm{Ly}\alpha}$.
-Nous présentons les mesures du biais et du paramètre RSD du \lya{} dans la section \#prov.
+Nous présentons les mesures du biais et du paramètre RSD du \lya{} dans la section~\ref{subsec:data_ana}.
 
 \paragraph{}
 La forêt \lya{} est donc une observable très avantageuse.
@@ -924,27 +924,27 @@ Le \lya{} n'est pas le seul absorbeur présent dans le spectre des quasars. D'au
 
 % Comme expliqué dans la section précédente, chaque absorption observée dans la forêt \lya{} est supposée être causée par un absorbeur \lya{}. Cependant, rien ne nous garanti que l'absorption observée n'est pas causée par un autre absorbeur, à un autre redshift.
 Comme expliqué dans la section précédente, en première approximation, chaque absorption observée dans la forêt \lya{} est causée par un absorbeur \lya{}. Cependant, certaines absorptions sont causées par des métaux.
-Etant donné que le champ des métaux est corrélé avec le champ d'hydrogène neutre, les raies d'absorptions des métaux sont corrélés avec celles du \lya. Supposons la présence d'un métal à un redshift $z_{met}$, absorbant dans son référentiel à une longueur d'onde $\lambda_{met}$. L'absorption produite est observée à $\lambda_{obs1} = \lambda_{met} ( 1 + z_{met})$, mais sera reconstruite à un redshift $z_{abs} = \lambda_{obs1} / \lambda_{\mathrm{Ly}\alpha} - 1 \neq z_{met}$. De plus, la présence d'hydrogène neutre au redshift du métal $z_{met}$ produit aussi une absorption, à une longueur d'onde $\lambda_{obs2} = \lambda_{\mathrm{Ly}\alpha}(1+z_{met})$. Ainsi, à chaque raie d'absorption de métal, interprétée comme de l'absorption \lya{}, est associée une autre raie d'absorption \lya{}. Ceci produit une fausse corrélation le long de la ligne de visée, à une séparation caractérisée par le rapport $\lambda_{met} / \lambda_{\mathrm{Ly}\alpha}$. Cette effet est très présent dans la fonction de corrélation à une dimension : lorsque l'on corrèle des pixels d'une même forêt, mais aussi dans la fonction de corrélation à trois dimensions le long de la ligne de visée ($\rperp{} < \SI{4}{\perh\Mpc}$). (\#prov faire référence à une figure qui montre la fonction de corrélation de DR16)
+Etant donné que le champ des métaux est corrélé avec le champ d'hydrogène neutre, les raies d'absorptions des métaux sont corrélés avec celles du \lya. Supposons la présence d'un métal à un redshift $z_{met}$, absorbant dans son référentiel à une longueur d'onde $\lambda_{met}$. L'absorption produite est observée à $\lambda_{obs1} = \lambda_{met} ( 1 + z_{met})$, mais sera reconstruite à un redshift $z_{abs} = \lambda_{obs1} / \lambda_{\mathrm{Ly}\alpha} - 1 \neq z_{met}$. De plus, la présence d'hydrogène neutre au redshift du métal $z_{met}$ produit aussi une absorption, à une longueur d'onde $\lambda_{obs2} = \lambda_{\mathrm{Ly}\alpha}(1+z_{met})$. Ainsi, à chaque raie d'absorption de métal, interprétée comme de l'absorption \lya{}, est associée une autre raie d'absorption \lya{}. Ceci produit une fausse corrélation le long de la ligne de visée, à une séparation caractérisée par le rapport $\lambda_{met} / \lambda_{\mathrm{Ly}\alpha}$. Cette effet est très présent dans la fonction de corrélation à une dimension : lorsque l'on corrèle des pixels d'une même forêt, mais aussi dans la fonction de corrélation à trois dimensions le long de la ligne de visée ($\rperp{} < \SI{4}{\perh\Mpc}$) (voir figure~\ref{fig:dr16_4bins}).
 
 
 \paragraph{}
 Un autre contaminant présent dans la forêt \lya{} sont les HCD (High Column Density). Les HCD sont des absorbeurs possédant une densité de colonne\footnote{La densité de colonne mesure la quantité de matière intégrée le long de la ligne de visée. Elle est mesurée en \si{atome\per\centi\meter\squared}.} supérieure à $\SI{1.6e17}{atome\per\centi\meter\squared}$ \autocite{Rogers2017}. Ces absorbeurs très denses produisent de très fortes absorptions. Ils correspondent à des sytèmes effondrés, comme le gaz présent dans ou autour des galaxies. Leur fonction de corrélation est donc beaucoup plus grande que celle du \lya{}. De plus, du fait des vitesses importantes du gaz présent dans ces objets effondrés, le profile d'absorption des HCD est élargi, produisant une absorption au delà de la position physique de l'absorbeur. Ce profile d'absorption peut être modélisé par un profile de Voigt.
-Les DLA (\#prov) sont les HCD pour lesquels la densité de colonne est supérieure à \SI{2e20}{atome\per\centi\meter\squared}.
+Les DLA (pour \emph{Damped \lya{} Absorbeur}) sont les HCD pour lesquels la densité de colonne est supérieure à \SI{2e20}{atome\per\centi\meter\squared}.
 La figure~\ref{fig:exemple_dla} montre le spectre d'un quasar possédant un DLA, ainsi que le profile de voigt ajusté.
-Ces HCD sont tellement denses qu'ils peuvent être identifiés dans les spectres. Dans l'analyse~\cite{CITE DR16}, les DLA identifiés sont modélisés par un profile de Voigt, puis, tous les pixels pour lequels la fraction de flux transmis est inférieure à \num{0.80} sont masqués, les autres sont corrigés grâce au profile de Voigt.
+Ces HCD sont tellement denses qu'ils peuvent être identifiés dans les spectres. Dans l'analyse~\cite{DuMasdesBourboux2020}, les DLA identifiés sont modélisés par un profile de Voigt, puis, tous les pixels pour lequels la fraction de flux transmis est inférieure à \num{0.80} sont masqués, les autres sont corrigés grâce au profile de Voigt.
 Les HCD pour lesquels la densité de colonne est inférieure à \SI{2e20}{atome\per\centi\meter\squared} ne sont pas identifiables. Ils ne peuvent donc pas être masqués.
 % Cependant, ils doivent être traités différemment des absorptions moyennes du \lya{}.
 Cependant, leur présence doit être modélisée dans le modèle de la fonction de corrélation.
-Le traitement des HCD est détaillé dans la section~\ref{prov}.
+Le traitement des HCD est détaillé dans la section~\ref{subsec:model_donnees}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{exemple_dla}
-  \caption{La figure présente deux spectres de quasar, en noir, en fonction de la longueur d'onde observée. Chaque quasar possède un DLA. Pour chaque DLA, un profile de Voigt est ajusté. Il est montré en rouge. Les pixels pour lesquels la fraction de flux transmis est inférieure à \num{0.8} sont masqués. Ces pixels sont contenus dans les bandes rouges. Crédits : thèse de Victoria de Sainte Agathe \#prov.}
+  \caption{La figure présente deux spectres de quasar, en noir, en fonction de la longueur d'onde observée. Chaque quasar possède un DLA. Pour chaque DLA, un profile de Voigt est ajusté. Il est montré en rouge. Les pixels pour lesquels la fraction de flux transmis est inférieure à \num{0.8} sont masqués. Ces pixels sont contenus dans les bandes rouges. Crédits : \textcite{DeSainteAgathe}.}
   \label{fig:exemple_dla}
 \end{figure}
 
 
 
 % \bibliography{../source/library}
-\printbibliography
-\end{document}
+% \printbibliography
+% \end{document}

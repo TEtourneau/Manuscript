@@ -11,6 +11,7 @@
 \graphicspath{ {../figures/data_ana/} }
 
 \chapter{Analyse des données et résultats}
+\label{chap:data_ana}
 \minitoc
 \newpage
 \thispagestyle{fancy}
@@ -27,6 +28,7 @@ Nous présentons donc d'abord l'analyse des données qui a servi de référence 
 
 \section{L'analyse des données DR16}
 \subsection{Résultats}
+\label{subsec:data_ana}
 L'analyse des données finale d'eBOSS (DR16), dont nous avons déjà parlé et qui est présentée dans \textcite{prov}, analyse les fonctions de corrélation \lya(\lya{})$\times$\lya{}(\lya{}), \lya{}(\lya{})$\times$\lya{}(\lyb{}), \lya{}(\lya{})$\times$QSO et \lya{}(\lyb{})$\times$QSO. Ces fonctions de corrélation sont construites sur l'ensemble des données, les paramètres ajustés sont donc donnés uniquement pour le redshift effectif $z_{\mathrm{eff}} = \num{2.334}$ de la mesure. L'appendice F de \textcite{prov} présente cependant l'analyse des données DR16 dans deux bins en redshift. Mais ces deux bins ne sont pas suffisant pour estimer l'évolution des paramètres \lya{} dans la gamme en redshift $\num{1.9} < z  < \num{3.6}$.
 % Afin d'estimer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons calculé la fonction de corrélation \lya{}$\times$\lya{} dans quatres bins en redshift.
 Afin d'estimer $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ dans cette gamme, nous avons produit l'analyse des données DR16 dans quatres bins en redshift. De manière à limiter les potentielles systématiques, nous nous limitons à l'analyse de la fonction de corrélation \lya{}(\lya{})$\times$\lya{}(\lya{}) (abrégée en \lya{}$\times$\lya{} dans la suite de ce chapitre).
@@ -286,7 +288,7 @@ Enfin, le modèle des HCD choisi influence la mesure des paramètres \lya{}. Tou
 
 
 \section{Etude de la modélisation des HCD}
-
+\label{sec:etude_model_hcd}
 % Suite aux différents points énoncés dans la section précédente, nous avons mené une analyse sur les mocks, afin de mieux comprendre la modélisation des HCD, et d'essayer d'identifier les potentielles systématiques qui affectent la mesure des paramètres \lya{}.
 Suite aux différents points énoncés dans la section précédente, nous avons étudié l'effet qu'ont les HCD sur le \lya{} dans les mocks.
 En effet, les mocks sont l'outil parfait pour ce genre d'analyse : ils permettent, contrairement aux données, de connaître la quantité de \lya{} et de HCD présents, et de comparer cette quantité à ce qui est mesuré par l'ajustement.
@@ -308,7 +310,7 @@ L'écart mesuré sur $\beta_{\mathrm{Ly}\alpha}$ est plus important. Les valeurs
 
 
 \subsection{Effet du masquage des HCD}
-
+\label{subsec:effet_masquage_hcd}
 Dans l'analyse des mocks eboss-0.2, comme pour les données, les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués lors du calcul des $\delta_F$. Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, le masquage des HCD dans les données s'effectue selon le résultat de l'agorithme d'identification, alors que dans les mocks, les HCD sont masqués à partir du ``vrai'' catalogue. Nous étudions ici l'effet du masquage à partir du catalogue produit par l'algorithme d'identification.
 Pour ce faire, nous produisons l'analyse d'une réalisation de mock eboss-0.2, pour laquelle nous utilisons l'algorithme d'identification pour créer un catalogue de HCD. Le champ $\delta_F$ est calculé en masquant les HCD identifiés par l'algorithme, puis la fonction de corrélation \lya{}$\times$\lya{} est estimée dans les quatre bins en redshift utilisés jusqu'ici. Nous nommons cette analyse \emph{eboss-0.2\_finder}.
 La figure~\ref{fig:cf_finder_vs_true} présente la fonction de corrélation \lya{}$\times$\lya{} estimée à partir de la même réalisation des mocks, en version eboss-0.0, eboss-0.2 et eboss-0.2\_finder.

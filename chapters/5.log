@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 JUL 2020 19:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 JUL 2020 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2769,72 +2769,75 @@ Overfull \hbox (4.86667pt too wide) in paragraph at lines 13--13
  []
 
 Package minitoc Info: I0006
-(minitoc)             5.mtc1 is empty on input line 15.
+(minitoc)             5.mtc1 is empty on input line 16.
 [1
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 23.
 
+LaTeX Warning: Citation 'DuMasdesBourboux2020' on page 2 undefined on input lin
+e 22.
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 24.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-LaTeX Warning: Reference `eq:def_cf' on page 2 undefined on input line 31.
+LaTeX Warning: Reference `eq:def_cf' on page 2 undefined on input line 33.
 
 
 LaTeX Warning: Reference `subsec:calcul_delta' on page 2 undefined on input lin
-e 40.
+e 42.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 43.
+(Font)              <12> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 43.
+(Font)              <9> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 43.
+(Font)              <7> on input line 45.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 43.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 43.
+(hyperref)                removing `math shift' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 43.
+(hyperref)                removing `\alpha' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 43.
+(hyperref)                removing `math shift' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 43.
+(hyperref)                removing `math shift' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 43.
+(hyperref)                removing `\times' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 43.
+(hyperref)                removing `math shift' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 43.
+(hyperref)                removing `math shift' on input line 45.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 43.
+(hyperref)                removing `\alpha' on input line 45.
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 56.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 45.
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 59.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -2847,47 +2850,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2]
 
 LaTeX Warning: Reference `subsec:descri_mod' on page 3 undefined on input line 
-69.
+72.
 
 
-LaTeX Warning: Reference `eq:weights2' on page 3 undefined on input line 93.
+LaTeX Warning: Reference `eq:weights2' on page 3 undefined on input line 96.
+
+
+LaTeX Warning: Citation 'DuMasdesBourboux2020' on page 3 undefined on input lin
+e 101.
 
 
 LaTeX Warning: Reference `fig:pixel_number' on page 3 undefined on input line 1
-01.
-
-
-Overfull \hbox (2.43765pt too wide) in paragraph at lines 98--102
-\T1/lmr/m/n/10.95 four-nit pas suf-fi-sam-ment de pixels pour pou-voir cal-cu-l
-er la fonc-tion de cor-ré-la-tion Ly$\OML/lmm/m/it/10.95 $\T1/lmr/m/n/10.95 (L
-y$\OML/lmm/m/it/10.95 ^^L$\T1/lmr/m/n/10.95 )$\OMS/lmsy/m/n/10.95 ^^B$\T1/lmr/m
-/n/10.95 Ly$\OML/lmm/m/it/10.95 $\T1/lmr/m/n/10.95 (Ly$\OML/lmm/m/it/10.95 ^^L
-$\T1/lmr/m/n/10.95 )
- []
+04.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 104.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 104.
+(hyperref)                removing `\alpha' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 104.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 104.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 104.
+(hyperref)                removing `\times' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 104.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2897,19 +2895,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
-LaTeX Warning: Reference `eq:weights2' on page 4 undefined on input line 150.
+LaTeX Warning: Reference `eq:weights2' on page 4 undefined on input line 156.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 161.
+(hyperref)                removing `math shift' on input line 167.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 161.
+(hyperref)                removing `\times' on input line 167.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 161.
+(hyperref)                removing `math shift' on input line 167.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2919,20 +2917,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 
-LaTeX Warning: Reference `eq:deltaF3' on page 5 undefined on input line 179.
+LaTeX Warning: Reference `eq:deltaF3' on page 5 undefined on input line 186.
 
 
 LaTeX Warning: Reference `subsec:projdelta' on page 5 undefined on input line 1
-79.
+86.
 
 
-LaTeX Warning: Reference `eq:deltaF3' on page 5 undefined on input line 181.
+LaTeX Warning: Reference `eq:deltaF3' on page 5 undefined on input line 188.
 
 
-LaTeX Warning: Reference `eq:deltaF3' on page 5 undefined on input line 183.
+LaTeX Warning: Reference `eq:deltaF3' on page 5 undefined on input line 190.
 
 
-LaTeX Warning: Reference `eq:proj1' on page 5 undefined on input line 189.
+LaTeX Warning: Reference `eq:proj1' on page 5 undefined on input line 196.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2942,10 +2940,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 
-LaTeX Warning: Reference `prov' on page 6 undefined on input line 202.
+LaTeX Warning: Reference `fig:effet_dmat' on page 6 undefined on input line 209
+.
 
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 209.
 
-LaTeX Warning: Reference `prov' on page 6 undefined on input line 207.
+Package mathptmx Warning: There are no bold math fonts on input line 214.
+
+<../figures/mocks_ana/effet_dmat.png, id=137, 883.3pt x 721.69624pt>
+File: ../figures/mocks_ana/effet_dmat.png Graphic file (type png)
+
+<use ../figures/mocks_ana/effet_dmat.png>
+Package pdftex.def Info: ../figures/mocks_ana/effet_dmat.png used on input line
+ 218.
+(pdftex.def)             Requested size: 441.64893pt x 360.84724pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2953,28 +2965,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[6 <../figures/mocks_ana/effet_dmat.png>]
 
-LaTeX Warning: Reference `eq:kaiser3' on page 7 undefined on input line 255.
+LaTeX Warning: Citation 'DuMasdesBourboux2020' on page 7 undefined on input lin
+e 249.
 
 
-LaTeX Warning: Reference `eq:p1d_prats' on page 7 undefined on input line 264.
+LaTeX Warning: Reference `eq:kaiser3' on page 7 undefined on input line 267.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [7]
 
-LaTeX Warning: Reference `eq:wieghts2' on page 8 undefined on input line 300.
-
-
-LaTeX Warning: Reference `prov' on page 8 undefined on input line 301.
-
-
-LaTeX Warning: Reference `eq:b_qso' on page 8 undefined on input line 310.
+LaTeX Warning: Reference `eq:p1d_prats' on page 8 undefined on input line 276.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2984,8 +2991,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 
-LaTeX Warning: Reference `subsec:contaminants' on page 9 undefined on input lin
-e 344.
+LaTeX Warning: Reference `eq:wieghts2' on page 9 undefined on input line 312.
+
+
+LaTeX Warning: Reference `chap:data_ana' on page 9 undefined on input line 313.
+
+
+
+LaTeX Warning: Citation 'DuMasdesBourboux2020' on page 9 undefined on input lin
+e 322.
+
+
+LaTeX Warning: Reference `eq:b_qso' on page 9 undefined on input line 322.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2995,12 +3012,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 383.
-
-
-LaTeX Warning: Reference `sec:reduction_donnees' on page 10 undefined on input 
-line 410.
+LaTeX Warning: Reference `subsec:contaminants' on page 10 undefined on input li
+ne 359.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3010,6 +3023,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 398.
+
+
+LaTeX Warning: Reference `sec:reduction_donnees' on page 11 undefined on input 
+line 425.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
@@ -3017,22 +3038,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 
-LaTeX Warning: Reference `fig:xi_smoothing' on page 12 undefined on input line 
-468.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [12]
-<../figures/mocks_ana/chi2_vs_rmin.png, id=228, 771.88374pt x 793.96625pt>
+
+LaTeX Warning: Reference `fig:xi_smoothing' on page 13 undefined on input line 
+484.
+
+<../figures/mocks_ana/chi2_vs_rmin.png, id=235, 771.88374pt x 793.96625pt>
 File: ../figures/mocks_ana/chi2_vs_rmin.png Graphic file (type png)
 
 <use ../figures/mocks_ana/chi2_vs_rmin.png>
 Package pdftex.def Info: ../figures/mocks_ana/chi2_vs_rmin.png used on input li
-ne 503.
+ne 519.
 (pdftex.def)             Requested size: 463.13382pt x 476.38342pt.
 
 
@@ -3051,39 +3072,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [14 <../figures/mocks_ana/chi2_vs_rmin.png>]
 
 LaTeX Warning: Reference `sec:quickquasars' on page 15 undefined on input line 
-510.
+527.
 
 
-LaTeX Warning: Reference `prov' on page 15 undefined on input line 520.
+LaTeX Warning: Reference `subsec:data_ana' on page 15 undefined on input line 5
+37.
 
 
-LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 529.
+LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 546.
 
 
-LaTeX Warning: Reference `eq:xig2xif' on page 15 undefined on input line 529.
+LaTeX Warning: Reference `eq:xig2xif' on page 15 undefined on input line 546.
 
 
-<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=246, 1076.02pt x 760.8425p
+<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=257, 1076.02pt x 760.8425p
 t>
 File: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png Graphic file (type png)
  <use ../figures/mocks_ana/cf_ebossraw_4bins_pred.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png used o
-n input line 538.
+n input line 555.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
-<../figures/mocks_ana/bias_pred.png, id=247, 1147.28625pt x 425.59pt>
+<../figures/mocks_ana/bias_pred.png, id=258, 1147.28625pt x 425.59pt>
 File: ../figures/mocks_ana/bias_pred.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_pred.png>
 Package pdftex.def Info: ../figures/mocks_ana/bias_pred.png used on input line 
-582.
+599.
 (pdftex.def)             Requested size: 458.90637pt x 170.23297pt.
 
 
-LaTeX Warning: Reference `prov' on page 15 undefined on input line 595.
+LaTeX Warning: Reference `subsec:data_ana' on page 15 undefined on input line 6
+12.
 
 
-LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 603.
+LaTeX Warning: Reference `fig:xi_g' on page 15 undefined on input line 620.
 
 
 Underfull \vbox (badness 1558) has occurred while \output is active []
@@ -3104,31 +3127,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16 <../figures/mocks_ana/cf_ebossraw_4bins_pred.png> <../figures/mocks_ana/bia
 s_pred.png>]
-
-LaTeX Warning: Reference `prov' on page 17 undefined on input line 620.
-
-<../figures/mocks_ana/xcf_ebossraw_4bins.png, id=270, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/xcf_ebossraw_4bins.png, id=285, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_ebossraw_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_ebossraw_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_ebossraw_4bins.png used on in
-put line 629.
+put line 646.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
-<../figures/mocks_ana/xcf_ebossraw.png, id=271, 1088.065pt x 452.69125pt>
+<../figures/mocks_ana/xcf_ebossraw.png, id=286, 1088.065pt x 452.69125pt>
 File: ../figures/mocks_ana/xcf_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_ebossraw.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_ebossraw.png used on input li
-ne 635.
+ne 652.
 (pdftex.def)             Requested size: 435.21829pt x 181.07329pt.
 
 
-LaTeX Warning: Reference `prov' on page 17 undefined on input line 655.
+LaTeX Warning: Reference `sec:tuning' on page 17 undefined on input line 672.
 
 
-LaTeX Warning: Reference `fig:p1d_tuning' on page 17 undefined on input line 65
-9.
+LaTeX Warning: Reference `fig:p1d_tuning' on page 17 undefined on input line 67
+6.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3145,35 +3165,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18 <../figures/mocks_ana/xcf_ebossraw_4bins.png> <../figures/mocks_ana/xcf_ebo
 ssraw.png>]
-<../figures/mocks_ana/p1d_ebossraw.png, id=290, 1009.7725pt x 578.16pt>
+<../figures/mocks_ana/p1d_ebossraw.png, id=307, 1009.7725pt x 578.16pt>
 File: ../figures/mocks_ana/p1d_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/p1d_ebossraw.png>
 Package pdftex.def Info: ../figures/mocks_ana/p1d_ebossraw.png used on input li
-ne 665.
+ne 682.
 (pdftex.def)             Requested size: 454.39343pt x 260.16959pt.
 
-
-LaTeX Warning: Reference `prov' on page 19 undefined on input line 674.
-
-<../figures/mocks_ana/cf1d_ebossraw.png, id=292, 840.13875pt x 307.1475pt>
+<../figures/mocks_ana/cf1d_ebossraw.png, id=310, 840.13875pt x 307.1475pt>
 File: ../figures/mocks_ana/cf1d_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf1d_ebossraw.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf1d_ebossraw.png used on input l
-ine 682.
+ine 699.
 (pdftex.def)             Requested size: 420.06834pt x 153.57336pt.
 
-<../figures/mocks_ana/auto_qso_4bins.png, id=295, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/auto_qso_4bins.png, id=313, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/auto_qso_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_qso_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/auto_qso_4bins.png used on input 
-line 700.
+line 717.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
-LaTeX Warning: Reference `eq:def_bias' on page 19 undefined on input line 709.
+LaTeX Warning: Reference `eq:def_bias' on page 19 undefined on input line 726.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3192,29 +3209,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ns.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 714.
+               Default added (so using `tbp') on input line 731.
 
-<../figures/mocks_ana/auto_qso.png, id=314, 1147.28625pt x 444.66125pt>
+<../figures/mocks_ana/auto_qso.png, id=334, 1147.28625pt x 444.66125pt>
 File: ../figures/mocks_ana/auto_qso.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_qso.png>
 Package pdftex.def Info: ../figures/mocks_ana/auto_qso.png used on input line 7
-49.
+66.
 (pdftex.def)             Requested size: 458.90637pt x 177.86134pt.
 
 
-LaTeX Warning: Reference `eq:b_qso' on page 21 undefined on input line 758.
+LaTeX Warning: Reference `eq:b_qso' on page 21 undefined on input line 775.
 
-<../figures/mocks_ana/bias_auto_qso.png, id=318, 1126.2075pt x 417.56pt>
+<../figures/mocks_ana/bias_auto_qso.png, id=338, 1126.2075pt x 417.56pt>
 File: ../figures/mocks_ana/bias_auto_qso.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_auto_qso.png>
 Package pdftex.def Info: ../figures/mocks_ana/bias_auto_qso.png used on input l
-ine 767.
+ine 784.
 (pdftex.def)             Requested size: 473.00394pt x 175.374pt.
 
 
-LaTeX Warning: Reference `subsec:hcd' on page 21 undefined on input line 788.
+LaTeX Warning: Reference `subsec:hcd' on page 21 undefined on input line 805.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3223,17 +3240,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21 <../figures/mocks_ana/auto_qso.png>]
-<../figures/mocks_ana/auto_hcd.png, id=332, 1090.0725pt x 415.5525pt>
+<../figures/mocks_ana/auto_hcd.png, id=352, 1090.0725pt x 415.5525pt>
 File: ../figures/mocks_ana/auto_hcd.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_hcd.png>
-Package pdftex.def Info: ../figures/mocks_ana/auto_hcd.png used on input line 7
-92.
+Package pdftex.def Info: ../figures/mocks_ana/auto_hcd.png used on input line 8
+09.
 (pdftex.def)             Requested size: 457.82733pt x 174.53085pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 798.
+               Default added (so using `tbp') on input line 815.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3243,28 +3260,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22 <../figures/mocks_ana/bias_auto_qso.png> <../figures/mocks_ana/auto_hcd.png
 >]
-<../figures/mocks_ana/cf_eboss00_4bins.png, id=343, 1076.02pt x 759.83875pt>
+<../figures/mocks_ana/cf_eboss00_4bins.png, id=365, 1076.02pt x 759.83875pt>
 File: ../figures/mocks_ana/cf_eboss00_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf_eboss00_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_eboss00_4bins.png used on inpu
-t line 854.
+t line 872.
 (pdftex.def)             Requested size: 430.40038pt x 303.93011pt.
 
 
-LaTeX Warning: Reference `eq:b_qso' on page 23 undefined on input line 905.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 877.
 
-<../figures/mocks_ana/xcf_eboss00_4bins.png, id=349, 1076.02pt x 760.8425pt>
+
+LaTeX Warning: Reference `eq:b_qso' on page 23 undefined on input line 923.
+
+<../figures/mocks_ana/xcf_eboss00_4bins.png, id=371, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_eboss00_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_eboss00_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_eboss00_4bins.png used on inp
-ut line 919.
+ut line 937.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 924.
+               Default added (so using `tbp') on input line 942.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3288,46 +3309,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [25 <../figures/mocks_ana/xcf_eboss00_4bins.png>]
 
-LaTeX Warning: Reference `prov' on page 26 undefined on input line 987.
+LaTeX Warning: Reference `subsec:effet_masquage_hcd' on page 26 undefined on in
+put line 1006.
 
 
-<../figures/mocks_ana/cf_eboss02_4bins.png, id=375, 1077.02374pt x 761.84625pt>
+<../figures/mocks_ana/cf_eboss02_4bins.png, id=400, 1077.02374pt x 761.84625pt>
 File: ../figures/mocks_ana/cf_eboss02_4bins.png Graphic file (type png)
 <use ../figures/mocks_ana/cf_eboss02_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/cf_eboss02_4bins.png used on inpu
-t line 1008.
+t line 1027.
 (pdftex.def)             Requested size: 430.80186pt x 304.7331pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1013.
+               Default added (so using `tbp') on input line 1032.
 
-<../figures/mocks_ana/bias_cf.png, id=376, 1111.15125pt x 412.54124pt>
+<../figures/mocks_ana/bias_cf.png, id=401, 1111.15125pt x 412.54124pt>
 File: ../figures/mocks_ana/bias_cf.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_cf.png>
 Package pdftex.def Info: ../figures/mocks_ana/bias_cf.png used on input line 10
-56.
+75.
 (pdftex.def)             Requested size: 477.78572pt x 177.38927pt.
 
-<../figures/mocks_ana/xcf_eboss02_4bins.png, id=381, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/xcf_eboss02_4bins.png, id=406, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_eboss02_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_eboss02_4bins.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_eboss02_4bins.png used on inp
-ut line 1077.
+ut line 1096.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1082.
+               Default added (so using `tbp') on input line 1101.
 
-<../figures/mocks_ana/sum_bias.png, id=382, 1140.26pt x 426.59375pt>
+<../figures/mocks_ana/sum_bias.png, id=407, 1140.26pt x 426.59375pt>
 File: ../figures/mocks_ana/sum_bias.png Graphic file (type png)
 
 <use ../figures/mocks_ana/sum_bias.png>
 Package pdftex.def Info: ../figures/mocks_ana/sum_bias.png used on input line 1
-147.
+166.
 (pdftex.def)             Requested size: 456.09592pt x 170.63446pt.
 
 
@@ -3354,12 +3376,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [28 <../figures/mocks_ana/xcf_eboss02_4bins.png> <../figures/mocks_ana/sum_bias
 .png>]
 
+LaTeX Warning: Reference `sec:quickquasars' on page 29 undefined on input line 
+1175.
+
+<../figures/mocks_ana/cf1d_eboss03.png, id=436, 1008.76875pt x 425.59pt>
+File: ../figures/mocks_ana/cf1d_eboss03.png Graphic file (type png)
+
+<use ../figures/mocks_ana/cf1d_eboss03.png>
+Package pdftex.def Info: ../figures/mocks_ana/cf1d_eboss03.png used on input li
+ne 1202.
+(pdftex.def)             Requested size: 453.94174pt x 191.51372pt.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29]
+[29 <../figures/mocks_ana/cf1d_eboss03.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3373,10 +3407,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31] [32
+[31]
 
-]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 1179--1179
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 1211--1211
 | []| 
  []
 
@@ -3385,33 +3424,118 @@ Package minitoc Info: I0009
 (minitoc)             Creating the 5.maf file.
 \openout5 = `5.maf'.
 
-[33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1179.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1179.
+[33
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1211.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1211.
  (./5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1179.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1211.
 
 Package rerunfilecheck Info: File `5.out' has not changed.
-(rerunfilecheck)             Checksum: 2D3864E0286D7B9BC53B7C19F63B8FE3;1261.
+(rerunfilecheck)             Checksum: F297A88D5C63C79534A3A1A8F2D43CA7;1342.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                5
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to '5.run.xml'.
 \openout1 = `5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35689 strings out of 492995
- 651173 string characters out of 6132704
- 1212261 words of memory out of 5000000
- 38404 multiletter control sequences out of 15000+600000
- 139847 words of font info for 111 fonts, out of 8000000 for 9000
+ 35749 strings out of 492995
+ 652422 string characters out of 6132704
+ 1214289 words of memory out of 5000000
+ 38432 multiletter control sequences out of 15000+600000
+ 140165 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,17n,56p,10403b,1973s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
-st, replaced by a fixed one
+pdfTeX warning (dest): name{figure.caption.46} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.44} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.43} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.42} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.39} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.38} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.36} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection*.23} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.35} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.40} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.33} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.32} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.30} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.29} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.26} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.25} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.24} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.22} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.20} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.17} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.15} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.14} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.13} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.11} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.5} has been referenced but does not e
+xist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -3441,12 +3565,13 @@ xmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
 ublic/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
 sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on 5.pdf (33 pages, 2903181 bytes).
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
+Output written on 5.pdf (33 pages, 3258810 bytes).
 PDF statistics:
- 576 PDF objects out of 1000 (max. 8388607)
- 477 compressed objects within 5 object streams
- 145 named destinations out of 1000 (max. 500000)
- 214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 521 compressed objects within 6 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 232 words of extra memory for PDF output out of 10000 (max. 10000000)
 

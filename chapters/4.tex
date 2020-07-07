@@ -2,10 +2,10 @@
 % @author : bmazoyer
 
 %% Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \begin{document}
 %%
 
 \graphicspath{ {../figures/mocks/} }
@@ -37,7 +37,7 @@ Les mocks sont donc utilisés afin
 La production et l'analyse d'un grand nombre de mocks permet de répondre précisément à ces questions. Ces mocks sont donc nécessaires pour pouvoir valider l'analyse menée sur les données.
 
 \paragraph{}
-Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \autocite{prov}, et seront utilisés dans l'analyse \lya{} de DESI.
+Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \autocite{DuMasdesBourboux2020}, et seront utilisés dans l'analyse \lya{} de DESI.
 L'objectif de ces mocks est donc de répliquer au mieux les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\kpc}. Les mocks nécessitent donc de reproduire un volume immense, avec une bonne résolution.
 Les simulations dites \emph{N-corps} sont des simulations qui traitent le problème à N corps.
 % Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$).
@@ -413,7 +413,7 @@ L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\t
            \sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}
            }) \; .
 \end{align}
-Enfin, grâce au facteur $N(z)$, les quasars sont tirés selon la distribution en $z$ prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous tirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{prov}). De plus, cela permet d'utiliser les mocks pour d'autres projets, comme WEAVE\footnote{WEAVE est un spectrographe à fibre multi objet. Il possède \num{1000} fibres avec un champ de vue de $\SI{3.1}{\square\deg}$. Le relevé WEAVE-QSO prévoit d'observer \num{350000} quasars à grand redshift, sur un relevé de $\SI{6000}{\square\deg}$ \autocite{Pieri2016}.}, qui possèdent une densité de cible plus élevée que celle de DESI.
+Enfin, grâce au facteur $N(z)$, les quasars sont tirés selon la distribution en $z$ prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous tirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{sec:quickquasars}). De plus, cela permet d'utiliser les mocks pour d'autres projets, comme WEAVE\footnote{WEAVE est un spectrographe à fibre multi objet. Il possède \num{1000} fibres avec un champ de vue de $\SI{3.1}{\square\deg}$. Le relevé WEAVE-QSO prévoit d'observer \num{350000} quasars à grand redshift, sur un relevé de $\SI{6000}{\square\deg}$ \autocite{Pieri2016}.}, qui possèdent une densité de cible plus élevée que celle de DESI.
 A la fin, nous obtenons environ \num{100} quasars à $z > \num{2.1}$ par degré carré.
 \begin{figure}
   \centering
@@ -448,7 +448,7 @@ Le facteur $(1+z)$ dans l'équation~\ref{eq:r_rsd} vient de la conversion des di
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
 A cette étape, nous disposons d'un catalogue de quasars corrélés avec le champ de densité $\delta_{\mathrm{matière}}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar et jusqu'à l'observateur, puis interpoler la boîte contenant le champ de densité le long de ces lignes de visée.
-Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{prov}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
+Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{subsec:model_donnees}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
 
 % Une fois ce tableau en longueur d'onde défini, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
 % pour chaque quasar, nous calculons la position $(X,Y,Z)$ de chaque pixel.
@@ -598,7 +598,7 @@ Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de vis
   % F = \exp( - a(z) \mathrm{e}^{b(z) G(z) (\delta_l + \delta_s)}) ;.
   F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s))\right] ;.
 \end{equation}
-Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à trois dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir~\ref{prov})}.
+Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne participe pas à la fonction de corrélation à trois dimensions\footnote{Lors du calcul de la fonction de corrélation à trois dimensions, nous ne considérons pas les paires de pixels issues de la même forêt (voir section~\ref{subsec:cf_estimateur})}.
 % Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$, d'une taille supérieure à celle de la forêt pour éviter les corrélations d'une extrémité à l'autre.
 Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$.
 Puis, nous multiplions ce champ par
@@ -913,7 +913,7 @@ Les forêts sont regroupées par pixel HEALPix \autocite{Gorski2004} dans des fi
 où $\texttt{nside} = \num{16}$ est la résolution du schéma HEALPix utilisé, \texttt{\textsc{pix}} donne le numéro du pixel HEALPix, et $\texttt{\textsc{n}}$ est le résultat de la division euclidienne de \texttt{\textsc{pix}} par \num{100}.
 Cette dernière étape est effectuée sur un n{\oe}ud, \texttt{make\_transmissions.py} étant lancé en parallèle sur 64 sous-échantillons des pixels HEALPix.
 
-Comme expliqué à la fin de la section~\ref{subsec:lya}, le calcul de l'auto corrélation des traceurs objets, tels les quasars et les HCD, nécessite l'estimateur de Landy-Szalay (voir calcul section~\ref{prov}). Afin d'utiliser cette estimateur, nous avons besoin de catalogues de quasars et de HCD qui suivent une distribution aléatoire.
+Comme expliqué à la fin de la section~\ref{subsec:lya}, le calcul de l'auto corrélation des traceurs objets, tels les quasars et les HCD, nécessite l'estimateur de Landy-Szalay (voir section~\ref{subsec:co_estimateur}). Afin d'utiliser cette estimateur, nous avons besoin de catalogues de quasars et de HCD qui suivent une distribution aléatoire.
 % Les vrais catalogues sont ensuite comparés à ces catalogues aléatoires.
 Les distributions issues des vrais catalogues sont ensuite comparées aux distributions issues des catalogues aléatoires.
 Pour constuire ces catalogues aléatoires de quasars et HCD, nous utilisons les codes \texttt{draw\_qso.py} et \texttt{dla\_saclay.py}. Une option nous permet de tirer les objets sans tenir compte de la densité dans chaque voxel ou pixel. Les quasars sont donc tirés uniformément dans la boîte. Les HCD sont tirés uniformément le long de chaque ligne de visée, avec $z_{\textsc{HCD}} < z_{\textsc{QSO}}$ où $z_{\textsc{QSO}}$ est le redshift du quasar hôte. Dans les deux cas, nous tirons plus de quasars et de HCD pour les distributions aléatoires que pour les vrais catalogues, afin que la statistique des fonctions de corrélation soit limitée uniquement par les vrais catalogues. A la fin, les catalogues aléatoires de quasars et de HCD contiennent respectivement environ 10 et 3 fois plus d'objets que les vrais catalogues.
@@ -930,10 +930,10 @@ Une certain nombre de problèmes informatiques, liés au centre de calcul NERSC,
 
 % Celle-ci a nécessité environ six mois avant d'être complète.
 % Ce temps nous a permis de choisir les paramètres \lya{} souhaités,
-  Le temps pris par les six mois nécessaires à la production\footnote{Dans de bonnes conditions, le temps de production de 100 réalisations est estimé à 4 à 6 semaines. \#prov ça serait mieux dans le texte} nous a permis de
+  Le temps pris par les six mois nécessaires à la production\footnote{Dans de bonnes conditions, le temps de production de 100 réalisations est estimé à 4 à 6 semaines.} nous a permis de
 % choisir les paramètres \lya{} souhaités, et d'ajuster les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) en conséquence.
   choisir sur quelle modélisation des données nous voulions ajuster les paramètres \lya{}.
-  En effet, la modélisation des HCD dans les données est complexe et mal comprise. Les paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ sont très corrélés avec ceux du \lya{}. Selon les modélisations, les paramètres \lya{} obtenus grâce à l'ajustement des données ne sont pas les mêmes. L'étude de ces modélisations est présentée dans la section~\ref{prov}.
+  En effet, la modélisation des HCD dans les données est complexe et mal comprise. Les paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ sont très corrélés avec ceux du \lya{}. Selon les modélisations, les paramètres \lya{} obtenus grâce à l'ajustement des données ne sont pas les mêmes. L'étude de ces modélisations est présentée dans la section~\ref{sec:etude_model_hcd}.
 % Une fois les paramètres \lya{} souhaités bien définis, nous avons ajusté les paramètres de la formule FGPA (équation~\ref{eq:fgpa4}) pour obtenir ces paramètres \lya{}.
 Après avoir bien défini les paramètres \lya{} que nous visons, nous avons ajusté les paramètres de la formule FGPA afin d'obtenir les paramètres \lya{} souhaités dans les mocks.
 Ceci est expliqué dans la section suivante. Une fois ces paramètres ajustés et la phase de pré-production terminée, nous avons mené la phase de \emph{post-production}. Cette phase consiste à créer les spectres d'absorption à partir des densités interpolées le long des lignes de visée, puis à regrouper tous les fichiers de sortie afin de les mettre au format décrit précédemment. Cette étape est beaucoup plus rapide, elle prend l'équivalent d'environ 6 heures CPU sur un n{\oe}ud de Cori par réalisation. Une fois la production complète effectuée, la place sur disque d'une réalisation, sans compter les fichiers temporaires, correspond à environ $\num{15}\,\mathrm{Go}$.
@@ -943,7 +943,7 @@ Ceci est expliqué dans la section suivante. Une fois ces paramètres ajustés e
 \label{sec:tuning}
 Comme expliqué dans la section~\ref{subsec:density2absorption}, le champ d'absorption \lya{} est construit à partir des boîtes $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ grâce à la formule FGPA.
 Contrairement aux quasars pour lesquels le biais est choisi, les paramètres physiques du champ d'absorption \lya{} simulé dépendent des quatres paramètres $a(z)$, $b(z)$, $c(z)$ et $P_{s}(z)$ utilisés dans l'équation~\ref{eq:fgpa4}.
-Nous décrivons dans cette section comment ajuster ces paramètres (paramètres FGPA dans la suite) afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{\mathrm{1D}}(k, z)$ (paramètres \lya{} dans la suite). Nous nous servons de la modélisation des données décrite dans le chapitre~\ref{prov} comme référence pour les paramètres \lya{}.
+Nous décrivons dans cette section comment ajuster ces paramètres (paramètres FGPA dans la suite) afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{\mathrm{1D}}(k, z)$ (paramètres \lya{} dans la suite). Nous nous servons de la modélisation des données décrite dans le chapitre~\ref{subsec:data_ana} comme référence pour les paramètres \lya{}.
 
 
 Afin d'ajuster ces paramètres FGPA, la méthode standard est de générer un mock avec un jeu de paramètres FGPA, calculer la fonction de corrélation du \lya{}, ajuster cette fonction de corrélation et mesurer les paramètres \lya{}. Puis une fois ces paramètres mesurés, itérer sur les paramètres FGPA afin de nous rapprocher des paramètres \lya{} visés. Cependant cette méthode est très couteuse, car elle nécessite de générer des spectres et de produire la fonction de corrélation à chaque itération.
@@ -1043,7 +1043,7 @@ Les termes $q_1 \Delta^2(k)$ et $q_2 \Delta^4(k)$ représente l'augmentation de 
 Puis, pour chaque valeur du redshift, la forme ajustée aux données et définie dans l'équation~\ref{eq:p1d_data} est prolongée de $k = \SI{0.2}{\h\per\Mpc}$ jusqu'à $k = 0$ par le modèle donné dans l'équation~\ref{eq:p1d_prats}.
 % Ce modèle est multiplié par une constante de façon à ce que ce modèle multiplié par cette constante soit égal à l'ajustement fait sur les données à $k = \SI{0.2}{\h\per\Mpc}$.
 Pour ce faire, nous calculons le modèle à $z = \num{2.4}$, puis nous le multiplions par une constante, dépendant de la valeur du redshift, de façon à ce que le prolongement en $k = \SI{0.2}{\h\per\Mpc}$ soit continu.
-La figure~\ref{fig:p1d_data} montre le modèle ainsi construit, avec les données de \#prov.
+La figure~\ref{fig:p1d_data} montre le modèle ainsi construit. Les données y sont superposées (Nathalie Palanque-Delabrouille, communication privée).
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{p1d_model_data}
@@ -1088,7 +1088,7 @@ A ce stade, nous disposons des informations nécessaires pour calculer la prédi
     b_{\mathrm{Ly}\alpha}  = \frac{b_{\eta, \mathrm{Ly}\alpha} f}{\beta_{\mathrm{Ly}\alpha}} \; ,
   \end{equation}
   où $f$ est le taux de croissance des structures.
-  Dans le chapitre~\ref{prov}, nous verrons que les paramètres \lya{} sont corrélés entre eux.
+  Dans la section~\ref{subsec:stab_pars_lya}, nous verrons que les paramètres \lya{} sont corrélés entre eux.
   Ainsi, afin de comparer au mieux la prédiction avec les données, plutôt que de mesurer les paramètres $b_{\eta, \mathrm{Ly}\alpha}$ ou $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$, nous mesurons les paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$.
   Le biais effectif $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ est relié au biais et au paramètre RSD du \lya{} par
   \begin{equation}
@@ -1096,7 +1096,7 @@ A ce stade, nous disposons des informations nécessaires pour calculer la prédi
     b_{\mathrm{eff},\mathrm{Ly}\alpha} = b_{\mathrm{Ly}\alpha} \sqrt{1 + \frac{2}{3} \beta_{\mathrm{Ly}\alpha} + \frac{1}{5} \beta_{\mathrm{Ly}\alpha}^2} \; .
   \end{equation}
   Il est sensible à l'amplitude de la fonction de corrélation, et est moins corrélé avec $\beta_{\mathrm{Ly}\alpha}$ que l'est $b_{\eta, \mathrm{Ly}\alpha}$ ou $b_{\mathrm{Ly}\alpha}$.
-  Enfin, nous mesurons aussi $\overline F$ dans la prédiction, et nous comparons sa valeur à ce qui est mesuré dans les données (\#prov Papier de White, mais lequel ?).
+  Enfin, nous mesurons aussi $\overline F$ dans la prédiction, et nous comparons sa valeur à la paramétrisation définie dans l'équation~\ref{eq:mean_trans}.
 % Nous comparons la mesure de $b_{\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $\overline F$ à ce qui est mesuré dans les données.
 % Toute ces étapes constituent une itération complète de la procédure d'ajustement.
 % Dans le cas où les paramètres \lya{} mesurés sur la prédiction ne sont pas en accord avec ce qui est mesuré dans les données, nous relançons une nouvelle itération :
@@ -1129,6 +1129,7 @@ La figure~\ref{fig:params} présente les interpolations ainsi obtenues.
 \textbf{Les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift produisent des spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ en très bon accord avec le modèle. Les cinq $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{fig:p1d_tuning}. Les lignes continues donnent le modèle pour chaque valeur du redshift.
 Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.}
 Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
+\textbf{Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmise moyenne $\overline F$ en fonction du redshift obtenue avec cette procédure d'ajustement. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}. La mesure faite pour les redshifts proches de \num{3.6} est biaisée par le fait que seuls les pixels proches des quasars participent à cette mesure : la corrélation croisée \lya{}$\times$QSO a pour effet de réduire $F$.}
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{p1dmiss}
@@ -1141,10 +1142,16 @@ Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du
   \caption{Les spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift à la fin de la procédure d'ajustement. Les lignes continues donnent le modèle pour chaque valeur du redshift. Les mocks sont en train bon accord avec le modèle.}
   \label{fig:p1d_tuning}
 \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.55]{mean_trans_mock}
+  \caption{Fraction de flux transmise moyenne $\overline F$ en fonction du redshift mesurée dans les mocks. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}.}
+  \label{fig:mean_trans_mock}
+\end{figure}
 
 \paragraph{}
 \textbf{Le résultat de la procédure d'ajustement décrite précédemment a été utilisé pour produire \num{50} réalisations indépendantes des mocks. Nous prévoyons de terminer la post-production des \num{50} autres réalisations pré-produites dans les prochains moins.
-  Parmis les \num{50} réalisations produites, \num{30} sont analysées. Le chapitre~\ref{prov} présente cette analyse.}
+  Parmis les \num{50} réalisations produites, \num{30} sont analysées. Le chapitre~\ref{chap:mock_ana} présente cette analyse.}
 % Les figures~\ref{prov} présentent les paramètres \lya{} obtenus avec la prédiction (couleur), sur le stack des 100 rea (couleur) et mesuré dans les données (couleur). \#prov montrer biais(z), beta(z), <F>(z) et P1D(z).
 
 
@@ -1155,7 +1162,7 @@ Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du
 % Une fois les mocks produits, l'idée est d'inclure les forêts simulés dans des spectres synthétiques \#prov mal dit.
 Les mocks décrits précédemment produisent un relevé de quasars avec, pour chaque quasar, une forêt d'absorption $F$ variant entre 0 et 1.
 Afin de reproduire complètement les données et pouvoir simuler la chaîne d'analyse, nous devons ajouter un continuum à ces forêts, puis ajouter du bruit de mesure.
-Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. 
+Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{Gonzalez-Morales}. 
 
 Le continuum des quasars est généré à l'aide du module \texttt{SIMQSO}, du package \texttt{desisim}.
 Le modèle utilisé est composé de plusieurs lois de puissance. Ces lois de puissance sont mises bout à bout pour créer le continuum.
@@ -1193,7 +1200,7 @@ Nous produisons plusieurs versions différentes des mocks :
 \item les mocks \emph{eboss-0.2},
 \item les mocks \emph{eboss-0.3}.
 \end{itemize}
-Les raw mocks sont les mocks bruts, sans l'utilisation de \texttt{quickquasars}. Ces mocks sont analysés en estimant les fonctions de corrélation directement à partir des fichiers de transmission (voir chapitre~\ref{prov}). Ceci nous permet de vérifier la construction des mocks et les différentes fonctions de corrélation, sans que celles-ci soient affectées par l'ajustement du continuum ou les effets astrophysiques et instrumentaux.
+Les raw mocks sont les mocks bruts, sans l'utilisation de \texttt{quickquasars}. Ces mocks sont analysés en estimant les fonctions de corrélation directement à partir des fichiers de transmission (voir section~\ref{sec:mock_ana}). Ceci nous permet de vérifier la construction des mocks et les différentes fonctions de corrélation, sans que celles-ci soient affectées par l'ajustement du continuum ou les effets astrophysiques et instrumentaux.
 Les versions eboss-0.0, eboss-0.2 et eboss-0.3 sont les versions des mocks après avoir utilisé \texttt{quickquasars} pour produire les spectres synthétiques. La version eboss-0.0 correspond à l'ajout du continuum et du bruit. La version eboss-0.2 est la version eboss-0.0 à laquelle les HCD sont ajoutés. La version eboss-0.3 ajoute le continuum, le bruit, les HCD ainsi que les métaux.
 Nous présentons l'analyse de ces différentes versions des mocks dans le chapitre suivant.
 
@@ -1203,5 +1210,5 @@ Nous présentons l'analyse de ces différentes versions des mocks dans le chapit
 
 
 % \bibliography{../source/library}
-\printbibliography
-\end{document}
+% \printbibliography
+% \end{document}

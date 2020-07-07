@@ -19,31 +19,32 @@
 
 
 % Table des matières    
-    \setcounter{tocdepth}{1}       
-    \dominitoc
-    \tableofcontents
-    % \listoffigures
-    % \listoftables
+\setcounter{tocdepth}{1}       
+\dominitoc
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+
+% \setcounter{mtc}{2}	% "Corrige" les minitocs décallés à cause des chapter* (ex : table des matières)
+
+\cleardoublepage
+
+
+\foreach \i in {1,2,...,\NumOfChapters}{
+  \input{../chapters/\i}
+  \cleardoublepage
+}
     
-    
-    % \setcounter{mtc}{2}	% "Corrige" les minitocs décallés à cause des chapter* (ex : table des matières)
-    
-    \cleardoublepage
-    
-    
-    \foreach \i in {1,2,...,\NumOfChapters}{
-      \input{../chapters/\i}
-      \cleardoublepage
-    }
-    
-    \appendix
-    \foreach \i in {1,2,...,\NumOfAppendices}{
-      \input{../appendices/\i}
-      \cleardoublepage
-    }
-    
-    \bibliography{../source/library}
-    \pagebreak
-    
-    \input{../layout/lastpage.tex}
-  \end{document}
+% \appendix
+% \foreach \i in {1,2,...,\NumOfAppendices}{
+% \input{../appendices/\i}
+% \cleardoublepage
+% }
+
+%   \bibliography{../source/library}
+\printbibliography
+\pagebreak
+
+\input{../layout/lastpage.tex}
+\end{document}

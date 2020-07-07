@@ -2,15 +2,16 @@
 % @author : bmazoyer
 
 %% Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \begin{document}
 %%
 
 \graphicspath{ {../figures/mocks_ana/} }
 
 \chapter{Validation des mocks}
+\label{chap:mock_ana}
 \minitoc
 \newpage
 \thispagestyle{fancy}
@@ -18,11 +19,12 @@
 
 Ce chapitre a pour vocation de présenter l'analyse menée sur les mocks, afin de valider leur construction et le choix des différents paramètres.
 Nous présentons d'abord les estimateurs des diverses fonctions de corrélations, puis les modèles ajustés sur celles-ci.
-Nous donnons premièrement le modèle ajusté sur les données et présenté dans \textcite{prov}, puis le modèle modifié ajusté sur les mocks.
+Nous donnons premièrement le modèle ajusté sur les données et présenté dans \textcite{DuMasdesBourboux2020}, puis le modèle modifié ajusté sur les mocks.
 Enfin, nous présentons l'analyse des \Nmocks{} réalisations de mocks produites. Le résultat de l'analyse des données, utilisée pour choisir les paramètres \lya{} des mocks, est présentée dans le chapitre suivant.
 Toutes ces analyses sont produites avec le code \texttt{picca}. Ce code permet de calculer les champs $\delta$, les fonctions de corrélations, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.
 
 \section{Les estimateurs}
+\label{sec:estimateurs}
 Nous présentons ici les estimateurs utilisés pour calculer la fonction d'auto-corrélation du \lya{}, la fonction de corrélation croisée \lya{}-QSO, ainsi que la fonction d'auto-corrélation d'objets ponctuels tels les quasars.
 % Dans le cas des objets ponctuels, la seule information nécessaire au calcul de la fonction de corrélation est le catalogue fournissant pour chaque objet l'ascension droite, la déclinaison et le redshift.
   Dans le cas des objets ponctuels, il est nécessaire de produire un catalogue aléatoire d'objets qui prend en compte la complétude\footnote{La complétude donne la proportion de cibles observées en spectroscopie par rapport au nombre de cibles détectées avec le relevé photométrique.} du relevé spectrométrique. %, ainsi que les effets liés à la sélection des cibles afin de calculer correctement la fonction d'auto-corrélation. % Un tel catalogue est produit pour chaque réalisation des mocks.
@@ -41,6 +43,7 @@ Les cooked mocks quant à eux désignent les mocks après avoir appliqué \textt
 Une fois le champ $\delta_F$ calculé, nous pouvons calculer les différentes fonctions de corrélation.
 
 \subsection{L'auto-corrélation \lya{}$\times$\lya{}}
+\label{subsec:cf_estimateur}
 Comme expliqué dans le chapitre d'introduction, la fonction d'auto-corrélation du champ d'absorption $F$ du \lya{} est définie comme
 \begin{equation}
   \xi_{\mathrm{Ly}\alpha}(\vec r) = \langle \delta_F(\vec{r'}) \delta_F(\vec{r} + \vec{r'}) \rangle \; .
@@ -95,13 +98,14 @@ Le calcul de la fonction de corrélation est donc effectué à l'aide d'une doub
 Afin de réduire le temps de calcul, la fonction de corrélation est calculée uniquement pour les paires de pixels pour lesquelles $\rpar{}$ et $\rperp{}$ sont inclus dans $[0 \, ; 200] \si{\perh\Mpc}$. La fonction de corrélation est donc calculée dans $50 \times 50 = \num{2500}$ bins.
 Les paires formées par des pixels provenant de la même forêt sont exclues du calcul afin d'éviter que les erreurs sur l'ajustement du continuum biaisent la mesure de la fonction de corrélation.
 
-L'analyse \lya{} des données complète d'eBOSS \autocite{prov} utilise deux fonctions de corrélation distinctes : les fonctions de corrélation \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}.
+L'analyse \lya{} des données complète d'eBOSS \autocite{DuMasdesBourboux2020} utilise deux fonctions de corrélation distinctes : les fonctions de corrélation \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}.
 La région \lyb{} ne fournit pas suffisamment de pixels pour pouvoir calculer la fonction de corrélation \lyalyb{}$\times$\lyalyb{} et y détecter le pic BAO. De plus, le gain de statistique que représente cette fonction de corrélation est négligeable.
 L'utilisation de ces deux fonctions de corrélation permet de mesurer la position du pic BAO avec une plus grande précision. Dans ce manuscrit, nous nous intéressons à la mesure de $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ afin de construire correctement nos mocks. Pour limiter les potentielles systématiques, nous considérons donc uniquement la fonction de corrélation \lyalya{}$\times$\lyalya{}.
 Le graphique de droite de la figure~\ref{fig:pixel_number} présente les distributions pondérées en redshift des paires \lyalya{}$\times$\lyalya{} et \lyalya{}$\times$\lyalyb{}. L'analyse des données DR16 présentée dans ce manuscrit considère donc uniquement la distribution indiquée en orange.
 
 
 \subsection{La corrélation croisée \lya{}$\times$QSO}
+\label{subsec:xcf_estimateur}
 Nous donnons dans cette section l'estimateur de la fonction de corrélation croisée \lya{}$\times$QSO. De la même manière que précédemment, le calcul s'effectue dans des bins en $(\rpar{}, \rperp{})$. L'estimateur de la fonction de corrélation dans le bin $A$ est donnée par
 \begin{equation}
   \label{eq:xiqf}
@@ -127,6 +131,7 @@ La fonction de corrélation croisée est donc calculée dans les bins pour lesqu
 
 
 \subsection{Le spectre de puissance à une dimension}
+\label{subsec:p1d_estimateur}
 Comme expliqué dans le chapitre précédent, nous ajustons le spectre de puissance $P_{s}$ appliqué à $\delta_s$ de façon à obtenir un spectre de puissance à une dimension $P^{\mathrm{1D}}$ en accord avec les données. Nous présentons donc maintenant la mesure de ce spectre de puissance sur les raw mocks. Pour chaque forêt, nous appliquons une transformation de Fourier au champ $\delta_F$ afin d'obtenir le champ $\delta_k$. Puis, le spectre de puissance de cette forêt est obtenu comme
 \begin{equation}
   \label{eq:estimateur_p1d}
@@ -137,6 +142,7 @@ Nous répétons cette procédure pour toutes les forêts, puis le spectre de pui
 En ce qui concerne les données et les cooked mocks, la mesure du spectre de puissance à une dimension est plus complexe. Un certain nombre d'effets liés à la mesure doivent être pris en compte. En particulier, le bruit et la résolution doivent être estimés et pris en compte pour ne pas fausser l'estimation du spectre de puissance. Cette analyse est détaillée dans~\textcite{Chabanier2018}.
 
 \subsection{La fonction de corrélation à une dimension}
+\label{subsec:cf1d_estimateur}
   Nous présentons maintenant l'estimateur de la fonction de corrélation à une dimension. Similairement au $P^{\mathrm{1D}}$, cette fonction de corrélation est calculée en considérant uniquement les paires de pixels appartenant à la même forêt.
   Nous l'estimons comme
   \begin{equation}
@@ -158,7 +164,8 @@ En ce qui concerne les données et les cooked mocks, la mesure du spectre de pui
 % où $\lambda_{\mathrm{obs}}$ est la longueur d'onde observée, et $\lambda_1$ et $\lambda_2$ sont les longueurs d'ondes d'absorption au repos de l'absorbant 1 et 2.
 
 
-\subsection{L'auto-corrélation QSO$\times$QSO}
+  \subsection{L'auto-corrélation QSO$\times$QSO}
+  \label{subsec:co_estimateur}
 Afin de tester les mocks sous tous leurs aspects, nous mesurons aussi l'auto-corrélation QSO$\times$QSO. L'estimateur utilisé pour cette corrélation est l'estimateur de Landy-Szalay \autocite{Landy1993}. C'est l'estimateur qui minimise la variance. Il est défini comme
 \begin{equation}
   \label{eq:estimateur_co}
@@ -196,20 +203,25 @@ où $W_{A} = \sum_{(i,j)\in A} w_i w_j$ est le poids du bin A. Pour la corrélat
   \label{eq:xdmat}
   D_{AB} = \frac{1}{W_A} \sum_{(i,j)\in A} w_i w_j \left( \sum_{(i',j')\in B} \eta_{ii'} \right) \, .
 \end{equation}
-Comme précédemment, les indices $i$ correspondent aux pixels des forêts, et $j$ aux quasars. A cause de la double somme, le calcul de la matrice de distorsion est très long. Afin de rendre possible l'estimation de cette dernière, le calcul est fait sur \SI{1}{\percent} des paires, tirées au hasard (\#prov Bautista 2017 montre que c'est OK avec 5\%, est-ce que y a une etude qui montre que c'est ok avec 1\% ? Dans DR14, ils utilisent 5\% je pense).
+Comme précédemment, les indices $i$ correspondent aux pixels des forêts, et $j$ aux quasars. A cause de la double somme, le calcul de la matrice de distorsion est très long. Afin de rendre possible l'estimation de cette dernière, le calcul est fait sur \SI{1}{\percent} des paires, tirées au hasard.
 % L'étude présentée dans~\textcite{bautista_measurement_2017}
 
-La figure~\ref{prov} (\#prov faire la figure) montre l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatres gammes en $\mu$. La courbe noire indique la fonction de corrélation calculée sur les raw mocks, et la courbe bleu la fonction de ....
-\#prov Refaire la figure 11 de Bautista : CF des raw mocks (stack) + CF sur les coocked mocks (stack) avec le fit sur les raw + fit * DM
+\textbf{La figure~\ref{fig:effet_dmat} présente l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatre gammes en $\mu$. Les points bleus donnent la corrélation estimée à partir des raw mocks, c'est à dire sans les distorsions liées à l'ajustement du continuum. La ligne continue bleue donne l'ajustement du modèle de \texttt{picca}. Les points rouges donnent la corrélation estimée à partir des mocks eboss-0.0. Cette corrélation est affectée par les distorsions de l'ajustement du continuum. La courbe rouge donne l'ajustement du modèle. La matrice de distorsion permet ainsi de passer de la courbe bleue, à la courbe rouge.}
 
-
-La matrice de distorsion est un objet uniquement géométrique. Son calcul est indépendant du champ $\delta_F$. Elle ne dépend uniquement de la géométrie du relevé et de la distribution des poids.
-La figure~\ref{prov} montre la différence entre ... \#prov montrer la difference du fit d'une réa avec sa DM et avec une autre DM et/ou le stack de 10 avec les 10 DM ou dix fois la meme. Est-ce que les DM eboss-0.0 et eboss-0.2 sont différentes ?\\
+\textbf{La matrice de distorsion est un objet uniquement géométrique. Son calcul est indépendant du champ $\delta_F$. Elle ne dépend uniquement de la géométrie du relevé et de la distribution des poids.
+% La figure~\ref{prov} montre la différence entre ... \#prov montrer la difference du fit d'une réa avec sa DM et avec une autre DM et/ou le stack de 10 avec les 10 DM ou dix fois la meme. Est-ce que les DM eboss-0.0 et eboss-0.2 sont différentes ?\\
 Ainsi, il n'est pas nécessaire de calculer la matrice de distorsion pour les \Nmocks réalisations des mocks.
-Dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois (\#prov ou une fois pour chaque run de quickquasars?). L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.
+Dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois. L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.}
 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{effet_dmat}
+  \caption{L'auto-corrélation \lya{}$\times$\lya{} estimée à partir de \Nmocks{} réalisations des raw mocks (bleu) et à partir de \Nmocks{} réalisations des mocks eboss-0.0 (rouge). Les lignes continues bleues et rouges donnent respectivement l'ajustement du modèle sur les raw mocks et les mocks eboss-0.0.}
+  \label{fig:effet_dmat}
+\end{figure}
 
 \section{Les matrices de covariance}
+\label{sec:calcul_cov}
 Afin de réaliser l'ajustement de chaque fonction de corrélation, nous avons besoin de calculer les matrices de covariance associées à ces fonctions de corrélation. La covariance de la fonction de corrélation $\xi$ dans le bin $A$ et de $\xi$ dans le bin $B$ est définie comme
 \begin{equation}
   C_{AB} = \langle \xi_A \xi_B \rangle - \langle \xi_A \rangle \langle \xi_B \rangle \; .
@@ -224,7 +236,7 @@ Afin d'estimer la matrice de covariance, le relevé est divisé en pixels HEALPi
   C_{AB} = \frac{1}{W_A W_B} \sum_s W_A^s W_B^s \left( \xi_A^s \xi_B^s - \xi_A \xi_B \right) \; ,
 \end{equation}
 où $s$ est un sous-échantillon, et $W_A^s$ les poids du bin $A$ de ce sous-échantillon.
-Les éléments les plus importants de cette matrice sont les éléments diagonaux : la variance dans chaque bin. Les éléments non-diagonaux, les covariances entre deux bins distincts, sont faibles (\#prov donner comme Var\_A est modélisé ? Donner comment on modélise les éléments non diag ?). Leur estimation est bruitée. La matrice de covariance est donc lissée après avoir été estimée.
+Les éléments les plus importants de cette matrice sont les éléments diagonaux : la variance dans chaque bin. Les éléments non-diagonaux, les covariances entre deux bins distincts, sont faibles. Leur estimation est bruitée. La matrice de covariance est donc lissée après avoir été estimée.
 En ce qui concerne l'auto-corrélation, la matrice de covariance possède $\num{2500} \times \num{2500}$ bins. Pour la corrélation croisée, elle en possède $\num{5000} \times \num{5000}$.
 
 
@@ -234,7 +246,7 @@ Dans cette section, nous présentons les modèles utilisés pour ajuster les fon
 
 \subsection{Modélisation des données}
 \label{subsec:model_donnees}
-Pour l'analyse des données DR16, dont les résultats sont présentés dans le chapitre suivant, nous utilisons le modèle décrit dans~\textcite{prov}. L'analyse décrite dans cette étude est une analyse BAO : l'auto-corrélation et la corrélation croisée sont modélisées de façon à mesurer au mieux les paramètres BAO $\apar{}$ et $\aperp{}$.
+Pour l'analyse des données DR16, dont les résultats sont présentés dans le chapitre suivant, nous utilisons le modèle décrit dans~\textcite{DuMasdesBourboux2020}. L'analyse décrite dans cette étude est une analyse BAO : l'auto-corrélation et la corrélation croisée sont modélisées de façon à mesurer au mieux les paramètres BAO $\apar{}$ et $\aperp{}$.
 Pour ce faire, le modèle est séparé en deux composantes. La première, $\xi_{\mathrm{smooth}}$, correspond à la forme globale de la fonction de corrélation. 
 La seconde, $\xi_{peak}$, correspond au pic BAO. C'est cette seconde composante qui dépend des paramètres BAO :
 \begin{equation}
@@ -298,7 +310,7 @@ où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolutio
 Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, la dépendance en redshit de $\delta_F$ est prise en compte.
 En considérant que $\beta_{\mathrm{Ly}\alpha}$ est constant avec le redshift, nous avons $\delta_F(z) \propto G(z) b_{\mathrm{Ly}\alpha}(z)$, avec $G(z) \propto (1+z)^{-1}$.
 Concernant le biais du \lya{}, nous utilisons la même dépendance que celle choisie lors du calcul des poids (équation~\ref{eq:wieghts2}), c'est à dire $b_{\mathrm{Ly}\alpha} \propto (1+z)^{\gamma_{\mathrm{Ly}\alpha}}$, avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \autocite{McDonald2004}.
-En ce qui concerne $\beta_{\mathrm{Ly}\alpha}$, nous considérons lors de l'ajustement du modèle qu'il est indépendant du redshift. Comme montré dans l'analyse présentée dans le chapitre~\ref{prov}, $\beta_{\mathrm{Ly}\alpha}$ n'est pas indépendant du redshift. Cependant, le redshift moyen dans chaque bin $(\rpar{}, \rperp)$ varie peu. Lors de l'analyse de l'ensemble des données DR16, il varie dans la gamme $\num{2.31} < z < \num{2.39}$. Cette variation correspond à une variation de $\beta_{\mathrm{Ly}\alpha}$ de moins de \SI{5}{\percent}. De plus, elle est d'autant plus faible lorsque l'analyse est faite dans différents bins en redshift.
+En ce qui concerne $\beta_{\mathrm{Ly}\alpha}$, nous considérons lors de l'ajustement du modèle qu'il est indépendant du redshift. Comme montré dans l'analyse présentée dans le chapitre~\ref{chap:data_ana}, $\beta_{\mathrm{Ly}\alpha}$ n'est pas indépendant du redshift. Cependant, le redshift moyen dans chaque bin $(\rpar{}, \rperp)$ varie peu. Lors de l'analyse de l'ensemble des données DR16, il varie dans la gamme $\num{2.31} < z < \num{2.39}$. Cette variation correspond à une variation de $\beta_{\mathrm{Ly}\alpha}$ de moins de \SI{5}{\percent}. De plus, elle est d'autant plus faible lorsque l'analyse est faite dans différents bins en redshift.
 
 La fonction de corrélation croisée \lya{}$\times$QSO est sensible au produit $b_{\mathrm{Ly}\alpha}(1+\beta_{\mathrm{Ly}\alpha} \mu^2) b_{\textsc{QSO}}(1+\beta_{\textsc{QSO}} \mu^2)$.
 L'ajustement de cette seule fonction de corrélation ne permet donc pas de lever la dégénéréscence des paramètres \lya{} et des paramètres des QSO.
@@ -307,7 +319,7 @@ Nous fixons donc $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$. Concernant le bia
   b_{\textsc{QSO}}(z) = \num{3.77} \left( \frac{1 + z}{1+\num{2.334}} \right)^{\num{1.44}} \; . 
 \end{equation}
 % Cette paramétrisation est sensiblement équivalente à celle utilisée dans les mocks (équation~\ref{eq:b_qso}) dans la gamme $\num{2.31} < z < \num{2.39}$. $\beta_{\textsc{QSO}}$ est choisi constant et vaut $\beta_{\textsc{QSO}} = f / b_{\textsc{QSO}}(\num{2.334}) = \num{0.257}$.
-Cette paramétrisation est celle choisie dans \textcite{prov}. Nous gardons cette paramétrisation pour notre analyse des données, présentée dans le chapitre suivant. Cependant, lorsque nous analysons les mocks, nous utilisons la paramétrisation adoptée pour construire les mocks. Elle est donnée dans l'équation~\ref{eq:b_qso}.
+Cette paramétrisation est celle choisie dans \textcite{DuMasdesBourboux2020}. Nous gardons cette paramétrisation pour notre analyse des données, présentée dans le chapitre suivant. Cependant, lorsque nous analysons les mocks, nous utilisons la paramétrisation adoptée pour construire les mocks. Elle est donnée dans l'équation~\ref{eq:b_qso}.
   $\beta_{\textsc{QSO}}$ est choisi constant et vaut $\beta_{\textsc{QSO}} = f / b_{\textsc{QSO}}(z_{eff})$, où $z_{eff}$ est le redshift effectif de la mesure.
   % Le taux de croissance $f$ est aussi choisi constant avec le redshift, et vaut $f = \num{0.9704}$.
   Le taux de croissance $f$ est lui aussi évalué au redshift effectif de la mesure.
@@ -317,7 +329,10 @@ Cette paramétrisation est celle choisie dans \textcite{prov}. Nous gardons cett
 Une fois les composantes multiplicatives incluses au modèle, nous pouvons transformer le $P(\vec k)$ modèle définit dans l'équation~\ref{eq:pk_model1} en fonction de corrélation $\xi(r, \mu)$.
 % Cette transformation est faite en utilisant FFTLog \autocite{Hamilton1999} :
 Pour ce faire,
-la fonction de corrélation est décomposée en polynômes de Legendre $P_l$ jusqu'à $l_{max} = 6$. Pour chaque $l \in [0 \, ; 2 \, ; 4\, ; 6]$, une transformation de Fourier est appliquée au spectre de puissance (\#prov en fait c'est plutôt une intégrale avec une fonction de Bessel. Donner une ref du papier d'Hamilton ? C'est aussi dans le papier Kirkby, eq 2.7 - 2.9). Etant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog \autocite{Hamilton1999}, qui apporte à la fois rapidité et précision.
+la fonction de corrélation est décomposée en polynômes de Legendre $P_l$ jusqu'à $l_{max} = 6$. Pour chaque $l \in [0 \, ; 2 \, ; 4\, ; 6]$,
+% une transformation de Fourier est appliquée au spectre de puissance (\#prov en fait c'est plutôt une intégrale avec une fonction de Bessel. Donner une ref du papier d'Hamilton ? C'est aussi dans le papier Kirkby, eq 2.7 - 2.9).
+le specre de puissance est multiplié par la fonction de Bessel $j_l$ puis intégré sur $\mu_k$ (voir l'équation 2.7 de \textcite{Kirkby2013}).
+Etant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog \autocite{Hamilton1999}, qui apporte à la fois rapidité et précision.
 Ainsi, en suivant cette procédure, nous obtenons les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ en choisissant $i = j = \mathrm{Ly}\alpha$, et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ en choisissant $i = \mathrm{Ly}\alpha$ et $j = \textsc{QSO}$.
 Afin de pouvoir ajuster les fonctions de corrélation calculées avec les données, nous devons prendre en compte dans nos modèles les corrélations parasites. Ces corrélations s'ajoutent au $\xi$ modèle calculé précédemment.
 A ce stade, nous distingons le modèle utilisé pour l'auto-corrélation et la corrélation croisée.
@@ -442,6 +457,7 @@ Ainsi, le modèle qui est ajusté aux données est $\xi_{\mathrm{distorsion}}(A)
 
 
 \subsection{Modélisation des mocks}
+\label{subsec:model_mock}
 Afin d'analyser les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO des mocks, nous utilisons les modèles ajustés sur les données et décrits dans la section précédente. Cependant, un certain nombre d'effets modélisés dans les données ne sont pas présents dans les mocks. Nous modifions donc légèrement les modèles décrits précédemment.
 
 Premièrement, nous n'incluons pas l'élargissement non linéaire du pic BAO dans les mocks. %Cet effet n'est pas non plus inclus par \texttt{quickquasars}. Lors du fit des mocks, nous forçons donc $\Sigma_{\perp} = \Sigma_{\parallel} = 0$.
@@ -507,6 +523,7 @@ En ce qui concerne la borne supérieure, le modèle est ajusté jusqu'à $r_{\ma
 
 \newpage
 \section{Analyse des mocks}
+\label{sec:mock_ana}
 Comme expliqué dans la section~\ref{sec:quickquasars}, nous produisons différentes versions de mocks : les raw mocks, pour lesquels le champ $\delta_F$ est obtenu directement à partir des vraies transmissions, et les mocks après l'utilisation de \texttt{quickquasars} : eboss-0.0, eboss-0.2 et eboss-0.3.
 Nous présentons dans cette section l'analyse de ces différentes versions de mocks.
 % Pour chacune des versions, nous calculons les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO. 
@@ -517,7 +534,7 @@ Nous présentons dans cette section l'analyse de ces différentes versions de mo
 Pour chacune des \Nmocks{} réalisations produites, nous avons estimé les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO des raw mocks.
 L'analyse de ces fonctions de corrélation permet d'identifier plus facilement les problèmes qui peuvent exister au niveau de la construction des mocks, car les effets dus à l'ajustement du continuum et les effets astrophysiques et instrumentaux introduits par \texttt{quickquasars} ne sont pas présents. Nous commençons donc par valider la construction des mocks, via l'étude des raw mocks, puis nous présentons l'analyse des versions des mocks avec quickquasars.
 
-Les fonctions de corrélation présentées ici sont estimées dans quatre bins en redshift. Ces bins sont les mêmes que ceux choisis pour analyser les données et déterminer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ à utiliser pour la construction des mocks (voir chapitre~\ref{prov}). Ces bins sont : $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$. Nous utilisons les mêmes bins afin de faciliter la comparaison entre les mocks et les données.
+Les fonctions de corrélation présentées ici sont estimées dans quatre bins en redshift. Ces bins sont les mêmes que ceux choisis pour analyser les données et déterminer $b_{\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ à utiliser pour la construction des mocks (voir section~\ref{subsec:data_ana}). Ces bins sont : $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$. Nous utilisons les mêmes bins afin de faciliter la comparaison entre les mocks et les données.
 Une fois les fonctions de corrélation estimées dans chaque bin et pour chaque réalisation, nous calculons, dans chaque bin en redshift, la moyenne de ces fonctions de corrélation, puis ajustons le résultat de cette moyenne. L'ajustement est fait avec le code \texttt{picca}.
 
 \subsubsection{L'auto-corrélation \lya{}$\times$\lya{}}
@@ -540,7 +557,7 @@ Les lignes en pointillés donnent la prédiction des mocks. L'écart visible ent
   \label{fig:cf_ebossraw_4bins}
 \end{figure}
 
-\begin{table}[b]
+\begin{table}[h]
   \centering
   \caption{Résultats de l'ajustement de l'auto-corrélation \lya{}$\times$\lya{} calculée sur la moyenne des \Nmocks{} raw mocks. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le redshift effectif $z_{\mathrm{eff}}$ et le $\chi^2$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1574}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1570}$. La dernière section donne le biais et le biais effectif du \lya{}.}
   \label{tab:cf_ebossraw_4bins}
@@ -592,7 +609,7 @@ $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1458 \pm 0.0002$ & $ -0.1721 \pm 0
 Le tableau~\ref{tab:cf_ebossraw_4bins} donne le résultat de l'ajustement dans chaque bin en redshift.
 Nous pouvons remarquer que les paramètres BAO $\apar{}$ et $\aperp{}$ sont compatibles avec 1.
 La figure~\ref{fig:bias_pred} présente le biais et le paramètre RSD du \lya{} obtenus dans l'ajustement des fonctions de corrélation \lya{}$\times$\lya{} des raw mocks (vert), ainsi que ceux obtenus dans l'ajustement des données (noir). 
-L'analyse en quatre bins en redshift des données est décrite dans la section~\ref{prov}.
+L'analyse en quatre bins en redshift des données est décrite dans la section~\ref{subsec:data_ana}.
 Les valeurs obtenues avec la prédiction lors de l'ajustement des paramètres des mocks sont indiquées en magenta.
 % Pour chaque bin en redshift, nous générons la prédiction au redshift effectif du bin. Les biais et paramètres RSD mesurés sur la prédiction sont présentés en (couleur).
 Enfin, pour chacun des jeux des données présentés sur la figure~\ref{fig:bias_pred}, nous ajustons une loi de puissance du type $a (1+z)^{\gamma}$.
@@ -617,7 +634,7 @@ Les déviations par rapport au modèle se compensent en partie lorsque nous rega
 
 Nous ne comprenons pas vraiment d'où proviennent ces corrélations parasites à grande échelle.
 % Ces corrélations ne sont pas présentes dans les mocks, car comme nous le verrons dans la section~\ref{prov}, nous ne les observons pas dans les mocks eboss-0.0 ni eboss-0.2.
-Nous suspectons la façon dont est calculé le champ $\delta_F$ : comme nous le verrons dans la section~\ref{prov}, nous n'observons aucune déviation de la sorte lorsque nous estimons les corrélations \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2.
+Nous suspectons la façon dont est calculé le champ $\delta_F$ : comme nous le verrons dans les sections~\ref{subsec:ana_eboss-0.0} et~\ref{subsec:ana_eboss-0.2}, nous n'observons aucune déviation de la sorte lorsque nous estimons les corrélations \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2.
 % Jusqu'à présent, les corrélations n'étaient pas estimées dans différents bins en redshift. Ainsi, plutôt que de calculer le champ $\delta_F$ dans les quatres bins en redshift que nous utilisons dans cette analyse, il serait intéressant de le calculer sur l'ensemble des forêts, puis d'estimer la corrélation croisée \lya{}$\times$QSO. Ceci est encouragé par le fait que les corrélations parasites semblent se compenser, en partie, lorsque nous moyennons les fonctions de corrélation.
 De plus, nous suspectons aussi le fait que nous calculons le champ $\delta_F$ et les fonctions de corrélation dans différents bins en redshift. Ceci n'était pas fait jusqu'à présent, et est très peu testé.
 Par exemple, le calcul de la corrélation croisée \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2 ne requiert pas, en principe, de retirer la corrélation mélangée. Cependant, lorsque nous avons estimé ces corrélations dans les quatres bins en redshift à partir des mocks eboss-0.0 et eboss-0.2, nous avons observé le même genre de déviations que celles observées sur la figure~\ref{fig:xcf_ebossraw_4bins}. Ces déviations se compensaient lorsque nous moyennions les corrélations des différents bins en redshift. Cependant, dans le but de mesurer la corrélation \lya{}$\times$QSO dans ces différents bins en redshift, nous avons décidé de retirer la corrélation mélangée dans chacun des bins en redshift. Ceci a résolu le problème et retiré les corrélations parasites.
@@ -652,7 +669,7 @@ Paradoxalement, cette solution ne fonctionne pas complètement pour les raw mock
 
 \subsubsection{Le spectre de puissance à une dimension}
 
-Comme expliqué dans la section~\ref{prov}, le procédure d'ajustement des mocks nous permet d'obtenir un spectre de puissance à une dimension $P^{\mathrm{1D}}$ correcte dans la gamme $\num{1.8} < z < \num{3.6}$.
+Comme expliqué dans la section~\ref{sec:tuning}, le procédure d'ajustement des mocks nous permet d'obtenir un spectre de puissance à une dimension $P^{\mathrm{1D}}$ correcte dans la gamme $\num{1.8} < z < \num{3.6}$.
 Cependant, lorsque nous calculons le spectre de puissance à une dimension à partir des raw mocks, nous observons des déviations par rapport au modèle sur lequel le $P^{\mathrm{1D}}$ des mocks est ajusté.
 La figure~\ref{fig:p1d_ebossraw} présente le spectre de puissance à une dimension estimé à partir des raw mocks dans différents bins en redshift. Les lignes continues donnent le modèle utilisé pour ajuster les mocks. Pour chacune des valeurs $z$ du redshift indiquées sur cette figure, le spectre de puissance à une dimension est estimée à l'aide de l'équation~\ref{eq:estimateur_p1d}, en considérant uniquement les pixels dont le redshift $z_i$ vérifie $z - \num{0.1} < z_i < z + \num{0.1}$.
 Sur la figure~\ref{fig:p1d_ebossraw}, nous pouvons remarquer une déviation par rapport au modèle pour les redshifts les plus à l'extérieur de l'interval $[\num{1.8};\;\num{3.6}]$.
@@ -671,7 +688,7 @@ Heureusement, les déviations que nous observons concernent uniquement les redsh
 \subsubsection{La corrélation à une dimension \lya{}$\times$\lya{}}
 Contrairement aux autres fonctions de corrélation, la corrélation à une dimension \lya{}$\times$\lya{} n'est pas estimée dans différents bins en redshift. Nous l'estimons sur une seule réalisation des raw mocks, en considérant les forêts de l'ensemble des quasars.
 La figure~\ref{fig:cf1d_ebossraw} présente cette corrélation.
-Du fait qu'elle est estimée à partir des raw mocks, elle ne possède ni les distorsions produites par l'ajustement du continuum, ni les HCD et les métaux. Nous ne comparons donc pas cette corrélation à celle des données. Cette comparaison est faite en utilisant la corrélation à une dimension estimée à partir des mocks eboss-0.3, présentée sur la figure~\ref{prov}.
+Du fait qu'elle est estimée à partir des raw mocks, elle ne possède ni les distorsions produites par l'ajustement du continuum, ni les HCD et les métaux. Nous ne comparons donc pas cette corrélation à celle des données. Cette comparaison est faite en utilisant la corrélation à une dimension estimée à partir des mocks eboss-0.3, présentée sur la figure~\ref{subsec:ana_eboss-0.3}.
 % A titre indicatif, la corrélation à une dimension estimée à partir des données DR16 est aussi représentée.
 % Les deux corrélations affichées sont normalisées par $\xi^{\mathrm{1D}}(0)$, c'est à dire la variance de $\delta_F$.
 % Il serait maladroit de comparer ces deux fonctions de corrélation, car celle estimée à partir des raw mocks ne possède ni les distorsions produites par l'ajustement du continuum, ni les HCD et les métaux. 
@@ -711,7 +728,7 @@ Le résultat de l'ajustement dans chaque bin en redshift est donné dans le tabl
 Nous pouvons voir dans ce tableau que les paramètres $\apar{}$ et $\aperp{}$ sont compatibles avec 1 à moins de $2 \sigma $.
 Le facteur de croissance $f$ est lui aussi en accord avec la cosmologie utilisée dans les mocks. Celui-ci varie de \num{0.960} à $z=\num{2.050}$ à \num{0.985} à $z=\num{3.257}$.
 
-\begin{table}[]
+\begin{table}[h]
   \centering
   \caption{Résultats de l'ajustement de l'auto-corrélation QSO$\times$QSO. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le redshift effectif $z_{\mathrm{eff}}$  et le $\chi^2$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1574}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1570}$. La dernière section donne le biais des quasars.}
   \label{tab:auto_qso_4bins}
@@ -751,7 +768,7 @@ $b_{\mathrm{QSO}} $ & $ 3.134 \pm 0.02$ & $ 3.968 \pm 0.02$ & $ 4.71 \pm 0.03$ &
   \label{fig:auto_qso}
 \end{figure}
 
-Sur la figure~\ref{fig:auto_qso_4bins}, nous pouvons remarquer que le modèle ajusté par picca décrit très bien les mocks. Une légère différence est visible à petit $r$. Cette différence dépend de $\mu$ : l'amplitude est trop faible le long de la ligne de visée, et trop importante perpendiculairement à cette dernière. Ceci semble provenir des RSD aux petites échelles.
+Sur la figure~\ref{fig:auto_qso_4bins}, nous pouvons remarquer que le modèle ajusté par \texttt{picca} décrit très bien les mocks. Une légère différence est visible à petit $r$. Cette différence dépend de $\mu$ : l'amplitude est trop faible le long de la ligne de visée, et trop importante perpendiculairement à cette dernière. Ceci semble provenir des RSD aux petites échelles.
 Le graphique de droite de la figure~\ref{fig:auto_qso} confirme cette hypothèse : la corrélation moyennée sur toute la gamme en $\mu$ est très bien décrite par le modèle de \texttt{picca} (ligne continue) ainsi que par la prédiction de cette corrélation (ligne en pointillés).
 
 Enfin, la figure~\ref{fig:bias_auto_qso} présente $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$ obtenus avec l'ajustement de la moyenne des dix fonctions de corrélation.
@@ -795,7 +812,7 @@ Ce petit écart (\SI{2}{\percent}) provient probablement d'une mesure pas assez 
 \end{figure}
 
 
-\begin{table}[]
+\begin{table}[h]
   \centering
   \caption{Résultats de l'ajustement de l'auto-corrélation HCD$\times$HCD calculée sur les mocks. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le redshift effectif $z_{\mathrm{eff}}$ et le $\chi^2$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1574}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1570}$. La dernière section donne le biais des HCD.}
   \label{tab:auto_hcd}
@@ -831,6 +848,7 @@ Ce petit écart (\SI{2}{\percent}) provient probablement d'une mesure pas assez 
 
 \newpage
 \subsection{Analyse des mocks eboss-0.0}
+\label{subsec:ana_eboss-0.0}
 Maintenant que nous avons vérifié que les raw mocks possèdent les bonnes fonctions de corrélation, nous pouvons analyser les mocks après avoir appliqué \texttt{quickquasars}.
 Nous commençons par présenter l'analyse des mocks eboss-0.0.
 % Afin de calculer le champ $\delta_F$, nous avons recours à l'ajustement du continuum. Les modèles incluent donc la matrice de distorsion. Contrairement aux raw mocks, les mocks issus de \texttt{quickquasars} contiennent du bruit instrumental. Les fonctions de corrélation sont donc plus bruitées.
@@ -856,7 +874,7 @@ La figure~\ref{fig:bias_cf} présente les paramètres $b_{\mathrm{Ly}\alpha}$ et
   \label{fig:cf_eboss00_4bins}
 \end{figure}
 
-\begin{table}[b]
+\begin{table}[h]
   \centering
   \caption{Résultats de l'ajustement de l'auto-corrélation \lya{}$\times$\lya{} calculée sur les mocks eboss-0.0. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1574}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1570}$. La dernière section donne le biais et le biais effectif du \lya{}.}
   \label{tab:cf_eboss00_4bins}
@@ -903,7 +921,7 @@ Ainsi, pour obtenir chaque bin en $\mu$, nous moyennons la fonction de corrélat
 Comme pour les autres corrélations, la corrélation \lya{}$\times$QSO est ajustée dans la gamme $r \in [20;\;180] \si{\perh\Mpc}$, ce qui correspond à un nombre de bins en $(\rpar{}, \rperp{})$ $N_{bin} = \num{3148}$, soit le double du nombre de bins utilisés pour ajuster l'auto-corrélation \lya{}$\times$\lya{}.
 
 Comme expliqué dans la section~\ref{subsec:model_donnees}, à cause de la dégénérescence entre les paramètres du \lya{} et ceux des quasars, nous fixons les paramètres $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$. Ces paramètres sont fixés à la valeur donnée par la paramétrisation (équation~\ref{eq:b_qso}) évaluée au redshift effectif de chaque ajustement. Ceci est validé par la mesure de $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$ avec l'auto-corrélation QSO$\times$QSO, qui est en accord avec la paramétrisation utilisée (voir section~\ref{subsubsec:auto_qso}).
-Nous pouvons remarquer sur la figure~\ref{fig:xcf_eboss00_4bins} que, comme pour l'auto-corrélation \lya$\times$\lya{}, le modèle ajusté par picca décrit très bien la corrélation croisée \lya{}$\times$QSO.
+Nous pouvons remarquer sur la figure~\ref{fig:xcf_eboss00_4bins} que, comme pour l'auto-corrélation \lya$\times$\lya{}, le modèle ajusté par \texttt{picca} décrit très bien la corrélation croisée \lya{}$\times$QSO.
 % Comme pour l'auto-corrélation, la corrélation croisée \lya{}$\times$QSO est en très bon accord avec le modèle ajusté par \texttt{picca}.
 
 Le tableau~\ref{tab:xcf_eboss00_4bins} présente le résultat de l'ajustement dans chaque bin de redshift.
@@ -921,7 +939,7 @@ Nous avons essayé d'augmenter $r_{\mathrm{min}}$ à \SI{30}{\perh\Mpc} dans l'a
   \label{fig:xcf_eboss00_4bins}
 \end{figure}
 
-\begin{table}[]
+\begin{table}[h]
   \centering
   \caption{Résultats de l'ajustement de la corrélation croisée \lya{}$\times$QSO calculée sur les mocks eboss-0.0. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{3148}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{3143}$. La dernière section donne le biais et le biais effectif du \lya{}. Le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$ est mesuré en \si{\perh\Mpc}.}
   \label{tab:xcf_eboss00_4bins}
@@ -981,10 +999,11 @@ $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1556 \pm 0.0005$ & $ -0.1959 \pm 0
 
 \newpage
 \subsection{Analyse des mocks eboss-0.2}
+\label{subsec:ana_eboss-0.2}
 Nous analysons à présent les mocks eboss-0.2. Ces mocks sont obtenus comme les mocks eboss-0.0, analysés précédemment, à la différence que le code \texttt{quickquasars} inclue les HCD dans les spectres synthétiques.
 Comme pour les données, nous masquons les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$. Cependant, dans le cas des mocks, le masquage s'effectue à partir du vrai catalogue de HCD.
 Lors de l'ajustement des fonctions de corrélation, nous modélisons l'effet des HCD non masqués sur ces corrélations.
-Nous présentons dans la section~\ref{prov} l'analyse d'une réalisation eboss-0.2 où les DLA ont été masqués en utilisant l'algorithme d'identification utilisé pour les données DR16.
+Nous présentons dans la section~\ref{subsec:effet_masquage_hcd} l'analyse d'une réalisation eboss-0.2 où les DLA ont été masqués en utilisant l'algorithme d'identification utilisé pour les données DR16.
 
 
 \subsubsection{L'auto-corrélation \lya{}$\times$\lya{}}
@@ -1010,7 +1029,7 @@ La figure~\ref{fig:bias_cf} présente les paramètres  $b_{\mathrm{Ly}\alpha}$ e
   \label{fig:cf_eboss02_4bins}
 \end{figure}
 
-\begin{table}[]
+\begin{table}[h]
   \centering
   \caption{Résultats de l'ajustement de l'auto-corrélation \lya{}$\times$\lya{} calculée sur les mocks eboss-0.2. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1574}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1568}$. La dernière section donne le biais et le biais effectif du \lya{}.}
   \label{tab:cf_eboss02_4bins}
@@ -1079,7 +1098,7 @@ Nous pouvons remarquer dans ce tableau que, comme pour les mocks eboss-0.0, la m
   \label{fig:xcf_eboss02_4bins}
 \end{figure}
 
-\begin{table}[]
+\begin{table}[h]
   \centering
   \caption{Résultats de l'ajustement de la corrélation croisée \lya{}$\times$QSO calculée sur les mocks eboss-0.2. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{3148}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{3141}$. La dernière section donne le biais et le biais effectif du \lya{}.}
   \label{tab:xcf_eboss02_4bins}
@@ -1149,10 +1168,11 @@ $b_{\mathrm{QSO}} $ & $ 3.326 \pm 0.0$ & $ 3.761 \pm 0.0$ & $ 4.351 \pm 0.0$ & $
   \label{fig:sum_bias}
 \end{figure}
 
-% \newpage
-% \subsection{Analyse des mocks eboss-0.3}
-% Cette section présente l'analyse des mocks eboss-0.3. Ces mocks sont obtenus comme les mocks eboss-0.2, analysés précédemment, à la différence que le code \texttt{quickquasars} ajoute les métaux dans les spectres synthétiques. Nous incluons donc les termes $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$ dans la modélisation des fonctions de corrélation.
-
+\newpage
+\subsection{Analyse des mocks eboss-0.3}
+\label{subsec:ana_eboss-0.3}
+Cette section présente l'analyse des mocks eboss-0.3. Ces mocks sont obtenus comme les mocks eboss-0.2, analysés précédemment, à la différence que le code \texttt{quickquasars} ajoute les métaux dans les spectres synthétiques. Nous incluons donc les termes $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$ dans la modélisation des fonctions de corrélation.
+Pour l'instant, ces mocks n'ont pas été analysés car l'ajustement des paramètres $A_m$ liés à chaque métal (voir section~\ref{sec:quickquasars}) n'est pas terminé. Nous présentons uniquement la fonction de corrélation à une dimension au stade actuel de cet ajustement.
 
 % \subsubsection{L'auto-corrélation \lya{}$\times$\lya{}}
 % \#prov figure du stack des CF dans les 4 bins en mu + modele picca lya + hcd + met \\
@@ -1170,10 +1190,22 @@ $b_{\mathrm{QSO}} $ & $ 3.326 \pm 0.0$ & $ 3.761 \pm 0.0$ & $ 4.351 \pm 0.0$ & $
 % \#prov montrer le P1D ?
 % Pourquoi pas, pour montrer les metaux ? Ou alors le xi1d
 
-% \subsubsection{La fonction de corrélation à une dimension}
-% Comparer les mocks et les données
+\subsubsection{La fonction de corrélation à une dimension}
+La figure~\ref{fig:cf1d_eboss03} présente la fonction de corrélation à une dimension obtenue à partir d'une réalisation des mocks eboss-0.3.
+Les points bleus donnent la corrélation calculée dans les données DR16.
+Les pics visibles dans cette corrélation sont dus aux métaux.
+Ces pics dans les mocks n'ont pas exactement la même amplitude que ceux dans les données. Ceci est dû au fait que les paramètres $A_m$ liés à chaque métal ne sont pas encore parfaitement ajustés.
+Cependant, nous pouvons noter que la forme global de la corrélation à une dimension estimée à partir des mocks eboss-0.3 est en relativement bon accord avec celle estimée à partir des données DR16.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.45]{cf1d_eboss03}
+  \caption{Fonctions de corrélation à une dimension obtenues à partir d'une réalisation des mocks eboss-0.3 (orange) et à partir des données DR16 (bleu).}
+  \label{fig:cf1d_eboss03}
+\end{figure}
+
 
 
 % \bibliography{../source/library}
-\printbibliography
-\end{document}
+% \printbibliography
+% \end{document}
