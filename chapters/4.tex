@@ -664,12 +664,19 @@ Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$.
 
 
 \paragraph{}
-\textbf{Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, les graphiques de cette figure représentent : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.}
+\textbf{
+  % Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, les graphiques de cette figure représentent : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
+  Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, le premier graphique de cette figure présente les champs à grande échelle $\delta_l$, $c(z)\eta_{\parallel}$ et la somme des deux. Le deuxième présente la somme $\delta_l + \delta_s$ et le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$. Le troisième présente la fraction de flux transmise $F$, et enfin le dernier graphique présente le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$. La remontée obersée pour les longueurs d'onde proches de \SI{1200}{\angstrom} est causée par la proximité de la raie \lya{}.
+}
+  
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.6]{building_trans.pdf}
-  \caption{De haut en bas : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Le quasar est situé à un redshift $z=\num{3.167}$.}
+  \caption{
+    % De haut en bas : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Le quasar est situé à un redshift $z=\num{3.167}$. La raie \lyb{} est visible à gauche dans le graphique du bas, et la base du pic \lya{} est visible à droite. Une DLA avec une grande densité de colonne est aussi visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
+    De haut en bas, le premier graphique présente les champs à grande échelle $\delta_l$, $c(z)\eta_{\parallel}$ et la somme des deux. Le deuxième présente la somme $\delta_l + \delta_s$ et le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$. Le troisième présente la fraction de flux transmise $F$, et enfin le dernier graphique présente le spectre du quasar. Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
+  }
   \label{fig:building_trans}
 \end{figure}
 

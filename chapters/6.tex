@@ -258,7 +258,7 @@ Une fois cette analyse produite, et toujours dans le but d'obtenir $b_{\mathrm{e
 %     \bottomrule
 % \end{tabular}
 % \end{table}
-Une fois avoir produit les ajustements présentés dans la section précédente, nous avons cherché à savoir si la mesure des paramètres \lya{} était fiable. Nous avons donc d'abord regardé la corrélation des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres du modèle. Le tableau~\ref{tab:corr_bias_lya} donnent les corrélations de $b_{\eta,\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres du modèle.
+Une fois avoir produit les ajustements présentés dans la section précédente, nous avons cherché à savoir si la mesure des paramètres \lya{} était fiable. Nous avons donc d'abord regardé la corrélation des paramètres $b_{\eta,\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres du modèle. Le tableau~\ref{tab:corr_bias_lya} présente ces corrélations.
 Premièrement, nous pouvons remarquer que les paramètres \lya{} sont très corrélés entre eux. Ceci vient du fait que le paramètre RSD du \lya{} est très important : le signal se trouve principalement le long de la ligne de visée. Avec peu de signal perpendiculairement à la ligne de visée, il est difficile de décorréler le biais du paramètre RSD du traceur.
 
 Deuxièmement, les paramètres du \lya{} sont très corrélés avec ceux des HCD, notament $\beta_{\mathrm{Ly}\alpha}$ qui est corrélé à \SI{-75}{\percent} avec $b_{\textsc{HCD}}$. Ceci pose plusieurs problèmes : d'abord, la modélisation des HCD choisie dans \textcite{prov} et utilisée ici consiste à identifier puis masquer les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$, les HCD non masqués étant pris en compte par le terme $F_{\textsc{HCD}}$ (voir section~\ref{subsec:model_donnees}). Cependant, l'algorithme utilisé ne possède pas une efficacité de \SI{100}{\percent} (\#prov ref papier solene). Des HCD avec une grande densité de colonne ne sont donc pas masqués.
@@ -440,13 +440,19 @@ En ce qui concerne les données, paradoxalement l'écart est moins important que
 
 \paragraph{}
 Nous avons aussi pu vérifier que ces deux modèles, lorsqu'ils sont ajustés sur les mocks eboss-0.0, mesurent une quantité de HCD compatible avec 0.
-Par ailleurs, dans une étude préliminaire au choix des paramètres lya{} à utiliser pour construire les mocks, nous avons étudié comment ces deux modèles se comportent lorsque nous augmentons la quantité de HCD. Pour ce faire, nous avons produit deux réalisations eboss-0.2, dont l'une posséde trois fois plus de HCD que l'autre. Puis, nous avons ajusté la fonction de corrélation \lya{}$\times$\lya{}, estimées à partir de ces deux versions, avec le modèle de Rogers et le modèle C-G. Le paramètre $b_{\textsc{HCD}} $ étant proportionnel au nombre de HCD, nous nous attendons à mesurer un biais trois fois plus grand dans la réalisation possédant trois fois plus de HCD. Cependant, ce n'est pas ce que nous observons. Le tableau~\ref{prov} résume ces mesures.
+Par ailleurs, dans une étude préliminaire au choix des paramètres lya{} à utiliser pour construire les mocks, nous avons étudié comment ces deux modèles se comportent lorsque nous augmentons la quantité de HCD.
+% Pour ce faire, nous avons produit deux réalisations eboss-0.2, dont l'une posséde trois fois plus de HCD que l'autre.
+Pour ce faire, à partir d'une même réalisation des mocks, nous avons produit deux versions de quickquasars eboss-0.2 : l'une avec le catalogue de HCD standard, l'autre avec un catalogue contenant 3 fois plus de HCD. Dans ces deux versions, les HCD qui vérifient $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués. Afin de faciliter la comparaison des résultats, nous utilisons le même sous-échantillon de quasars pour produire les spectres synthétiques et calculer la corrélation \lya{}$\times$\lya{} à partir de ces deux versions.
+Puis, nous avons ajusté la fonction de corrélation \lya{}$\times$\lya{}, estimées à partir de ces deux versions, avec le modèle de Rogers et le modèle C-G. Le paramètre $b_{\textsc{HCD}} $ étant proportionnel au nombre de HCD, nous nous attendons à mesurer un biais trois fois plus grand dans la réalisation possédant trois fois plus de HCD.
+Cependant, ce n'est pas ce que nous observons. Le tableau~\ref{prov} résume ces mesures.
+Comme observé précédemment, pour une même version, les mesures de $b_{\textsc{HCD}}$ faites avec le modèle de Rogers ou le modèle C-G ne sont pas compatibles. De plus, pour un même modèle, nous remarquons que $b_{\textsc{HCD}}$  mesuré dans la version contenant 3 fois plus de HCD n'est pas compatible avec 3 fois le biais des HCD mesuré dans l'autre version. Le biais des HCD mesuré dans la version contenant 3 fois plus de HCD est sous-estimé. Ceci a pour effet de réduire la mesure de $\beta_{\mathrm{Ly}\alpha}$.
+Nous pouvons tout fois noter que le modèle C-G produit des mesures de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ compatibles dans ces deux versions, ce qui n'est pas le cas du modèle de Rogers.
 
 
 \begin{table}[]
   \centering
-  \caption{}
-  \label{}
+  \caption{Mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$ et $b_{\textsc{HCD}}$ à partir de l'auto-corrélation \lya{}$\times$\lya{} estimée sur une réalisation des mocks eboss-0.2, où les HCD avec $\log n_{\mathrm{HI}} > \num{20.3}$ ont été masqués. Les deux premières lignes donnent les mesures faites avec le modèle de Rogers et le modèle C-G. Les deux dernières lignes donnent les mesures faites avec ces deux modèles en ajustant la corrélation \lya{}$\times$\lya{} estimée sur la même réalisation des mocks mais avec un catalogue contenant 3 fois plus de HCD. Afin que les mesures soient comparables, nous utilisons le même sous-échantillon de quasars pour mesurer la corrélation \lya{}$\times$\lya{}.}
+  \label{tab:hcd_dndz3}
   \begin{tabular}{lccc}
     \toprule
     Version  & $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ & $\beta_{\mathrm{Ly}\alpha}$ & $b_{\textsc{HCD}}$  \\
@@ -460,10 +466,34 @@ Par ailleurs, dans une étude préliminaire au choix des paramètres lya{} à ut
 \end{table}
 
 
+\subsection{Mieux comprendre les HCD}
 
 
-% \#prov comparer les bhcd eboss-0.2 et DR16 : beaucoup plus faible dans les mocks, malgré qu'on pense avoir la bonne distribution, au moins pour nhi > 20.3.
+Afin de comprendre pourquoi les deux modèles discutés dans la section précédente ont beaucoup de mal à distinguer la contribution des HCD de celle du \lya{}, nous avons essayé de comprendre l'effet des HCD sur les fonctions de corrélation.
+
+
+
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{cf_models}
+  \caption{bla}
+  \label{fig:cf_models}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{cf_models_no_dist}
+  \caption{bla}
+  \label{fig:cf_models_no_dist}
+\end{figure}
+
+
+
+
+%\#prov comparer les bhcd eboss-0.2 et DR16 : beaucoup plus faible dans les mocks, malgré qu'on pense avoir la bonne distribution, au moins pour nhi > 20.3.
 % Il faudrait multiplier le nombre de HCD par X pour que les mesures soit en accord (bhcd prop to number HCD)
+
+
 
 
 
