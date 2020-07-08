@@ -19,7 +19,7 @@ Dans ce chapitre, nous présentons la construction des \emph{mocks} : des spectr
 sont corrélées entre elles et avec le champ de quasars sous-jacent.
 %  et le champ de quasars possèdent les bonnes fonctions d'auto corrélation et de corrélation croisée.
 % des simulations qui visent à reproduire les données d'eBOSS et de DESI. Ces mocks, nommés \texttt{SaclayMocks} et présentés dans \textcite{CITE:mocks}, sont le c{\oe}ur de ce manuscrit.
-Ces mocks visent à reproduire les données d'eBOSS et de DESI. Ils sont nommés \texttt{SaclayMocks} et présentés dans \textcite{prov}.
+Ces mocks visent à reproduire les données d'eBOSS et de DESI. Ils sont nommés \texttt{SaclayMocks} et présentés dans \textcite{Etourneau2020}.
 Le code est écrit en Python\footnote{https://www.python.org/} et se trouve en accès libre sur GitHub\footnote{https://github.com/igmhub/SaclayMocks}. L'utilisation de ces mocks et leur validation seront présentés dans les chapitres suivants.
 
 \section{Objectifs des mocks}
@@ -90,7 +90,7 @@ Dans la suite nous décrivons les différentes boîtes nécessaires à la constr
 \label{subsubsec:boiteqso}
 Afin de construire un relevé de quasars corrélés, nous tirons les quasars selon le champ dans l'espace réel $\delta_{\textsc{QSO}}$, construit à partir de $\delta_k$. Une première solution serait de tirer les quasars dans les voxels dont le champ $\delta_{\textsc{QSO}}$ est supérieur à un certain seuil. Cette solution produit une fonction de corrélation correcte aux grandes échelles, mais pas aux petites.
 % En effet, comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière, qui se manifeste aux petites échelles.
-En effet, comme montré dans \textcite{prov}, les objets tirés aux endroits où la densité est supérieure à un certain seuil suivent la fonction de corrélation de la densité sous-jacente, avec un biais qui dépend du seuil choisi, si et seulement si la fonction de corrélation est petite devant 1. La fonction de corrélation ainsi obtenue est correcte, sauf pour les petites échelles pour lesquelles la fonction de corrélation est importante.
+En effet, comme montré dans \textcite{Font-Ribera2012a}, les objets tirés aux endroits où la densité est supérieure à un certain seuil suivent la fonction de corrélation de la densité sous-jacente, avec un biais qui dépend du seuil choisi, si et seulement si la fonction de corrélation est petite devant 1. La fonction de corrélation ainsi obtenue est correcte, sauf pour les petites échelles pour lesquelles la fonction de corrélation est importante.
 % Plutôt que de modéliser ces non linéarités, nous considérons une seconde solution : nous considérons que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
 Une solution alternative consiste à considérer que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
 % Comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière. Plutôt que de modéliser ces non linéaritées, nous considérons que les quasars suivent une distribution log-normale.
@@ -279,7 +279,7 @@ puis, nous définissons le champ $\hat \delta_{\textsc{QSO}, 12}$ comme une inte
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{qsolognormal2}
-  \caption{Gauche : fonctions de corrélations $\xi_{i}(z_i)$, normalisées par un facteur $1 / \alpha^2(z_i)$ et obtenues par interpolation (orange) et extrapolation (bleu et vert) des fonctions de corrélations $\xi_1$ et $\xi_2$ à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$. Leur obtention est détaillée dans le texte. Droite : rapports $\xi_i / \alpha^2(z_i) \xi_0$. Le redshift $z = \num{3.0}$ est le redshift pour lequel la déviation par rapport à $\xi_0$ est la plus importante.}
+  \caption{Gauche : fonctions de corrélation $\xi_{i}(z_i)$, normalisées par un facteur $1 / \alpha^2(z_i)$ et obtenues par interpolation (orange) et extrapolation (bleu et vert) des fonctions de corrélation $\xi_1$ et $\xi_2$ à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$. Leur obtention est détaillée dans le texte. Droite : rapports $\xi_i / \alpha^2(z_i) \xi_0$. Le redshift $z = \num{3.0}$ est le redshift pour lequel la déviation par rapport à $\xi_0$ est la plus importante.}
   \label{fig:qsolognormal2}
 \end{figure}
 La figure~\ref{fig:qsolognormal2} montre les fonctions de corrélation normalisées $\xi_i$ qui correspondent au champ $\hat \delta_{\textsc{QSO},12}$ à différents redshifts $z_i$. Elles sont obtenues en interpolant linéairement (équation~\ref{eq:boiteqsointerp2}) les fonctions de corrélation $\xi_1$ et $\xi_2$, elles-mêmes obtenues aux redshifts $z_1$ et $z_2$ grâce aux transformations log-normales (équation~\ref{eq:lognormal2}) de $\alpha^2(z_1)\xi_0$ et $\alpha^2(z_2)\xi_0$.
@@ -545,7 +545,7 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
   \begin{equation}
     P(k) =   G^2(k) P_{\mathrm{matière}}(k) \; ,
   \end{equation}
-  où $G(k)$ est le terme qui prend en compte la taille des voxcels :
+  où $G(k)$ est le terme qui prend en compte la taille des voxels :
   \begin{equation}
     \label{eq:effet_reso}
     G(k) = \mathrm{sinc}\left(\frac{k d_{cell}}{2}\right)  \; .
@@ -1129,7 +1129,7 @@ La figure~\ref{fig:params} présente les interpolations ainsi obtenues.
 \textbf{Les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift produisent des spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ en très bon accord avec le modèle. Les cinq $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{fig:p1d_tuning}. Les lignes continues donnent le modèle pour chaque valeur du redshift.
 Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.}
 Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
-\textbf{Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmise moyenne $\overline F$ en fonction du redshift obtenue avec cette procédure d'ajustement. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}. La mesure faite pour les redshifts proches de \num{3.6} est biaisée par le fait que seuls les pixels proches des quasars participent à cette mesure : la corrélation croisée \lya{}$\times$QSO a pour effet de réduire $F$.}
+\textbf{Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmise moyenne $\overline F$ en fonction du redshift obtenue avec cette procédure d'ajustement. Celle-ci est mesurée sur une réalisation complète. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}. La mesure faite pour les redshifts proches de \num{3.6} est biaisée par le fait que seuls les pixels proches des quasars participent à cette mesure : la corrélation croisée \lya{}$\times$QSO a pour effet de réduire $F$.}
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{p1dmiss}
@@ -1145,7 +1145,7 @@ Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du
 \begin{figure}
   \centering
   \includegraphics[scale=0.55]{mean_trans_mock}
-  \caption{Fraction de flux transmise moyenne $\overline F$ en fonction du redshift mesurée dans les mocks. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}.}
+  \caption{Fraction de flux transmise moyenne $\overline F$ en fonction du redshift mesurée sur une réalisation des mocks. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}.}
   \label{fig:mean_trans_mock}
 \end{figure}
 

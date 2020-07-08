@@ -18,10 +18,10 @@
 
 
 Ce chapitre a pour vocation de présenter l'analyse menée sur les mocks, afin de valider leur construction et le choix des différents paramètres.
-Nous présentons d'abord les estimateurs des diverses fonctions de corrélations, puis les modèles ajustés sur celles-ci.
+Nous présentons d'abord les estimateurs des diverses fonctions de corrélation, puis les modèles ajustés sur celles-ci.
 Nous donnons premièrement le modèle ajusté sur les données et présenté dans \textcite{DuMasdesBourboux2020}, puis le modèle modifié ajusté sur les mocks.
 Enfin, nous présentons l'analyse des \Nmocks{} réalisations de mocks produites. Le résultat de l'analyse des données, utilisée pour choisir les paramètres \lya{} des mocks, est présentée dans le chapitre suivant.
-Toutes ces analyses sont produites avec le code \texttt{picca}. Ce code permet de calculer les champs $\delta$, les fonctions de corrélations, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.
+Toutes ces analyses sont produites avec le code \texttt{picca}. Ce code permet de calculer les champs $\delta$, les fonctions de corrélation, les matrices de distorsion, les matrices de covariance ainsi que de réaliser l'ajustement du modèle.
 
 \section{Les estimateurs}
 \label{sec:estimateurs}
@@ -206,12 +206,13 @@ où $W_{A} = \sum_{(i,j)\in A} w_i w_j$ est le poids du bin A. Pour la corrélat
 Comme précédemment, les indices $i$ correspondent aux pixels des forêts, et $j$ aux quasars. A cause de la double somme, le calcul de la matrice de distorsion est très long. Afin de rendre possible l'estimation de cette dernière, le calcul est fait sur \SI{1}{\percent} des paires, tirées au hasard.
 % L'étude présentée dans~\textcite{bautista_measurement_2017}
 
-\textbf{La figure~\ref{fig:effet_dmat} présente l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatre gammes en $\mu$. Les points bleus donnent la corrélation estimée à partir des raw mocks, c'est à dire sans les distorsions liées à l'ajustement du continuum. La ligne continue bleue donne l'ajustement du modèle de \texttt{picca}. Les points rouges donnent la corrélation estimée à partir des mocks eboss-0.0. Cette corrélation est affectée par les distorsions de l'ajustement du continuum. La courbe rouge donne l'ajustement du modèle. La matrice de distorsion permet ainsi de passer de la courbe bleue, à la courbe rouge.}
+\textbf{La figure~\ref{fig:effet_dmat} présente l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatre gammes en $\mu$. Les points bleus donnent la corrélation estimée à partir des raw mocks, c'est à dire sans les distorsions liées à l'ajustement du continuum. La ligne continue bleue donne l'ajustement du modèle de \texttt{picca}. Les points rouges donnent la corrélation estimée à partir des mocks eboss-0.0. Cette corrélation est affectée par les distorsions de l'ajustement du continuum. La courbe rouge donne l'ajustement du modèle sur cette corrélation. La matrice de distorsion permet ainsi de passer de la courbe bleue, à la courbe rouge.}
 
 \textbf{La matrice de distorsion est un objet uniquement géométrique. Son calcul est indépendant du champ $\delta_F$. Elle ne dépend uniquement de la géométrie du relevé et de la distribution des poids.
 % La figure~\ref{prov} montre la différence entre ... \#prov montrer la difference du fit d'une réa avec sa DM et avec une autre DM et/ou le stack de 10 avec les 10 DM ou dix fois la meme. Est-ce que les DM eboss-0.0 et eboss-0.2 sont différentes ?\\
-Ainsi, il n'est pas nécessaire de calculer la matrice de distorsion pour les \Nmocks réalisations des mocks.
-Dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois. L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.}
+  Il n'est pas nécessaire, en principe, de calculer la matrice de distorsion pour les \Nmocks{} réalisations des mocks.
+  Nous vérifions cela en comparant le résultat de l'ajustement de la corrélation \lya{}$\times$\lya{} estimée à partir d'une réalisation et ajustée avec la matrice de distorsion calculée à partir de cette réalisation, au résultat de l'ajustement de la même corrélation, ajustée avec la matrice de distorsion d'une autre réalisation. Les différences observées entre ces deux ajustements sont plus faibles que les erreurs liées à chaque paramètre.
+Ainsi, dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois. L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.}
 
 \begin{figure}
   \centering
@@ -393,7 +394,7 @@ Dans le cas de la corrélation croisée, la matrice est calculée pour tous les 
 
 Le modèle utilisé pour construire les fonctions de corrélation $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$ et le même que celui utilisé pour construire les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ (équation~\ref{eq:pk_model1}) mais avec les paramètres $b_i$, $b_j$, $\beta_i$ et $\beta_j$ qui sont ceux des métaux. Du fait que les métaux sont mesurables principalement le long de la ligne de visée, il est difficile d'ajuster à la fois le biais et le paramètre RSD de chaque métal. Nous ajustons donc uniquement le biais de chaque métal, le paramètre RSD étant fixé à $\beta_m = \num{0.5}$.
 % De plus, nous négligeons l'impact des HCD sur les fonctions de corrélations $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
-De plus, comme la quantité de métaux dans le milieu intergalactique est bien moins importante que celle de l'hydrogène, il n'existe pas ou peu de structures denses constituées de métaux. Nous n'incluons donc pas la modélisation des HCD dans les fonctions de corrélations $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
+De plus, comme la quantité de métaux dans le milieu intergalactique est bien moins importante que celle de l'hydrogène, il n'existe pas ou peu de structures denses constituées de métaux. Nous n'incluons donc pas la modélisation des HCD dans les fonctions de corrélation $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
 
 \begin{table}[]
   \centering
@@ -475,7 +476,7 @@ Les versions eboss-0.3 incluent à la fois les HCD et les métaux. L'ajustement 
 Pour l'ajustement des corrélations croisées \lya{}$\times$QSO, nous gardons le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$. Même si \texttt{quickquasars} ajoute une erreur statistique sur les redshifts des quasars, cette erreur est nulle en moyenne. Nous nous attendons donc à obtenir $\Delta_{\rpar{}, \textsc{QSO}} = 0$ dans l'ajustement des différentes versions des mocks. Ainsi, $\Delta_{\rpar{}, \textsc{QSO}}$ sert de test de la construction des mocks, pour vérifier par exemple que les lignes de visées sont placées correctement à partir de chaque quasar.
 
 \paragraph{}
-Comme pour les données, les fonctions de corrélations sont évaluées sur une grille de séparation d'intervale \SI{4}{\perh\Mpc}. Nous gardons donc le terme $G(\vec k)$ dans la modélisation des mocks.
+Comme pour les données, les fonctions de corrélation sont évaluées sur une grille de séparation d'intervale \SI{4}{\perh\Mpc}. Nous gardons donc le terme $G(\vec k)$ dans la modélisation des mocks.
 Dans le cas des mocks, nous incluons un terme supplémentaire, qui prend en compte le lissage gaussien appliqué au champ $\delta_l$ interpolé. Ce terme est donné par
 \begin{equation}
   % W(\kpar{}, \kperp{}) = \exp(- \frac{(\kpar{} \sigma^{smooth}_{\parallel})^2 + (\kperp{} \sigma^{smooth}_{\perp})^2}{2}) \; .
@@ -634,11 +635,11 @@ Les déviations par rapport au modèle se compensent en partie lorsque nous rega
 
 Nous ne comprenons pas vraiment d'où proviennent ces corrélations parasites à grande échelle.
 % Ces corrélations ne sont pas présentes dans les mocks, car comme nous le verrons dans la section~\ref{prov}, nous ne les observons pas dans les mocks eboss-0.0 ni eboss-0.2.
-Nous suspectons la façon dont est calculé le champ $\delta_F$ : comme nous le verrons dans les sections~\ref{subsec:ana_eboss-0.0} et~\ref{subsec:ana_eboss-0.2}, nous n'observons aucune déviation de la sorte lorsque nous estimons les corrélations \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2.
+Nous suspectons le calcul du champ $\delta_F$ ou des corrélations : comme nous le verrons dans les sections~\ref{subsec:ana_eboss-0.0} et~\ref{subsec:ana_eboss-0.2}, nous n'observons aucune déviation de la sorte lorsque nous estimons les corrélations \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2.
 % Jusqu'à présent, les corrélations n'étaient pas estimées dans différents bins en redshift. Ainsi, plutôt que de calculer le champ $\delta_F$ dans les quatres bins en redshift que nous utilisons dans cette analyse, il serait intéressant de le calculer sur l'ensemble des forêts, puis d'estimer la corrélation croisée \lya{}$\times$QSO. Ceci est encouragé par le fait que les corrélations parasites semblent se compenser, en partie, lorsque nous moyennons les fonctions de corrélation.
-De plus, nous suspectons aussi le fait que nous calculons le champ $\delta_F$ et les fonctions de corrélation dans différents bins en redshift. Ceci n'était pas fait jusqu'à présent, et est très peu testé.
+De plus, nous suspectons aussi le fait que nous calculons les fonctions de corrélation dans différents bins en redshift. Ceci n'était pas fait jusqu'à présent, et est très peu testé.
 Par exemple, le calcul de la corrélation croisée \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2 ne requiert pas, en principe, de retirer la corrélation mélangée. Cependant, lorsque nous avons estimé ces corrélations dans les quatres bins en redshift à partir des mocks eboss-0.0 et eboss-0.2, nous avons observé le même genre de déviations que celles observées sur la figure~\ref{fig:xcf_ebossraw_4bins}. Ces déviations se compensaient lorsque nous moyennions les corrélations des différents bins en redshift. Cependant, dans le but de mesurer la corrélation \lya{}$\times$QSO dans ces différents bins en redshift, nous avons décidé de retirer la corrélation mélangée dans chacun des bins en redshift. Ceci a résolu le problème et retiré les corrélations parasites.
-Paradoxalement, cette solution ne fonctionne pas complètement pour les raw mocks. Il serait intéressant de calculer le champ $\delta_F$ sur l'ensemble des forêts, puis calculer la corrélation croisée en retirant la corrélation mélangée, et vérifier que ces corrélations parasites disparaissent complètement.
+Paradoxalement, cette solution ne fonctionne pas complètement pour les raw mocks. Il serait intéressant de calculer les fonctions de corrélation \lya{}$\times$QSO directement sur l'ensemble des forêts, afin de vérifier que ces corrélations parasites disparaissent.
 
 
 \begin{figure}
@@ -1164,7 +1165,7 @@ $b_{\mathrm{QSO}} $ & $ 3.326 \pm 0.0$ & $ 3.761 \pm 0.0$ & $ 4.351 \pm 0.0$ & $
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{sum_bias}
-  \caption{Mesures des paramètres $b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}$ et $b_{\mathrm{Ly}\alpha}\beta_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}\beta_{\textsc{HCD}}$ dans la corrélation \lya{}$\times$\lya{} estimée à partir des données DR16 (noir), dans la corrélations \lya{}$\times$\lya{} estimée à partir des mocks eboss-0.2 (points rouges) et dans la corrélation \lya{}$\times$QSO estimée à partir des mocks eboss-0.2 (croix rouges).}
+  \caption{Mesures des paramètres $b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}$ et $b_{\mathrm{Ly}\alpha}\beta_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}\beta_{\textsc{HCD}}$ dans la corrélation \lya{}$\times$\lya{} estimée à partir des données DR16 (noir), dans la corrélation \lya{}$\times$\lya{} estimée à partir des mocks eboss-0.2 (points rouges) et dans la corrélation \lya{}$\times$QSO estimée à partir des mocks eboss-0.2 (croix rouges).}
   \label{fig:sum_bias}
 \end{figure}
 
