@@ -470,14 +470,16 @@ Nous pouvons tout fois noter que le modèle C-G produit des mesures de $b_{\math
 
 
 Afin de comprendre pourquoi les deux modèles discutés dans la section précédente ont beaucoup de mal à distinguer la contribution des HCD de celle du \lya{}, nous avons essayé de comprendre l'effet des HCD sur les fonctions de corrélation.
-
-
-
+La figure~\ref{fig:cf_models} présente les différentes composantes du modèle ajusté sur l'auto-corrélation \lya{}$\times$\lya{} estimée à partir des données DR16. Ce modèle est présenté dans la section~\ref{subsec:model_donnees}.
+Sur cette figure, la ligne bleue donne le modèle de Kaiser, c'est à dire la fonction de corrélation obtenue à partir du spectre de puissance $P_{\mathrm{QL}}$ (équation~\ref{eq:pk_ql}) et multiplié par le facteur de Kaiser $b_{\mathrm{eff},\mathrm{Ly}\alpha}^2 (1 + \beta_{\mathrm{Ly}\alpha} \mu^2)$. La ligne verte donne le modèle de Kaiser multiplié par le terme $F_{\mathrm{NL}}^{\mathrm{autp}}$ qui prend en compte les non-linéarités aux petites échelles. La ligne orange donne le modèle précédent auquel la contribution des HCD a été ajoutée (équation~\ref{eq:bias_hcd_def}). La ligne rouge donne le modèle précédent plus la contribution des métaux et la ligne violette donne le modèle complet. L'auto-corrélation \lya{}$\times$\lya{} estimée à partir des données DR16 est représentée par les points noirs. La figure~\ref{fig:cf_models_no_dist} donnent ces mêmes modèles non multipliés par la matrice de distorsion.
+Nous pouvons remarquer sur ces figures que les HCD ont un effet très similaire à un biais plus important.
+Ceci est d'autant plus vrai lorsque les modèles sont multipliés par la matrice de distorsion (figure~\ref{fig:cf_models}).
+Cela explique en partie la dégénérescence entre les paramètres \lya{} et ceux des HCD.
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{cf_models}
-  \caption{bla}
+  \caption{Les différentes composantes du modèle ajusté sur l'auto-corrélation \lya{}$\times$\lya{} des données DR16. Elles sont décrites dans le texte. Les points noirs donnent l'estimation de la corrélation \lya{}$\times$\lya{} des données DR16.}
   \label{fig:cf_models}
 \end{figure}
 \begin{figure}
@@ -487,6 +489,10 @@ Afin de comprendre pourquoi les deux modèles discutés dans la section précéd
   \label{fig:cf_models_no_dist}
 \end{figure}
 
+
+\paragraph{}
+Nous avons ensuite regardé l'effet des différentes gammes de $\log n_{\mathrm{HI}}$ des HCD sur la fonction de corrélation \lya{}$\times$\lya{}.
+Pour ce faire, à partir de la même réalisation des mocks, nous avons produit six versions eboss-0.2. Dans chacune de ces versions, nous ajoutons les HCD avec une valeur de $\log n_{\mathrm{HI}}$ fixe. Ces valeurs pour les six versions sont $\log n_{\mathrm{HI}} \in [\num{17};\;\num{17.6};\;\num{18.2};\;\num{18.8};\;\num{19.4};\;\num{20}]$. Les nombres relatifs de HCD entre ces versions suit la distribution en $\log n_{\mathrm{HI}}$ utilisée pour construire le catalogue standard de HCD (présentée sur la figure~\ref{fig:distrib_dla}).
 
 
 

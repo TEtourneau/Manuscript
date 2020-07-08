@@ -264,16 +264,18 @@ Le spectre de puissance utilisé dans la modélisation de la fonction de corrél
   \label{eq:pk_model1}
   P(\vec k) = b_i b_j (1+\beta_i \mu_k^2)(1+\beta_j \mu_k^2) P_{\mathrm{QL}}(\vec k) F_{\mathrm{NL}}(\vec k) G(\vec k) \; .
 \end{equation}
-% où $b_i$ est le biais du traceur $i$, $\beta_i$ le paramètre RSD du traceur $i$. $P_{QL}$ donne le spectre de puissance \emph{quasi-linéaire}. $F_{NL}$ prend en compte les non linéarités.
+% où $b_i$ est le biais du traceur $i$, $\beta_i$ le paramètre RSD du traceur $i$. $P_{QL}$ donne le spectre de puissance \emph{quasi-linéaire}. $F_{NL}$ prend en compte les non-linéarités.
 Les termes $b_i (1+\beta_i \mu_k^2)$ et $b_j (1+\beta_j \mu_k^2)$ sont les facteurs de Kaiser (équation~\ref{eq:kaiser3}) relatifs aux traceurs $i$ et $j$.
 $P_{\mathrm{QL}}$ est le spectre de puissance \emph{quasi-linéaire}. Il est découpé en deux composantes $P_{\mathrm{smooth}}$ et $P_{\mathrm{peak}}$ comme
 \begin{equation}
+  \label{
+    eq:pk_ql}
   P_{\mathrm{QL}}(\vec k, z) = P_{\mathrm{smooth}}(k, z) + \exp(- \frac{k_{\parallel}^2 \Sigma_{\parallel}^2 + k_{\perp}^2 \Sigma_{\perp}^2}{2}) P_{\mathrm{peak}}(k,z) \; .
 \end{equation}
 $P_{\mathrm{smooth}}$ est le spectre de puissance linéaire, sans les BAO. Il est construit à partir du spectre de puissance linéaire $P_{\mathrm{L}}$ donné par Camb, puis les BAO sont retirées en utilisant la technique \emph{side-band} décrite dans \textcite{Kirkby2013}.
 Le spectre de puissance $P_{\mathrm{peak}}$ est alors obtenu comme la différence $P_{\mathrm{L}} - P_{\mathrm{smooth}}$ : il contient uniquement les oscillations dues aux BAO présentes dans le spectre de puissance linaire.
 Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$  \autocite{eisenstein_robustness_2007}.
-Le terme $F_{\mathrm{NL}}$ prend en compte les non linéarités aux petites échelles. Nous distinguons $F_{\mathrm{NL}}^{\mathrm{auto}}$ et $F_{\mathrm{NL}}^{\mathrm{cross}}$. Pour l'auto-corrélation, les effets non linéaires proviennent de l'élargissement thermique, des vitesses particulières et de la croissance des structures non linéaire.
+Le terme $F_{\mathrm{NL}}$ prend en compte les non-linéarités aux petites échelles. Nous distinguons $F_{\mathrm{NL}}^{\mathrm{auto}}$ et $F_{\mathrm{NL}}^{\mathrm{cross}}$. Pour l'auto-corrélation, les effets non linéaires proviennent de l'élargissement thermique, des vitesses particulières et de la croissance des structures non linéaire.
 Comme lors de la modélisation du $P^{\mathrm{1D}}$, nous utilisons le modèle décrit dans \textcite{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section ``Planck'' de la table 7 de \textcite{Arinyo-i-Prats2015}.
 Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéaires des quasars. Cet effet est modélisé par une lorrentzienne :
 \begin{equation}
