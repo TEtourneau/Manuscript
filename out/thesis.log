@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 JUL 2020 09:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 JUL 2020 10:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -4573,13 +4573,13 @@ Package pdftex.def Info: ../figures/mocks_ana/xcf_ebossraw_4bins.png used on in
 put line 647.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
-<../figures/mocks_ana/xcf_ebossraw.png, id=1906, 1088.065pt x 452.69125pt>
+<../figures/mocks_ana/xcf_ebossraw.png, id=1906, 1023.825pt x 423.5825pt>
 File: ../figures/mocks_ana/xcf_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_ebossraw.png>
 Package pdftex.def Info: ../figures/mocks_ana/xcf_ebossraw.png used on input li
 ne 653.
-(pdftex.def)             Requested size: 435.21829pt x 181.07329pt.
+(pdftex.def)             Requested size: 409.52274pt x 169.43pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4603,6 +4603,9 @@ File: ../figures/mocks_ana/cf1d_ebossraw.png Graphic file (type png)
 Package pdftex.def Info: ../figures/mocks_ana/cf1d_ebossraw.png used on input l
 ine 700.
 (pdftex.def)             Requested size: 420.06834pt x 153.57336pt.
+
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4923,7 +4926,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  37337 strings out of 492995
  683664 string characters out of 6132704
- 1600694 words of memory out of 5000000
+ 1600693 words of memory out of 5000000
  39391 multiletter control sequences out of 15000+600000
  219335 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -5097,7 +5100,7 @@ ic/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt
 9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on thesis.pdf (147 pages, 10773534 bytes).
+Output written on thesis.pdf (147 pages, 10728582 bytes).
 PDF statistics:
  2483 PDF objects out of 2487 (max. 8388607)
  2045 compressed objects within 21 object streams
