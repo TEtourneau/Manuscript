@@ -207,8 +207,11 @@ bottom=30mm
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
     \newpage}
-    
-    
+  
+% Command to set up a particular alignment for a cell in tabular :
+% \myalign{c}{foo} for instance
+\newcommand*{\myalign}[2]{\multicolumn{1}{#1}{#2}}
+ 
 \renewcommand{\thesection}{\arabic{section}}
 
 % Romain
