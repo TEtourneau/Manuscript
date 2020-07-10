@@ -21,11 +21,11 @@
   \sortlist[entry]{nyt/global/}
     \entry{Agathe2019a}{article}{}
       \name{author}{19}{}{%
-        {{uniquename=0,hash=8227a9133f3c83b0e88474ae6fa21680}{%
-           family={Agathe},
-           familyi={A\bibinitperiod},
-           given={Victoria\bibnamedelimb de\bibnamedelima Sainte},
-           giveni={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{uniquename=0,hash=f82aa6597742563755be5678c467fa6c}{%
+           family={{de Sainte Agathe}},
+           familyi={d\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod}}}%
         {{uniquename=0,hash=380c81f5e51d036a0301ae48296f61bb}{%
            family={Balland},
            familyi={B\bibinitperiod},
@@ -119,12 +119,12 @@
            given={Christophe},
            giveni={C\bibinitperiod}}}%
       }
-      \strng{namehash}{56360ede20dac54ca358cf5a398adb15}
-      \strng{fullhash}{1c05a19a395bfd5e33de8f6c6b357d26}
-      \strng{authornamehash}{56360ede20dac54ca358cf5a398adb15}
-      \strng{authorfullhash}{1c05a19a395bfd5e33de8f6c6b357d26}
-      \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \strng{namehash}{16cf4668ec170cf7dea634353972befe}
+      \strng{fullhash}{472ddb56bf15d69daed8f7a02c264426}
+      \strng{authornamehash}{16cf4668ec170cf7dea634353972befe}
+      \strng{authorfullhash}{472ddb56bf15d69daed8f7a02c264426}
+      \field{sortinit}{d}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -145,8 +145,67 @@
       \verb https://arxiv.org/abs/1904.03400
       \endverb
     \endentry
+    \entry{DuMasdesBourboux2020}{article}{}
+      \name{author}{9}{}{%
+        {{uniquename=0,hash=1a3520767d5b0bfde2a47877874d511f}{%
+           family={{du Mas des Bourboux}},
+           familyi={d\bibinitperiod},
+           given={Hélion},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=3eb4881ae1c93d5acc00b3b1f6d63455}{%
+           family={Rich},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=a1471d6d4f092fecd93ee513589b480e}{%
+           family={Font-Ribera},
+           familyi={F\bibinithyphendelim R\bibinitperiod},
+           given={Andreu},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=f82aa6597742563755be5678c467fa6c}{%
+           family={{de Sainte Agathe}},
+           familyi={d\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod}}}%
+        {{uniquename=0,hash=38ce25e7aa7b91d216d068a0e9574ee8}{%
+           family={Farr},
+           familyi={F\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=566bd9c5a481bf7512dd2cb657ba63d2}{%
+           family={Etourneau},
+           familyi={E\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=ce0a612b9ab914511d3db3595d0e07a0}{%
+           family={{Le Goff}},
+           familyi={L\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=29a8d7ddd7eb4ca252d9505efe6d162a}{%
+           family={Cuceu},
+           familyi={C\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=3279a0e8b17757485c8d54d708aa6624}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Et},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{77d90a5ca6561f6b398003df5202b105}
+      \strng{fullhash}{26c242f60fb35166a68e992f10e3d0af}
+      \strng{authornamehash}{77d90a5ca6561f6b398003df5202b105}
+      \strng{authorfullhash}{26c242f60fb35166a68e992f10e3d0af}
+      \field{sortinit}{d}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{THE COMPLETED SDSS-IV EXTENDED BARYON OSCILLATION SPECTROSCOPIC SURVEY: BARYON ACOUSTICOSCILLATIONS WITH LYMAN-ALPHA FORESTS}}
+      \field{year}{2020}
+    \endentry
   \endsortlist
-  \missing{prov}
 \endrefsection
 \endinput
 
