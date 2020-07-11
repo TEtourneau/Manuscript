@@ -11,14 +11,11 @@
 \minitoc
 \newpage
 \thispagestyle{fancy}
-\textbf{
-  Ca manuscrit a pour but de présenter les études menées tout au long de ma thèse de doctorat. Durant ces trois ans, j'ai étudié les fonctions de corrélation de l'absorption $\mathrm{Lyman-}\alpha$ dans les forêts des spectres de quasars. Cette étude a été conduite en grande partie grâce au développement de simulation. J'ai aussi pu analyser les données provenant du relevé eBOSS. Ceci m'a permis de mettre en parallèle mes simulations avec les données.
-}
+% \textbf{
+%   Ca manuscrit a pour but de présenter les études menées tout au long de ma thèse de doctorat. Durant ces trois ans, j'ai étudié les fonctions de corrélation de l'absorption $\mathrm{Lyman-}\alpha$ dans les forêts des spectres de quasars. Cette étude a été conduite en grande partie grâce au développement de simulation. J'ai aussi pu analyser les données provenant du relevé eBOSS. Ceci m'a permis de mettre en parallèle mes simulations avec les données.
+% }
 
-
-\textbf{
   Ce premier chapitre présente la cosmologie moderne et explique brièvement sa construction au fil du siècle dernier. L'idée est de donner une vue d'ensemble du paradigme actuel, tout en détaillant davantage les points clés nécessaires à ce manuscrit. Pour une étude approfondie de la cosmologie moderne, nous référons le lecteur aux ouvrages suivants :~\textcite{Rich2010},~\textcite{Dodelson2003}.
-  }
 
 \section{Qu'est-ce que la cosmologie ?}
 Le terme cosmogonie (du grec \emph{cosmo-} : monde ; \emph{gon-} : engendrer) désigne une conception et tentative d'explication de la naissance du monde, et parfois de l'Homme. Il existe une grand nombre de cosmogonies, très souvent d'origines religieuses. Nous pouvons citer par exemple la cosmogonie hindoue, dans laquelle le monde est vu comme un cycle : le dieu Brahma crée le monde lorsqu'il se réveille, et le détruit lorsqu'il s'endort. Notre univers correspond ainsi à une journée de Brahma, débutant lorsque Brahma ouvre les yeux et prenant fin lorsqu'il les referme. Le monde suit ainsi une suite de créations et de destructions.
@@ -50,8 +47,8 @@ Nous pouvons noter ici qu'après avoir publié sa théorie, Einstein ajoute dans
 Ces quinze années (1915 - 1929) très fertiles pour la cosmologie ont popularisé l'idée d'un univers en expansion. Si certains s'y opposent et défendent un univers statique, d'autres s'y intéressent et étudient en détail les conséquences de ces modèles théoriques. Si l'univers est en expansion, c'est qu'il a été dans le passé plus petit qu'il ne l'est aujourd'hui. L'étude des solutions aux équations d'Einstein montre que l'expansion dilue la matière dans l'univers, et conduit à son refroidissement. L'univers était donc plus chaud et plus dense dans le passé. Si l'on remonte suffisament dans l'histoire de l'univers, celui ci devient de plus en plus dense, jusqu'à être à l'origine infiniment chaud et dense. Ceci conduit à nommer ces classes de modèles \emph{hot big bang models}, ou modèles de big bang chaud en français. Il est à noter que cet \emph{instant zéro} est une extrapolation des modèles et reste hypothétique : au delà d'une certaine température et densité, les effets quantiques ne peuvent plus être négligés, rendant alors impossible l'utilisation de la relativité générale. Cet instant est appelé mur de Planck. Afin de comprendre ce qu'il se passe entre le mur de Planck et l'instant zéro, une théorie traitant à la fois la gravitation et l'aspect quantique de la matière est nécessaire. C'est un domaine de recherche très dynamique aujourd'hui, dans lequel un grand nombre de théories de gravité quantique sont étudiées.
 % . Ces points conduisent à nommer ces classes de solutions \emph{hot big bang models}, ou modèles de big bang en français, symbolisant l'idée qu'à l'origine\footnote{\#prov ou plutôt aussi loin que nous puissions remonter ? Ca vaut peut-être le coup d'expliquer la distinction}, l'univers fût un point infiniment chaud et dense.
 
-Suite notamment aux publications de Friedmann, Lemaître et Hubble, les défenseurs des modèles de big bang ont commencé à chercher des observables capables de prouver ces modèles. En 1948, George Gamow, Ralph Alpher et Robert Herman, reprenant les travaux de Georges Lemaître, prédisent l'existence du \emph{fond diffus cosmologique} (CMB : Cosmic Microwave Background). Ce rayonnement fossile, si les modèles de big bang sont vérifiés, aurait été émis lorsque l'univers était encore dense et chaud. Il repose sur l'idée que (\#prov), du fait de la température initialement très élevée, les particules possèdent trop d'énergie pour s'assembler et former les premières briques élémentaires. L'univers n'est alors qu'une soupe où toutes les particules s'entrechoquent constamment. Lorsque l'univers s'expand, la température baisse et l'énergie des particules aussi, autorisant ainsi la formation des premiers noyaux d'atomes. Mais la température et la densité sont toujours trop importantes pour laisser les premiers atomes se former : l'univers est alors un bain de noyaux, principalement d'hydrogène et d'hélium, d'électrons et de photons. Les photons sont diffusés constamment sur les électrons libres, rendant le plasma de l'univers primordial opaque. Puis, lorsque l'univers devient suffisamment froid, les électrons ne disposant plus de suffisamment d'énergie sont capturés par les noyaux, formant les premiers atomes de l'univers. Cet instant est appelé la recombinaison. Les atomes ainsi formés, neutres, ne diffusent pas les photons. Ces derniers peuvent alors se propager librement, et l'univers devient transparent. Ce sont ces photons, diffusés une dernière fois environ \num{380000} ans après le big bang, qui forment le fond diffus cosmologique et que nous pouvons mesurer aujourd'hui. Les principales étapes sont résumées sur la figure~\ref{fig:univershistory}, dont notamment la formation des premiers noyaux durant les premières secondes, puis le CMB vers \num{380000} ans.
-Après l'apparition des premières étoiles, le rayonnement émis par celles-ci commence progressivement à réioniser l'hydrogène, qui était devenu neutre au moment de l'émission du CMB. Les dernières analyses estiment le redshift de la réionisation à $5 < z_{\mathrm{réionisation}} < 9$ \autocite{Collaboration2018}.
+Suite notamment aux publications de Friedmann, Lemaître et Hubble, les défenseurs des modèles de big bang ont commencé à chercher des observables capables de prouver ces modèles. En 1948, George Gamow, Ralph Alpher et Robert Herman, reprenant les travaux de Georges Lemaître, prédisent l'existence du \emph{fond diffus cosmologique} (CMB : Cosmic Microwave Background). Ce rayonnement fossile, si les modèles de big bang sont vérifiés, aurait été émis lorsque l'univers était encore dense et chaud. Il repose sur le raisonnement suivant : du fait de la température initialement très élevée, les particules possèdent trop d'énergie pour s'assembler et former les premières briques élémentaires. L'univers n'est alors qu'une soupe où toutes les particules s'entrechoquent constamment. Lorsque l'univers s'expand, la température baisse et l'énergie des particules aussi, autorisant ainsi la formation des premiers noyaux d'atomes. Mais la température et la densité sont toujours trop importantes pour laisser les premiers atomes se former : l'univers est alors un bain de noyaux, principalement d'hydrogène et d'hélium, d'électrons et de photons. Les photons sont diffusés constamment sur les électrons libres, rendant le plasma de l'univers primordial opaque. Puis, lorsque l'univers devient suffisamment froid, les électrons ne disposant plus de suffisamment d'énergie sont capturés par les noyaux, formant les premiers atomes de l'univers. Cet instant est appelé la recombinaison. Les atomes ainsi formés, neutres, ne diffusent pas les photons. Ces derniers peuvent alors se propager librement, et l'univers devient transparent. Ce sont ces photons, diffusés une dernière fois environ \num{380000} ans après le big bang, qui forment le fond diffus cosmologique et que nous pouvons mesurer aujourd'hui. Les principales étapes sont résumées sur la figure~\ref{fig:univershistory}, dont notamment la formation des premiers noyaux durant les premières secondes, puis le CMB vers \num{380000} ans.
+Après l'apparition des premières étoiles, le rayonnement émis par celles-ci commence progressivement à réioniser l'hydrogène, qui était devenu neutre au moment de l'émission du CMB. Les dernières analyses estiment le redshift de la réionisation à $5 \lesssim z_{\mathrm{réionisation}} \lesssim 9$ \autocite{Collaboration2018}.
 En 1965, 17 ans après sa prédiction, le CMB est détecté par Penzias et Wilson, établissant ainsi le consensus sur les modèles de big bang. A partir de ce moment là, un certain nombre d'observations ont été menées par les cosmologistes afin de contraindre et distinguer les différents modèles de big bang.
 \begin{figure}
   \centering
@@ -66,8 +63,8 @@ En 1965, 17 ans après sa prédiction, le CMB est détecté par Penzias et Wilso
 Le modèle \lcdm{} est aujourd'hui le modèle cosmologique qui fait consensus dans la communauté scientifique. Il est souvent désigné comme le modèle standard de la cosmologie. C'est un modèle de big bang, décrivant un univers composé principalement d'énergie noire, aussi appelée constante cosmologique ($\Lambda$), et de matière noire froide (CDM : Cold Dark Matter). La figure~\ref{fig:lcdm} présente la répartition de ses différentes composantes.
 \begin{figure}
   \centering
-  \includegraphics[scale=0.3]{lcdm}
-  \caption{Répartition des différentes composantes du modèle \lcdm{}. L'énergie noire est montrée en violet, la matière noire en bleu et la matière baryonique en jaune. \#prov changer le jaune}
+  \includegraphics[scale=0.5]{lcdm}
+  \caption{Répartition des différentes composantes du modèle \lcdm{}. L'énergie noire est montrée en violet, la matière noire en bleu et la matière baryonique en orange.}
   \label{fig:lcdm}
 \end{figure}
 
@@ -156,8 +153,9 @@ Cette formulation permet de mettre en évidence le rapport $a(t)$, appelé facte
 Le décalage vers le rouge, ou \emph{redshift} en anglais, est la mesure du décalage du spectre des objets distants vers les grandes longueurs d'onde. Le redshift $z$ est défini comme 
 \begin{equation}
   \label{eq:redshift}
-  1 + z = \frac{\lambda_o}{\lambda_e}  \; .
+  1 + z = \frac{\lambda_o}{\lambda_e}  \; ,
 \end{equation}
+où $\lambda_{e}$ est la longueur d'onde émise et $\lambda_{o}$ la longueur d'onde observée.
 Dans le cadre des modèles de big bang, le redshift est interprété comme une conséquence de l'expansion de l'univers.
 Les objets distants s'éloignent de nous du fait de l'expansion. Similairement à l'effet Doppler\footnote{L'effet Doppler est l'augmentation ou la diminution de la longueur d'onde d'une onde lorsque l'émetteur de cette dernière s'approche ou s'éloigne de l'observateur. L'exemple le plus connu est celui de l'ambulance : le son entendu est plus aigu lorsque l'ambulance s'approche, puis plus grave lorsqu'elle s'éloigne.}, le spectre observé de ces objets est décalé vers les grandes longueurs d'onde.
 Mais contrairement à l'effet Doppler, le redshift n'est pas directement dû à la vitesse de récession de l'objet :
@@ -168,7 +166,7 @@ On peut montrer que
 \begin{equation}
   \frac{\lambda_o}{\lambda_e} = \frac{a(t_e)}{a(t_o)}  \; ,
 \end{equation}
-où $t_e$ et $t_o$ sont les temps d'émission et d'observation du photon, $\lambda_{e}$  et $\lambda_{o}$ (\#prov remonter a l'eqaution davant) sa longueur d'onde lors de l'émission et de l'observation. Le redshift est donc relié au facteur d'échelle via la relation
+où $t_e$ et $t_o$ sont les temps d'émission et d'observation du photon, $\lambda_{e}$  et $\lambda_{o}$ sa longueur d'onde lors de l'émission et de l'observation. Le redshift est donc relié au facteur d'échelle via la relation
 \begin{equation}
   \label{eq:redshift2}
   1 + z = \frac{1}{a(t)} \; .
@@ -275,19 +273,19 @@ De la même manière, les constituants de la matière noire froide n'interagisse
 Ainsi, le fluide décrivant la matière possède une pression nulle, son paramètre d'état est donc $w_m = 0$. Nous avons alors : $\rho_m \propto a^{-3}$. \\
 Concernant les particules relativistes, elles constituent ce qu'on appelle la radiation $(r)$. Celle-ci est composée  des photons $(\gamma)$ et des neutrinos relativistes $(\nu)$. Son paramètre d'état est $w_r = 1/3$, ce qui donne $\rho_r \propto a^{-4}$. Nous pouvons remarquer que la densité de matière diminue proportionnellement au volume de l'univers, par simple effet de dilution. La densité de radiation possède un facteur $1/a$ supplémentaire. Ce facteur provient du redshift des photons observés, et s'ajoute au $1/a^3$ de la dilution.
 
-Afin de travailler avec des quantités sans dimension et normalisées, il est courant d'introduire la densité critique $\rho_{crit}$. Cette densité est la densité limite pour laquelle l'univers est plat. Au delà de cette densité limite, l'univers est fermé, en deçà, l'univers est ouvert. Pour $k = 0$, l'équation~\ref{eq:friedmann3} s'écrit
+Afin de travailler avec des quantités sans dimension et normalisées, il est courant d'introduire la densité critique $\rho_{\mathrm{crit}}$. Cette densité est la densité limite pour laquelle l'univers est plat. Au delà de cette densité limite, l'univers est fermé, en deçà, l'univers est ouvert. Pour $k = 0$, l'équation~\ref{eq:friedmann3} s'écrit
 \begin{equation}
   H^{2} = \frac{8 \pi G }{3} \rho  \; ,
 \end{equation}
-où $\rho$ désigne désormais la densité totale d'énergie de l'univers, incluant la contribution $\rho_{\Lambda} = \Lambda / 8 \pi G$ de la constante cosmologique, d'où $\rho_{crit} = 3 H_0^2 / 8 \pi G$. En divisant cette équation par $H_{0}^{2}$, l'équation précédente s'écrit alors
+où $\rho$ désigne désormais la densité totale d'énergie de l'univers, incluant la contribution $\rho_{\Lambda} = \Lambda / 8 \pi G$ de la constante cosmologique, d'où $\rho_{\mathrm{crit}} = 3 H_0^2 / 8 \pi G$. En divisant cette équation par $H_{0}^{2}$, l'équation précédente s'écrit alors
 \begin{equation}
   \label{eq:friedmann5}
-  \frac{H^2}{H_0^2} = \frac{\rho}{\rho_{crit}}  \; .
+  \frac{H^2}{H_0^2} = \frac{\rho}{\rho_{\mathrm{crit}}}  \; .
 \end{equation}
 A l'aide de l'équation~\ref{eq:rho_vs_a}, chaque composante peut être mise sous la forme
 \begin{equation}
   \label{eq:def_omgega}
-  \frac{\rho_i}{\rho_{crit}} = \Omega_i a^{-3 (1+w)}  \; , 
+  \frac{\rho_i}{\rho_{\mathrm{crit}}} = \Omega_i a^{-3 (1+w)}  \; , 
 \end{equation}
 où $\Omega_i$ est le ratio de la densité de l'espèce $i$ par la densité critique aujourd'hui. Nous pouvons alors récrire l'équation de Friedmann-Lemaître~\ref{eq:friedmann3} comme
 \begin{equation}
@@ -299,7 +297,8 @@ où $i$ court sur toutes les espèces contribuant à l'énergie totale de l'univ
   \label{eq:def_omega2}
 \Omega_{r} = \frac{8 \pi G \rho_{r, 0}}{3 H_{0}^{2}} \hspace{1cm} ; \hspace{1cm} \Omega_{m} = \frac{8 \pi G \rho_{m, 0}}{3 H_{0}^{2}} \hspace{1cm} ;\hspace{1cm} \Omega_{\Lambda} = \frac{\Lambda}{3 H_{0}^{2}}  \; .
 \end{equation}
-Nous pouvons remarquer ici que $\Omega_{\Lambda}$ est indépendant de $a$ (\#prov peut etre pas au bon endroit). Il en découle $w_{\Lambda} = -1$ (voir équation~\ref{eq:rho_vs_a}) : la constante cosmologique peut être interprétée comme un fluide de densité d'énergie constante et de pression négative. Nous verrons dans la suite de ce paragraphe que sa domination dans le bilan énergétique de l'univers actuel est responsable de l'accélération de l'expansion.
+% Nous pouvons remarquer ici que $\Omega_{\Lambda}$ est indépendant de $a$ (\#prov peut etre pas au bon endroit). Il en découle $w_{\Lambda} = -1$ (voir équation~\ref{eq:rho_vs_a}) : la constante cosmologique peut être interprétée comme un fluide de densité d'énergie constante et de pression négative. Nous verrons dans la suite de ce paragraphe que sa domination dans le bilan énergétique de l'univers actuel est responsable de l'accélération de l'expansion.
+Par ailleurs, nous remarquons que la densité d'énergie $\rho_{\Lambda} = \Lambda / 8 \pi G$ est indépendante de $a$. Il en découle $w_{\Lambda} = -1$ (voir équation~\ref{eq:rho_vs_a}) : la constante cosmologique peut être interprétée comme un fluide de densité d'énergie constante et de pression négative. Nous verrons dans la suite de ce paragraphe que sa domination dans le bilan énergétique de l'univers actuel est responsable de l'accélération de l'expansion.
 Enfin, en utilisant les définitions précédentes, nous obtenons l'évolution du taux d'expansion
 \begin{equation}
   \label{eq:friedmann7}
@@ -309,11 +308,11 @@ Enfin, en utilisant les définitions précédentes, nous obtenons l'évolution d
 En évaluant l'équation précédente pour $t=0$, nous obtenons
 \begin{equation}
   \label{eq:sum_omega}
- 1 + \frac{k}{a^{2} H_{0}}  =  \Omega_m + \Omega_r + \Omega_{\Lambda} = \Omega_{total}  \; .
+ 1 + \frac{k}{a^{2} H_{0}}  =  \Omega_m + \Omega_r + \Omega_{\Lambda} = \Omega_{\mathrm{total}}  \; .
 \end{equation}
-Ainsi pour un univers plat, nous avons $k = 0$, et donc $\Omega_{total} = 1$. Nous retrouvons alors que $\rho_{crit}$ correspond à la densité totale de l'univers. 
+Ainsi pour un univers plat, nous avons $k = 0$, et donc $\Omega_{\mathrm{total}} = 1$. Nous retrouvons alors que $\rho_{\mathrm{crit}}$ correspond à la densité totale de l'univers. 
 
-Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvons comparer les différentes densités d'énergie à n'importe quel redshift, en considérant le rapport $\Omega_{i}(z) = \rho_{i}(z) / \rho_{crit}(z)$, où $\rho_{crit}(z) = 3H(z)^{2} / 8 \pi G$. La figure~\ref{fig:evol_omega} présente l'évolution  avec le redshift des densités relatives, et indique donc les différentes ères de domination. Pour $z > z_{eq}$, c'est la radiation qui domine. Puis vient l'époque de domination de la matière, jusqu'à $z \sim \num{0.3}$. Enfin, c'est la constante cosmologique $\Lambda$ qui domine aujourd'hui.
+Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvons comparer les différentes densités d'énergie à n'importe quel redshift, en considérant le rapport $\Omega_{i}(z) = \rho_{i}(z) / \rho_{\mathrm{crit}}(z)$, où $\rho_{\mathrm{crit}}(z) = 3H(z)^{2} / 8 \pi G$. La figure~\ref{fig:evol_omega} présente l'évolution  avec le redshift des densités relatives, et indique donc les différentes ères de domination. Pour $z > z_{eq}$, c'est la radiation qui domine. Puis vient l'époque de domination de la matière, jusqu'à $z \sim \num{0.3}$. Enfin, c'est la constante cosmologique $\Lambda$ qui domine aujourd'hui.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{evol_omega}
@@ -321,7 +320,7 @@ Bien que les $\Omega_i$ donnent les densités relatives aujourd'hui, nous pouvon
 \label{fig:evol_omega}
 \end{figure}
 
-Lorsque l'univers est dominé par un seul fluide $i$, nous avons $\rho_{tot} \sim \rho_{i}$, et nous pouvons donc injecter l'équation~\ref{eq:rho_vs_a} dans l'équation de Friedmann-Lemaître~\ref{eq:friedmann3}. Nous obtenons alors l'évolution de taux d'expansion avec le facteur d'échelle
+Lorsque l'univers est dominé par un seul fluide $i$, nous avons $\rho_{\mathrm{tot}} \sim \rho_{i}$, et nous pouvons donc injecter l'équation~\ref{eq:rho_vs_a} dans l'équation de Friedmann-Lemaître~\ref{eq:friedmann3}. Nous obtenons alors l'évolution de taux d'expansion avec le facteur d'échelle
 \begin{equation}
   \label{eq:H_evol}
   H = H_0 a^{-3 (1+w) / 2}  \; ,
@@ -336,69 +335,72 @@ Ainsi, dans chaque phase de domination, $a$ évolue comme une loi de puissance :
 \subsubsection{Les distances}
 La notion de distance en relativité générale n'est pas très intuitive.
 Du fait de l'expansion, la distance qui séparait deux astres lointains au moment où ils ont émis leur lumière n'est pas la distance qui les sépare aujourd'hui.
-La distance à laquelle nous avons accès (\#prov pas acces) est la distance qui séparait ces deux astres lorsque la lumière que nous captons aujourd'hui a été émise. Entre ce moment et aujourd'hui, l'expansion a éloigné ces deux astres et leur distance de séparation a été multipliée par un facteur $\frac{1}{a(t_e)} = 1 + z_{e}$, où $t_e$ est le temps correspondant à l'émission.
+Depuis la terre, nous n'avons pas directement accès aux distances, mais seulement aux différences d'angles et de redshifts.
+Lorsque nous obervons deux astres, nous observons une différence d'angles qui correspond à la distance qui les séparait lorsque la lumière que nous captons aujourd'hui a été émise. 
+% La distance à laquelle nous avons accès est la distance qui séparait ces deux astres lorsque la lumière que nous captons aujourd'hui a été émise.
+Entre ce moment et aujourd'hui, l'expansion a éloigné ces deux astres et leur distance de séparation a été multipliée par un facteur $\frac{1}{a(t_e)} = 1 + z_{e}$, où $t_e$ est le temps correspondant à l'émission.
 Afin de simplifier les comparaisons de distances à différentes époques, nous définissons la distance \emph{comobile} comme ceci : deux objets à un redshift $z$ et séparés d'une distance physique $D$ possèdent une distance comobile $(1+z)D$ . C'est la distance physique, en incluant l'expansion jusqu'à aujourd'hui. Ainsi, la distance comobile séparant deux objets soumis à l'expansion reste la même au cours du temps.
 
 Nous présentons ici les différentes distances utilisées en cosmologie. Elles sont très bien décrites dans \textcite{Hogg1999}, dont nous suivons d'ailleurs les notations. Aussi, nous sortons désormais du cadre dans lequel $c = \hbar = k_{B} = 1$ et nous reprenons le système d'unité usuel. Définissons premièrement la quantité
 \begin{equation}
   \label{eq:dist_ez}
   E(z) = \frac{H(z)}{H_0} 
-  = \sqrt{\Omega_m a^{-3} + \Omega_r a^{-4} + \Omega_{\Lambda} + 1 - \Omega_{total}}  \; ,
+  = \sqrt{\Omega_m a^{-3} + \Omega_r a^{-4} + \Omega_{\Lambda} + 1 - \Omega_{\mathrm{total}}}  \; ,
 \end{equation}
 ainsi que la distance de Hubble aujourd'hui
 \begin{equation}
   \label{eq:dist_hubble}
-  D_H = \frac{c}{H_0}  \; .
+  D_{\mathrm{H}} = \frac{c}{H_0}  \; .
 \end{equation}
 Nous pouvons alors définir les distances suivantes :
 \begin{itemize}[label=$\bullet$]
-\item la distance comobile le long de la ligne de visée $D_{C}$. C'est la distance comobile qui sépare un objet lointain de l'observateur. Elle est obtenue en intégrant chaque contribution infinitésimale de $z=0$ jusqu'à l'objet :
+\item la distance comobile le long de la ligne de visée $D_{\mathrm{C}}$. C'est la distance comobile qui sépare un objet lointain de l'observateur. Elle est obtenue en intégrant chaque contribution infinitésimale de $z=0$ jusqu'à l'objet :
   \begin{equation}
     \label{eq:dist_como}
-    D_{C} = D_H \int_0^z \frac{dz'}{E(z')}  \; .
+    D_{\mathrm{C}} = D_{\mathrm{H}} \int_0^z \frac{dz'}{E(z')}  \; .
   \end{equation}
-\item la distance comobile transverse $D_M$ : deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel sont à une distance comobile $\delta \theta D_M$ l'un de l'autre.
-  Dans le cas où l'univers n'est pas plat ($\Omega_k \neq 0$), la distance comobile transverse $D_M$  n'est pas la même que la distance comobile le long de la ligne de visée $D_{C}$. Elle est reliée à $D_{C}$ par
+\item la distance comobile transverse $D_{\mathrm{M}}$ : deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel sont à une distance comobile $\delta \theta D_{\mathrm{M}}$ l'un de l'autre.
+  Dans le cas où l'univers n'est pas plat ($\Omega_k \neq 0$), la distance comobile transverse $D_{\mathrm{M}}$  n'est pas la même que la distance comobile le long de la ligne de visée $D_{\mathrm{C}}$. Elle est reliée à $D_{\mathrm{C}}$ par
   \begin{equation}
     \label{eq:dist_como_trans}
-    D_M = \left\{
+    D_{\mathrm{M}} = \left\{
       \begin{array}{ll}
-        D_H \frac{1}{\sqrt{\Omega_k}} \sin(\Omega_k D_C / D_H) & \mbox{si } \Omega_k < 0 \\
-        D_C & \textrm{si } \Omega_k = 0 \\
-        D_H \frac{1}{\sqrt{\Omega_k}} \sinh(\Omega_k D_C / D_H) & \mbox{si } \Omega_k > 0
+        D_{\mathrm{H}} \frac{1}{\sqrt{\Omega_k}} \sin(\Omega_k D_{\mathrm{C}} / D_{\mathrm{H}}) & \mbox{si } \Omega_k < 0 \\
+        D_{\mathrm{C}} & \textrm{si } \Omega_k = 0 \\
+        D_{\mathrm{H}} \frac{1}{\sqrt{\Omega_k}} \sinh(\Omega_k D_{\mathrm{C}} / D_{\mathrm{H}}) & \mbox{si } \Omega_k > 0
       \end{array}
     \right. \; .
   \end{equation}
  
-\item La distance de diamètre angulaire $D_A$ : c'est la distance reliée à la taille apparente d'un objet. Deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel possèdent une distance physique $\delta \theta D_A$. La distance de diamètre angulaire diffère de $D_M$ du fait qu'elle considère la distance physique et non comobile entre les deux objets. Elle est donc reliée à $D_M$ par
+\item La distance de diamètre angulaire $D_{\mathrm{A}}$ : c'est la distance reliée à la taille apparente d'un objet. Deux objets à un redshift $z$ et séparés par un angle $\delta \theta$ sur le ciel possèdent une distance physique $\delta \theta D_{\mathrm{A}}$. La distance de diamètre angulaire diffère de $D_{\mathrm{M}}$ du fait qu'elle considère la distance physique et non comobile entre les deux objets. Elle est donc reliée à $D_{\mathrm{M}}$ par
   \begin{equation}
     \label{eq:dist_ang}
-    D_A = \frac{D_M}{1+z}  \; .
+    D_{\mathrm{A}} = \frac{D_{\mathrm{M}}}{1+z}  \; .
   \end{equation}
 
-\item la distance de luminosité $D_L$ : elle est définie via la relation qui exprime le flux d'une source lumineuse en fonction de sa luminosité
+\item la distance de luminosité $D_{\mathrm{L}}$ : elle est définie via la relation qui exprime le flux d'une source lumineuse en fonction de sa luminosité
   \begin{equation}
     \label{eq:dist_lum}
-    F = \frac{L}{4\pi D_L^2} \hspace{0.5cm} \rightarrow \hspace{0.5cm} D_L = \sqrt{\frac{L}{4 \pi F}}  \; .
+    F = \frac{L}{4\pi D_{\mathrm{L}}^2} \hspace{0.5cm} \rightarrow \hspace{0.5cm} D_{\mathrm{L}} = \sqrt{\frac{L}{4 \pi F}}  \; .
   \end{equation}
   Elle est reliée à la distance comobile transverse via
   \begin{equation}
-    D_L = (1+z) D_M = (1+z)^2 D_A  \; ,
+    D_{\mathrm{L}} = (1+z) D_{\mathrm{M}} = (1+z)^2 D_{\mathrm{A}}  \; ,
   \end{equation}
 \end{itemize}
 
 Les distances sont usuellememt mesurées en \si{\perh\kpc} ou \si{\perh\Mpc}, le facteur $h$ permettant de rendre ces distances indépendantes de l'incertitude sur la mesure de $H_{0}$. Un parsec vaut environ \num{3.2616} années lumières, soit environ $\SI{3,0857 e16}{\meter}$.
-Dans ce manuscrit, les distances qui nous intéressent particulièrement sont $D_C$ et $D_M$. Nous y ferons appel dans la section~\ref{subsec:mesure_bao}.
+Dans ce manuscrit, les distances qui nous intéressent particulièrement sont $D_{\mathrm{C}}$ et $D_{\mathrm{M}}$. Nous y ferons appel dans la section~\ref{subsec:mesure_bao}.
 
 \subsubsection{Les paramètres du modèle} 
 Le modèle \lcdm{} est un modèle qui comporte 6 paramètres. Ils sont mesurés par le satellite Planck \autocite{Collaboration2018} avec une précision d'environ 1~\% et sont résumés dans le tableau~\ref{table:planck2018}. Les 6 paramètres mesurés par Planck sont
 \begin{itemize}
 \item $\Omega_bh^2$, la densité de baryons multipliée par $h^2$
 \item $\Omega_ch^2$, la densité de matière noire multipliée par $h^2$
-\item $\theta_{MC}$, une approximation de $\theta_*$ : l'angle sur le ciel de l'échelle acoustique
+\item $\theta_{\mathrm{MC}}$, une approximation de $\theta_*$ : l'angle sur le ciel de l'échelle acoustique
 \item $\tau$, la profondeur optique totale, intégrée de $z=0$ jusqu'au CMB. La contribution provient essentiellement des électrons libres entre $z = 0$ et $z_{\mathrm{réionisation}}$
-\item $A_s$, l'amplitude du \emph{spectre de puissance des fluctuations primordiales}, décrit dans la section suivante
-\item $n_s$, l'indice spectral du spectre de puissance des fluctuations primordiales
+\item $A_\mathrm{s}$, l'amplitude du \emph{spectre de puissance des fluctuations primordiales}, décrit dans la section suivante
+\item $n_\mathrm{s}$, l'indice spectral du spectre de puissance des fluctuations primordiales
 \end{itemize}
 
 
@@ -491,7 +493,8 @@ Le spectre de puissance du contraste de densité de la matière est alors défin
   \label{eq:def_pow_spec}
   P(\vec{k}) = \langle \delta(\vec k)^{2} \rangle  \; ,
 \end{equation}
-\#prov expliquer moyenne densemble. Etant donné que l'isotropie est supposée en cosmologie, le spectre de puissance dépend uniquement de $k$, la norme de $\vec{k}$. La figure~\ref{fig:pk_camb} montre le spectre de puissance de la matière à $z=0$, elle est discuté dans la section suivante.
+où $\langle . \rangle$ désigne la moyenne d'ensemble : c'est la moyenne prise sur plusieurs réalisations d'univers.
+Etant donné que l'isotropie est supposée en cosmologie, le spectre de puissance dépend uniquement de $k$, la norme de $\vec{k}$. La figure~\ref{fig:pk_camb} montre le spectre de puissance de la matière à $z=0$, elle est discuté dans la section suivante.
 
 \paragraph{}
 Similairement au spectre de puissance du contraste de densité, il est possible de calculer celui des fluctuations du CMB. Le formalisme est cependant légèrement différent : plutôt que de faire une transmormation de Fourier, les fluctuations du CMB sont décomposées sur la sphère céleste à l'aide des harmoniques sphériques. Dans un tel cas, la variable analogue à $k$ est le multipôle $l$. La figure~\ref{fig:carte_cmb} présente la carte des fluctuations en température mesurée par Planck, et la figure~\ref{fig:spectre_cmb} le spectre de puissance de ces fluctuations.
@@ -554,7 +557,7 @@ Plusieurs choses sont à noter. Premièrement, le spectre de puissance aux grand
 Ces modes à grande échelle ne sont pas affectés par la physique qui se déroule durant la domination de la radiation. Ils sondent donc directement les fluctuations primordiales de densité.
 Pour les petites échelles (grands $k$), le spectre de puissance est proportionnel à $k^{-3}$. Ce changement de comportement entre les grandes et petites échelles est dû au fait que les modes $k > k_{eq}$, avec  $k_{eq} \sim \SI{0.01}{\h\per\Mpc}$, possèdent une taille caractéristique plus petite que l'horizon\footnote{L'horizon désigne la sphère causale de l'observateur : tout événement en dehors de l'horizon n'a pas de lien causal avec l'observateur, car l'information n'a pas eu le temps de se propager jusqu'à ce dernier.} au moment de l'égalité radiation-matière : ces modes sont donc entrés dans l'horizon durant la phase de domination de la radiation, et ont donc été affectés par la physique qui s'y déroule.
 Les modes plus grands que l'horizon au moment de l'égalité radiation-matière ne sont pas affectés par cette physique et sont donc gelés : ils n'évoluent pas, le spectre de puissance reste donc semblable au spectre de puissance primordial.
-Les modes plus petits quant à eux décroissent (\#prov croissent moins vite) durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et plus il est réduit, d'où le changement de comportement pour les $k > k_{eq}$. Après l'égalité, les modes ne sont plus réduits et tous les modes croissent proportionnellement à $G(z)$. 
+Les modes plus petits quant à eux croissent moins vite que les modes plus grand que l'horizon durant la phase de domination de la radiation. Plus le mode est petit, plus il entre rapidement dans l'horizon, et donc plus il est réduit comparé aux modes à l'extérieur de l'horizon, d'où le changement de comportement pour les $k > k_{eq}$. Après l'égalité, tous les modes croissent proportionnellement à $G(z)$. 
 $G$ est appelé le facteur de croissance des structures, et varie comme $\mathrm{G}(z) \propto (1+z)^{-1}$ à grand $z$, lorsque $\Omega_m = 1$. Ainsi, pour $z \ll z_{eq}$, le spectre de puissance varie comme
 \begin{equation}
   \label{eq:pow_spec_vs_z}
@@ -602,13 +605,14 @@ Puis, à un redshift de $z_{\ast} \sim 1090$, les photons se découplent des bar
 A un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons\footnote{A cause de la grande assymétrie entre le nombre de baryons et le nombre de photons $n_{b} / n_{\gamma} \sim 10^{-9}$, les baryons se découplent des photons après que ces derniers se soient découplés des baryons.}. La pression dans le milieu devient nulle, faisant chuter la vitesse du son à zéro. L'onde est alors gelée. Ainsi la surdensité de baryon ne se propage plus. Il n'y a alors plus que la gravitation qui affecte la distribution de chaque espèce.
 % Puis, à un redshift $z_{drag} \sim 1060$, les baryons se découplent des photons. La pression dans le milieu devient nulle, faisant chuter la vitesse du son à zéro. L'onde est alors gelée.
 % \textbf{Ainsi la surdensité de baryon ne se propage plus. Les photons, qui n'interagissent plus avec les baryons\footnote{A cause de la grande assymétrie entre le nombre de baryons et le nombre de photons $n_{b} / n_{\gamma} \sim 10^{-9}$, les photons se découplent des baryons avant que ces derniers ne se découplent des photons.} dès $z_{\ast} \sim 1090$, se propagent librement. Il n'y a alors plus que la gravitation qui affecte la distribution de chaque espèce.}
-La surdensité de matière noire à $R = 0$, qui a continué de croître, attire les baryons par effet gravitationnel. Cependant, la surdensité de baryon à $R \sim \SI{150}{\Mpc}$ produit aussi un puit de potentiel, dans lequel la matière noire alentour tombe progressivement. (\#prov préciser que les distribs sont les memes aujourdhui)
+La surdensité de matière noire à $R = 0$, qui a continué de croître, attire les baryons par effet gravitationnel. Cependant, la surdensité de baryon à $R \sim \SI{150}{\Mpc}$ produit aussi un puit de potentiel, dans lequel la matière noire alentour tombe progressivement.
+A la fin, c'est à dire aujourd'hui, les distributions de la matière noire et des baryons sont quasiment identiques.
 Cette distance d'environ $\SI{150}{\Mpc}$ est appelée \emph{horizon acoustique} : c'est la distance que l'onde sonore a pu parcourir avant d'être gelée. L'horizon acoustique vaut
 \begin{equation}
   \label{eq:sound_horizon}
-  r_{d} = \int^{\infty}_{z_{drag}} \frac{c_{s}}{H(z)} dz  \; ,
+  r_\mathrm{d} = \int^{\infty}_{z_{drag}} \frac{c_{s}}{H(z)} dz  \; ,
 \end{equation}
-et sa valeur mesurée par \textcite{Collaboration2018} est $r_{d} = \SI{99.16(20)}{\perh\Mpc}$.
+et sa valeur mesurée par \textcite{Collaboration2018} est $r_\mathrm{d} = \SI{99.16(20)}{\perh\Mpc}$.
 
 Ce processus a laissé des traces dans la distribution de matière à grande échelle : à chaque surdensité primordiale est associée une sphère de surdensité de rayon comobile $\SI{150}{\Mpc}$.
 Il y a donc un excès de probabilité de trouver deux traceurs de densité de matière, comme par exemple des galaxies, séparés par une distance  comobile d'environ $\SI{150}{\Mpc}$.
@@ -617,48 +621,49 @@ Cet excès est traduit par le pic BAO présent dans la fonction de corrélation 
 
 \subsection{Mesurer l'échelle BAO}
 \label{subsec:mesure_bao}
-Comme nous allons le voir dans ce qui suit, les analyses BAO ne mesurent pas directement l'échelle BAO, $r_{d}$. En astronomie extragalactique, les observations  ne permettent pas de mesurer des distances. Les informations auxquelles l'observateur a accès sont des différences de vitesse le long de la ligne de visée, via l'observation des spectres, ainsi que des angles, via les projections sur la sphère céleste.
+Comme nous allons le voir dans ce qui suit, les analyses BAO ne mesurent pas directement l'échelle BAO, $r_\mathrm{d}$. En astronomie extragalactique, les observations  ne permettent pas de mesurer des distances. Les informations auxquelles l'observateur a accès sont des différences de vitesse le long de la ligne de visée, via l'observation des spectres, ainsi que des angles, via les projections sur la sphère céleste.
 %Afin d'expliquer les mesures des analyses BAO, nous supposons un cas simplifié en deux dimensions, où l'observateur identifie une surdensité primordiale et l'horizon acoustique qui lui correspond, via l'observation de galaxies. Le schéma~\ref{fig:bao_dessin} illustre la situation.
 Nous considérons le schéma~\ref{fig:bao_dessin}, où l'observateur identifie une surdensité primordiale et l'horizon acoustique qui lui correspond, via l'observation de galaxies.
 \begin{figure}
   \centering
   \includegraphics[scale=0.40]{bao_dessin}
-  \caption{Schéma illustratif des distances mises en jeu dans la mesure de l'échelle BAO. L'observateur est représenté par le télescope, à droite. L'horizon acoustique est représenté par le cercle bleu, centré en $O$. Des galaxies sont disposées en $A$, $B$, $C$, $D$ et $O$, comme exemple de traceur de la matière. L'angle sous lequel l'observateur identifie l'échelle BAO $OA$ est $\theta_{BAO}(z)$. La distance comobile qui relie l'observateur à la surdensité centrale $O$ est $D_M(z)$. Enfin, la différence de redshift entre les objets situés en $O$ et en $D$ est $\Delta z_{BAO}$.}
+  \caption{Schéma illustratif des distances mises en jeu dans la mesure de l'échelle BAO. L'observateur est représenté par le télescope, à droite. L'horizon acoustique est représenté par le cercle bleu, centré en $O$. Des galaxies sont disposées en $A$, $B$, $C$, $D$ et $O$, comme exemple de traceur de la matière. L'angle sous lequel l'observateur identifie l'échelle BAO $OA$ est $\theta_{\mathrm{BAO}}(z)$. La distance comobile qui relie l'observateur à la surdensité centrale $O$ est $D_{\mathrm{M}}(z)$. Enfin, la différence de redshift entre les objets situés en $O$ et en $D$ est $\Delta z_{\mathrm{BAO}}$.}
   \label{fig:bao_dessin}
 \end{figure}
-Le cercle bleu représente l'horizon acoustique, et le point $O$ la surdensité primordiale. Grâce aux galaxies situées en $O$ , $A$  et $D$, l'observateur a accès à deux informations : l'angle $\theta_{BAO}(z)$ séparant $O$ et $A$, et la différence de redshift $\Delta z_{BAO}$ entre $O$ et $D$. Comme décrit dans le paragraphe sur les distances, l'angle $\theta_{BAO}(z)$ est relié à la distance comobile transverse $D_M(z)$ par
+Le cercle bleu représente l'horizon acoustique, et le point $O$ la surdensité primordiale. Grâce aux galaxies situées en $O$ , $A$  et $D$, l'observateur a accès à deux informations : l'angle $\theta_{\mathrm{BAO}}(z)$ séparant $O$ et $A$, et la différence de redshift $\Delta z_{\mathrm{BAO}}$ entre $O$ et $D$. Comme décrit dans le paragraphe sur les distances, l'angle $\theta_{\mathrm{BAO}}(z)$ est relié à la distance comobile transverse $D_{\mathrm{M}}(z)$ par
 \begin{equation}
   \label{eq:theta_bao}
-  \theta_{BAO}(z) = \frac{r_d}{D_M(z)} \; .
+  \theta_{\mathrm{BAO}}(z) = \frac{r_{\mathrm{d}}}{D_{\mathrm{M}}(z)} \; .
 \end{equation}
-Ainsi, dans la direction transverse à la direction d'observation, l'observateur mesure le rapport $D_M(z) / r_d$. Le long de la ligne de visée, l'observateur peut comparer les spectres des galaxies en $O$ et en $D$, et déduire la différence de redshift $\Delta z_{BAO}$ qui existe entre les deux, due à la distance $r_d$ qui les sépare. La différence de redshift est proportionnelle à la différence de vitesse $\Delta v_{BAO}(z)$, qui s'exprime grâce à la loi de Hubble comme
+Ainsi, dans la direction transverse à la direction d'observation, l'observateur mesure le rapport $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$. Le long de la ligne de visée, l'observateur peut comparer les spectres des galaxies en $O$ et en $D$, et déduire la différence de redshift $\Delta z_{\mathrm{BAO}}$ qui existe entre les deux, due à la distance $r_{\mathrm{d}}$ qui les sépare. La différence de redshift est proportionnelle à la différence de vitesse $\Delta v_{\mathrm{BAO}}(z)$, qui s'exprime grâce à la loi de Hubble comme
 \begin{equation}
   \label{eq:v_bao}
-\Delta z =  \frac{\Delta v_{BAO}(z)}{c} = \frac{H(z) r_d}{c}  \; ,
+\Delta z =  \frac{\Delta v_{\mathrm{BAO}}(z)}{c} = \frac{H(z) r_{\mathrm{d}}}{c}  \; ,
 \end{equation}
-et est donc reliée à la distance de Hubble $D_H(z)$ par :
+et est donc reliée à la distance de Hubble $D_{\mathrm{H}}(z)$ par :
 \begin{equation}
   \label{eq:v_bao2}
-  \Delta z = \frac{r_d }{D_H(z)} \; .
+  \Delta z = \frac{r_{\mathrm{d}} }{D_{\mathrm{H}}(z)} \; .
 \end{equation}
-Les deux informations accessibles et pertinentes pour les analyses BAO sont donc les quantités $D_M(z) / r_d$ et $D_H(z) / r_d$. Comme dans beaucoup d'analyses cosmologiques, les analyses BAO nécessitent de supposer une cosmologie, afin notamment de transformer les angles et différences de redshift en distance. Ces analyses ne mesurent alors pas directement les rapports  $D_M(z) / r_d$ et $D_H(z) / r_d$ mais leur déviation par rapport à la cosmologie de référence utilisée dans l'analyse, que l'on nomme \emph{cosmologie fiducielle}. Il est donc coutume de définir les quantités $\apar{}$ et $\aperp{}$ comme
+Les deux informations accessibles et pertinentes pour les analyses BAO sont donc les quantités $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$ et $D_{\mathrm{H}}(z) / r_{\mathrm{d}}$. Comme dans beaucoup d'analyses cosmologiques, les analyses BAO nécessitent de supposer une cosmologie, afin notamment de transformer les angles et différences de redshift en distance. Ces analyses ne mesurent alors pas directement les rapports  $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$ et $D_{\mathrm{H}}(z) / r_{\mathrm{d}}$ mais leur déviation par rapport à la cosmologie de référence utilisée dans l'analyse, que l'on nomme \emph{cosmologie fiducielle}. Il est donc coutume de définir les quantités $\apar{}$ et $\aperp{}$ comme
 \begin{align}
   \label{eq:apar}
-  \apar{}(z) &= \frac{D_H(z) / r_d}{(D_H(z) / r_d)_{fiducielle}} , \\
+  \apar{}(z) &= \frac{D_{\mathrm{H}}(z) / r_{\mathrm{d}}}{(D_{\mathrm{H}}(z) / r_{\mathrm{d}})_{\mathrm{fiducielle}}} , \\
   \label{eq:aperp}
-  \aperp{}(z) &= \frac{D_M(z) / r_d}{(D_M(z) / r_d)_{fiducielle}} ,
+  \aperp{}(z) &= \frac{D_{\mathrm{M}}(z) / r_{\mathrm{d}}}{(D_{\mathrm{M}}(z) / r_{\mathrm{d}})_{\mathrm{fiducielle}}} ,
 \end{align}
 qui valent $1$ si la cosmologie observée est la même que la cosmologie fiducielle.
 
 
 \subsection{Contraintes cosmologiques}
-Indépendamment d'autres sondes cosmologiques, telles le CMB ou les supernovae, les BAO permettent de mesurer les rapports $D_M(z) / r_d$ et $D_H(z) / r_d$. Ces rapports sont reliés aux paramètres cosmologiques par
+Indépendamment d'autres sondes cosmologiques, telles le CMB ou les supernovae, les BAO permettent de mesurer les rapports $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$ et $D_{\mathrm{H}}(z) / r_{\mathrm{d}}$. Ces rapports sont reliés aux paramètres cosmologiques par
 \begin{align}
-  D_H(z) / r_d &= \frac{1}{H_0 E(z) r_d}, \\
-  D_M(z) / r_d &= \frac{1}{H_0 E(z) r_d} \int_0^z \frac{dz'}{E(z')},
+  D_{\mathrm{H}}(z) / r_{\mathrm{d}} &= \frac{1}{H_0 E(z) r_{\mathrm{d}}}, \\
+  D_{\mathrm{M}}(z) / r_{\mathrm{d}} &= \frac{1}{H_0 E(z) r_{\mathrm{d}}} \int_0^z \frac{dz'}{E(z')},
 \end{align}
-où $E(z) = \sqrt{\Omega_m (1+z)^3 + \Omega_{\Lambda} + 1 - \Omega_{total}}$. \\
-Ainsi, sans faire de supposition sur le modèle cosmologique, comme par exemple la platitude, les BAO permettent de contraindre les paramètres $(\Omega_{m} , \Omega_{\Lambda} , H_0 r_d)$ du modèle \lcdm{} ouvert. \#prov ajouter footnote pour defnir lcdm ouvert, mentionner le fait qu'on distinguer les 3 parametres avec des mesures a des z differents
+où $E(z) = \sqrt{\Omega_m (1+z)^3 + \Omega_{\Lambda} + 1 - \Omega_{\mathrm{total}}}$. \\
+Ainsi, sans faire de supposition sur le modèle cosmologique, comme par exemple la platitude, les BAO permettent de contraindre les paramètres $(\Omega_{m} , \Omega_{\Lambda} , H_0 r_{\mathrm{d}})$ du modèle \lcdm{} ouvert\footnote{Le modèle \lcdm{} ouvert désigne le modèle \lcdm{} dans lequel on n'impose pas une courbure nulle}. 
+La distinction entre ces trois paramètres n'est possible qu'avec des mesures de l'échelle BAO à différents redshifts (voir par exemple la figure~\ref{fig:h0_om}).
 La figure~\ref{fig:h_vs_z} présente la mesure de $H(z) / (1+z)$ à l'aide des BAO.
 \begin{figure}
   \centering
@@ -692,12 +697,12 @@ Ainsi, sonder la distribution de matière via l'observation des galaxies nous fa
 La distribution reconstruite sera donc plus structurée que la distribution sous-jacente. Ce phénomène est décrit par ce qu'on nomme le \emph{biais}. Le biais $b_i(z)$ du traceur $i$ au redshift $z$ est défini par
 \begin{equation}
   \label{eq:biais1}
-  \delta_{i}(\vec r, z) = b_{i}(z) \delta_{matière}(\vec r, z) \; , 
+  \delta_{i}(\vec r, z) = b_{i}(z) \delta_{\mathrm{matière}}(\vec r, z) \; , 
 \end{equation}
-où $\delta_{i}$ est le contraste de densité du traceur $i$, et $\delta_{matière}$ le contraste de densité de la distribution de matière sous-jacente. Cette expression est valable uniquement aux grandes échelles, pour $r \gtrsim \SI{15}{\perh\Mpc}$. Le biais relie donc les fluctuations de densité du traceur $i$, aux fluctuations de densité de la matière. Pour les objets compacts, telles les galaxies, le biais est supérieur à 1. Plus le traceur se forme dans des régions denses, et plus le biais est grand. Grâce à la relation précédente, nous pouvons relier la fonction de corrélation du traceur $i$ à celle de la matière par
+où $\delta_{i}$ est le contraste de densité du traceur $i$, et $\delta_{\mathrm{matière}}$ le contraste de densité de la distribution de matière sous-jacente. Cette expression est valable uniquement aux grandes échelles, pour $r \gtrsim \SI{15}{\perh\Mpc}$. Le biais relie donc les fluctuations de densité du traceur $i$, aux fluctuations de densité de la matière. Pour les objets compacts, telles les galaxies, le biais est supérieur à 1. Plus le traceur se forme dans des régions denses, et plus le biais est grand. Grâce à la relation précédente, nous pouvons relier la fonction de corrélation du traceur $i$ à celle de la matière par
 \begin{equation}
   \label{eq:biais2}
-  \xi_{i}(r, z) = b_{i}^2(z) \xi_{matière}(r, z)  \; .
+  \xi_{i}(r, z) = b_{i}^2(z) \xi_{\mathrm{matière}}(r, z)  \; .
 \end{equation}
 Ainsi, par l'intermédiaire du traceur $i$, nous pouvons mesurer la fonction de corrélation de la matière, à un facteur multiplicatif près. De plus, en comparant la fonction de corrélation du traceur $i$ à celle de la matière prédite par les modèles, nous pouvons mesurer le biais $b_{i}$ de ce traceur. 
 % \textbf{ce qui nous permet de sonder indirectement la fonction de corrélation de la matière ainsi que de mesurer le biais du traceur utilisé.}
@@ -705,15 +710,15 @@ Comme indiqué dans l'équation précédente, la fonction de corrélation associ
 Il est donc avantageux de choisir un traceur avec un biais important, afin d'obtenir une fonction de corrélation avec une amplitude importante, et ainsi un rapport signal sur bruit plus grand. La première détection des BAO a ainsi été faite avec les LRG (des galaxies rouges) dont la mesure du biais donne $b_{LRG} \sim 2$ \autocite{Eisenstein2005}.
 
 \subsection{Distorsions dans l'espace des redshifts}
-Afin de construire la fonction de corrélation du traceur $i$, il est nécessaire de connaître le redshift de chaque traceur. Dans le cas des traceurs booléens, comme par exemple les galaxies, le redshift est obtenu en mesurant le spectre de l'objet, puis en comparant les longueurs d'onde des raies d'émission présentes dans le spectre aux longueurs d'onde mesurées en laboratoire. Le redshift mesuré est donc le suivant : \#prov mettre des rm
+Afin de construire la fonction de corrélation du traceur $i$, il est nécessaire de connaître le redshift de chaque traceur. Dans le cas des traceurs booléens, comme par exemple les galaxies, le redshift est obtenu en mesurant le spectre de l'objet, puis en comparant les longueurs d'onde des raies d'émission présentes dans le spectre aux longueurs d'onde mesurées en laboratoire. Le redshift mesuré est donc le suivant :
 \begin{equation}
-  z_{mesure} = z_{vrai} + \Delta z_{v} + \delta z_{sys} + \delta z_{stat}  \; ,
+  z_{\mathrm{mesure}} = z_{\mathrm{vrai}} + \Delta z_{\mathrm{v}} + \delta z_{\mathrm{sys}} + \delta z_{\mathrm{stat}}  \; ,
 \end{equation}
-où $z_{mesure}$ est le redshift mesuré, $\delta z_{sys}$ et $\delta z_{stat}$ sont les erreurs statistiques et systématiques sur la mesure du redshift, $z_{vrai}$ est le vrai redshift, inaccessible,
-et $\Delta z_{v}$ et le redshift induit par la vitesse particulière $v_{\parallel}$ du traceur le long de la ligne de visée :
+où $z_{\mathrm{mesure}}$ est le redshift mesuré, $\delta z_{\mathrm{sys}}$ et $\delta z_{\mathrm{stat}}$ sont les erreurs statistiques et systématiques sur la mesure du redshift, $z_{\mathrm{vrai}}$ est le vrai redshift, inaccessible,
+et $\Delta z_{\mathrm{v}}$ et le redshift induit par la vitesse particulière $v_{\parallel}$ du traceur le long de la ligne de visée :
 \begin{equation}
   \label{eq:delta_z}
-  \Delta z_{v} = \frac{v_{\parallel}}{c} \; .
+  \Delta z_{\mathrm{v}} = \frac{v_{\parallel}}{c} \; .
 \end{equation}
 En effet, en plus de leur vitesse de récession due à l'expansion, les objets peuvent posséder une vitesse, dite particulière, induite par le champ de gravitation environnant. 
 Ainsi, en plus du redshift cosmologique, l'effet Doppler vient s'ajouter à la mesure du redshift.
@@ -745,29 +750,30 @@ Le vecteur $\vec k$ peut être décomposé comme $\vec k = \kpar{} \vec u + \vec
 Lorsque le champ de matière est sondé dans l'espace des redshifts à l'aide d'un traceur $i$, l'équation précédente devient
 \begin{equation}
   \label{eq:kaiser2}
-  \delta_i^{s}(\vec k, z) = (b_i(z) + f(z) \mu_k^2) \delta_{matière}(\vec k, z)  \; .
+  \delta_i^{s}(\vec k, z) = (b_i(z) + f(z) \mu_k^2) \delta_{\mathrm{matière}}(\vec k, z)  \; .
 \end{equation}
-\#prov mentionner que y a pas de biais de vitesse
-De cette équation, nous déduisons la relation entre le spectre de puissance $P_{i}^{s}$ du traceur $i$ dans l'espace des redshifts et le spectre de puissance de la matière :
+Nous remarquons ici que le biais ne s'applique pas au terme $f(z) \mu_k^2$ : les vitesses ne sont pas biaisées.
+De l'équation~\ref{eq:kaiser2}, nous déduisons la relation entre le spectre de puissance $P_{i}^{s}$ du traceur $i$ dans l'espace des redshifts et le spectre de puissance de la matière :
 \begin{equation}
   \label{eq:kaiser3}
-  P_{i}^s(k, \mu_k, z) = b_{i}^2(z)(1 + \beta_i(z) \mu_k^2)^2 P_{matière}(k, z)  \; ,
+  P_{i}^s(k, \mu_k, z) = b_{i}^2(z)(1 + \beta_i(z) \mu_k^2)^2 P_{\mathrm{matière}}(k, z)  \; ,
 \end{equation}
 où $\beta_i = f / b_i$ est le paramètre RSD du traceur $i$.
-Du fait de l'isotropie dans la direction transverse à la ligne de visée, $P_i^s$ ne dépend que de la norme de $\vec \kperp{}$. Il en va de même pour le vecteur $\vec r$, qui est décomposé en $\vec r =  \rpar{} \vec u + \vec \rperp{}$. Nous avons alors $\mu = \rpar{} / r$, et la fonction de corrélation $\xi_i^s$ ne dépend que de $\rpar{}$ et de la norme de $\vec \rperp{}$. Son expression, que nous ne donnons pas ici, est calculée dans \textcite{Hamilton1992}. \#prov donner la ref au chapitre 4 prediction
+Du fait de l'isotropie dans la direction transverse à la ligne de visée, $P_i^s$ ne dépend que de la norme de $\vec \kperp{}$. Il en va de même pour le vecteur $\vec r$, qui est décomposé en $\vec r =  \rpar{} \vec u + \vec \rperp{}$. Nous avons alors $\mu = \rpar{} / r$, et la fonction de corrélation $\xi_i^s$ ne dépend que de $\rpar{}$ et de la norme de $\vec \rperp{}$. L'expression de $\xi_i^s(r, \mu)$ est donnée dans la section~\ref{subsubsec:pred}.
+% Son expression, que nous ne donnons pas ici, est calculée dans \textcite{Hamilton1992}. \#prov donner la ref au chapitre 4 prediction
 
-L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{H} / r_d$ et $D_{M} / r_d$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f \sim \Omega_{m}^{\num{0.55}}$ \autocite{Linder2007}. La mesure de $f$ est donc un test direct de la relativité générale.
+L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{\mathrm{H}} / r_{\mathrm{d}}$ et $D_{\mathrm{M}} / r_{\mathrm{d}}$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f \sim \Omega_{m}^{\num{0.55}}$ \autocite{Linder2007}. La mesure de $f$ est donc un test direct de la relativité générale.
 
 \subsection{Les quasars}
 Les quasars, pour \emph{quasi - star}, sont parmi les objets les plus lumineux de l'univers. Ils font partie des noyaux actifs de galaxie, abrégées AGN (\emph{Active galatic nuclei}). Ces galaxies hébergent en leur centre un trou noir supermassif, de quelques millions à plusieurs milliards de masses solaires. La figure~\ref{fig:schema_qso} schématise le noyau actif. 
 \begin{figure}
   \centering
   \includegraphics[scale=0.68]{schema_qso2}
-  \caption{Schéma explicatif d'un noyau actif de galaxie. Le trou noir supermassif central est entouré d'un disque d'accrétion. Ce disque d'accrétion, en tournant, s'échauffe et émet puissamment dans toutes les longueurs d'onde. Des jets peuvent se former, et éjectent de la matière ultra-relativiste selon l'axe de rotation. Un tore, constitué de poussière entoure le disque. Lorsque ce tore obstrue la lumière qui atteint l'observateur, l'objet apparaît moins brillant et est classé en tant que galaxie Seyfert.  Sinon, l'objet est dénommé quasar. Lorsque le jet pointe directement vers l'observateur, l'objet est appelé blazar.
+  \caption{Schéma explicatif d'un noyau actif de galaxie. Le trou noir supermassif central est entouré d'un disque d'accrétion. Ce disque d'accrétion, à cause des collisions, s'échauffe et émet puissamment dans toutes les longueurs d'onde. Des jets peuvent se former, et éjectent de la matière ultra-relativiste selon l'axe de rotation. Un tore, constitué de poussière entoure le disque. Lorsque ce tore obstrue la lumière qui atteint l'observateur, l'objet apparaît moins brillant et est classé en tant que galaxie Seyfert.  Sinon, l'objet est dénommé quasar. Lorsque le jet pointe directement vers l'observateur, l'objet est appelé blazar.
   Cependant, les quasars restent mal compris. La formation et l'impact de leurs jets est au c{\oe}ur de nombreuses études (voir par exemple \textcite{Chabanier2020}.}
   \label{fig:schema_qso}
 \end{figure}
-Le trou noir supermassif, au centre, accrète la matière environnante. Sous forme d'un disque, cette dernière s'échauffe en tournant (\#prov collision plutot ?) et rayonne énormément d'énergie, dans toutes les longueurs d'ondes. Selon les cas, et souvent par cycle, le noyau actif peut émettre de puissants jets de matière ultra-relativiste. La figure~\ref{fig:qso_jets} montre de tels jets. Ces jets, d'une taille de plus de \SI{200}{\perh\kpc}, sont principalement constitués de noyaux ionisés, d'électrons et de positrons, éjectés à une vitesse proche de celle de la lumière. Ces phénomènes font partie des plus énergétiques de l'univers.
+Le trou noir supermassif, au centre, accrète la matière environnante. Sous forme d'un disque, cette dernière s'échauffe à cause des collisions et rayonne énormément d'énergie, dans toutes les longueurs d'ondes. Selon les cas, et souvent par cycle, le noyau actif peut émettre de puissants jets de matière ultra-relativiste. La figure~\ref{fig:qso_jets} montre de tels jets. Ces jets, d'une taille de plus de \SI{200}{\perh\kpc}, sont principalement constitués de noyaux ionisés, d'électrons et de positrons, éjectés à une vitesse proche de celle de la lumière. Ces phénomènes font partie des plus énergétiques de l'univers.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{qso_jets}
@@ -843,8 +849,11 @@ Un quasar, situé à un redshift $z_{\textsc{QSO}}$ émet de la lumière jusqu'�
 % Nous supposons que ces absorbeurs absorbent uniquement en \lya{} :
 D'autres absorptions peuvent avoir lieu. Mais, en première approximation, nous pouvons considérer que ces absorbeurs absorbent uniquement en \lya{}.
 Les photons possédant une longueur d'onde $\lambda_{\mathrm{Ly}\alpha} = \SI{1215.67}{\angstrom}$ dans le référentiel de l'absorbeur sont donc absorbés par l'hydrogène neutre et l'électron de ce dernier effectue une transition électronique des couches $n=1$ à $n=2$. Plus l'absorbeur est dense, plus le nombre de photons absorbés est important. Considérons à présent l'absorbeur 1.
-L'absorption \lya{} s'effectue dans son référentiel à $\lambda_{\mathrm{RF}} = \lambda_{\mathrm{Ly}\alpha}$, ce qui correspond, dans le référentiel de l'observateur, à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{1})$. De plus, la longueur d'onde correspondant à la raie d'émission du \lya{} du quasar dans le référentiel de l'observateur est $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{\textsc{QSO}})$. Ainsi, comme $z_1 < z_{\textsc{QSO}}$, l'observateur identifie une raie d'absorption à une longueur d'onde plus faible que la raie d'émission \lya{} dans le spectre du quasar. Il en est de même pour les 2\up{ème} et 3\up{ème} absorbeurs : le spectre observé présente une raie d'absorption à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{2})$ et à $\lambda_{obs} = \lambda_{\mathrm{Ly}\alpha} (1+z_{3})$. Le mécanisme se généralise pour tous les absorbeurs présents le long de la ligne de visée. Chaque absorbeur crée une raie d'absorption, à une longueur d'onde plus faible que la raie d'émission \lya{}. Ainsi, la région du spectre à gauche de la raie \lya{} contient toute une série de raies d'absorption. Cette région s'appelle la forêt \lya{}. Elle est visible sur la figure~\ref{fig:spectre_qso}. Ce même processus est à l'oeuvre pour la raie \lyb{}, et pour toutes les autres raies d'émission présentes dans le spectre.
-\#prov expliquer que c'est continu dans la realite plutot que discret(les absorptions)
+L'absorption \lya{} s'effectue dans son référentiel à $\lambda_{\mathrm{RF}} = \lambda_{\mathrm{Ly}\alpha}$, ce qui correspond, dans le référentiel de l'observateur, à $\lambda_{\mathrm{obs}} = \lambda_{\mathrm{Ly}\alpha} (1+z_{1})$. De plus, la longueur d'onde correspondant à la raie d'émission du \lya{} du quasar dans le référentiel de l'observateur est $\lambda_{\mathrm{obs}} = \lambda_{\mathrm{Ly}\alpha} (1+z_{\textsc{QSO}})$. Ainsi, comme $z_1 < z_{\textsc{QSO}}$, l'observateur identifie une raie d'absorption à une longueur d'onde plus faible que la raie d'émission \lya{} dans le spectre du quasar. Il en est de même pour les 2\up{ème} et 3\up{ème} absorbeurs : le spectre observé présente une raie d'absorption à $\lambda_{\mathrm{obs}} = \lambda_{\mathrm{Ly}\alpha} (1+z_{2})$ et à $\lambda_{\mathrm{obs}} = \lambda_{\mathrm{Ly}\alpha} (1+z_{3})$.
+Le mécanisme se généralise pour tous les absorbeurs présents le long de la ligne de visée.
+% Chaque absorbeur crée une raie d'absorption, à une longueur d'onde plus faible que la raie d'émission \lya{}.
+Plus précisément, la distribution de l'hydrogène étant continue, elle produit un profil d'absorption continu le long de la ligne de visée. La résolution des instruments rend ce profil discret.
+Ainsi, la région du spectre à gauche de la raie \lya{} contient toute une série de raies d'absorption. Cette région s'appelle la forêt \lya{}. Elle est visible sur la figure~\ref{fig:spectre_qso}. Ce même processus est à l'oeuvre pour la raie \lyb{}, et pour toutes les autres raies d'émission présentes dans le spectre.
 % \textbf{Cependant, il est beaucoup plus marqué pour la forêt \lya{}, grâce à la grande section efficace de la transition associée.}
 Cependant, il est beaucoup plus marqué pour la forêt \lya{}. Ceci vient de l'abondance de l'hydrogène dans le milieu intergalactique, et aussi de la grande section efficace de la transition \lya{}.
 \begin{figure}
@@ -859,7 +868,7 @@ Cependant, il est beaucoup plus marqué pour la forêt \lya{}. Ceci vient de l'a
 \end{figure}
 \paragraph{}
 L'absorption \lya{} peut donc être utilisée afin de tracer la matière à grande échelle. Contrairement aux quasars et aux galaxies, qui sont des objets ponctuels et donc des traceurs booléens, la forêt \lya{} est un traceur continu. En effet, chaque absorbeur le long de la ligne de visée produit une raie d'absorption, dont l'intensité dépend de la densité de l'absorbeur. Ainsi, en plus de nous renseigner sur la distribution spatiale de la matière, chaque absorbeur nous renseigne sur la quantité de matière présente en chaque point sondé.
-Considérons un absorbeur très fin, de largeur $dl$, à un redshift $z_{abs}$. Le flux absorbé $dF$ par cet absorbeur est reliée à la densité d'hydrogène neutre $n_{\textsc{HI}}$ par la relation
+Considérons un absorbeur très fin, de largeur $dl$, à un redshift $z_{\mathrm{abs}}$. Le flux absorbé $dF$ par cet absorbeur est reliée à la densité d'hydrogène neutre $n_{\textsc{HI}}$ par la relation
 \begin{equation}
   dF = n_{\textsc{HI}} \sigma_{\mathrm{Ly}\alpha} F dl  \; ,
 \end{equation}
@@ -887,7 +896,7 @@ La fraction de flux transmis $F$ est notre observable. Nous définissons donc le
   \delta_{\mathrm{Ly}\alpha}(z) = \frac{F}{\overline F(z)} - 1  \; , 
 \end{equation}
 où $\overline F$ est la transmission moyenne au redshift $z$.\\
-Du fait que le contraste du \lya{} est défini en fonction de l'absorption observée (moins il y a de lumière, plus il y a de matière), le biais $b_{\mathrm{Ly}\alpha}$ qui relie $\delta_{\mathrm{Ly}\alpha}$ à $\delta_{matière}$ est négatif.
+Du fait que le contraste du \lya{} est défini en fonction de l'absorption observée (moins il y a de lumière, plus il y a de matière), le biais $b_{\mathrm{Ly}\alpha}$ qui relie $\delta_{\mathrm{Ly}\alpha}$ à $\delta_{\mathrm{matière}}$ est négatif.
 % De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière associées sont faibles. Ainsi, à la différence des traceurs ponctuels tels les quasars ou les galaxies, le biais du \lya{} est très faible.
 De plus, étant donné que la forêt \lya{} sonde l'hydrogène neutre du milieu intergalactique, composé de gaz très peu dense, les fluctuations de densité de matière tracées appartiennent au régime linéaire, par opposition aux traceurs booléens qui sondent des régions effondrées et non linéaires. Le biais de l'hydrogène est donc proche de 1. Cependant, la non-linéarité de l'équation~\ref{eq:tff} compresse les variations de $\tau$, le ramenant entre 0 et 1. Ceci a pour effet de réduire drastiquement le biais du \lya{}. A un redshift $z \sim \num{2.5}$, le biais de $F$ est de l'ordre de \num{0.15}. Il est nettement inférieur à celui des LRG, qui vaut environ 2, et aussi à celui des quasars, qui est de l'ordre de \num{3.5} à $z \sim \num{2.5}$.
 Ce faible biais est compensé par deux effets.
@@ -903,7 +912,7 @@ En passant de l'espace réel à l'espace des redshifts, $\tau$ est conservé, ma
 Nous pouvons tout de même définir le paramètre RSD du \lya{} comme
 \begin{equation}
   \label{eq:kaiser4}
-  \delta_{\mathrm{Ly}\alpha}^{s}(\vec k, z) = b_{\mathrm{Ly}\alpha}(z) (1+ \beta_{\mathrm{Ly}\alpha}(z) \mu^2) \delta_{matière}(\vec k, z)   \; .
+  \delta_{\mathrm{Ly}\alpha}^{s}(\vec k, z) = b_{\mathrm{Ly}\alpha}(z) (1+ \beta_{\mathrm{Ly}\alpha}(z) \mu^2) \delta_{\mathrm{matière}}(\vec k, z)   \; .
 \end{equation}
 Mais, dans ce cas, $ \beta_{\mathrm{Ly}\alpha} \neq f / b_{\mathrm{Ly}\alpha}$.
 Nous présentons les mesures du biais et du paramètre RSD du \lya{} dans la section~\ref{subsec:data_ana}.
@@ -927,7 +936,8 @@ Le \lya{} n'est pas le seul absorbeur présent dans le spectre des quasars. D'au
 
 % Comme expliqué dans la section précédente, chaque absorption observée dans la forêt \lya{} est supposée être causée par un absorbeur \lya{}. Cependant, rien ne nous garanti que l'absorption observée n'est pas causée par un autre absorbeur, à un autre redshift.
 Comme expliqué dans la section précédente, en première approximation, chaque absorption observée dans la forêt \lya{} est causée par un absorbeur \lya{}. Cependant, certaines absorptions sont causées par des métaux.
-Etant donné que le champ des métaux est corrélé avec le champ d'hydrogène neutre, les raies d'absorptions des métaux sont corrélés avec celles du \lya. Supposons la présence d'un métal à un redshift $z_{met}$, absorbant dans son référentiel à une longueur d'onde $\lambda_{met}$. L'absorption produite est observée à $\lambda_{obs1} = \lambda_{met} ( 1 + z_{met})$, mais sera reconstruite à un redshift $z_{abs} = \lambda_{obs1} / \lambda_{\mathrm{Ly}\alpha} - 1 \neq z_{met}$. De plus, la présence d'hydrogène neutre au redshift du métal $z_{met}$ produit aussi une absorption, à une longueur d'onde $\lambda_{obs2} = \lambda_{\mathrm{Ly}\alpha}(1+z_{met})$. Ainsi, à chaque raie d'absorption de métal, interprétée comme de l'absorption \lya{}, est associée une autre raie d'absorption \lya{}. Ceci produit une fausse corrélation le long de la ligne de visée, à une séparation caractérisée par le rapport $\lambda_{met} / \lambda_{\mathrm{Ly}\alpha}$. Cette effet est très visible dans la fonction de corrélation à une dimension : lorsque l'on corrèle des pixels d'une même forêt, mais aussi dans la fonction de corrélation à trois dimensions le long de la ligne de visée ($\rperp{} < \SI{4}{\perh\Mpc}$) (voir figure~\ref{fig:dr16_4bins}).  \#prov expliquer xi3d mu =1  = xi1d
+Etant donné que le champ des métaux est corrélé avec le champ d'hydrogène neutre, les raies d'absorptions des métaux sont corrélés avec celles du \lya. Supposons la présence d'un métal à un redshift $z_{\mathrm{met}}$, absorbant dans son référentiel à une longueur d'onde $\lambda_{\mathrm{met}}$. L'absorption produite est observée à $\lambda_{\mathrm{obs1}} = \lambda_{\mathrm{met}} ( 1 + z_{\mathrm{met}})$, mais sera reconstruite à un redshift $z_{\mathrm{abs}} = \lambda_{\mathrm{obs1}} / \lambda_{\mathrm{Ly}\alpha} - 1 \neq z_{\mathrm{met}}$. De plus, la présence d'hydrogène neutre au redshift du métal $z_{\mathrm{met}}$ produit aussi une absorption, à une longueur d'onde $\lambda_{\mathrm{obs2}} = \lambda_{\mathrm{Ly}\alpha}(1+z_{\mathrm{met}})$. Ainsi, à chaque raie d'absorption de métal, interprétée comme de l'absorption \lya{}, est associée une autre raie d'absorption \lya{}. Ceci produit une fausse corrélation le long de la ligne de visée, à une séparation caractérisée par le rapport $\lambda_{\mathrm{met}} / \lambda_{\mathrm{Ly}\alpha}$.
+Cet effet est très visible dans la fonction de corrélation à une dimension : lorsque l'on corrèle des pixels d'une même forêt (voir figure~\ref{fig:cf1d_eboss03}). L'effet est aussi visible dans la fonction de corrélation à trois dimensions le long de la ligne de visée ($\rperp{} < \SI{4}{\perh\Mpc}$) (voir figure~\ref{fig:dr16_4bins}).
 
 
 \paragraph{}

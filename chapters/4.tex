@@ -74,10 +74,10 @@ Enfin, nous présentons comment cette densité est transformée en fraction de f
 
 \subsection{Les champs de densité}
 \label{subsec:densityfields}
-La première étape dans la création des mocks est de générer les boîtes qui contiennent le champ de densité $\delta$. D'abord, un GRF est généré dans une boite de $\num{2560}\times\num{2560}\times\num{1536}$ voxels, chaque voxel faisant  $d_{cell}^3 = (\SI{2.19}{\perh\Mpc})^3$.
+La première étape dans la création des mocks est de générer les boîtes qui contiennent le champ de densité $\delta$. D'abord, un GRF est généré dans une boite de $\num{2560}\times\num{2560}\times\num{1536}$ voxels, chaque voxel faisant  $d_{\mathrm{cell}}^3 = (\SI{2.19}{\perh\Mpc})^3$.
 Afin que le champ $\delta$ possède la bonne fonction de corrélation, une transformation de Fourier 3D\footnote{Nous utilisons la librairie pyFFTW (https://github.com/pyFFTW/pyFFTW), une adaptation python de la librairie FFTW (http://www.fftw.org/).} est appliquée sur la boîte, puis la boîte $\delta_k$ ainsi obtenue est multipliée par
 \begin{equation}
-  \sqrt{\frac{P(k)}{d_{cell}^3}} \; ,
+  \sqrt{\frac{P(k)}{d_{\mathrm{cell}}^3}} \; ,
 \end{equation}
 % \textbf{où $P(k)$ est le spectre de puissance désiré. Ce procédé garanti que le champ $\delta_k$ suive le spectre de puissance $P(k)$. Il est ensuite possible d'obtenir la boîte $\delta$ dans l'espace réel grâce à une transformation de Fourier inverse de la boîte $\delta_k$.}
 où $P(k)$ est le spectre de puissance désiré. Il est ensuite possible d'obtenir la boîte $\delta$ dans l'espace réel grâce à une transformation de Fourier inverse de la boîte $\delta_k$. Ce procédé garanti que le champ $\delta$ suive le spectre de puissance $P(k)$. 
@@ -113,7 +113,7 @@ Nous verrons section~\ref{subsec:qso} que, de manière à obtenir un relevé syn
 Pour chacune des boîtes, nous partons du spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$, fourni par Camb~\autocite{Lewis1999}. Nous multiplions ensuite ce spectre de puissance par $(b_{\textsc{QSO}}(z_i) G(z_i))^2$, où $i \in [1\, ; 2\, ; 3]$. A l'aide de la transformation de Fourier, nous calculons la fonction de corrélation $\xi_{i}(r)$. Puis, nous déterminons le spectre de puissance $P_{\textsc{QSO},i}(k)$, à appliquer à la boîte $\delta_k$, comme la transformée de Fourier de $\xi_{\textsc{QSO},i}(r) = \ln(1+\xi_i(r))$ (équation~\ref{eq:cf_tf2}).
 Une fois les trois spectres de puissances $P_{\textsc{QSO},i}(k)$ obtenus, nous construisons 3 boîtes
 \begin{equation}
-  \delta_{k,i}(k)  = \delta_k(k) \sqrt{\frac{P_{\textsc{QSO},i}(k)}{V_{cell}}} \; ,
+  \delta_{k,i}(k)  = \delta_k(k) \sqrt{\frac{P_{\textsc{QSO},i}(k)}{V_{\mathrm{cell}}}} \; ,
 \end{equation}
 où $\delta_k$ est le GRF dans l'espace de Fourier. Une fois ces 3 boîtes construites, nous appliquons à chacune d'entre elle une transformation de Fourier inverse afin d'obtenir les boîtes $\delta_{\textsc{QSO}, i}$. Ces boîtes seront interpolées en $z$, puis les quasars seront ensuite tirés avec une probabilité $\propto \exp(\delta_{\textsc{QSO}}(z))$, où $\delta_{\textsc{QSO}}$ est la boîte interpolée. Nous expliquons cette étape dans la section~\ref{subsec:qso}.
 
@@ -130,7 +130,7 @@ De plus, la formule FGPA (Fluctuating Gunn Peterson Approximation) permet de rel
 \end{equation}
 Les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon biais du \lya{} et la bonne transmission moyenne $\overline F$. Leur détermination est décrite dans la section~\ref{sec:tuning}. Le facteur de croissance $G$ prend en compte l'évolution avec le redshift du champ de densité $\delta$. Ainsi il nous suffit de construire un GRF qui suit la fonction de corrélation à $z=0$ pour simuler le champ d'absorption du \lya{}. Pour ce faire, nous partons de la même boîte $\delta_k$ utilisée pour construire les 3 boîtes log-normales des quasars. Ceci garanti la corrélation croisée entre les quasars et le champ d'absorption \lya{}. Le spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$ est ensuite appliqué à la boîte $\delta_k$. Enfin, nous obtenons la boîte de densité $\delta_{\mathrm{matière}}$ à $z = 0$ qui servira au calcul du champ d'absorption du \lya{} en effectuant la transformée de Fourier de la boîte
 \begin{equation}
-  \delta_{k, matière}(\vec k)  = \delta_k(\vec k) \sqrt{\frac{P_{\mathrm{matière}}(\vec k)}{V_{cell}}} \; .
+  \delta_{k, \mathrm{matière}}(\vec k)  = \delta_k(\vec k) \sqrt{\frac{P_{\mathrm{matière}}(\vec k)}{V_{\mathrm{cell}}}} \; .
 \end{equation}
 
 
@@ -141,7 +141,7 @@ Afin d'inclure les RSD dans nos mocks, nous simulons aussi le champ des vitesses
   \label{eq:v1}
   v_{k,n}(\vec k) = \frac{ik_n}{k^2}  a H f \delta_{k}(\vec k) \; .
 \end{equation}
-% Le champ $\delta_{k, matière}$ est le champ de fluctuation de la matière à $z = 0$ dans l'espace $k$ calculé précédemment.
+% Le champ $\delta_{k, \mathrm{matière}}$ est le champ de fluctuation de la matière à $z = 0$ dans l'espace $k$ calculé précédemment.
 % Il est fréquent
 % (\#prov approximation réaliste ? mettre une source ; j'ai demandé a Etienne : theorie lineaire pas de biais, c'est ce qui est utilisé pour la reconstruction. Y a des gens qui regardent dans les simu nbody si y a un biais des vitesses qui apparait, dans les simus eBOSS y a rien de convainquant, mais le papier est tres peu fournit a ce sujet)
 % de considérer que le champ de vitesse des traceurs est le même que celui de la matière sous-jacente. Autrement dit, le champ de vitesse des traceurs est non biaisé.
@@ -149,13 +149,13 @@ En théorie linéaire, les traceurs sont considérés avoir la même vitesse que
 En ce qui concerne les quasars, nous simulons les RSD en déplaçant chaque quasar proportionnellement à sa vitesse le long de la ligne de visée (équation~\ref{eq:delta_z}). Dans ce but, nous calculons les trois boîtes de vitesses $v_{k,\textsc{x}}$, $v_{k,\textsc{y}}$ et $v_{k,\textsc{z}}$, comme
 \begin{equation}
   \label{eq:v2}
-  v_{k, n}(\vec k, z) = \frac{- i k_n}{k^2} H(z) \frac{dG}{dz}(z) \delta_{k, matière}(\vec k) \; ; \hspace{0.5cm} n \in [\textsc{x} \, ; \textsc{y} \, ; \textsc{z}] \; .
+  v_{k, n}(\vec k, z) = \frac{- i k_n}{k^2} H(z) \frac{dG}{dz}(z) \delta_{k, \mathrm{matière}}(\vec k) \; ; \hspace{0.5cm} n \in [\textsc{x} \, ; \textsc{y} \, ; \textsc{z}] \; .
 \end{equation}
 Ces boîtes sont construites pour $z = 0$. Cette équation est équivalente à l'équation~\ref{eq:v1}, car
 \begin{equation}
   f=\frac{d \ln G}{d \ln a}=\frac{a}{G} \frac{dG}{da}=-\frac{1}{aG}\frac{dG}{dz}
 \end{equation}
-Comme précédemment, la boîte $\delta_{k, matière}$ est la même que celle utilisée pour construire les boîtes $\delta_{\textsc{QSO},i}$ des quasars et la boîte $\delta_{\mathrm{matière}}$ utilisée pour le \lya{}, ceci afin de garantir la correspondance entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier inverse, nous obtenons les trois boîtes de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$. Le calcul pour obtenir la vitesse parallèle $v_{\parallel}$ à un redshift $z$ est décrit dans la section~\ref{subsec:qso}.
+Comme précédemment, la boîte $\delta_{k, \mathrm{matière}}$ est la même que celle utilisée pour construire les boîtes $\delta_{\textsc{QSO},i}$ des quasars et la boîte $\delta_{\mathrm{matière}}$ utilisée pour le \lya{}, ceci afin de garantir la correspondance entre la densité des traceurs et leurs vitesses particulières. A l'aide d'une transformation de Fourier inverse, nous obtenons les trois boîtes de vitesse à $z=0$ dans l'espace réel $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$. Le calcul pour obtenir la vitesse parallèle $v_{\parallel}$ à un redshift $z$ est décrit dans la section~\ref{subsec:qso}.
 % A l'aide d'une transformation de Fourier, nous obtenons chaque champ de vitesse dans l'espace réel $v_x$, $v_y$ et $v_z$, ce qui nous permet de calculer la vitesse le long de la ligne de visée
 % \begin{equation}
 %   v_{\parallel}(\vec r) = \frac{\vec r \cdot \vec v}{|| \vec r ||} \; .
@@ -190,7 +190,7 @@ Cette équation permet de retrouver la formule de kaiser :
 
 % Nous calculons d'abord les 6 champs
 % \begin{equation}
-%   \eta_{ij}(\vec k) = \frac{- k_i k_j}{k^2} f \delta_{k, matière}(\vec k) \; ; \hspace{0.5cm} (i,j) \in [x, y, z]^2 \; .
+%   \eta_{ij}(\vec k) = \frac{- k_i k_j}{k^2} f \delta_{k, \mathrm{matière}}(\vec k) \; ; \hspace{0.5cm} (i,j) \in [x, y, z]^2 \; .
 % \end{equation}
 % % Le champ $\eta_{\parallel}$ est donné par
 % % \begin{equation}
@@ -448,7 +448,7 @@ Le facteur $(1+z)$ dans l'équation~\ref{eq:r_rsd} vient de la conversion des di
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
 A cette étape, nous disposons d'un catalogue de quasars corrélés avec le champ de densité $\delta_{\mathrm{matière}}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar et jusqu'à l'observateur, puis interpoler la boîte contenant le champ de densité le long de ces lignes de visée.
-Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{pix} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{subsec:model_donnees}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
+Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{\mathrm{pix}} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{subsec:model_donnees}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
 
 % Une fois ce tableau en longueur d'onde défini, nous le positionnons dans les boîtes afin de construire la ligne de visée à partir de chaque quasar.
 % pour chaque quasar, nous calculons la position $(X,Y,Z)$ de chaque pixel.
@@ -460,9 +460,9 @@ Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_
 Pour chaque pixel, nous calculons une moyenne pondérée des voxels voisins avec un lissage gaussien.
   Ce lissage est nécessaire afin d'éviter le crénelage (\emph{aliasing}) aux petites échelles.
   Sans lissage, les spectres interpolés possèdent des discontinuitées (voir figure~\ref{fig:smoothing11}). Ces discontinuités rajoutent de la puissance parasite aux petites échelles lors du calcul du spectre de puissance.
-  % Nous choisissons un lissage de largeur $\sigma = d_{cell}$.
-  Nous appliquons donc un lissage gaussien, de largeur $\sigma = d_{cell}$.
-% Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
+  % Nous choisissons un lissage de largeur $\sigma = d_{\mathrm{cell}}$.
+  Nous appliquons donc un lissage gaussien, de largeur $\sigma = d_{\mathrm{cell}}$.
+% Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{\mathrm{cell}}$ (\#prov validé par le plot, demander à JM).
 % Ceci représente donc, pour chaque pixel, une moyenne sur \num{343} voxels.
 La figure~\ref{fig:smoothing11} présente le champ interpolé en considérant uniquement les voxels à $\pm 1 \sigma$. Trop peu de voxels sont considérés pour le calcul de chaque pixel, et le champ obtenu contient des discontinuités. La figure~\ref{fig:smoothing23} présente le champ interpolé en considérant les voxels à $\pm 2 \sigma$ (orange) et $\pm 3 \sigma$ (bleu). La différence entre les deux est faible, cependant certaines discontinuités subsistent pour le champ calculé avec $2 \sigma$, comme le montre le zoom sur le graphique de droite. Enfin, nous avons vérifié que les différences entre les champs obtenus avec $3$ et $4 \sigma$ sont plus faibles que $10^{-3}$, et donc négligeables par rapport au bruit dans chaque pixel. Nous nous limitons donc aux voxels compris à $\pm 3 \sigma$ du voxel central pour limiter le temps CPU.
 \begin{figure}
@@ -477,7 +477,7 @@ La figure~\ref{fig:smoothing11} présente le champ interpolé en considérant un
   \caption{Exemple de champ interpolé en utilisant les voxels à $\pm 2 \sigma$ (orange) et à $\pm 3 \sigma$ (bleu) du voxel central. Les discontinuitées sont beaucoup moins nombreuses que pour le champ interpolé avec $\pm 1 \sigma$ (figure~\ref{fig:smoothing11}). Cependant, certaines sont encore visibles sur le zoom, présenté sur le graphique de droite.}
   \label{fig:smoothing23}
 \end{figure}
-Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. % Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{cell}$ (\#prov validé par le plot, demander à JM).
+Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. % Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{\mathrm{cell}}$ (\#prov validé par le plot, demander à JM).
 Ceci représente donc, pour chaque pixel, une moyenne sur \num{343} voxels.
 Le champ dans le pixel $i$ est alors donné par
 % \begin{equation}
@@ -501,7 +501,7 @@ avec
   }) \; ,
 \end{equation}
 où $\vec r_j$ est la position du centre du voxel $j$, $\vec r_i$ celle du pixel $i$, et  $\delta_j$ est la valeur de la boîte au pixel $j$.
-% , et enfin $\sigma^2 = d_{cell}^2$ est la largeur du lissage gaussien appliqué.
+% , et enfin $\sigma^2 = d_{\mathrm{cell}}^2$ est la largeur du lissage gaussien appliqué.
 
 Ce calcul est effectué pour tous les pixels qui vérifient $\lambda_i < \lambda_{\textsc{QSO}}$, pour chaque quasar. Les boîtes interpolées sont la boîte $\delta_{\mathrm{matière}}$ utilisée pour construire l'absorption \lya{}, les trois boîtes de vitesse utilisées pour ajouter les RSD aux HCD tirés dans chaque ligne de visée (voir section~\ref{subsec:hcd}), et les six boîtes de gradient de vitesse afin d'ajouter les RSD au champ \lya{}.
 
@@ -517,9 +517,9 @@ Une fois les lignes de visés interpolées, nous pouvons transformer le champ de
 
 \subsubsection{Les petites échelles}
 La boîte $\delta_{\mathrm{matière}}$, utilisée dans l'équation~\ref{eq:fgpa2}, contient le champ de matière à grande échelle. Elle est construite grâce à la transformation de Fourier de la boîte $\delta_k$.
-Ce champ est construit sur une grille d'intervalle $d_{cell} = \SI{2.19}{\perh\Mpc}$. Par conséquent, la plus petite échelle accessible est
+Ce champ est construit sur une grille d'intervalle $d_{\mathrm{cell}} = \SI{2.19}{\perh\Mpc}$. Par conséquent, la plus petite échelle accessible est
 \begin{equation}
-  k_N = \frac{\pi}{d_{cell}} \sim \SI{1.43}{\h\per\Mpc} \; .
+  k_N = \frac{\pi}{d_{\mathrm{cell}}} \sim \SI{1.43}{\h\per\Mpc} \; .
 \end{equation}
 Nous manquons donc toutes les fluctuations pour lesquelles $k > k_N$.
 % Sans ces fluctuations le spectre de puissance à une dimension, défini comme
@@ -539,7 +539,7 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
   où $W(k)$ est le terme représentant le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ :
   \begin{equation}
     \label{eq:gauss_smoothing}
-    W(k) = \exp(- \frac{k^2 d_{cell}^2}{2}) \; .
+    W(k) = \exp(- \frac{k^2 d_{\mathrm{cell}}^2}{2}) \; .
   \end{equation}
   La courbe verte donne le spectre de puissance qui inclut l'effet de la taille des voxels. Celui-ci s'exprime comme
   \begin{equation}
@@ -548,7 +548,7 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
   où $G(k)$ est le terme qui prend en compte la taille des voxels :
   \begin{equation}
     \label{eq:effet_reso}
-    G(k) = \mathrm{sinc}\left(\frac{k d_{cell}}{2}\right)  \; .
+    G(k) = \mathrm{sinc}\left(\frac{k d_{\mathrm{cell}}}{2}\right)  \; .
   \end{equation}
   La courbe rouge donne le spectre de puissance qui inclut ces deux effets, c'est à dire multiplié par $W^2(k)G^2(k)$.
   La figure~\ref{fig:xi_smoothing} montre les fonctions de corrélation, qui sont les transformée de Fourier de ces spectres de puissance.
@@ -603,7 +603,7 @@ Comme ce champ n'est pas corrélé d'une ligne de visée à une autre, il ne par
 Afin d'ajouter la bonne quantité de fluctuations aux petites échelles, pour chaque ligne de visée nous générons un GRF à une dimension $\delta_{k,s}$.
 Puis, nous multiplions ce champ par
 \begin{equation}
-  \sqrt{\frac{P_{s}(k,z_{\mathrm{eff}})}{d_{pix}}} \; ,
+  \sqrt{\frac{P_{s}(k,z_{\mathrm{eff}})}{d_{\mathrm{pix}}}} \; ,
 \end{equation}
 où $z_{\mathrm{eff}}$ est le redshift moyen de la forêt, et $P_{s}$ est le spectre de puissance qu'il faut appliquer à $\delta_{k,s}$ afin que $\delta_F$ possède le bon $P^{\mathrm{1D}}$. $\delta_{k,s}$ est créé avec une taille supérieure à celle de la forêt, pour éviter les corrélations d'une extrémité à l'autre. La détermination de $P_{s}$ est détaillée dans la section~\ref{sec:tuning}. Puis, nous obtenons $\delta_s$ à l'aide de la transformation de Fourier inverse de $\delta_{k,s}$.
   Avant d'ajouter $\delta_s$ à $\delta_l$, nous corrigeons la dépendance en $z$ de chacun des $\delta_s$ de la forêt. En effet, $\delta_s$ est construit de façon à obtenir le bon spectre de puissance à une dimension au redshift moyen de la forêt. Les pixels situés en bord de forêt n'auront donc pas le bon $P^{\mathrm{1D}}$. Ainsi, nous corrigeons chaque $\delta_s$ comme :
@@ -613,9 +613,9 @@ où $z_{\mathrm{eff}}$ est le redshift moyen de la forêt, et $P_{s}$ est le spe
   où $\sigma_s$ est l'écart type du champ $\delta_s$. Celui-ci est relié au spectre de puissance $P_{s}$ par :
   \begin{equation}
     \label{eq:sigma_s}
-    \sigma_s = \frac{1}{d_{pix}N} \left( P_{s}(0) + P_{s}(k_{Ny}) + 2 \sum_{j=1}^{\frac{N}{2} - 1}P_{s}\left(\frac{2 \pi}{d_{pix}N} j\right)\right) \; ,
+    \sigma_s = \frac{1}{d_{\mathrm{pix}}N} \left( P_{s}(0) + P_{s}(k_{\mathrm{Ny}}) + 2 \sum_{j=1}^{\frac{N}{2} - 1}P_{s}\left(\frac{2 \pi}{d_{\mathrm{pix}}N} j\right)\right) \; ,
   \end{equation}
-  où $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$ est le mode de Nyquist : c'est le mode maximal accessible pour une taille de pixel donnée.
+  où $k_{\mathrm{Ny}} = \pi / d_{\mathrm{pix}} \sim \SI{15.7}{\perh\Mpc}$ est le mode de Nyquist : c'est le mode maximal accessible pour une taille de pixel donnée.
 
 
 \subsubsection{Les RSD}
@@ -623,7 +623,7 @@ où $z_{\mathrm{eff}}$ est le redshift moyen de la forêt, et $P_{s}$ est le spe
 % Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à 3 dimension pour les échelles $k_N < k < k_{max}$, avec
 % \begin{equation}
 %   \label{eq:kny}
-%   k_{max} = \frac{2 \pi}{1536 d_{cell}} \sim \SI{1.9e-3}{\h\per\Mpc} \; ,
+%   k_{max} = \frac{2 \pi}{1536 d_{\mathrm{cell}}} \sim \SI{1.9e-3}{\h\per\Mpc} \; ,
 % \end{equation}
 % (\#prov y a un facteur 2 en trop pour kny?)
 % ainsi que le bon spectre de puissance à une dimension.
@@ -770,18 +770,18 @@ Afin d'obtenir la prédiction $\xi_F^{pred}(r, \mu)$, nous commençons par calcu
 où $W(k)$ est le terme représentant le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ (équation~\ref{eq:gauss_smoothing}).
 % \begin{equation}
 %   \label{eq:gauss_smoothing}
-%   % W(k) = \mathrm{e}^{- \frac{k^2 d_{cell}^2}{2}} \;.
-%   W(k) = \exp(- \frac{k^2 d_{cell}^2}{2}) \;.
+%   % W(k) = \mathrm{e}^{- \frac{k^2 d_{\mathrm{cell}}^2}{2}} \;.
+%   W(k) = \exp(- \frac{k^2 d_{\mathrm{cell}}^2}{2}) \;.
 % \end{equation}
 % \# prov Expliquer pourquoi on ne prend pas en compte le terme lié à la résolution de la boîte ? Regarder si l'effet est négligeable
 Nous négligeons ici l'effet de la taille non nulle des voxels sur le spectre de puissance (équation~\ref{eq:effet_reso}).
 % Cet effet peut être modélisé en multipliant le spectre de puissance précédent par $G^2(k)$, où $G(k)$ s'exprime comme
 % \begin{equation}
 %   \label{eq:effet_reso}
-%   G(k) = \mathrm{sinc}\left(\frac{k d_{cell}}{2}\right) \;.
+%   G(k) = \mathrm{sinc}\left(\frac{k d_{\mathrm{cell}}}{2}\right) \;.
 % \end{equation}
 La figure~\ref{fig:xi_smoothing} montre l'effet de $W(k)$ et $G(k)$ sur la fonction de corrélation. L'effet lié à $G(k)$ est nettement moins important que celui lié à $W(k)$.
-% (\#prov il y a pas un facteur $\frac{1}{2}$ en trop ? on a $\sigma_{smooth}^2 = 2 d_{cell}^2$)
+% (\#prov il y a pas un facteur $\frac{1}{2}$ en trop ? on a $\sigma_{smooth}^2 = 2 d_{\mathrm{cell}}^2$)
 Puis, à l'aide d'une transformation de Fourier du spectre de puissance, nous obtenons la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ obtenu par interpolation avec lissage des boîtes.
 % Nous définissons le champ $\delta_g$ comme
 % \begin{equation}
@@ -997,9 +997,9 @@ La variance du champ $g = \delta_l + \delta_s + c(z)\eta_{\parallel}$ est donné
 Le terme entre parenthèses est la covariance des champs $\delta_l$ et $\eta_{\parallel}$.
 % La variance $\sigma_s$ du champ $\delta_s$ est reliée à son spectre de puissance $P_{s}$ par
 % \begin{equation}
-%   \sigma_s = \frac{1}{d_{pix}N} \left( P_{s}(0) + P_{s}(k_{Ny}) + 2 \sum_{j=1}^{\frac{N}{2} - 1}P_{s}\left(\frac{2 \pi}{d_{pix}N} j\right)\right) \; ,
+%   \sigma_s = \frac{1}{d_{\mathrm{pix}}N} \left( P_{s}(0) + P_{s}(k_{\mathrm{Ny}}) + 2 \sum_{j=1}^{\frac{N}{2} - 1}P_{s}\left(\frac{2 \pi}{d_{\mathrm{pix}}N} j\right)\right) \; ,
 % \end{equation}
-% où $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$ est le mode de Nyquist : c'est le mode maximal accessible pour une résolution donnée.
+% où $k_{\mathrm{Ny}} = \pi / d_{\mathrm{pix}} \sim \SI{15.7}{\perh\Mpc}$ est le mode de Nyquist : c'est le mode maximal accessible pour une résolution donnée.
 La variance $\sigma_s$ du champ $\delta_s$ est reliée à son spectre de puissance $P_{s}$ par l'équation~\ref{eq:sigma_s}.
 Dans le but de calculer $\sigma_s$ puis la prédiction,
 nous commençons donc par constuire le spectre de puissance $P^{\mathrm{1D}}_{\mathrm{modèle}}$ sur lequel le $P_{\mathrm{mock}}^{\mathrm{1D}}$ des mocks sera ajusté.
@@ -1023,8 +1023,8 @@ où $a$, $b$, $c$ et $d$ sont quatres paramètres à ajuster.
 La forme choisie pour $f$ permet d'avoir $\log(P^{\mathrm{1D}}_{\mathrm{modèle}})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \autocite{Arinyo-i-Prats2015}.
 % L'ajustement est fait dans les cinqs bins en redshift $z_1$, $z_2$, $z_3$, $z_4$ et $z_5$.
 % L'ajustement est fait dans les bins en redshift \num{2.2} ; \num{2.4} ; \num{2.6} ; \num{2.8} ; \num{3.0} ; \num{3.2} ; \num{3.4} et \num{3.6}.
-% Du fait de la résolution $d_{pix} = \SI{0.2}{\perh\Mpc}$ des spectres simulés, nous avons besoin de calculer le  $P_{s}$ jusqu'à $k_{Ny} = \pi / d_{pix} \sim \SI{15.7}{\perh\Mpc}$.
-Afin de construire $\delta_s$, nous avons besoin de calculer $P_{s}$ jusqu'à $k_{Ny}$.
+% Du fait de la résolution $d_{\mathrm{pix}} = \SI{0.2}{\perh\Mpc}$ des spectres simulés, nous avons besoin de calculer le  $P_{s}$ jusqu'à $k_{\mathrm{Ny}} = \pi / d_{\mathrm{pix}} \sim \SI{15.7}{\perh\Mpc}$.
+Afin de construire $\delta_s$, nous avons besoin de calculer $P_{s}$ jusqu'à $k_{\mathrm{Ny}}$.
 Le résultat de l'ajustement sur les données est donc extrapolé de $k = \num{2.0}$ jusqu'à $k = \SI{20}{\h\per\Mpc}$.
 Pour les $k$ plus petits que \SI{0.2}{\h\per\Mpc}, nous calculons le $P^{\mathrm{1D}}$ correspondant au modèle de $P^{\mathrm{3D}}$ décrit dans \textcite{Arinyo-i-Prats2015} et ajusté sur des simulations hydrodynamiques.
 Ce modèle est défini comme

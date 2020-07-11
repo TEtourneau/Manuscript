@@ -2,10 +2,10 @@
 % @author : bmazoyer
 
 % Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \begin{document}
 
 
 \graphicspath{ {../figures/mocks_ana/} }
@@ -64,12 +64,12 @@ Une fois cette grille construite, la séparation de chaque paires $(\Delta \thet
 \begin{equation}
   \left\{
     \begin{array}{l}
-      \rpar{} = \left[D_C(z_i) - D_C(z_j)\right] \cos\left(\frac{\Delta \theta}{2}\right) \; , \\
-      \rperp{} = \left[D_M(z_i) - D_M(z_j)\right] \sin\left(\frac{\Delta \theta}{2}\right) \; ,
+      \rpar{} = \left[D_{\mathrm{C}}(z_i) - D_{\mathrm{C}}(z_j)\right] \cos\left(\frac{\Delta \theta}{2}\right) \; , \\
+      \rperp{} = \left[D_{\mathrm{M}}(z_i) - D_{\mathrm{M}}(z_j)\right] \sin\left(\frac{\Delta \theta}{2}\right) \; ,
     \end{array}
   \right. 
 \end{equation}
-où $D_C$ est la distance comobile le long de la ligne de visée, et $D_M$ la distance comobile transverse (voir section~\ref{subsec:descri_mod}, paragraphe \emph{Les distances}). $z_i$ et $z_j$ sont les redshifts des pixels $i$ et $j$.
+où $D_{\mathrm{C}}$ est la distance comobile le long de la ligne de visée, et $D_{\mathrm{M}}$ la distance comobile transverse (voir section~\ref{subsec:descri_mod}, paragraphe \emph{Les distances}). $z_i$ et $z_j$ sont les redshifts des pixels $i$ et $j$.
 Puis, pour chaque bin $A$ de la grille en $(\rpar{}, \rperp{})$, toutes les paires de pixels dont la distance de séparation se trouve dans ce bin $A$ sont considérées. La fonction de corrélation dans ce bin est alors donnée par
 \begin{equation}
   \label{eq:xiff}
@@ -159,9 +159,9 @@ En ce qui concerne les données et les cooked mocks, la mesure du spectre de pui
   La fonction de corrélation à une dimension $\xi^{\mathrm{1D}}$ correspond à la fonction de corrélation à trois dimensions pour $\mu = 1$. En considérant uniquement les paires le long de la ligne de visée, elle permet de mettre en évidence les autres absorbeurs présents dans le milieu intergalactique, tels les métaux. La longueur d'onde d'absorption au repos de ces espèces étant différente de celle du \lya{}, les séparations physiques $\rpar{}=0$ sont reconstruite à une séparation $\rpar{}$ non nulle (voir l'explication de la matrice des métaux, section~\ref{subsec:model_donnees}). Ceci produit des pics dans la fonction de corrélation à une dimension. Ces pics sont d'autant plus visibles quand la fonction de corrélation est représentée en fonction de $\lambda_i / \lambda_j$, où $\lambda_i$ et $\lambda_j$ sont les longueurs des deux pixels formant chaque paire.
   % En effet, la séparation reconstruire $\rpar{}$ est donnée par
 %   \begin{equation}
-%     \rpar_{1,2}(\lambda_{\mathrm{obs}}) =  D_{C}(z = \frac{\lambda_{\mathrm{obs}}}{\lambda_1} - 1) - D_{C}(z = \frac{\lambda_{\mathrm{obs}}}{\lambda_2} - 1) \; ,
+%     \rpar_{1,2}(\lambda_{\mathrm{\mathrm{obs}}}) =  D_{\mathrm{C}}(z = \frac{\lambda_{\mathrm{\mathrm{obs}}}}{\lambda_1} - 1) - D_{\mathrm{C}}(z = \frac{\lambda_{\mathrm{\mathrm{obs}}}}{\lambda_2} - 1) \; ,
 %   \end{equation}
-% où $\lambda_{\mathrm{obs}}$ est la longueur d'onde observée, et $\lambda_1$ et $\lambda_2$ sont les longueurs d'ondes d'absorption au repos de l'absorbant 1 et 2.
+% où $\lambda_{\mathrm{\mathrm{obs}}}$ est la longueur d'onde observée, et $\lambda_1$ et $\lambda_2$ sont les longueurs d'ondes d'absorption au repos de l'absorbant 1 et 2.
 
 
   \subsection{L'auto-corrélation QSO$\times$QSO}
@@ -360,20 +360,20 @@ où $\tilde \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ (inte
 Afin de modéliser la corrélation des métaux, nous utilisons le modèle défini précédemment, utilisé pour décrire les corrélations $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{\textsc{QSO}}}$.
 % Lors du calcul du spectre de puissance, nous négligeons l'effet des HCD, ce qui revient à utiliser $b_{\textsc{HCD}} = 0$.
 Comme expliqué dans la section~\ref{subsec:contaminants}, toutes les absorptions sont supposées être des absorptions \lya{}. Les absorptions causées par les métaux sont donc reconstruites à un mauvais redshift. Ceci résulte dans un décalage de la fonction de corrélation le long de la ligne de visée.
-% Pour la corrélation d'un métal $m$ avec le \lya{}, le décalage se fait le long de la ligne de visée : lorsque la séparation physique du métal et du \lya{} est nulle, la séparation reconstruite est $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{\mathrm{Ly}\alpha} ) / \lambda_{\mathrm{Ly}\alpha}$.
-% De manière générale, pour la corrélation d'un absorbeur $m$ avec un autre absorbeur $n$ ($m \neq n$), le décalage se fait le long de la ligne de visée. Lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
+% Pour la corrélation d'un métal $m$ avec le \lya{}, le décalage se fait le long de la ligne de visée : lorsque la séparation physique du métal et du \lya{} est nulle, la séparation reconstruite est $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_{\mathrm{H}}(z)(\lambda_m - \lambda_{\mathrm{Ly}\alpha} ) / \lambda_{\mathrm{Ly}\alpha}$.
+% De manière générale, pour la corrélation d'un absorbeur $m$ avec un autre absorbeur $n$ ($m \neq n$), le décalage se fait le long de la ligne de visée. Lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_{\mathrm{H}}(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
 % La fonction de corrélation étant maximale pour $r = 0$, nous attentons donc un excès de corrélation pour ces séparations dans les fonctions de corrélation estimées à partir des données. Les métaux étant beaucoup moins présents que l'hydrogène dans le milieu intergalatique, les corrélations mettant en jeu deux métaux sont beaucoup moins importantes que les corrélations \lya{}$\times m$ ($m \neq$ \lya). L'effet principal vient donc des corrélations \lya{}$\times m$.
 Considérons deux absorbeurs $m$ et $n$ ($m \neq n$).
 % La fonction de corrélation $\xi_{m \times n}$ de ces deux absorbeurs étant maximale pour les séparations $r = 0$, nous attentons un excès de corrélation pour ces séparations.
-% Cependant, lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
+% Cependant, lorsque la séparation physique de ces deux absorbeurs est nulle, la séparation, en supposant que ces deux absorptions sont causées par le \lya{}, est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_{\mathrm{H}}(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
 La fonction de corrélation $\xi_{m \times n}$ de ces deux absorbeurs est maximale pour les séparations $r = 0$.
-Cependant, puisque l'analyse suppose que ces deux absorptions sont causées par le \lya{}, cette séparation $r = 0$ est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_H(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
+Cependant, puisque l'analyse suppose que ces deux absorptions sont causées par le \lya{}, cette séparation $r = 0$ est reconstruite à $\rperp{} = 0$ et $\rpar{} \sim (1+z)D_{\mathrm{H}}(z)(\lambda_m - \lambda_{n} ) / \lambda_{\mathrm{Ly}\alpha}$, où $z$ est le redshift moyen des deux absorbeurs.
 Ainsi, l'excès de corrélation observé n'est pas situé à $r = 0$, mais se trouve décalé le long de la ligne de visée.
 Le tableau~\ref{tab:metals_in_mocks} donne les séparations associées aux corrélations entre le \lya{} et les métaux ajustés sur les données.
 Les métaux étant beaucoup moins présents que l'hydrogène dans le milieu intergalactique, les corrélations mettant en jeu deux métaux sont beaucoup moins importantes que les corrélations mettant en jeu un métal et le \lya{}. % \lya{}$\times m$ ($m \neq$ \lya).
 L'effet principal vient donc des corrélations $\xi_{\mathrm{Ly}\alpha \times m}$. % \lya{}$\times m$.
 % Les pics associés à ces séparations sont visibles sur la figure~\ref{prov}.
-En ce qui concerne les corrélations $\xi_{m \times m}$, le décalage est d'origine différente. Une séparation physique $r=0$ correspond bien à une reconstruction $\rpar{} = \rperp{} = 0$. Cependant, le redshift de la paire est mal estimé. Chaque séparation physique $(\rpar{}, \rperp{})$ est donc reconstruite à $(D_H(z_m) / D_H(z))\rpar{}$ et $(D_M(z_m)/D_M(z))\rperp{}$.
+En ce qui concerne les corrélations $\xi_{m \times m}$, le décalage est d'origine différente. Une séparation physique $r=0$ correspond bien à une reconstruction $\rpar{} = \rperp{} = 0$. Cependant, le redshift de la paire est mal estimé. Chaque séparation physique $(\rpar{}, \rperp{})$ est donc reconstruite à $(D_{\mathrm{H}}(z_m) / D_{\mathrm{H}}(z))\rpar{}$ et $(D_{\mathrm{M}}(z_m)/D_{\mathrm{M}}(z))\rperp{}$.
 Pour la corrélation $\xi_{m \times \textsc{QSO}}$, le décalage est le même que dans le cas $\xi_{m\times n}$, en prenant $z_n = z_{\textsc{QSO}}$.
 
 % Le décalage de la fonction de corrélation est pris en compte par la \emph{matrice des métaux} $M_{AB}^{m\times n}$. Cette matrice permet de relier la fonction de corrélation $\xi_{m\times n}$ de l'absorbeur $m$ avec l'absorbeur $n$ à la fonction de corrélation décalée, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
@@ -1210,5 +1210,5 @@ Cependant, nous pouvons noter que la forme global de la corrélation à une dime
 
 
 % \bibliography{../source/library}
-\printbibliography
-\end{document}
+% \printbibliography
+% \end{document}
