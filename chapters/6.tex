@@ -264,7 +264,7 @@ Après avoir produit les ajustements présentés dans la section précédente, n
 Premièrement, nous pouvons remarquer que les deux paramètres \lya{} ajustés sont très anticorrélés.
 % Il serait intéressant d'étudier quel couple de paramètres sont les moins corrélés.
 % Ceci vient du fait que le paramètre RSD du \lya{} est très important : le signal se trouve principalement le long de la ligne de visée. Avec peu de signal perpendiculairement à la ligne de visée, il est difficile de décorréler le biais du paramètre RSD du traceur.
-Deuxièmement, les paramètres du \lya{} sont très corrélés avec ceux des HCD, notament $\beta_{\mathrm{Ly}\alpha}$ qui est corrélé à \SI{-75}{\percent} avec $b_{\textsc{HCD}}$. Ceci pose plusieurs problèmes : d'abord, la modélisation des HCD choisie dans \textcite{DuMasdesBourboux2020} et utilisée ici consiste à identifier puis masquer les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$, les HCD non masqués étant pris en compte par le terme $F_{\textsc{HCD}}$ (voir section~\ref{subsec:model_donnees}). Cependant, l'algorithme utilisé ne possède pas une efficacité de \SI{100}{\percent} (\#prov ref papier solene). Des HCD avec une grande densité de colonne ne sont donc pas masqués.
+Deuxièmement, les paramètres du \lya{} sont très corrélés avec ceux des HCD, notament $\beta_{\mathrm{Ly}\alpha}$ qui est corrélé à \SI{-75}{\percent} avec $b_{\textsc{HCD}}$. Ceci pose plusieurs problèmes : d'abord, la modélisation des HCD choisie dans \textcite{DuMasdesBourboux2020} et utilisée ici consiste à identifier puis masquer les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$, les HCD non masqués étant pris en compte par le terme $F_{\textsc{HCD}}$ (voir section~\ref{subsec:model_donnees}). Cependant, l'algorithme utilisé ne possède pas une efficacité de \SI{100}{\percent} (Chabanier et al. (in prep)). Des HCD avec une grande densité de colonne ne sont donc pas masqués.
 Ces HCD produisent des absorptions intenses, non prises en compte par le terme $F_{\textsc{HCD}}$, ce qui a pour effet d'augmenter le biais du \lya{}.
 De plus, le paramètre effectif $L_{\textsc{HCD}}$ est fixé à \SI{10}{\perh\Mpc} car il est corrélé avec les autres paramètres.
 Sa valeur, qui dépend de la distribution des HCD non masqués, est difficile à déterminer.
@@ -319,14 +319,14 @@ Il semble que la matrice de distorsion ne prenne pas totalement en compte l'ajou
 Enfin, nous observons un écart entre les valeurs de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ mesurées dans les mocks eboss-0.0 et eboss-0.2. L'écart mesuré pour $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ est comparable à celui mesuré entre les mocks eboss-0.0 et les raw mocks.
 L'écart mesuré sur $\beta_{\mathrm{Ly}\alpha}$ est plus important. Les valeurs obtenues dans l'ajustement des mocks eboss-0.2 ne sont pas compatibles avec celles mesurées dans les données DR16.
 % Nous suspectons les HCD d'être à l'origine de cet écart. Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, les paramètres \lya{} sont très corrélés avec ceux des HCD. Nous aurions pu par exemple choisir un $L_{\textsc{HCD}}$ plus faible dans l'ajustement des mocks eboss-0.2, ce qui aurait permis d'avoir des mesures compatibles de $\beta_{\mathrm{Ly}\alpha}$ entre les mocks eboss-0.0 et eboss-0.2 (voir figure~\ref{fig:bias_lya_vs_L0}).
-Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, les paramètres \lya{} sont très corrélés avec ceux des HCD, en particulier avec $L_{\textsc{HCD}}$ qui est fixé à \SI{10}{\perh\Mpc}.
+\textbf{Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, les paramètres \lya{} sont très corrélés avec ceux des HCD, en particulier avec $L_{\textsc{HCD}}$ qui est fixé à \SI{10}{\perh\Mpc}.
 Nous regardons dans un premier temps la corrélation des paramètres \lya{} avec $L_{\textsc{HCD}}$. La figure~\ref{fig:bias_lya_vs_L0} présente la mesure de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans les mocks-0.2 pour différentes valeurs de $L_{\textsc{HCD}}$. Le corrélation avec $L_{\textsc{HCD}}$ est similaire à celle observée dans les données (figure~\ref{fig:bias_lya_vs_L0_dr16}).
 Cette figure suggère qu'il faut utiliser une valeur de $L_{\textsc{HCD}}$ entre 2 et \SI{4}{\perh\Mpc} afin d'obtenir une mesure des paramètres \lya{} en accord avec les mocks eboss-0.0.
-Ainsi nous produisons un ajustement des mocks eboss-0.2 avec $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$ (le choix de cette valeur particulière est expliquée dans la section~\ref{prov}).
+Ainsi nous produisons un ajustement des mocks eboss-0.2 avec $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$ (le choix de cette valeur particulière est expliquée dans la section~\ref{subsec:comprendre_hcd}).
 Le résultat de cet ajustement est présenté dans le tableau~\ref{tab:cf_eboss02_L028}.
 Les paramètres \lya{} obtenus sont en bien meilleur accord avec les mocks eboss-0.2 que lorsque nous utilisons $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$.
-Ceci suggère que la valeur de $L_{\textsc{HCD}}$ utilisée dans l'ajustement des données DR16 est mal choisi, ou que les distributions de HCD entre les mocks et les données sont significativement différentes. Nous investigons le choix de $L_{\textsc{HCD}}$ dans la section~\ref{prov}.
-Aussi, nous remarquons que le biais du \lya{} préfèrerait une valeur de $L_{\textsc{HCD}}$ légèrement plus grande, tandis que $\beta_{\mathrm{Ly}\alpha}$ préfèrerait une valeur légèrement plus faible. Ceci indique que le modèle utilisé pour modéliser les HCD n'est pas parfait.
+Ceci suggère que la valeur de $L_{\textsc{HCD}}$ utilisée dans l'ajustement des données DR16 est mal choisi, ou que les distributions de HCD entre les mocks et les données sont significativement différentes. Nous investigons le choix de $L_{\textsc{HCD}}$ dans la section~\ref{subsec:comprendre_hcd}.
+Aussi, nous remarquons que le biais du \lya{} préfèrerait une valeur de $L_{\textsc{HCD}}$ légèrement plus grande, tandis que $\beta_{\mathrm{Ly}\alpha}$ préfèrerait une valeur légèrement plus faible. Ceci indique que le modèle utilisé pour modéliser les HCD n'est pas parfait.}
 
 \begin{figure}
   \centering
@@ -338,7 +338,7 @@ Aussi, nous remarquons que le biais du \lya{} préfèrerait une valeur de $L_{\t
 
 \begin{table}[]
   \centering
-  \caption{Résultats des ajustements de l'auto-corrélation \lya{}$\times$\lya{} estimée sur \Nmocks réalisations des mocks et moyennée sur les quatre bins en redshift. La première ligne donne l'ajustement des mocks eboss-0.0. La deuxième donne l'ajustement des mocks eboss-0.2 comme décrit dans la section~\ref{subsec:model_mock}. La troisième ligne donne le même ajustement que la deuxième mais en utilisant $L_{\textsc{HCD}} = \num{2.8}$. Le paramètre $L_{\textsc{HCD}}$ est donné en \si{\perh\Mpc}.}
+  \caption{Résultats des ajustements de l'auto-corrélation \lya{}$\times$\lya{} estimée sur \Nmocks réalisations des mocks et moyennée sur les quatre bins en redshift. La première ligne donne l'ajustement des mocks eboss-0.0. La deuxième donne l'ajustement des mocks eboss-0.2 comme décrit dans la section~\ref{subsec:model_mock}. La troisième ligne donne le même ajustement que la deuxième mais en utilisant $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$.}
   \label{tab:cf_eboss02_L028}
   \footnotesize
   \begin{tabular}{ccccccc}
@@ -429,7 +429,7 @@ Il serait tout de même intéressant de mener cette analyse sur un plus grand no
 \begin{figure}
   \centering
   \includegraphics[scale=0.8]{nhi_finder.png}
-  \caption{Densité de colonne $\log n_{\textsc{HI}}$ trouvée par le finder (logNHI output) en fonction de la densité de colonne des HCD des mocks (logNHI input). Cette comparaison est produite par Jim Rich et Solène Chabannier, du groupe cosmologie du CEA, à l'aide des mocks.}
+  \caption{Densité de colonne $\log n_{\textsc{HI}}$ trouvée par le finder (logNHI output) en fonction de la densité de colonne des HCD des mocks (logNHI input). Cette comparaison est produite par Jim Rich et Solène Chabannier, du groupe cosmologie du CEA, à l'aide des mocks (Chabanier et al. (in prep)).}
   \label{fig:nhi_finder}
 \end{figure}
 
@@ -466,7 +466,7 @@ Ceci est rassurant car la somme $b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}$ donne
 En ce qui concerne les données, les mesures de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $b_{\textsc{HCD}}$ en utilisant le modèle de Rogers ou le modèle C-G ne sont pas compatibles. Les sommes  $b_{\mathrm{Ly}\alpha} + b_{\textsc{HCD}}$ dans ces deux cas ne sont pas identiques mais restent compatibles. Ainsi, les proportions de HCD et de \lya{} mesurés avec le modèle de Rogers et le modèle C-G ne sont pas les mêmes.
 Nous pouvons aussi remarquer que les barres d'erreurs liées à la mesure des paramètres, notamment celles de $\beta_{\mathrm{Ly}\alpha}$, sont bien plus importantes dans le cas du modèle C-G.
 % Ceci provient de la corrélation des paramètres \lya{}, notamment $\beta_{\mathrm{Ly}\alpha}$, avec les autres paramètres qui est plus importante dans le modèle C-G que dans le modèle de Rogers.
-\textbf{Ceci vient du fait que les paramètres \lya{} sont davantage corrélés avec ceux des HCD. Le modèle C-G a donc davantage de mal à faire la distinction entre la contribution du \lya{} et celle des HCD.}
+Ceci vient du fait que les paramètres \lya{} sont davantage corrélés avec ceux des HCD. Le modèle C-G a donc davantage de mal à faire la distinction entre la contribution du \lya{} et celle des HCD.
 
 Le fait que l'ajustement des mocks avec le modèle de Rogers et le modèle C-G donne des résultats compatibles est rassurant, car dans les deux cas, c'est la même corrélation qui est ajustée. Cependant, le fait que les résultats des ajustements dans le cas des données ne soient pas compatibles suggère qu'il y a quelque chose de non identifié dans les données, et qui est pris en parti en compte par la modélisation des HCD, notamment par le modèle C-G. Ce dernier point est appuyé par le fait que le $\chi^2$ dans l'ajustement de la corrélation moyennée sur les quatres bins en redshift avec le modèle C-G est 15 points plus bas que celui obtenu dans l'ajustement avec le modèle de Roger.
 
@@ -540,16 +540,15 @@ Enfin, nous regardons si en fixant les paramètres \lya{}, nous obtenons un biai
 %Similairement aux ajustements présentés dans le tableau~\ref{tab:cf_eboss02_L0free}, fixer les paramètres \lya{} ne résout pas les tensions observées. 
 % Pour le modèle de Rogers, le fait de fixer les paramètres \lya{} est compensé par un biais des HCD trop grand. Nous attendons $b_{\textsc{HCD}} = \num{0.0501} \pm \num{0.0090}$ et mesurons $b_{\textsc{HCD}} = -\num{0.0555} \pm \num{0.0017}$. Dans le modèle C-G, c'est le paramètre $\beta_{\textsc{HCD}}$ qui compense les paramètres \lya{} fixés.
 % Ainsi, aucun des modèles n'est capable d'identifier correctement les quantités relative de HCD dans deux versions de mocks.
-Pour le modèle de Rogers, le fait de fixer les paramètres \lya{} résout assez bien les tensions obervées : nous attendons $b_{\textsc{HCD}} = \num{0.0501} \pm \num{0.0090}$ et mesurons $b_{\textsc{HCD}} = -\num{0.0555} \pm \num{0.0017}$.
-Cependant, dans le cas du moèle C-G, le paramètre $\beta_{\textsc{HCD}}$ compense les paramètres \lya{} fixés, et la valeur de $b_{\textsc{HCD}}$ obtenue n'est pas compatible avec 3 fois celle mesurée dans la version standard.
+\textbf{Pour le modèle de Rogers, le fait de fixer les paramètres \lya{} résout assez bien les tensions obervées : nous attendons $b_{\textsc{HCD}} = \num{0.0501} \pm \num{0.0090}$ et mesurons $b_{\textsc{HCD}} = -\num{0.0555} \pm \num{0.0017}$.
+Cependant, dans le cas du moèle C-G, le paramètre $\beta_{\textsc{HCD}}$ compense les paramètres \lya{} fixés, et la valeur de $b_{\textsc{HCD}}$ obtenue n'est pas compatible avec 3 fois celle mesurée dans la version standard.}
 
 \begin{table}[]
   \centering
-  \caption{\textbf{Mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$, $b_{\textsc{HCD}}$ et  $\beta_{\textsc{HCD}}$ faites à partir de l'auto-corrélation \lya{}$\times$\lya{} estimée sur une réalisation des mocks eboss-0.2, où les HCD avec $\log n_{\mathrm{HI}} > \num{20.3}$ ont été masqués.
+  \caption{Mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$, $b_{\textsc{HCD}}$ et  $\beta_{\textsc{HCD}}$ faites à partir de l'auto-corrélation \lya{}$\times$\lya{} estimée sur une réalisation des mocks eboss-0.2, où les HCD avec $\log n_{\mathrm{HI}} > \num{20.3}$ ont été masqués.
     % Les deux premières lignes donnent les mesures faites avec le modèle de Rogers et le modèle C-G. Les deux dernières lignes donnent les mesures faites avec ces deux modèles en ajustant la corrélation \lya{}$\times$\lya{} estimée sur la même réalisation des mocks mais avec un catalogue contenant 3 fois plus de HCD.}
     % La première section donne les mesures faites avec le modèle de Rogers, et la seconde celles faites avec le modèle C-G.
       Le détail de chaque ajustement est donné dans le texte.}
-    }
     \label{tab:hcd_dndz3}
     \small
     \begin{tabular}{lllll}
@@ -573,6 +572,7 @@ Cependant, dans le cas du moèle C-G, le paramètre $\beta_{\textsc{HCD}}$ compe
 
 
 \subsection{Mieux comprendre les HCD}
+\label{subsec:comprendre_hcd}
 
 Afin de comprendre pourquoi les deux modèles discutés dans la section précédente ont beaucoup de mal à distinguer la contribution des HCD de celle du \lya{}, nous avons essayé de comprendre l'effet des HCD sur les fonctions de corrélation.
 La figure~\ref{fig:cf_models} présente les différentes composantes du modèle ajusté sur l'auto-corrélation \lya{}$\times$\lya{} estimée à partir des données DR16. Ce modèle est présenté dans la section~\ref{subsec:model_donnees}.
@@ -636,25 +636,26 @@ Mais comme nous l'avons vu à plusieurs reprises, $L_{\textsc{HCD}}$ influence g
 % Nous déterminons $L_{\textsc{HCD}}$ de deux façons différentes.
 Nous expliquons ici la méthode utilisée pour déterminer $L_{\textsc{HCD}}$.
 Pour chaque valeur de $\log n_{\mathrm{HI}}$, nous choisissons une valeur de $L_{\textsc{HCD}}$ qui reproduise le comportement de $F_{\textsc{HCD}}(k)$ dans la gamme $k \lesssim \SI{0.8}{\h\per\Mpc}$. % c'est à dire pour des échelles supérieures à $r \sim \SI{10}{\perh\Mpc}$.
-Nous ne nous intéressons pas aux k plus grands que \SI{0.8}{\h\per\Mpc} car la fonction de corrélation est estimée dans des bins de \SI{4}{\perh\Mpc}, les échelles plus petites que $k = \pi / 4 \sim 0.8$ n'étant donc pas accessible.
-Les valeurs de $L_{\textsc{HCD}}$ que nous obtenons pour $\log n_{\mathrm{HI}} \in [\num{17.6}\,;\num{18.2}\,;\num{18.8}\,;\num{19.4}\,;\num{20}]$ sont $[\num{0.28}\,; \num{0.60}\,; \num{1.2}\,; \num{2.5}\,; \num{5}]$.
+Nous ne nous intéressons pas aux k plus grands que \SI{0.8}{\h\per\Mpc} car la fonction de corrélation est estimée dans des bins de \SI{4}{\perh\Mpc}, les échelles plus petites que $k = \pi / 4 \sim \SI{0.8}{\h\per\Mpc}$ ne sont donc pas accessibles.
+Ainsi, les valeurs de $L_{\textsc{HCD}}$ que nous obtenons pour $\log n_{\mathrm{HI}} \in [\num{17.6}\,;\num{18.2}\,;\num{18.8}\,;\num{19.4}\,;\num{20}]$ sont $[\num{0.28}\,; \num{0.60}\,; \num{1.2}\,; \num{2.5}\,; \num{5}]$.
+% Ainsi, afin de reproduire le comportement de $F_{\textsc{HCD}}(k)$ pour $k \lesssim \SI{0.8}{\h\per\Mpc}$, les valeurs de $L_{\textsc{HCD}}$ que nous choisissons pour $\log n_{\mathrm{HI}} \in [\num{17.6}\,;\num{18.2}\,;\num{18.8}\,;\num{19.4}\,;\num{20}]$ sont $[\num{0.28}\,; \num{0.60}\,; \num{1.2}\,; \num{2.5}\,; \num{5}]$.
 La figure~\ref{fig:f_hcd_fixed} présente les fonctions $F_{\textsc{HCD}}(k)$ pour le modèle C-G et pour le modèle de Rogers en utilisant les valeurs de $L_{\textsc{HCD}}$ obtenues précédemment.
 % Les lignes continues donnent les fonctions $F_{\textsc{HCD}}(k)$ calculées par \texttt{picca}. Ce sont les fonctions utilisées dans le cadre du modèle de C-G. Les lignes tiretées donnent les termes $F_{\textsc{HCD}}(k)$ pour le modèle de Rogers, c'est à dire $F_{\textsc{HCD}}(k) = \exp(- L_{\textsc{HCD}} k)$.
 Pour chaque valeur de $\log n_{\mathrm{HI}}$, les fonctions $F_{\textsc{HCD}}$ sont similaires dans les deux modèles, par construction.
 
-Nous ajustons maintenant chacune des versions des mocks avec les deux modèles. Pour le modèle de Rogers, nous utilisons les valeurs de $L_{\textsc{HCD}}$ déterminées précédemment. Pour chacune des versions des mocks, l'ajustement de ces deux modèles produisent des résultats très similaires. Les différences sont inférieures au dizième de $\sigma$.
+Nous ajustons maintenant chacune des versions des mocks avec les deux modèles. Pour le modèle de Rogers, nous utilisons les valeurs de $L_{\textsc{HCD}}$ déterminées précédemment. Pour chacune des versions des mocks, les ajustements faits avec ces deux modèles produisent des résultats très similaires. Les différences sont inférieures au dizième de $\sigma$.
 Ceci est rassurant car les fonctions $F_{\textsc{HCD}}$ utilisées dans ces deux modèles sont similaires.
-Pour les faibles valeurs de $\log n_{\mathrm{HI}}$, les fonctions $F_{\textsc{HCD}}$ sont trop proches de 1. Ainsi les paramètres \lya{} et HCD sont quasiment complètement dégénérés. Le paramètre $\beta_{\mathrm{Ly}\alpha}$, en particulier, n'est pas contraint.  Lorsque $\log n_{\mathrm{HI}}$ est plus grand (supérieur à \num{18.8}), les ajustements parviennent à mesurer les paramètres du \lya{}. Cependant ces mesures ne sont pas du tout en accord avec les mesures faites sur les mocks eboss-0.0.
+Par ailleurs, pour les faibles valeurs de $\log n_{\mathrm{HI}}$, les fonctions $F_{\textsc{HCD}}$ sont très proches de 1 (voir figure~\ref{fig:f_hcd_fixed}). Les paramètres \lya{} et HCD sont quasiment complètement dégénérés. Le paramètre $\beta_{\mathrm{Ly}\alpha}$, en particulier, n'est pas contraint.  Lorsque $\log n_{\mathrm{HI}}$ est plus grand (supérieur à \num{18.8}), les ajustements parviennent à mesurer les paramètres du \lya{}. Cependant ces mesures ne sont pas du tout en accord avec les mesures faites sur les mocks eboss-0.0.
 Si ces modèles ne parviennent pas à distinguer l'effet du \lya{} de l'effet des HCD lorsque ces derniers possèdent une densité de colonne fixe, alors il y a peu d'espoirs qu'ils parviennent à le faire lorsque les HCD sont distribués dans une large gamme en $\log n_{\mathrm{HI}}$.
 
 \paragraph{}
 Nous comparons maintenant les fonctions $F_{\textsc{HCD}}$ correspondante à une large gamme en $\log n_{\mathrm{HI}}$.
-Nous considérons premièrement la gamme $\log n_{\mathrm{HI}}$ des HCD présents dans les mocks eboss-0.2, c'est à dire $\num{17.2} < \log n_{\mathrm{HI}} \num{20.3}$. Comme précédemment, afin de déterminer le $L_{\textsc{HCD}}$ à utiliser dans le modèle de Rogers, nous cherchons à reproduire le comportement de $F_{\textsc{HCD}}(k)$ dans la gamme $k \lesssim \SI{0.8}{\h\per\Mpc}$. Pour ce faire, nous devons choisir $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$.
+Nous considérons premièrement la gamme $\log n_{\mathrm{HI}}$ des HCD présents dans les mocks eboss-0.2, c'est à dire $\num{17.2} < \log n_{\mathrm{HI}} < \num{20.3}$. Comme précédemment, afin de déterminer le $L_{\textsc{HCD}}$ à utiliser dans le modèle de Rogers, nous cherchons à reproduire le comportement de $F_{\textsc{HCD}}(k)$ dans la gamme $k \lesssim \SI{0.8}{\h\per\Mpc}$. Pour ce faire, nous devons choisir $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$.
 La fonction $F_{\textsc{HCD}}$ utilisée dans le modèle de C-G pour cette gamme en $\log n_{\mathrm{HI}}$ est calculée par \texttt{picca}.
 La figure~\ref{fig:f_hcd_range} présente les fonctions $F_{\textsc{HCD}}$ ainsi obtenues. Nous pouvons remarquer que pour une large gamme en $\log n_{\mathrm{HI}}$, il est plus difficile d'obtenir un accord entre le modèle de Rogers et le modèle C-G.
-La figure~\ref{fig:f_hcd_range} présente à titre de comparaison la  fonction $F_{\textsc{HCD}}$ obtenue avec $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$.
+La figure~\ref{fig:f_hcd_range} présente aussi, à titre de comparaison, la  fonction $F_{\textsc{HCD}}$ obtenue avec $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$.
 La différence entre la courbe continue bleue et la courbe tiretée verte est importante. Nous sommes étonnés que les ajustements faits sur les mocks eboss-0.2 avec le modèle de Rogers et le modèle C-G produisent des résultats si similaires (voir la figure~\ref{fig:bias_CG_mask}) compte tenu de ces différences sur $F_{\textsc{HCD}}$.
-La figure~\ref{fig:f_hcd_range} présente aussi les fonctions $F_{\textsc{HCD}}$ obtenues pour la gamme $\num{17.2} < \log n_{\mathrm{HI}} \num{22.5}$. La valeur de $L_{\textsc{HCD}}$ choisie est \SI{6.5}{\perh\Mpc}. Les fonctions $F_{\textsc{HCD}}$ obtenues pour cette gamme dans le cadre du modèle C-G et du modèle de Rogers sont complètement différentes. Le modèle de Rogers atteint ici ses limites.
+La figure~\ref{fig:f_hcd_range} présente aussi les fonctions $F_{\textsc{HCD}}$ obtenues pour la gamme $\num{17.2} < \log n_{\mathrm{HI}} < \num{22.5}$. La valeur de $L_{\textsc{HCD}}$ choisie est \SI{6.5}{\perh\Mpc}. Les fonctions $F_{\textsc{HCD}}$ obtenues pour cette gamme dans le cadre du modèle C-G et du modèle de Rogers sont complètement différentes. Le modèle de Rogers atteint ici ses limites.
 
 Nous comparons aussi les profils dans l'espace réel obtenus à partir d'une transformation de Fourier des fonctions $F_{\textsc{HCD}}$. La figure~\ref{fig:f_hcd_range_real} présente ces profils.
 
@@ -663,7 +664,7 @@ Nous comparons aussi les profils dans l'espace réel obtenus à partir d'une tra
   \centering
   \includegraphics[scale=0.4]{f_hcd_range}
   \caption{Les fonctions $F_{\textsc{HCD}}$ utilisées dans le cadre du modèle C-G (lignes continues) ou du modèle de Rogers (lignes tiretées).
-    Les courbes bleues correspondent à la gamme $\num{17.2} < \log n_{\mathrm{HI}} \num{20.3}$. Les courbes rouges correspondent à la gamme $\num{17.2} < \log n_{\mathrm{HI}} \num{22.5}$. La courbe verte donne $F_{\textsc{HCD}}$ utilisé dans le modèle de Rogers avec $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$.
+    Les courbes bleues correspondent à la gamme $\num{17.2} < \log n_{\mathrm{HI}} < \num{20.3}$. Les courbes rouges correspondent à la gamme $\num{17.2} < \log n_{\mathrm{HI}} < \num{22.5}$. La courbe verte donne $F_{\textsc{HCD}}$ utilisé dans le modèle de Rogers avec $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$.
 }
   \label{fig:f_hcd_range}
 \end{figure}
