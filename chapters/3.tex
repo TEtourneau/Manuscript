@@ -28,7 +28,7 @@ La variance dans chaque pixel est ensuite estimée. Elle prend en compte le brui
 Enfin, pour chaque objet, toutes les expositions sont ajoutées pour former un seul et même spectre, avec un plus grand rapport signal sur bruit. Le nombre typique d'expositions par objet varie entre 4 et 6.
 
 \paragraph{}
-Les données que nous utilisons dans ce manuscript ont été rendues publiques lors de la seixième publication de données SDSS (DR16\footnote{https://www.sdss.org/dr16/}). Elles sont décrites par \textcite{Ahumada2019}.
+Les données que nous utilisons dans ce manuscrit ont été rendues publiques lors de la seixième publication de données SDSS (DR16\footnote{https://www.sdss.org/dr16/}). Elles sont décrites par \textcite{Ahumada2019}.
 \begin{figure}[b]
   \centering
   \includegraphics[scale=0.8]{photo_ccd.pdf}
@@ -39,9 +39,9 @@ Les données que nous utilisons dans ce manuscript ont été rendues publiques l
 \section{Le catalogue de quasar}
 Une fois les spectres extraits, il est important de les classifier afin de construire des catalogues utilisables par les différentes analyses. Pour ce faire, chaque spectre est traité par le pipeline de SDSS, décrit par \textcite{Bolton2012}.
 % A chaque spectre est ajusté plusieurs modèles d'étoiles, de galaxies et de quasars. Les modèles sont construits en utilisant les \emph{PCA templates} : des spectres typiques qui sont combinés afin d'ajuster au mieux le spectre à classifier.
-\textbf{Plusieurs modèles d'étoiles, de galaxies et de quasars sont ajustés à chaque spectre.
+Plusieurs modèles d'étoiles, de galaxies et de quasars sont ajustés à chaque spectre.
 %   Ces modèles sont construits à l'aide de l'analyse en composantes principales (PCA). Cette analyse fournit des spectres typiques de complexités différentes, le moins complexe étant la moyenne. Les différents spectres sont alors pondérés et combinés afin de construire un modèle qui ajuste au mieux le spectre à classifier.}
-Chaque modèle est construit à l'aide d'une analyse en composantes principales (PCA), propre à chaque type d'objet. Pour chaque type d'objet, l'analyse fournit des spectres typiques. Ces derniers sont de complexités croissantes : le premier donne le plus d'information comme par exemple le spectre moyen, les spectres plus complexes donnent des détails comme certaines raies d'émission ou profile d'absorption. Ces spectres typiques sont pondérés et combinés afin de produire un spectre simulé qui ajuste aux mieux le spectre à classifier.}
+Chaque modèle est construit à l'aide d'une analyse en composantes principales (PCA), propre à chaque type d'objet. Pour chaque type d'objet, l'analyse fournit des spectres typiques. Ces derniers sont de complexités croissantes : le premier donne le plus d'information comme par exemple le spectre moyen, les spectres plus complexes donnent des détails comme certaines raies d'émission ou profile d'absorption. Ces spectres typiques sont pondérés et combinés afin de produire un spectre simulé qui ajuste aux mieux le spectre à classifier.
 Une fois tous les modèles ajustés, ils sont triés selon leur $\chi^{2}$ réduit. Le spectre est alors classifié selon le modèle possédant le plus faible $\chi^{2}$ réduit.
 Tous les spectres mesurés par SDSS et classifiés comme quasar constituent l'échantillon \emph{superset}. Il contient \num{1440627} objets.
 
@@ -137,8 +137,7 @@ La variance $\sigma_q^2(\lambda)$ dans chaque pixel est donnée par
 \end{equation}
 Le terme $\eta(\lambda)\sigma_{\mathrm{instru}, q}^2(\lambda)$ rend compte de la variance qui est provoquée par l'instrument et liée à l'incertitude sur la mesure des flux. Le terme $\sigma_{\mathrm{cosmo}}(\lambda)$ est purement cosmologique et donne la variance propre au champ d'absorption du \lya{}. Il traduit le fait que certaines régions de l'univers peuvent absorber plus ou moins que la moyenne. Du fait de l'isotropie, $\sigma_{\mathrm{cosmo}}$ ne dépend que de $z$. Le terme ad hoc $\epsilon(\lambda)(\overline F C(\lambda))^4 / \sigma_{\mathrm{instru},q}^2 (\lambda)$ rend compte du fait que la variance augmente avec le rapport signal sur bruit, probablement à cause de la diversité des quasars.
 % \textbf{Enfin, le terme $\ln (\sigma_q^2)$ dans l'expression de la vraissemblance provient du fait que les erreurs $\sigma_q$ utilisées dans la détermination de $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$ ne sont pas constantes et dépendent elles mêmes de ces paramètres.}
-\textbf{Enfin, le terme $\ln [\sigma_q^2]$ dans l'expression de la vraissemblance provient de la normalisation $\sqrt{2 \pi \sigma^2}$ au dénominateur des distributions gaussiennes. Ce terme est généralement omis car constant. Mais dans notre cas, $\sigma_q$ dépend de $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$.
-}
+Enfin, le terme $\ln [\sigma_q^2]$ dans l'expression de la vraissemblance provient de la normalisation $\sqrt{2 \pi \sigma^2}$ au dénominateur des distributions gaussiennes. Ce terme est généralement omis car constant. Mais dans notre cas, $\sigma_q$ dépend de $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$.
 
 Afin d'obtenir le produit $\overline F C_q$ pour chaque quasar, il faut maximiser la fonction de vraissemblance $L$ (équation~\ref{eq:likelihood}), et donc ajuster les paramètres $a_q$, $b_q$, $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$. Cependant, celle fonction dépend elle même du produit $\overline F C_q$. Pour résoudre ce problème, l'ajustement est fait de manière itérative.
 Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\mathrm{RF}})$, sont initialisés. Ceci permet d'ajuser $\overline F C_q$ sur $f_q(\lambda)$ en maximisant la fonction de vraissemblance $L$. Dans cet ajustement, chaque pixel observé à une longueur d'onde $\lambda$ est pondéré par un poids
@@ -149,7 +148,7 @@ Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\ma
 Une fois cette ajustement fait, $\overline C(\lambda_{\mathrm{RF}})$ est de nouveau calculé. Puis, les paramètres $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$ sont ajustés de manière à ce que, à lambda fixé, $\sigma_q(\lambda)$ reproduise la variance estimée à partir des flux $f_q(\lambda)$ de tous les quasars. Ce nouvel ajustement permet une nouvelle fois d'ajuster $\overline F C_q$, etc. Cette procédure est répétée jusqu'à obtenir des valeurs stables pour les paramètres ajustés. En pratique, 5 itérations sont nécessaires.
 Cette procédure permet donc d'estimer, pour chaque quasar, le produit $\overline F(\lambda) C_q(\lambda)$, et ainsi d'estimer les $\delta_q(\lambda)$ (équation~\ref{eq:deltaF}) indépendamment dans chaque région.
 
-\textbf{Lors du calcul des $\delta_q$, les DLA identifiés dans chaque forêt sont masqués. Pour ce faire, un profil de Voigt, dépendant de la densité de colonne mesurée par l'algorithme de détection, est ajusté à l'endroit du spectre où le DLA a été identifié. Les pixels pour lesquels l'absorption est plus grande que \SI{20}{\percent} ne sont pas utilisés. Les autres sont corrigés en utilisant le profile de Voigt ajusté. La figure~\ref{fig:exemple_dla} montre deux spectres présentant un DLA. Le profile de Voigt est montré en dessous de la forêt, en rouge. Les bandes rouges indiquent les pixels non utilisés.}
+Lors du calcul des $\delta_q$, les DLA identifiés dans chaque forêt sont masqués. Pour ce faire, un profil de Voigt, dépendant de la densité de colonne mesurée par l'algorithme de détection, est ajusté à l'endroit du spectre où le DLA a été identifié. Les pixels pour lesquels l'absorption est plus grande que \SI{20}{\percent} ne sont pas utilisés. Les autres sont corrigés en utilisant le profile de Voigt ajusté. La figure~\ref{fig:exemple_dla} montre deux spectres présentant un DLA. Le profile de Voigt est montré en dessous de la forêt, en rouge. Les bandes rouges indiquent les pixels non utilisés.
 
 
 \subsection{Prise en compte de l'ajustement du continuum}
@@ -199,7 +198,7 @@ avec
   \label{eq:proj1}
 \end{equation}
 où $\delta^K_{ij}$ est le symbole de Kronecker.
-Dans ce calcul, les poids $w_q(\lambda)$ sont corrigés de la dépendance en redshift du biais du \lya{} \textbf{et du facteur de croissance}:
+Dans ce calcul, les poids $w_q(\lambda)$ sont corrigés de la dépendance en redshift du biais du \lya{} et du facteur de croissance:
 \begin{equation}
   \label{eq:weights2}
   w_{i}
@@ -215,7 +214,7 @@ Enfin, l'utilisation de $\overline C(\lambda_{\mathrm{RF}})$ dans l'équation~\r
 \begin{equation}
   \hat \delta_q(\lambda_i) = \tilde \delta_q(\lambda_i) - \overline{\tilde \delta(\lambda)} \; .
 \end{equation}
-Dans la suite de ce manuscript, lorsque nous parlons du champ $\delta$, nous référons à ces $\hat \delta_q(\lambda_i)$. Le graphique de gauche de la figure~\ref{fig:pixel_number} montre la distribution en redshift des $\delta$ dans chaque région d'absortion. Le graphique de droite présente la distribution pondérée par les poids $w_i$ (équation~\ref{eq:weights2}) du redshift effectif de chaque paire, utilisé dans le calcul de la fonction de corrélation.
+Dans la suite de ce manuscrit, lorsque nous parlons du champ $\delta$, nous référons à ces $\hat \delta_q(\lambda_i)$. Le graphique de gauche de la figure~\ref{fig:pixel_number} montre la distribution en redshift des $\delta$ dans chaque région d'absortion. Le graphique de droite présente la distribution pondérée par les poids $w_i$ (équation~\ref{eq:weights2}) du redshift effectif de chaque paire, utilisé dans le calcul de la fonction de corrélation.
 
 
 

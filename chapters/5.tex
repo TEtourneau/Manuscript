@@ -206,13 +206,13 @@ où $W_{A} = \sum_{(i,j)\in A} w_i w_j$ est le poids du bin A. Pour la corrélat
 Comme précédemment, les indices $i$ correspondent aux pixels des forêts, et $j$ aux quasars. A cause de la double somme, le calcul de la matrice de distorsion est très long. Afin de rendre possible l'estimation de cette dernière, le calcul est fait sur \SI{1}{\percent} des paires, tirées au hasard.
 % L'étude présentée dans~\textcite{bautista_measurement_2017}
 
-\textbf{La figure~\ref{fig:effet_dmat} présente l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatre gammes en $\mu$. Les points bleus donnent la corrélation estimée à partir des raw mocks, c'est à dire sans les distorsions liées à l'ajustement du continuum. La ligne continue bleue donne l'ajustement du modèle de \texttt{picca}. Les points rouges donnent la corrélation estimée à partir des mocks eboss-0.0. Cette corrélation est affectée par les distorsions de l'ajustement du continuum. La courbe rouge donne l'ajustement du modèle sur cette corrélation. La matrice de distorsion permet ainsi de passer de la courbe bleue, à la courbe rouge.}
+La figure~\ref{fig:effet_dmat} présente l'effet de la distorsion sur l'auto-corrélation \lya{}$\times$\lya{} dans les mocks. La fonction de corrélation est présentée dans quatre gammes en $\mu$. Les points bleus donnent la corrélation estimée à partir des raw mocks, c'est à dire sans les distorsions liées à l'ajustement du continuum. La ligne continue bleue donne l'ajustement du modèle de \texttt{picca}. Les points rouges donnent la corrélation estimée à partir des mocks eboss-0.0. Cette corrélation est affectée par les distorsions de l'ajustement du continuum. La courbe rouge donne l'ajustement du modèle sur cette corrélation. La matrice de distorsion permet ainsi de passer de la courbe bleue, à la courbe rouge.
 
-\textbf{La matrice de distorsion est un objet uniquement géométrique. Son calcul est indépendant du champ $\delta_F$. Elle ne dépend uniquement de la géométrie du relevé et de la distribution des poids.
+La matrice de distorsion est un objet uniquement géométrique. Son calcul est indépendant du champ $\delta_F$. Elle ne dépend uniquement de la géométrie du relevé et de la distribution des poids.
 % La figure~\ref{prov} montre la différence entre ... \#prov montrer la difference du fit d'une réa avec sa DM et avec une autre DM et/ou le stack de 10 avec les 10 DM ou dix fois la meme. Est-ce que les DM eboss-0.0 et eboss-0.2 sont différentes ?\\
-  Il n'est pas nécessaire, en principe, de calculer la matrice de distorsion pour les \Nmocks{} réalisations des mocks.
-  Nous vérifions cela en comparant le résultat de l'ajustement de la corrélation \lya{}$\times$\lya{} estimée à partir d'une réalisation et ajustée avec la matrice de distorsion calculée à partir de cette réalisation, au résultat de l'ajustement de la même corrélation, ajustée avec la matrice de distorsion d'une autre réalisation. Les différences observées entre ces deux ajustements sont plus faibles que les erreurs liées à chaque paramètre.
-Ainsi, dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois. L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.}
+  Il n'est pas nécessaire, en principe, de calculer la matrice de distorsion pour l'ensemble des réalisations des mocks.
+  Nous vérifions cela en comparant le résultat de l'ajustement de la corrélation \lya{}$\times$\lya{} estimée à partir d'une réalisation et ajustée en utilisant la matrice de distorsion calculée à partir de cette réalisation, au résultat de l'ajustement de la même corrélation, ajustée en utilisant la matrice de distorsion d'une autre réalisation. Les différences observées entre ces deux ajustements sont plus faibles que les erreurs liées à chaque paramètre.
+Ainsi, dans l'analyse présentée dans la suite de ce chapitre, nous calculons la matrice de distorsion pour l'auto-corrélation et pour la corrélation croisée une seule fois. L'ajustement de chaque fonction de corrélation utilise une de ces deux matrices de distorsion.
 
 \begin{figure}
   \centering
@@ -308,7 +308,7 @@ où $F_{\textsc{HCD}}$ est une fonction qui dépend de la distribution en $z$ et
   \label{eq:f_hcd_def}
   F_{\textsc{HCD}}(\kpar{}) = \exp(- L_{\textsc{HCD}} \kpar{}) \; ,
 \end{equation}
-où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLAs dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} au redshift effectif de la mesure. Par ailleurs , $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons donc sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle. \textbf{Le paramètre $\beta_{\textsc{HCD}}$ est aussi très dégénéré avec les autres paramètres du modèle, nous utilisons un prior gaussien centré sur \num{0.5} et avec une largeur \num{0.09} lors des ajustements.}
+où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLAs dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} au redshift effectif de la mesure. Par ailleurs , $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons donc sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle. Le paramètre $\beta_{\textsc{HCD}}$ est aussi très dégénéré avec les autres paramètres du modèle, nous utilisons un prior gaussien centré sur \num{0.5} et avec une largeur \num{0.09} lors des ajustements.
 
 Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, la dépendance en redshit de $\delta_F$ est prise en compte.
 En considérant que $\beta_{\mathrm{Ly}\alpha}$ est constant avec le redshift, nous avons $\delta_F(z) \propto G(z) b_{\mathrm{Ly}\alpha}(z)$, avec $G(z) \propto (1+z)^{-1}$.
@@ -386,7 +386,7 @@ Pour la corrélation $\xi_{m \times \textsc{QSO}}$, le décalage est le même qu
 
 Pour chaque couple $(m, n)$, le décalage de la fonction de corrélation $\xi_{m\times n}$ est pris en compte par la matrice des métaux $M_{AB}^{m\times n}$.
 % Cette matrice inclut donc le calcule du décalage des séparations décrit précédemment.
-Nous ne détaillons pas son calcul ici, mais il est donné dans la thèse \textcite{CITE:Victoria}. La matrice des métaux permet donc de relier la fonction de corrélation $\xi_{m\times n}$ à la fonction de corrélation $\tilde \xi_{m\times n}$, où les absorbeurs $m$ et $n$ sont interprétés comme des absorptions \lya{}, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
+Nous ne détaillons pas son calcul ici, mais il est donné dans la thèse \textcite{DeSainteAgathe}. La matrice des métaux permet donc de relier la fonction de corrélation $\xi_{m\times n}$ à la fonction de corrélation $\tilde \xi_{m\times n}$, où les absorbeurs $m$ et $n$ sont interprétés comme des absorptions \lya{}, utilisée comme modèle dans l'équation~\ref{eq:cf_model1} et~\ref{eq:xcf_model1} :
 \begin{equation}
   \tilde \xi_{m \times n}(A) = \sum_B M_{AB}^{m\times n} \xi_{m\times n}(B) \; ,
 \end{equation}
@@ -585,8 +585,8 @@ Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\nu
 \midrule
 $\apar{} $ & $ 1.001 \pm 0.005$ & $ 1.004 \pm 0.004$ & $ 0.998 \pm 0.005$ & $ 0.986 \pm 0.014$ & $ 1.001 \pm 0.003$ \\
 $\aperp{} $ & $ 0.999 \pm 0.007$ & $ 1.002 \pm 0.006$ & $ 0.984 \pm 0.008$ & $ 0.994 \pm 0.018$ & $ 0.995 \pm 0.004$ \\
-$b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1751 \pm 0.0004$ & $ -0.1936 \pm 0.0004$ & $ -0.2311 \pm 0.0008$ & $ -0.2692 \pm 0.0019$ & $ -0.196 \pm 0.0003$ \\
-$\beta_{\mathrm{Ly}\alpha} $ & $ 2.085 \pm 0.014$ & $ 1.863 \pm 0.011$ & $ 1.494 \pm 0.011$ & $ 1.2 \pm 0.016$ & $ 1.804 \pm 0.007$ \\
+$b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1751 \pm 0.0004$ & $ -0.1936 \pm 0.0004$ & $ -0.2311 \pm 0.0008$ & $ -0.2692 \pm 0.0019$ & $ -0.1960 \pm 0.0003$ \\
+$\beta_{\mathrm{Ly}\alpha} $ & $ 2.085 \pm 0.014$ & $ 1.863 \pm 0.011$ & $ 1.494 \pm 0.011$ & $ 1.200 \pm 0.016$ & $ 1.804 \pm 0.007$ \\
 \midrule
 $\chi^2$ & $ 1557 $ & $ 1608 $ & $ 1628 $ & $ 1534 $ & $ 1676 $ \\
 $z_{\mathrm{eff}}$ & $ 2.101 $ & $ 2.237 $ & $ 2.542 $ & $ 2.866 $ & $ 2.261 $ \\
@@ -752,15 +752,15 @@ Le facteur de croissance $f$ est lui aussi en accord avec la cosmologie utilisé
 \toprule
 Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$  & $\num{0} < z < \num{10}$ \\
 \midrule
-$\apar{} $ & $ 0.986 \pm 0.019$ & $ 0.97 \pm 0.016$ & $ 0.978 \pm 0.018$ & $ 1.002 \pm 0.045$ & $ 0.98 \pm 0.01$ \\
-$\aperp{} $ & $ 1.022 \pm 0.012$ & $ 1.01 \pm 0.009$ & $ 1.015 \pm 0.01$ & $ 1.045 \pm 0.024$ & $ 1.016 \pm 0.006$ \\
-$\beta_{\mathrm{QSO}} $ & $ 0.314 \pm 0.009$ & $ 0.254 \pm 0.007$ & $ 0.204 \pm 0.008$ & $ 0.18 \pm 0.02$ & $ 0.257 \pm 0.005$ \\
+$\apar{} $ & $ 0.986 \pm 0.019$ & $ 0.970 \pm 0.016$ & $ 0.978 \pm 0.018$ & $ 1.002 \pm 0.045$ & $ 0.980 \pm 0.010$ \\
+$\aperp{} $ & $ 1.022 \pm 0.012$ & $ 1.010 \pm 0.009$ & $ 1.015 \pm 0.010$ & $ 1.045 \pm 0.024$ & $ 1.016 \pm 0.006$ \\
+$\beta_{\mathrm{QSO}} $ & $ 0.314 \pm 0.009$ & $ 0.254 \pm 0.007$ & $ 0.204 \pm 0.008$ & $ 0.180 \pm 0.020$ & $ 0.257 \pm 0.005$ \\
 $f$ & $ 0.985 \pm 0.023$ & $ 1.007 \pm 0.023$ & $ 0.962 \pm 0.035$ & $ 1.013 \pm 0.102$ & $ 0.919 \pm 0.015$ \\
 \midrule
 $\chi^2$ & $ 1739 $ & $ 1612 $ & $ 1561 $ & $ 1021 $ & $ 1546 $ \\
-$z_{\mathrm{eff}}$ & $ 2.05 $ & $ 2.488 $ & $ 2.826 $ & $ 3.257 $ & $ 2.273 $ \\
+$z_{\mathrm{eff}}$ & $ 2.050 $ & $ 2.488 $ & $ 2.826 $ & $ 3.257 $ & $ 2.273 $ \\
 \midrule
-$b_{\mathrm{QSO}} $ & $ 3.134 \pm 0.02$ & $ 3.968 \pm 0.02$ & $ 4.71 \pm 0.03$ & $ 5.617 \pm 0.094$ & $ 3.57 \pm 0.013$ \\
+$b_{\mathrm{QSO}} $ & $ 3.134 \pm 0.020$ & $ 3.968 \pm 0.020$ & $ 4.710 \pm 0.030$ & $ 5.617 \pm 0.094$ & $ 3.570 \pm 0.013$ \\
 \bottomrule
   \end{tabular}
 \end{table}
@@ -836,7 +836,7 @@ Ce petit écart (\SI{2}{\percent}) provient probablement d'une mesure pas assez 
     \toprule
     Param\`etre  & $\num{0} < z < \num{10}$ \\
     \midrule
-    $\apar{} $ & $ 1.019 \pm 0.02$ \\
+    $\apar{} $ & $ 1.019 \pm 0.020$ \\
     $\aperp{} $ & $ 1.005 \pm 0.014$ \\
     $\beta_{\mathrm{HCD}} $ & $ 0.491 \pm 0.012$ \\
     $f$ & $ 1.003 \pm 0.018$ \\
@@ -901,14 +901,14 @@ La figure~\ref{fig:bias_cf} présente les paramètres $b_{\mathrm{Ly}\alpha}$ et
     Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$  & $\num{0} < z < \num{10}$ \\
     \midrule
     $\apar{} $ & $ 0.992 \pm 0.009$ & $ 1.006 \pm 0.007$ & $ 1.005 \pm 0.009$ & $ 0.954 \pm 0.023$ & $ 1.003 \pm 0.005$ \\
-    $\aperp{} $ & $ 1.002 \pm 0.016$ & $ 1.0 \pm 0.012$ & $ 0.981 \pm 0.013$ & $ 1.057 \pm 0.033$ & $ 0.995 \pm 0.008$ \\
+    $\aperp{} $ & $ 1.002 \pm 0.016$ & $ 1.000 \pm 0.012$ & $ 0.981 \pm 0.013$ & $ 1.057 \pm 0.033$ & $ 0.995 \pm 0.008$ \\
     $b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1868 \pm 0.0007$ & $ -0.2045 \pm 0.0007$ & $ -0.2381 \pm 0.0012$ & $ -0.2752 \pm 0.0029$ & $ -0.2077 \pm 0.0005$ \\
-    $\beta_{\mathrm{Ly}\alpha} $ & $ 1.962 \pm 0.016$ & $ 1.768 \pm 0.012$ & $ 1.454 \pm 0.013$ & $ 1.172 \pm 0.02$ & $ 1.687 \pm 0.008$ \\
+    $\beta_{\mathrm{Ly}\alpha} $ & $ 1.962 \pm 0.016$ & $ 1.768 \pm 0.012$ & $ 1.454 \pm 0.013$ & $ 1.172 \pm 0.020$ & $ 1.687 \pm 0.008$ \\
     \midrule
     $\chi^2$ & $ 1498 $ & $ 1622 $ & $ 1598 $ & $ 1629 $ & $ 1563 $ \\
-    $z_{\mathrm{eff}}$ & $ 2.118 $ & $ 2.254 $ & $ 2.54 $ & $ 2.867 $ & $ 2.288 $ \\
+    $z_{\mathrm{eff}}$ & $ 2.118 $ & $ 2.254 $ & $ 2.540 $ & $ 2.867 $ & $ 2.288 $ \\
     \midrule
-    $b_{\mathrm{Ly}\alpha} $ & $ -0.0916 \pm 0.0004$ & $ -0.1118 \pm 0.0004$ & $ -0.1595 \pm 0.0007$ & $ -0.23 \pm 0.0018$ & $ -0.1192 \pm 0.0003$ \\
+    $b_{\mathrm{Ly}\alpha} $ & $ -0.0916 \pm 0.0004$ & $ -0.1118 \pm 0.0004$ & $ -0.1595 \pm 0.0007$ & $ -0.2300 \pm 0.0018$ & $ -0.1192 \pm 0.0003$ \\
     $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1607 \pm 0.0002$ & $ -0.1873 \pm 0.0002$ & $ -0.2467 \pm 0.0004$ & $ -0.3298 \pm 0.0011$ & $ -0.1956 \pm 0.0002$ \\
     \bottomrule
   \end{tabular}
@@ -983,16 +983,16 @@ Nous avons essayé d'augmenter $r_{\mathrm{min}}$ à \SI{30}{\perh\Mpc} dans l'a
 \toprule
 Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$  & $\num{0} < z < \num{10}$ \\
 \midrule
-$\apar{} $ & $ 1.002 \pm 0.008$ & $ 0.99 \pm 0.008$ & $ 0.986 \pm 0.012$ & $ 1.005 \pm 0.026$ & $ 0.999 \pm 0.005$ \\
-$\aperp{} $ & $ 1.0 \pm 0.01$ & $ 1.001 \pm 0.01$ & $ 1.001 \pm 0.013$ & $ 1.013 \pm 0.031$ & $ 1.0 \pm 0.006$ \\
-$b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1717 \pm 0.0013$ & $ -0.1985 \pm 0.0017$ & $ -0.2333 \pm 0.003$ & $ -0.294 \pm 0.0088$ & $ -0.1902 \pm 0.001$ \\
+$\apar{} $ & $ 1.002 \pm 0.008$ & $ 0.990 \pm 0.008$ & $ 0.986 \pm 0.012$ & $ 1.005 \pm 0.026$ & $ 0.999 \pm 0.005$ \\
+$\aperp{} $ & $ 1.000 \pm 0.010$ & $ 1.001 \pm 0.010$ & $ 1.001 \pm 0.013$ & $ 1.013 \pm 0.031$ & $ 1.000 \pm 0.006$ \\
+$b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1717 \pm 0.0013$ & $ -0.1985 \pm 0.0017$ & $ -0.2333 \pm 0.0030$ & $ -0.2940 \pm 0.0088$ & $ -0.1902 \pm 0.0010$ \\
 $\beta_{\mathrm{Ly}\alpha} $ & $ 1.787 \pm 0.027$ & $ 1.564 \pm 0.024$ & $ 1.344 \pm 0.029$ & $ 1.208 \pm 0.058$ & $ 1.564 \pm 0.015$ \\
 $\Delta_{\rpar{}, \textsc{QSO}}$ & $ -0.051 \pm 0.053$ & $ 0.039 \pm 0.058$ & $ -0.182 \pm 0.085$ & $ 0.213 \pm 0.192$ & $ -0.033 \pm 0.035$ \\
 \midrule
 $\chi^2$ & $ 3233 $ & $ 3410 $ & $ 3238 $ & $ 3410 $ & $ 3502 $ \\
 $z_{\mathrm{eff}}$ & $ 2.128 $ & $ 2.362 $ & $ 2.663 $ & $ 3.043 $ & $ 2.301 $ \\
 \midrule
-$b_{\mathrm{Ly}\alpha} $ & $ -0.0925 \pm 0.0008$ & $ -0.1231 \pm 0.001$ & $ -0.1696 \pm 0.0018$ & $ -0.239 \pm 0.0054$ & $ -0.1177 \pm 0.0006$ \\
+$b_{\mathrm{Ly}\alpha} $ & $ -0.0925 \pm 0.0008$ & $ -0.1231 \pm 0.001$ & $ -0.1696 \pm 0.0018$ & $ -0.2390 \pm 0.0054$ & $ -0.1177 \pm 0.0006$ \\
 $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1556 \pm 0.0005$ & $ -0.1959 \pm 0.0007$ & $ -0.2548 \pm 0.0012$ & $ -0.3462 \pm 0.0036$ & $ -0.1874 \pm 0.0004$ \\
 % $b_{\mathrm{QSO}} $ & $ 3.326 \pm 0.0$ & $ 3.761 \pm 0.0$ & $ 4.352 \pm 0.0$ & $ 5.145 \pm 0.0$ & $ 3.646 \pm 0.0$ \\
 \bottomrule
@@ -1057,18 +1057,18 @@ La figure~\ref{fig:bias_cf} présente les paramètres  $b_{\mathrm{Ly}\alpha}$ e
 \toprule
 Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$  & $\num{0} < z < \num{10}$ \\
 \midrule
-$\apar{} $ & $ 1.005 \pm 0.009$ & $ 0.996 \pm 0.007$ & $ 1.004 \pm 0.009$ & $ 0.936 \pm 0.021$ & $ 1.0 \pm 0.005$ \\
-$\aperp{} $ & $ 0.985 \pm 0.016$ & $ 1.0 \pm 0.012$ & $ 0.978 \pm 0.013$ & $ 1.066 \pm 0.039$ & $ 0.989 \pm 0.008$ \\
-$b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.186 \pm 0.0008$ & $ -0.2042 \pm 0.0008$ & $ -0.2365 \pm 0.0014$ & $ -0.2782 \pm 0.0035$ & $ -0.2063 \pm 0.0007$ \\
-$\beta_{\mathrm{Ly}\alpha} $ & $ 1.709 \pm 0.023$ & $ 1.568 \pm 0.019$ & $ 1.295 \pm 0.02$ & $ 1.102 \pm 0.032$ & $ 1.548 \pm 0.014$ \\
-$b_{\textsc{HCD}} $ & $ -0.0015 \pm 0.0015$ & $ -0.0017 \pm 0.0014$ & $ -0.005 \pm 0.0024$ & $ -0.0085 \pm 0.006$ & $ -0.008 \pm 0.0011$ \\
-$\beta_{\textsc{HCD}} $ & $ 0.502 \pm 0.09$ & $ 0.5 \pm 0.09$ & $ 0.501 \pm 0.09$ & $ 0.5 \pm 0.09$ & $ 0.487 \pm 0.089$ \\
+$\apar{} $ & $ 1.005 \pm 0.009$ & $ 0.996 \pm 0.007$ & $ 1.004 \pm 0.009$ & $ 0.936 \pm 0.021$ & $ 1.000 \pm 0.005$ \\
+$\aperp{} $ & $ 0.985 \pm 0.016$ & $ 1.000 \pm 0.012$ & $ 0.978 \pm 0.013$ & $ 1.066 \pm 0.039$ & $ 0.989 \pm 0.008$ \\
+$b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1860 \pm 0.0008$ & $ -0.2042 \pm 0.0008$ & $ -0.2365 \pm 0.0014$ & $ -0.2782 \pm 0.0035$ & $ -0.2063 \pm 0.0007$ \\
+$\beta_{\mathrm{Ly}\alpha} $ & $ 1.709 \pm 0.023$ & $ 1.568 \pm 0.019$ & $ 1.295 \pm 0.020$ & $ 1.102 \pm 0.032$ & $ 1.548 \pm 0.014$ \\
+$b_{\textsc{HCD}} $ & $ -0.0015 \pm 0.0015$ & $ -0.0017 \pm 0.0014$ & $ -0.0050 \pm 0.0024$ & $ -0.0085 \pm 0.0060$ & $ -0.0080 \pm 0.0011$ \\
+$\beta_{\textsc{HCD}} $ & $ 0.502 \pm 0.090$ & $ 0.500 \pm 0.090$ & $ 0.501 \pm 0.090$ & $ 0.500 \pm 0.090$ & $ 0.487 \pm 0.089$ \\
 \midrule
 $\chi^2$ & $ 1535 $ & $ 1579 $ & $ 1627 $ & $ 1650 $ & $ 1573 $ \\
 $z_{\mathrm{eff}}$ & $ 2.117 $ & $ 2.253 $ & $ 2.539 $ & $ 2.866 $ & $ 2.281 $ \\
 \midrule
-$b_{\mathrm{Ly}\alpha} $ & $ -0.1048 \pm 0.0012$ & $ -0.1259 \pm 0.0012$ & $ -0.1779 \pm 0.0021$ & $ -0.2474 \pm 0.0053$ & $ -0.129 \pm 0.0009$ \\
-$b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1729 \pm 0.0011$ & $ -0.2006 \pm 0.001$ & $ -0.2638 \pm 0.0018$ & $ -0.3479 \pm 0.0047$ & $ -0.2044 \pm 0.0007$ \\
+$b_{\mathrm{Ly}\alpha} $ & $ -0.1048 \pm 0.0012$ & $ -0.1259 \pm 0.0012$ & $ -0.1779 \pm 0.0021$ & $ -0.2474 \pm 0.0053$ & $ -0.1290 \pm 0.0009$ \\
+$b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1729 \pm 0.0011$ & $ -0.2006 \pm 0.0010$ & $ -0.2638 \pm 0.0018$ & $ -0.3479 \pm 0.0047$ & $ -0.2044 \pm 0.0007$ \\
 \bottomrule
   \end{tabular}
 \end{table}
@@ -1146,20 +1146,20 @@ Nous pouvons remarquer dans ce tableau que, comme pour les mocks eboss-0.0, la m
 \toprule
 Param\`etre  & $\num{0} < z < \num{2.35}$ & $\num{2.35} < z < \num{2.65}$ & $\num{2.65} < z < \num{3.05}$ & $\num{3.05} < z < \num{10}$  & $\num{0} < z < \num{10}$ \\
 \midrule
-$\apar{} $ & $ 1.004 \pm 0.008$ & $ 0.996 \pm 0.009$ & $ 0.987 \pm 0.013$ & $ 1.014 \pm 0.027$ & $ 1.0 \pm 0.005$ \\
-$\aperp{} $ & $ 0.991 \pm 0.011$ & $ 0.992 \pm 0.01$ & $ 1.005 \pm 0.014$ & $ 0.991 \pm 0.029$ & $ 0.994 \pm 0.006$ \\
+$\apar{} $ & $ 1.004 \pm 0.008$ & $ 0.996 \pm 0.009$ & $ 0.987 \pm 0.013$ & $ 1.014 \pm 0.027$ & $ 1.000 \pm 0.005$ \\
+$\aperp{} $ & $ 0.991 \pm 0.011$ & $ 0.992 \pm 0.010$ & $ 1.005 \pm 0.014$ & $ 0.991 \pm 0.029$ & $ 0.994 \pm 0.006$ \\
 $b_{\eta, \mathrm{Ly}\alpha} $ & $ -0.1751 \pm 0.0017$ & $ -0.2008 \pm 0.0022$ & $ -0.2427 \pm 0.0044$ & $ -0.3276 \pm 0.0116$ & $ -0.1929 \pm 0.0017$ \\
 $\beta_{\mathrm{Ly}\alpha} $ & $ 1.991 \pm 0.062$ & $ 1.656 \pm 0.055$ & $ 1.775 \pm 0.093$ & $ 2.277 \pm 0.304$ & $ 1.843 \pm 0.041$ \\
-$b_{\textsc{HCD}} $ & $ -0.0244 \pm 0.0027$ & $ -0.0277 \pm 0.0037$ & $ -0.0672 \pm 0.0066$ & $ -0.1368 \pm 0.0192$ & $ -0.0377 \pm 0.002$ \\
-$\beta_{\textsc{HCD}} $ & $ 0.583 \pm 0.085$ & $ 0.545 \pm 0.087$ & $ 0.54 \pm 0.085$ & $ 0.502 \pm 0.088$ & $ 0.638 \pm 0.078$ \\
-$\Delta_{\rpar{}, \textsc{QSO}}$ & $ -0.053 \pm 0.054$ & $ -0.037 \pm 0.06$ & $ -0.178 \pm 0.087$ & $ 0.193 \pm 0.193$ & $ -0.063 \pm 0.036$ \\
+$b_{\textsc{HCD}} $ & $ -0.0244 \pm 0.0027$ & $ -0.0277 \pm 0.0037$ & $ -0.0672 \pm 0.0066$ & $ -0.1368 \pm 0.0192$ & $ -0.0377 \pm 0.0020$ \\
+$\beta_{\textsc{HCD}} $ & $ 0.583 \pm 0.085$ & $ 0.545 \pm 0.087$ & $ 0.540 \pm 0.085$ & $ 0.502 \pm 0.088$ & $ 0.638 \pm 0.078$ \\
+$\Delta_{\rpar{}, \textsc{QSO}}$ & $ -0.053 \pm 0.054$ & $ -0.037 \pm 0.060$ & $ -0.178 \pm 0.087$ & $ 0.193 \pm 0.193$ & $ -0.063 \pm 0.036$ \\
 \midrule
 $\chi^2$ & $ 3223 $ & $ 3283 $ & $ 3157 $ & $ 3316 $ & $ 3264 $ \\
-$z_{\mathrm{eff}}$ & $ 2.127 $ & $ 2.362 $ & $ 2.663 $ & $ 3.043 $ & $ 2.3 $ \\
+$z_{\mathrm{eff}}$ & $ 2.127 $ & $ 2.362 $ & $ 2.663 $ & $ 3.043 $ & $ 2.300 $ \\
 \midrule
 $b_{\mathrm{Ly}\alpha} $ & $ -0.0846 \pm 0.0023$ & $ -0.1176 \pm 0.0032$ & $ -0.1335 \pm 0.0057$ & $ -0.1413 \pm 0.0164$ & $ -0.1013 \pm 0.0017$ \\
 $b_{\mathrm{eff}, \mathrm{Ly}\alpha} $ & $ -0.1495 \pm 0.0019$ & $ -0.1915 \pm 0.0027$ & $ -0.2239 \pm 0.0048$ & $ -0.2665 \pm 0.0136$ & $ -0.1728 \pm 0.0014$ \\
-$b_{\mathrm{QSO}} $ & $ 3.326 \pm 0.0$ & $ 3.761 \pm 0.0$ & $ 4.351 \pm 0.0$ & $ 5.145 \pm 0.0$ & $ 3.643 \pm 0.0$ \\
+% $b_{\mathrm{QSO}} $ & $ 3.326 \pm 0.0$ & $ 3.761 \pm 0.0$ & $ 4.351 \pm 0.0$ & $ 5.145 \pm 0.0$ & $ 3.643 \pm 0.0$ \\
 \bottomrule
   \end{tabular}
 \end{table}

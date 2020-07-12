@@ -17,16 +17,7 @@ Notes :
 - expliquer l'analyse sur la dmat (1 seule dmat suffisante)
 
 
-- montrer l'effet de la dmat sur la CF (plot Bautista2017)
-
-
 - verifier que si on utilise une loi de poisson, on retrouve bien ce qu'on fait (proba de tirer 2 qso ou plus negligeable)
-
-
-- rechercher "voxcell" et "voxcel"
-
-
-- montrer les donnees <F>(z) et le fit qu'on utilise
 
 
 - Expliquer le sinc() tronqué, et refaire la figure 1.7 du chapitre 4 en utilisant sqrt(3) dans le sinc pour surestimer l'effet et etre sur que c'est effectivement negligeable ?
@@ -34,12 +25,6 @@ Notes :
 
 - rajouter la XCF des raw mocks pour 0 < z < 10 et expliquer qu'on comprend pas pourquoi ca converge pas vers 0 dans chaque bin en z, mais que cest a peu pres ok pour le coadd des 4 bins
 
-
-- mettre un plot qui montre l'évolution de delta_l à F puis le spectre de quickquasars ?
-
-- rajouter les 0 dans tous les tableaux
-
-- agencer un peu mieux les parties resultats : rapprocher les figures et tableaux du texte (utiliser des \newpage)
 
 - rajouter la prediction de la cf1d
 
@@ -64,3 +49,5 @@ donner L_hcd mesuré dans les données
 - il faudrait voir si le fait d'ajouter les metaux changent les mesures des hcd et du lya
 
 - ajouter la numérotation avec les chiffres romain au debut
+
+- reprendre la description des traceurs d'eboss : donner les chiffres finaux

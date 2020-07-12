@@ -393,9 +393,7 @@ comme la combinaison linéaire de deux boîtes interpolées $\hat \delta_{\texts
 Les quasars sont ensuite tirés dans chaque voxel, avec une probabilité $P \propto \hat \delta_{\textsc{QSO}}$. Pour ce faire, nous générons une variable $\phi$ aléatoire uniforme entre 0 et 1 dans chaque voxel. Les voxels pour lesquelles $\phi < N(z) \hat \delta_{\textsc{QSO}}$ hébergent un quasar.
 % Le facteur $N(z)$ est  un facteur de normalisation.
 Le facteur $N(z)$ contient l'évolution avec le redshift du nombre de quasars par degré carré. Il contient aussi un facteur de normalisation.
-\textbf{
-  Une fois les quasars tirés, nous les plaçons aléatoirement dans leur voxel.
-}
+Une fois les quasars tirés, nous les plaçons aléatoirement dans leur voxel.
 Puis, les quasars dont le redshift est en dehors de l'intervalle $[\num{1.8}\, ; \num{3.6}]$ sont écartés.
 % Les quasars dont l'ascension droite est en dehors de l'inverval $[ - \Delta \alpha ; \Delta \alpha]$ et dont la déclinaison est en dehors de l'inverval $[ - \Delta \delta ; \Delta \delta]$ sont aussi écartés.
 Les quasars dont l'ascension droite et la déclinaison sont en dehors des intervalles $[ - \Delta \alpha \, ; \Delta \alpha]$ et $[ - \Delta \delta \, ; \Delta \delta]$ sont aussi écartés.
@@ -576,12 +574,12 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
   \label{fig:p1d_smoothing}
 \end{figure}
 
-\textbf{Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci est calculé en corrélant les pixels d'une même forêt. Il donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, on peut montrer que le spectre de puissance à une dimension est donné par l'intégrale du spectre de puissance à trois dimensions sur la direction transverse à la ligne de visée \autocite{lumsden_clustering_1989} :}
+Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci est calculé en corrélant les pixels d'une même forêt. Il donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, on peut montrer que le spectre de puissance à une dimension est donné par l'intégrale du spectre de puissance à trois dimensions sur la direction transverse à la ligne de visée \autocite{lumsden_clustering_1989} :
 \begin{equation}
   \label{eq:p1d}
   P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{0}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; .
 \end{equation}
-\textbf{Les spectres des quasars sondent la densité le long de la ligne de visée, avec une résolution transverse extrèmement faible, équivalente à la taille d'un quasar (inférieure au parsec). Le calcul du spectre de puissance sur ces spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.
+Les spectres des quasars sondent la densité le long de la ligne de visée, avec une résolution transverse extrèmement faible, équivalente à la taille d'un quasar (inférieure au parsec). Le calcul du spectre de puissance sur ces spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.
 % Avec la taille non nulle des voxels, l'intégrale s'effectue seulement jusqu'à $k_N$. De plus, le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ réduit davantage l'amplitude de ce spectre de puissance. Ces deux effets sont représentés sur la figure~\ref{prov} (\#prov faire la figure). Contrairement au cas à trois dimensions, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
 % En effet, ce spectre de puissance le long d'une ligne de visée est beaucoup plus sensible au bruit que le spectre de puissance calculé sur une colonne de section de $(\SI{2.19}{\perh\Mpc})^2$.
 % A cause de ces deux effets, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
@@ -592,7 +590,7 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
 % En effet, le spectre de puissance le long d'une ligne de visée est beaucoup plus sensible aux petites échelles (grands $k$) que le spectre de puissance calculée sur une colonne de section $(\SI{2.19}{\perh\Mpc})^2$ : les termes $G^2$ et $W^2$ réduisent l'amplitude des modes aux petites échelles, qui sont importants 
 % Sans les fluctuations à petite échelle, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
 % Lorsque ce spectre de puissance est calculé dans des voxels
-Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de visée un champ $\delta_s$ (\emph{small scales} : petites échelles) au champ $\delta_{\mathrm{matière}}$ que nous appelons désormais $\delta_{l}$ (\emph{large scales} : grandes échelles) :}
+Pour palier ce problème, nous rajoutons indépendamment sur chaque ligne de visée un champ $\delta_s$ (\emph{small scales} : petites échelles) au champ $\delta_{\mathrm{matière}}$ que nous appelons désormais $\delta_{l}$ (\emph{large scales} : grandes échelles) :
 \begin{equation}
   \label{eq:fgpa3}
   % F = \exp( - a(z) \mathrm{e}^{b(z) G(z) (\delta_l + \delta_s)}) ;.
@@ -664,10 +662,9 @@ Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$.
 
 
 \paragraph{}
-\textbf{
+
   % Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, les graphiques de cette figure représentent : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
   Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, le premier graphique de cette figure présente les champs à grande échelle $\delta_l$, $c(z)\eta_{\parallel}$ et la somme des deux. Le deuxième présente la somme $\delta_l + \delta_s$ et le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$. Le troisième présente la fraction de flux transmise $F$, et enfin le dernier graphique présente le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$. La remontée obersée pour les longueurs d'onde proches de \SI{1200}{\angstrom} est causée par la proximité de la raie \lya{}.
-}
   
 
 \begin{figure}
@@ -729,8 +726,8 @@ D'après la formule de Kaiser (équation~\ref{eq:kaiser5}), le champ $\delta_g$ 
   \end{equation}
   où $P_l$ est le spectre de puissance que suit le champ $\delta_l$.
   La figure~\ref{fig:xi_g} montre la fonction de corrélation du champ $\delta_g$ mesuré dans les mocks ainsi que la fonction de corrélation obtenue à partir du spectre de puissance de l'équation~\ref{eq:pk_g} (voir le passage de $P_g(k)$ à $\xi_g(r,\mu)$ dans les lignes qui suivent). Nous vérifions que ces deux fonctions de corrélation sont en accord.
-\textbf{  Nous observons cependant de petites différences essentiellement le long de la ligne de visée.
-  Cela pourrait être dû à l'effet de la taille des voxels utilisés pour construire les boîtes de gradient de vitesse $\eta$, ou possiblement au lissage gaussien appliqué à $\eta_{\parallel}$.}
+Nous observons cependant de petites différences essentiellement le long de la ligne de visée.
+  Cela pourrait être dû à l'effet de la taille des voxels utilisés pour construire les boîtes de gradient de vitesse $\eta$, ou possiblement au lissage gaussien appliqué à $\eta_{\parallel}$.
   \begin{figure}
     \centering
     \includegraphics[scale=0.4]{xi_g}
@@ -967,7 +964,7 @@ Premièrement, nous choississons le paramètre $c$.
 % Pour chaque valeur du redshift, nous choisissons donc $c(z) = \beta_{\mathrm{Ly}\alpha}(z)$.
 Comme expliqué dans la section~\ref{subsubsec:pred}, le champ $\delta_s$ ne participe pas à la corrélation à trois dimension et le champ $g$ suit le spectre de puissance de l'équation~\ref{eq:pk_g}. Le paramètre RSD du champ $g$ vaut donc $\beta_g = c$, et donc, en première approximation, le paramètre RSD du champ $F$ vaut $c$ aussi. Pour chaque valeur du redshift, nous choisissons alors $c(z) = \beta_{\mathrm{Ly}\alpha}(z)$.
 
-\textbf{En ce qui concerne les paramètres $a$ et $b$, ils sont ajustés afin de retrouver les bons $\overline F(z)$ et $P^{\mathrm{1D}}(k, z)$.
+En ce qui concerne les paramètres $a$ et $b$, ils sont ajustés afin de retrouver les bons $\overline F(z)$ et $P^{\mathrm{1D}}(k, z)$.
 Pour ce faire, nous calculons la densité de probabilité de $F$ en fonction de a et b (nous nous plaçons à $\mu = 0$, ce qui revient à prendre $c = 0$).
 Cette densité de probabilité nous donne donc accès à $\overline F$ et $\overline F^2$ en fonction de a et b. Nous ajustons alors a et b afin d'avoir à la fois $\overline F$ et $\overline F^2$ en accord avec les données. La fraction de flux transmis moyenne $\overline F$ que nous utilisons est paramétrisée par
 \begin{equation}
@@ -981,7 +978,7 @@ Elle est représentée sur la figure~\ref{fig:mean_trans} par une ligne tiretée
   \caption{Fraction de flux transmis moyenne en fonction du redshift. Les points noirs donnent la mesure faite par \textcite{Faucher-Giguere2008}. La ligne tiretée bleue donne la paramétrisation de $\overline F(z)$ que nous utilisons dans les mocks.}
   \label{fig:mean_trans}
 \end{figure}
-En ce qui concerne le terme $\overline F^2$, nous le calculons pour chaque valeur du redshift. Il est donné par l'intégrale du $P^{\mathrm{1D}}$. Pour calculer cette intégrale, nous utilisons $P^{\mathrm{1D}}_{\mathrm{modèle}}$, décrit dans les paragraphes suivants.}
+En ce qui concerne le terme $\overline F^2$, nous le calculons pour chaque valeur du redshift. Il est donné par l'intégrale du $P^{\mathrm{1D}}$. Pour calculer cette intégrale, nous utilisons $P^{\mathrm{1D}}_{\mathrm{modèle}}$, décrit dans les paragraphes suivants.
 
 
 
@@ -1133,10 +1130,10 @@ La figure~\ref{fig:params} présente les interpolations ainsi obtenues.
 % Concernant les cinqs spectres de puissance $P_{s}(k)$ construits précédemment dans chaque bin en redshift, nous créons une grille $(k, z)$ sur laquelle nous interpolons cubiquement de ces spectres de puissance
 % Les cinq spectres de puissance $P_{s}(k)$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{prov}. Ces spectres sont en très bon accord avec le modèle. Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.
 % En ce qui concerne les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.
-\textbf{Les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift produisent des spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ en très bon accord avec le modèle. Les cinq $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{fig:p1d_tuning}. Les lignes continues donnent le modèle pour chaque valeur du redshift.
-Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.}
+Les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift produisent des spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ en très bon accord avec le modèle. Les cinq $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{fig:p1d_tuning}. Les lignes continues donnent le modèle pour chaque valeur du redshift.
+Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.
 Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
-\textbf{Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmise moyenne $\overline F$ en fonction du redshift obtenue avec cette procédure d'ajustement. Celle-ci est mesurée sur une réalisation complète. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}. La mesure faite pour les redshifts proches de \num{3.6} est biaisée par le fait que seuls les pixels proches des quasars participent à cette mesure : la corrélation croisée \lya{}$\times$QSO a pour effet de réduire $F$.}
+Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmise moyenne $\overline F$ en fonction du redshift obtenue avec cette procédure d'ajustement. Celle-ci est mesurée sur une réalisation complète. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}. La mesure faite pour les redshifts proches de \num{3.6} est biaisée par le fait que seuls les pixels proches des quasars participent à cette mesure : la corrélation croisée \lya{}$\times$QSO a pour effet de réduire $F$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{p1dmiss}
@@ -1157,8 +1154,8 @@ Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du
 \end{figure}
 
 \paragraph{}
-\textbf{Le résultat de la procédure d'ajustement décrite précédemment a été utilisé pour produire \num{50} réalisations indépendantes des mocks. Nous prévoyons de terminer la post-production des \num{50} autres réalisations pré-produites dans les prochains moins.
-  Parmis les \num{50} réalisations produites, \num{30} sont analysées. Le chapitre~\ref{chap:mock_ana} présente cette analyse.}
+Le résultat de la procédure d'ajustement décrite précédemment a été utilisé pour produire \num{50} réalisations indépendantes des mocks. Nous prévoyons de terminer la post-production des \num{50} autres réalisations pré-produites dans les prochains moins.
+  Parmis les \num{50} réalisations produites, \num{30} sont analysées. Le chapitre~\ref{chap:mock_ana} présente cette analyse.
 % Les figures~\ref{prov} présentent les paramètres \lya{} obtenus avec la prédiction (couleur), sur le stack des 100 rea (couleur) et mesuré dans les données (couleur). \#prov montrer biais(z), beta(z), <F>(z) et P1D(z).
 
 
@@ -1211,7 +1208,7 @@ Les raw mocks sont les mocks bruts, sans l'utilisation de \texttt{quickquasars}.
 Les versions eboss-0.0, eboss-0.2 et eboss-0.3 sont les versions des mocks après avoir utilisé \texttt{quickquasars} pour produire les spectres synthétiques. La version eboss-0.0 correspond à l'ajout du continuum et du bruit. La version eboss-0.2 est la version eboss-0.0 à laquelle les HCD sont ajoutés. La version eboss-0.3 ajoute le continuum, le bruit, les HCD ainsi que les métaux.
 Nous présentons l'analyse de ces différentes versions des mocks dans le chapitre suivant.
 
-\textbf{Un point important à noter est que, pour chaque réalisation, les quatre versions présentées ci-dessus sont produites avec le même sous-échantillon de quasars. Ceci facilite la comparaison des différentes versions.}
+Un point important à noter est que, pour chaque réalisation, les quatre versions présentées ci-dessus sont produites avec le même sous-échantillon de quasars. Ceci facilite la comparaison des différentes versions.
 % En effet, à ce stade nous disposons uniquement d'un relevé de quasars, et pour chacun d'entre deux, une forêt contenant le champ d'absorption $F$ variant entre 0 et 1. Ainsi, afin de simuler complètement les données, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres synthétiques. Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. Ce code utilise 
 
 

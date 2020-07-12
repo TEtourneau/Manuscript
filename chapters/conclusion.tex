@@ -1,7 +1,8 @@
-\chapter*{Conclusion}
+\chapter{Conclusion}
+\thispagestyle{fancy}
 
 Dans ce manuscrit, j'ai présenté le résultat de mes recherches effectuées au sein du groupe de cosmologie du CEA Saclay, dans le cadre de la préparation de ma thèse de doctorat.
-Durant ces trois ans, j'ai développé des simulations qui imitent les données Lyman alpha (\lya{}) acquises par eBOSS et bienôt par DESI.
+Durant ces trois ans, j'ai développé des simulations qui imitent les données Lyman alpha (\lya{}) acquises par eBOSS et bientôt par DESI.
 Ces simulations produisent un relevé de quasars, dont les forêts \lya{} présentes dans les spectres synthétiques possèdent les bonnes fonctions de corrélation.
 Pour ce faire, elles utilisent les champs aléatoires gaussiens. D'abord, nous générons un champ aléatoire qui représente le champ de densité. Nous donnons à ce champ aléatoire la bonne fonction de corrélation à l'aide des transformations de Fourier.
 Puis, grâce à une transformation log-normale, nous tirons un relevé de quasars. Ensuite, à partir de chaque quasars, nous reconstruisons la densité le long de la ligne de visée en interpolant ce champ. Enfin, nous obtenons la fraction de flux transmise en appliquant l'approximation de Gunn-Peterson (FGPA) au champ interpolé le long de la ligne de visée.
@@ -13,17 +14,17 @@ Ces simulations ont été utilisées dans l'analyse qui mesure l'échelle des os
 Par ailleurs, ces simulations ont été utilisées par \textcite{Ravoux2020} pour produire une carte tomographique du champ de matière à grande échelle à partir des données d'eBOSS. Elles ont permis de valider l'algorithme utilisé pour reconstruire ce champ de matière.
 
 \paragraph{}
-Initialement, nous pensions nous servir de ces simulations pour mener une analyse de mesure des distorsions dans l'espace des redshifts (analyse RSD). Ces analyse mesurent le taux de croissance $f$ afin de tester les théories de gravitation.
-En produisant une ajustement combiné de l'auto-corrélation \lya{}$\times$\lya{} et de la corrélation croisée \lya{}$\times$quasar, il est possible de mesurer les biais et paramètres RSD du \lya{} et des quasars, et ainsi contraire le taux de croissance des structures $f$.
+Initialement, nous pensions nous servir de ces simulations pour mener une analyse de mesure des distorsions dans l'espace des redshifts (analyse RSD). Ces analyse mesurent le taux de croissance des structure $f$ afin de tester les théories de gravitation.
+En produisant une ajustement combiné de l'auto-corrélation \lya{}$\times$\lya{} et de la corrélation croisée \lya{}$\times$quasar, il est possible de mesurer les biais et paramètres RSD du \lya{} et des quasars, et ainsi mesurer le taux de croissance $f$.
 Cependant, lorsque nous avons étudié la mesure les paramètres \lya{} dans les données DR16 afin de construire nos simulations, nous nous sommes rendus compte que cette mesure n'était pas du tout robuste.
 % En particulier, nous avons remarqué que les paramètres du modèle relatifs aux HCD étaient très corrélés avec ceux du \lya{}.
-Nous avons remarqué qu'elle était largement affectée par les HCD (High Column Density). Les HCD sont des absorbeurs denses situés le long de la ligne de visée. Les absorptions intenses qu'ils produisent affectent fortement les fonctions de corrélation.
+Nous avons remarqué qu'elle était largement affectée par les HCD (High Column Density). Les HCD sont des absorbeurs denses situés sur la ligne de visée. Les absorptions intenses qu'ils produisent affectent fortement les fonctions de corrélation.
 La modélisation des HCD utilisée dans l'analyse des données DR16 a été pensée dans le but de mener une analyse BAO : elle permet de prendre en compte l'effet des HCD sur les fonctions de corrélation sans altérer la mesure de l'échelle BAO.
 Mais cette modélisation ne permet pas de distinguer la contribution des HCD de celle du \lya{}, il est donc impossible de l'utiliser pour mener une analyse RSD.
 Ainsi, nous avons essayé de mieux comprendre cette modélisation à l'aide de nos simulations, notament grâce à la comparaison des versions avec et sans HCD.
 
-L'étude des différentes versions des simulations nous a permis de nous rendre compte que le modèle des HCD utilisé dans l'analyse des données DR16 n'était pas correcte. Cela vient du fait que la valeur du paramètre (fixé) qui estime la taille caractéristique des HCD est surestimée. Ceci a pour effet de produire des mesures du biais du \lya{} trop grande et du paramètre RSD du \lya{} trop faible.
-A la fin de ce manuscrit, nous donnons la valeur de ce paramètre qu'il faut utiliser. Nous présentons aussi une meilleur modélisation des HCD.
+L'étude des différentes versions des simulations nous a permis de nous rendre compte que le modèle des HCD utilisé dans l'analyse des données DR16 n'était pas correct. Cela vient du fait que la valeur du paramètre (fixé) qui représente la taille caractéristique des HCD est surestimée. Ceci a pour effet de produire des mesures du biais du \lya{} trop grande et du paramètre RSD du \lya{} trop faible.
+A la fin de ce manuscrit, nous donnons la valeur qu'il faut utiliser pour ce paramètre. Nous présentons aussi une meilleure modélisation des HCD.
 
 Malheureusement, nous nous sommes rendus compte de cela très tardivement, et l'ensemble des analyses que nous avons produites utilisent la mauvaise valeur de la taille caractéristique des HCD. Nous prévoyons de refaire ces analyses en utilisant cette fois-ci la bonne valeur, et de comparer ces analyses à celles faites avec la seconde modélisation des HCD présentée dans le chapitre~\ref{chap:data_ana}.
 Nous prévoyons aussi d'analyser de nouveau les données DR16 dans quatre bins en redshift en utilisant ces deux modélisations des HCD.
@@ -31,6 +32,6 @@ Nous prévoyons aussi d'analyser de nouveau les données DR16 dans quatre bins e
 % Il serait donc intéressant, après voir fait une nouvelle mesure des paramètres \lya{} dans les données DR16, d'opérer un nouvel ajustement des paramètres des mocks.
 
 \paragraph{}
-Finalement, un certain nombre d'améliorations peuvent être apportées à ces simulations. Premièrement, nous devons comprendre pourquoi le spectre de puissance à une dimension n'est pas correcte pour les redshifts éloignés du redshift effectif de nos simulations.
+Finalement, un certain nombre d'améliorations peuvent être apportées à ces simulations. Premièrement, nous devons comprendre pourquoi le spectre de puissance à une dimension n'est pas correct pour les redshifts éloignés du redshift effectif de nos simulations.
 Puis, en supposant que nous parvenons à faire une mesure non biaisée des biais du \lya{} et des HCD dans les données, il serait intéressant d'effectuer un nouvel ajustement des paramètres des simulations afin d'avoir des quantités de \lya{} et de HCD similaires dans les simulations et dans les données.
 Enfin, nous pourrions ajouter les métaux directement lors de la construction des forêts \lya{} : générer des champs gaussiens pour chaque espèce de métal, et les inclure dans les forêts comme nous le faisons avec le \lya{}.
