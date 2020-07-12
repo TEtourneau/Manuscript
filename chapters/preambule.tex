@@ -1,11 +1,11 @@
 \chapter*{Préambule}
 \thispagestyle{empty}
 
-Le  siècle dernier a été extrêmement fécond pour la physique : les théories de la mécanique quantique et de la relativité ont conduit au développement du modèle standard de la physique des particules. Par ailleurs, la théorie de la relativité générale a permis de construire le modèle standard de la cosmologie. Ces deux branches ont révolutionné notre compréhension de l'univers en changeant complètement le paradigme dans lequel nous nous trouvions.
+Le  siècle dernier a été extrêmement fécond pour la physique fondamentale : les théories de la mécanique quantique et de la relativité ont conduit au développement du modèle standard de la physique des particules. Par ailleurs, la théorie de la relativité générale a fourni le cadre pour le développement du modèle standard de la cosmologie. Ces deux branches ont révolutionné notre compréhension de l'univers en changeant complètement le paradigme dans lequel nous nous trouvions.
 
-Au fil du siècle dernier, les observations se sont accumulées, renforçant encore et encore notre compréhension de la cosmologie. Nous pouvons citer en particulier la détection du fond diffus cosmologique en 1964 qui a confirmé l'expension de l'univers. Ceci a encouragé les projets ambitieux d'observations du ciel, comme par exemple le satellite Cosmic Background Explorer (COBE) lancé en 1989, qui a détecté pour la première fois les anisotropies du fond diffus cosmologique correspondant aux perturbations primordiales de densité.
-En 1998, l'observation de l'accélération de l'expension de l'univers a stimulé encore davantage les observations afin de comprendre l'origine de cette accélération. Le programme d'observation Sloan Digital Sky Survey (SDSS) s'inscrit dans ce cadre là. Ce programme entreprend l'observation d'un nombre faramineux d'obets célestes lointains : plusieurs millions de spectres de galaxies et de quasars sont mesurés.
-Grâce à ces projets de grande ampleur, de nouvelles sondes cosmologiques voient le jour. C'est le cas de l'échelle BAO qui devient mesurable grâce à l'énorme quantité de données produite par SDSS.
+Au cours des cinquante dernières années, les observations se sont accumulées, renforçant encore et encore notre compréhension de la cosmologie. Nous pouvons citer en particulier la détection du fond diffus cosmologique en 1964 qui a confirmé l'expansion de l'univers. Ceci a encouragé des projets ambitieux d'observation du ciel, comme par exemple le satellite Cosmic Background Explorer (COBE) lancé en 1989, qui a détecté pour la première fois les anisotropies du fond diffus cosmologique correspondant aux perturbations primordiales de densité.
+En 1998, l'observation de l'accélération de l'expansion de l'univers a stimulé encore davantage les observations afin de comprendre l'origine de cette accélération. Le programme d'observation Sloan Digital Sky Survey (SDSS) s'inscrit dans ce cadre là. Ce programme entreprend l'observation d'un nombre faramineux d'obets célestes lointains : plusieurs millions de spectres de galaxies et de quasars sont mesurés.
+Grâce à ces projets de grande ampleur, de nouvelles sondes cosmologiques voient le jour. C'est le cas de l'échelle des oscillations acoustiques de baryon (BAO) qui devient mesurable grâce à l'énorme quantité de données produite par SDSS.
 
 \paragraph{}
 \thispagestyle{empty}
@@ -13,17 +13,17 @@ Ce manuscrit présente les travaux menés au long de ma thèse de doctorat. Cell
 Au cours de cette thèse, j'ai participé à l'analyse des données finale du relevé eBOSS, conduite au sein du groupe Lyman alpha (\lya{}).
 Cette analyse utilise les forêts \lya{} présentes dans les spectres de quasars mesurés par eBOSS.
 Elle consiste à mesurer la fonction d'auto-corrélation du \lya{} et la fonction de corrélation croisée entre le \lya{} et les quasars.
-L'ajustement de ces fonctions de corrélation permet de mesurer l'échelle BAO à grand redshift, et ainsi mesurer les rapports $D_{\mathrm{H}}(z) / r_{\mathrm{d}}$ et $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$. La mesure de ces rapports permet de contraindre les quantités $(\Omega_{m} , \Omega_{\Lambda} , H_0 r_{\mathrm{d}})$, relatives à l'expension de l'univers.
+L'ajustement de ces fonctions de corrélation permet de mesurer l'échelle BAO à grand redshift, et ainsi mesurer les rapports $D_{\mathrm{H}}(z) / r_{\mathrm{d}}$ et $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$. La mesure de ces rapports permet de contraindre les quantités $(\Omega_{m} , \Omega_{\Lambda} , H_0 r_{\mathrm{d}})$, relatives à l'expansion de l'univers.
 
-Ma contribution à cette analyse est le développement de simulations, destinées à tester les modèles utilisés pour ajuster les fonctions de corrélation.
-Ces simulations reproduisent les données fournies par eBOSS : un relevé de quasars dont les forêts \lya{} présentes dans les specres simulés possèdent les bonnes fonctions d'auto-corrélation et de corrélation croisée.
+Ma contribution à cette analyse est le développement de simulations, destinées à tester les procédures de mesure des fonctions de corrélation et d'estimation de leur covariance ainsi que les modèles utilisés pour ajuster ces fonctions de corrélation.
+Ces simulations reproduisent les données fournies par eBOSS : un relevé de quasars dont les forêts \lya{} présentes dans les spectres simulés possèdent les bonnes fonctions d'auto-corrélation et de corrélation croisée.
 Ces données synthétiques permettent de tester l'analyse menée sur les vraies données et ainsi d'identifier si cette analyse est affectée par des systématiques.
-Ces simulations sont développées conjointement avec le groupe \lya{} de la collaboration DESI. Elles seront utilisées pour tester l'analyse des futures données de DESI.
+Ces simulations sont développées conjointement avec le groupe \lya{} de la collaboration DESI. Elles seront aussi utilisées pour tester l'analyse des futures données de DESI.
 
 \paragraph{}
 \thispagestyle{empty}
-Ce manuscrit s'articule comme suit : le chapitre premier donne une introduction à la cosmologie moderne et les éléments nécessaires à la compréhension de se manuscrit.
-Puis, la prise de données faite par SDSS qui constitue le relevé eBOSS est présentée.
+Ce manuscrit s'articule comme suit : le chapitre premier est une introduction à la cosmologie moderne et aux éléments nécessaires à la compréhension de ce manuscrit.
+Puis, le relevé eBOSS  qui fait partie de la troisième génération de SDSS est présenté.
 S'en suit la description du traitement de ces données, nécessaire à l'estimation des fonctions de corrélation.
 Le chapitre quatre présente le coeur de mon travail : le développement des simulations utilisées dans les analyses \lya{} d'eBOSS et DESI.
 Puis, l'analyse et la validation de ces simulations sont exposées.

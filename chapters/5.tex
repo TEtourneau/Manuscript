@@ -395,7 +395,7 @@ Ainsi, pour chaque couple $(m, n)$, la matrice des métaux $M_{AB}^{m\times n}$ 
 Dans le cas de la corrélation croisée, la matrice est calculée pour tous les couples $(m, \textsc{QSO})$, puis la fonction de corrélation $\tilde \xi_{m \times \textsc{QSO}}$ et estimée et ajoutée à la fonction de corrélation $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ (équation~\ref{eq:xcf_model1}).
 
 Le modèle utilisé pour construire les fonctions de corrélation $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$ et le même que celui utilisé pour construire les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ (équation~\ref{eq:pk_model1}) mais avec les paramètres $b_i$, $b_j$, $\beta_i$ et $\beta_j$ qui sont ceux des métaux. Du fait que les métaux sont mesurables principalement le long de la ligne de visée, il est difficile d'ajuster à la fois le biais et le paramètre RSD de chaque métal. Nous ajustons donc uniquement le biais de chaque métal, le paramètre RSD étant fixé à $\beta_m = \num{0.5}$.
-% De plus, nous négligeons l'impact des HCD sur les fonctions de corrélations $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
+% De plus, nous négligeons l'impact des HCD sur les fonctions de corrélation $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
 De plus, comme la quantité de métaux dans le milieu intergalactique est bien moins importante que celle de l'hydrogène, il n'existe pas ou peu de structures denses constituées de métaux. Nous n'incluons donc pas la modélisation des HCD dans les fonctions de corrélation $\xi_{m\times n}$ et $\xi_{m\times \textsc{QSO}}$.
 
 \begin{table}[]

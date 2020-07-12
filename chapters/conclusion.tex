@@ -1,0 +1,24 @@
+\chapter*{Conclusion}
+
+Dans ce manuscrit, j'ai présenté le résultat de mes recherches effectuées au sein du groupe de cosmologie du CEA Saclay, dans le cadre de la préparation de ma thèse de doctorat.
+Durant ces trois ans, j'ai développé des simulations qui reproduisent les données \lya{} acquises par eBOSS et bienôt par DESI.
+Ces simulations ont été utilisées dans l'analyse BAO des données finale d'eBOSS \autocite{DuMasdesBourboux2020} afin de vérifier que cette analyse produisait des mesures non biaisées des paramètres $\apar{}$ et $\aperp{}$. Elles seront aussi utilisées par la collaboration DESI afin de vérifier les analyses \lya{}.
+% Par ailleurs, ces simulations ont été utilisées pour produire une carte tomographique du champ de matière à grande échelle à l'aide des données d'eBOSS.
+Par ailleurs, ces simulations ont été utilisées par \textcite{Ravoux2020} pour produire une carte tomographique du champ de matière à grande échelle à partir des données d'eBOSS. Elles ont permis de valider l'algorithme utilisé pour reconstruire ce champ de matière.
+
+\paragraph{}
+Initialement, nous pensions nous servir de ces simulations pour mener une analyse RSD : grâce à l'ajustement combiné de l'auto-corrélation \lya{}$\times$\lya{} et de la corrélation croisée \lya{}$\times$QSO, il est possible de mesurer les paramètres $b_{\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$, $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$, et ainsi contraire le taux de croissance des structures $f$.
+Cependant, lorsque nous avons étudié la mesure les paramètres \lya{} dans les données DR16 afin de construire nos simulations, nous nous sommes rendus compte que cette mesure n'était pas du tout robuste. En particulier, nous avons remarqué que les paramètres du modèle relatifs aux HCD étaient très corréléss avec ceux du \lya{}.
+La modélisation des HCD utilisée dans l'analyse des données DR16 a été pensée dans le but de mener une analyse BAO : elle permet de prendre en compte l'effet des HCD sur les fonctions de corrélation sans altérer la mesure des paramètres $\apar{}$ et $\aperp$.
+Mais cette modélisation ne permet pas de distinguer la contribution des HCD de celle du \lya{}, il est donc impossible de l'utiliser pour mener une analyse RSD.
+Ainsi,, nous avons essayé de mieux comprendre cette modélisation à l'aide de nos simulations, notament grâce à la comparaison des versions eboss-0.0 et eboss-0.2 de ces simulations.
+
+L'étude de ces différentes versions des simulations nous a permis de nous rendre compte que le modèle des HCD utilisé dans l'analyse des données DR16 n'était pas correcte. Cela est dû à la valeur de $L_{\textsc{HCD}}$ qui est mal choisie. Ceci a pour effet de produire des mesures du biais du \lya{} trop grande et du paramètre RSD du \lya{} trop faible.
+Malheureusement, nous nous sommes rendus compte de cela très tardivement, et l'ensemble des analyses que nous avons produites utilisent le modèle de Rogers avec $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$. Nous prévoyons de refaire ces analyses en utilisant cette fois-ci $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$, et de comparer ces analyses à celles faites avec le modèle C-G.
+Nous prévoyons aussi d'analyser de nouveau les données DR16 dans quatre bins en redshift en utilisant la bonne valeur de $L_{\textsc{HCD}}$.
+% Comme suggéré dans le chapitre~\ref{chap:data_ana}, la mesure des paramètres \lya{} devrait être significativement différente.
+% Il serait donc intéressant, après voir fait une nouvelle mesure des paramètres \lya{} dans les données DR16, d'opérer un nouvel ajustement des paramètres des mocks.
+
+Finalement, un certain nombre d'améliorations peuvent être apportées aux mocks. Premièrement, nous devons comprendre pourquoi le spectre de puissance à une dimension n'est pas correcte pour les redshifts éloignés du redshift effectif des mocks.
+Puis, en supposant que nous parvenons à faire une mesure non biaisée des biais du \lya{} et des HCD dans les données, il serait intéressant de reproduire un ajustement des paramètres des mocks afin d'avoir des quantités de \lya{} et de HCD similaires dans les mocks et dans les données.
+Enfin, nous pourrions ajouter les métaux directement lors de la construction des mocks : générer des champs gaussiens pour chaque espèce de métal, et les inclures dans les forêts comme nous le faisons avec le \lya{}.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  11 JUL 2020 23:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 JUL 2020 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -5289,12 +5289,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [159 <../figures/data_ana/f_hcd_range.png> <../figures/data_ana/f_hcd_range_rea
 l.png>] [160
 
-]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 53--53
+] (../chapters/conclusion.tex
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 1--1
 | []| 
  []
 
-[161
+) [161
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[162]
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 56--56
+| []| 
+ []
+
+[163
+
 
 ]
 
@@ -5303,8 +5318,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[162]
-Overfull \hbox (5.50017pt too wide) in paragraph at lines 53--53
+[164]
+Overfull \hbox (5.50017pt too wide) in paragraph at lines 56--56
 [][]\T1/lmr/m/sc/10.95 Fixsen\T1/lmr/m/n/10.95 , D. J. et al. (1996). ^^S   The
  Cos-mic Mi-cro-wave Back-ground Spec-trum from the Full COBE/FIRAS
  []
@@ -5315,14 +5330,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[163]
+[165]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[164]
+[166]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -5332,8 +5347,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[165] (../layout/lastpage.tex
-<../figures/media/ed/PHENIICS.jpeg, id=2696, 212.211pt x 48.9465pt>
+[167] (../layout/lastpage.tex
+<../figures/media/ed/PHENIICS.jpeg, id=2710, 212.211pt x 48.9465pt>
 File: ../figures/media/ed/PHENIICS.jpeg Graphic file (type jpg)
 
 <use ../figures/media/ed/PHENIICS.jpeg>
@@ -5348,8 +5363,8 @@ Overfull \hbox (122.5051pt too wide) in paragraph at lines 45--46
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [166 <../figures/media/ed/PHENIICS.jpeg>]
-<../figures/media/UPSACLAY-petit.png, id=2701, 162.6075pt x 223.83624pt>
+ [168 <../figures/media/ed/PHENIICS.jpeg>]
+<../figures/media/UPSACLAY-petit.png, id=2715, 162.6075pt x 223.83624pt>
 File: ../figures/media/UPSACLAY-petit.png Graphic file (type png)
 
 <use ../figures/media/UPSACLAY-petit.png>
@@ -5367,12 +5382,12 @@ Package minitoc Info: I0009
 (minitoc)             Creating the thesis.maf file.
 \openout5 = `thesis.maf'.
 
- [167 <../figures/media/UPSACLAY-petit.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
+ [169 <../figures/media/UPSACLAY-petit.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 69890A98B4F449C748FEFA95AFC6571F;5650.
 
@@ -5387,10 +5402,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37583 strings out of 492995
- 689027 string characters out of 6132704
- 1612657 words of memory out of 5000000
- 39540 multiletter control sequences out of 15000+600000
+ 37596 strings out of 492995
+ 689255 string characters out of 6132704
+ 1617122 words of memory out of 5000000
+ 39545 multiletter control sequences out of 15000+600000
  233303 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,79p,10408b,3298s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5567,10 +5582,10 @@ c/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt1
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on thesis.pdf (177 pages, 12832677 bytes).
+Output written on thesis.pdf (179 pages, 12837748 bytes).
 PDF statistics:
- 2983 PDF objects out of 2984 (max. 8388607)
- 2473 compressed objects within 25 object streams
- 734 named destinations out of 1000 (max. 500000)
+ 2998 PDF objects out of 3580 (max. 8388607)
+ 2486 compressed objects within 25 object streams
+ 739 named destinations out of 1000 (max. 500000)
  1096 words of extra memory for PDF output out of 10000 (max. 10000000)
 
