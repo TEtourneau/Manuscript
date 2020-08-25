@@ -1,9 +1,9 @@
-%% Lines to compile only this capter
+% % Lines to compile only this capter
 % \documentclass[11pt, twoside, a4paper, openright]{report}
 % \input{../source/packages.tex}
 
 % \begin{document}
-%%
+
 
 \chapter{Le relevé eBOSS de SDSS}
 \minitoc
@@ -57,16 +57,21 @@ La précision visée sur la mesure de distance avec l'échantillon de galaxies e
 
 
 \subsection{Les traceurs de eBOSS}
-
+\textbf{
 Afin d'étendre la gamme de redshift sondée par BOSS, eBOSS inclut donc deux nouveaux traceurs : les ELG et les quasars en tant que traceurs de la matière. Auxquels s'ajoutent les traceurs déja présents dans BOSS : les LRG et les forêts \lya{} des quasars. Ces traceurs sont présentés ici :
 \begin{itemize}
-\item LRG : l'échantillon de \emph{Luminous Red Galaxies} déja observé lors du programme BOSS est étendu. Un minimum de \num{300000} galaxies dont le redshift est mesuré spectroscopiquement sont nécessaires dans la gamme de redshift $\num{0,6} < z < \num{1}$ afin d'atteindre la précision de \SI{1}{\percent} sur l'échelle BAO.
-\item ELG (\emph{Emission Line Galaxies}) : ce sont des galaxies bleues formant beaucoup d'étoiles, facilement identifiables par leurs raies d'émission. Leur relevé couvre les redshifts $\num{0,6} < z < \num{1,1}$ et doit conduire à une mesure à \SI{2}{\percent} de précision de l'échelle BAO.
-\item QSO : nouveaux traceurs, ils sont utilisés afin de construire un relevé spectroscopique au même titre que les LRG, mais à plus grand redshift. Ils permettent ainsi de mener une analyse RSD et de mesurer l'échelle BAO dans une époque jusque là insondée ($\num{0,9} < z < \num{2,2}$). Cet échantillon peu dense doit mener à une mesure à \SI{2}{\percent} sur l'échelle BAO. Du fait que ce relevé est dominé par le bruit de grenaille (\emph{shot noise}), de futurs relevés pourront venir le compléter et ainsi augmenter la précision statistique de la mesure.
-\item \lya{} QSO : ces quasars sont les objets dont les spectres fournissent la forêt \lya{}. Contrairement aux traceurs directs, la quantité d'information contenue dans la forêt \lya{} dépend du rapport signal sur bruit. Les quasars \lya{} de BOSS possédant un faible rapport signal sur bruit sont donc réobservés dans eBOSS. Le gain attendu sur le rapport signal sur bruit grâce à cette réobservation est d'environ \SI{40}{\percent}. La densité moyenne de ces objets est de l'ordre de $\SI{8}{deg^{-2}}$. \\
-  En plus de ces objets, eBOSS a observé de nouveaux quasars \lya{}, avec une densité moyenne de $\SI{6}{deg^{-2}}$.
+  % \item LRG : l'échantillon de \emph{Luminous Red Galaxies} déja observé lors du programme BOSS est étendu. Un minimum de \num{300000} galaxies dont le redshift est mesuré spectroscopiquement sont nécessaires dans la gamme de redshift $\num{0,6} < z < \num{1}$ afin d'atteindre la précision de \SI{1}{\percent} sur l'échelle BAO.
+  \item LRG : l'échantillon de \emph{Luminous Red Galaxies} déja observé lors du programme BOSS est étendu. Un total de \num{298762} nouvelles cibles avec une densité de $\SI{60}{\per\square\deg}$ sont ajoutées. Ces cibles couvrent la gamme $\num{0,6} < z < \num{1}$, portant le redshift moyen de cet échantillon à $z = \num{0.72}$.
+  \item ELG (\emph{Emission Line Galaxies}) : ce sont des galaxies bleues formant beaucoup d'étoiles, facilement identifiables par leurs raies d'émission. Leur relevé couvre les redshifts $\num{0,6} < z < \num{1,1}$. Le nombre de cibles de ce nouveau traceur est de \num{269889}, correspondant à une densité d'environ \num{130} cibles par $\si{\square\deg}$.
+  \item QSO : nouveaux traceurs, ils sont utilisés afin de construire un relevé spectroscopique au même titre que les LRG, mais à plus grand redshift. Ils permettent ainsi de mener une analyse RSD et de mesurer l'échelle BAO dans une époque jusque là insondée ($\num{0,9} < z < \num{2,2}$).
+    % Cet échantillon peu dense doit mener à une mesure à \SI{2}{\percent} sur l'échelle BAO. Du fait que ce relevé est dominé par le bruit de grenaille (\emph{shot noise}), de futurs relevés pourront venir le compléter et ainsi augmenter la précision statistique de la mesure.
+    Cet échantillon contient \num{434820} cibles, avec une densité de $\SI{90}{\per\square\deg}$. Du fait que ce relevé est dominé par le bruit de grenaille (\emph{shot noise}), de futurs relevés pourront venir le compléter et ainsi augmenter la précision statistique de la mesure.
+  \item \lya{} QSO : ces quasars sont les objets dont les spectres fournissent la forêt \lya{}. Contrairement aux traceurs directs, la quantité d'information contenue dans la forêt \lya{} dépend du rapport signal sur bruit. Les quasars \lya{} de BOSS possédant un faible rapport signal sur bruit sont donc réobservés dans eBOSS. Le gain attendu sur le rapport signal sur bruit grâce à cette réobservation est d'environ \SI{40}{\percent}. La densité moyenne de ces objets est de l'ordre de $\SI{8}{\per\square\deg}$.
+  En plus de ces objets, eBOSS a observé de nouveaux quasars \lya{}, avec une densité moyenne de $\SI{11}{\per\square\deg}$.
 \end{itemize}
 La répartition en redshift de ces quatre traceurs est représentése sur la figure~\ref{fig:eBOSStracers}.
+Pour la suite, nous nous intéresserons uniquement aux quasars \lya{}, qui constituent l'ensemble des données traitées dans cette étude. Ils seront simplement désignés par quasars ou QSO.
+}
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{eBOSStracers}
@@ -74,7 +79,8 @@ La répartition en redshift de ces quatre traceurs est représentése sur la fig
   \label{fig:eBOSStracers}
 \end{figure}
 \paragraph{}
-Le relevé produit par eBOSS contient un échantillon de LRG couvrant la gamme $\num{0,6} < z < \num{1}$ avec une densité de 60 cibles par $\si{\square\deg}$ dont la pureté est supérieure à \SI{80}{\percent}. L'échantillon d'ELG couvre une gamme en redshift légèrement plus haute et contient un total de \num{173736} objets ($\sim\,\SI{130}{deg^{-2}}$). Les quasars utilisés dans les analyses RSD constituent un échantillon couvrant la gamme $\num{0,9} < z < \num{2,2}$ avec une densité de 90 cibles par $\si{\square\deg}$ dont la pureté est supérieure à \SI{50}{\percent}. Enfin, eBOSS fournit \num{60000} nouveaux quasars \lya{} ainsi que la réobservation de \num{60000} quasars \lya{} déja observés avec BOSS. Pour la suite, nous nous intéresserons uniquement aux quasars \lya{}, qui constituent l'ensemble des données traitées dans cette étude. Ils seront simplement désignés par quasars ou QSO.
+% Le relevé produit par eBOSS contient un échantillon de LRG couvrant la gamme $\num{0,6} < z < \num{1}$ avec une densité de 60 cibles par $\si{\square\deg}$ dont la pureté est supérieure à \SI{80}{\percent}. L'échantillon d'ELG couvre une gamme en redshift légèrement plus haute et contient un total de \num{173736} objets ($\sim\,\SI{130}{deg^{-2}}$). Les quasars utilisés dans les analyses RSD constituent un échantillon couvrant la gamme $\num{0,9} < z < \num{2,2}$ avec une densité de 90 cibles par $\si{\square\deg}$ dont la pureté est supérieure à \SI{50}{\percent}. Enfin, eBOSS fournit \num{60000} nouveaux quasars \lya{} ainsi que la réobservation de \num{60000} quasars \lya{} déja observés avec BOSS.
+
 
 
 % Enfin la réobservation des quasars \lya{} de faible luminosité apportera 8 objets par \si{\square\deg} à des redshifts $z > 2,1$, auxquels s'ajouteront de nouveaux quasars \lya{} avec une densité de 18 objets par \si{\square\deg}. \\
@@ -96,7 +102,7 @@ De la même manière, la photométrie de SDSS est complétée par plusieurs rele
 
 % Les relevés d'objets utilisés en tant que traceurs directs pour la mesure de l'échelle BAO ou du \#prov clustering, tels que les relevés de galaxies, nécessitent une très bonne homogénéïté. Contrairement à ces relevés, les quasars utilisés pour le \lya{} ne nécessitent pas cette homogénéïté (\#prov expliquer pourquoi). \\
 \paragraph{} Pour BOSS, le relevé de QSO a été construit en utilisant d'une part l'algorithme \texttt{XDQSO} \autocite{Bovy2010a} pour l'échantillon \texttt{QSO\_CORE}, ce qui a permis d'avoir un échantillon homogène, et d'autre part en incluant des QSO sélectionnés via différentes techniques afin d'augmenter au maximum la densité de quasars \lya{}.
-Contrairement aux relevés d'objets utilisés en tant que traceurs directs pour la mesure de l'échelle BAO ou les pour les anayses RSD, les quasars \lya{} ne nécessitent pas un relevé homogène (voir l'introduction de la section~\ref{sec:estimateurs}).
+Contrairement aux relevés d'objets utilisés en tant que traceurs directs pour la mesure de l'échelle BAO ou pour les analyses RSD, les quasars \lya{} ne nécessitent pas un relevé homogène (voir l'introduction de la section~\ref{sec:estimateurs}).
 C'est pour cette raison que l'échantillon de QSO \lya{} peut être complété sans se soucier de dégrader l'homogénéité.
 Cependant, la présence d'un échantillon homogène de quasars à grand redshift permet d'autres sciences que la mesure de l'échelle BAO.
 Par exemple, le papier \textcite{Laurent2016} étudie l'homogénéïté cosmique en utilisant l'échantillon de quasars DR12 de BOSS.
@@ -114,7 +120,7 @@ Ensuite, les QSO de BOSS ayant un rapport signal sur bruit $\num{0,75} < S/R < \
 % L'algorithme est utilisé avec des paramètres moins strictes que pour BOSS, afin d'augmenter le nombre de cibles.
 % $6,6\,\mathrm{deg^{-2}}$ nouveaux quasars sont ainsi ajoutés à l'échantillon.
 Enfin, de nouveaux candidats quasars sont sélectionnés gr\^ace aux données de PTF, avec une densité de $\SI{3,2}{deg^{-2}}$. Les catalogues FIRST fournissent eux aussi de nouveaux quasars potentiels, avec une densité de $\SI{1}{deg^{-2}}$.
-Ainsi, un total de total d'environ 8 QSO par $\si{\square\deg}$ sera réobservé, accompagné d'environ 18 nouveaux quasars par $\si{\square\deg}$.
+Ainsi, un total de total d'environ 8 QSO par $\si{\square\deg}$ sera réobservé, accompagné d'environ 11 nouveaux quasars par $\si{\square\deg}$.
 
 % Afin de construire le relevé eBOSS, le même algorithme a été utilisé pour sélectionner les quasars. Cette fois ci, la présence d'un échantillon de quasars à $0.9 < z < 2.2$ destiné à la fois à la mesure de l'échelle BAO et du clustering (\#prov) a permis réduire les critères de sélection des QSO et ainsi de dégrader l'homogénéïté de l'échantillon de quasars \lya{} afin d'augmenter le nombre de cibles. 
 
@@ -285,6 +291,6 @@ De plus, DESI donnera une mesure de la somme des masses des neutrinos, avec une 
   \label{fig:DesiVsEboss}
 \end{figure}
 
-% \bibliography{../source/library}
+% % \bibliography{../source/library}
 % \printbibliography
 % \end{document}

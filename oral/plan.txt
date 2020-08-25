@@ -1,0 +1,98 @@
+Plan Soutenance :
+
+I. Introduction (~ 7-8 minutes)
+- décrire rapidement le modèle ΛCDM: matière noire + énergie noire et accélération de l'expansion + les paramètres utiles (1 ou 2 slides)
+- expliquer les BAO : sonde qui donne accès à l'expansion de l'univers à différentes époques (1 ou 2 slides)
+- expliquer brièvement la fonction de corrélation en imageant avec les galaxies (1 slide)
+- mesurer les BAO : survey de galaxies puis introduire les QSO et le Lya (2 ou 3 slides)
+- presenter eBOSS brièvement (quelques chiffres et objectifs, et un spectre de QSO) (1 slide)
+- presenter l'objectif de mon travail : les mocks pour tester les analyses d'eBOSS et DESI (1 slide)
+
+
+II. Les mocks (~ 10 minutes)
+  1) Objectifs
+- donner les objectifs (1 slide)
+  2) Construction des mocks
+- décrire chaque phase : boites de densité, relevé de QSO, ligne de visée, champ d'absorption, HCD (x slides)
+  3) Production
+- expliquer rapidement la pré-production (1 slide)
+  4) Ajustement des paramètres
+- objectifs : obtenir un champ qui dépend de z avec les bons biais, P1D, <F> (1 slide)
+- donner les paramètres à ajuster a(z), b(z), c(z), puis P1D(delta_s) (x slides)
+- expliquer qu'il nous faut alors b(z) et beta(z) (on a déjà P1D(z) et <F>(z)) (1 slide)
+
+
+III. Analyse des données (~ 10 minutes)
+- donner rapidement le nombre de QSO, de forêts, le nombre de paires que ça représente (1 slide)
+- expliquer le calcul des deltas et les distorsions que ca introduit (1 ou 2 slides)
+- donner l'estimateur de la CF et XCF, et mentionner le calcul de la matrice de covariance (2 slides)
+- décrire les modèles utilisés pour ajuster la CF et XCF (3 ou 4 slides)
+- mentionner le papier DR16 et expliquer qu'ici on analyse dans 4 bins en z (1 slide)
+- donner le résultat de l'analyse : plot des CF puis b(z) et beta(z) (2 slides)
+
+
+IV. Etude des mocks (~ 10 minutes)
+- expliquer la procédure itérative pour ajuster les paramètres et mentionner la prédiction (2 ou 3 slides)
+- donner le résultat de la prédiction pour les 5 redshifts du tunning (1 slide)
+- décrire rapidement la post-production, quickquasars, et les différentes versions des mocks (1 slide)
+- présenter le modèle pour ajuster chaque version des mocks (1 ou 2 slides)
+- présenter l'analyse des mocks : (x slides)
+  	    - raw mocks : CF, P1D, CF QSO, CF DLA
+	    - mock-0.0 : CF, XCF
+	    - mock-0.2 : CF, XCF
+	    - mock-0.3 : CF, XCF, Xi1D
+- évoquer les problèmes de la XCF (biais différents de ceux mesurés sur la CF) ; du P1D ; 
+
+
+V. Comparaison mocks / données (10 minutes)
+- comparer CF pred, raw mocks et données –> petit effet entre pred et raw mock (pred pas parfaite)
+- comparer CF données, raw mocks et mock-0.0 –> petit effet entre raw mock et mock-0.0 (dmat ?)
+- comparer CF données, mock-0.0 et mock-0.2 -> effet des DLAs
+- L_HCD = 10 pas correct, il faut utiliser L_HCD = 2.8 : comparaison C-G et Rogers(2.8)
+- comparer CF mock-0.2 mask et mock-0.2 no mask avec C-G : compatible entre eux, mais pas avec mock-0.0
+- même chose pour les données : pas compatible ; quelque chose inconnu dans les données ?
+
+
+VI. Conclusions (2-3 minutes)
+- résumé
+- perspectives
+
+
+/Plan initial/
+I. Introduction
+  1) cosmologie et bao
+- décrire rapidement le modèle ΛCDM: matière noire + énergie noire et accélération de l'expansion + les paramètres utiles (1 ou 2 slides)
+- expliquer les BAO : sonde qui donne accès à l'expansion de l'univers à différentes époques (2 ou 3 slides)
+- expliquer brièvement la fonction de corrélation en imageant avec les galaxies (1 slide)
+- mesurer les BAO : survey de galaxies puis introduire les QSO et le Lya (2 ou 3 slides)
+  2) Estimer la fonction de corrélation
+- presenter eBOSS brièvement (quelques chiffres et objectifs) (1 slide)
+- presenter les données : montrer un spectre (1 slide)
+- expliquer (ou juste donner) le calcul des deltas (1 ou 2 slides)
+- expliquer l'estimation de la CF et XCF
+
+II. Les mocks
+  1) Objectifs
+- donner les objectifs (1 slide)
+  2) Construction des mocks
+- décrire chaque phase : boites de densité, relevé de QSO, ligne de visée, champ d'absorption, HCD (x slides)
+  3) Ajustement des paramètres
+- objectifs : obtenir un champ qui dépend de z avec les bons biais, P1D, <F> (1 slide)
+- les paramètres à ajuster : a(z), b(z), c(z), puis P1D(delta_s) (x slides)
+  4) Production des mocks
+- expliquer rapidement la production : nersc, parallélisation du code, le nombre de réalisation produites et analysées (1 ou 2 slides)
+  5) Expansion des mocks
+- décrire quickquasars (1 slide)
+
+III. Analyse des mocks
+  1) décrire les modèles ajustés
+- expliquer le modèle de l'auto puis de la cross ajusté sur les données (3 slides)
+- donner les composantes qu'on garde / enlève pour analyser les différentes versions des mocks (2 ou 3 slides)
+  2) Analyse des mocks
+- raw mocks : CF, P1D, CF QSO, CF DLA
+- mock-0.0 : CF, XCF
+- mock-0.2 : CF, XCF
+
+Donner l'analyse des données avant la section qui presente le tuning des parametres des mocks ? pour garder une logique
+
+

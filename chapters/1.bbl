@@ -521,7 +521,7 @@
       \verb 1607.03155
       \endverb
       \verb{file}
-      \verb ::
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Alam et al. - 2016 - The clustering of galaxies in the completed SDSS-III Baryon Oscillation Spectroscopic Survey cosmological analys(2).pdf:pdf
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/1607.03155
@@ -1015,8 +1015,28 @@
       \verb http://arxiv.org/abs/2002.02822
       \endverb
     \endentry
+    \entry{DeSainteAgathe}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f82aa6597742563755be5678c467fa6c}{%
+           family={{de Sainte Agathe}},
+           familyi={d\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{f82aa6597742563755be5678c467fa6c}
+      \strng{fullhash}{f82aa6597742563755be5678c467fa6c}
+      \strng{authornamehash}{f82aa6597742563755be5678c467fa6c}
+      \strng{authorfullhash}{f82aa6597742563755be5678c467fa6c}
+      \field{sortinit}{d}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Mesure de la position du pic d'oscillations acoustiques baryoniques dans les forêts Ly-alpha et Ly-beta des spectres des quasars du relevé eBOSS-SDSS IV}}
+      \field{type}{phdthesis}
+    \endentry
     \entry{Agathe2019a}{article}{}
-      \name{author}{19}{}{%
+      \name{author}{19}{uniquelist=1}{%
         {{uniquename=0,hash=f82aa6597742563755be5678c467fa6c}{%
            family={{de Sainte Agathe}},
            familyi={d\bibinitperiod},
@@ -1166,6 +1186,66 @@
       \verb{doi}
       \verb 10.1023/B:FOOP.0000019699.88151.ed
       \endverb
+    \endentry
+    \entry{DuMasdesBourboux2020}{article}{}
+      \name{author}{9}{}{%
+        {{uniquename=0,hash=1a3520767d5b0bfde2a47877874d511f}{%
+           family={{du Mas des Bourboux}},
+           familyi={d\bibinitperiod},
+           given={Hélion},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=3eb4881ae1c93d5acc00b3b1f6d63455}{%
+           family={Rich},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=a1471d6d4f092fecd93ee513589b480e}{%
+           family={Font-Ribera},
+           familyi={F\bibinithyphendelim R\bibinitperiod},
+           given={Andreu},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=f82aa6597742563755be5678c467fa6c}{%
+           family={{de Sainte Agathe}},
+           familyi={d\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod}}}%
+        {{uniquename=0,hash=38ce25e7aa7b91d216d068a0e9574ee8}{%
+           family={Farr},
+           familyi={F\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=566bd9c5a481bf7512dd2cb657ba63d2}{%
+           family={Etourneau},
+           familyi={E\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=ce0a612b9ab914511d3db3595d0e07a0}{%
+           family={{Le Goff}},
+           familyi={L\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=29a8d7ddd7eb4ca252d9505efe6d162a}{%
+           family={Cuceu},
+           familyi={C\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=3279a0e8b17757485c8d54d708aa6624}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Et},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{77d90a5ca6561f6b398003df5202b105}
+      \strng{fullhash}{26c242f60fb35166a68e992f10e3d0af}
+      \strng{authornamehash}{77d90a5ca6561f6b398003df5202b105}
+      \strng{authorfullhash}{26c242f60fb35166a68e992f10e3d0af}
+      \field{sortinit}{d}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{THE COMPLETED SDSS-IV EXTENDED BARYON OSCILLATION SPECTROSCOPIC SURVEY: BARYON ACOUSTICOSCILLATIONS WITH LYMAN-ALPHA FORESTS}}
+      \field{year}{2020}
     \endentry
     \entry{Eisenstein2005}{article}{}
       \name{author}{48}{}{%
@@ -1498,42 +1578,6 @@
       \verb{url}
       \verb http://arxiv.org/abs/astro-ph/9605054%20http://dx.doi.org/10.1086/178173
       \endverb
-    \endentry
-    \entry{Hamilton1992}{article}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=99b454f9040b783a27d8381b25f81a7e}{%
-           family={Hamilton},
-           familyi={H\bibinitperiod},
-           given={A.\bibnamedelimi J.\bibnamedelimi S.},
-           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \strng{namehash}{99b454f9040b783a27d8381b25f81a7e}
-      \strng{fullhash}{99b454f9040b783a27d8381b25f81a7e}
-      \strng{authornamehash}{99b454f9040b783a27d8381b25f81a7e}
-      \strng{authorfullhash}{99b454f9040b783a27d8381b25f81a7e}
-      \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Peculiar velocities distort the correlation function of galaxies in redshift space. In the linear regime, the distortion has a characteristic quadrupole plus hexadecapole form. The amplitude of the distortion depends on the cosmological density parameter Omega. Practical formulas are derived here which can be applied to redshift galaxy catalogs to measure Omega in the linear regime. The formulas also yield the real underlying correlation function in the linear regime, corrected for peculiar velocities.}
-      \field{issn}{0004-637X}
-      \field{journaltitle}{The Astrophysical Journal}
-      \field{title}{{Measuring Omega and the real correlation function from the redshift correlation function}}
-      \field{volume}{385}
-      \field{year}{1992}
-      \field{pages}{L5}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1086/186264
-      \endverb
-      \verb{file}
-      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Hamilton - 1992 - MEASURING OMEGA AND THE REAL CORRELATION FUNCTION FROM THE REDSHIFT CORRELATION FUNCTION.pdf:pdf
-      \endverb
-      \verb{url}
-      \verb http://articles.adsabs.harvard.edu/cgi-bin/nph-iarticle%7B%5C_%7Dquery?1992ApJ...385L...5H%7B%5C&%7Ddata%7B%5C_%7Dtype=PDF%7B%5C_%7DHIGH%7B%5C&%7Dwhole%7B%5C_%7Dpaper=YES%7B%5C&%7Dtype=PRINTER%7B%5C&%7Dfiletype=.pdf
-      \endverb
-      \keyw{Subject headings,clustering,cosmology,observations — cosmology,theory — galaxies}
     \endentry
     \entry{Hogg1999}{article}{}
       \name{author}{1}{}{%
@@ -3906,8 +3950,6 @@
       \field{year}{2018}
     \endentry
   \endsortlist
-  \missing{prov:LyaDR16}
-  \missing{CITE DR16}
 \endrefsection
 \endinput
 

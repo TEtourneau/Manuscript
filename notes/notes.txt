@@ -4,50 +4,25 @@ Notes :
 - citer/remercier scipy, nersc, matplotlib, 
 
 
-- verifier si c * f = beta
-
-
-- Est-ce que b_hcd change dans les données ? C'est possible que le finder marche mieux pour les forets a grand z, donc meilleur efficacite, donc moins de contamination, donc b plus faible ? Faudrait comparer l'evolution du biais des hcd dans DR16 a un papier qui etudie les HCD
-
-
-
-- expliquer l'absisse lambda1/lambda2 au lieu de r pour xi1D
-
-
-- expliquer l'analyse sur la dmat (1 seule dmat suffisante)
-
-
 - verifier que si on utilise une loi de poisson, on retrouve bien ce qu'on fait (proba de tirer 2 qso ou plus negligeable)
 
 
 - Expliquer le sinc() tronqué, et refaire la figure 1.7 du chapitre 4 en utilisant sqrt(3) dans le sinc pour surestimer l'effet et etre sur que c'est effectivement negligeable ?
 
 
-- rajouter la XCF des raw mocks pour 0 < z < 10 et expliquer qu'on comprend pas pourquoi ca converge pas vers 0 dans chaque bin en z, mais que cest a peu pres ok pour le coadd des 4 bins
-
-
 - rajouter la prediction de la cf1d
+
 
 - comparer le fit de la cf eboss-0.2 avec un modele sans HCD au fit eboss-0.0 (en particulier les biais et chi2)
 
 
-- montrer les P1D dans chaque bin en z a la fin de la procedure de tuning + montrer un plot 
-
-- model CG : essayer de faire un fit combine ou alors essayer d'ajuster la xcf dans 0<z<10
-
-- comment citer notre papier ? (chap4)
-
-- b_eta au lieu de beff dans la partie stabilite des pars lya 
-
 - ref papier Solene HCD
 
-- expliquer a la fin du chap 6 que cette analyse est presente de facon chronologique : si on avait su on aurait utilise le modele C-G ?
-
-- peut etre que le modele de HCD modeliste un autre effet : comme par exemple les correlations induites par la diversite des QSO ?
-donner L_hcd mesuré dans les données
 
 - il faudrait voir si le fait d'ajouter les metaux changent les mesures des hcd et du lya
 
-- ajouter la numérotation avec les chiffres romain au debut
 
 - reprendre la description des traceurs d'eboss : donner les chiffres finaux
+
+
+- fusionner 4.17 et 4.22 figure ?

@@ -1,0 +1,32 @@
+Plan Soutenance :
+
+I. Introduction
+  1) cosmologie et bao
+- décrire rapidement le modèle ΛCDM: matière noire + énergie noire et accélération de l'expansion + les paramètres utiles (1 ou 2 slides)
+- expliquer les BAO : sonde qui donne accès à l'expansion de l'univers à différentes époques (2 ou 3 slides)
+- expliquer brièvement la fonction de corrélation en imageant avec les galaxies (1 slide)
+- mesurer les BAO : survey de galaxies puis introduire les QSO et le Lya (2 ou 3 slides)
+  2) Estimer la fonction de corrélation
+- presenter eBOSS brièvement (quelques chiffres et objectifs) (1 slide)
+- presenter les données : montrer un spectre (1 slide)
+- expliquer (ou juste donner) le calcul des deltas (1 ou 2 slides)
+- expliquer l'estimation de la CF et XCF
+
+II. Les mocks
+  1) Objectifs
+- donner les objectifs (1 slide)
+  2) Construction des mocks
+- décrire chaque phase : boites de densité, relevé de QSO, ligne de visée, champ d'absorption, HCD (x slides)
+  3) Ajustement des paramètres
+- objectifs : obtenir un champ qui dépend de z avec les bons biais, P1D, <F> (1 slide)
+- les paramètres à ajuster : a(z), b(z), c(z), puis P1D(delta_s) (x slides)
+  4) Production des mocks
+- expliquer rapidement la production : nersc, parallélisation du code, le nombre de réalisation produites et analysées (1 ou 2 slides)
+  5) Expansion des mocks
+- décrire quickquasars (1 slide)
+
+III. Analyse des mocks
+  1) décrire les modèles ajustés
+- expliquer le modèle de l'auto puis de la cross ajusté sur les données (3 slides)
+- donner les composantes qu'on garde / enlève pour analyser les différentes versions des mocks (2 ou 3 slides)
+- 

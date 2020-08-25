@@ -1,6 +1,24 @@
-%% Lines to compile only this capter
+% % Lines to compile only this capter
 % \documentclass[11pt, twoside, a4paper, openright]{report}
 % \input{../source/packages.tex}
+% \usepackage[utf8]{inputenc}
+% \usepackage[
+% backend=biber,
+% style=authoryear,
+% citestyle=authoryear,
+% url=false
+% ]{biblatex}
+% \addbibresource{../source/library.bib}
+% \usepackage[french]{babel}
+% \usepackage{graphicx}
+% \usepackage[francais,nohints]{minitoc}
+% \setcounter{minitocdepth}{3}
+% \usepackage{siunitx}
+% \usepackage{geometry}
+% \usepackage{fancyhdr}
+% \usepackage{mathptmx}
+% \usepackage{mathtools}
+
 
 % \begin{document}
 %%
@@ -459,7 +477,7 @@ une somme de sinusoïdes de différentes fréquences, la fréquence la plus bass
 % il indique la répartition des différentes fréquences présentes dans le signal temporel.
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{example_tf}
+  \includegraphics[scale=0.45]{example_tf}
   \caption{Illustration de la transformation de Fourier. Le signal temporel à gauche en rouge est décomposé en somme de sinusoïdes. La transformée de Fourier correspond au signal fréquenciel, à droite, donnant la répartition des fréquences mises en jeu dans le signal temporel.}
   \label{fig:example_tf}
 \end{figure}
@@ -958,6 +976,6 @@ Le traitement des HCD est détaillé dans la section~\ref{subsec:model_donnees}.
 
 
 
-% \bibliography{../source/library}
+% % \bibliography{../source/library}
 % \printbibliography
 % \end{document}

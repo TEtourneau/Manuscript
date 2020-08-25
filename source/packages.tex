@@ -17,6 +17,10 @@ citestyle=authoryear,
 url=false
 ]{biblatex}
 \addbibresource{../source/library.bib}
+\renewcommand*{\citesetup}{%
+  \normalfont
+  \biburlsetup
+  \frenchspacing}
 
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
