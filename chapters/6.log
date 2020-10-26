@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 OCT 2020 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 OCT 2020 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3003,22 +3003,30 @@ LaTeX Warning: Reference `eq:f_hcd_def' on page 10 undefined on input line 462.
 
 
 
+LaTeX Warning: Reference `tab:hcd_dndz3' on page 10 undefined on input line 480
+.
+
+
+LaTeX Warning: Reference `prov' on page 10 undefined on input line 482.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <../figures/data_ana/bias_CG_mask.png, id=165, 1076.02pt x 760.8425pt>
-File: ../figures/data_ana/bias_CG_mask.png Graphic file (type png)
+[10]
 
-<use ../figures/data_ana/bias_CG_mask.png>
-Package pdftex.def Info: ../figures/data_ana/bias_CG_mask.png used on input lin
-e 491.
-(pdftex.def)             Requested size: 473.45027pt x 334.77173pt.
+LaTeX Warning: Reference `tab:hcd_dndz3' on page 11 undefined on input line 487
+.
 
+<../figures/data_ana/bias_cg_rogers_comp.png, id=163, 1084.05pt x 371.3875pt>
+File: ../figures/data_ana/bias_cg_rogers_comp.png Graphic file (type png)
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 496.
+<use ../figures/data_ana/bias_cg_rogers_comp.png>
+Package pdftex.def Info: ../figures/data_ana/bias_cg_rogers_comp.png used on in
+put line 501.
+(pdftex.def)             Requested size: 466.13242pt x 159.6935pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3028,19 +3036,79 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11 <../figures/data_ana/nhi_finder.png>]
 
+LaTeX Warning: Reference `subsec:model_donnees' on page 12 undefined on input l
+ine 517.
+
+
+LaTeX Warning: Reference `eq:bias_hcd_def' on page 12 undefined on input line 5
+24.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <../figures/data_ana/bias_CG_mask.png>]
-<../figures/data_ana/bias_CG_no_mask.png, id=184, 1075.01625pt x 374.39874pt>
-File: ../figures/data_ana/bias_CG_no_mask.png Graphic file (type png)
+[12 <../figures/data_ana/bias_cg_rogers_comp.png>]
+<../figures/data_ana/cf_models.png, id=183, 901.3675pt x 739.76375pt>
+File: ../figures/data_ana/cf_models.png Graphic file (type png)
 
-<use ../figures/data_ana/bias_CG_no_mask.png>
-Package pdftex.def Info: ../figures/data_ana/bias_CG_no_mask.png used on input 
-line 534.
-(pdftex.def)             Requested size: 483.75285pt x 168.47787pt.
+<use ../figures/data_ana/cf_models.png>
+Package pdftex.def Info: ../figures/data_ana/cf_models.png used on input line 5
+31.
+(pdftex.def)             Requested size: 450.68263pt x 369.88097pt.
+
+
+LaTeX Warning: Reference `eq:pk_ql' on page 13 undefined on input line 534.
+
+
+LaTeX Warning: Reference `eq:bias_hcd_def' on page 13 undefined on input line 5
+34.
+
+
+LaTeX Warning: Reference `eq:pk_ql' on page 13 undefined on input line 534.
+
+
+LaTeX Warning: Reference `eq:bias_hcd_def' on page 13 undefined on input line 5
+34.
+
+<../figures/data_ana/cf_models_no_dist.png, id=184, 897.3525pt x 739.76375pt>
+File: ../figures/data_ana/cf_models_no_dist.png Graphic file (type png)
+
+<use ../figures/data_ana/cf_models_no_dist.png>
+Package pdftex.def Info: ../figures/data_ana/cf_models_no_dist.png used on inpu
+t line 539.
+(pdftex.def)             Requested size: 448.67514pt x 369.88097pt.
+
+
+LaTeX Warning: Reference `cf_models' on page 13 undefined on input line 542.
+
+
+LaTeX Warning: Reference `cf_models' on page 13 undefined on input line 542.
+
+
+LaTeX Warning: Reference `fig:distrib_dla' on page 13 undefined on input line 5
+50.
+
+<../figures/data_ana/cf_nhi_bins.png, id=187, 1315.91624pt x 515.9275pt>
+File: ../figures/data_ana/cf_nhi_bins.png Graphic file (type png)
+
+<use ../figures/data_ana/cf_nhi_bins.png>
+Package pdftex.def Info: ../figures/data_ana/cf_nhi_bins.png used on input line
+ 558.
+(pdftex.def)             Requested size: 460.57759pt x 180.57733pt.
+
+
+LaTeX Warning: Reference `eq:f_hcd_def' on page 13 undefined on input line 570.
+
+
+<../figures/data_ana/f_hcd_fixed.png, id=188, 853.1875pt x 610.28pt>
+File: ../figures/data_ana/f_hcd_fixed.png Graphic file (type png)
+
+<use ../figures/data_ana/f_hcd_fixed.png>
+Package pdftex.def Info: ../figures/data_ana/f_hcd_fixed.png used on input line
+ 575.
+(pdftex.def)             Requested size: 341.26895pt x 244.10767pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3050,134 +3118,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 564.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 572.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.4> on input line 572.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 572.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 572.
-
-LaTeX Warning: Reference `subsec:model_donnees' on page 14 undefined on input l
-ine 597.
-
-
-LaTeX Warning: Reference `eq:bias_hcd_def' on page 14 undefined on input line 6
-04.
-
+[14 <../figures/data_ana/cf_models.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <../figures/data_ana/bias_CG_no_mask.png>]
-<../figures/data_ana/cf_models.png, id=206, 901.3675pt x 739.76375pt>
-File: ../figures/data_ana/cf_models.png Graphic file (type png)
-
-<use ../figures/data_ana/cf_models.png>
-Package pdftex.def Info: ../figures/data_ana/cf_models.png used on input line 6
-11.
-(pdftex.def)             Requested size: 450.68263pt x 369.88097pt.
-
-
-LaTeX Warning: Reference `eq:pk_ql' on page 15 undefined on input line 614.
-
-
-LaTeX Warning: Reference `eq:bias_hcd_def' on page 15 undefined on input line 6
-14.
-
-
-LaTeX Warning: Reference `eq:pk_ql' on page 15 undefined on input line 614.
-
-
-LaTeX Warning: Reference `eq:bias_hcd_def' on page 15 undefined on input line 6
-14.
-
-<../figures/data_ana/cf_models_no_dist.png, id=207, 897.3525pt x 739.76375pt>
-File: ../figures/data_ana/cf_models_no_dist.png Graphic file (type png)
-
-<use ../figures/data_ana/cf_models_no_dist.png>
-Package pdftex.def Info: ../figures/data_ana/cf_models_no_dist.png used on inpu
-t line 619.
-(pdftex.def)             Requested size: 448.67514pt x 369.88097pt.
-
-
-LaTeX Warning: Reference `cf_models' on page 15 undefined on input line 622.
-
-
-LaTeX Warning: Reference `cf_models' on page 15 undefined on input line 622.
-
-
-LaTeX Warning: Reference `fig:distrib_dla' on page 15 undefined on input line 6
-30.
-
-<../figures/data_ana/cf_nhi_bins.png, id=210, 1315.91624pt x 515.9275pt>
-File: ../figures/data_ana/cf_nhi_bins.png Graphic file (type png)
-
-<use ../figures/data_ana/cf_nhi_bins.png>
-Package pdftex.def Info: ../figures/data_ana/cf_nhi_bins.png used on input line
- 638.
-(pdftex.def)             Requested size: 460.57759pt x 180.57733pt.
-
-
-LaTeX Warning: Reference `eq:f_hcd_def' on page 15 undefined on input line 650.
-
-
-<../figures/data_ana/f_hcd_fixed.png, id=211, 853.1875pt x 610.28pt>
-File: ../figures/data_ana/f_hcd_fixed.png Graphic file (type png)
-
-<use ../figures/data_ana/f_hcd_fixed.png>
-Package pdftex.def Info: ../figures/data_ana/f_hcd_fixed.png used on input line
- 655.
-(pdftex.def)             Requested size: 341.26895pt x 244.10767pt.
-
+[15 <../figures/data_ana/cf_models_no_dist.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16 <../figures/data_ana/cf_nhi_bins.png> <../figures/data_ana/f_hcd_fixed.png>
+]
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `fig:bias_CG_mask' on page 17 undefined on input line 
+603.
 
-[16 <../figures/data_ana/cf_models.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <../figures/data_ana/cf_models_no_dist.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18 <../figures/data_ana/cf_nhi_bins.png> <../figures/data_ana/f_hcd_fixed.png>
-] <../figures/data_ana/f_hcd_range.png, id=246, 859.21pt x 608.2725pt>
+<../figures/data_ana/f_hcd_range.png, id=223, 859.21pt x 608.2725pt>
 File: ../figures/data_ana/f_hcd_range.png Graphic file (type png)
 
 <use ../figures/data_ana/f_hcd_range.png>
 Package pdftex.def Info: ../figures/data_ana/f_hcd_range.png used on input line
- 694.
+ 614.
 (pdftex.def)             Requested size: 343.67792pt x 243.30469pt.
 
-<../figures/data_ana/f_hcd_range_real.png, id=247, 857.2025pt x 609.27625pt>
+<../figures/data_ana/f_hcd_range_real.png, id=224, 857.2025pt x 609.27625pt>
 File: ../figures/data_ana/f_hcd_range_real.png Graphic file (type png)
 
 <use ../figures/data_ana/f_hcd_range_real.png>
 Package pdftex.def Info: ../figures/data_ana/f_hcd_range_real.png used on input
- line 703.
+ line 623.
 (pdftex.def)             Requested size: 342.87492pt x 243.70618pt.
 
 
@@ -3186,16 +3165,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[17]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20 <../figures/data_ana/f_hcd_range.png> <../figures/data_ana/f_hcd_range_real
+[18 <../figures/data_ana/f_hcd_range.png> <../figures/data_ana/f_hcd_range_real
 .png>]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 776--776
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 633--633
 | []| 
  []
 
@@ -3204,14 +3183,14 @@ Package minitoc Info: I0009
 (minitoc)             Creating the 6.maf file.
 \openout5 = `6.maf'.
 
-[21
+[19
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 776.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 776.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
  (./6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 776.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 776.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 633.
 Package rerunfilecheck Info: File `6.out' has not changed.
 (rerunfilecheck)             Checksum: 110F63B484F8DE0C6CAA16528F361C41;699.
 
@@ -3223,13 +3202,13 @@ Package logreq Info: Writing requests to '6.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35544 strings out of 492995
- 648437 string characters out of 6132704
- 1190712 words of memory out of 5000000
- 38341 multiletter control sequences out of 15000+600000
- 172900 words of font info for 133 fonts, out of 8000000 for 9000
+ 35507 strings out of 492995
+ 647809 string characters out of 6132704
+ 1189227 words of memory out of 5000000
+ 38311 multiletter control sequences out of 15000+600000
+ 145109 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,17n,50p,10403b,1767s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,17n,50p,10403b,1763s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -3257,10 +3236,10 @@ ve/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msam10.pfb>
-Output written on 6.pdf (21 pages, 2737599 bytes).
+Output written on 6.pdf (19 pages, 2651583 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
