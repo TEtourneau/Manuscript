@@ -60,3 +60,18 @@ Partie 6.2.4 : conclure qu'on devrait utiliser L_hcd = 2.8 si on utilise Rogers,
 Ajouter une section qui presente et compare les fits avec Rogers(2.8), C-G_mask et C-G pour mock et données. Nuancer les différences entre eboss-0.0 et eboss-0.2 du fait de la grande statistique. Dans la section 6.2.1, il y a déja les valeurs des biais avec L_hcd = 2.8 sur eboss-0.2_mask.
 Mentionner le fait que les mesures faites avec la XCF ne sont pas compatibles avec celles faites avec la CF
 
+
+6.2.1 Comparaison des mocks : parler de la dmat (2e paragraphe)
+6.2.2 Effet du masquage des HCD : pas toucher
+6.2.3 Meilleur modelisation :
+      	       - presentation du modele
+	       - ajustement sur eboss-0.0
+	       - ajustement avec 3xHCD (mettre apres la comparaison C-G et Rogers?)
+	       - comparaison C-G mask / no mask / Rogers10 ; C-G self consistent + preciser que Lhcd=10 pas bon et donc que Rogers et C-G pas compatibles (preciser que Lhcd mal choisi, voir 6.2.4). 
+6.2.4 Mieux comprendre les HCD : - l'effet des HCD
+      	    	       	       	 - HCD avec meme nhi -> preciser que Rogers Lhcd=2.8 et C-G mask donnent la meme chose. Expliquer que ca pose probleme pour les donnees : 3 mesures differentes (C-G mask, no mask et Rogers 2.8) --> qqch d'inconnu dans les donnees
++ mentionner le fait que pour les donnees Lhcd converge vers 2.8 mais pas pour les mocks
+
+	     
+
+	     
