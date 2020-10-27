@@ -317,9 +317,8 @@ L'effet sur $\beta_{\mathrm{Ly}\alpha}$ est faible, et les valeurs de $\beta_{\m
 Cependant, l'effet sur le biais effectif $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ est important (de l'ordre de \SI{10}{\percent}) et statistiquement significatif.
 % Cela implique que l'ajout du continuum et du bruit par quickquasars, l'ajustement du continuum ou la prise en compte des effets liés à cet ajustement par la matrice de distorsion affecte la mesure de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$. Nous suspectons la matrice de distorsion de ne pas capturer tous les effets produits par l'ajustement du continuum, ce qui pourrait expliquer l'écart entre les raw mocks et les mocks eboss-0.0.
 % Il semble que la matrice de distorsion ne prenne pas totalement en compte l'ajout du continuum et du bruit par \texttt{quickquasars} et l'ajustement du continuum dans l'analyse.
-\textbf{
 Les écarts observés sont dus à la matrice de distorsion, qui ne capture pas l'intégralité des distorsions produites par l'ajustement du continuum.
-La figure~\ref{fig:dmat_effect} présente la comparaison des mocks eboss-0.0, en rouge, avec les mocks eboss-raw multipliés par la matrice de distorsion, en vert. Si la matrice de distorsion était parfaite, les courbes bleues et vertes seraient confondues, ce qui n'est pas le cas. Une étude approfondie de la matrice de distorsion et de l'ajout du continuum par \texttt{quickquasars} est nécessaire pour comprendre ces différences.}
+La figure~\ref{fig:dmat_effect} présente la comparaison des mocks eboss-0.0, en rouge, avec les mocks eboss-raw multipliés par la matrice de distorsion, en vert. Si la matrice de distorsion était parfaite, les courbes bleues et vertes seraient confondues, ce qui n'est pas le cas. Une étude approfondie de la matrice de distorsion et de l'ajout du continuum par \texttt{quickquasars} est nécessaire pour comprendre ces différences.
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{dmat_effect}
@@ -500,6 +499,7 @@ La comparaison est présentée sur la figure~\ref{fig:bias_cg_rogers_comp}.
   \centering
   \includegraphics[scale=0.43]{bias_cg_rogers_comp}
   \caption{Mesure des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ (gauche) et $\beta_{\mathrm{Ly}\alpha}$ (droite) sur l'auto-corrélation \lya$\times$\lya{} estimée à partir des mocks. Les points bleus présentent la mesure faite sur les mocks eboss-0.0. Les points magenta la mesure faite sur les mocks eboss-0.2, où les HCD avec $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués dans le calcul des fonctions de corrélation, et ajusté avec le modèle de Rogers. Les points orange la mesure faite sur ces mêmes fonctions de corrélations, mais ajustées avec le modèle C-G. Enfin, les points rouges présentent la mesure faite sur les mocks eboss-0.2 où aucun HCD n'a été masqué, ajustés avec le modèle C-G.
+    Les tirets correspondent à l'ajustement de chaque jeu de donnée par une loi de puissance.
 Les points bleus sont décalés horizontalement de $\Delta z = -1\times10^{-2}$, les magentas de $\Delta z = -5\times10^{-3}$ et les rouges de $\Delta z = 5\times10^{-3}$ pour des raisons de visibilité.}
   \label{fig:bias_cg_rogers_comp}
 \end{figure}
@@ -617,14 +617,33 @@ La figure~\ref{fig:f_hcd_range} présente aussi les fonctions $F_{\textsc{HCD}}$
 \end{figure}
 
 \paragraph{}
-Suite à ces observations:
-- nous reproduisons l'analyse des mocks eboss-0.2 avec Rogers avec Lhcd=2.8 : meme chose que C-G mask –> les deux mesures sont equivalentes (et equivalente avec C-G no mask) donc c'est validé
-- nous reproduisons l'analyse de DR16 avec Lhcd=2.8 : meme chose que pour C-G mask, donc ca c'est OK, mais par contre ca donne pas la meme chose que C-G no mask : probleme qqpart dans les donnees
+Suite à ces observations, nous reproduisons l'analyse des mocks eboss-0.2 où les HCD avec une densité de colonne $\log n_{\mathrm{HI}} > \num{20.3}$ ont été masqués. Nous analysons les fonctions de corrélation \lya{}$\times$\lya{} en utilisant le modèle de Rogers, avec $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$. Ainsi, nous vérifions que les résultats de l'ajustement sont très similaires à ceux obtenus avec le modèle C-G (les résultats varient d'un dixième de sigma). Ceci est attendu car les fonctions $F_{\textsc{HCD}}$ sont très similaires.
+De plus, comme nous l'avons vu dans la section~\ref{subsec:model_alter_hcd}, la mesure des paramètres \lya{} faite sur les mocks eboss-0.2 où les HCD avec une densité de colonne $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués, et ajustés avec le modèle C-G est compatible avec la mesure faite sur les mocks eboss-0.2 où aucun HCD n'est masqué, et ajustés avec le modèle C-G. Ainsi les trois mesures des paramètres \lya{} que nous faisons (modèle C-G avec ou sans HCD masqués et modèle de Rogers avec $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$) sur les mocks eboss-0.2 sont compatibles.
+Cependant il reste toujours un léger écart entre la mesure faite sur les mocks eboss-0.0 et celle faite sur les mocks eboss-0.2 (environ \SI{5}{\percent}, voir figure~\ref{fig:bias_cg_rogers_comp}).
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.44]{bias_dr16_comp}
+  \caption{Mesure des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ (gauche) et $\beta_{\mathrm{Ly}\alpha}$ (droite) sur l'auto-corrélation \lya$\times$\lya{} estimée à partir des données DR16. Les points bleus présentent la mesure faite avec le modèle de Rogers en utilisant $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$. Les points orange la mesure faite avec le modèle C-G lorsque les HCD avec $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués. Les points verts la mesure avec le modèle C-G lorsqu'aucun HCD n'est masqué. Enfin, les points noirs présentent la mesure faite avec le modèle de Rogers en utilisant $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$.
+      Les tirets correspondent à l'ajustement de chaque jeu de donnée par une loi de puissance.
+Les points orange sont décalés horizontalement de $\Delta z = 5\times10^{-3}$ pour des raisons de visibilité.}
+  \label{fig:bias_dr16_comp}
+\end{figure}
+
+\paragraph{}
+Après avoir fait ces vérifications sur les mocks, nous analysons les données DR16 avec les modèles de HCD étudiés précédemment. La figure~\ref{fig:bias_dr16_comp} présente les mesures des paramètres \lya{} faites sur les données DR16 en utilisant ces différents modèles de HCD.
+Nous pouvons premièrement remarquer que, comme pour les mocks, la mesure faite avec le modèle C-G lorsque les HCD avec une densité de colonne $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués (orange) est très similaires à la mesure faite avec le modèle de Rogers lorsque nous utilisons $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$ (bleu). Cependant, contrairement aux mocks, ces deux mesures ne sont pas compatibles avec la mesure faite avec le modèle C-G lorsqu'aucun HCD n'est masqué (vert). A titre de comparaison, la mesure faite avec le modèle de Rogers avec $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$ (utilisée comme référence pour construire les mocks) est montrée en noir.
+Le fait que les deux mesures faites avec le modèle C-G (HCD masqués ou non) ne soient pas compatibles, alors que les mêmes mesures faites sur les mocks le sont, pose un sérieux problème. Cela signifie que quelque chose dans les données ne se comporte pas de la même manière que dans les mocks. Il se pourrait qu'un effet inconnu, présent dans les données, soit pris en compte par la modélisation des HCD. Cependant nous n'avons pour l'instant pas d'intuition concernant la nature de cet effet.
+
 
 
 
 \printbibliography
 \end{document}
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END
 Nous comparons ici les résultats de l'ajustement des fonctions de corrélation obtenues à partir des données et des mocks en utilisant la modélisation des HCD de Rogers, aux résultats obtenus en utilisant le modèle C-G.
