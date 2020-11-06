@@ -1,12 +1,12 @@
 % created on 2019-12-13
 % @author : bmazoyer
 
-%% Lines to compile only this capter
-% \documentclass[11pt, twoside, a4paper, openright]{report}
-% \input{../source/packages.tex}
+% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
 
-% \begin{document}
-%%
+\begin{document}
+
 
 \graphicspath{ {../figures/mocks/} }
 
@@ -55,9 +55,10 @@ Ces simulations nécessitent encore plus de temps de calcul que les simulations 
 Ainsi, seuls les \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field) permettent de générer un grand volume avec une bonne résolution.
 Ce sont des champs qui en chaque point prennent une valeur aléatoire selon une statistique gaussienne.
 Une fois générés, il est possible de donner à ces champs n'importe quelle fonction de corrélation, en utilisant la transformation de Fourier.
-%Les GRF sont donc idéaux pour simuler le champ de matière à grande échelle.
-Ces champs sont utilisés notament dans les simulations à N-corps, afin de fournir les conditions 
-Cependant, l'utilisation des GRF ne donne pas accès aux non-linéarités qui peuvent émerger dans l'évolution des simulations N-corps et hydrodynamiques. La seule information provient de la fonction de corrélation que l'on applique au GRF.
+% Les GRF sont donc idéaux pour simuler le champ de matière à grande échelle.
+Ces champs sont très rapides à générer. Ils nous permettent donc de produire un grand nombre de simulations, afin de disposer d'une puissance statistique suffisante.
+Ces champs sont utilisés notament dans les simulations à N-corps, afin de fournir les conditions initiales.
+Cependant, l'utilisation des GRF ne donne pas accès aux non-linéarités qui peuvent émerger dans l'évolution des simulations N-corps et hydrodynamiques. La seule information provient de la fonction de corrélation que l'on applique au champ aléatoire initial.
 Mais cela est entièrement suffisant pour l'utilisation que nous en avons dans ce manuscrit : nous générons un champ gaussien destiné à simuler le champ d'absorption \lya{} et le champ de quasars, dont les fonctions d'auto corrélation et de corrélation croisée sont choisies afin de correspondre à ce qui est observé dans les données.
 
 
@@ -628,7 +629,8 @@ où $z_{\mathrm{eff}}$ est le redshift moyen de la forêt, et $P_{s}$ est le spe
 Une fois les petites échelles ajoutées, nous obtenons un champ d'absorption $F$ qui possède le bon spectre de puissance à trois dimensions, ainsi que le bon spectre de puissance à une dimension.
 Cependant, le champ d'absorption $F$ ne possède pas de RSD pour l'instant, car il est construit à partir du spectre de puissance $P_{\mathrm{matière}}(k)$ qui est isotrope.
 Initiallement, nous pensions ajouter les RSD au niveau du spectre de puissance : multiplier le GRF intial $\delta_k$ par $(1 + \beta \mu^2)P_{\mathrm{matière}}(k, \mu)$, avec $\mu = k_z / k$.
-Mais cette solution n'est pas envisageable car les lignes de visées ne sont pas parallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), et nous ne pouvons donc pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
+% Mais cette solution n'est pas envisageable car les lignes de visées ne sont pas parallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), et nous ne pouvons donc pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
+Mais cette solution n'est pas envisageable car les lignes de visées ne sont pas parallèles\footnote{Les lignes de visées étaient parallèles dans les mocks développés pour BOSS. Nous avons choisi d'implémenter des lignes de visée non parallèles afin que nos mocks, développés pour eBOSS et DESI, soient plus fidèles aux donnnées.}, et nous ne pouvons donc pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
 Une autre solution est d'utiliser le champ de vitesse défini dans l'équation~\ref{eq:v1}. Chaque pixel d'absorption est alors déplacé proportionnellement à la vitesse particulière du gaz dans la cellule considérée. Puis l'absorption est modifiée en fonction de la différence des vitesses des pixels voisins. En effet, si cette différence est non nulle, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque pixel.
 Cette méthode pour ajouter les RSD dans les mocks \lya{} est la méthode choisie par \textcite{LeGoff2011} et \textcite{Farr2019}.
 Ce n'est pas la solution que nous utilisons ici. Afin d'inclure les RSD dans le champ d'absorption $F$, nous utilisons le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}.
@@ -1214,5 +1216,5 @@ Un point important à noter est que, pour chaque réalisation, les quatre versio
 
 
 % \bibliography{../source/library}
-% \printbibliography
-% \end{document}
+\printbibliography
+\end{document}
