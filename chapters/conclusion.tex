@@ -1,11 +1,10 @@
-% Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% % Lines to compile only this capter
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \begin{document}
 
 
-\graphicspath{ {../figures/mocks/} }
 
 
 \chapter{Conclusion}
@@ -32,7 +31,7 @@ De plus, ces simulations bénéficient aussi de distributions de quasars et HCD 
 
 
 \paragraph{}
-Grâce à l'étude approfondie de nos simulations (voir les chapitres~\ref{chap:mock_ana} et~\ref{data_ana}), nous montrons que l'analyse des données finales d'eBOSS DR16, présentée dans \textcite{DuMasdesBourboux2020}, produit une mesure des paramètres BAO $\apar{}$ et $\aperp{}$ non baisée à \SI{1}{\percent} près.
+Grâce à l'étude approfondie de nos simulations (voir les chapitres~\ref{chap:mock_ana} et~\ref{chap:data_ana}), nous montrons que l'analyse des données finales d'eBOSS DR16, présentée dans \textcite{DuMasdesBourboux2020}, produit une mesure des paramètres BAO $\apar{}$ et $\aperp{}$ non baisée à \SI{1}{\percent} près.
 Nous montrons aussi que nous comprenons la forme de la fonction de corrélation \lya{}$\times$\lya{}, c'est à dire la mesure du biais $b_{\mathrm{Ly}\alpha}$ et du paramètre RSD $\beta_{\mathrm{Ly}\alpha}$ du \lya{}, à environ \SI{20}{\percent}.
 Pour affiner cette compréhension, nous devons comprendre pourquoi les distorsions induites sur la fonction de corrélation \lya{}$\times$\lya{} par l'ajustement du continuum des quasars ne sont pas complètement prises en compte par la matrice de distorsion.
 Ceci doit passer par une comparaison approfondie des simulations brutes (les raw mocks) et des simulations avec continuum (les mocks eboss-0.0). Afin de simplifier les comparaisons, il est prévu d'étudier les mocks avec continuum sans ajouter le bruit de mesure et sans considérer la diversité des quasars.
@@ -48,31 +47,5 @@ Avec l'arrivée du relevé DESI, une grande quantité de données, et donc une g
 Nous montrons dans ce manuscrit que les simulations que nous avons développées permettent d'étudier ces effets et ainsi de comprendre les potentielles systématiques qui affectent ces mesures. Ces simulations sont donc un atout majeur pour préparer les analyses \lya{} du relevé DESI.
 
 
-\printbibliography
-\end{document}
-
-
-%%%%% END
-
-% \paragraph{}
-% Initialement, nous pensions nous servir de ces simulations pour mener une analyse de mesure des distorsions dans l'espace des redshifts (analyse RSD). Ces analyse mesurent le taux de croissance des structure $f$ afin de tester les théories de gravitation.
-% En produisant une ajustement combiné de l'auto-corrélation \lya{}$\times$\lya{} et de la corrélation croisée \lya{}$\times$quasar, il est possible de mesurer les biais et paramètres RSD du \lya{} et des quasars, et ainsi mesurer le taux de croissance $f$.
-% Cependant, lorsque nous avons étudié la mesure les paramètres \lya{} dans les données DR16 afin de construire nos simulations, nous nous sommes rendus compte que cette mesure n'était pas du tout robuste.
-% % En particulier, nous avons remarqué que les paramètres du modèle relatifs aux HCD étaient très corrélés avec ceux du \lya{}.
-% Nous avons remarqué qu'elle était largement affectée par les HCD (High Column Density). Les HCD sont des absorbeurs denses situés sur la ligne de visée. Les absorptions intenses qu'ils produisent affectent fortement les fonctions de corrélation.
-% La modélisation des HCD utilisée dans l'analyse des données DR16 a été pensée dans le but de mener une analyse BAO : elle permet de prendre en compte l'effet des HCD sur les fonctions de corrélation sans altérer la mesure de l'échelle BAO.
-% Mais cette modélisation ne permet pas de distinguer la contribution des HCD de celle du \lya{}, il est donc impossible de l'utiliser pour mener une analyse RSD.
-% Ainsi, nous avons essayé de mieux comprendre cette modélisation à l'aide de nos simulations, notament grâce à la comparaison des versions avec et sans HCD.
-
-% L'étude des différentes versions des simulations nous a permis de nous rendre compte que le modèle des HCD utilisé dans l'analyse des données DR16 n'était pas correct. Cela vient du fait que la valeur du paramètre (fixé) qui représente la taille caractéristique des HCD est surestimée. Ceci a pour effet de produire des mesures du biais du \lya{} trop grande et du paramètre RSD du \lya{} trop faible.
-% A la fin de ce manuscrit, nous donnons la valeur qu'il faut utiliser pour ce paramètre. Nous présentons aussi une meilleure modélisation des HCD.
-
-% Malheureusement, nous nous sommes rendus compte de cela très tardivement, et l'ensemble des analyses que nous avons produites utilisent la mauvaise valeur de la taille caractéristique des HCD. Nous prévoyons de refaire ces analyses en utilisant cette fois-ci la bonne valeur, et de comparer ces analyses à celles faites avec la seconde modélisation des HCD présentée dans le chapitre~\ref{chap:data_ana}.
-% Nous prévoyons aussi d'analyser de nouveau les données DR16 dans quatre bins en redshift en utilisant ces deux modélisations des HCD.
-% % Comme suggéré dans le chapitre~\ref{chap:data_ana}, la mesure des paramètres \lya{} devrait être significativement différente.
-% % Il serait donc intéressant, après voir fait une nouvelle mesure des paramètres \lya{} dans les données DR16, d'opérer un nouvel ajustement des paramètres des mocks.
-
-% \paragraph{}
-% Finalement, un certain nombre d'améliorations peuvent être apportées à ces simulations. Premièrement, nous devons comprendre pourquoi le spectre de puissance à une dimension n'est pas correct pour les redshifts éloignés du redshift effectif de nos simulations.
-% Puis, en supposant que nous parvenons à faire une mesure non biaisée des biais du \lya{} et des HCD dans les données, il serait intéressant d'effectuer un nouvel ajustement des paramètres des simulations afin d'avoir des quantités de \lya{} et de HCD similaires dans les simulations et dans les données.
-% Enfin, nous pourrions ajouter les métaux directement lors de la construction des forêts \lya{} : générer des champs gaussiens pour chaque espèce de métal, et les inclure dans les forêts comme nous le faisons avec le \lya{}.
+% \printbibliography
+% \end{document}

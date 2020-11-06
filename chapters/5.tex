@@ -1,11 +1,11 @@
-% created on 2019-12-13
-% @author : bmazoyer
+% % created on 2019-12-13
+% % @author : bmazoyer
 
-% Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% % Lines to compile only this capter
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \begin{document}
 
 
 \graphicspath{ {../figures/mocks_ana/} }
@@ -268,8 +268,7 @@ Le spectre de puissance utilisé dans la modélisation de la fonction de corrél
 Les termes $b_i (1+\beta_i \mu_k^2)$ et $b_j (1+\beta_j \mu_k^2)$ sont les facteurs de Kaiser (équation~\ref{eq:kaiser3}) relatifs aux traceurs $i$ et $j$.
 $P_{\mathrm{QL}}$ est le spectre de puissance \emph{quasi-linéaire}. Il est découpé en deux composantes $P_{\mathrm{smooth}}$ et $P_{\mathrm{peak}}$ comme
 \begin{equation}
-  \label{
-    eq:pk_ql}
+  \label{eq:pk_ql}
   P_{\mathrm{QL}}(\vec k, z) = P_{\mathrm{smooth}}(k, z) + \exp(- \frac{k_{\parallel}^2 \Sigma_{\parallel}^2 + k_{\perp}^2 \Sigma_{\perp}^2}{2}) P_{\mathrm{peak}}(k,z) \; .
 \end{equation}
 $P_{\mathrm{smooth}}$ est le spectre de puissance linéaire, sans les BAO. Il est construit à partir du spectre de puissance linéaire $P_{\mathrm{L}}$ donné par Camb, puis les BAO sont retirées en utilisant la technique \emph{side-band} décrite dans \textcite{Kirkby2013}.
@@ -1209,6 +1208,6 @@ Cependant, nous pouvons noter que la forme global de la corrélation à une dime
 
 
 
-% \bibliography{../source/library}
-\printbibliography
-\end{document}
+% % \bibliography{../source/library}
+% \printbibliography
+% \end{document}
