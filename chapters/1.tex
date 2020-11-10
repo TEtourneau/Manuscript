@@ -1,27 +1,9 @@
-% % Lines to compile only this capter
-% \documentclass[11pt, twoside, a4paper, openright]{report}
-% \input{../source/packages.tex}
-% \usepackage[utf8]{inputenc}
-% \usepackage[
-% backend=biber,
-% style=authoryear,
-% citestyle=authoryear,
-% url=false
-% ]{biblatex}
-% \addbibresource{../source/library.bib}
-% \usepackage[french]{babel}
-% \usepackage{graphicx}
-% \usepackage[francais,nohints]{minitoc}
-% \setcounter{minitocdepth}{3}
-% \usepackage{siunitx}
-% \usepackage{geometry}
-% \usepackage{fancyhdr}
-% \usepackage{mathptmx}
-% \usepackage{mathtools}
+% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
 
+\begin{document}
 
-% \begin{document}
-%%
 
 \graphicspath{ {../figures/intro/} }
 
@@ -728,6 +710,7 @@ Comme indiqué dans l'équation précédente, la fonction de corrélation associ
 Il est donc avantageux de choisir un traceur avec un biais important, afin d'obtenir une fonction de corrélation avec une amplitude importante, et ainsi un rapport signal sur bruit plus grand. La première détection des BAO a ainsi été faite avec les LRG (des galaxies rouges) dont la mesure du biais donne $b_{LRG} \sim 2$ \autocite{Eisenstein2005}.
 
 \subsection{Distorsions dans l'espace des redshifts}
+\label{subsec:intro_rsd}
 Afin de construire la fonction de corrélation du traceur $i$, il est nécessaire de connaître le redshift de chaque traceur. Dans le cas des traceurs booléens, comme par exemple les galaxies, le redshift est obtenu en mesurant le spectre de l'objet, puis en comparant les longueurs d'onde des raies d'émission présentes dans le spectre aux longueurs d'onde mesurées en laboratoire. Le redshift mesuré est donc le suivant :
 \begin{equation}
   z_{\mathrm{mesure}} = z_{\mathrm{vrai}} + \Delta z_{\mathrm{v}} + \delta z_{\mathrm{sys}} + \delta z_{\mathrm{stat}}  \; ,
@@ -740,7 +723,7 @@ et $\Delta z_{\mathrm{v}}$ et le redshift induit par la vitesse particulière $v
 \end{equation}
 En effet, en plus de leur vitesse de récession due à l'expansion, les objets peuvent posséder une vitesse, dite particulière, induite par le champ de gravitation environnant. 
 Ainsi, en plus du redshift cosmologique, l'effet Doppler vient s'ajouter à la mesure du redshift.
-Ces deux effets sont indiscernables. Cependant, la vitesse particulière du traceur est corrélée avec le champ de matière sous-jacent : les traceurs ont tendance à se déplacer vers les surdensités, par effet gravitationnel. La figure~\ref{fig:schema_rsd} illustre la situation : au centre se trouve une surdensité, représentée par un amas de galaxies. Quatre galaxies se trouvent autour de cette surdensité, leur vitesse particulière est représentée par une flèche noire, qui est dirigée vers le centre à cause du puit de potentiel créé par la surdensité. La galaxie se trouvant derrière cette surdensité se déplace donc vers l'observateur, son redshift mesuré est ainsi plus petit que son redshift cosmologique. Similairement, la galaxie se trouvant devant la surdensité est reconstruite avec un redshift plus grand. Les objets se déplaçant perpendiculairement à la ligne de visée ne sont pas affectés. La ligne en pointillés bleus indique la distribution reconstruite dans l'espace des redshifts : cette distribution n'est plus circulaire, elle est aplatie selon la direction de la ligne de visée. Cette effet est appelé \emph{RSD} (Redshift Space Distortions), ou \emph{distorsions dans l'espace des redshifts}.
+Ces deux effets sont indiscernables. Cependant, la vitesse particulière du traceur est corrélée avec le champ de matière sous-jacent : les traceurs ont tendance à se déplacer vers les surdensités, par effet gravitationnel. La figure~\ref{fig:schema_rsd} illustre la situation : au centre se trouve une surdensité, représentée par un amas de galaxies. Quatre galaxies se trouvent autour de cette surdensité, leur vitesse particulière est représentée par une flèche noire, qui est dirigée vers le centre à cause du puit de potentiel créé par la surdensité. La galaxie se trouvant derrière cette surdensité se déplace donc vers l'observateur, son redshift mesuré est ainsi plus petit que son redshift cosmologique. Similairement, la galaxie se trouvant devant la surdensité est reconstruite avec un redshift plus grand. Les objets se déplaçant perpendiculairement à la ligne de visée ne sont pas affectés. La ligne en pointillés bleus indique la distribution reconstruite dans l'espace des redshifts : cette distribution n'est plus circulaire, elle est aplatie selon la direction de la ligne de visée. Cet effet est appelé \emph{RSD} (Redshift Space Distortions), ou \emph{distorsions dans l'espace des redshifts}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{schema_rsd}
@@ -780,7 +763,7 @@ où $\beta_i = f / b_i$ est le paramètre RSD du traceur $i$.
 Du fait de l'isotropie dans la direction transverse à la ligne de visée, $P_i^s$ ne dépend que de la norme de $\vec \kperp{}$. Il en va de même pour le vecteur $\vec r$, qui est décomposé en $\vec r =  \rpar{} \vec u + \vec \rperp{}$. Nous avons alors $\mu = \rpar{} / r$, et la fonction de corrélation $\xi_i^s$ ne dépend que de $\rpar{}$ et de la norme de $\vec \rperp{}$. L'expression de $\xi_i^s(r, \mu)$ est donnée dans la section~\ref{subsubsec:pred}.
 % Son expression, que nous ne donnons pas ici, est calculée dans \textcite{Hamilton1992}. \#prov donner la ref au chapitre 4 prediction
 
-L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{\mathrm{H}} / r_{\mathrm{d}}$ et $D_{\mathrm{M}} / r_{\mathrm{d}}$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f \sim \Omega_{m}^{\num{0.55}}$ \autocite{Linder2007}. La mesure de $f$ est donc un test direct de la relativité générale.
+L'analyse de la fonction de corrélation selon $\rpar{}$ et $\rperp{}$ permet donc non seulement de mener une analyse BAO : mesurer la position du pic afin de déduire les quantités $D_{\mathrm{H}} / r_{\mathrm{d}}$ et $D_{\mathrm{M}} / r_{\mathrm{d}}$, mais aussi de mener une analyse dite RSD : mesurer $\xi_i^s(\rpar{}, \rperp{})$ afin de déduire $b_i$ et $\beta_i$ et ainsi mesurer $f$. Le taux de croissance $f$ est une prédiction de la relativité générale, il vaut $f \sim \Omega_{m}^{\num{0.55}}$ \autocite{Linder2007}. La mesure de $f$ est donc un test direct de la relativité générale et des théories de gravité modifiée.
 
 \subsection{Les quasars}
 Les quasars, pour \emph{quasi - star}, sont parmi les objets les plus lumineux de l'univers. Ils font partie des noyaux actifs de galaxie, abrégées AGN (\emph{Active galatic nuclei}). Ces galaxies hébergent en leur centre un trou noir supermassif, de quelques millions à plusieurs milliards de masses solaires. La figure~\ref{fig:schema_qso} schématise le noyau actif. 
@@ -977,5 +960,5 @@ Le traitement des HCD est détaillé dans la section~\ref{subsec:model_donnees}.
 
 
 % % \bibliography{../source/library}
-% \printbibliography
-% \end{document}
+\printbibliography
+\end{document}

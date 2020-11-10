@@ -1,8 +1,8 @@
-% % Lines to compile only this capter
-% \documentclass[11pt, twoside, a4paper, openright]{report}
-% \input{../source/packages.tex}
+% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
 
-% \begin{document}
+\begin{document}
 
 
 \chapter{Le relevé eBOSS de SDSS}
@@ -51,13 +51,13 @@ La quatrième génération de SDSS débuta courant 2014. Elle comporte 3 program
 \section{eBOSS}
 
 Suite au succès de BOSS, la collaboration SDSS poursuit la mesure de l'échelle BAO avec le programme eBOSS. Celui-ci inclut deux nouveaux traceurs, afin de sonder une époque clé qui est l'époque de transition de la domination de la matière à celle de l'énergie noire.
-L'objectif principal est d'étendre la mesure de distance effectuée avec les galaxies de BOSS à un redshift $\num{0,6} < z < \num{1}$, ainsi que de permettre la première analyse RSD\footnote{Les analyses RSD désignent les analyses qui visent à mesurer le taux de croissance $f$ afin de contraire la gravité.} à l'aide de quasars en tant que traceurs et la première mesure de l'échelle BAO à un redshift $1 < z < 2$.
+L'objectif principal est d'étendre la mesure de distance effectuée avec les galaxies de BOSS à un redshift $\num{0,6} < z < \num{1}$, ainsi que de permettre la première analyse RSD\footnote{Les analyses RSD désignent les analyses qui visent à mesurer le taux de croissance $f$ afin de contraire la gravité. Voir la section~\ref{subsec:intro_rsd}.} à l'aide de quasars en tant que traceurs et la première mesure de l'échelle BAO à un redshift $1 < z < 2$.
 La précision visée sur la mesure de distance avec l'échantillon de galaxies est de \SI{1}{\percent}, et de \SI{2}{\percent} pour les nouveaux traceurs.
 
 
 
 \subsection{Les traceurs de eBOSS}
-\textbf{
+
 Afin d'étendre la gamme de redshift sondée par BOSS, eBOSS inclut donc deux nouveaux traceurs : les ELG et les quasars en tant que traceurs de la matière. Auxquels s'ajoutent les traceurs déja présents dans BOSS : les LRG et les forêts \lya{} des quasars. Ces traceurs sont présentés ici :
 \begin{itemize}
   % \item LRG : l'échantillon de \emph{Luminous Red Galaxies} déja observé lors du programme BOSS est étendu. Un minimum de \num{300000} galaxies dont le redshift est mesuré spectroscopiquement sont nécessaires dans la gamme de redshift $\num{0,6} < z < \num{1}$ afin d'atteindre la précision de \SI{1}{\percent} sur l'échelle BAO.
@@ -71,7 +71,7 @@ Afin d'étendre la gamme de redshift sondée par BOSS, eBOSS inclut donc deux no
 \end{itemize}
 La répartition en redshift de ces quatre traceurs est représentése sur la figure~\ref{fig:eBOSStracers}.
 Pour la suite, nous nous intéresserons uniquement aux quasars \lya{}, qui constituent l'ensemble des données traitées dans cette étude. Ils seront simplement désignés par quasars ou QSO.
-}
+
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{eBOSStracers}
@@ -241,8 +241,11 @@ Parmi les nombreux résultats produits par eBOSS, nous pouvons citer la mesure d
 La figure~\ref{fig:olambda_om} montre les contraintes sur les paramètres $\Omega_{\Lambda}$ et $\Omega_{m}$ apportées uniquement par la mesure de l'échelle BAO.
 En ajoutant les mesures de la BBN (\emph{Big Band Nucleosynthesis}), la mesure de l'échelle BAO faite par eBOSS produit une mesure de $H_0$ en accord avec les mesures de Planck, et en tension avec les mesures directes.
 La figure~\ref{fig:h0_om} montre les contraintes sur les paramètres $H_0$ et $\Omega_{m}$ apportées par la mesure de l'échelle BAO. La combinaison des mesures à $z > 1$ et $z < 1$ permet de mesurer précisément à la fois $H_0$ et $\Omega_{m}$. La zone horizontale grise montre la mesure directe de $H_0$ faite par~\textcite{Riess2019}.
-Enfin, eBOSS permet de réduire la limite supérieure de la somme des masses des neutrinos à $\num{0.115}\; \mathrm{eV}$.
-Tous les résultats et contraintes cosmologiques produits par eBOSS sont présentés et discutés dans~\textcite{EBOSSCollaboration2020}.
+
+Par ailleurs, les anayses RSD menées grâce aux données d'eBOSS produisent des mesures de $f\sigma_8$ qui sont compatibles avec les mesures produites par Planck, et compatibles avec les prévisions de la relativité générale.
+
+Enfin, eBOSS permet de réduire la limite supérieure de la somme des masses des neutrinos à $\num{0.111}\; \mathrm{eV}$ (à 2 $\sigma$).
+Tous les résultats et contraintes cosmologiques produits par eBOSS sont présentés et discutés dans~\textcite{Collaboration2020}.
 
 
 \begin{figure}
@@ -292,5 +295,5 @@ De plus, DESI donnera une mesure de la somme des masses des neutrinos, avec une 
 \end{figure}
 
 % % \bibliography{../source/library}
-% \printbibliography
-% \end{document}
+\printbibliography
+\end{document}
