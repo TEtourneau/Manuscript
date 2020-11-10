@@ -1,11 +1,11 @@
-% % created on 2019-12-13
-% % @author : bmazoyer
+% created on 2019-12-13
+% @author : bmazoyer
 
-% % Lines to compile only this capter
-% \documentclass[11pt, twoside, a4paper, openright]{report}
-% \input{../source/packages.tex}
+% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
 
-% \begin{document}
+\begin{document}
 
 
 \graphicspath{ {../figures/mocks/} }
@@ -30,11 +30,12 @@ Les mocks, quant à eux, sont conçus afin de répliquer rapidement un jeu de do
 Les mocks sont donc utilisés afin
 \begin{itemize}[label=$\bullet$]
 \item de vérifier la mesure des paramètres $\apar{}$, $\aperp{}$ : cette mesure est-elle non biaisée ?
-\item d'identifier les potentielles systématiques : la présence de métaux et d'HCD dans les données est-elle bien modélisée ? Affecte-t-elle la mesure de $\apar{}$, $\aperp{}$ ?
+\item d'identifier les potentielles systématiques : la présence de métaux et d'HCD dans les données est-elle bien modélisée ? Affecte-t-elle la mesure de $\apar{}$, $\aperp{}$ ? Des autres paramètres ?
 \item de tester la matrice de distorsion : la distorsion de la fonction de corrélation due à l'ajustement du continuum du quasar est-elle correctement prise en compte par la matrice de distorsion ?
 \item de vérifier l'estimation de la matrice de covariance : la matrice de covariance, calculée à partir des données, est-elle bien estimée ?
 \end{itemize}
-La production et l'analyse d'un grand nombre de mocks permet de répondre précisément à ces questions. Ces mocks sont donc nécessaires pour pouvoir valider l'analyse menée sur les données.
+Il est important de produire un grand nombre de réalisations des mocks afin de disposer de suffisamment de statistique pour répondre précisément à ces questions. La production et l'analyse de ces différentes réalisations des mocks sont donc nécessaires pour pouvoir valider les analyses menées sur les données.
+% La production et l'analyse d'un grand nombre de mocks permet de répondre précisément à ces questions.Ces mocks sont donc nécessaires pour pouvoir valider l'analyse menée sur les données.
 
 \paragraph{}
 Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \autocite{DuMasdesBourboux2020}, et seront utilisés dans l'analyse \lya{} de DESI.
@@ -52,8 +53,8 @@ Les simulations hydrodynamiques fonctionnent de la même manière que les simula
 Ces simulations nécessitent encore plus de temps de calcul que les simulations à N-corps. Elles ne sont donc pas non plus adaptées à notre utilisation.
 
 % Ainsi, avoir un grand volume et une grande résolution requiert l'utilisation des \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field). 
-Ainsi, seuls les \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field) permettent de générer un grand volume avec une bonne résolution.
-Ce sont des champs qui en chaque point prennent une valeur aléatoire selon une statistique gaussienne.
+Ainsi, seuls les \emph{champs aléatoires gaussiens} (GRF pour Gaussian Random Field) permettent de générer un grand volume avec une bonne résolution dans un temps raisonnable, afin de produire un grand nombre de mocks.
+Les champs aléatoires gaussiens sont des champs qui en chaque point prennent une valeur aléatoire selon une statistique gaussienne.
 Une fois générés, il est possible de donner à ces champs n'importe quelle fonction de corrélation, en utilisant la transformation de Fourier.
 % Les GRF sont donc idéaux pour simuler le champ de matière à grande échelle.
 Ces champs sont très rapides à générer. Ils nous permettent donc de produire un grand nombre de simulations, afin de disposer d'une puissance statistique suffisante.
@@ -634,7 +635,10 @@ Mais cette solution n'est pas envisageable car les lignes de visées ne sont pas
 Une autre solution est d'utiliser le champ de vitesse défini dans l'équation~\ref{eq:v1}. Chaque pixel d'absorption est alors déplacé proportionnellement à la vitesse particulière du gaz dans la cellule considérée. Puis l'absorption est modifiée en fonction de la différence des vitesses des pixels voisins. En effet, si cette différence est non nulle, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque pixel.
 Cette méthode pour ajouter les RSD dans les mocks \lya{} est la méthode choisie par \textcite{LeGoff2011} et \textcite{Farr2019}.
 Ce n'est pas la solution que nous utilisons ici. Afin d'inclure les RSD dans le champ d'absorption $F$, nous utilisons le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}.
-Contrairement à la méthode qui utilise le champ de vitesse, la solution qui ajoute le champ $\eta_{\parallel}$ au champ $\delta_l$ permet de prédire la fonction de corrélation des mocks. Nous décrivons cette prédiction dans la section suivante.
+Contrairement à la méthode qui utilise le champ de vitesse, la solution qui ajoute le champ $\eta_{\parallel}$ au champ $\delta_l$ permet de prédire les fonctions de corrélation des mocks.
+Ceci est un atout majeur pour nos simulations, car cela nous permet de prédire la valeur des paramètres que nous devons obtenir lorsque nous ajustons les fonctions de corrélation des mocks.
+Cela est notamment très utile pour vérifier que la mesure du biais $b_{\mathrm{Ly}\alpha}$ et du paramètre RSD $\beta_{\mathrm{Ly}\alpha}$ faite lors de l'ajustement des fonctions de corrélation des mocks, dans l'optique d'effectuer une analyse RSD, est une mesure non biaisée.
+Nous décrivons la prédiction des fonctions de corrélation des mocks dans la section suivante.
 % Cependant, du fait que les lignes de visées ne sont pas parrallèles (elles l'étaient pour les mocks précédents, développés pour BOSS), nous ne pouvons pas confondre l'axe $k_z$ avec l'axe de la ligne de visée $\kpar{}$.
 % \textbf{Une autre solution est d'utiliser le champ de vitesse}
 % Nous avons alors choisi d'utilisé le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}.
@@ -1216,5 +1220,5 @@ Un point important à noter est que, pour chaque réalisation, les quatre versio
 
 
 % % \bibliography{../source/library}
-% \printbibliography
-% \end{document}
+\printbibliography
+\end{document}
