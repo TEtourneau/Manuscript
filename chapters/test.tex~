@@ -1,0 +1,35 @@
+% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+
+% \input{../source/packages.tex}
+
+\usepackage[hyperref=true,
+            url=false,
+            isbn=false,
+            backref=true,
+            backend=biber,
+            %style=authoryear,
+            style=numeric,
+            citereset=chapter,
+            maxcitenames=3,
+            maxbibnames=3]{biblatex}
+
+\addbibresource{../source/library.bib}
+% \renewcommand*{\citesetup}{%
+%   \normalfont
+%   \biburlsetup
+%   \frenchspacing}
+
+% \renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamefamily}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamegiven}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamesuffix}[1]{\textbf{#1}}
+
+
+
+
+
+\begin{document}

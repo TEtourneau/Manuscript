@@ -1,0 +1,150 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{Laurent2016}{article}{}
+      \name{author}{19}{}{%
+        {{uniquename=0,hash=e8cee6c1239a8786ef9ba2a4c91ffcfc}{%
+           family={Laurent},
+           familyi={L\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=ce0a612b9ab914511d3db3595d0e07a0}{%
+           family={{Le Goff}},
+           familyi={L\bibinitperiod},
+           given={Jean-Marc},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=976f7241a8fca6504f00af45c9ffbe1a}{%
+           family={Burtin},
+           familyi={B\bibinitperiod},
+           given={Etienne},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=ce305c7d7caf7ed6dbc2b60905e64bc5}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={Jean-Christophe},
+           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=972f4c9a6ccee7c1b1778d1a2464b035}{%
+           family={Hogg},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{uniquename=0,hash=a9e87284e378d6b5c33be6a4c86262e1}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=328ebbc5acbe817819b98cdd3106935f}{%
+           family={Ntelis},
+           familyi={N\bibinitperiod},
+           given={Pierros},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=abb39bbd6b69955bf3cf0da7e920c190}{%
+           family={Pâris},
+           familyi={P\bibinitperiod},
+           given={Isabelle},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=3eb4881ae1c93d5acc00b3b1f6d63455}{%
+           family={Rich},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=b468746e1e1db77b53c53d06e8fbede0}{%
+           family={Aubourg},
+           familyi={A\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=ead678d32d3b831054a32da9a0d5c330}{%
+           family={Bautista},
+           familyi={B\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=eed17d1a3acec8bfefea14455332dade}{%
+           family={Delubac},
+           familyi={D\bibinitperiod},
+           given={Timothée},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=1a3520767d5b0bfde2a47877874d511f}{%
+           family={{du Mas des Bourboux}},
+           familyi={d\bibinitperiod},
+           given={Hélion},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=595213fdb42767701d7c4364cc02baa1}{%
+           family={Eftekharzadeh},
+           familyi={E\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=78ba7ba2d00ad9092190ff9cbb1745b7}{%
+           family={Delabrouille},
+           familyi={D\bibinitperiod},
+           given={Nathalie\bibnamedelima Palanque},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{uniquename=0,hash=0a089343fbf706fac659781f24bfff20}{%
+           family={Petitjean},
+           familyi={P\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=2aa7f2ba16fbdf5eb7d47a4411f996a6}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Graziano},
+           giveni={G\bibinitperiod}}}%
+        {{uniquename=0,hash=0177b12c0428090d367e5ee22a5ad780}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Donald\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{uniquename=0,hash=6a152a0eb1acbbb5aac36e541ad88b8e}{%
+           family={Yeche},
+           familyi={Y\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{46cfaab6ec9eea26ca76a9448f635717}
+      \strng{fullhash}{4163dc5031d77c721c97e2cd2f828f01}
+      \strng{authornamehash}{46cfaab6ec9eea26ca76a9448f635717}
+      \strng{authorfullhash}{4163dc5031d77c721c97e2cd2f828f01}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The BOSS quasar sample is used to study cosmic homogeneity with a 3D survey in the redshift range {\$}2.2{<}z{<}2.8{\$}. We measure the count-in-sphere, {\$}N({<}\backslash! r){\$}, i.e. the average number of objects around a given object, and its logarithmic derivative, the fractal correlation dimension, {\$}D{\_}2(r){\$}. For a homogeneous distribution {\$}N({<}\backslash! r) \backslashpropto r{\^{}}3{\$} and {\$}D{\_}2(r)=3{\$}. Due to the uncertainty on tracer density evolution, 3D surveys can only probe homogeneity up to a redshift dependence, i.e. they probe so-called "spatial isotropy". Our data demonstrate spatial isotropy of the quasar distribution in the redshift range {\$}2.2{<}z{<}2.8{\$} in a model-independent way, independent of any FLRW fiducial cosmology, resulting in {\$}3-\backslashlangle D{\_}2 \backslashrangle {<} 1.7 \backslashtimes 10{\^{}}{\{}-3{\}}{\$} (2 {\$}\backslashsigma{\$}) over the range {\$}250{<}r{<}1200 \backslash, h{\^{}}{\{}-1{\}}{\$}Mpc for the quasar distribution. If we assume that quasars do not have a bias much less than unity, this implies spatial isotropy of the matter distribution on large scales. Then, combining with the Copernican principle, we finally get homogeneity of the matter distribution on large scales. Alternatively, using a flat {\$}\backslashLambda{\$}CDM fiducial cosmology with CMB-derived parameters, and measuring the quasar bias relative to this {\$}\backslashLambda{\$}CDM model, our data provide a consistency check of the model, in terms of how homogeneous the Universe is on different scales. {\$}D{\_}2(r){\$} is found to be compatible with our {\$}\backslashLambda{\$}CDM model on the whole {\$}10{<}r{<}1200 \backslash, h{\^{}}{\{}-1{\}}{\$}Mpc range. For the matter distribution we obtain {\$}3-\backslashlangle D{\_}2 \backslashrangle {<} 5 \backslashtimes 10{\^{}}{\{}-5{\}}{\$} (2 {\$}\backslashsigma{\$}) over the range {\$}250{<}r{<}1200 \backslash, h{\^{}}{\{}-1{\}}{\$}Mpc, consistent with homogeneity on large scales.}
+      \field{eprinttype}{arXiv}
+      \field{month}{2}
+      \field{title}{{A 14 {\$}h{\^{}}{\{}-3{\}}{\$} Gpc{\$}{\^{}}3{\$} study of cosmic homogeneity using BOSS DR12 quasar sample}}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2016/11/060
+      \endverb
+      \verb{eprint}
+      \verb 1602.09010
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Laurent et al. - 2016 - A 14 {\$}h{\{}-3{\}}{\$} Gpc{\$}3{\$} study of cosmic homogeneity using BOSS DR12 quasar sample.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1602.09010%20http://dx.doi.org/10.1088/1475-7516/2016/11/060
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

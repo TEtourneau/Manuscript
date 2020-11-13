@@ -1,8 +1,35 @@
 % Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \usepackage[hyperref=true,
+%             url=false,
+%             isbn=false,
+%             backref=true,
+%             backend=biber,
+%             %style=authoryear,
+%             style=numeric,
+%             citereset=chapter,
+%             maxcitenames=3,
+%             maxbibnames=3]{biblatex}
+
+% \addbibresource{../source/library.bib}
+% % \renewcommand*{\citesetup}{%
+% %   \normalfont
+% %   \biburlsetup
+% %   \frenchspacing}
+
+% % \renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
+% % \renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
+% % \renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamefamily}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamegiven}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
+% \renewcommand*{\mkbibnamesuffix}[1]{\textbf{#1}}
+
+
+
+% \begin{document}
 
 
 \graphicspath{ {../figures/intro/} }
@@ -41,7 +68,7 @@ La cosmologie moderne naît réellement au début du \textsc{XX}\ieme~siècle. E
 
 Par ailleurs, la cosmologie observationnelle connaît des avancées remarquables, notamment grâce à Edwin Hubble qui observe le décalage vers le rouge, ou \emph{redshift}\footnote{Voir explication du redshift section~\ref{subsec:descri_mod}, paragraphe \emph{Le redshift}.}, du spectre d'objets lointains, dû à leur vitesse d'éloignement. Il comprend aussi que les objets étendus, jusque-là interprétés comme des nuages de poussière et de gaz et appelés nébuleuses, sont d'autres galaxies semblables à la nôtre. Parallèlement, Alexandre Friedmann résout en 1922 les équations d'Einstein de la relativité générale pour un univers homogène et isotrope et trouve une solution d'univers en expansion, qui contraste avec l'idée d'un univers statique et éternel jusque-là ancrée dans les esprits. Enfin, Georges Lemaître effectue le lien entre tous ces éléments. En 1927, il publie un papier expliquant que l'éloignement des galaxies et le décalage vers le rouge de leur spectre pouvait être expliqué par une théorie d'univers en expansion, et donne la première estimation de la constante de Hubble\footnote{Constante reliant proportionnellement la vitesse d'éloignement des galaxies à leur distance, voir section~\ref{subsec:descri_mod}, paragraphe \emph{Les équations de Friedmann-Lemaître}.}. En 1929, Edwin Hubble publie son célèbre article, exposant la loi de Hubble et favorisant très fortement le modèle d'univers en expansion.
 
-Nous pouvons noter ici qu'après avoir publié sa théorie, Einstein ajoute dans ses équations une constante ad hoc, dite \emph{constante cosmologique}, et noté $\Lambda$. Cette constante est rajoutée afin de rendre les solutions à ses équations capables de décrire un univers statique (idée dominante de l'époque). Puis, suite à la publication de Hubble, Einstein retire la constante cosmologique de ses équations et la qualifie de ``plus grande bêtise de sa vie''. L'ironie fait qu'en 1998, la constante cosmologique est réintroduite dans les modèles afin d'expliquer l'observation de l'accélération de l'expansion de l'univers. Les mesures estiment que la densité d'énergie correspondant à cette constante cosmologique représente environ \SI{70}{\percent} de l'énergie totale de notre univers aujourd'hui. Cependant, il existe des modèles plus complexes qui rendent compte de l'accélération de l'expansion de l'univers. Le terme \emph{énergie noire} est un terme générique employé pour désigner la cause de cette accélération, constante cosmologique $\Lambda$ incluse.
+Nous pouvons noter ici qu'après avoir publié sa théorie, Einstein ajoute dans ses équations une constante ad hoc, dite \emph{constante cosmologique}, et noté $\Lambda$. Cette constante est rajoutée afin de rendre les solutions à ses équations capables de décrire un univers statique (idée dominante de l'époque). Puis, suite à la publication de Hubble, Einstein retire la constante cosmologique de ses équations et la qualifie de \og plus grande bêtise de sa vie \fg. L'ironie fait qu'en 1998, la constante cosmologique est réintroduite dans les modèles afin d'expliquer l'observation de l'accélération de l'expansion de l'univers. Les mesures estiment que la densité d'énergie correspondant à cette constante cosmologique représente environ \SI{70}{\percent} de l'énergie totale de notre univers aujourd'hui. Cependant, il existe des modèles plus complexes qui rendent compte de l'accélération de l'expansion de l'univers. Le terme \emph{énergie noire} est un terme générique employé pour désigner la cause de cette accélération, constante cosmologique $\Lambda$ incluse.
 
 \paragraph{}
 Ces quinze années (1915 - 1929) très fertiles pour la cosmologie ont popularisé l'idée d'un univers en expansion. Si certains s'y opposent et défendent un univers statique, d'autres s'y intéressent et étudient en détail les conséquences de ces modèles théoriques. Si l'univers est en expansion, c'est qu'il a été dans le passé plus petit qu'il ne l'est aujourd'hui. L'étude des solutions aux équations d'Einstein montre que l'expansion dilue la matière dans l'univers, et conduit à son refroidissement. L'univers était donc plus chaud et plus dense dans le passé. Si l'on remonte suffisament dans l'histoire de l'univers, celui ci devient de plus en plus dense, jusqu'à être à l'origine infiniment chaud et dense. Ceci conduit à nommer ces classes de modèles \emph{hot big bang models}, ou modèles de big bang chaud en français. Il est à noter que cet \emph{instant zéro} est une extrapolation des modèles et reste hypothétique : au delà d'une certaine température et densité, les effets quantiques ne peuvent plus être négligés, rendant alors impossible l'utilisation de la relativité générale. Cet instant est appelé mur de Planck. Afin de comprendre ce qu'il se passe entre le mur de Planck et l'instant zéro, une théorie traitant à la fois la gravitation et l'aspect quantique de la matière est nécessaire. C'est un domaine de recherche très dynamique aujourd'hui, dans lequel un grand nombre de théories de gravité quantique sont étudiées.
@@ -104,7 +131,7 @@ Dans la suite de cette section, afin de simplifier les équations, nous nous pla
 
 \subsubsection{La métrique}
 Le formalisme de la relativité générale s'appuie donc sur celui de la relativité restreinte. La géométrie de l'espace-temps est décrite par la métrique. Cet objet mathématique\footnote{Un tenseur de rang 2.} permet de définir le produit scalaire sur l'espace-temps à 4 dimensions, et donc de mesurer les distances et les angles.
-Nous verrons plus loin dans ce manuscrit que la métrique dépend de la distribution de masse. Ainsi, et c'est le fondement de la relativité générale, la masse courbe l'espace temps et l'espace-temps indique à la masse, via la métrique, comment se déplacer au sein de celui-ci\footnote{Inspiré de la citation de John Wheeler : "Spacetime tells matter how to move; matter tells spacetime how to curve".}. \\
+Nous verrons plus loin dans ce manuscrit que la métrique dépend de la distribution de masse. Ainsi, et c'est le fondement de la relativité générale, la masse courbe l'espace temps et l'espace-temps indique à la masse, via la métrique, comment se déplacer au sein de celui-ci\footnote{Inspiré de la citation de John Wheeler : \og Spacetime tells matter how to move; matter tells spacetime how to curve \fg.}. \\
 % C'est la métrique qui contient l'information sur la gravitation (\#prov dire que la masse courbe l'espace temps et que c'est traduit par la métrique; voir pour rajouter la citation.
 Dans le cadre du modèle \lcdm{}, la métrique utilisée est la métrique FLRW (pour Friedmann Lemaître Robertson Walker), elle s'exprime comme :
 \begin{equation}
@@ -659,7 +686,7 @@ qui valent $1$ si la cosmologie observée est la même que la cosmologie fiducie
 Les premières détections des oscillations acoustiques de baryon ont été faites à la fin des années~90. Ces observations ont été menées à l'aide de ballons volant en haute atmosphère (voir notamment les expériences \emph{BOOMERanG} \autocite{Masi2002} et \emph{MAXIMA} \autocite{Hanany2000}).
 % Peu de temps après, la première détection du pic BAO dans la distribution de matière se faisait avec l'observation des galaxies locales \autocite{Eisenstein2005}.
 Peu de temps après, l'observation des galaxies locales permettait la première détection du pic BAO dans la distribution de matière \autocite{Eisenstein2005}.
-La mesure de la position du pic BAO s'est ensuite poursuivie à des redshifts intermédiaires à l'aide des galaxies distantes et des forêts $\mathrm{Lyman-}\alpha$ (voir la description de ce traceur dans la section~\ref{subsec:lya}), grâce au projet SDSS. Le chapitre suivant présente ce projet, ainsi qu'une revue des différentes mesures de la position du pic BAO (voir notamment la figure~\ref{fig:exp_hist} qui résume les mesures les plus récentes).
+La mesure des rapports  $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$ et $D_{\mathrm{H}}(z) / r_{\mathrm{d}}$ s'est ensuite poursuivie à des redshifts intermédiaires à l'aide des galaxies distantes et des forêts $\mathrm{Lyman-}\alpha$ (voir la description de ce traceur dans la section~\ref{subsec:lya}), grâce au projet SDSS. Le chapitre suivant présente ce projet, ainsi qu'une revue des différentes mesures des rapports  $D_{\mathrm{M}}(z) / r_{\mathrm{d}}$ et $D_{\mathrm{H}}(z) / r_{\mathrm{d}}$ (voir notamment la figure~\ref{fig:exp_hist} qui résume les mesures les plus récentes).
 
 
 \subsection{Contraintes cosmologiques}
@@ -844,7 +871,7 @@ Comme expliqué précédemment, le spectre des quasars possède une raie d'émis
 Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, la raie d'émission \lya{} très intense.
 
 % Du fait de l'abondance de l'hydrogène neutre dans le disque d'accrétion, les quasars possèdent une raie \lya{} très intense. Ainsi, en plus de la position de chaque quasar observé, nous pouvons utiliser la raie \lya{} pour obtenir davantage d'informations sur la distribution de matière à grand échelle. En effet, cette raie peut être utilisée pour tracer la matière le long de la ligne de visée de chaque quasar.
-Grâce à leur luminosité importante dans toutes les longueurs d'onde, les quasars peuvent nous servir à sonder la distribution de matière à grande échelle, en ``éclairant'' le milieu intergalactique.
+Grâce à leur luminosité importante dans toutes les longueurs d'onde, les quasars peuvent nous servir à sonder la distribution de matière à grande échelle, en \og éclairant \fg le milieu intergalactique.
 Nous décrivons dans les lignes qui suivent comment utiliser l'absorption \lya{} comme traceur.
 La figure~\ref{fig:schema_lya} schématise la situation.
 \begin{figure}
@@ -967,7 +994,12 @@ Le traitement des HCD est détaillé dans la section~\ref{subsec:model_donnees}.
 \end{figure}
 
 
-
+% \renewcommand{\mkbibnamefirst}[1]{\textsc{#1}}
+% \renewcommand{\mkbibnamelast}[1]{\textsc{#1}}
+% \renewcommand{\mkbibnameprefix}[1]{\textsc{#1}}
+% \renewcommand{\mkbibnameaffix}[1]{\textsc{#1}}
 % % \bibliography{../source/library}
-\printbibliography
-\end{document}
+
+
+% \printbibliography
+% \end{document}

@@ -399,14 +399,14 @@ Ceci suggère que la valeur de $L_{\textsc{HCD}}$ utilisée dans l'ajustement de
 \subsection{Effet du masquage des HCD}
 \label{subsec:effet_masquage_hcd}
 Dans l'analyse des mocks eboss-0.2, comme pour les données, les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués lors du calcul des $\delta_F$.
-Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, le masquage des HCD dans les données s'effectue selon le résultat de l'agorithme d'identification. Les HCD identifiés puis reconstruits avec $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués. Dans le cas des mocks, les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués à partir du ``vrai'' catalogue. Nous étudions ici l'effet du masquage à partir du catalogue produit par l'algorithme d'identification.
+Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, le masquage des HCD dans les données s'effectue selon le résultat de l'agorithme d'identification. Les HCD identifiés puis reconstruits avec $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués. Dans le cas des mocks, les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués à partir du \og vrai \fg catalogue. Nous étudions ici l'effet du masquage à partir du catalogue produit par l'algorithme d'identification.
 Pour ce faire, nous produisons l'analyse d'une réalisation de mock eboss-0.2, pour laquelle nous utilisons l'algorithme d'identification pour créer un catalogue de HCD. Le champ $\delta_F$ est calculé en masquant les HCD identifiés par l'algorithme, puis la fonction de corrélation \lya{}$\times$\lya{} est estimée dans les quatre bins en redshift utilisés jusqu'ici. Nous nommons cette analyse \emph{eboss-0.2\_finder}.
 La figure~\ref{fig:cf_finder_vs_true} présente la fonction de corrélation \lya{}$\times$\lya{} estimée à partir de la même réalisation des mocks, en version eboss-0.0, eboss-0.2 et eboss-0.2\_finder.
 Les fonctions de corrélation affichées sont la moyenne des fonctions de corrélation estimées dans les quatre bins en redshift.
 Dans les trois versions, le code \texttt{quickquasars} utilise les mêmes quasars pour produire les spectres synthétiques, et ajoute le même bruit à ces spectres dans les trois cas. Ceci nous permet d'avoir les mêmes fluctuations statistiques dans le calcul de la corrélation \lya{}$\times$\lya{}, et ainsi d'avoir des mesures de biais comparables.
 L'effet des HCD (avec une densité de colonne $\num{17.2} < \log n_{\textsc{HI}} < \num{20.3}$) est visible en comparant la corrélation montrée en rouge à celle montrée en bleu. Comme expliqué dans la section~\ref{subsec:model_donnees}, l'effet principal des HCD est d'augmenter le biais effectif.
 Par ailleurs, le fait que l'effet des HCD soit légèrement plus important sur la corrélation de la version eboss-0.2 que sur celle de la version  eboss-0.2\_finder suggère que l'algorithme identifie correctement les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$, et identifie une petite partie des HCD avec $\log n_{\textsc{HI}} < \num{20.3}$ et les reconstruit avec $\log n_{\textsc{HI}} > \num{20.3}$. Ceci a pour effet de masquer des HCD qui ne possèdent pas une densité de colonne supérieure à \num{20.3}.
-Ceci est confirmé par la figure~\ref{fig:nhi_finder}, qui compare la densité de colonne $\log n_{\textsc{HI}}$ trouvée par le finder (output) à la ``vrai'' densité de colonne des HCD des mocks (input). Nous voyons sur cette figure que l'algorithme a tendance à surestimer la densité de colonne $\log n_{\textsc{HI}}$, ce qui est en accord avec nos observations.
+Ceci est confirmé par la figure~\ref{fig:nhi_finder}, qui compare la densité de colonne $\log n_{\textsc{HI}}$ trouvée par le finder (output) à la \og vrai \fg densité de colonne des HCD des mocks (input). Nous voyons sur cette figure que l'algorithme a tendance à surestimer la densité de colonne $\log n_{\textsc{HI}}$, ce qui est en accord avec nos observations.
 Notons par ailleurs que l'algorithme d'identification possède une efficacité de \SI{90}{\percent} pour $\log n_{\textsc{HI}} > \num{20.3}$. L'effet de ces HCD non identifiés avec $\log n_{\textsc{HI}} > \num{20.3}$ est donc plus faible que l'effet des HCD dont le $\log n_{\textsc{HI}}$ est surestimé.
   Ceci s'explique par le faible nombre de HCD avec $\log n_{\textsc{HI}} > \num{20.3}$.
 
@@ -441,7 +441,7 @@ Il serait tout de même intéressant de mener cette étude sur un plus grand nom
 \begin{figure}
   \centering
   \includegraphics[scale=0.8]{nhi_finder.png}
-  \caption{Densité de colonne $\log n_{\textsc{HI}}$ trouvée par le finder (logNHI output) en fonction de la ``vrai'' densité de colonne des HCD des mocks (logNHI input). Cette comparaison est produite par Jim Rich et Solène Chabannier, du groupe cosmologie du CEA, à l'aide des mocks (Chabanier et al. (in prep)).}
+  \caption{Densité de colonne $\log n_{\textsc{HI}}$ trouvée par le finder (logNHI output) en fonction de la \og vrai \fg densité de colonne des HCD des mocks (logNHI input). Cette comparaison est produite par Jim Rich et Solène Chabannier, du groupe cosmologie du CEA, à l'aide des mocks (Chabanier et al. (in prep)).}
   \label{fig:nhi_finder}
 \end{figure}
 
@@ -511,7 +511,7 @@ Nous pouvons toute fois noter que le modèle C-G produit des mesures de $b_{\mat
 \end{tabular}
 \end{table}
 
-Enfin, nous regardons si en fixant les paramètres \lya{}, nous obtenons un biais des HCD compatible avec 3 fois le biais des HCD mesuré dans la version standard. Nous faisons ce test pour le modèle de Rogers et pour le modèle C-G. Le résultat de ces ajustements est donné dans le tableau~\ref{tab:hcd_dndz3} (voir les lignes ``3$\times$HCD \& \lya{} fixé'').
+Enfin, nous regardons si en fixant les paramètres \lya{}, nous obtenons un biais des HCD compatible avec 3 fois le biais des HCD mesuré dans la version standard. Nous faisons ce test pour le modèle de Rogers et pour le modèle C-G. Le résultat de ces ajustements est donné dans le tableau~\ref{tab:hcd_dndz3} (voir les lignes \og 3$\times$HCD \& \lya{} fixé \fg).
 %Similairement aux ajustements présentés dans le tableau~\ref{tab:cf_eboss02_L0free}, fixer les paramètres \lya{} ne résout pas les tensions observées. 
 % Pour le modèle de Rogers, le fait de fixer les paramètres \lya{} est compensé par un biais des HCD trop grand. Nous attendons $b_{\textsc{HCD}} = \num{0.0501} \pm \num{0.0090}$ et mesurons $b_{\textsc{HCD}} = -\num{0.0555} \pm \num{0.0017}$. Dans le modèle C-G, c'est le paramètre $\beta_{\textsc{HCD}}$ qui compense les paramètres \lya{} fixés.
 % Ainsi, aucun des modèles n'est capable d'identifier correctement les quantités relative de HCD dans deux versions de mocks.

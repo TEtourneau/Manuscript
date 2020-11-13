@@ -2,10 +2,10 @@
 % @author : bmazoyer
 
 % Lines to compile only this capter
-\documentclass[11pt, twoside, a4paper, openright]{report}
-\input{../source/packages.tex}
+% \documentclass[11pt, twoside, a4paper, openright]{report}
+% \input{../source/packages.tex}
 
-\begin{document}
+% \begin{document}
 
 
 \graphicspath{ {../figures/mocks/} }
@@ -880,13 +880,13 @@ Comme expliqué au début de ce chapitre, l'objectif des mocks est de reproduire
 % La taille des boîtes choisie ($\num{2560}\times\num{2560}\times\num{1536}$ voxels) et leur résolution (\SI{2.19}{\perh\Mpc}) ne suffisent pas à couvrir les \num{14000} degrés carrés de DESI. Pour palier ce problème, nous construisons sept \emph{chunks} indépendants, que nous assemblons pour former le relevé de DESI. Le découpage du relevé en sept chunks est montré sur la figure~\ref{fig:chunks}.
 % Ce choix d'assembler sept boîtes de densité plutôt que d'en utiliser une seule a été contraint par la mémoire maximale des n{\oe}uds.
 Les mocks ont été produits au centre de calcul NERSC\footnote{National Energy Research Scientific Computing Center (NERSC), a U.S. Department of Energy Office of Science User Facility operated under Contract No. DE-AC02-05CH11231.}, avec la machine Cori.
-% Sur cette machine, nous avons utilisé les n{\oe}uds ``Haswell''.
+% Sur cette machine, nous avons utilisé les n{\oe}uds \og Haswell \fg.
 % Ces n{\oe}uds possèdent $\num{128}\,\mathrm{Go}$ de mémoire vive. De manière à créer nos boîtes de densité, via la transformation de Fourier à trois dimensions, il faut, pour chaque boîte, que l'intégralité de son contenu soit accessible depuis un même endroit.
 % Nous pourrions distribuer la mémoire et effectuer la transformation de Fourier sur plusieurs n{\oe}uds à l'aide de la librairie MPI.
 % Cependant nous n'avions pas l'expertise nécessaire. Nous effectuons donc les transformations de Fourier sur un seul n{\oe}ud, ce qui explique le découpage du relevé en sept chunks indépendants.
 % Nous profitons néanmoins des \num{32} c{\oe}urs par n{\oe}ud pour paralléliser notre code. Chaque c{\oe}ur possède 2 hyper-threads, ce qui permet de gérer 64 tâches simultanément sur un même n{\oe}ud.
 % \#prov taille des boites : \num{37.5} Go (box) + \num{37.5}/2 Go (boxk) + \num{37.5}/2 Go (k) : 75 Go. On est loin des 128 Go.
-Sur cette machine, nous avons utilisé les n{\oe}uds ``Haswell''.
+Sur cette machine, nous avons utilisé les n{\oe}uds \og Haswell \fg.
 Ces n{\oe}uds possèdent $\num{128}\,\mathrm{Go}$ de mémoire vive. De manière à créer nos boîtes de densité, via la transformation de Fourier à trois dimensions, il faut, pour chaque boîte, que l'intégralité de son contenu soit accessible depuis un même endroit.
 Nous pourrions distribuer la mémoire et effectuer la transformation de Fourier sur plusieurs n{\oe}uds à l'aide de la librairie MPI.
 Cependant nous n'avions pas l'expertise nécessaire. Nous effectuons donc les transformations de Fourier sur un seul n{\oe}ud.
@@ -1048,7 +1048,7 @@ avec
 \begin{equation}
   \Delta^2(k) = \frac{1}{2 \pi^2} k^3 P_L(k) \; .
 \end{equation}
-Les termes $q_1 \Delta^2(k)$ et $q_2 \Delta^4(k)$ représente l'augmentation de puissance aux petites échelles due aux non-linéarités. L'ajustement que nous utilisons force $q_2 = 0$. Les autres paramètres ajustés sont donnés dans la section ``Planck'' de la table 7 de \textcite{Arinyo-i-Prats2015}.
+Les termes $q_1 \Delta^2(k)$ et $q_2 \Delta^4(k)$ représente l'augmentation de puissance aux petites échelles due aux non-linéarités. L'ajustement que nous utilisons force $q_2 = 0$. Les autres paramètres ajustés sont donnés dans la section \og Planck \fg de la table 7 de \textcite{Arinyo-i-Prats2015}.
 % Le modèle est calculé pour $z = 2.4$.
 Puis, pour chaque valeur du redshift, la forme ajustée aux données et définie dans l'équation~\ref{eq:p1d_data} est prolongée de $k = \SI{0.2}{\h\per\Mpc}$ jusqu'à $k = 0$ par le modèle donné dans l'équation~\ref{eq:p1d_prats}.
 % Ce modèle est multiplié par une constante de façon à ce que ce modèle multiplié par cette constante soit égal à l'ajustement fait sur les données à $k = \SI{0.2}{\h\per\Mpc}$.
@@ -1220,5 +1220,5 @@ Un point important à noter est que, pour chaque réalisation, les quatre versio
 
 
 % % \bibliography{../source/library}
-\printbibliography
-\end{document}
+% \printbibliography
+% \end{document}

@@ -1,32 +1,22 @@
 \usepackage[utf8]{inputenc}
-% \DeclareUnicodeCharacter{223C}{~}
 
-%Bibliography style
-% \usepackage[square, numbers]{natbib}
-% \usepackage[round]{natbib}
-% \usepackage{biblatex}
-% \bibliographystyle{unsrtnat}
-% \bibliographystyle{unsrt}
-% \bibliographystyle{plain}
-% \bibliographystyle{aa}
-% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} 
-\usepackage[
-backend=biber,
-style=authoryear,
-citestyle=authoryear,
-url=false
-]{biblatex}
-\addbibresource{../source/library.bib}
-\renewcommand*{\citesetup}{%
-  \normalfont
-  \biburlsetup
-  \frenchspacing}
-
-\usepackage[T1]{fontenc}
-\usepackage[french]{babel}
+\usepackage[hyperref=true,
+            url=false,
+            isbn=false,
+            backref=true,
+            backend=biber,
+            style=authoryear,
+            citestyle=authoryear,
+            maxcitenames=2,
+            maxbibnames=3]{biblatex}
 \usepackage{csquotes}  % used for citations (recommended when using biblatex)
-%\usepackage{helvet}
-%\renewcommand{\familydefault}{\sfdefault}
+\addbibresource{../source/library.bib}
+\usepackage[T1]{fontenc}
+\usepackage[cyr]{aeguill}  % pour les guillemets et accents francais
+\usepackage{xspace}  % pour babel francais
+\usepackage[francais]{babel}
+
+
 \usepackage{mathptmx}
 \usepackage{amssymb}
 \usepackage{geometry} 
@@ -70,8 +60,8 @@ url=false
 %      list-units = single,
 %      range-units = single
 %     }
-\usepackage{physics}
-\usepackage{isotope}
+% \usepackage{physics}
+% \usepackage{isotope}
 
 \usepackage[perpage]{footmisc} % to reset the counter of footnote each page
 
@@ -94,7 +84,7 @@ url=false
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}}
 
-
+\renewcommand{\contentsname}{Sommaire}  % Sommaire au lieu de Table des matieres
 
 % Premiere page des chapitres
 \newlength\chapnumb
