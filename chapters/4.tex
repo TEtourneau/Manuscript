@@ -1,7 +1,7 @@
-% created on 2019-12-13
-% @author : bmazoyer
+% % created on 2019-12-13
+% % @author : bmazoyer
 
-% Lines to compile only this capter
+% % Lines to compile only this capter
 % \documentclass[11pt, twoside, a4paper, openright]{report}
 % \input{../source/packages.tex}
 
@@ -128,9 +128,11 @@ Afin de construire le champ d'absorption \lya{}, nous avons besoin du champ de d
 De plus, la formule FGPA (Fluctuating Gunn Peterson Approximation) permet de relier la profondeur optique $\tau$ au contraste de densité $\delta$ à $z = 0$ :
 \begin{equation}
   \label{eq:fgpa1}
-  \tau(z) = a(z) \exp(b(z) G(z) \delta) \;
+  \tau(z) = a(z) \exp(b(z) G(z) \delta) \; .
 \end{equation}
-Les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon biais du \lya{} et la bonne transmission moyenne $\overline F$. Leur détermination est décrite dans la section~\ref{sec:tuning}. Le facteur de croissance $G$ prend en compte l'évolution avec le redshift du champ de densité $\delta$. Ainsi il nous suffit de construire un GRF qui suit la fonction de corrélation à $z=0$ pour simuler le champ d'absorption du \lya{}. Pour ce faire, nous partons de la même boîte $\delta_k$ utilisée pour construire les 3 boîtes log-normales des quasars. Ceci garanti la corrélation croisée entre les quasars et le champ d'absorption \lya{}. Le spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$ est ensuite appliqué à la boîte $\delta_k$. Enfin, nous obtenons la boîte de densité $\delta_{\mathrm{matière}}$ à $z = 0$ qui servira au calcul du champ d'absorption du \lya{} en effectuant la transformée de Fourier de la boîte
+Dans cette approximation, l'élargissement des raies d'absorption causé par la température est négligé. Etant donné que l'élargissement thermique est la source dominante d'élargissement des raies d'absorption \lya{}, et que cet effet est environ cinq fois inférieur à la résolution des données que nous cherchons à modéliser, l'utilisation de la formule FGPA est approprié.
+
+Dans cettte approximation (équation~\ref{eq:fgpa1}), les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon biais du \lya{} et la bonne transmission moyenne $\overline F$. Leur détermination est décrite dans la section~\ref{sec:tuning}. Le facteur de croissance $G$ prend en compte l'évolution avec le redshift du champ de densité $\delta$. Ainsi il nous suffit de construire un GRF qui suit la fonction de corrélation à $z=0$ pour simuler le champ d'absorption du \lya{}. Pour ce faire, nous partons de la même boîte $\delta_k$ utilisée pour construire les 3 boîtes log-normales des quasars. Ceci garanti la corrélation croisée entre les quasars et le champ d'absorption \lya{}. Le spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$ est ensuite appliqué à la boîte $\delta_k$. Enfin, nous obtenons la boîte de densité $\delta_{\mathrm{matière}}$ à $z = 0$ qui servira au calcul du champ d'absorption du \lya{} en effectuant la transformée de Fourier de la boîte
 \begin{equation}
   \delta_{k, \mathrm{matière}}(\vec k)  = \delta_k(\vec k) \sqrt{\frac{P_{\mathrm{matière}}(\vec k)}{V_{\mathrm{cell}}}} \; .
 \end{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 AUG 2020 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 NOV 2020 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -20,19 +20,32 @@ l.1 \usepackage[utf8]{
 between \documentclass and \begin{document}.
 
 
-./packages.tex:18: LaTeX Error: \usepackage before \documentclass.
+./packages.tex:11: LaTeX Error: \usepackage before \documentclass.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 ]{
-       biblatex}
+l.11             maxbibnames=3]{
+                                biblatex}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
-./packages.tex:19: Undefined control sequence.
-l.19 \addbibresource
+
+./packages.tex:12: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \usepackage{
+                 csquotes}  % used for citations (recommended when using bib...
+
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+./packages.tex:13: Undefined control sequence.
+l.13 \addbibresource
                     {../source/library.bib}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -41,13 +54,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:19: LaTeX Error: Missing \begin{document}.
+./packages.tex:13: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \addbibresource{.
+l.13 \addbibresource{.
                       ./source/library.bib}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -74,21 +87,117 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no b in font nullfont!
 
-./packages.tex:20: LaTeX Error: \citesetup undefined.
+./packages.tex:14: LaTeX Error: \usepackage before \documentclass.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20 \renewcommand*{\citesetup}
-                               {%
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.14 \usepackage[T1]{
+                     fontenc}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 19--24
+./packages.tex:15: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \usepackage[cyr]{
+                      aeguill}  % pour les guillemets et accents francais
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./packages.tex:16: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \usepackage{
+                 xspace}  % pour babel francais
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./packages.tex:17: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \usepackage[francais]{
+                           babel}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 13--18
 []
  []
+
+
+./packages.tex:20: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \usepackage{
+                 mathptmx}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./packages.tex:21: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \usepackage{
+                 amssymb}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./packages.tex:22: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \usepackage{
+                 geometry}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./packages.tex:23: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \usepackage{
+                 xcolor}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./packages.tex:24: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \usepackage[absolute,overlay]{
+                                   textpos}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
 
 
 ./packages.tex:25: LaTeX Error: \usepackage before \documentclass.
@@ -97,8 +206,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 \usepackage[T1]{
-                     fontenc}
+l.25 \usepackage{
+                 graphicx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -109,8 +218,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \usepackage[french]{
-                         babel}
+l.26 \usepackage{
+                 lipsum}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -121,9 +230,32 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27 \usepackage{
-                 csquotes}  % used for citations (recommended when using bib...
+l.27 \usepackage[explicit]{
+                           titlesec}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
 
+
+./packages.tex:28: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \usepackage{
+                 lmodern}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+./packages.tex:29: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \usepackage{
+                 color}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -135,7 +267,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.30 \usepackage{
-                 mathptmx}
+                 array}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -147,7 +279,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.31 \usepackage{
-                 amssymb}
+                 mathtools}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -159,7 +291,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.32 \usepackage{
-                 geometry}
+                 caption}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -171,7 +303,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.33 \usepackage{
-                 xcolor}
+                 multicol}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -182,8 +314,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 \usepackage[absolute,overlay]{
-                                   textpos}
+l.34 \usepackage{
+                 booktabs}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -195,43 +327,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.35 \usepackage{
-                 graphicx}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:36: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 \usepackage{
-                 lipsum}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:37: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37 \usepackage[explicit]{
-                           titlesec}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:38: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 \usepackage{
-                 lmodern}
+                 enumitem}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -242,8 +338,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 \usepackage{
-                 color}
+l.39 \usepackage[perpage]{
+                          footmisc}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -254,20 +350,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 \usepackage{
-                 array}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:41: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 \usepackage{
-                 mathtools}
+l.40 \usepackage[colorlinks=true]{
+                                  hyperref}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -279,7 +363,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.42 \usepackage{
-                 caption}
+                 afterpage}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -291,7 +375,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.43 \usepackage{
-                 multicol}
+                 emptypage}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -303,7 +387,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.44 \usepackage{
-                 booktabs}
+                 setspace}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -315,31 +399,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.45 \usepackage{
-                 enumitem}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:46: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.46 \usepackage{
-                 hyperref}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:47: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.47 \usepackage{
-                 afterpage}
+                 pgffor}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -350,68 +410,32 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.48 \usepackage{
-                 emptypage}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:49: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 \usepackage{
-                 setspace}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:50: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 \usepackage{
-                 pgffor}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:53: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.53 \usepackage[francais,nohints]{
+l.48 \usepackage[francais,nohints]{
                                    minitoc}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 
-./packages.tex:54: LaTeX Error: No counter 'minitocdepth' defined.
+./packages.tex:49: LaTeX Error: No counter 'minitocdepth' defined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54     \setcounter{minitocdepth}{3}
+l.49     \setcounter{minitocdepth}{3}
                                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./packages.tex:57: LaTeX Error: \usepackage before \documentclass.
+./packages.tex:52: LaTeX Error: \usepackage before \documentclass.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57 \usepackage{
+l.52 \usepackage{
                  siunitx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -424,52 +448,15 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.73 \usepackage{
-                 physics}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:74: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74 \usepackage{
-                 isotope}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:76: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 \usepackage[perpage]{
-                          footmisc} % to reset the counter of footnote each ...
-
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-./packages.tex:79: LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79 \usepackage{
                  fancyhdr}			% Entête et pieds de page. Doit être placé A...
 
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
-./packages.tex:80: Undefined control sequence.
+./packages.tex:74: Undefined control sequence.
 <argument> \undefinedpagestyle 
                                
-l.80 \pagestyle{fancy}
+l.74 \pagestyle{fancy}
                       		% Indique que le style de la page sera justement fancy
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -477,8 +464,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:84: Undefined control sequence.
-l.84 \fancyfoot
+./packages.tex:78: Undefined control sequence.
+l.78 \fancyfoot
                {} % vide le pied~de~page
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -486,8 +473,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:85: Undefined control sequence.
-l.85 \fancyfoot
+./packages.tex:79: Undefined control sequence.
+l.79 \fancyfoot
                [LE,RO]{\thepage}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -496,13 +483,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:85: LaTeX Error: Missing \begin{document}.
+./packages.tex:79: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 \fancyfoot[
+l.79 \fancyfoot[
                 LE,RO]{\thepage}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -514,8 +501,8 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no O in font nullfont!
 Missing character: There is no ] in font nullfont!
-./packages.tex:85: Undefined control sequence.
-l.85 \fancyfoot[LE,RO]{\thepage
+./packages.tex:79: Undefined control sequence.
+l.79 \fancyfoot[LE,RO]{\thepage
                                }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -523,8 +510,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:86: Undefined control sequence.
-l.86 \fancyfoot
+./packages.tex:80: Undefined control sequence.
+l.80 \fancyfoot
                [LO,CE]{}% droite du pied de page
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -539,8 +526,8 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ] in font nullfont!
-./packages.tex:87: Undefined control sequence.
-l.87 \fancyhead
+./packages.tex:81: Undefined control sequence.
+l.81 \fancyhead
                {}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -548,8 +535,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:88: Undefined control sequence.
-l.88 \fancyhead
+./packages.tex:82: Undefined control sequence.
+l.82 \fancyhead
                [LE]{\leftmark}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -561,8 +548,8 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no L in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no ] in font nullfont!
-./packages.tex:89: Undefined control sequence.
-l.89 \fancyhead
+./packages.tex:83: Undefined control sequence.
+l.83 \fancyhead
                [RO]{\rightmark}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -575,12 +562,12 @@ Missing character: There is no R in font nullfont!
 Missing character: There is no O in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 85--90
+Overfull \hbox (20.0pt too wide) in paragraph at lines 79--84
 []
  []
 
-./packages.tex:91: Undefined control sequence.
-l.91 \fancypagestyle
+./packages.tex:85: Undefined control sequence.
+l.85 \fancypagestyle
                     {plain}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -589,13 +576,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:91: LaTeX Error: Missing \begin{document}.
+./packages.tex:85: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 \fancypagestyle{p
+l.85 \fancypagestyle{p
                       lain}{%
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -605,8 +592,8 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-./packages.tex:92: Undefined control sequence.
-l.92 \fancyhf
+./packages.tex:86: Undefined control sequence.
+l.86 \fancyhf
              {} % vide l’en-tête et le pied~de~page.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -614,8 +601,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:93: Undefined control sequence.
-l.93 \fancyfoot
+./packages.tex:87: Undefined control sequence.
+l.87 \fancyfoot
                [LE,RO]{\thepage} % numéro de la page en cours en gras% et c...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -630,8 +617,8 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no O in font nullfont!
 Missing character: There is no ] in font nullfont!
-./packages.tex:93: Undefined control sequence.
-l.93 \fancyfoot[LE,RO]{\thepage
+./packages.tex:87: Undefined control sequence.
+l.87 \fancyfoot[LE,RO]{\thepage
                                } % numéro de la page en cours en gras% et c...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -640,62 +627,75 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:94: LaTeX Error: \headrulewidth undefined.
+./packages.tex:88: LaTeX Error: \headrulewidth undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.94 \renewcommand{\headrulewidth}
+l.88 \renewcommand{\headrulewidth}
                                   {0pt}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./packages.tex:95: LaTeX Error: \footrulewidth undefined.
+./packages.tex:89: LaTeX Error: \footrulewidth undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 \renewcommand{\footrulewidth}
+l.89 \renewcommand{\footrulewidth}
                                   {0pt}}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 91--96
+Overfull \hbox (20.0pt too wide) in paragraph at lines 85--90
 []
  []
 
-\chapnumb=\skip41
-./packages.tex:103: Undefined control sequence.
-l.103 \titleformat
-                  {\chapter}[block] {
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./packages.tex:103: Undefined control sequence.
-l.103 \titleformat{\chapter
-                           }[block] {
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./packages.tex:103: LaTeX Error: Missing \begin{document}.
+./packages.tex:91: LaTeX Error: \contentsname undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 \titleformat{\chapter}[
-                             block] {
+l.91 \renewcommand{\contentsname}
+                                 {Sommaire}  % Sommaire au lieu de Table des...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\chapnumb=\skip41
+./packages.tex:97: Undefined control sequence.
+l.97 \titleformat
+                 {\chapter}[block] {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./packages.tex:97: Undefined control sequence.
+l.97 \titleformat{\chapter
+                          }[block] {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./packages.tex:97: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 \titleformat{\chapter}[
+                            block] {
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -711,12 +711,12 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <120> not available
-(Font)              size <24.88> substituted on input line 106.
+(Font)              size <24.88> substituted on input line 100.
 
-./packages.tex:106: Undefined control sequence.
+./packages.tex:100: Undefined control sequence.
 <argument> ...e {120}{110}\selectfont \thechapter 
                                                   \@@par 
-l.106 ...fontsize{120}{110}\selectfont\thechapter}
+l.100 ...fontsize{120}{110}\selectfont\thechapter}
                                                    %taille du chiffre
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -724,10 +724,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:111: Undefined control sequence.
+./packages.tex:105: Undefined control sequence.
 <argument> ...\raggedleft \hfill {\bfseries \Huge 
                                                   ##1}\\ \rule {\dimexpr \te...
-l.111   }
+l.105   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -735,11 +735,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:111: You can't use `macro parameter character #' in horizontal m
+./packages.tex:105: You can't use `macro parameter character #' in horizontal m
 ode.
 <argument> ...aggedleft \hfill {\bfseries \Huge ##
                                                   1}\\ \rule {\dimexpr \text...
-l.111   }
+l.105   }
          
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -747,17 +747,17 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 103--113
+Overfull \hbox (20.0pt too wide) in paragraph at lines 97--107
 []
  []
 
 
-Overfull \hbox (8106.64172pt too wide) in paragraph at lines 103--113
+Overfull \hbox (8106.64172pt too wide) in paragraph at lines 97--107
 []
  []
 
-./packages.tex:116: Undefined control sequence.
-l.116 \titleformat
+./packages.tex:110: Undefined control sequence.
+l.110 \titleformat
                   {name=\chapter,numberless}[block]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -766,13 +766,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:116: LaTeX Error: Missing \begin{document}.
+./packages.tex:110: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.116 \titleformat{n
+l.110 \titleformat{n
                     ame=\chapter,numberless}[block]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -782,8 +782,8 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
-./packages.tex:116: Undefined control sequence.
-l.116 \titleformat{name=\chapter
+./packages.tex:110: Undefined control sequence.
+l.110 \titleformat{name=\chapter
                                 ,numberless}[block]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -812,10 +812,10 @@ Missing character: There is no ] in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-./packages.tex:121: Undefined control sequence.
+./packages.tex:115: Undefined control sequence.
 <argument> ...rboxrestore \hfill {\bfseries \Huge 
                                                   ##1}\\ \rule {\dimexpr \te...
-l.121   \rule{\dimexpr\textwidth}{0.4pt}}
+l.115   \rule{\dimexpr\textwidth}{0.4pt}}
                                          }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -823,11 +823,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:121: You can't use `macro parameter character #' in horizontal m
+./packages.tex:115: You can't use `macro parameter character #' in horizontal m
 ode.
 <argument> ...oxrestore \hfill {\bfseries \Huge ##
                                                   1}\\ \rule {\dimexpr \text...
-l.121   \rule{\dimexpr\textwidth}{0.4pt}}
+l.115   \rule{\dimexpr\textwidth}{0.4pt}}
                                          }
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -835,17 +835,17 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 116--122
+Overfull \hbox (20.0pt too wide) in paragraph at lines 110--116
 []
  []
 
 
-Overfull \hbox (8191.99998pt too wide) in paragraph at lines 116--122
+Overfull \hbox (8191.99998pt too wide) in paragraph at lines 110--116
 [] 
  []
 
-./packages.tex:134: Undefined control sequence.
-l.134 \sisetup
+./packages.tex:128: Undefined control sequence.
+l.128 \sisetup
               {locale = FR,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -854,13 +854,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:134: LaTeX Error: Missing \begin{document}.
+./packages.tex:128: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134 \sisetup{l
+l.128 \sisetup{l
                 ocale = FR,
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -895,9 +895,9 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 136.
+(Font)              <7> on input line 130.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 136.
+(Font)              <5> on input line 130.
 Missing character: There is no , in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -955,8 +955,8 @@ Missing character: There is no - in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
-./packages.tex:141: Undefined control sequence.
-l.141 \DeclareSIUnit
+./packages.tex:135: Undefined control sequence.
+l.135 \DeclareSIUnit
                     {\Mpc}{Mpc}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -964,8 +964,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:141: Undefined control sequence.
-l.141 \DeclareSIUnit{\Mpc
+./packages.tex:135: Undefined control sequence.
+l.135 \DeclareSIUnit{\Mpc
                          }{Mpc}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -976,8 +976,8 @@ and I'll forget about whatever was undefined.
 Missing character: There is no M in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no c in font nullfont!
-./packages.tex:142: Undefined control sequence.
-l.142 \DeclareSIUnit
+./packages.tex:136: Undefined control sequence.
+l.136 \DeclareSIUnit
                     {\kpc}{kpc}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -985,8 +985,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:142: Undefined control sequence.
-l.142 \DeclareSIUnit{\kpc
+./packages.tex:136: Undefined control sequence.
+l.136 \DeclareSIUnit{\kpc
                          }{kpc}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -997,8 +997,8 @@ and I'll forget about whatever was undefined.
 Missing character: There is no k in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no c in font nullfont!
-./packages.tex:143: Undefined control sequence.
-l.143 \DeclareSIUnit
+./packages.tex:137: Undefined control sequence.
+l.137 \DeclareSIUnit
                     {\Gpc}{Gpc}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1006,8 +1006,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:143: Undefined control sequence.
-l.143 \DeclareSIUnit{\Gpc
+./packages.tex:137: Undefined control sequence.
+l.137 \DeclareSIUnit{\Gpc
                          }{Gpc}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1018,8 +1018,8 @@ and I'll forget about whatever was undefined.
 Missing character: There is no G in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no c in font nullfont!
-./packages.tex:144: Undefined control sequence.
-l.144 \DeclareSIUnit
+./packages.tex:138: Undefined control sequence.
+l.138 \DeclareSIUnit
                     {\h}{\textit{h}~}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1027,8 +1027,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:144: Undefined control sequence.
-l.144 \DeclareSIUnit{\h
+./packages.tex:138: Undefined control sequence.
+l.138 \DeclareSIUnit{\h
                        }{\textit{h}~}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1036,8 +1036,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:145: Undefined control sequence.
-l.145 \DeclareSIUnit
+./packages.tex:139: Undefined control sequence.
+l.139 \DeclareSIUnit
                     {\perh}{\textit{h}^{-1}\,}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1045,8 +1045,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:145: Undefined control sequence.
-l.145 \DeclareSIUnit{\perh
+./packages.tex:139: Undefined control sequence.
+l.139 \DeclareSIUnit{\perh
                           }{\textit{h}^{-1}\,}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1054,16 +1054,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./packages.tex:145: Missing $ inserted.
+./packages.tex:139: Missing $ inserted.
 <inserted text> 
                 $
-l.145 \DeclareSIUnit{\perh}{\textit{h}^
+l.139 \DeclareSIUnit{\perh}{\textit{h}^
                                        {-1}\,}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./packages.tex:145: Extra }, or forgotten $.
-l.145 \DeclareSIUnit{\perh}{\textit{h}^{-1}\,}
+./packages.tex:139: Extra }, or forgotten $.
+l.139 \DeclareSIUnit{\perh}{\textit{h}^{-1}\,}
                                               
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1071,26 +1071,26 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./packages.tex:146: Missing $ inserted.
+./packages.tex:140: Missing $ inserted.
 <inserted text> 
                 $
-l.146 
+l.140 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 134--146
+Overfull \hbox (20.0pt too wide) in paragraph at lines 128--140
 []
  []
 
 
-Overfull \hbox (24.15921pt too wide) in paragraph at lines 134--146
+Overfull \hbox (24.15921pt too wide) in paragraph at lines 128--140
 \OT1/cmr/m/it/10 h  h$[] $ 
  []
 
-./packages.tex:148: Undefined control sequence.
-l.148 \geometry
+./packages.tex:142: Undefined control sequence.
+l.142 \geometry
                {
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1099,13 +1099,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:149: LaTeX Error: Missing \begin{document}.
+./packages.tex:143: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.149 l
+l.143 l
        eft=20mm,
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1152,12 +1152,12 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no m in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 149--154
+Overfull \hbox (20.0pt too wide) in paragraph at lines 143--148
 []
  []
 
-./packages.tex:156: Undefined control sequence.
-l.156 \definecolor
+./packages.tex:150: Undefined control sequence.
+l.150 \definecolor
                   {bordeau}{rgb}{0.3515625,0,0.234375}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1166,13 +1166,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:156: LaTeX Error: Missing \begin{document}.
+./packages.tex:150: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.156 \definecolor{b
+l.150 \definecolor{b
                     ordeau}{rgb}{0.3515625,0,0.234375}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1208,12 +1208,12 @@ Missing character: There is no 3 in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 156--157
+Overfull \hbox (20.0pt too wide) in paragraph at lines 150--151
 [] 
  []
 
-./packages.tex:243: Undefined control sequence.
-l.243 \hypersetup
+./packages.tex:237: Undefined control sequence.
+l.237 \hypersetup
                  {
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1222,13 +1222,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./packages.tex:244: LaTeX Error: Missing \begin{document}.
+./packages.tex:238: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.244 	p
+l.238 	p
         dfauthor={\PhDname},
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1397,10 +1397,10 @@ Missing character: There is no s in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 77 strings out of 492995
- 602 string characters out of 6132704
+ 76 strings out of 492995
+ 594 string characters out of 6132704
  55074 words of memory out of 5000000
- 3727 multiletter control sequences out of 15000+600000
+ 3726 multiletter control sequences out of 15000+600000
  4593 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  19i,3n,16p,148b,107s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 NOV 2020 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 NOV 2020 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1256,6 +1256,8 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4374.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4374.
 Package hyperref Info: Hyper figures OFF on input line 4498.
 Package hyperref Info: Link nesting OFF on input line 4503.
 Package hyperref Info: Hyper index ON on input line 4506.
@@ -1273,22 +1275,21 @@ Package hyperref Info: Hyper figures OFF on input line 6358.
 Package hyperref Info: Link nesting OFF on input line 6363.
 Package hyperref Info: Hyper index ON on input line 6366.
 Package hyperref Info: backreferencing OFF on input line 6373.
-Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring ON on input line 6376.
 Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
 \Hy@abspage=\count329
 \c@Item=\count330
-\c@Hfootnote=\count331
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count332
-\c@bookmark@seq@number=\count333
+\Fld@listcount=\count331
+\c@bookmark@seq@number=\count332
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1297,9 +1298,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip76
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks33
+\footnotemargin=\dimen183
+\c@pp@next@reset=\count333
+\c@@fnserial=\count334
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
-\AP@output=\toks33
+\AP@output=\toks34
 \AP@partial=\box58
 \AP@footins=\box59
 )
@@ -1314,9 +1330,9 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen183
-\pgfutil@tempdimb=\dimen184
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen184
+\pgfutil@tempdimb=\dimen185
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
@@ -1326,36 +1342,36 @@ sts.tex))
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 )) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks38
 ))) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
-\pgf@x=\dimen185
-\pgf@xa=\dimen186
-\pgf@xb=\dimen187
-\pgf@xc=\dimen188
-\pgf@y=\dimen189
-\pgf@ya=\dimen190
-\pgf@yb=\dimen191
-\pgf@yc=\dimen192
-\c@pgf@counta=\count334
-\c@pgf@countb=\count335
-\c@pgf@countc=\count336
-\c@pgf@countd=\count337
+\pgf@x=\dimen186
+\pgf@xa=\dimen187
+\pgf@xb=\dimen188
+\pgf@xc=\dimen189
+\pgf@y=\dimen190
+\pgf@ya=\dimen191
+\pgf@yb=\dimen192
+\pgf@yc=\dimen193
+\c@pgf@counta=\count335
+\c@pgf@countb=\count336
+\c@pgf@countc=\count337
+\c@pgf@countd=\count338
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen193
-\pgfmath@count=\count338
+\pgfmath@dimen=\dimen194
+\pgfmath@count=\count339
 \pgfmath@box=\box61
-\pgfmath@toks=\toks38
-\pgfmath@stack@operand=\toks39
-\pgfmath@stack@operation=\toks40
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -1376,16 +1392,16 @@ code.tex)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count339
+\c@pgfmathroundto@lastzeros=\count340
 )))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen194
-\pgffor@skip=\dimen195
-\pgffor@stack=\toks41
-\pgffor@toks=\toks42
+\pgffor@iter=\dimen195
+\pgffor@skip=\dimen196
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/minitoc/minitoc.sty
 Package: minitoc 2015/07/13 v61 Package minitoc
@@ -1404,7 +1420,7 @@ Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks43
+\mtc@toks=\toks44
 \mtc@strutbox=\box62
 \mtc@hstrutbox=\box63
 Package minitoc Info: I0002
@@ -1423,10 +1439,10 @@ Package minitoc Info: I0031
 
 \openout5 = `1.mtc0'.
 
-\c@mtc=\count340
-\c@minitocdepth=\count341
-\c@ptc=\count342
-\c@parttocdepth=\count343
+\c@mtc=\count341
+\c@minitocdepth=\count342
+\c@ptc=\count343
+\c@parttocdepth=\count344
 \ptcindent=\skip79
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
@@ -1457,23 +1473,23 @@ Package: expl3 2017/05/13 L3 programming layer (loader)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2017/05/13 L3 programming layer (code)
-\c_max_int=\count344
-\l_tmpa_int=\count345
-\l_tmpb_int=\count346
-\g_tmpa_int=\count347
-\g_tmpb_int=\count348
-\g__prg_map_int=\count349
-\c_log_iow=\count350
-\l_iow_line_count_int=\count351
-\l__iow_line_target_int=\count352
-\l__iow_one_indent_int=\count353
-\l__iow_indent_int=\count354
-\c_zero_dim=\dimen196
-\c_max_dim=\dimen197
-\l_tmpa_dim=\dimen198
-\l_tmpb_dim=\dimen199
-\g_tmpa_dim=\dimen256
-\g_tmpb_dim=\dimen257
+\c_max_int=\count345
+\l_tmpa_int=\count346
+\l_tmpb_int=\count347
+\g_tmpa_int=\count348
+\g_tmpb_int=\count349
+\g__prg_map_int=\count350
+\c_log_iow=\count351
+\l_iow_line_count_int=\count352
+\l__iow_line_target_int=\count353
+\l__iow_one_indent_int=\count354
+\l__iow_indent_int=\count355
+\c_zero_dim=\dimen197
+\c_max_dim=\dimen198
+\l_tmpa_dim=\dimen199
+\l_tmpb_dim=\dimen256
+\g_tmpa_dim=\dimen257
+\g_tmpb_dim=\dimen258
 \c_zero_skip=\skip80
 \c_max_skip=\skip81
 \l_tmpa_skip=\skip82
@@ -1486,52 +1502,52 @@ Package: expl3 2017/05/13 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count355
-\c__fp_leading_shift_int=\count356
-\c__fp_middle_shift_int=\count357
-\c__fp_trailing_shift_int=\count358
-\c__fp_big_leading_shift_int=\count359
-\c__fp_big_middle_shift_int=\count360
-\c__fp_big_trailing_shift_int=\count361
-\c__fp_Bigg_leading_shift_int=\count362
-\c__fp_Bigg_middle_shift_int=\count363
-\c__fp_Bigg_trailing_shift_int=\count364
-\c__fp_rand_size_int=\count365
-\c__fp_rand_four_int=\count366
-\c__fp_rand_eight_int=\count367
-\l__sort_length_int=\count368
-\l__sort_min_int=\count369
-\l__sort_top_int=\count370
-\l__sort_max_int=\count371
-\l__sort_true_max_int=\count372
-\l__sort_block_int=\count373
-\l__sort_begin_int=\count374
-\l__sort_end_int=\count375
-\l__sort_A_int=\count376
-\l__sort_B_int=\count377
-\l__sort_C_int=\count378
+\l_keys_choice_int=\count356
+\c__fp_leading_shift_int=\count357
+\c__fp_middle_shift_int=\count358
+\c__fp_trailing_shift_int=\count359
+\c__fp_big_leading_shift_int=\count360
+\c__fp_big_middle_shift_int=\count361
+\c__fp_big_trailing_shift_int=\count362
+\c__fp_Bigg_leading_shift_int=\count363
+\c__fp_Bigg_middle_shift_int=\count364
+\c__fp_Bigg_trailing_shift_int=\count365
+\c__fp_rand_size_int=\count366
+\c__fp_rand_four_int=\count367
+\c__fp_rand_eight_int=\count368
+\l__sort_length_int=\count369
+\l__sort_min_int=\count370
+\l__sort_top_int=\count371
+\l__sort_max_int=\count372
+\l__sort_true_max_int=\count373
+\l__sort_block_int=\count374
+\l__sort_begin_int=\count375
+\l__sort_end_int=\count376
+\l__sort_A_int=\count377
+\l__sort_B_int=\count378
+\l__sort_C_int=\count379
 \c_empty_box=\box64
 \l_tmpa_box=\box65
 \l_tmpb_box=\box66
 \g_tmpa_box=\box67
 \g_tmpb_box=\box68
-\l__box_top_dim=\dimen258
-\l__box_bottom_dim=\dimen259
-\l__box_left_dim=\dimen260
-\l__box_right_dim=\dimen261
-\l__box_top_new_dim=\dimen262
-\l__box_bottom_new_dim=\dimen263
-\l__box_left_new_dim=\dimen264
-\l__box_right_new_dim=\dimen265
+\l__box_top_dim=\dimen259
+\l__box_bottom_dim=\dimen260
+\l__box_left_dim=\dimen261
+\l__box_right_dim=\dimen262
+\l__box_top_new_dim=\dimen263
+\l__box_bottom_new_dim=\dimen264
+\l__box_left_new_dim=\dimen265
+\l__box_right_new_dim=\dimen266
 \l__box_internal_box=\box69
 \l__coffin_internal_box=\box70
-\l__coffin_internal_dim=\dimen266
-\l__coffin_offset_x_dim=\dimen267
-\l__coffin_offset_y_dim=\dimen268
-\l__coffin_x_dim=\dimen269
-\l__coffin_y_dim=\dimen270
-\l__coffin_x_prime_dim=\dimen271
-\l__coffin_y_prime_dim=\dimen272
+\l__coffin_internal_dim=\dimen267
+\l__coffin_offset_x_dim=\dimen268
+\l__coffin_offset_y_dim=\dimen269
+\l__coffin_x_dim=\dimen270
+\l__coffin_y_dim=\dimen271
+\l__coffin_x_prime_dim=\dimen272
+\l__coffin_y_prime_dim=\dimen273
 \c_empty_coffin=\box71
 \l__coffin_aligned_coffin=\box72
 \l__coffin_aligned_internal_coffin=\box73
@@ -1540,29 +1556,29 @@ Package: expl3 2017/05/13 L3 programming layer (code)
 \l__coffin_display_coffin=\box76
 \l__coffin_display_coord_coffin=\box77
 \l__coffin_display_pole_coffin=\box78
-\l__coffin_display_offset_dim=\dimen273
-\l__coffin_display_x_dim=\dimen274
-\l__coffin_display_y_dim=\dimen275
-\l__coffin_bounding_shift_dim=\dimen276
-\l__coffin_left_corner_dim=\dimen277
-\l__coffin_right_corner_dim=\dimen278
-\l__coffin_bottom_corner_dim=\dimen279
-\l__coffin_top_corner_dim=\dimen280
-\l__coffin_scaled_total_height_dim=\dimen281
-\l__coffin_scaled_width_dim=\dimen282
+\l__coffin_display_offset_dim=\dimen274
+\l__coffin_display_x_dim=\dimen275
+\l__coffin_display_y_dim=\dimen276
+\l__coffin_bounding_shift_dim=\dimen277
+\l__coffin_left_corner_dim=\dimen278
+\l__coffin_right_corner_dim=\dimen279
+\l__coffin_bottom_corner_dim=\dimen280
+\l__coffin_top_corner_dim=\dimen281
+\l__coffin_scaled_total_height_dim=\dimen282
+\l__coffin_scaled_width_dim=\dimen283
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count379
+\l__driver_color_stack_int=\count380
 \l__driver_tmp_box=\box79
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2017/05/13 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count380
-\g__xparse_grabber_int=\count381
-\l__xparse_m_args_int=\count382
-\l__xparse_mandatory_args_int=\count383
-\l__xparse_v_nesting_int=\count384
+\l__xparse_current_arg_int=\count381
+\g__xparse_grabber_int=\count382
+\l__xparse_m_args_int=\count383
+\l__xparse_mandatory_args_int=\count384
+\l__xparse_v_nesting_int=\count385
 )
 Package: siunitx 2017/05/19 v2.7g A comprehensive (SI) units package
 
@@ -1570,39 +1586,39 @@ Package: siunitx 2017/05/19 v2.7g A comprehensive (SI) units package
 Package: l3keys2e 2017/05/13 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box80
-\l__siunitx_tmp_dim=\dimen283
-\l__siunitx_tmp_int=\count385
-\l__siunitx_number_mantissa_length_int=\count386
-\l__siunitx_number_uncert_length_int=\count387
-\l__siunitx_round_int=\count388
-\l__siunitx_process_decimal_int=\count389
-\l__siunitx_process_uncertainty_int=\count390
-\l__siunitx_process_fixed_int=\count391
-\l__siunitx_process_integer_min_int=\count392
-\l__siunitx_process_precision_int=\count393
-\l__siunitx_group_min_int=\count394
+\l__siunitx_tmp_dim=\dimen284
+\l__siunitx_tmp_int=\count386
+\l__siunitx_number_mantissa_length_int=\count387
+\l__siunitx_number_uncert_length_int=\count388
+\l__siunitx_round_int=\count389
+\l__siunitx_process_decimal_int=\count390
+\l__siunitx_process_uncertainty_int=\count391
+\l__siunitx_process_fixed_int=\count392
+\l__siunitx_process_integer_min_int=\count393
+\l__siunitx_process_precision_int=\count394
+\l__siunitx_group_min_int=\count395
 \l__siunitx_angle_marker_box=\box81
 \l__siunitx_angle_unit_box=\box82
-\l__siunitx_angle_marker_dim=\dimen284
-\l__siunitx_angle_unit_dim=\dimen285
-\l__siunitx_unit_int=\count395
-\l__siunitx_unit_denominator_int=\count396
-\l__siunitx_unit_numerator_int=\count397
-\l__siunitx_unit_prefix_int=\count398
-\l__siunitx_unit_prefix_base_int=\count399
-\l__siunitx_unit_prefix_gram_int=\count400
-\l__siunitx_number_product_int=\count401
+\l__siunitx_angle_marker_dim=\dimen285
+\l__siunitx_angle_unit_dim=\dimen286
+\l__siunitx_unit_int=\count396
+\l__siunitx_unit_denominator_int=\count397
+\l__siunitx_unit_numerator_int=\count398
+\l__siunitx_unit_prefix_int=\count399
+\l__siunitx_unit_prefix_base_int=\count400
+\l__siunitx_unit_prefix_gram_int=\count401
+\l__siunitx_number_product_int=\count402
 \c__siunitx_one_fill_skip=\skip86
 \l__siunitx_table_unit_align_skip=\skip87
-\l__siunitx_table_exponent_dim=\dimen286
-\l__siunitx_table_integer_dim=\dimen287
-\l__siunitx_table_mantissa_dim=\dimen288
-\l__siunitx_table_marker_dim=\dimen289
-\l__siunitx_table_result_dim=\dimen290
-\l__siunitx_table_uncert_dim=\dimen291
-\l__siunitx_table_fill_pre_dim=\dimen292
-\l__siunitx_table_fill_post_dim=\dimen293
-\l__siunitx_table_fill_mid_dim=\dimen294
+\l__siunitx_table_exponent_dim=\dimen287
+\l__siunitx_table_integer_dim=\dimen288
+\l__siunitx_table_mantissa_dim=\dimen289
+\l__siunitx_table_marker_dim=\dimen290
+\l__siunitx_table_result_dim=\dimen291
+\l__siunitx_table_uncert_dim=\dimen292
+\l__siunitx_table_fill_pre_dim=\dimen293
+\l__siunitx_table_fill_post_dim=\dimen294
+\l__siunitx_table_fill_mid_dim=\dimen295
 \l__siunitx_table_pre_box=\box83
 \l__siunitx_table_post_box=\box84
 \l__siunitx_table_mantissa_box=\box85
@@ -1730,21 +1746,6 @@ Package: translator 2010/06/12 ver 1.10
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator-lang
 uage-mappings.tex)))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/footmisc/footmisc.sty
-Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks44
-\footnotemargin=\dimen295
-\c@pp@next@reset=\count402
-\c@@fnserial=\count403
-Package footmisc Info: Declaring symbol style bringhurst on input line 855.
-Package footmisc Info: Declaring symbol style chicago on input line 863.
-Package footmisc Info: Declaring symbol style wiley on input line 872.
-Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
-
-Package footmisc Info: Declaring symbol style lamport* on input line 903.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
-.
-)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \fancy@headwidth=\skip90
@@ -1764,8 +1765,8 @@ File: block.tss 2016/03/15
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/titlesec/ttlkeys.def
 File: ttlkeys.def 2016/03/15
-\c@ttlp@side=\count404
-\ttlp@side=\count405
+\c@ttlp@side=\count403
+\ttlp@side=\count404
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1886,16 +1887,16 @@ LaTeX Info: Redefining \up on input line 32.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count406
+\scratchcounter=\count405
 \scratchdimen=\dimen296
 \scratchbox=\box87
-\nofMPsegments=\count407
-\nofMParguments=\count408
+\nofMPsegments=\count406
+\nofMParguments=\count407
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count409
+\MPscratchCnt=\count408
 \MPscratchDim=\dimen297
-\MPnumerator=\count410
-\makeMPintoPDFobject=\count411
+\MPnumerator=\count409
+\makeMPintoPDFobject=\count410
 \everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1919,7 +1920,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box88
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring ON on input line 32.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1927,7 +1928,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count412
+\c@section@level=\count411
 )
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
@@ -2019,7 +2020,7 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/05/19 v2.7g siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count413
+\c__siunitx_mathsf_int=\count412
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 32.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2064,7 +2065,7 @@ LaTeX Font Info:    Try loading font information for OT1+lmss on input line 32.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c__siunitx_mathtt_int=\count414
+\c__siunitx_mathtt_int=\count413
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 32.
 
 
@@ -2121,7 +2122,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: Command \' invalid in math mode on input line 78.
 
-<../figures/intro/univershistory2.png, id=126, 1043.9pt x 653.44125pt>
+<../figures/intro/univershistory2.png, id=120, 1043.9pt x 653.44125pt>
 File: ../figures/intro/univershistory2.png Graphic file (type png)
 
 <use ../figures/intro/univershistory2.png>
@@ -2145,7 +2146,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 88.
 
-<../figures/intro/lcdm.png, id=128, 576.1525pt x 434.62375pt>
+<../figures/intro/lcdm.png, id=122, 576.1525pt x 434.62375pt>
 File: ../figures/intro/lcdm.png Graphic file (type png)
 
 <use ../figures/intro/lcdm.png>
@@ -2172,7 +2173,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] <../figures/intro/curvature.png, id=167, 519.9425pt x 169.63374pt>
+[6] <../figures/intro/curvature.png, id=153, 519.9425pt x 169.63374pt>
 File: ../figures/intro/curvature.png Graphic file (type png)
 
 <use ../figures/intro/curvature.png>
@@ -2207,7 +2208,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <../figures/intro/evol_omega.png, id=245, 1146.2825pt x 412.54124pt>
+[10] <../figures/intro/evol_omega.png, id=221, 1146.2825pt x 412.54124pt>
 File: ../figures/intro/evol_omega.png Graphic file (type png)
 
 <use ../figures/intro/evol_omega.png>
@@ -2259,7 +2260,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14] <../figures/intro/example_tf.png, id=304, 1013.7875pt x 520.94624pt>
+[14] <../figures/intro/example_tf.png, id=280, 1013.7875pt x 520.94624pt>
 File: ../figures/intro/example_tf.png Graphic file (type png)
 
 <use ../figures/intro/example_tf.png>
@@ -2274,7 +2275,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15 <../figures/intro/example_tf.png>]
-<../figures/intro/carte_cmb.png, id=317, 1025.8325pt x 582.175pt>
+<../figures/intro/carte_cmb.png, id=292, 1025.8325pt x 582.175pt>
 File: ../figures/intro/carte_cmb.png Graphic file (type png)
 
 <use ../figures/intro/carte_cmb.png>
@@ -2282,7 +2283,7 @@ Package pdftex.def Info: ../figures/intro/carte_cmb.png used on input line 530.
 
 (pdftex.def)             Requested size: 307.75212pt x 174.65384pt.
 
-<../figures/intro/spectre_cmb.png, id=320, 1069.9975pt x 392.46625pt>
+<../figures/intro/spectre_cmb.png, id=295, 1069.9975pt x 392.46625pt>
 File: ../figures/intro/spectre_cmb.png Graphic file (type png)
 
 <use ../figures/intro/spectre_cmb.png>
@@ -2290,14 +2291,14 @@ Package pdftex.def Info: ../figures/intro/spectre_cmb.png used on input line 53
 6.
 (pdftex.def)             Requested size: 427.99142pt x 156.9837pt.
 
-<../figures/intro/pk_camb.png, id=322, 1201.48875pt x 645.41125pt>
+<../figures/intro/pk_camb.png, id=297, 1201.48875pt x 645.41125pt>
 File: ../figures/intro/pk_camb.png Graphic file (type png)
 
 <use ../figures/intro/pk_camb.png>
 Package pdftex.def Info: ../figures/intro/pk_camb.png used on input line 544.
 (pdftex.def)             Requested size: 444.54388pt x 238.79842pt.
 
-<../figures/intro/xi_camb.png, id=325, 1161.33875pt x 766.865pt>
+<../figures/intro/xi_camb.png, id=300, 1161.33875pt x 766.865pt>
 File: ../figures/intro/xi_camb.png Graphic file (type png)
 
 <use ../figures/intro/xi_camb.png>
@@ -2340,7 +2341,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19] <../figures/intro/bao_schema.png, id=374, 595.22375pt x 777.90625pt>
+[19] <../figures/intro/bao_schema.png, id=346, 595.22375pt x 777.90625pt>
 File: ../figures/intro/bao_schema.png Graphic file (type png)
 
 <use ../figures/intro/bao_schema.png>
@@ -2365,11 +2366,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Overfull \hbox (18.1061pt too wide) in paragraph at lines 641--643
 \T1/lmr/m/n/10.95 et sa va-leur me-su-rée par [][]\T1/lmr/m/sc/10.95 Planck Col
 -la-bo-ra-tion\T1/lmr/m/n/10.95 , \T1/lmr/m/sc/10.95 Agha-nim \T1/lmr/m/n/10.95
- et al. ([]2018[]) est $\OML/lmm/m/it/10.95 r[] \OT1/lmr/m/n/10.95 = [] []$\T1/
-lmr/m/n/10.95 . 
+ et al. ([][]2018[][]) est $\OML/lmm/m/it/10.95 r[] \OT1/lmr/m/n/10.95 = [] []$
+\T1/lmr/m/n/10.95 . 
  []
 
-<../figures/intro/bao_dessin.png, id=397, 1053.9375pt x 372.39125pt>
+<../figures/intro/bao_dessin.png, id=367, 1053.9375pt x 372.39125pt>
 File: ../figures/intro/bao_dessin.png Graphic file (type png)
 
 <use ../figures/intro/bao_dessin.png>
@@ -2398,7 +2399,7 @@ LaTeX Warning: Reference `fig:exp_hist' on page 23 undefined on input line 689.
 
 LaTeX Warning: Reference `fig:h0_om' on page 23 undefined on input line 700.
 
-<../figures/intro/h_vs_z.png, id=412, 830.10126pt x 647.41875pt>
+<../figures/intro/h_vs_z.png, id=381, 830.10126pt x 647.41875pt>
 File: ../figures/intro/h_vs_z.png Graphic file (type png)
 
 <use ../figures/intro/h_vs_z.png>
@@ -2428,7 +2429,7 @@ LaTeX Warning: Command \` invalid in math mode on input line 736.
 
 LaTeX Warning: Command \` invalid in math mode on input line 739.
 
-<../figures/intro/schema_rsd.png, id=456, 785.93625pt x 335.2525pt>
+<../figures/intro/schema_rsd.png, id=424, 785.93625pt x 335.2525pt>
 File: ../figures/intro/schema_rsd.png Graphic file (type png)
 
 <use ../figures/intro/schema_rsd.png>
@@ -2453,7 +2454,7 @@ LaTeX Warning: Command \` invalid in math mode on input line 794.
 LaTeX Warning: Reference `subsubsec:pred' on page 26 undefined on input line 79
 7.
 
-<../figures/intro/schema_qso2.png, id=472, 474.77374pt x 316.18124pt>
+<../figures/intro/schema_qso2.png, id=439, 474.77374pt x 316.18124pt>
 File: ../figures/intro/schema_qso2.png Graphic file (type png)
 
 <use ../figures/intro/schema_qso2.png>
@@ -2461,7 +2462,7 @@ Package pdftex.def Info: ../figures/intro/schema_qso2.png used on input line 80
 6.
 (pdftex.def)             Requested size: 322.84187pt x 215.0004pt.
 
-<../figures/intro/qso_jets.png, id=476, 627.34375pt x 415.5525pt>
+<../figures/intro/qso_jets.png, id=443, 627.34375pt x 415.5525pt>
 File: ../figures/intro/qso_jets.png Graphic file (type png)
 
 <use ../figures/intro/qso_jets.png>
@@ -2475,7 +2476,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26 <../figures/intro/schema_rsd.png>]
-<../figures/intro/spectre_qso.png, id=491, 1119.18124pt x 434.62375pt>
+<../figures/intro/spectre_qso.png, id=458, 1119.18124pt x 434.62375pt>
 File: ../figures/intro/spectre_qso.png Graphic file (type png)
 
 <use ../figures/intro/spectre_qso.png>
@@ -2518,7 +2519,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28 <../figures/intro/qso_jets.png> <../figures/intro/spectre_qso.png>]
-<../figures/intro/schema_lya.png, id=514, 1092.08pt x 227.85126pt>
+<../figures/intro/schema_lya.png, id=482, 1092.08pt x 227.85126pt>
 File: ../figures/intro/schema_lya.png Graphic file (type png)
 
 <use ../figures/intro/schema_lya.png>
@@ -2526,7 +2527,7 @@ Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 879
 .
 (pdftex.def)             Requested size: 436.82426pt x 91.13889pt.
 
-<../figures/intro/foret_lya.png, id=516, 1160.335pt x 669.50125pt>
+<../figures/intro/foret_lya.png, id=484, 1160.335pt x 669.50125pt>
 File: ../figures/intro/foret_lya.png Graphic file (type png)
 
 <use ../figures/intro/foret_lya.png>
@@ -2552,14 +2553,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [30 <../figures/intro/foret_lya.png>]
 
-LaTeX Warning: Command \` invalid in math mode on input line 934.
+LaTeX Warning: Command \` invalid in math mode on input line 936.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 950.
+LaTeX Warning: Command \` invalid in math mode on input line 952.
 
 
 LaTeX Warning: Reference `subsec:data_ana' on page 31 undefined on input line 9
-55.
+57.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2570,22 +2571,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [31]
 
 LaTeX Warning: Reference `fig:cf1d_eboss03' on page 32 undefined on input line 
-977.
+979.
 
 
 LaTeX Warning: Reference `fig:dr16_4bins' on page 32 undefined on input line 97
-7.
+9.
 
 
 LaTeX Warning: Reference `subsec:model_donnees' on page 32 undefined on input l
-ine 988.
+ine 993.
 
-<../figures/intro/exemple_dla.png, id=558, 1154.3125pt x 409.53pt>
+<../figures/intro/exemple_dla.png, id=525, 1154.3125pt x 409.53pt>
 File: ../figures/intro/exemple_dla.png Graphic file (type png)
 
 <use ../figures/intro/exemple_dla.png>
 Package pdftex.def Info: ../figures/intro/exemple_dla.png used on input line 99
-1.
+6.
 (pdftex.def)             Requested size: 461.71683pt x 163.80908pt.
 
 
@@ -2604,12 +2605,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [33 <../figures/intro/exemple_dla.png>] [34
 
 ]
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 1010--1010
 | []| 
  []
 
 
-Overfull \hbox (6.1085pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (6.1085pt too wide) in paragraph at lines 1010--1010
 [][]\T1/lmr/m/sc/10.95 Fixsen\T1/lmr/m/n/10.95 , D. J. et al. (1996). \OT2/wncy
 r/m/n/10.95 <   \T1/lmr/m/n/10.95 The Cos-mic Mi-cro-wave Back-ground Spec-trum
  from the Full COBE/FIRAS
@@ -2629,11 +2630,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [36]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1005.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1005.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1010.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1010.
  (./1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1005.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1005.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1010.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1010.
 
 Package rerunfilecheck Info: File `1.out' has not changed.
 (rerunfilecheck)             Checksum: CB33206ED8ADD1BFF52E1ACBE66A05F0;1432.
@@ -2646,101 +2647,47 @@ Package logreq Info: Writing requests to '1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35794 strings out of 492995
- 656658 string characters out of 6132704
- 1216615 words of memory out of 5000000
- 38413 multiletter control sequences out of 15000+600000
- 145117 words of font info for 118 fonts, out of 8000000 for 9000
+ 35773 strings out of 492995
+ 656419 string characters out of 6132704
+ 1221820 words of memory out of 5000000
+ 38409 multiletter control sequences out of 15000+600000
+ 147912 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,21n,79p,10383b,2280s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
-l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017
-/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dis
-t/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dv
-ips/lm/lm-ts1.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mat
-hex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/lm/lmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi
-7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
-7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb
->
-Output written on 1.pdf (36 pages, 3808009 bytes).
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+17/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-d
+ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
+dvips/lm/lm-ts1.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-m
+athex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
+ublic/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
+mi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
+mr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
+lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.p
+fb>
+Output written on 1.pdf (36 pages, 3810624 bytes).
 PDF statistics:
- 816 PDF objects out of 1000 (max. 8388607)
- 684 compressed objects within 7 object streams
- 210 named destinations out of 1000 (max. 500000)
+ 783 PDF objects out of 1000 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 193 named destinations out of 1000 (max. 500000)
  258 words of extra memory for PDF output out of 10000 (max. 10000000)
 
