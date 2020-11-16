@@ -1,63 +1,47 @@
 Notes :
 
 
-- changer le titre des chapitres ?
-
 - faire une version impression papier
 
-
-- montrer les plots avec Lhcd libre ? data et mocks (chap 6)
-
-
-- expliquer qu'on prefere C-G no mask dans le chap 6
 
 
 - citer/remercier scipy, nersc, matplotlib, 
 
 
-- verifier que si on utilise une loi de poisson, on retrouve bien ce qu'on fait (proba de tirer 2 qso ou plus negligeable)
+% - verifier que si on utilise une loi de poisson, on retrouve bien ce qu'on fait (proba de tirer 2 qso ou plus negligeable)
 
 
-- Expliquer le sinc() tronqué, et refaire la figure 1.7 du chapitre 4 en utilisant sqrt(3) dans le sinc pour surestimer l'effet et etre sur que c'est effectivement negligeable ?
+% - rajouter la prediction de la cf1d
+
+% - Expliquer le sinc() tronqué, et refaire la figure 1.7 du chapitre 4 en utilisant sqrt(3) dans le sinc pour surestimer l'effet et etre sur que c'est effectivement negligeable ?
+
+% - comparer le fit de la cf eboss-0.2 avec un modele sans HCD au fit eboss-0.0 (en particulier les biais et chi2)
 
 
-- rajouter la prediction de la cf1d
+% - ref papier Solene HCD  (pas sorti pour l'instant)
 
 
-- comparer le fit de la cf eboss-0.2 avec un modele sans HCD au fit eboss-0.0 (en particulier les biais et chi2)
-
-
-- ref papier Solene HCD
-
-
-- il faudrait voir si le fait d'ajouter les metaux changent les mesures des hcd et du lya
+% - il faudrait voir si le fait d'ajouter les metaux changent les mesures des hcd et du lya --> il faut refaire proprement les fits de eboss-0.3 avec les bons modeles de hcd
 
 
 - fusionner 4.17 et 4.22 figure ?
 
 
-- finir la conclusion : apport perso
+- finir la conclusion : apport perso --> plutot en remerciement ?
 
 
 - ecrire les remerciements / dedication
 
 
-- probleme dans l'equation 1.29 (intro E(z))
-
-
-- equation 5.36 : kpar kperp et k (consistency)
-
-
 - passer un correcteur d'orthographe
-
-
-- corriger D_M sur le graph BAO + texte : c'est pas la distance entre O et l'obs
 
 
 - page de coverture : paris saclay a la place de paris sud (aussi pour les chercheurs)
 + mettre les titres en dessous et préciser maitre de conf ou prof ou etc
 
+
 - mettre un titre cohérent avec adum (derniere page aussi)
+
 
 - page de garde :
 referent : faculté des sciences d'orsay

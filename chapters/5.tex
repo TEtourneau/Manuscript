@@ -481,13 +481,13 @@ Comme pour les données, les fonctions de corrélation sont évaluées sur une g
 Dans le cas des mocks, nous incluons un terme supplémentaire, qui prend en compte le lissage gaussien appliqué au champ $\delta_l$ interpolé. Ce terme est donné par
 \begin{equation}
   % W(\kpar{}, \kperp{}) = \exp(- \frac{(\kpar{} \sigma^{smooth}_{\parallel})^2 + (\kperp{} \sigma^{smooth}_{\perp})^2}{2}) \; .
-  W(\kpar{}, \kperp{}) = \exp(- \frac{k^2 \sigma_{\mathrm{smooth}}^2}{2}) \; .
+  W(k) = \exp(- \frac{k^2 \sigma_{\mathrm{smooth}}^2}{2}) \; .
 \end{equation}
 Comme montré sur la figure~\ref{fig:xi_smoothing}, l'effet du lissage gaussien sur la fonction de corrélation est important surtout à petit $r$. Les mocks n'étant pas en très bon accord avec le modèle à petit $r$, % et le paramètre $\sigma_{\mathrm{smooth}}$ étant dégénéré avec d'autres paramètres du modèle, nous fixons $\sigma_{\mathrm{smooth}}$ à la taille des voxels, soit \SI{2.19}{\perh\Mpc}.}
   la modélisation du lissage gaussien a tendance à corriger ces désaccords lorsque le paramètre $\sigma_{\mathrm{smooth}}$ est laissé libre.
   De plus, $\sigma_{\mathrm{smooth}}$ est dégénéré avec d'autres paramètres du modèle.
   Nous fixons donc $\sigma_{\mathrm{smooth}}$ à la taille des voxels, soit \SI{2.19}{\perh\Mpc} lors des ajustements.
-Le spectre de puissance modèle $P(\kpar{}, \kperp{})$ est ainsi multiplié par $W^2(\kpar{}, \kperp{})$.
+Le spectre de puissance modèle $P(\vec k)$ est ainsi multiplié par $W^2(k)$.
 
 Enfin, similairement à la modélisation des données, le modèle ajusté sur les mocks est multiplié par la matrice de distorsion $D_{AB}$ (équation~\ref{eq:model_dist}). Cependant, dans le cas des raw mocks, les fonctions corrélation ne sont pas affectées par la distorsion due à l'ajustement du continuum puisque nous avons accès directement au champ $\delta_F$. Dans ce cas, la matrice de distorsion $D_{AB}$ vaut la matrice identité.
 
