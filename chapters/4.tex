@@ -982,8 +982,8 @@ Cette densité de probabilité nous donne donc accès à $\overline F$ et $\over
 Elle est représentée sur la figure~\ref{fig:mean_trans} par une ligne tiretée bleue. Les points noirs sur cette figure représentent la mesure de $\overline F(z)$  faite par \textcite{Faucher-Giguere2008}. La paramétrisation que nous utilisons (équation~\ref{eq:mean_trans}) est en bon accord avec les données dans la gamme $\num{1.8} < z < \num{3.6}$.
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{mean_trans}
-  \caption{Fraction de flux transmis moyenne en fonction du redshift. Les points noirs donnent la mesure faite par \textcite{Faucher-Giguere2008}. La ligne tiretée bleue donne la paramétrisation de $\overline F(z)$ que nous utilisons dans les mocks.}
+  \includegraphics[scale=0.4]{mean_trans_all}
+  \caption{Fraction de flux transmis moyenne en fonction du redshift. Les points noirs donnent la mesure faite par \textcite{Faucher-Giguere2008}. La ligne tiretée bleue donne la paramétrisation de $\overline F(z)$ que nous utilisons dans les mocks (équation~\ref{eq:mean_trans}). La courbe orange donne la mesure faite sur les mocks.}
   \label{fig:mean_trans}
 \end{figure}
 En ce qui concerne le terme $\overline F^2$, nous le calculons pour chaque valeur du redshift. Il est donné par l'intégrale du $P^{\mathrm{1D}}$. Pour calculer cette intégrale, nous utilisons $P^{\mathrm{1D}}_{\mathrm{modèle}}$, décrit dans les paragraphes suivants.
@@ -1141,7 +1141,11 @@ La figure~\ref{fig:params} présente les interpolations ainsi obtenues.
 Les cinq spectres de puissance $P_{s}(k)$ construits précédemment pour chaque valeur du redshift produisent des spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ en très bon accord avec le modèle. Les cinq $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift sont présentés sur la figure~\ref{fig:p1d_tuning}. Les lignes continues donnent le modèle pour chaque valeur du redshift.
 Afin d'obtenir $P_{s}(k)$ pour n'importe quel redshift, nous créons une grille $(k, z)$ couvrant $z \in [\num{1.8} \, ; \num{3.6}]$ et $k \in [\num{0} \, ; \num{20}] \si{\h\per\Mpc}$.
 Puis, $P_{s}(k,z)$ est obtenu via une interpolation cubique sur cette grille. Du fait des très faibles valeurs de $P_{s}$ à grand $k$ et de l'interpolation cubique utilisée, certaines valeurs de l'interpolation sont négatives. Pour chaque redshift de la grille, nous forçons tous les pixels de l'interpolation de $P_{s}$ à zéro pour tous les $k > k_0$, où $k_0$ est le premier $k$ pour lequel l'interpolation est nulle. La figure~\ref{fig:p1dmiss} montre l'interpolation de $P_{s}(k)$ pour différentes valeurs de $z$.
-Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmise moyenne $\overline F$ en fonction du redshift obtenue avec cette procédure d'ajustement. Celle-ci est mesurée sur une réalisation complète. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}. La mesure faite pour les redshifts proches de \num{3.6} est biaisée par le fait que seuls les pixels proches des quasars participent à cette mesure : la corrélation croisée \lya{}$\times$QSO a pour effet de réduire $F$.
+% Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmise moyenne $\overline F$ en fonction du redshift obtenue avec cette procédure d'ajustement.
+Enfin, nous mesurons la fraction de flux transmise moyenne $\overline F$ en fonction du redshift sur une réalisation complète des mocks. Cette mesure est présentée en orange sur la figure~\ref{fig:mean_trans}.
+% Celle-ci est mesurée sur une réalisation complète.
+La ligne en pointillés bleus montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}. La transmission moyenne mesurée dans les mocks (orange) est en accord avec cette paramétrisation.
+Nous pouvons noter que la mesure faite pour les redshifts proches de \num{3.6} est biaisée par le fait que seuls les pixels proches des quasars participent à cette mesure : la corrélation croisée \lya{}$\times$QSO a pour effet de réduire $F$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{p1dmiss}
@@ -1154,12 +1158,12 @@ Enfin, la figure~\ref{fig:mean_trans_mock} présente la fraction de flux transmi
   \caption{Les spectres de puissance $P^{\mathrm{1D}}_{\mathrm{mock}}$ obtenus pour chaque valeur du redshift à la fin de la procédure d'ajustement. Les lignes continues donnent le modèle pour chaque valeur du redshift. Les mocks sont en train bon accord avec le modèle.}
   \label{fig:p1d_tuning}
 \end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.55]{mean_trans_mock}
-  \caption{Fraction de flux transmise moyenne $\overline F$ en fonction du redshift mesurée sur une réalisation des mocks. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}.}
-  \label{fig:mean_trans_mock}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[scale=0.55]{mean_trans_mock}
+%   \caption{Fraction de flux transmise moyenne $\overline F$ en fonction du redshift mesurée sur une réalisation des mocks. La ligne en pointillés (orange) montre la paramétrisation définie dans l'équation~\ref{eq:mean_trans}.}
+%   \label{fig:mean_trans_mock}
+% \end{figure}
 
 \paragraph{}
 Le résultat de la procédure d'ajustement décrite précédemment a été utilisé pour produire \num{50} réalisations indépendantes des mocks. Nous prévoyons de terminer la post-production des \num{50} autres réalisations pré-produites dans les prochains moins.

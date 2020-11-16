@@ -11,11 +11,16 @@ trans_err = trans*tau_err
 zz = np.linspace(1.8, 3.6, 1000)
 trans_fit = np.exp(-0.00211*(1+zz)**3.7)
 
+z_mock = np.load('z_trans.npy')
+trans_mock = np.load('trans.npy')
 
 plt.errorbar(z, trans, yerr=trans_err, fmt='o', color='black')
-plt.plot(zz, trans_fit, linestyle='--', color='blue')
+plt.plot(zz, trans_fit, linestyle='--', linewidth=2)
+plt.plot(z_mock, trans_mock)
+
 plt.xlabel(r'$z$')
 plt.ylabel(r'$\overline{F}$')
 plt.grid()
+plt.xlim(1.7,3.7)
 plt.tight_layout()
 plt.show()
