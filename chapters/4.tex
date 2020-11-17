@@ -228,7 +228,7 @@ Cette équation permet de retrouver la formule de kaiser :
 \subsection{Le relevé de quasars}
 \label{subsec:qso}
 % Une fois tous ces champs construits, nous définissons la géométrie du relevé. Les boîtes $\num{2560}\times\num{2560}\times\num{1536}$, où \num{1536} correspond à la dimension de l'axe de la ligne de visée (dénommé $Z$ dans la suite), sont placées à un redshift central $z_0 = 1.70975268202$. Leur dimension selon cet axe permet de couvrir les redshifts $1.3 < z < 3.6$. L'observateur est considéré être à $z=0$. Il se trouve au centre dans le plan $(X,Y)$, et les boîtes sont placés à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}).
-Une fois toutes ces boîtes construites, nous définissons la géométrie du relevé. Les boîtes, d'une taille $\num{2560}\times\num{2560}\times\num{1536}$ selon les axes $\textsc{x}$, $\textsc{y}$ et $\textsc{z}$ respectivement, sont placées à un redshift central $z_0 = \num{1.71}$, et à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (voir équation~\ref{eq:radec}). Leurs dimensions permettent de couvrir les redshifts $\num{1.3} < z < \num{3.6}$.
+Une fois toutes ces boîtes construites, nous définissons la géométrie du relevé. Les boîtes, d'une taille $\num{2560}\times\num{2560}\times\num{1536}$ selon les axes $\textsc{x}$, $\textsc{y}$ et $\textsc{z}$ respectivement, sont placées à un redshift central $z_0 = \num{1.71}$, et à une ascension droite $\alpha_0$ et une déclinaison $\delta_0$ (équation~\ref{eq:radec}). Leurs dimensions permettent de couvrir les redshifts $\num{1.3} < z < \num{3.6}$.
 Cette limite basse est choisie de manière à pouvoir inclure les absorptions du CIV. Comme indiqué dans la section~\ref{sec:selection_forets}, le pixel d'absorption de plus bas redshift dans la région \lya{}  se trouve à $z = \num{1.96}$. Si cette absorption est causée par du CIV, l'absorbeur se situe à un redshift $z = (1+\num{1.96}) \lambda_{\mathrm{Ly}\alpha} / \lambda_{CIV} - 1 \sim \num{1.32}$.
 Enfin, l'observateur est considéré être à $z=0$, au centre du plan $(\textsc{x},\textsc{y})$.
 
@@ -461,7 +461,7 @@ Puis, pour chaque pixel $i$ entre $\lambda_{min} = \num{3476.1877}$ et $\lambda_
 % Une moyenne pondérée avec un lissage gaussien est alors appliquée à la boîte.
 Pour chaque pixel, nous calculons une moyenne pondérée des voxels voisins avec un lissage gaussien.
   Ce lissage est nécessaire afin d'éviter le crénelage (\emph{aliasing}) aux petites échelles.
-  Sans lissage, les spectres interpolés possèdent des discontinuitées (voir figure~\ref{fig:smoothing11}). Ces discontinuités rajoutent de la puissance parasite aux petites échelles lors du calcul du spectre de puissance.
+  Sans lissage, les spectres interpolés possèdent des discontinuitées (figure~\ref{fig:smoothing11}). Ces discontinuités rajoutent de la puissance parasite aux petites échelles lors du calcul du spectre de puissance.
   % Nous choisissons un lissage de largeur $\sigma = d_{\mathrm{cell}}$.
   Nous appliquons donc un lissage gaussien, de largeur $\sigma = d_{\mathrm{cell}}$.
 % Pour chaque pixel, nous considérons les voxels appartenant au cube de 7 voxels de côté, centré sur le voxel dans lequel se trouve le pixel. Ce cube correspond à considérer les voxels compris à $\pm 3 \sigma$ du voxel central. %, avec $\sigma = d_{\mathrm{cell}}$ (\#prov validé par le plot, demander à JM).
@@ -505,7 +505,7 @@ avec
 où $\vec r_j$ est la position du centre du voxel $j$, $\vec r_i$ celle du pixel $i$, et  $\delta_j$ est la valeur de la boîte au pixel $j$.
 % , et enfin $\sigma^2 = d_{\mathrm{cell}}^2$ est la largeur du lissage gaussien appliqué.
 
-Ce calcul est effectué pour tous les pixels qui vérifient $\lambda_i < \lambda_{\textsc{QSO}}$, pour chaque quasar. Les boîtes interpolées sont la boîte $\delta_{\mathrm{matière}}$ utilisée pour construire l'absorption \lya{}, les trois boîtes de vitesse utilisées pour ajouter les RSD aux HCD tirés dans chaque ligne de visée (voir section~\ref{subsec:hcd}), et les six boîtes de gradient de vitesse afin d'ajouter les RSD au champ \lya{}.
+Ce calcul est effectué pour tous les pixels qui vérifient $\lambda_i < \lambda_{\textsc{QSO}}$, pour chaque quasar. Les boîtes interpolées sont la boîte $\delta_{\mathrm{matière}}$ utilisée pour construire l'absorption \lya{}, les trois boîtes de vitesse utilisées pour ajouter les RSD aux HCD tirés dans chaque ligne de visée (section~\ref{subsec:hcd}), et les six boîtes de gradient de vitesse afin d'ajouter les RSD au champ \lya{}.
 
 
 \subsection{De la densité à l'absorption}
@@ -567,7 +567,7 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
 \begin{figure}
   \centering
   \includegraphics[scale=0.38]{xi_smoothing}
-  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur la fonction de corrélation des mocks. Le graphique du haut montre les fonctions de corrélation obtenues à partir du spectre de puissance de Camb (noir), du spectre de puissance de Camb multiplié par $W^2(k)$ en bleu, du spectre de puissance de Camb multiplié par $G^2(k)$ en vert, et du spectre de puissance de Camb multiplié par $W^2(k)G^2(k)$ en rouge (voir équations~\ref{eq:gauss_smoothing} et~\ref{eq:effet_reso}). Le graphique du bas montre la différence entre les courbes bleue et noire, en bleu, entre les courbes vert et noire, en vert, ainsi qu'entre les courbes rouge et noire, en rouge.}
+  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur la fonction de corrélation des mocks. Le graphique du haut montre les fonctions de corrélation obtenues à partir du spectre de puissance de Camb (noir), du spectre de puissance de Camb multiplié par $W^2(k)$ en bleu, du spectre de puissance de Camb multiplié par $G^2(k)$ en vert, et du spectre de puissance de Camb multiplié par $W^2(k)G^2(k)$ en rouge (équations~\ref{eq:gauss_smoothing} et~\ref{eq:effet_reso}). Le graphique du bas montre la différence entre les courbes bleue et noire, en bleu, entre les courbes vert et noire, en vert, ainsi qu'entre les courbes rouge et noire, en rouge.}
   \label{fig:xi_smoothing}
 \end{figure}
 \begin{figure}
@@ -862,7 +862,7 @@ Enfin, nous ajoutons les RSD aux HCD tirés. Chaque HCD tiré est déplacé le l
 v_{\parallel} = \frac{v_{\textsc{x}} \textsc{x} + v_{\textsc{y}} \textsc{y} + v_{\textsc{z}} \textsc{z}}{\sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}} \; .
 \end{equation}
 % où $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les boîtes de vitesse interpolées le long de la ligne de visée.
-où, cette fois ci, $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les vitesses le long de la ligne de visée provenant de l'interpolation des boîtes de vitesse (voir section~\ref{subsec:los_interp}).
+où, cette fois ci, $v_{\textsc{x}}$, $v_{\textsc{y}}$ et $v_{\textsc{z}}$ sont les vitesses le long de la ligne de visée provenant de l'interpolation des boîtes de vitesse (section~\ref{subsec:los_interp}).
 Ainsi, un HCD à un redshift $z$ sera déplacé à un redshift
 \begin{equation}
   % z \rightarrow  z + (1+z) H(z) \frac{dG}{dz} \frac{1}{H_0 \frac{dG}{dz}(z=0)} v_{\parallel} \; .
@@ -893,7 +893,7 @@ Ces n{\oe}uds possèdent $\num{128}\,\mathrm{Go}$ de mémoire vive. De manière 
 Nous pourrions distribuer la mémoire et effectuer la transformation de Fourier sur plusieurs n{\oe}uds à l'aide de la librairie MPI.
 Cependant nous n'avions pas l'expertise nécessaire. Nous effectuons donc les transformations de Fourier sur un seul n{\oe}ud.
 Nous profitons néanmoins des \num{32} c{\oe}urs par n{\oe}ud pour paralléliser notre code. Chaque c{\oe}ur possède 2 hyper-threads, ce qui permet de gérer 64 tâches simultanément sur un même n{\oe}ud.
-Lors de la construction des boîtes (voir section~\ref{subsec:densityfields}), nous avons besoin de stocker en mémoire la boîte dans l'espace réel, la boîte dans l'espace $k$, et la boîte contenant la norme de $k$, cette dernière étant utilisée pour construire les boîtes de vitesses et de gradients de vitesse (équations~\ref{eq:v2} et~\ref{eq:eta1}).
+Lors de la construction des boîtes (section~\ref{subsec:densityfields}), nous avons besoin de stocker en mémoire la boîte dans l'espace réel, la boîte dans l'espace $k$, et la boîte contenant la norme de $k$, cette dernière étant utilisée pour construire les boîtes de vitesses et de gradients de vitesse (équations~\ref{eq:v2} et~\ref{eq:eta1}).
 Etant donné la mémoire disponible sur chaque n{\oe}ud, les boîtes ne doivent pas dépasser $\num{42}\,\mathrm{Go}$. Cette mémoire disponible et la taille des voxels choisie (\SI{2.19}{\perh\Mpc}) ne permettent pas de générer l'entièreté du relevé DESI avec une seule boîte.
 Nous choisissons donc de découper le relevé en sept chunks indépendants, chacun étant généré par une boîte de $\num{2560}\times\num{2560}\times\num{1536}$ voxels. Chacune des boîtes représente un volume de $\num{37.5}\,\mathrm{Go}$. A la fin de la production, ces sept chunks sont assemblés pour reconstruire le relevé de DESI. Le découpage du relevé en sept chunks est montré sur la figure~\ref{fig:chunks}.
 Dans les lignes qui suivent, nous détaillons les différents éléments du code.
@@ -925,7 +925,7 @@ Les forêts sont regroupées par pixel HEALPix \autocite{Gorski2004} dans des fi
 où $\texttt{nside} = \num{16}$ est la résolution du schéma HEALPix utilisé, \texttt{\textsc{pix}} donne le numéro du pixel HEALPix, et $\texttt{\textsc{n}}$ est le résultat de la division euclidienne de \texttt{\textsc{pix}} par \num{100}.
 Cette dernière étape est effectuée sur un n{\oe}ud, \texttt{make\_transmissions.py} étant lancé en parallèle sur 64 sous-échantillons des pixels HEALPix.
 
-Comme expliqué à la fin de la section~\ref{subsec:lya}, le calcul de l'auto corrélation des traceurs objets, tels les quasars et les HCD, nécessite l'estimateur de Landy-Szalay (voir section~\ref{subsec:co_estimateur}). Afin d'utiliser cette estimateur, nous avons besoin de catalogues de quasars et de HCD qui suivent une distribution aléatoire.
+Comme expliqué à la fin de la section~\ref{subsec:lya}, le calcul de l'auto corrélation des traceurs objets, tels les quasars et les HCD, nécessite l'estimateur de Landy-Szalay (décrit dans la section~\ref{subsec:co_estimateur}). Afin d'utiliser cette estimateur, nous avons besoin de catalogues de quasars et de HCD qui suivent une distribution aléatoire.
 % Les vrais catalogues sont ensuite comparés à ces catalogues aléatoires.
 Les distributions issues des vrais catalogues sont ensuite comparées aux distributions issues des catalogues aléatoires.
 Pour constuire ces catalogues aléatoires de quasars et HCD, nous utilisons les codes \texttt{draw\_qso.py} et \texttt{dla\_saclay.py}. Une option nous permet de tirer les objets sans tenir compte de la densité dans chaque voxel ou pixel. Les quasars sont donc tirés uniformément dans la boîte. Les HCD sont tirés uniformément le long de chaque ligne de visée, avec $z_{\textsc{HCD}} < z_{\textsc{QSO}}$ où $z_{\textsc{QSO}}$ est le redshift du quasar hôte. Dans les deux cas, nous tirons plus de quasars et de HCD pour les distributions aléatoires que pour les vrais catalogues, afin que la statistique des fonctions de corrélation soit limitée uniquement par les vrais catalogues. A la fin, les catalogues aléatoires de quasars et de HCD contiennent respectivement environ 10 et 3 fois plus d'objets que les vrais catalogues.
@@ -1184,7 +1184,7 @@ Le continuum des quasars est généré à l'aide du module \texttt{SIMQSO}, du p
 Le modèle utilisé est composé de plusieurs lois de puissance. Ces lois de puissance sont mises bout à bout pour créer le continuum.
 Les raies d'émission sont ajoutées en utilisant un modèle fondé sur les spectres des quasars observés par BOSS.
 Une option permet d'ajouter des BAL aux spectres de quasars simulés. Nous n'utilisons pas cette option car les spectres présentant un BAL sont retirés des données lors de l'analyse.
-Le code permet aussi d'ajouter des HCD et des métaux. Les HCD sont ajoutés dans les spectres aux positions indiquées par le catalogue de HCD que nous générons (voir section~\ref{subsec:hcd)}). Pour chaque HCD, un profil de Voigt, dont la profondeur dépend de la densité de colonne, est créé puis ajouté au spectre.
+Le code permet aussi d'ajouter des HCD et des métaux. Les HCD sont ajoutés dans les spectres aux positions indiquées par le catalogue de HCD que nous générons (section~\ref{subsec:hcd)}). Pour chaque HCD, un profil de Voigt, dont la profondeur dépend de la densité de colonne, est créé puis ajouté au spectre.
 En ce qui concerne les métaux, ils sont ajoutés en utilisant la transmission du \lya{} : pour chaque métal, la forêt \lya{} est décalée en longueurs d'onde observées par un facteur $\lambda_m / \lambda_{\mathrm{Ly}\alpha}$, où $\lambda_m$ est la longueur d'onde du métal considéré.
 Puis, l'absorption est modifiée : 
 le flux de chaque absorption est corrigé par un facteur $A_m$, où $A_m$ relie la profondeur optique de la raie d'absorption du métal à la profondeur optique du \lya{} : $\tau_m = A_m \tau_{\mathrm{Ly}\alpha}$. Le paramètre $A_m$ est ajusté afin d'obtenir le bon biais pour chaque métal.
@@ -1216,7 +1216,7 @@ Nous produisons plusieurs versions différentes des mocks :
 \item les mocks \emph{eboss-0.2},
 \item les mocks \emph{eboss-0.3}.
 \end{itemize}
-Les raw mocks sont les mocks bruts, sans l'utilisation de \texttt{quickquasars}. Ces mocks sont analysés en estimant les fonctions de corrélation directement à partir des fichiers de transmission (voir section~\ref{sec:mock_ana}). Ceci nous permet de vérifier la construction des mocks et les différentes fonctions de corrélation, sans que celles-ci soient affectées par l'ajustement du continuum ou les effets astrophysiques et instrumentaux.
+Les raw mocks sont les mocks bruts, sans l'utilisation de \texttt{quickquasars}. Ces mocks sont analysés en estimant les fonctions de corrélation directement à partir des fichiers de transmission (voir la section~\ref{sec:mock_ana}). Ceci nous permet de vérifier la construction des mocks et les différentes fonctions de corrélation, sans que celles-ci soient affectées par l'ajustement du continuum ou les effets astrophysiques et instrumentaux.
 Les versions eboss-0.0, eboss-0.2 et eboss-0.3 sont les versions des mocks après avoir utilisé \texttt{quickquasars} pour produire les spectres synthétiques. La version eboss-0.0 correspond à l'ajout du continuum et du bruit. La version eboss-0.2 est la version eboss-0.0 à laquelle les HCD sont ajoutés. La version eboss-0.3 ajoute le continuum, le bruit, les HCD ainsi que les métaux.
 Nous présentons l'analyse de ces différentes versions des mocks dans le chapitre suivant.
 

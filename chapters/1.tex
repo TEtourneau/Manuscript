@@ -108,7 +108,7 @@ La masse des électrons étant négligeable, les protons et les neutrons représ
 % Plus tard, le satelitte COBE fut envoyé dans l'espace afin de mesurer le spectre\footnote{voir explication \#prov:ref} du CMB.
 Plus tard, le satellite COBE fut envoyé dans l'espace afin de détecter les anisotropies du CMB. Selon les prédictions des modèles de big bang, le spectre du CMB suit une loi de corps noir, avec une température d'environ \SI{3}{\kelvin}, et possède des anisotropies correspondant aux perturbations primordiales de densité. La mission fut un succès : les mesures de COBE ont permis d'identifier les anisotropies de température du CMB, mettant en évidence les fluctuations de densité de l'univers primordial. D'autre part, le spectre du CMB est mesuré avec une température $T = \SI{2,728(4)}{\kelvin}$ \autocite{Fixsen1996}, ne déviant pas du spectre du corps noir de plus de \SI{0,25}{\percent} \autocite{Bennett1993}. La détection des anisotropies du CMB constitue un des arguments les plus solides en faveur des modèles de big bang.
 
-Jusque alors, les modèles cosmologiques n'incluaient pas d'énergie noire. Puis en 1998, deux équipes différentes publient l'analyse de distances de luminosité de supernovae de type 1a (SN1a), toutes les deux mettant en évidence l'accélération de l'expansion de l'univers et donc favorisant les modèles contenant de l'énergie noire. Ce sont ces dernières observations qui ancrent \lcdm{} comme modèle de big bang préféré. Par la suite, le satellites WMAP puis le satellite Planck sont lancés en 2001 et en 2009 afin de mesurer avec une plus grande précision les anisotropies du CMB. Ces mesures successives sont effectuées avec une précision sans précédent, permettant de contraindre très fortement les paramètres cosmologiques. Les résultats finaux de la collaboration Planck ont été publiés en 2018 \autocite{Collaboration2018} et fournissent les paramètres cosmologiques du modèle \lcdm{} avec une précision inférieur au pourcent (voir tableau~\ref{table:planck2018}).
+Jusque alors, les modèles cosmologiques n'incluaient pas d'énergie noire. Puis en 1998, deux équipes différentes publient l'analyse de distances de luminosité de supernovae de type 1a (SN1a), toutes les deux mettant en évidence l'accélération de l'expansion de l'univers et donc favorisant les modèles contenant de l'énergie noire. Ce sont ces dernières observations qui ancrent \lcdm{} comme modèle de big bang préféré. Par la suite, le satellites WMAP puis le satellite Planck sont lancés en 2001 et en 2009 afin de mesurer avec une plus grande précision les anisotropies du CMB. Ces mesures successives sont effectuées avec une précision sans précédent, permettant de contraindre très fortement les paramètres cosmologiques. Les résultats finaux de la collaboration Planck ont été publiés en 2018 \autocite{Collaboration2018} et fournissent les paramètres cosmologiques du modèle \lcdm{} avec une précision inférieur au pourcent (tableau~\ref{table:planck2018}).
 
 \subsection{Description du modèle}
 \label{subsec:descri_mod}
@@ -138,7 +138,7 @@ Dans le cadre du modèle \lcdm{}, la métrique utilisée est la métrique FLRW (
   \label{eq:metrique1}
   ds^2 = - dt^2 + R(t) \left[ \frac{dr^2}{1 - k r^2} + r^2 d\Omega \right] \; ,
 \end{equation}
-où $d\Omega = d\theta \sin(\theta) d\phi$ , $R(t)$ rend compte de l'expansion de l'univers à l'instant $t$, et $k$ vaut soit $1$, $0$ ou $-1$ selon que l'univers possède une courbure positive, nulle ou négative (voir figure~\ref{fig:curvature}).
+où $d\Omega = d\theta \sin(\theta) d\phi$ , $R(t)$ rend compte de l'expansion de l'univers à l'instant $t$, et $k$ vaut soit $1$, $0$ ou $-1$ selon que l'univers possède une courbure positive, nulle ou négative (figure~\ref{fig:curvature}).
 \begin{figure}
   \centering
   \includegraphics[scale=0.6]{curvature}
@@ -224,7 +224,7 @@ L'équation~\ref{eq:einstein} regroupe en réalité plusieurs équations. Les in
 \subsubsection{Les équations de Friedmann-Lemaître}
 Les équations d'Einstein forment un système d'équations différentielles, de second ordre et non linéaires, et de fait, difficile à résoudre. Afin de simplifier les équations et trouver des solutions, certaines hypothèses sont faites. Dans la plupart des modèles cosmologiques, l'univers est supposé homogène et isotrope à grande échelle.
 % C'est le cas de la métrique FLRW (voir eq.~\ref{eq:metrique2})
-La métrique qui décrit un univers homogène et isotrope est la métrique FLRW (voir l'équation~\ref{eq:metrique2}).
+La métrique qui décrit un univers homogène et isotrope est la métrique FLRW (équation~\ref{eq:metrique2}).
 Dans un tel cas, on peut calculer le membre de gauche de l'équation~\ref{eq:einstein}. Ce calcul, que nous ne détaillerons pas ici, est très bien détaillé dans la section 2.1.2 de \textcite{Dodelson2003}. De plus, pour un fluide parfait, le tenseur énergie impulsion prend la forme
 \begin{equation}
   T_{\mu \nu} =
@@ -325,7 +325,7 @@ où $i$ court sur toutes les espèces contribuant à l'énergie totale de l'univ
 \Omega_{r} = \frac{8 \pi G \rho_{r, 0}}{3 H_{0}^{2}} \hspace{1cm} ; \hspace{1cm} \Omega_{m} = \frac{8 \pi G \rho_{m, 0}}{3 H_{0}^{2}} \hspace{1cm} ;\hspace{1cm} \Omega_{\Lambda} = \frac{\Lambda}{3 H_{0}^{2}}  \; .
 \end{equation}
 % Nous pouvons remarquer ici que $\Omega_{\Lambda}$ est indépendant de $a$ (\#prov peut etre pas au bon endroit). Il en découle $w_{\Lambda} = -1$ (voir équation~\ref{eq:rho_vs_a}) : la constante cosmologique peut être interprétée comme un fluide de densité d'énergie constante et de pression négative. Nous verrons dans la suite de ce paragraphe que sa domination dans le bilan énergétique de l'univers actuel est responsable de l'accélération de l'expansion.
-Par ailleurs, nous remarquons que la densité d'énergie $\rho_{\Lambda} = \Lambda / 8 \pi G$ est indépendante de $a$. Il en découle $w_{\Lambda} = -1$ (voir équation~\ref{eq:rho_vs_a}) : la constante cosmologique peut être interprétée comme un fluide de densité d'énergie constante et de pression négative. Nous verrons dans la suite de ce paragraphe que sa domination dans le bilan énergétique de l'univers actuel est responsable de l'accélération de l'expansion.
+Par ailleurs, nous remarquons que la densité d'énergie $\rho_{\Lambda} = \Lambda / 8 \pi G$ est indépendante de $a$. Il en découle $w_{\Lambda} = -1$ (équation~\ref{eq:rho_vs_a}) : la constante cosmologique peut être interprétée comme un fluide de densité d'énergie constante et de pression négative. Nous verrons dans la suite de ce paragraphe que sa domination dans le bilan énergétique de l'univers actuel est responsable de l'accélération de l'expansion.
 Enfin, en utilisant les définitions précédentes, nous obtenons l'évolution du taux d'expansion
 \begin{equation}
   \label{eq:friedmann7}

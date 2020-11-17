@@ -21,7 +21,7 @@ Nous présentons ici comment les spectres sont déduits des photons acquis par l
 
 \section{Réduction des données}
 \label{sec:reduction_donnees}
-L'observation de chaque plaque fournit des données en deux dimensions : la première correspond aux différentes longueurs d'onde, la seconde aux différentes fibres (voir figure~\ref{fig:photo_ccd}). La chaîne de réduction des données transforme ces informations en une liste de spectres.
+L'observation de chaque plaque fournit des données en deux dimensions : la première correspond aux différentes longueurs d'onde, la seconde aux différentes fibres (figure~\ref{fig:photo_ccd}). La chaîne de réduction des données transforme ces informations en une liste de spectres.
 Premièrement, chaque spectre est extrait de l'image acquise par le CCD. Le spectre est étalonné en longueur d'onde à l'aide de lampes à arc. Le flux est calibré en utilisant les spectres des fibres dédiées à des étoiles standards.
 Puis le fond du ciel, estimé dans chaque demi-plaque grâce aux fibres dédiées, est soustrait à chaque spectre.
 La variance dans chaque pixel est ensuite estimée. Elle prend en compte le bruit de photon et le bruit de l'électronique. Les pixels affectés par des rayons cosmiques sont rejetés.
@@ -59,7 +59,7 @@ Tous les quasars du relevé BOSS ont été inspectés visuellement \autocite{Par
   \caption{Spectre d'un quasar pris par SDSS présentant un BAL. Le spectre est très fortement absorbé pour les longueurs d'onde légèrement inférieures à chaque raie d'émission.}
   \label{fig:exemple_bal}
 \end{figure}
-Cependant, à cause du grand nombre de quasars observés par eBOSS (voir figure~\ref{fig:quasar_number}), l'observation visuelle n'a pas pu être effectuée pour tous ces objets.
+Cependant, à cause du grand nombre de quasars observés par eBOSS (figure~\ref{fig:quasar_number}), l'observation visuelle n'a pas pu être effectuée pour tous ces objets.
 % Une deuxième classification, fondée sur le pipeline de SDSS, est alors appliquée \autocite{CITE:Lyke in prep}.
 % Elle est complétée par l'algorithme \texttt{QuasarNET} \autocite{Busca2018} afin de réduire le nombre de mauvaises et non-identifications, et donc le nombre d'inspections visuelles nécessaires. Grâce à \texttt{QuasarNET}, ce chiffre est réduit à \SI{0.6}{\percent} des spectres, soit \num{8581} spectres. Une sous-échantillon du superset est alors construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
 Afin de vérifier la première identification faite par le pipeline de SDSS, une seconde classification est alors effectuée \autocite{Lyke2020}. Elle est complétée par l'algorithme \texttt{QuasarNET} \autocite{Busca2018}. Ceci réduit le nombre d'identifications douteuses et donc le nombre d'inspections visuelles requises. A la fin, \SI{0.6}{\percent} des spectres, soit \num{8581} spectres, requièrent une inspection visuelle.

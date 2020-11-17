@@ -545,7 +545,7 @@ Pour chaque bin en redshift, la fonction de corrélation est présentée dans qu
 Les lignes continues donnent l'ajustement du modèle produit par \texttt{picca}.
 % Nous pouvons remarquer que les raw mocks sont en excellent accord avec le modèle de \texttt{picca}.
 Ce modèle décrit très bien les raw mocks.
-Les lignes en pointillés donnent la prédiction des mocks. L'écart visible entre la corrélation estimée à partir des raw mocks et la prédiction provient de l'écart entre la corrélation du champ $\delta_g$ et la prédiction que nous en faisons (voir figure~\ref{fig:xi_g}). Cet écart se propage lorsque nous passons de la prédiction de $\xi_g$ à la prédiction de $\xi_F$ grâce à l'équation~\ref{eq:xig2xif}.
+Les lignes en pointillés donnent la prédiction des mocks. L'écart visible entre la corrélation estimée à partir des raw mocks et la prédiction provient de l'écart entre la corrélation du champ $\delta_g$ et la prédiction que nous en faisons (figure~\ref{fig:xi_g}). Cet écart se propage lorsque nous passons de la prédiction de $\xi_g$ à la prédiction de $\xi_F$ grâce à l'équation~\ref{eq:xig2xif}.
 % \begin{figure}
 %   \centering
 %   \includegraphics[scale=0.4]{cf_eboss00_4bins}
@@ -619,7 +619,7 @@ Les paramètres $b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ mesurés 
 Nous pouvons cependant noter une légère déviation entre $\beta_{\mathrm{Ly}\alpha}$ mesuré dans les raw mocks et la valeur prédite pour les faibles redshifts.
 % Ceci peut être dû à la forme de la distribution du nombre de paires en fonction du redshift qui peut modifier le paramètre $c$ évalué au redshift effectif de la mesure.
 % \textbf{Ceci peut être dû à la forme de la distribution du nombre de paires de pixels en fonction du redshift : la prédiction est générée avec un $c(z)$ constant, évalué au redshift $z$ pour lequel la prédiction est calculée, alors que dans le cas des raw mocks, $c(z)$ est évalué au redshift $z$ de chaque pixel. La distribution du nombre de paires en fonction du redshift, dont les variations sont importantes aux faibles redshifts, pourrait impacter le paramètre $c$ effectif pour ces redshifts.}
-Comme nous l'avons déjà fait remarquer, la prédiction ne décrit pas parfaitement la fonction de corrélation du champ $\delta_g$, en particulier le long de la ligne de visée (voir figure~\ref{fig:xi_g}). Ceci peut expliquer les déviations observées dans la mesure de $\beta_{\mathrm{Ly}\alpha}$.
+Comme nous l'avons déjà fait remarquer, la prédiction ne décrit pas parfaitement la fonction de corrélation du champ $\delta_g$, en particulier le long de la ligne de visée (figure~\ref{fig:xi_g}). Ceci peut expliquer les déviations observées dans la mesure de $\beta_{\mathrm{Ly}\alpha}$.
 
 
 
@@ -725,7 +725,7 @@ Le modèle utilisé pour ajuster la corrélation QSO$\times$QSO est le même que
 Nous n'incluons pas non plus le terme représentant l'effet produit par la taille non nulle des voxels, mais il serait justifié de le faire.
 Dans le cas de la corrélation QSO$\times$QSO, contrairement au cas du \lya{}, nous avons la relation $b_{\textsc{QSO}} \beta_{\textsc{QSO}} = f$, où $f$ est le taux de croissance des structures.
 % Lors de l'ajustement, nous fixons donc le paramètre $b_{\eta, \textsc{QSO}} = 1$, et nous ajustons les paramètres $\beta_{\textsc{QSO}}$ et $f$. Les résultats de l'ajustement dans chaque bin en redshift est donné dans le tableau~\ref{tab:auto_qso_4bins}.
-Ainsi, plutôt que d'ajuster le paramètre $b_{\eta} = b \beta / f$ comme dans le cas du \lya{} (voir équation~\ref{eq:def_bias}), nous fixons le paramètre $b_{\eta, \textsc{QSO}} = 1$ et nous ajustons les paramètres $\beta_{\textsc{QSO}}$ et $f$.
+Ainsi, plutôt que d'ajuster le paramètre $b_{\eta} = b \beta / f$ comme dans le cas du \lya{} (équation~\ref{eq:def_bias}), nous fixons le paramètre $b_{\eta, \textsc{QSO}} = 1$ et nous ajustons les paramètres $\beta_{\textsc{QSO}}$ et $f$.
 Le résultat de l'ajustement dans chaque bin en redshift est donné dans le tableau~\ref{tab:auto_qso_4bins}.
 Nous pouvons voir dans ce tableau que les paramètres $\apar{}$ et $\aperp{}$ sont compatibles avec 1 à moins de $2 \sigma $.
 Le facteur de croissance $f$ est lui aussi en accord avec la cosmologie utilisée dans les mocks. Celui-ci varie de \num{0.960} à $z=\num{2.050}$ à \num{0.985} à $z=\num{3.257}$.
