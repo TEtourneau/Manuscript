@@ -15,7 +15,7 @@ Durant ces trois ans, j'ai développé des simulations qui imitent les données 
 Ces simulations produisent un relevé de quasars, dont les forêts \lya{} présentes dans les spectres synthétiques possèdent les bonnes fonctions de corrélation.
 Pour ce faire, elles utilisent les champs aléatoires gaussiens. D'abord, nous générons un champ aléatoire qui représente le champ de densité. Nous donnons à ce champ aléatoire la bonne fonction de corrélation à l'aide des transformations de Fourier.
 Puis, grâce à une transformation log-normale, nous tirons un relevé de quasars. Ensuite, à partir de chaque quasars, nous reconstruisons la densité le long de la ligne de visée en interpolant ce champ. Enfin, nous obtenons la fraction de flux transmise en appliquant l'approximation de Gunn-Peterson (FGPA) au champ interpolé le long de la ligne de visée.
-Ceci nous permet d'obtenir la forêt d'aborption \lya{} pour chaque quasar de notre relevé.
+Ceci nous permet d'obtenir la forêt d'absorption \lya{} pour chaque quasar de notre relevé.
 Aussi, nous calculons la prédiction des fonctions de corrélation que nous devons obtenir avec ces simulations. Ceci nous permet de vérifier leur construction en comparant la fonction de corrélation prédite à la fonction de corrélation mesurée dans nos simulations.
 Enfin, l'analyse des fonctions de corrélation issues des mocks (chapitre~\ref{chap:mock_ana}) montre que les mocks sont en très bon accord avec la prédiction, et qu'ils sont très bien décrits par les modèles utilisés pour ajuster les données.
 
