@@ -33,7 +33,7 @@ Nous présentons ici les estimateurs utilisés pour calculer la fonction d'auto-
 Pour le calcul des fonctions de corrélation impliquant le \lya{}, il n'est pas utile d'avoir un catalogue aléatoire. En effet, le champ $\delta_F$ nous donne directement accès, à un biais près, au contraste de densité. Nous pouvons donc calculer la fonction de corrélation avec une formule du type de l'équation~\ref{eq:def_cf}, ce qui n'est pas possible dans le cas des objets ponctuels, et nous n'avons pas besoin de tenir compte de l'inhomogénéité de la sélection des cibles. Les poids servent donc uniquement à maximiser le rapport signal sur bruit.
   % Ceci nous permet aussi de ne pas tenir compte de l'homogénéité de la sélection des cibles, et donc d'utiliser des poids qui servent uniquement à maximiser le rapport signal sur bruit.}
 
-Pour le calcul du champ $\delta_F$, nous distingons deux cas : le cas où nous analysons les \emph{raw mocks} et le cas où nous analysons les \emph{cooked mock} ou les données.
+Pour le calcul du champ $\delta_F$, nous distinguons deux cas : le cas où nous analysons les \emph{raw mocks} et le cas où nous analysons les \emph{cooked mock} ou les données.
 Les raw mocks (les mocks bruts, non préparés) désignent les mocks avant d'avoir tourné le code \texttt{quickquasars}.
 Les fonctions de corrélation sont alors calculées en utilisant directement la fraction de flux transmise $F$ donnée dans les fichiers de transmissions. Etant donné que pour chaque forêt, nous avons directement accès à $F$, le champ $\delta_F$ est donné par
 \begin{equation}
@@ -125,7 +125,7 @@ Similairement au \lya{}, les poids $w_j$ associés aux quasars favorisent les qu
 \end{equation}
 où $\gamma_{\textsc{QSO}} = \num{1.44} \pm \num{0.08}$ \autocite{Bourboux2019}. Dans le calcul de la fonction de corrélation croisée \lya{}$\times$QSO, nous nous restreignons aux paires pour lesquelles $\rperp{} \in [0 \, ; 200] \si{\perh\Mpc}$.
 Contrairement à l'auto-corrélation du \lya{}, la fonction de corrélation croisée n'est pas symétrique en $\rpar{}$.
-Cette assymétrie est produite par l'erreur systématique sur la mesure du redshift des quasars, et aussi par le rayonnement des quasars qui n'est pas isotrope.
+Cette asymétrie est produite par l'erreur systématique sur la mesure du redshift des quasars, et aussi par le rayonnement des quasars qui n'est pas isotrope.
 La fonction de corrélation croisée est donc calculée dans les bins pour lesquels $\rpar{} \in [-200 \, ; 200] \si{\perh\Mpc}$. Ceci représente $100 \times 50 = \num{5000}$ bins.
 
 
@@ -183,7 +183,7 @@ Nous utilisons aussi cet estimateur pour calculer la fonction d'auto-corrélatio
 
 \section{Les matrices de distorsion}
 \label{sec:calcul_dmat}
-L'ajustement du continuum nécessaire au calcul du champ $\delta_F$ dans les données et les coocked mocks biaise le champ mesuré. Cependant, grâce à la transformation (équation~\ref{eq:deltaF3}) décrite dans la section~\ref{subsec:projdelta}), l'effet sur la fonction de corrélation peut-être pris en compte.
+L'ajustement du continuum nécessaire au calcul du champ $\delta_F$ dans les données et les cooked mocks biaise le champ mesuré. Cependant, grâce à la transformation (équation~\ref{eq:deltaF3}) décrite dans la section~\ref{subsec:projdelta}), l'effet sur la fonction de corrélation peut-être pris en compte.
 % L'idée est la suivante : plutôt que d'essayer de corriger la distorsion induite par l'ajustement du continuum sur la fonction de corrélation, cette distorsion est calculée et appliquée au modèle qui est ajusté aux données (\#prov pourquoi on inverse pas la dmat?).
 L'idée est la suivante : modéliser la distorsion induite par l'ajustement du continuum et par la transformation~\ref{eq:deltaF3} sur la fonction de corrélation, appliquer cette distorsion au modèle, puis ajuster le modèle \og distordu \fg aux données.
 % L'ajustement du continuum et la transformation~\ref{eq:deltaF3} induisent des corrélations le long de la ligne de visée. 
@@ -232,7 +232,7 @@ De cette matrice de covariance, la matrice de corrélation est définie comme
   Corr_{AB} = \frac{C_{AB}}{\sqrt{C_{AA} C_{BB}}} \; .
 \end{equation}
 La matrice de corrélation donne la corrélation, comprise dans $[-1 \, ; 1]$, d'un bin A avec un bin B.
-Afin d'estimer la matrice de covariance, le relevé est divisé en pixels HEALPix, en utilisant $\texttt{nside} = \num{16}$. Cette résolutivon produit des pixels d'une taille sur le ciel de $\num{3.7} \times \num{3.7} = \SI{13.4}{\square\deg}$, correspondant à $\num{250} \times \num{250} (\si{\perh\Mpc})^2$ à un redshift $z = \num{2.33}$. Ces sous-échantillons sont suffisamment grands pour pouvoir négliger les corrélations entre différents pixels HEALPix et ainsi estimer la matrice de covariance comme la variance d'un sous-échantillon à un autre. La matrice de covariance est donc calculée comme
+Afin d'estimer la matrice de covariance, le relevé est divisé en pixels HEALPix, en utilisant $\texttt{nside} = \num{16}$. Cette résolution produit des pixels d'une taille sur le ciel de $\num{3.7} \times \num{3.7} = \SI{13.4}{\square\deg}$, correspondant à $\num{250} \times \num{250} (\si{\perh\Mpc})^2$ à un redshift $z = \num{2.33}$. Ces sous-échantillons sont suffisamment grands pour pouvoir négliger les corrélations entre différents pixels HEALPix et ainsi estimer la matrice de covariance comme la variance d'un sous-échantillon à un autre. La matrice de covariance est donc calculée comme
 \begin{equation}
   C_{AB} = \frac{1}{W_A W_B} \sum_s W_A^s W_B^s \left( \xi_A^s \xi_B^s - \xi_A \xi_B \right) \; ,
 \end{equation}
@@ -276,7 +276,7 @@ Le spectre de puissance $P_{\mathrm{peak}}$ est alors obtenu comme la différenc
 Le terme exponentiel devant $P_{\mathrm{peak}}$, paramétré par $\Sigma_{\parallel}$ et $\Sigma_{\perp}$, prend en compte l'élargissement non linéaire du pic BAO. Nous utilisons $\Sigma_{\parallel} = \SI{6.42}{\perh\Mpc}$ et $\Sigma_{\perp} = \SI{3.26}{\perh\Mpc}$  \autocite{eisenstein_robustness_2007}.
 Le terme $F_{\mathrm{NL}}$ prend en compte les non-linéarités aux petites échelles. Nous distinguons $F_{\mathrm{NL}}^{\mathrm{auto}}$ et $F_{\mathrm{NL}}^{\mathrm{cross}}$. Pour l'auto-corrélation, les effets non linéaires proviennent de l'élargissement thermique, des vitesses particulières et de la croissance des structures non linéaire.
 Comme lors de la modélisation du $P^{\mathrm{1D}}$, nous utilisons le modèle décrit dans \textcite{Arinyo-i-Prats2015}. Nous avons donc $F_{\mathrm{NL}}^{\mathrm{auto}}(k, \mu) = D(k, \mu)$, où $D$ est défini dans l'équation~\ref{eq:p1d_prats}. Les paramètres utilisés sont une interpolation à $z = \num{2.334}$ de ceux donnés dans la section \og Planck \fg de la table 7 de \textcite{Arinyo-i-Prats2015}.
-Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéaires des quasars. Cet effet est modélisé par une lorrentzienne :
+Pour la corrélation croisée, l'effet dominant est dû aux vitesses non linéaires des quasars. Cet effet est modélisé par une lorentzienne :
 \begin{equation}
   F_{\mathrm{NL}}^{\mathrm{cross}}(\kpar{}) = \frac{1}{1 + (\kpar{} \sigma_v)^2} \; ,
 \end{equation}
@@ -288,11 +288,11 @@ Il est défini comme le produit des transformés de Fourier de la fonction porte
 \end{equation}
 avec $R_{\parallel}$ et $R_{\perp}$ la largeur des bins, soit \SI{4}{\perh\Mpc}.
 
-Afin de modéliser la corrélation croiśee \lya{}$\times$QSO, nous ajoutons le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$, inclus comme
+Afin de modéliser la corrélation croisée \lya{}$\times$QSO, nous ajoutons le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$, inclus comme
 \begin{equation}
   \rpar{} = \rpar{}_{mesure} + \Delta_{\rpar{}, \textsc{QSO}} \; ,
 \end{equation}
-où $\rpar{}_{mesure}$ est la séparation mesurée des paires $(i,j)$, et $\rpar{}$ est la séparation utilisée dans le modèle de la corrélation croisée. L'ajout de ce paramètre permet de prendre en compte les erreurs systématiques sur la mesure du redshift des quasars, qui rendent assymétrique la fonction de corrélation \lya{}$\times$QSO.
+où $\rpar{}_{mesure}$ est la séparation mesurée des paires $(i,j)$, et $\rpar{}$ est la séparation utilisée dans le modèle de la corrélation croisée. L'ajout de ce paramètre permet de prendre en compte les erreurs systématiques sur la mesure du redshift des quasars, qui rendent asymétrique la fonction de corrélation \lya{}$\times$QSO.
 
 % \subsubsection{Modélisation des HCD}
 \paragraph{}
@@ -307,15 +307,15 @@ où $F_{\textsc{HCD}}$ est une fonction qui dépend de la distribution en $z$ et
   \label{eq:f_hcd_def}
   F_{\textsc{HCD}}(\kpar{}) = \exp(- L_{\textsc{HCD}} \kpar{}) \; ,
 \end{equation}
-où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLAs dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} au redshift effectif de la mesure. Par ailleurs , $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons donc sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle. Le paramètre $\beta_{\textsc{HCD}}$ est aussi très dégénéré avec les autres paramètres du modèle, nous utilisons un prior gaussien centré sur \num{0.5} et avec une largeur \num{0.09} lors des ajustements.
+où $L_{\textsc{HCD}}$ est la taille typique des HCD non masqués. La résolution du spectrographe d'eBOSS rend possible l'identification des DLA dont la largeur est supérieure à \SI{2}{\nano\meter}, correspondant à une taille d'environ \SI{14}{\perh\Mpc} au redshift effectif de la mesure. Par ailleurs , $L_{\textsc{HCD}}$ est très dégénéré avec avec les autres paramètres du modèle, comme le biais des HCD ou les paramètres du \lya{}. Nous fixons donc sa valeur à \SI{10}{\perh\Mpc} dans l'ajustement du modèle. Le paramètre $\beta_{\textsc{HCD}}$ est aussi très dégénéré avec les autres paramètres du modèle, nous utilisons un prior gaussien centré sur \num{0.5} et avec une largeur \num{0.09} lors des ajustements.
 
-Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, la dépendance en redshit de $\delta_F$ est prise en compte.
+Afin de pouvoir ajuster le même modèle sur tous les bins $(\rpar{}, \rperp)$, la dépendance en redshift de $\delta_F$ est prise en compte.
 En considérant que $\beta_{\mathrm{Ly}\alpha}$ est constant avec le redshift, nous avons $\delta_F(z) \propto G(z) b_{\mathrm{Ly}\alpha}(z)$, avec $G(z) \propto (1+z)^{-1}$.
 Concernant le biais du \lya{}, nous utilisons la même dépendance que celle choisie lors du calcul des poids (équation~\ref{eq:wieghts2}), c'est à dire $b_{\mathrm{Ly}\alpha} \propto (1+z)^{\gamma_{\mathrm{Ly}\alpha}}$, avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \autocite{McDonald2004}.
 En ce qui concerne $\beta_{\mathrm{Ly}\alpha}$, nous considérons lors de l'ajustement du modèle qu'il est indépendant du redshift. Comme montré dans l'analyse présentée dans le chapitre~\ref{chap:data_ana}, $\beta_{\mathrm{Ly}\alpha}$ n'est pas indépendant du redshift. Cependant, le redshift moyen dans chaque bin $(\rpar{}, \rperp)$ varie peu. Lors de l'analyse de l'ensemble des données DR16, il varie dans la gamme $\num{2.31} < z < \num{2.39}$. Cette variation correspond à une variation de $\beta_{\mathrm{Ly}\alpha}$ de moins de \SI{5}{\percent}. De plus, elle est d'autant plus faible lorsque l'analyse est faite dans différents bins en redshift.
 
 La fonction de corrélation croisée \lya{}$\times$QSO est sensible au produit $b_{\mathrm{Ly}\alpha}(1+\beta_{\mathrm{Ly}\alpha} \mu^2) b_{\textsc{QSO}}(1+\beta_{\textsc{QSO}} \mu^2)$.
-L'ajustement de cette seule fonction de corrélation ne permet donc pas de lever la dégénéréscence des paramètres \lya{} et des paramètres des QSO.
+L'ajustement de cette seule fonction de corrélation ne permet donc pas de lever la dégénérescence des paramètres \lya{} et des paramètres des QSO.
 Nous fixons donc $b_{\textsc{QSO}}$ et $\beta_{\textsc{QSO}}$. Concernant le biais des quasars, comme pour le \lya{} nous prenant en compte l'évolution avec le redshift. Il est paramétrisé comme
 \begin{equation}
   b_{\textsc{QSO}}(z) = \num{3.77} \left( \frac{1 + z}{1+\num{2.334}} \right)^{\num{1.44}} \; . 
@@ -333,11 +333,11 @@ Une fois les composantes multiplicatives incluses au modèle, nous pouvons trans
 Pour ce faire,
 la fonction de corrélation est décomposée en polynômes de Legendre $P_l$ jusqu'à $l_{max} = 6$. Pour chaque $l \in [0 \, ; 2 \, ; 4\, ; 6]$,
 % une transformation de Fourier est appliquée au spectre de puissance (\#prov en fait c'est plutôt une intégrale avec une fonction de Bessel. Donner une ref du papier d'Hamilton ? C'est aussi dans le papier Kirkby, eq 2.7 - 2.9).
-le specre de puissance est multiplié par la fonction de Bessel $j_l$ puis intégré sur $\mu_k$ (voir l'équation 2.7 de \textcite{Kirkby2013}).
+le spectre de puissance est multiplié par la fonction de Bessel $j_l$ puis intégré sur $\mu_k$ (voir l'équation 2.7 de \textcite{Kirkby2013}).
 Etant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog \autocite{Hamilton1999}, qui apporte à la fois rapidité et précision.
 Ainsi, en suivant cette procédure, nous obtenons les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ en choisissant $i = j = \mathrm{Ly}\alpha$, et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ en choisissant $i = \mathrm{Ly}\alpha$ et $j = \textsc{QSO}$.
 Afin de pouvoir ajuster les fonctions de corrélation calculées avec les données, nous devons prendre en compte dans nos modèles les corrélations parasites. Ces corrélations s'ajoutent au $\xi$ modèle calculé précédemment.
-A ce stade, nous distingons le modèle utilisé pour l'auto-corrélation et la corrélation croisée.
+A ce stade, nous distinguons le modèle utilisé pour l'auto-corrélation et la corrélation croisée.
 Le modèle de l'auto-corrélation \lya{}$\times$\lya{} est défini comme
 \begin{equation}
   \label{eq:cf_model1}
@@ -353,7 +353,7 @@ Le modèle de la corrélation croisée \lya{}$\times$QSO est défini comme
   \label{eq:xcf_model1}
   \xi = \xi_{\mathrm{Ly}\alpha\times \textsc{QSO}} + \sum_{m} \tilde \xi_{m \times \textsc{QSO}} + \xi_{prox} \; ,
 \end{equation}
-où $\tilde \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ (interprété comme du \lya{}) avec les quasars, et $\xi_{prox}$ donne la corrélation induite par l'effet de proximité des quasars. Cest termes sont décrits dans les prochains paragraphes.
+où $\tilde \xi_{m \times \textsc{QSO}}$ est la corrélation du métal $m$ (interprété comme du \lya{}) avec les quasars, et $\xi_{prox}$ donne la corrélation induite par l'effet de proximité des quasars. Ces termes sont décrits dans les prochains paragraphes.
 
 \paragraph{}
 Afin de modéliser la corrélation des métaux, nous utilisons le modèle défini précédemment, utilisé pour décrire les corrélations $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ et $\xi_{\mathrm{Ly}\alpha\times\textsc{\textsc{QSO}}}$.
@@ -399,7 +399,7 @@ De plus, comme la quantité de métaux dans le milieu intergalactique est bien m
 
 \begin{table}[]
   \centering
-  \caption{Liste des métaux inclus dans le modèle ajusté aux données. La 3\up{e} colonne donne la séparation reconstruire pour une séparation réelle $r=0$. CIV(eff) indique la raie effective du carbon IV : la résolution du spectrographe d'eBOSS étant trop faible pour distinguer le doublet du CIV, nous ajustons la combinaison des deux raies. La séparation liée au CIV est bien supérieure à \SI{200}{\perh\Mpc}, la corrélation \lya{}$\times$CIV n'a donc pas d'effet sur nos mesures. Nous modélisons cependant l'effet lié à l'auto-corrélation CIV$\times$CIV.}
+  \caption{Liste des métaux inclus dans le modèle ajusté aux données. La 3\up{e} colonne donne la séparation reconstruire pour une séparation réelle $r=0$. CIV(eff) indique la raie effective du carbone IV : la résolution du spectrographe d'eBOSS étant trop faible pour distinguer le doublet du CIV, nous ajustons la combinaison des deux raies. La séparation liée au CIV est bien supérieure à \SI{200}{\perh\Mpc}, la corrélation \lya{}$\times$CIV n'a donc pas d'effet sur nos mesures. Nous modélisons cependant l'effet lié à l'auto-corrélation CIV$\times$CIV.}
   \label{tab:metals_in_mocks}
   \begin{tabular}{lll}
     \toprule
@@ -425,7 +425,7 @@ De plus, comme la quantité de métaux dans le milieu intergalactique est bien m
 
 \paragraph{}
 Le terme additionnel suivant est le terme $\xi_{ciel}$. Ce terme prend en compte les corrélations induites par la soustraction du fond de ciel. Lors de la réduction des données, décrite dans la section~\ref{sec:reduction_donnees}, le spectre du fond de ciel est soustrait à tous les spectres d'une même demi-plaque. Ceci induit alors des corrélations entre tous ces spectres pour $\rpar{} = 0$. A cause de la distorsion induite par l'ajustement du continuum, cette effet ne se limite pas à $\rpar{} = 0$.
-L'effet est modélisé par une fonction gausienne de $\rperp{}$ :
+L'effet est modélisé par une fonction gaussienne de $\rperp{}$ :
 \begin{equation}
   \xi_{ciel}(\rpar{}, \rperp{}) =
   \left\{
@@ -435,7 +435,7 @@ L'effet est modélisé par une fonction gausienne de $\rperp{}$ :
     \end{array}
 \right.  \; .
 \end{equation}
-Les paramètres $A_{sky}$ et $\sigma_{sky}$ sont laissés libres lors de l'ajustement des données. Ils donnent l'amplitude et la largeur de la gausienne.
+Les paramètres $A_{sky}$ et $\sigma_{sky}$ sont laissés libres lors de l'ajustement des données. Ils donnent l'amplitude et la largeur de la gaussienne.
 Le terme $\xi_{ciel}$ n'est présent que dans l'ajustement de l'auto-corrélation, car ces corrélations parasites ne sont induites que lorsqu'on corrèle des pixels d'absorption issus de deux spectres présents sur la même demi-plaque. Cet effet n'a donc pas lieu d'être pour la corrélation croisée.
 
 \paragraph{}
@@ -447,7 +447,7 @@ où $\xi_{0,prox}$ donne l'amplitude de l'effet. L'émission est supposée isotr
 
 
 \paragraph{}
-Une fois tous ces termes inclus, nous obtenons un mondèle qui décrit la fonction de corrélation de la matière dans l'espace des redshifts, à un biais près, et qui prend en compte les différents effets astrophysiques ou instrumentaux qui affectent les données.
+Une fois tous ces termes inclus, nous obtenons un modèle qui décrit la fonction de corrélation de la matière dans l'espace des redshifts, à un biais près, et qui prend en compte les différents effets astrophysiques ou instrumentaux qui affectent les données.
 Afin de pourvoir correctement comparer notre modèle aux fonctions de corrélation calculées avec les données, nous devons prendre en compte la distorsion due à l'ajustement du continuum. Ceci est fait, comme décrit dans la section~\ref{sec:calcul_dmat}, grâce à la matrice de distorsion. Le modèle distordu est alors donné par
 \begin{equation}
   \label{eq:model_dist}
@@ -463,11 +463,11 @@ Ainsi, le modèle qui est ajusté aux données est $\xi_{\mathrm{distorsion}}(A)
 Afin d'analyser les fonctions de corrélation \lya{}$\times$\lya{} et \lya{}$\times$QSO des mocks, nous utilisons les modèles ajustés sur les données et décrits dans la section précédente. Cependant, un certain nombre d'effets modélisés dans les données ne sont pas présents dans les mocks. Nous modifions donc légèrement les modèles décrits précédemment.
 
 Premièrement, nous n'incluons pas l'élargissement non linéaire du pic BAO dans les mocks. %Cet effet n'est pas non plus inclus par \texttt{quickquasars}. Lors du fit des mocks, nous forçons donc $\Sigma_{\perp} = \Sigma_{\parallel} = 0$.
-Les non-linéarités prises en compte par le terme $F_{NL}$ ne sont pas non plus présentes dans nos mocks. Ainsi, le spectre de puissance défini dans l'équation~\ref{eq:pk_model1} et utilisé comme modèle pour l'auto-corrélation ne contient pas le terme $F_{NL}^{\mathrm{auto}}$. Cependant, le code \texttt{quickquasars} ajoute une vitesse particulière à chaque quasar. Ceci a pour effet d'ajouter une erreur statistique sur la mesure du redshfit des quasars. Nous gardons donc le terme $F_{NL}^{\mathrm{cross}}$ lorsque nous ajustons la corrélation \lya{}$\times$QSO issues des mocks avec \texttt{quickquasars}. Ce terme n'est pas présent dans le modèle utilisé pour ajuster les raw mocks.
+Les non-linéarités prises en compte par le terme $F_{NL}$ ne sont pas non plus présentes dans nos mocks. Ainsi, le spectre de puissance défini dans l'équation~\ref{eq:pk_model1} et utilisé comme modèle pour l'auto-corrélation ne contient pas le terme $F_{NL}^{\mathrm{auto}}$. Cependant, le code \texttt{quickquasars} ajoute une vitesse particulière à chaque quasar. Ceci a pour effet d'ajouter une erreur statistique sur la mesure du redshift des quasars. Nous gardons donc le terme $F_{NL}^{\mathrm{cross}}$ lorsque nous ajustons la corrélation \lya{}$\times$QSO issues des mocks avec \texttt{quickquasars}. Ce terme n'est pas présent dans le modèle utilisé pour ajuster les raw mocks.
 
 L'effet instrumental causé par la soustraction du fond de ciel sur l'auto-corrélation n'est pas modélisé par \texttt{quickquasars}. Nous n'ajoutons donc pas le terme $\xi_{ciel}$ à $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ dans l'ajustement de l'auto-corrélation.
 L'effet de proximité des quasars sur le champ \lya{} environnant n'est ajouté ni dans les mocks, ni dans \texttt{quickquasars}. Le terme
-$\xi_{prox}$ n'est donc pas inclu dans le modèle de la corrélation croisée.
+$\xi_{prox}$ n'est donc pas inclus dans le modèle de la corrélation croisée.
 
 En ce qui concerne l'ajustement des HCD et des métaux, cela dépend de la version des mocks analysée.
 Pour les raw mocks comme pour les mocks eboss-0.0, ni les HCD ni les métaux ne sont présents. Nous n'incluons donc pas leur modélisation dans ces versions des mocks.
@@ -477,7 +477,7 @@ Les versions eboss-0.3 incluent à la fois les HCD et les métaux. L'ajustement 
 Pour l'ajustement des corrélations croisées \lya{}$\times$QSO, nous gardons le paramètre $\Delta_{\rpar{}, \textsc{QSO}}$. Même si \texttt{quickquasars} ajoute une erreur statistique sur les redshifts des quasars, cette erreur est nulle en moyenne. Nous nous attendons donc à obtenir $\Delta_{\rpar{}, \textsc{QSO}} = 0$ dans l'ajustement des différentes versions des mocks. Ainsi, $\Delta_{\rpar{}, \textsc{QSO}}$ sert de test de la construction des mocks, pour vérifier par exemple que les lignes de visées sont placées correctement à partir de chaque quasar.
 
 \paragraph{}
-Comme pour les données, les fonctions de corrélation sont évaluées sur une grille de séparation d'intervale \SI{4}{\perh\Mpc}. Nous gardons donc le terme $G(\vec k)$ dans la modélisation des mocks.
+Comme pour les données, les fonctions de corrélation sont évaluées sur une grille de séparation d'intervalle \SI{4}{\perh\Mpc}. Nous gardons donc le terme $G(\vec k)$ dans la modélisation des mocks.
 Dans le cas des mocks, nous incluons un terme supplémentaire, qui prend en compte le lissage gaussien appliqué au champ $\delta_l$ interpolé. Ce terme est donné par
 \begin{equation}
   % W(\kpar{}, \kperp{}) = \exp(- \frac{(\kpar{} \sigma^{smooth}_{\parallel})^2 + (\kperp{} \sigma^{smooth}_{\perp})^2}{2}) \; .
@@ -632,14 +632,14 @@ Cette fonction de corrélation estime donc les corrélations parasites, comme ce
 Une fois cette corrélation estimée, nous obtenons la corrélation croisée \lya{}$\times$QSO comme la différence de la corrélation croisée \og normale \fg et de la corrélation \og mélangée \fg.
 Cependant, dans le cas des mocks présentés dans ce manuscrit, cette méthode pour estimer la corrélation croisée \lya{}$\times$QSO à partir des raw mocks ne suffit pas à retirer toutes les corrélations parasites.
 La figure~\ref{fig:xcf_ebossraw_4bins} présente la moyenne des \Nmocks{} corrélations \lya{}$\times$QSO estimées à partir des raw mocks dans  chaque bin en redshift. Les lignes continues donnent le modèle ajusté par picca. Nous remarquons que $r^2\xi(r)$ ne tend pas vers 0 à grand $r$.
-Les déviations par rapport au modèle se compensent en partie lorsque nous regardons la corrélation \lya{}$\times$QSO moyennée dans les quatres bins en redshift. Cette corrélation est présentée sur la figure~\ref{fig:xcf_ebossraw}. L'effet est quand même visible, en particulier sur le graphique de droite, qui présente la corrélation moyennée dans la gamme $0 < \mu < 1$.
+Les déviations par rapport au modèle se compensent en partie lorsque nous regardons la corrélation \lya{}$\times$QSO moyennée dans les quatre bins en redshift. Cette corrélation est présentée sur la figure~\ref{fig:xcf_ebossraw}. L'effet est quand même visible, en particulier sur le graphique de droite, qui présente la corrélation moyennée dans la gamme $0 < \mu < 1$.
 
 Nous ne comprenons pas vraiment d'où proviennent ces corrélations parasites à grande échelle.
 % Ces corrélations ne sont pas présentes dans les mocks, car comme nous le verrons dans la section~\ref{prov}, nous ne les observons pas dans les mocks eboss-0.0 ni eboss-0.2.
 Nous suspectons le calcul du champ $\delta_F$ ou des corrélations : comme nous le verrons dans les sections~\ref{subsec:ana_eboss-0.0} et~\ref{subsec:ana_eboss-0.2}, nous n'observons aucune déviation de la sorte lorsque nous estimons les corrélations \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2.
 % Jusqu'à présent, les corrélations n'étaient pas estimées dans différents bins en redshift. Ainsi, plutôt que de calculer le champ $\delta_F$ dans les quatres bins en redshift que nous utilisons dans cette analyse, il serait intéressant de le calculer sur l'ensemble des forêts, puis d'estimer la corrélation croisée \lya{}$\times$QSO. Ceci est encouragé par le fait que les corrélations parasites semblent se compenser, en partie, lorsque nous moyennons les fonctions de corrélation.
 De plus, nous suspectons aussi le fait que nous calculons les fonctions de corrélation dans différents bins en redshift. Ceci n'était pas fait jusqu'à présent, et est très peu testé.
-Par exemple, le calcul de la corrélation croisée \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2 ne requiert pas, en principe, de retirer la corrélation mélangée. Cependant, lorsque nous avons estimé ces corrélations dans les quatres bins en redshift à partir des mocks eboss-0.0 et eboss-0.2, nous avons observé le même genre de déviations que celles observées sur la figure~\ref{fig:xcf_ebossraw_4bins}. Ces déviations se compensaient lorsque nous moyennions les corrélations des différents bins en redshift. Cependant, dans le but de mesurer la corrélation \lya{}$\times$QSO dans ces différents bins en redshift, nous avons décidé de retirer la corrélation mélangée dans chacun des bins en redshift. Ceci a résolu le problème et retiré les corrélations parasites.
+Par exemple, le calcul de la corrélation croisée \lya{}$\times$QSO à partir des mocks eboss-0.0 ou eboss-0.2 ne requiert pas, en principe, de retirer la corrélation mélangée. Cependant, lorsque nous avons estimé ces corrélations dans les quatre bins en redshift à partir des mocks eboss-0.0 et eboss-0.2, nous avons observé le même genre de déviations que celles observées sur la figure~\ref{fig:xcf_ebossraw_4bins}. Ces déviations se compensaient lorsque nous moyennions les corrélations des différents bins en redshift. Cependant, dans le but de mesurer la corrélation \lya{}$\times$QSO dans ces différents bins en redshift, nous avons décidé de retirer la corrélation mélangée dans chacun des bins en redshift. Ceci a résolu le problème et retiré les corrélations parasites.
 Paradoxalement, cette solution ne fonctionne pas complètement pour les raw mocks. Il serait intéressant de calculer les fonctions de corrélation \lya{}$\times$QSO directement sur l'ensemble des forêts, afin de vérifier que ces corrélations parasites disparaissent.
 
 
@@ -674,10 +674,10 @@ Paradoxalement, cette solution ne fonctionne pas complètement pour les raw mock
 Comme expliqué dans la section~\ref{sec:tuning}, le procédure d'ajustement des mocks nous permet d'obtenir un spectre de puissance à une dimension $P^{\mathrm{1D}}$ correcte dans la gamme $\num{1.8} < z < \num{3.6}$.
 Cependant, lorsque nous calculons le spectre de puissance à une dimension à partir des raw mocks, nous observons des déviations par rapport au modèle sur lequel le $P^{\mathrm{1D}}$ des mocks est ajusté.
 La figure~\ref{fig:p1d_ebossraw} présente le spectre de puissance à une dimension estimé à partir des raw mocks dans différents bins en redshift. Les lignes continues donnent le modèle utilisé pour ajuster les mocks. Pour chacune des valeurs $z$ du redshift indiquées sur cette figure, le spectre de puissance à une dimension est estimée à l'aide de l'équation~\ref{eq:estimateur_p1d}, en considérant uniquement les pixels dont le redshift $z_i$ vérifie $z - \num{0.1} < z_i < z + \num{0.1}$.
-Sur la figure~\ref{fig:p1d_ebossraw}, nous pouvons remarquer une déviation par rapport au modèle pour les redshifts les plus à l'extérieur de l'interval $[\num{1.8};\;\num{3.6}]$.
+Sur la figure~\ref{fig:p1d_ebossraw}, nous pouvons remarquer une déviation par rapport au modèle pour les redshifts les plus à l'extérieur de l'intervalle $[\num{1.8};\;\num{3.6}]$.
 Ceci est étonnant car, comme montré sur la figure~\ref{fig:p1d_tuning}, les $P^{\mathrm{1D}}$ obtenus à la fin de la procédure d'ajustement sont en parfait accord avec le modèle.
 Nous suspectons que les déviations observées sont liées d'une certaine façon à la dépendance avec le redshift des pixels d'absorption \lya{}. En effet, lorsque nous produisons des forêts où tous les pixels d'absorption sont construits au même redshift, nous n'observons pas ces déviations et le spectre de puissance calculé sur ces forêts est en parfait accord avec le modèle.
-Heureusement, les déviations que nous observons concernent uniquement les redshifts les plus à l'extérieur de l'interval $[\num{1.8};\;\num{3.6}]$. Ces déviations ne concernent donc qu'un faible nombre de pixels.
+Heureusement, les déviations que nous observons concernent uniquement les redshifts les plus à l'extérieur de l'intervalle $[\num{1.8};\;\num{3.6}]$. Ces déviations ne concernent donc qu'un faible nombre de pixels.
 
 \begin{figure}
   \centering
@@ -766,7 +766,7 @@ $b_{\mathrm{QSO}} $ & $ 3.134 \pm 0.020$ & $ 3.968 \pm 0.020$ & $ 4.710 \pm 0.03
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{auto_qso}
-  \caption{L'auto-corrélation QSO$\times$QSO calculée sur 10 réalisations des mocks et moyennée sur les quatres bins en redshift. Le graphique de gauche présente la corrélation dans trois bins en $\mu$. Celui de droite présente la corrélation moyennée sur toute la gamme en $\mu$. Les lignes continues donnent l'ajustement du modèle. Les lignes en pointillés donnent la prédiction.}
+  \caption{L'auto-corrélation QSO$\times$QSO calculée sur 10 réalisations des mocks et moyennée sur les quatre bins en redshift. Le graphique de gauche présente la corrélation dans trois bins en $\mu$. Celui de droite présente la corrélation moyennée sur toute la gamme en $\mu$. Les lignes continues donnent l'ajustement du modèle. Les lignes en pointillés donnent la prédiction.}
   \label{fig:auto_qso}
 \end{figure}
 

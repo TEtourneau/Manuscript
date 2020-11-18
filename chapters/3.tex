@@ -28,11 +28,11 @@ La variance dans chaque pixel est ensuite estimée. Elle prend en compte le brui
 Enfin, pour chaque objet, toutes les expositions sont ajoutées pour former un seul et même spectre, avec un plus grand rapport signal sur bruit. Le nombre typique d'expositions par objet varie entre 4 et 6.
 
 \paragraph{}
-Les données que nous utilisons dans ce manuscrit ont été rendues publiques lors de la seixième publication de données SDSS (DR16\footnote{https://www.sdss.org/dr16/}). Elles sont décrites par \textcite{Ahumada2019}.
+Les données que nous utilisons dans ce manuscrit ont été rendues publiques lors de la sixième publication de données SDSS (DR16\footnote{https://www.sdss.org/dr16/}). Elles sont décrites par \textcite{Ahumada2019}.
 \begin{figure}[b]
   \centering
   \includegraphics[scale=0.8]{photo_ccd.pdf}
-  \caption{Photographie d'un capteur CCD. L'axe des absysses indique le numéro de la fibre optique. L'axe des ordonnées donne la longueur d'onde observée.}
+  \caption{Photographie d'un capteur CCD. L'axe des abscisses indique le numéro de la fibre optique. L'axe des ordonnées donne la longueur d'onde observée.}
   \label{fig:photo_ccd}
 \end{figure}
 
@@ -80,7 +80,7 @@ L'analyse \lya{} des données complètes d'eBOSS \autocite{DuMasdesBourboux2020}
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{pixel_number}
-  \caption{Gauche : distribution en redshift des pixels \lyalya{} (bleu) et des pixels\lyalyb{} (noir) (nombres divisés par 50), ainsi que celle des quasars traceurs (rouge). Droite : distribution pondérée du redshift efficace de chaque paire de pixels utilisée pour le calcul de la fonction corrélation du \lya{}. La distibution orange présente les paires de pixels \lyalya{}-\lyalya{}, la verte les paires de pixels \lyalya{}-\lyalyb{}, et la bleu la somme des deux. Les paires représentés sont celles nécessaires pour la mesure de la position du pic BAO, c'est à dire avec une séparation $r \in [\num{80} \,; \num{120}] \si{\perh\Mpc}$. La ligne en pointillés indique le redshift effectif de la mesure, c'est à dire la moyenne de la distribution bleue. Il vaut $z_{eff} = \num{2.334}$.}
+  \caption{Gauche : distribution en redshift des pixels \lyalya{} (bleu) et des pixels\lyalyb{} (noir) (nombres divisés par 50), ainsi que celle des quasars traceurs (rouge). Droite : distribution pondérée du redshift efficace de chaque paire de pixels utilisée pour le calcul de la fonction corrélation du \lya{}. La distribution orange présente les paires de pixels \lyalya{}-\lyalya{}, la verte les paires de pixels \lyalya{}-\lyalyb{}, et la bleue la somme des deux. Les paires représentées sont celles nécessaires pour la mesure de la position du pic BAO, c'est à dire avec une séparation $r \in [\num{80} \,; \num{120}] \si{\perh\Mpc}$. La ligne en pointillés indique le redshift effectif de la mesure, c'est à dire la moyenne de la distribution bleue. Il vaut $z_{eff} = \num{2.334}$.}
   \label{fig:pixel_number}
 \end{figure}
 
@@ -89,9 +89,9 @@ L'analyse \lya{} des données complètes d'eBOSS \autocite{DuMasdesBourboux2020}
 \label{sec:selection_forets}
 L'analyse \lya{} des données complètes d'eBOSS, dont nous nous servons dans ce manuscrit, est présentée dans l'article \textcite{DuMasdesBourboux2020}. Les informations que nous donnons dans la suite de ce chapitre sont tirés de cette article. Nous y référons le lecteur pour davantage d'informations.
 
-Les spectres produits par la chaîne de réduction des données SDSS sont rebinnés : 3 pixels du spectre original, d'une taille $\Delta log_{10}(\lambda) \sim 10^{-4}$, sont combinés en 1 seul pixel d'analyse, d'une taille $\Delta log_{10}(\lambda) \sim 3 \times 10^{-4}$. Ceci est fait afin de réduire le temps de calcul nécessaire pour estimer les fonctions de corrélation. Dans la suite, l'utilisation de \og pixel \fg réfère à ces pixels d'analyse.
+Les spectres produits par la chaîne de réduction des données SDSS sont \emph{rebinnés} : 3 pixels du spectre original, d'une taille $\Delta log_{10}(\lambda) \sim 10^{-4}$, sont combinés en 1 seul pixel d'analyse, d'une taille $\Delta log_{10}(\lambda) \sim 3 \times 10^{-4}$. Ceci est fait afin de réduire le temps de calcul nécessaire pour estimer les fonctions de corrélation. Dans la suite, l'utilisation de \og pixel \fg réfère à ces pixels d'analyse.
 
-L'absorption \lya{} est mesurée dans deux régions disctinctes du spectre. La première, dénommée région \lya{}, correspond aux longueurs d'onde $\num{1040} \leq \lambda_{\mathrm{RF}} \leq \SI{1200}{\angstrom}$, c'est à dire entre les raies d'émission \lyb{} et \lya{}. La seconde, dénommée région \lyb{}, correspond aux longueurs d'onde $\num{920} \leq \lambda_{\mathrm{RF}} \leq \SI{1020}{\angstrom}$, c'est à dire entre la limite de la série de Lyman et la raie d'émission \lyb{}. Les pixels d'absorption \lya{} dans la région \lya{} sont dénommés pixels \lyalya{}, et ceux dans la région \lyb{} sont dénommés pixels \lyalyb{}.
+L'absorption \lya{} est mesurée dans deux régions distinctes du spectre. La première, dénommée région \lya{}, correspond aux longueurs d'onde $\num{1040} \leq \lambda_{\mathrm{RF}} \leq \SI{1200}{\angstrom}$, c'est à dire entre les raies d'émission \lyb{} et \lya{}. La seconde, dénommée région \lyb{}, correspond aux longueurs d'onde $\num{920} \leq \lambda_{\mathrm{RF}} \leq \SI{1020}{\angstrom}$, c'est à dire entre la limite de la série de Lyman et la raie d'émission \lyb{}. Les pixels d'absorption \lya{} dans la région \lya{} sont dénommés pixels \lyalya{}, et ceux dans la région \lyb{} sont dénommés pixels \lyalyb{}.
 De plus, l'analyse se limite aux pixels dont la longueur d'onde observée est comprise entre $\num{3600} \leq \lambda_{\mathrm{obs}} \leq \SI{6000}{\angstrom}$.
 La limite inférieure provient de la sensibilité des CCD et de l'augmentation des absorptions atmosphériques intenses dans l'UV. La limite supérieure provient des raies d'émission du ciel dans le proche infrarouge qui bruitent le signal.
 % à cause notamment des absorptions atmosphériques intenses dans l'UV, et des raies d'émissions du ciel dans le proche infrarouge.
@@ -125,7 +125,7 @@ Afin de prendre en compte la variabilité d'un spectre à un autre, le produit $
   \overline F(\lambda) C_q(\lambda) = \overline C(\lambda_{\mathrm{RF}})(a_q + b_q \log_{10}(\lambda)) \; ,
 \end{equation}
 où $\overline C(\lambda_{\mathrm{RF}})$ donne le continuum moyenné sur tous les spectres, en fonction de la longueur d'onde dans le référentiel du quasar. $a_q$ et $b_q$ sont propres à chaque quasar, ils modélisent la diversité des quasars.
-Les termes $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$ sont déterminés en minimisant la fonction de vraissemblance $L$, qui s'exprime comme
+Les termes $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$ sont déterminés en minimisant la fonction de vraisemblance $L$, qui s'exprime comme
 \begin{equation}
   \label{eq:likelihood}
   - 2 \ln L = \sum\limits_{i} \frac{\left[f_{i} - \overline F C_q(\lambda_{i}, a_q, b_q)\right]^2}{\sigma_q^2 (\lambda_i)} + \ln [\sigma_q^2 (\lambda_i)] \;  .
@@ -137,10 +137,10 @@ La variance $\sigma_q^2(\lambda)$ dans chaque pixel est donnée par
 \end{equation}
 Le terme $\eta(\lambda)\sigma_{\mathrm{instru}, q}^2(\lambda)$ rend compte de la variance qui est provoquée par l'instrument et liée à l'incertitude sur la mesure des flux. Le terme $\sigma_{\mathrm{cosmo}}(\lambda)$ est purement cosmologique et donne la variance propre au champ d'absorption du \lya{}. Il traduit le fait que certaines régions de l'univers peuvent absorber plus ou moins que la moyenne. Du fait de l'isotropie, $\sigma_{\mathrm{cosmo}}$ ne dépend que de $z$. Le terme ad hoc $\epsilon(\lambda)(\overline F C(\lambda))^4 / \sigma_{\mathrm{instru},q}^2 (\lambda)$ rend compte du fait que la variance augmente avec le rapport signal sur bruit, probablement à cause de la diversité des quasars.
 % \textbf{Enfin, le terme $\ln (\sigma_q^2)$ dans l'expression de la vraissemblance provient du fait que les erreurs $\sigma_q$ utilisées dans la détermination de $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$ ne sont pas constantes et dépendent elles mêmes de ces paramètres.}
-Enfin, le terme $\ln [\sigma_q^2]$ dans l'expression de la vraissemblance provient de la normalisation $\sqrt{2 \pi \sigma^2}$ au dénominateur des distributions gaussiennes. Ce terme est généralement omis car constant. Mais dans notre cas, $\sigma_q$ dépend de $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$.
+Enfin, le terme $\ln [\sigma_q^2]$ dans l'expression de la vraisemblance provient de la normalisation $\sqrt{2 \pi \sigma^2}$ au dénominateur des distributions gaussiennes. Ce terme est généralement omis car constant. Mais dans notre cas, $\sigma_q$ dépend de $a_q$, $b_q$ et $\overline C(\lambda_{\mathrm{RF}})$.
 
-Afin d'obtenir le produit $\overline F C_q$ pour chaque quasar, il faut maximiser la fonction de vraissemblance $L$ (équation~\ref{eq:likelihood}), et donc ajuster les paramètres $a_q$, $b_q$, $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$. Cependant, celle fonction dépend elle même du produit $\overline F C_q$. Pour résoudre ce problème, l'ajustement est fait de manière itérative.
-Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\mathrm{RF}})$, sont initialisés. Ceci permet d'ajuser $\overline F C_q$ sur $f_q(\lambda)$ en maximisant la fonction de vraissemblance $L$. Dans cet ajustement, chaque pixel observé à une longueur d'onde $\lambda$ est pondéré par un poids
+Afin d'obtenir le produit $\overline F C_q$ pour chaque quasar, il faut maximiser la fonction de vraisemblance $L$ (équation~\ref{eq:likelihood}), et donc ajuster les paramètres $a_q$, $b_q$, $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$. Cependant, celle fonction dépend elle même du produit $\overline F C_q$. Pour résoudre ce problème, l'ajustement est fait de manière itérative.
+Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\mathrm{RF}})$, sont initialisés. Ceci permet d'ajuster $\overline F C_q$ sur $f_q(\lambda)$ en maximisant la fonction de vraisemblance $L$. Dans cet ajustement, chaque pixel observé à une longueur d'onde $\lambda$ est pondéré par un poids
 \begin{equation}
   \label{eq:weights}
   w_{q}(\lambda) = \frac{1}{\sigma_{q}^2(\lambda)}  \; .
@@ -214,7 +214,7 @@ Enfin, l'utilisation de $\overline C(\lambda_{\mathrm{RF}})$ dans l'équation~\r
 \begin{equation}
   \hat \delta_q(\lambda_i) = \tilde \delta_q(\lambda_i) - \overline{\tilde \delta(\lambda)} \; .
 \end{equation}
-Dans la suite de ce manuscrit, lorsque nous parlons du champ $\delta$, nous référons à ces $\hat \delta_q(\lambda_i)$. Le graphique de gauche de la figure~\ref{fig:pixel_number} montre la distribution en redshift des $\delta$ dans chaque région d'absortion. Le graphique de droite présente la distribution pondérée par les poids $w_i$ (équation~\ref{eq:weights2}) du redshift effectif de chaque paire, utilisé dans le calcul de la fonction de corrélation.
+Dans la suite de ce manuscrit, lorsque nous parlons du champ $\delta$, nous référons à ces $\hat \delta_q(\lambda_i)$. Le graphique de gauche de la figure~\ref{fig:pixel_number} montre la distribution en redshift des $\delta$ dans chaque région d'absorption. Le graphique de droite présente la distribution pondérée par les poids $w_i$ (équation~\ref{eq:weights2}) du redshift effectif de chaque paire, utilisé dans le calcul de la fonction de corrélation.
 
 
 
