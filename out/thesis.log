@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 NOV 2020 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 NOV 2020 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2605,7 +2605,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.137 ...araison des mocks}{145}{subsection.6.2.1}
+l.137 ...araison des mocks}{146}{subsection.6.2.1}
                                                    [2])
 \tf@toc=\write8
 \openout8 = `thesis.toc'.
@@ -2977,13 +2977,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [28]
 
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 692.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [29 <../figures/intro/bao_dessin.png>]
-<../figures/intro/h_vs_z.png, id=811, 830.10126pt x 647.41875pt>
+<../figures/intro/h_vs_z.png, id=812, 830.10126pt x 647.41875pt>
 File: ../figures/intro/h_vs_z.png Graphic file (type png)
 
 <use ../figures/intro/h_vs_z.png>
@@ -2996,7 +3000,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <../figures/intro/h_vs_z.png>]
+[30]
 
 LaTeX Warning: Command \` invalid in math mode on input line 736.
 
@@ -3007,12 +3011,17 @@ LaTeX Warning: Command \` invalid in math mode on input line 738.
 LaTeX Warning: Command \` invalid in math mode on input line 741.
 
 
+Underfull \vbox (badness 5939) has occurred while \output is active []
+
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31] <../figures/intro/schema_rsd.png, id=850, 923.45pt x 375.4025pt>
+[31 <../figures/intro/h_vs_z.png>]
+<../figures/intro/schema_rsd.png, id=851, 923.45pt x 375.4025pt>
 File: ../figures/intro/schema_rsd.png Graphic file (type png)
 
 <use ../figures/intro/schema_rsd.png>
@@ -3033,7 +3042,7 @@ LaTeX Warning: Command \` invalid in math mode on input line 790.
 
 LaTeX Warning: Command \` invalid in math mode on input line 796.
 
-<../figures/intro/schema_qso2.png, id=865, 474.77374pt x 316.18124pt>
+<../figures/intro/schema_qso2.png, id=866, 474.77374pt x 316.18124pt>
 File: ../figures/intro/schema_qso2.png Graphic file (type png)
 
 <use ../figures/intro/schema_qso2.png>
@@ -3041,7 +3050,7 @@ Package pdftex.def Info: ../figures/intro/schema_qso2.png used on input line 80
 8.
 (pdftex.def)             Requested size: 322.84187pt x 215.0004pt.
 
-<../figures/intro/qso_jets.png, id=869, 627.34375pt x 415.5525pt>
+<../figures/intro/qso_jets.png, id=870, 627.34375pt x 415.5525pt>
 File: ../figures/intro/qso_jets.png Graphic file (type png)
 
 <use ../figures/intro/qso_jets.png>
@@ -3058,7 +3067,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33 <../figures/intro/schema_rsd.png>]
-<../figures/intro/spectre_qso.png, id=883, 1119.18124pt x 434.62375pt>
+<../figures/intro/spectre_qso.png, id=884, 1119.18124pt x 434.62375pt>
 File: ../figures/intro/spectre_qso.png Graphic file (type png)
 
 <use ../figures/intro/spectre_qso.png>
@@ -3104,7 +3113,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 870.
 
-<../figures/intro/schema_lya.png, id=906, 1092.08pt x 227.85126pt>
+<../figures/intro/schema_lya.png, id=907, 1092.08pt x 227.85126pt>
 File: ../figures/intro/schema_lya.png Graphic file (type png)
 
 <use ../figures/intro/schema_lya.png>
@@ -3112,7 +3121,7 @@ Package pdftex.def Info: ../figures/intro/schema_lya.png used on input line 881
 .
 (pdftex.def)             Requested size: 436.82426pt x 91.13889pt.
 
-<../figures/intro/foret_lya.png, id=908, 1160.335pt x 669.50125pt>
+<../figures/intro/foret_lya.png, id=909, 1160.335pt x 669.50125pt>
 File: ../figures/intro/foret_lya.png Graphic file (type png)
 
 <use ../figures/intro/foret_lya.png>
@@ -3142,6 +3151,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38 <../figures/intro/foret_lya.png>]
 
+Package mathptmx Warning: There are no bold math fonts on input line 929.
+
+
 LaTeX Warning: Command \` invalid in math mode on input line 938.
 
 
@@ -3160,12 +3172,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40] <../figures/intro/exemple_dla.png, id=964, 1154.3125pt x 409.53pt>
+[40] <../figures/intro/exemple_dla.png, id=966, 1154.3125pt x 409.53pt>
 File: ../figures/intro/exemple_dla.png Graphic file (type png)
 
 <use ../figures/intro/exemple_dla.png>
 Package pdftex.def Info: ../figures/intro/exemple_dla.png used on input line 99
-8.
+9.
 (pdftex.def)             Requested size: 461.71683pt x 163.80908pt.
 )
 
@@ -3174,10 +3186,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41 <../figures/intro/exemple_dla.png>] [42
+[41]
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-] (../chapters/2.tex
+[42 <../figures/intro/exemple_dla.png>] (../chapters/2.tex
 Chapitre 2.
 
 Overfull \hbox (4.86667pt too wide) in paragraph at lines 8--8
@@ -3189,6 +3205,8 @@ Overfull \hbox (4.86667pt too wide) in paragraph at lines 8--8
 \openout5 = `thesis.mtc'.
 
 (./thesis.mtc2) [43
+
+
 
 ]
 
@@ -3211,7 +3229,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46] <../figures/eBOSS/eBOSStracers.png, id=1039, 512.91624pt x 320.19624pt>
+[46] <../figures/eBOSS/eBOSStracers.png, id=1041, 512.91624pt x 320.19624pt>
 File: ../figures/eBOSS/eBOSStracers.png Graphic file (type png)
 
 <use ../figures/eBOSS/eBOSStracers.png>
@@ -3232,7 +3250,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48] <../figures/eBOSS/SchemaTelescope.png, id=1075, 439.6425pt x 432.61626pt>
+[48] <../figures/eBOSS/SchemaTelescope.png, id=1077, 439.6425pt x 432.61626pt>
 File: ../figures/eBOSS/SchemaTelescope.png Graphic file (type png)
 
 <use ../figures/eBOSS/SchemaTelescope.png>
@@ -3246,7 +3264,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49] <../figures/eBOSS/CcdSchema.png, id=1087, 764.8575pt x 755.82375pt>
+[49] <../figures/eBOSS/CcdSchema.png, id=1089, 764.8575pt x 755.82375pt>
 File: ../figures/eBOSS/CcdSchema.png Graphic file (type png)
 
 <use ../figures/eBOSS/CcdSchema.png>
@@ -3261,7 +3279,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50 <../figures/eBOSS/SchemaTelescope.png>]
-<../figures/eBOSS/Filtres.png, id=1096, 662.475pt x 664.4825pt>
+<../figures/eBOSS/Filtres.png, id=1098, 662.475pt x 664.4825pt>
 File: ../figures/eBOSS/Filtres.png Graphic file (type png)
 
 <use ../figures/eBOSS/Filtres.png>
@@ -3275,7 +3293,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [51 <../figures/eBOSS/CcdSchema.png>]
-<../figures/eBOSS/CartoucheImage.png, id=1105, 994.71625pt x 393.47pt>
+<../figures/eBOSS/CartoucheImage.png, id=1107, 994.71625pt x 393.47pt>
 File: ../figures/eBOSS/CartoucheImage.png Graphic file (type png)
 
 <use ../figures/eBOSS/CartoucheImage.png>
@@ -3283,7 +3301,7 @@ Package pdftex.def Info: ../figures/eBOSS/CartoucheImage.png used on input line
  198.
 (pdftex.def)             Requested size: 348.1559pt x 137.71655pt.
 
-<../figures/eBOSS/SchemaSpectro.png, id=1109, 752.8125pt x 334.24875pt>
+<../figures/eBOSS/SchemaSpectro.png, id=1111, 752.8125pt x 334.24875pt>
 File: ../figures/eBOSS/SchemaSpectro.png Graphic file (type png)
 
 <use ../figures/eBOSS/SchemaSpectro.png>
@@ -3301,7 +3319,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52 <../figures/eBOSS/Filtres.png>]
-<../figures/eBOSS/SpectroThroughput.png, id=1122, 874.26625pt x 626.34pt>
+<../figures/eBOSS/SpectroThroughput.png, id=1124, 874.26625pt x 626.34pt>
 File: ../figures/eBOSS/SpectroThroughput.png Graphic file (type png)
 
 <use ../figures/eBOSS/SpectroThroughput.png>
@@ -3309,7 +3327,7 @@ Package pdftex.def Info: ../figures/eBOSS/SpectroThroughput.png used on input l
 ine 218.
 (pdftex.def)             Requested size: 305.99777pt x 219.22227pt.
 
-<../figures/eBOSS/SpectroResoPower.png, id=1126, 787.94376pt x 299.1175pt>
+<../figures/eBOSS/SpectroResoPower.png, id=1128, 787.94376pt x 299.1175pt>
 File: ../figures/eBOSS/SpectroResoPower.png Graphic file (type png)
 
 <use ../figures/eBOSS/SpectroResoPower.png>
@@ -3331,7 +3349,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54 <../figures/eBOSS/SchemaSpectro.png> <../figures/eBOSS/SpectroThroughput.pn
-g>] <../figures/eBOSS/exp_history.png, id=1147, 972.63374pt x 611.28375pt>
+g>] <../figures/eBOSS/exp_history.png, id=1149, 972.63374pt x 611.28375pt>
 File: ../figures/eBOSS/exp_history.png Graphic file (type png)
 
 <use ../figures/eBOSS/exp_history.png>
@@ -3339,7 +3357,7 @@ Package pdftex.def Info: ../figures/eBOSS/exp_history.png used on input line 25
 3.
 (pdftex.def)             Requested size: 408.50339pt x 256.73743pt.
 
-<../figures/eBOSS/olambda_om.png, id=1148, 685.56125pt x 524.96124pt>
+<../figures/eBOSS/olambda_om.png, id=1150, 685.56125pt x 524.96124pt>
 File: ../figures/eBOSS/olambda_om.png Graphic file (type png)
 
 <use ../figures/eBOSS/olambda_om.png>
@@ -3347,7 +3365,7 @@ Package pdftex.def Info: ../figures/eBOSS/olambda_om.png used on input line 260
 .
 (pdftex.def)             Requested size: 308.49971pt x 236.23038pt.
 
-<../figures/eBOSS/hzero_om.png, id=1151, 674.52pt x 514.92375pt>
+<../figures/eBOSS/hzero_om.png, id=1153, 674.52pt x 514.92375pt>
 File: ../figures/eBOSS/hzero_om.png Graphic file (type png)
 
 <use ../figures/eBOSS/hzero_om.png>
@@ -3368,7 +3386,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [56 <../figures/eBOSS/exp_history.png> <../figures/eBOSS/olambda_om.png>]
-<../figures/eBOSS/DesiVsEboss.png, id=1171, 972.63374pt x 593.21625pt>
+<../figures/eBOSS/DesiVsEboss.png, id=1173, 972.63374pt x 593.21625pt>
 File: ../figures/eBOSS/DesiVsEboss.png Graphic file (type png)
 
 <use ../figures/eBOSS/DesiVsEboss.png>
@@ -3405,7 +3423,7 @@ Overfull \hbox (4.86667pt too wide) in paragraph at lines 13--13
 
 
 ]
-<../figures/donnees/photo_ccd.pdf, id=1196, 201.75375pt x 198.7425pt>
+<../figures/donnees/photo_ccd.pdf, id=1198, 201.75375pt x 198.7425pt>
 File: ../figures/donnees/photo_ccd.pdf Graphic file (type pdf)
 
 <use ../figures/donnees/photo_ccd.pdf>
@@ -3420,7 +3438,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [60 <../figures/donnees/photo_ccd.pdf>]
-<../figures/donnees/quasar_number.png, id=1217, 728.7225pt x 567.11874pt>
+<../figures/donnees/quasar_number.png, id=1219, 728.7225pt x 567.11874pt>
 File: ../figures/donnees/quasar_number.png Graphic file (type png)
 
 <use ../figures/donnees/quasar_number.png>
@@ -3428,7 +3446,7 @@ Package pdftex.def Info: ../figures/donnees/quasar_number.png used on input lin
 e 52.
 (pdftex.def)             Requested size: 255.05669pt x 198.49452pt.
 
-<../figures/donnees/exemple_bal.png, id=1220, 968.61874pt x 485.815pt>
+<../figures/donnees/exemple_bal.png, id=1222, 968.61874pt x 485.815pt>
 File: ../figures/donnees/exemple_bal.png Graphic file (type png)
 
 <use ../figures/donnees/exemple_bal.png>
@@ -3443,7 +3461,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [61 <../figures/donnees/quasar_number.png>]
-<../figures/donnees/pixel_number.png, id=1239, 1157.32375pt x 416.55624pt>
+<../figures/donnees/pixel_number.png, id=1241, 1157.32375pt x 416.55624pt>
 File: ../figures/donnees/pixel_number.png Graphic file (type png)
 
 <use ../figures/donnees/pixel_number.png>
@@ -3523,6 +3541,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3531,13 +3552,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [69]
 
-LaTeX Warning: Command \` invalid in math mode on input line 115.
-
-
-Underfull \vbox (badness 3158) has occurred while \output is active []
-
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
@@ -3545,20 +3559,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [70]
 
-LaTeX Warning: Command \` invalid in math mode on input line 135.
+LaTeX Warning: Command \` invalid in math mode on input line 115.
 
 
 LaTeX Warning: Command \` invalid in math mode on input line 135.
 
 
-LaTeX Warning: Command \` invalid in math mode on input line 137.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 137.
-
-
-Underfull \vbox (badness 2409) has occurred while \output is active []
-
+LaTeX Warning: Command \` invalid in math mode on input line 135.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3568,6 +3575,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [71]
 
+LaTeX Warning: Command \` invalid in math mode on input line 137.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 137.
+
+
 LaTeX Warning: Command \` invalid in math mode on input line 156.
 
 
@@ -3575,10 +3588,6 @@ LaTeX Warning: Command \` invalid in math mode on input line 162.
 
 
 LaTeX Warning: Command \` invalid in math mode on input line 162.
-
-
-Underfull \vbox (badness 5862) has occurred while \output is active []
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3590,7 +3599,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: Command \` invalid in math mode on input line 251.
 
-<../figures/mocks/qsolognormal1.png, id=1390, 1145.27875pt x 445.665pt>
+<../figures/mocks/qsolognormal1.png, id=1392, 1145.27875pt x 445.665pt>
 File: ../figures/mocks/qsolognormal1.png Graphic file (type png)
 
 <use ../figures/mocks/qsolognormal1.png>
@@ -3604,7 +3613,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[73] <../figures/mocks/qsolognormal2.png, id=1405, 1133.23375pt x 435.6275pt>
+[73] <../figures/mocks/qsolognormal2.png, id=1407, 1133.23375pt x 435.6275pt>
 File: ../figures/mocks/qsolognormal2.png Graphic file (type png)
 
 <use ../figures/mocks/qsolognormal2.png>
@@ -3622,7 +3631,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [74 <../figures/mocks/qsolognormal1.png>]
-<../figures/mocks/qsolognormal3.png, id=1425, 1033.8625pt x 418.56375pt>
+<../figures/mocks/qsolognormal3.png, id=1427, 1033.8625pt x 418.56375pt>
 File: ../figures/mocks/qsolognormal3.png Graphic file (type png)
 
 <use ../figures/mocks/qsolognormal3.png>
@@ -3630,7 +3639,7 @@ Package pdftex.def Info: ../figures/mocks/qsolognormal3.png used on input line
 301.
 (pdftex.def)             Requested size: 465.23383pt x 188.35193pt.
 
-<../figures/mocks/dndz_qso.png, id=1429, 587.19376pt x 491.8375pt>
+<../figures/mocks/dndz_qso.png, id=1431, 587.19376pt x 491.8375pt>
 File: ../figures/mocks/dndz_qso.png Graphic file (type png)
 
 <use ../figures/mocks/dndz_qso.png>
@@ -3657,7 +3666,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: Command \` invalid in math mode on input line 452.
 
-<../figures/mocks/smoothing11.png, id=1458, 529.98pt x 397.485pt>
+<../figures/mocks/smoothing11.png, id=1460, 529.98pt x 397.485pt>
 File: ../figures/mocks/smoothing11.png Graphic file (type png)
 
 <use ../figures/mocks/smoothing11.png>
@@ -3665,7 +3674,7 @@ Package pdftex.def Info: ../figures/mocks/smoothing11.png used on input line 47
 2.
 (pdftex.def)             Requested size: 264.98933pt x 198.742pt.
 
-<../figures/mocks/smoothing23.png, id=1459, 1049.9225pt x 403.5075pt>
+<../figures/mocks/smoothing23.png, id=1461, 1049.9225pt x 403.5075pt>
 File: ../figures/mocks/smoothing23.png Graphic file (type png)
 
 <use ../figures/mocks/smoothing23.png>
@@ -3728,7 +3737,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [79 <../figures/mocks/smoothing23.png>]
-<../figures/mocks/pk_smoothing.png, id=1490, 854.19125pt x 652.4375pt>
+<../figures/mocks/pk_smoothing.png, id=1492, 854.19125pt x 652.4375pt>
 File: ../figures/mocks/pk_smoothing.png Graphic file (type png)
 
 <use ../figures/mocks/pk_smoothing.png>
@@ -3736,7 +3745,7 @@ Package pdftex.def Info: ../figures/mocks/pk_smoothing.png used on input line 5
 63.
 (pdftex.def)             Requested size: 298.97142pt x 228.35654pt.
 
-<../figures/mocks/xi_smoothing.png, id=1495, 828.09375pt x 653.44125pt>
+<../figures/mocks/xi_smoothing.png, id=1497, 828.09375pt x 653.44125pt>
 File: ../figures/mocks/xi_smoothing.png Graphic file (type png)
 
 <use ../figures/mocks/xi_smoothing.png>
@@ -3744,7 +3753,7 @@ Package pdftex.def Info: ../figures/mocks/xi_smoothing.png used on input line 5
 69.
 (pdftex.def)             Requested size: 314.6789pt x 248.31026pt.
 
-<../figures/mocks/p1d_smoothing.png, id=1500, 855.195pt x 651.43375pt>
+<../figures/mocks/p1d_smoothing.png, id=1502, 855.195pt x 651.43375pt>
 File: ../figures/mocks/p1d_smoothing.png Graphic file (type png)
 
 <use ../figures/mocks/p1d_smoothing.png>
@@ -3798,16 +3807,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83] <../figures/mocks/building_trans.pdf, id=1554, 794.97pt x 1011.78pt>
+[83] <../figures/mocks/building_trans.pdf, id=1556, 794.97pt x 1011.78pt>
 File: ../figures/mocks/building_trans.pdf Graphic file (type pdf)
 
 <use ../figures/mocks/building_trans.pdf>
 Package pdftex.def Info: ../figures/mocks/building_trans.pdf used on input line
  680.
 (pdftex.def)             Requested size: 476.98569pt x 607.07268pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3823,7 +3829,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [85 <../figures/mocks/building_trans.pdf>]
-<../figures/mocks/xiF_vs_xig.png, id=1614, 833.1125pt x 622.325pt>
+<../figures/mocks/xiF_vs_xig.png, id=1616, 833.1125pt x 622.325pt>
 File: ../figures/mocks/xiF_vs_xig.png Graphic file (type png)
 
 <use ../figures/mocks/xiF_vs_xig.png>
@@ -3831,7 +3837,7 @@ Package pdftex.def Info: ../figures/mocks/xiF_vs_xig.png used on input line 720
 .
 (pdftex.def)             Requested size: 333.23909pt x 248.92558pt.
 
-<../figures/mocks/xi_g.png, id=1621, 1135.24126pt x 414.54875pt>
+<../figures/mocks/xi_g.png, id=1623, 1135.24126pt x 414.54875pt>
 File: ../figures/mocks/xi_g.png Graphic file (type png)
 
 <use ../figures/mocks/xi_g.png>
@@ -3864,7 +3870,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[88] <../figures/mocks/bnu_lambda.png, id=1667, 1091.07625pt x 405.515pt>
+[88] <../figures/mocks/bnu_lambda.png, id=1669, 1091.07625pt x 405.515pt>
 File: ../figures/mocks/bnu_lambda.png Graphic file (type png)
 
 <use ../figures/mocks/bnu_lambda.png>
@@ -3872,7 +3878,7 @@ Package pdftex.def Info: ../figures/mocks/bnu_lambda.png used on input line 843
 .
 (pdftex.def)             Requested size: 458.2489pt x 170.31512pt.
 
-<../figures/mocks/distrib_dla.png, id=1672, 1086.0575pt x 445.665pt>
+<../figures/mocks/distrib_dla.png, id=1674, 1086.0575pt x 445.665pt>
 File: ../figures/mocks/distrib_dla.png Graphic file (type png)
 
 <use ../figures/mocks/distrib_dla.png>
@@ -3887,14 +3893,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [89 <../figures/mocks/bnu_lambda.png>]
-<../figures/mocks/chunks.png, id=1684, 613.29124pt x 459.7175pt>
+<../figures/mocks/chunks.png, id=1686, 613.29124pt x 459.7175pt>
 File: ../figures/mocks/chunks.png Graphic file (type png)
 
 <use ../figures/mocks/chunks.png>
 Package pdftex.def Info: ../figures/mocks/chunks.png used on input line 878.
 (pdftex.def)             Requested size: 306.64487pt x 229.85818pt.
 
-<../figures/mocks/schema_prod.png, id=1690, 830.10126pt x 786.94pt>
+<../figures/mocks/schema_prod.png, id=1692, 830.10126pt x 786.94pt>
 File: ../figures/mocks/schema_prod.png Graphic file (type png)
 
 <use ../figures/mocks/schema_prod.png>
@@ -3945,7 +3951,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[94] <../figures/mocks/mean_trans_all.png, id=1738, 860.21375pt x 650.43pt>
+[94] <../figures/mocks/mean_trans_all.png, id=1740, 860.21375pt x 650.43pt>
 File: ../figures/mocks/mean_trans_all.png Graphic file (type png)
 
 <use ../figures/mocks/mean_trans_all.png>
@@ -3976,7 +3982,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [96 <../figures/mocks/mean_trans_all.png>]
-<../figures/mocks/p1d_model_data.png, id=1768, 1115.16624pt x 622.325pt>
+<../figures/mocks/p1d_model_data.png, id=1770, 1115.16624pt x 622.325pt>
 File: ../figures/mocks/p1d_model_data.png Graphic file (type png)
 
 <use ../figures/mocks/p1d_model_data.png>
@@ -4023,21 +4029,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [98 <../figures/mocks/p1d_model_data.png>]
-<../figures/mocks/params.png, id=1794, 1114.1625pt x 283.0575pt>
+<../figures/mocks/params.png, id=1796, 1114.1625pt x 283.0575pt>
 File: ../figures/mocks/params.png Graphic file (type png)
 
 <use ../figures/mocks/params.png>
 Package pdftex.def Info: ../figures/mocks/params.png used on input line 1134.
 (pdftex.def)             Requested size: 445.6571pt x 113.22098pt.
 
-<../figures/mocks/p1dmiss.png, id=1799, 1133.23375pt x 480.79625pt>
+<../figures/mocks/p1dmiss.png, id=1801, 1133.23375pt x 480.79625pt>
 File: ../figures/mocks/p1dmiss.png Graphic file (type png)
 
 <use ../figures/mocks/p1dmiss.png>
 Package pdftex.def Info: ../figures/mocks/p1dmiss.png used on input line 1151.
 (pdftex.def)             Requested size: 453.28548pt x 192.31508pt.
 
-<../figures/mocks/p1d_tuning.png, id=1800, 774.895pt x 590.205pt>
+<../figures/mocks/p1d_tuning.png, id=1802, 774.895pt x 590.205pt>
 File: ../figures/mocks/p1d_tuning.png Graphic file (type png)
 
 <use ../figures/mocks/p1d_tuning.png>
@@ -4066,7 +4072,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [100 <../figures/mocks/p1dmiss.png>]
-<../figures/mocks/quickquasars_spectrum.png, id=1821, 1040.88875pt x 515.9275pt
+<../figures/mocks/quickquasars_spectrum.png, id=1823, 1040.88875pt x 515.9275pt
 >
 File: ../figures/mocks/quickquasars_spectrum.png Graphic file (type png)
  <use ../figures/mocks/quickquasars_spectrum.png>
@@ -4216,7 +4222,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[108] <../figures/mocks_ana/effet_dmat.png, id=1938, 883.3pt x 721.69624pt>
+[108] <../figures/mocks_ana/effet_dmat.png, id=1940, 883.3pt x 721.69624pt>
 File: ../figures/mocks_ana/effet_dmat.png Graphic file (type png)
 
 <use ../figures/mocks_ana/effet_dmat.png>
@@ -4298,7 +4304,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [117]
-<../figures/mocks_ana/chi2_vs_rmin.png, id=2047, 771.88374pt x 793.96625pt>
+<../figures/mocks_ana/chi2_vs_rmin.png, id=2049, 771.88374pt x 793.96625pt>
 File: ../figures/mocks_ana/chi2_vs_rmin.png Graphic file (type png)
 
 <use ../figures/mocks_ana/chi2_vs_rmin.png>
@@ -4320,7 +4326,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [119 <../figures/mocks_ana/chi2_vs_rmin.png>]
-<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=2063, 1076.02pt x 760.8425
+<../figures/mocks_ana/cf_ebossraw_4bins_pred.png, id=2065, 1076.02pt x 760.8425
 pt>
 File: ../figures/mocks_ana/cf_ebossraw_4bins_pred.png Graphic file (type png)
  <use ../figures/mocks_ana/cf_ebossraw_4bins_pred.png>
@@ -4331,7 +4337,7 @@ n input line 557.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/mocks_ana/bias_pred.png, id=2064, 1147.28625pt x 425.59pt>
+<../figures/mocks_ana/bias_pred.png, id=2066, 1147.28625pt x 425.59pt>
 File: ../figures/mocks_ana/bias_pred.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_pred.png>
@@ -4361,7 +4367,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [122]
-<../figures/mocks_ana/xcf_ebossraw_4bins.png, id=2096, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/xcf_ebossraw_4bins.png, id=2098, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_ebossraw_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_ebossraw_4bins.png>
@@ -4369,7 +4375,7 @@ Package pdftex.def Info: ../figures/mocks_ana/xcf_ebossraw_4bins.png used on in
 put line 648.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
-<../figures/mocks_ana/xcf_ebossraw.png, id=2097, 1023.825pt x 423.5825pt>
+<../figures/mocks_ana/xcf_ebossraw.png, id=2099, 1023.825pt x 423.5825pt>
 File: ../figures/mocks_ana/xcf_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_ebossraw.png>
@@ -4384,7 +4390,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [123 <../figures/mocks_ana/xcf_ebossraw_4bins.png>]
-<../figures/mocks_ana/p1d_ebossraw.png, id=2109, 1009.7725pt x 578.16pt>
+<../figures/mocks_ana/p1d_ebossraw.png, id=2111, 1009.7725pt x 578.16pt>
 File: ../figures/mocks_ana/p1d_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/p1d_ebossraw.png>
@@ -4392,7 +4398,7 @@ Package pdftex.def Info: ../figures/mocks_ana/p1d_ebossraw.png used on input li
 ne 684.
 (pdftex.def)             Requested size: 454.39343pt x 260.16959pt.
 
-<../figures/mocks_ana/cf1d_ebossraw.png, id=2112, 840.13875pt x 307.1475pt>
+<../figures/mocks_ana/cf1d_ebossraw.png, id=2114, 840.13875pt x 307.1475pt>
 File: ../figures/mocks_ana/cf1d_ebossraw.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf1d_ebossraw.png>
@@ -4418,7 +4424,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [125 <../figures/mocks_ana/p1d_ebossraw.png> <../figures/mocks_ana/cf1d_ebossra
 w.png>]
-<../figures/mocks_ana/auto_qso_4bins.png, id=2129, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/auto_qso_4bins.png, id=2131, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/auto_qso_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_qso_4bins.png>
@@ -4429,7 +4435,7 @@ line 719.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/mocks_ana/auto_qso.png, id=2132, 1147.28625pt x 444.66125pt>
+<../figures/mocks_ana/auto_qso.png, id=2134, 1147.28625pt x 444.66125pt>
 File: ../figures/mocks_ana/auto_qso.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_qso.png>
@@ -4444,7 +4450,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [126 <../figures/mocks_ana/auto_qso_4bins.png>]
-<../figures/mocks_ana/bias_auto_qso.png, id=2144, 1126.2075pt x 417.56pt>
+<../figures/mocks_ana/bias_auto_qso.png, id=2146, 1126.2075pt x 417.56pt>
 File: ../figures/mocks_ana/bias_auto_qso.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_auto_qso.png>
@@ -4452,7 +4458,7 @@ Package pdftex.def Info: ../figures/mocks_ana/bias_auto_qso.png used on input l
 ine 786.
 (pdftex.def)             Requested size: 473.00394pt x 175.374pt.
 
-<../figures/mocks_ana/auto_hcd.png, id=2148, 1090.0725pt x 415.5525pt>
+<../figures/mocks_ana/auto_hcd.png, id=2150, 1090.0725pt x 415.5525pt>
 File: ../figures/mocks_ana/auto_hcd.png Graphic file (type png)
 
 <use ../figures/mocks_ana/auto_hcd.png>
@@ -4488,7 +4494,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [129 <../figures/mocks_ana/auto_hcd.png>]
-<../figures/mocks_ana/cf_eboss00_4bins.png, id=2172, 1076.02pt x 759.83875pt>
+<../figures/mocks_ana/cf_eboss00_4bins.png, id=2174, 1076.02pt x 759.83875pt>
 File: ../figures/mocks_ana/cf_eboss00_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf_eboss00_4bins.png>
@@ -4506,7 +4512,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [130 <../figures/mocks_ana/cf_eboss00_4bins.png>]
-<../figures/mocks_ana/xcf_eboss00_4bins.png, id=2189, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/xcf_eboss00_4bins.png, id=2191, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_eboss00_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_eboss00_4bins.png>
@@ -4531,7 +4537,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [132 <../figures/mocks_ana/xcf_eboss00_4bins.png>]
-<../figures/mocks_ana/cf_eboss02_4bins.png, id=2204, 1077.02374pt x 761.84625pt
+<../figures/mocks_ana/cf_eboss02_4bins.png, id=2206, 1077.02374pt x 761.84625pt
 >
 File: ../figures/mocks_ana/cf_eboss02_4bins.png Graphic file (type png)
  <use ../figures/mocks_ana/cf_eboss02_4bins.png>
@@ -4542,7 +4548,7 @@ t line 1029.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/mocks_ana/bias_cf.png, id=2205, 1111.15125pt x 412.54124pt>
+<../figures/mocks_ana/bias_cf.png, id=2207, 1111.15125pt x 412.54124pt>
 File: ../figures/mocks_ana/bias_cf.png Graphic file (type png)
 
 <use ../figures/mocks_ana/bias_cf.png>
@@ -4565,7 +4571,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [134 <../figures/mocks_ana/cf_eboss02_4bins.png> <../figures/mocks_ana/bias_cf.
 png>]
-<../figures/mocks_ana/xcf_eboss02_4bins.png, id=2223, 1076.02pt x 760.8425pt>
+<../figures/mocks_ana/xcf_eboss02_4bins.png, id=2225, 1076.02pt x 760.8425pt>
 File: ../figures/mocks_ana/xcf_eboss02_4bins.png Graphic file (type png)
 
 <use ../figures/mocks_ana/xcf_eboss02_4bins.png>
@@ -4576,7 +4582,7 @@ ut line 1098.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figures/mocks_ana/sum_bias.png, id=2224, 1140.26pt x 426.59375pt>
+<../figures/mocks_ana/sum_bias.png, id=2226, 1140.26pt x 426.59375pt>
 File: ../figures/mocks_ana/sum_bias.png Graphic file (type png)
 
 <use ../figures/mocks_ana/sum_bias.png>
@@ -4599,7 +4605,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [136 <../figures/mocks_ana/xcf_eboss02_4bins.png> <../figures/mocks_ana/sum_bia
 s.png>]
-<../figures/mocks_ana/cf1d_eboss03.png, id=2242, 1008.76875pt x 425.59pt>
+<../figures/mocks_ana/cf1d_eboss03.png, id=2244, 1008.76875pt x 425.59pt>
 File: ../figures/mocks_ana/cf1d_eboss03.png Graphic file (type png)
 
 <use ../figures/mocks_ana/cf1d_eboss03.png>
@@ -4636,17 +4642,17 @@ Overfull \hbox (4.86667pt too wide) in paragraph at lines 13--13
 
 
 ]
-<../figures/data_ana/dr16_4bins.png, id=2272, 1076.02pt x 760.8425pt>
+<../figures/data_ana/dr16_4bins.png, id=2274, 1076.02pt x 760.8425pt>
 File: ../figures/data_ana/dr16_4bins.png Graphic file (type png)
 
 <use ../figures/data_ana/dr16_4bins.png>
 Package pdftex.def Info: ../figures/data_ana/dr16_4bins.png used on input line 
-46.
+48.
 (pdftex.def)             Requested size: 430.40038pt x 304.3316pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 51.
+               Default added (so using `tbp') on input line 53.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4668,29 +4674,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[142] <../figures/data_ana/bias_vs_z.png, id=2296, 1061.9675pt x 394.47375pt>
+[142] <../figures/data_ana/bias_vs_z.png, id=2298, 1061.9675pt x 394.47375pt>
 File: ../figures/data_ana/bias_vs_z.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_vs_z.png>
 Package pdftex.def Info: ../figures/data_ana/bias_vs_z.png used on input line 2
-05.
+07.
 (pdftex.def)             Requested size: 467.26714pt x 173.56898pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 215.
+(hyperref)                removing `math shift' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 215.
+(hyperref)                removing `\alpha' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 215.
+(hyperref)                removing `math shift' on input line 217.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 219.
+               Default added (so using `tbp') on input line 221.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4699,28 +4705,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [143 <../figures/data_ana/bias_vs_z.png>]
-<../figures/data_ana/bias_hcd_vs_L0_dr16.png, id=2313, 995.72pt x 371.3875pt>
+<../figures/data_ana/bias_hcd_vs_L0_dr16.png, id=2315, 995.72pt x 371.3875pt>
 File: ../figures/data_ana/bias_hcd_vs_L0_dr16.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_hcd_vs_L0_dr16.png>
 Package pdftex.def Info: ../figures/data_ana/bias_hcd_vs_L0_dr16.png used on in
-put line 293.
+put line 296.
 (pdftex.def)             Requested size: 398.28094pt x 148.55235pt.
 
-<../figures/data_ana/bias_lya_vs_L0_dr16.png, id=2314, 1092.08pt x 402.50375pt>
+<../figures/data_ana/bias_lya_vs_L0_dr16.png, id=2316, 1092.08pt x 402.50375pt>
 File: ../figures/data_ana/bias_lya_vs_L0_dr16.png Graphic file (type png)
 <use ../figures/data_ana/bias_lya_vs_L0_dr16.png>
 Package pdftex.def Info: ../figures/data_ana/bias_lya_vs_L0_dr16.png used on in
-put line 302.
+put line 305.
 (pdftex.def)             Requested size: 491.43147pt x 181.125pt.
 
-Overfull \hbox (7.7346pt too wide) in paragraph at lines 302--306
+Overfull \hbox (7.7346pt too wide) in paragraph at lines 305--309
  [][] 
  []
-
-
-Underfull \vbox (badness 7649) has occurred while \output is active []
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4728,49 +4730,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[144 <../figures/data_ana/bias_hcd_vs_L0_dr16.png>]
-Overfull \hbox (0.60353pt too wide) in paragraph at lines 320--325
+[144]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[145 <../figures/data_ana/bias_hcd_vs_L0_dr16.png> <../figures/data_ana/bias_ly
+a_vs_L0_dr16.png>]
+Overfull \hbox (0.60353pt too wide) in paragraph at lines 323--328
 \T1/lmr/m/n/10.95 eboss-0.0 et des mocks eboss-0.2. Dans cha-cun des cas, nous 
 ajus-tons le mo-dèle sur $\OT1/lmr/m/n/10.95 20 \OML/lmm/m/it/10.95 < r < [] []
 $
  []
 
-<../figures/data_ana/dmat_effect.png, id=2323, 809.0225pt x 669.50125pt>
+<../figures/data_ana/dmat_effect.png, id=2332, 809.0225pt x 669.50125pt>
 File: ../figures/data_ana/dmat_effect.png Graphic file (type png)
 
 <use ../figures/data_ana/dmat_effect.png>
 Package pdftex.def Info: ../figures/data_ana/dmat_effect.png used on input line
- 335.
+ 338.
 (pdftex.def)             Requested size: 404.51027pt x 334.7498pt.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[145 <../figures/data_ana/bias_lya_vs_L0_dr16.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[146 <../figures/data_ana/dmat_effect.png>]
-<../figures/data_ana/bias_lya_vs_L0.png, id=2342, 1393.205pt x 664.4825pt>
+<../figures/data_ana/bias_lya_vs_L0.png, id=2339, 1393.205pt x 664.4825pt>
 File: ../figures/data_ana/bias_lya_vs_L0.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_lya_vs_L0.png>
 Package pdftex.def Info: ../figures/data_ana/bias_lya_vs_L0.png used on input l
-ine 356.
+ine 359.
 (pdftex.def)             Requested size: 459.75908pt x 219.27989pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 362.
+               Default added (so using `tbp') on input line 365.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4778,14 +4771,43 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[147 <../figures/data_ana/bias_lya_vs_L0.png>]
-<../figures/data_ana/cf_finder_vs_true.png, id=2355, 1082.0425pt x 395.4775pt>
+[146]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[147 <../figures/data_ana/dmat_effect.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[148 <../figures/data_ana/bias_lya_vs_L0.png>]
+<../figures/data_ana/cf_finder_vs_true.png, id=2366, 1082.0425pt x 395.4775pt>
 File: ../figures/data_ana/cf_finder_vs_true.png Graphic file (type png)
 
 <use ../figures/data_ana/cf_finder_vs_true.png>
 Package pdftex.def Info: ../figures/data_ana/cf_finder_vs_true.png used on inpu
-t line 427.
+t line 430.
 (pdftex.def)             Requested size: 432.80933pt x 158.18819pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 440.
+
+<../figures/data_ana/nhi_finder.png, id=2369, 462.528pt x 346.896pt>
+File: ../figures/data_ana/nhi_finder.png Graphic file (type png)
+
+<use ../figures/data_ana/nhi_finder.png>
+Package pdftex.def Info: ../figures/data_ana/nhi_finder.png used on input line 
+457.
+(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -4796,26 +4818,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[148 <../figures/data_ana/cf_finder_vs_true.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 437.
-
-<../figures/data_ana/nhi_finder.png, id=2368, 462.528pt x 346.896pt>
-File: ../figures/data_ana/nhi_finder.png Graphic file (type png)
-
-<use ../figures/data_ana/nhi_finder.png>
-Package pdftex.def Info: ../figures/data_ana/nhi_finder.png used on input line 
-454.
-(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[149]
+[149 <../figures/data_ana/cf_finder_vs_true.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -4824,26 +4827,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [150 <../figures/data_ana/nhi_finder.png>]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 498.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [151]
-<../figures/data_ana/bias_cg_rogers_comp.png, id=2392, 1084.05pt x 371.3875pt>
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 501.
+
+
+<../figures/data_ana/bias_cg_rogers_comp.png, id=2395, 1084.05pt x 371.3875pt>
 File: ../figures/data_ana/bias_cg_rogers_comp.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_cg_rogers_comp.png>
 Package pdftex.def Info: ../figures/data_ana/bias_cg_rogers_comp.png used on in
-put line 539.
+put line 542.
 (pdftex.def)             Requested size: 466.13242pt x 159.6935pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4851,86 +4852,79 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[152 <../figures/data_ana/bias_cg_rogers_comp.png>]
-<../figures/data_ana/cf_models.png, id=2405, 901.3675pt x 739.76375pt>
+[152] <../figures/data_ana/cf_models.png, id=2408, 901.3675pt x 739.76375pt>
 File: ../figures/data_ana/cf_models.png Graphic file (type png)
 
 <use ../figures/data_ana/cf_models.png>
 Package pdftex.def Info: ../figures/data_ana/cf_models.png used on input line 5
-70.
+73.
 (pdftex.def)             Requested size: 450.68263pt x 369.88097pt.
 
-<../figures/data_ana/cf_models_no_dist.png, id=2410, 897.3525pt x 739.76375pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[153 <../figures/data_ana/bias_cg_rogers_comp.png>]
+<../figures/data_ana/cf_models_no_dist.png, id=2420, 897.3525pt x 739.76375pt>
 File: ../figures/data_ana/cf_models_no_dist.png Graphic file (type png)
 
 <use ../figures/data_ana/cf_models_no_dist.png>
 Package pdftex.def Info: ../figures/data_ana/cf_models_no_dist.png used on inpu
-t line 578.
+t line 581.
 (pdftex.def)             Requested size: 448.67514pt x 369.88097pt.
 
-<../figures/data_ana/cf_nhi_bins.png, id=2416, 1315.91624pt x 515.9275pt>
+<../figures/data_ana/cf_nhi_bins.png, id=2426, 1315.91624pt x 515.9275pt>
 File: ../figures/data_ana/cf_nhi_bins.png Graphic file (type png)
 
 <use ../figures/data_ana/cf_nhi_bins.png>
 Package pdftex.def Info: ../figures/data_ana/cf_nhi_bins.png used on input line
- 597.
+ 600.
 (pdftex.def)             Requested size: 460.57759pt x 180.57733pt.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[153]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[154 <../figures/data_ana/cf_models.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.1595pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[155 <../figures/data_ana/cf_models_no_dist.png>]
-<../figures/data_ana/f_hcd_fixed.png, id=2438, 853.1875pt x 610.28pt>
+<../figures/data_ana/f_hcd_fixed.png, id=2429, 853.1875pt x 610.28pt>
 File: ../figures/data_ana/f_hcd_fixed.png Graphic file (type png)
 
 <use ../figures/data_ana/f_hcd_fixed.png>
 Package pdftex.def Info: ../figures/data_ana/f_hcd_fixed.png used on input line
- 615.
+ 618.
 (pdftex.def)             Requested size: 341.26895pt x 244.10767pt.
 
-Underfull \vbox (badness 2142) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[156 <../figures/data_ana/cf_nhi_bins.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[154]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[157 <../figures/data_ana/f_hcd_fixed.png>]
-<../figures/data_ana/f_hcd_range.png, id=2458, 859.21pt x 608.2725pt>
+[155 <../figures/data_ana/cf_models.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[156 <../figures/data_ana/cf_models_no_dist.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.1595pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[157 <../figures/data_ana/cf_nhi_bins.png> <../figures/data_ana/f_hcd_fixed.png
+>] <../figures/data_ana/f_hcd_range.png, id=2460, 859.21pt x 608.2725pt>
 File: ../figures/data_ana/f_hcd_range.png Graphic file (type png)
 
 <use ../figures/data_ana/f_hcd_range.png>
 Package pdftex.def Info: ../figures/data_ana/f_hcd_range.png used on input line
- 652.
+ 655.
 (pdftex.def)             Requested size: 343.67792pt x 243.30469pt.
 
 
@@ -4939,14 +4933,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[158 <../figures/data_ana/f_hcd_range.png>]
-<../figures/data_ana/bias_dr16_comp.png, id=2467, 1078.0275pt x 371.3875pt>
+[158]
+<../figures/data_ana/bias_dr16_comp.png, id=2470, 1078.0275pt x 371.3875pt>
 File: ../figures/data_ana/bias_dr16_comp.png Graphic file (type png)
 
 <use ../figures/data_ana/bias_dr16_comp.png>
 Package pdftex.def Info: ../figures/data_ana/bias_dr16_comp.png used on input l
-ine 666.
+ine 669.
 (pdftex.def)             Requested size: 474.33357pt x 163.411pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4954,12 +4951,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[159 <../figures/data_ana/bias_dr16_comp.png>]
-<../figures/data_ana/L0_free.png, id=2480, 1278.7775pt x 536.0025pt>
+[159 <../figures/data_ana/f_hcd_range.png>]
+<../figures/data_ana/L0_free.png, id=2481, 1278.7775pt x 536.0025pt>
 File: ../figures/data_ana/L0_free.png Graphic file (type png)
 
 <use ../figures/data_ana/L0_free.png>
-Package pdftex.def Info: ../figures/data_ana/L0_free.png used on input line 689
+Package pdftex.def Info: ../figures/data_ana/L0_free.png used on input line 692
 .
 (pdftex.def)             Requested size: 460.35956pt x 192.96075pt.
 
@@ -4969,14 +4966,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[160 <../figures/data_ana/L0_free.png>])
+[160 <../figures/data_ana/bias_dr16_comp.png>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[161] [162
+[161 <../figures/data_ana/L0_free.png>] [162
 
 
 ] (../chapters/conclusion.tex
@@ -5102,7 +5099,7 @@ LaTeX Font Info:    No file T1rm.fd. on input line 6.
 LaTeX Font Warning: Font shape `T1/rm/m/n' undefined
 (Font)              using `T1/cmr/m/n' instead on input line 6.
 
-<../figures/media/ed/PHENIICS.jpeg, id=2831, 212.211pt x 48.9465pt>
+<../figures/media/ed/PHENIICS.jpeg, id=2835, 212.211pt x 48.9465pt>
 File: ../figures/media/ed/PHENIICS.jpeg Graphic file (type jpg)
 
 <use ../figures/media/ed/PHENIICS.jpeg>
@@ -5180,17 +5177,17 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43547 strings out of 492995
- 825802 string characters out of 6132704
- 1832975 words of memory out of 5000000
- 45324 multiletter control sequences out of 15000+600000
- 268068 words of font info for 201 fonts, out of 8000000 for 9000
+ 43568 strings out of 492995
+ 826067 string characters out of 6132704
+ 1832990 words of memory out of 5000000
+ 45338 multiletter control sequences out of 15000+600000
+ 295241 words of font info for 211 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,22n,79p,10388b,3325s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/loca
-l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017
-/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2017/texmf-dist/f
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/t
+exlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/201
+7/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/f
 onts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips
 /lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mat
 hex.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/l
@@ -5198,38 +5195,39 @@ ocal/texlive/2017/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi
-10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
-lmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
-mri9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/lm/lmsy9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmtcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.
-pfb>
-Output written on thesis.pdf (184 pages, 12967357 bytes).
+ype1/public/lm/lmbx8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmbxi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc
+10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
+m/lmmi9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/lm/lmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtcsc10.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb>
+Output written on thesis.pdf (184 pages, 13007083 bytes).
 PDF statistics:
- 3119 PDF objects out of 3580 (max. 8388607)
- 2599 compressed objects within 26 object streams
+ 3132 PDF objects out of 3580 (max. 8388607)
+ 2609 compressed objects within 27 object streams
  713 named destinations out of 1000 (max. 500000)
  1101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
