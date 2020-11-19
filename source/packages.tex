@@ -20,17 +20,16 @@
 \usepackage{mathptmx}
 \usepackage{amssymb}
 \usepackage{geometry} 
+\usepackage{color}
 \usepackage{xcolor}
-\usepackage[absolute,overlay]{textpos}
+% \usepackage[absolute,overlay]{textpos}
 \usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage[explicit]{titlesec}
 \usepackage{lmodern}
-\usepackage{color}
 \usepackage{array}
 \usepackage{mathtools}
 \usepackage{caption}
-\usepackage{multicol}
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage[hyperfootnotes=false,colorlinks=true]{hyperref}
@@ -63,6 +62,21 @@
 %     }
 % \usepackage{physics}
 % \usepackage{isotope}
+
+%%% Package du template Paris Saclay
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\definecolor{Prune}{RGB}{99,0,60}
+\usepackage{mdframed}
+\usepackage{multirow} %% Pour mettre un texte sur plusieurs rangées
+\usepackage{multicol} %% Pour mettre un texte sur plusieurs colonnes
+\usepackage{scrextend} %Forcer la 4eme  de couverture en page pair
+\usepackage{tikz}
+\usepackage[absolute]{textpos} 
+\usepackage{colortbl}
+%\RequirePackage{geometry}% That nicely create a one-page template
+%\geometry{textheight=100ex,textwidth=40em,top=30pt,headheight=30pt,headsep=30pt,inner=80pt}
+% \usepackage{geometry}
 
 
     
@@ -218,7 +232,7 @@ bottom=30mm
 
 
 % Thesis title
-\newcommand{\PhDTitle}{Les forêts \lya{} du relevé eBOSS : comprendre les fonctions de corrélation et les systématiques} 
+\newcommand{\PhDTitle}{Les forêts Lyman-$\alpha$ du relevé eBOSS : comprendre les fonctions de corrélation et les systématiques} 
 
 % Name
 \newcommand{\PhDname}{Thomas Etourneau} 
