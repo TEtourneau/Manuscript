@@ -130,7 +130,7 @@ De plus, la formule FGPA (Fluctuating Gunn Peterson Approximation) permet de rel
   \label{eq:fgpa1}
   \tau(z) = a(z) \exp(b(z) G(z) \delta) \; .
 \end{equation}
-\textbf{Dans cette approximation, l'élargissement des raies d'absorption causé par la température est négligé. Etant donné que l'élargissement thermique est la source dominante d'élargissement des raies d'absorption \lya{}, et que cet effet est environ cinq fois inférieur à la résolution des données que nous cherchons à modéliser, l'utilisation de la formule FGPA est approprié.}
+\textbf{Dans cette approximation, l'élargissement des raies d'absorption causé par la température est négligé. Étant donné que l'élargissement thermique est la source dominante d'élargissement des raies d'absorption \lya{}, et que cet effet est environ cinq fois inférieur à la résolution des données que nous cherchons à modéliser, l'utilisation de la formule FGPA est approprié.}
 
 Dans cette approximation (équation~\ref{eq:fgpa1}), les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon biais du \lya{} et la bonne transmission moyenne $\overline F$. Leur détermination est décrite dans la section~\ref{sec:tuning}. Le facteur de croissance $G$ prend en compte l'évolution avec le redshift du champ de densité $\delta$. Ainsi il nous suffit de construire un GRF qui suit la fonction de corrélation à $z=0$ pour simuler le champ d'absorption du \lya{}. Pour ce faire, nous partons de la même boîte $\delta_k$ utilisée pour construire les 3 boîtes log-normales des quasars. Ceci garanti la corrélation croisée entre les quasars et le champ d'absorption \lya{}. Le spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$ est ensuite appliqué à la boîte $\delta_k$. Enfin, nous obtenons la boîte de densité $\delta_{\mathrm{matière}}$ à $z = 0$ qui servira au calcul du champ d'absorption du \lya{} en effectuant la transformée de Fourier de la boîte
 \begin{equation}
@@ -872,7 +872,7 @@ Dans les mocks que nous décrivons ici, le profil d'absorption des HCD n'est pas
 
 
 \section{Production des mocks}
-Comme expliqué au début de ce chapitre, l'objectif des mocks est de reproduire les données d'eBOSS et de DESI. Etant donné que le relevé d'eBOSS est contenu dans le relevé de DESI, nous simulons directement le relevé DESI. Ainsi, lorsque nous avons besoin de simuler le relevé d'eBOSS, nous retirons les quasars qui ne sont pas contenu dans ce relevé.
+Comme expliqué au début de ce chapitre, l'objectif des mocks est de reproduire les données d'eBOSS et de DESI. Étant donné que le relevé d'eBOSS est contenu dans le relevé de DESI, nous simulons directement le relevé DESI. Ainsi, lorsque nous avons besoin de simuler le relevé d'eBOSS, nous retirons les quasars qui ne sont pas contenu dans ce relevé.
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{chunks}
@@ -894,7 +894,7 @@ Nous pourrions distribuer la mémoire et effectuer la transformation de Fourier 
 Cependant nous n'avions pas l'expertise nécessaire. Nous effectuons donc les transformations de Fourier sur un seul n{\oe}ud.
 Nous profitons néanmoins des \num{32} c{\oe}urs par n{\oe}ud pour paralléliser notre code. Chaque c{\oe}ur possède 2 hyper-threads, ce qui permet de gérer 64 tâches simultanément sur un même n{\oe}ud.
 Lors de la construction des boîtes (section~\ref{subsec:densityfields}), nous avons besoin de stocker en mémoire la boîte dans l'espace réel, la boîte dans l'espace $k$, et la boîte contenant la norme de $k$, cette dernière étant utilisée pour construire les boîtes de vitesses et de gradients de vitesse (équations~\ref{eq:v2} et~\ref{eq:eta1}).
-Etant donné la mémoire disponible sur chaque n{\oe}ud, les boîtes ne doivent pas dépasser $\num{42}\,\mathrm{Go}$. Cette mémoire disponible et la taille des voxels choisie (\SI{2.19}{\perh\Mpc}) ne permettent pas de générer l'entièreté du relevé DESI avec une seule boîte.
+Étant donné la mémoire disponible sur chaque n{\oe}ud, les boîtes ne doivent pas dépasser $\num{42}\,\mathrm{Go}$. Cette mémoire disponible et la taille des voxels choisie (\SI{2.19}{\perh\Mpc}) ne permettent pas de générer l'entièreté du relevé DESI avec une seule boîte.
 Nous choisissons donc de découper le relevé en sept chunks indépendants, chacun étant généré par une boîte de $\num{2560}\times\num{2560}\times\num{1536}$ voxels. Chacune des boîtes représente un volume de $\num{37.5}\,\mathrm{Go}$. A la fin de la production, ces sept chunks sont assemblés pour reconstruire le relevé de DESI. Le découpage du relevé en sept chunks est montré sur la figure~\ref{fig:chunks}.
 Dans les lignes qui suivent, nous détaillons les différents éléments du code.
 Le schéma~\ref{fig:schema_prod} résume la situation.

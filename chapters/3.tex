@@ -41,7 +41,7 @@ Une fois les spectres extraits, il est important de les classifier afin de const
 % A chaque spectre est ajusté plusieurs modèles d'étoiles, de galaxies et de quasars. Les modèles sont construits en utilisant les \emph{PCA templates} : des spectres typiques qui sont combinés afin d'ajuster au mieux le spectre à classifier.
 Plusieurs modèles d'étoiles, de galaxies et de quasars sont ajustés à chaque spectre.
 %   Ces modèles sont construits à l'aide de l'analyse en composantes principales (PCA). Cette analyse fournit des spectres typiques de complexités différentes, le moins complexe étant la moyenne. Les différents spectres sont alors pondérés et combinés afin de construire un modèle qui ajuste au mieux le spectre à classifier.}
-Chaque modèle est construit à l'aide d'une analyse en composantes principales (PCA), propre à chaque type d'objet. Pour chaque type d'objet, l'analyse fournit des spectres typiques. Ces derniers sont de complexités croissantes : le premier donne le plus d'information comme par exemple le spectre moyen, les spectres plus complexes donnent des détails comme certaines raies d'émission ou profile d'absorption. Ces spectres typiques sont pondérés et combinés afin de produire un spectre simulé qui ajuste aux mieux le spectre à classifier.
+Chaque modèle est construit à l'aide d'une analyse en composantes principales (PCA), propre à chaque type d'objet. Pour chaque type d'objet, l'analyse fournit des spectres typiques. Ces derniers sont de complexités croissantes : le premier donne le plus d'information comme par exemple le spectre moyen, les spectres plus complexes donnent des détails comme certaines raies d'émission ou profil d'absorption. Ces spectres typiques sont pondérés et combinés afin de produire un spectre simulé qui ajuste aux mieux le spectre à classifier.
 Une fois tous les modèles ajustés, ils sont triés selon leur $\chi^{2}$ réduit. Le spectre est alors classifié selon le modèle possédant le plus faible $\chi^{2}$ réduit.
 Tous les spectres mesurés par SDSS et classifiés comme quasar constituent l'échantillon \emph{superset}. Il contient \num{1440627} objets.
 
@@ -50,7 +50,7 @@ Tous les quasars du relevé BOSS ont été inspectés visuellement \autocite{Par
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{quasar_number}
-  \caption{Evolution du nombre de quasars observés par les différentes générations de SDSS en fonction du temps. Les générations SDSS I et II correspondent à $MJD < 54663$ (bleu), SDSS III à $54663 \leq MJD < 56898$ (rose) et SDSS IV à $56898 < MJD < 58543$ (rouge). Crédits : \textcite{Lyke2020}}
+  \caption{Évolution du nombre de quasars observés par les différentes générations de SDSS en fonction du temps. Les générations SDSS I et II correspondent à $MJD < 54663$ (bleu), SDSS III à $54663 \leq MJD < 56898$ (rose) et SDSS IV à $56898 < MJD < 58543$ (rouge). Crédits : \textcite{Lyke2020}}
   \label{fig:quasar_number}
 \end{figure}
 \begin{figure}
@@ -148,7 +148,7 @@ Premièrement, les 5 paramètres à ajuster, ainsi que $\overline C(\lambda_{\ma
 Une fois cette ajustement fait, $\overline C(\lambda_{\mathrm{RF}})$ est de nouveau calculé. Puis, les paramètres $\eta(\lambda)$, $\sigma_{\mathrm{cosmo}}(\lambda)$ et $\epsilon(\lambda)$ sont ajustés de manière à ce que, à lambda fixé, $\sigma_q(\lambda)$ reproduise la variance estimée à partir des flux $f_q(\lambda)$ de tous les quasars. Ce nouvel ajustement permet une nouvelle fois d'ajuster $\overline F C_q$, etc. Cette procédure est répétée jusqu'à obtenir des valeurs stables pour les paramètres ajustés. En pratique, 5 itérations sont nécessaires.
 Cette procédure permet donc d'estimer, pour chaque quasar, le produit $\overline F(\lambda) C_q(\lambda)$, et ainsi d'estimer les $\delta_q(\lambda)$ (équation~\ref{eq:deltaF}) indépendamment dans chaque région.
 
-Lors du calcul des $\delta_q$, les DLA identifiés dans chaque forêt sont masqués. Pour ce faire, un profil de Voigt, dépendant de la densité de colonne mesurée par l'algorithme de détection, est ajusté à l'endroit du spectre où le DLA a été identifié. Les pixels pour lesquels l'absorption est plus grande que \SI{20}{\percent} ne sont pas utilisés. Les autres sont corrigés en utilisant le profile de Voigt ajusté. La figure~\ref{fig:exemple_dla} montre deux spectres présentant un DLA. Le profile de Voigt est montré en dessous de la forêt, en rouge. Les bandes rouges indiquent les pixels non utilisés.
+Lors du calcul des $\delta_q$, les DLA identifiés dans chaque forêt sont masqués. Pour ce faire, un profil de Voigt, dépendant de la densité de colonne mesurée par l'algorithme de détection, est ajusté à l'endroit du spectre où le DLA a été identifié. Les pixels pour lesquels l'absorption est plus grande que \SI{20}{\percent} ne sont pas utilisés. Les autres sont corrigés en utilisant le profil de Voigt ajusté. La figure~\ref{fig:exemple_dla} montre deux spectres présentant un DLA. Le profil de Voigt est montré en dessous de la forêt, en rouge. Les bandes rouges indiquent les pixels non utilisés.
 
 
 \subsection{Prise en compte de l'ajustement du continuum}

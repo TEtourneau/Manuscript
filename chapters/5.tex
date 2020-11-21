@@ -35,7 +35,7 @@ Pour le calcul des fonctions de corrélation impliquant le \lya{}, il n'est pas 
 
 Pour le calcul du champ $\delta_F$, nous distinguons deux cas : le cas où nous analysons les \emph{raw mocks} et le cas où nous analysons les \emph{cooked mock} ou les données.
 Les raw mocks (les mocks bruts, non préparés) désignent les mocks avant d'avoir tourné le code \texttt{quickquasars}.
-Les fonctions de corrélation sont alors calculées en utilisant directement la fraction de flux transmise $F$ donnée dans les fichiers de transmissions. Etant donné que pour chaque forêt, nous avons directement accès à $F$, le champ $\delta_F$ est donné par
+Les fonctions de corrélation sont alors calculées en utilisant directement la fraction de flux transmise $F$ donnée dans les fichiers de transmissions. Étant donné que pour chaque forêt, nous avons directement accès à $F$, le champ $\delta_F$ est donné par
 \begin{equation}
   \delta_F = \frac{F}{\overline F(z)} - 1 \; .
 \end{equation}
@@ -334,7 +334,7 @@ Pour ce faire,
 la fonction de corrélation est décomposée en polynômes de Legendre $P_l$ jusqu'à $l_{max} = 6$. Pour chaque $l \in [0 \, ; 2 \, ; 4\, ; 6]$,
 % une transformation de Fourier est appliquée au spectre de puissance (\#prov en fait c'est plutôt une intégrale avec une fonction de Bessel. Donner une ref du papier d'Hamilton ? C'est aussi dans le papier Kirkby, eq 2.7 - 2.9).
 le spectre de puissance est multiplié par la fonction de Bessel $j_l$ puis intégré sur $\mu_k$ (voir l'équation 2.7 de \textcite{Kirkby2013}).
-Etant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog \autocite{Hamilton1999}, qui apporte à la fois rapidité et précision.
+Étant donné que la transformation $P(\vec k) \rightarrow \xi(r, \mu)$ est faite à chaque étape de la minimisation lors de l'ajustement du modèle, il est important que cette transformation se fasse très rapidement. Nous utilisons donc l'algorithme FFTLog \autocite{Hamilton1999}, qui apporte à la fois rapidité et précision.
 Ainsi, en suivant cette procédure, nous obtenons les fonctions de corrélation $\xi_{\mathrm{Ly}\alpha\times\mathrm{Ly}\alpha}$ en choisissant $i = j = \mathrm{Ly}\alpha$, et $\xi_{\mathrm{Ly}\alpha\times\textsc{QSO}}$ en choisissant $i = \mathrm{Ly}\alpha$ et $j = \textsc{QSO}$.
 Afin de pouvoir ajuster les fonctions de corrélation calculées avec les données, nous devons prendre en compte dans nos modèles les corrélations parasites. Ces corrélations s'ajoutent au $\xi$ modèle calculé précédemment.
 A ce stade, nous distinguons le modèle utilisé pour l'auto-corrélation et la corrélation croisée.
@@ -519,7 +519,7 @@ En ce qui concerne la borne supérieure, le modèle est ajusté jusqu'à $r_{\ma
 \begin{figure}
   \centering
   \includegraphics[scale=0.6]{chi2_vs_rmin}
-  \caption{Evolution de $\chi_{red}^2$ (graphiques du haut), $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ (graphiques du milieu) et $\beta_{\mathrm{Ly}\alpha}$ (graphiques du bas) en fonction de $r_{\mathrm{min}}$ (donné en \si{\perh\Mpc}). La colonne de gauche donne les mesures avec l'ajustement de la corrélation \lya{}$\times$\lya{} estimée à partir des raw mocks. Celle de droite donne la mesure faite sur les mocks eboss-0.0.}
+  \caption{Évolution de $\chi_{red}^2$ (graphiques du haut), $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ (graphiques du milieu) et $\beta_{\mathrm{Ly}\alpha}$ (graphiques du bas) en fonction de $r_{\mathrm{min}}$ (donné en \si{\perh\Mpc}). La colonne de gauche donne les mesures avec l'ajustement de la corrélation \lya{}$\times$\lya{} estimée à partir des raw mocks. Celle de droite donne la mesure faite sur les mocks eboss-0.0.}
   \label{fig:chi2_vs_rmin}
 \end{figure}
 

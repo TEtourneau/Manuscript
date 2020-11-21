@@ -291,19 +291,19 @@ La figure~\ref{fig:bias_lya_vs_L0_dr16} montre la dépendance de $b_{\mathrm{eff
 
 Enfin, le modèle des HCD choisi influence la mesure des paramètres \lya{}. Toujours dans le but d'avoir une mesure robuste des paramètres \lya{}, nous avons essayé d'utiliser un autre modèle pour les HCD, développé par Edmond Chaussidon et Julien Guy (modèle C-G). Nous détaillons l'analyse en utilisant ce modèle dans la section~\ref{subsec:model_alter_hcd}.
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[scale=0.4]{bias_hcd_vs_L0_dr16}
-  \caption{Evolution des mesures des paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement.
+  \includegraphics[scale=0.3]{bias_hcd_vs_L0_dr16}
+  \caption{Évolution des mesures des paramètres $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement.
     % Les mesures sont faites sur l'auto-corrélation \lya{}$\times$\lya{} estimée à partir de \Nmocks{} réalisations des mocks eboss-0.2 et moyennée sur les 4 bins en redshift.}
     Les mesures sont faites sur l'auto-corrélation \lya{}$\times$\lya{} estimée à partir des données DR16 et moyennée sur les quatre bins en redshift.
     }
   \label{fig:bias_hcd_vs_L0_dr16}
 \end{figure}
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[scale=0.45]{bias_lya_vs_L0_dr16}
-  \caption{Evolution des mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement.
+  \includegraphics[scale=0.3]{bias_lya_vs_L0_dr16}
+  \caption{Évolution des mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement.
     % Les mesures sont faites sur l'auto-corrélation \lya{}$\times$\lya{} estimée à partir de \Nmocks{} réalisations des mocks eboss-0.2 et moyennée sur les 4 bins en redshift. La ligne horizontale bleue donne la mesure faite sur les \Nmocks réalisations des mocks eboss-0.0. Les lignes tiretées donnent les erreurs à $1 \sigma$.}
     Les mesures sont faites sur l'auto-corrélation \lya{}$\times$\lya{} estimée à partir des données DR16 et moyennée sur les quatre bins en redshift.
     }
@@ -311,7 +311,7 @@ Enfin, le modèle des HCD choisi influence la mesure des paramètres \lya{}. Tou
 \end{figure}
 
 
-\section{Etude de la modélisation des HCD}
+\section{Étude de la modélisation des HCD}
 \label{sec:etude_model_hcd}
 % Suite aux différents points énoncés dans la section précédente, nous avons mené une analyse sur les mocks, afin de mieux comprendre la modélisation des HCD, et d'essayer d'identifier les potentielles systématiques qui affectent la mesure des paramètres \lya{}.
 Suite aux différents points énoncés dans la section précédente, nous avons étudié l'effet qu'ont les HCD sur les paramètres \lya{} mesurés dans les mocks.
@@ -357,7 +357,7 @@ Ceci suggère que la valeur de $L_{\textsc{HCD}}$ utilisée dans l'ajustement de
 \begin{figure}
   \centering
   \includegraphics[scale=0.33]{bias_lya_vs_L0}
-  \caption{Evolution des mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement.
+  \caption{Évolution des mesures des paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ en fonction de la valeur $L_{\textsc{HCD}}$ choisie pour l'ajustement.
     Les mesures sont faites sur l'auto-corrélation \lya{}$\times$\lya{} estimée à partir de \Nmocks{} réalisations des mocks eboss-0.2 et moyennée sur les 4 bins en redshift. La ligne horizontale bleue donne la mesure faite sur les \Nmocks{} réalisations des mocks eboss-0.0. Les lignes tiretées bleues donnent les erreurs à $1 \sigma$.}
   \label{fig:bias_lya_vs_L0}
 \end{figure}
@@ -690,7 +690,7 @@ Cependant, lorsque nous faisons le même exercice sur les mocks (graphique de ga
 \begin{figure}
   \centering
   \includegraphics[scale=0.36]{L0_free}
-  \caption{Evolution de la valeur de $\chi^2$ de l'ajustement en fonction du paramètre $L_{\textsc{HCD}}$. La figure de gauche montre l'évolution pour les mocks eboss-0.2 où les HCD avec une densité de colonne $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués. Celle de droite l'évolution pour les données DR16 où les HCD sont aussi masqués. Sur chaque graphique, le point rouge présente la valeur, ainsi que la barre d'erreur qui l'accompagne, de $L_{\textsc{HCD}}$ qui minimise le $\chi^2$.}
+  \caption{Évolution de la valeur de $\chi^2$ de l'ajustement en fonction du paramètre $L_{\textsc{HCD}}$. La figure de gauche montre l'évolution pour les mocks eboss-0.2 où les HCD avec une densité de colonne $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués. Celle de droite l'évolution pour les données DR16 où les HCD sont aussi masqués. Sur chaque graphique, le point rouge présente la valeur, ainsi que la barre d'erreur qui l'accompagne, de $L_{\textsc{HCD}}$ qui minimise le $\chi^2$.}
   \label{fig:L0_free}
 \end{figure}
 
@@ -710,7 +710,7 @@ Cependant, le fait que ce résultat ne soit pas également obtenu sur les mocks,
 De plus, le fait que les ajustements effectués sur les données DR16 avec le modèle C-G, lorsque les HCD sont masqués ou ne sont pas masqués, ne soient pas compatibles ne nous conforte pas dans l'idée d'utiliser aveuglément ce modèle.
 Il est probable que des effets systématiques inconnus soient présents dans les données, et que les différents modèles de HCD prennent ces effets en compte.
 
-\textbf{Etant donné l'état de connaissance actuel de la modélisation des HCD et des effets systématiques qui pourraient affecter les données, nous pensons qu'il est préférable d'utiliser le modèle C-G sans masquer les HCD dans les données.}
+\textbf{Étant donné l'état de connaissance actuel de la modélisation des HCD et des effets systématiques qui pourraient affecter les données, nous pensons qu'il est préférable d'utiliser le modèle C-G sans masquer les HCD dans les données.}
 Premièrement, le fait de ne pas masquer les HCD permet d'avoir plus de pixel d'absorptions dans l'analyse, et donc de disposer de plus de statistique pour effectuer la mesure de la position du pic BAO.
 De plus, lorsque le nombre de HCD présents dans les données est plus important, la fonction $F_{\textsc{HCD}}$ est plus importante est donc les paramètres \lya{} et ceux des HCD sont moins corrélés.
 Deuxièmement, le fait de masquer les HCD consiste à retirer une partie non aléatoire des données, qui plus est qui correspond à des régions denses de l'univers.
