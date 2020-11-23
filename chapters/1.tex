@@ -1,35 +1,9 @@
-% % Lines to compile only this capter
-% \documentclass[11pt, twoside, a4paper, openright]{report}
-% \input{../source/packages.tex}
-
-% \usepackage[hyperref=true,
-%             url=false,
-%             isbn=false,
-%             backref=true,
-%             backend=biber,
-%             %style=authoryear,
-%             style=numeric,
-%             citereset=chapter,
-%             maxcitenames=3,
-%             maxbibnames=3]{biblatex}
-
-% \addbibresource{../source/library.bib}
-% % \renewcommand*{\citesetup}{%
-% %   \normalfont
-% %   \biburlsetup
-% %   \frenchspacing}
-
-% % \renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
-% % \renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
-% % \renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
-% \renewcommand*{\mkbibnamefamily}[1]{\textbf{#1}}
-% \renewcommand*{\mkbibnamegiven}[1]{\textbf{#1}}
-% \renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
-% \renewcommand*{\mkbibnamesuffix}[1]{\textbf{#1}}
+% Lines to compile only this capter
+\documentclass[11pt, twoside, a4paper, openright]{report}
+\input{../source/packages.tex}
 
 
-
-% \begin{document}
+\begin{document}
 
 
 \graphicspath{ {../figures/intro/} }
@@ -76,7 +50,10 @@ Ces quinze années (1915 - 1929) très fertiles pour la cosmologie ont popularis
 
 Suite notamment aux publications de Friedmann, Lemaître et Hubble, les défenseurs des modèles de big bang ont commencé à chercher des observables capables de prouver ces modèles. En 1948, George Gamow, Ralph Alpher et Robert Herman, reprenant les travaux de Georges Lemaître, prédisent l'existence du \emph{fond diffus cosmologique} (CMB : Cosmic Microwave Background). Ce rayonnement fossile, si les modèles de big bang sont vérifiés, aurait été émis lorsque l'univers était encore dense et chaud. Il repose sur le raisonnement suivant : du fait de la température initialement très élevée, les particules possèdent trop d'énergie pour s'assembler et former les premières briques élémentaires. L'univers n'est alors qu'une soupe où toutes les particules s'entrechoquent constamment. Lorsque l'univers s'expand, la température baisse et l'énergie des particules aussi, autorisant ainsi la formation des premiers noyaux d'atomes. Mais la température et la densité sont toujours trop importantes pour laisser les premiers atomes se former : l'univers est alors un bain de noyaux, principalement d'hydrogène et d'hélium, d'électrons et de photons. Les photons sont diffusés constamment sur les électrons libres, rendant le plasma de l'univers primordial opaque. Puis, lorsque l'univers devient suffisamment froid, les électrons ne disposant plus de suffisamment d'énergie sont capturés par les noyaux, formant les premiers atomes de l'univers. Cet instant est appelé la recombinaison. Les atomes ainsi formés, neutres, ne diffusent pas les photons. Ces derniers peuvent alors se propager librement, et l'univers devient transparent. Ce sont ces photons, diffusés une dernière fois environ \num{380000} ans après le big bang, qui forment le fond diffus cosmologique et que nous pouvons mesurer aujourd'hui. Les principales étapes sont résumées sur la figure~\ref{fig:univershistory}, dont notamment la formation des premiers noyaux durant les premières secondes, puis le CMB vers \num{380000} ans.
 Après l'apparition des premières étoiles, le rayonnement émis par celles-ci commence progressivement à réioniser l'hydrogène, qui était devenu neutre au moment de l'émission du CMB. Les dernières analyses estiment le redshift de la réionisation à $5 \lesssim z_{\mathrm{réionisation}} \lesssim 9$ \autocite{Collaboration2018}.
+Après la phase de réionisation, la quasi-totalité des atomes d'hydrogène sont ionisés. Seul 1 atome sur \num{10000} à 1 atome sur \num{1000} demeure neutre au sein du milieu intergalactique.
+
 En 1965, 17 ans après sa prédiction, le CMB est détecté par Penzias et Wilson, établissant ainsi le consensus sur les modèles de big bang. A partir de ce moment là, un certain nombre d'observations ont été menées par les cosmologistes afin de contraindre et distinguer les différents modèles de big bang.
+Nous retraçons dans la section suivante comment le modèle \lcdm{} s'est établi en tant que modèle standard de la cosmologie, puis nous le décrivons en détail.
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{univershistory2}
@@ -1002,12 +979,5 @@ Le traitement des HCD est détaillé dans la section~\ref{subsec:model_donnees}.
 \end{figure}
 
 
-% \renewcommand{\mkbibnamefirst}[1]{\textsc{#1}}
-% \renewcommand{\mkbibnamelast}[1]{\textsc{#1}}
-% \renewcommand{\mkbibnameprefix}[1]{\textsc{#1}}
-% \renewcommand{\mkbibnameaffix}[1]{\textsc{#1}}
-% % \bibliography{../source/library}
-
-
-% \printbibliography
-% \end{document}
+\printbibliography
+\end{document}
