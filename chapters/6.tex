@@ -34,7 +34,7 @@ Afin d'estimer $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\al
 % Pour chacun des bins, nous calculons la fonction de corrélation pour les forêts dont le redshift du quasar se trouve dans l'intervale en redshift considéré. Ceci permet d'éviter des corrélations  (voir Appendice B de \textcite{Agathe2019a}).
 % Pour constituer chacun des bins en redshift, plutôt que de considérer le redshift effectif de chaque paire de pixels, nous divisons l'échantillon de forêts selon le redshift des quasars. Ceci nous permet d'éviter les corrélations induites
 Pour constituer chacun des bins en redshift, nous pourrions séparer les paires de pixels selon leur redshift effectif.
-\textbf{Cependant, à cause de l'ajustement du continuum, cette stratégie induit des corrélations parasites entre bin en redshift lorsqu'une forêt se trouve dans deux bins en redshift à la fois.}
+Cependant, à cause de l'ajustement du continuum, cette stratégie induit des corrélations parasites entre bin en redshift lorsqu'une forêt se trouve dans deux bins en redshift à la fois.
 Pour palier ce problème, nous divisons l'échantillon de forêts selon le redshift des quasars (voir Appendice B de \textcite{Agathe2019a}).
 Les quatre intervalles choisis pour construire les bins en redshift des quasars sont $[\num{0}\,;\num{2.35}]$, $[\num{2.35}\,;\num{2.65}]$, $[\num{2.65}\,;\num{3.05}]$ et $[\num{3.05}\,;\num{10}]$.
 % Nous calculons aussi la matrice de distorsion dans chacun de ces bins.
@@ -196,11 +196,11 @@ La figure~\ref{fig:dr16_4bins} présente la fonction de corrélation et le meill
 % Il est sensible à l'amplitude de la fonction de corrélation, et est moins corrélé avec $\beta_{\mathrm{Ly}\alpha}$ que l'est $b_{\eta, \mathrm{Ly}\alpha}$ ou $b_{\mathrm{Ly}\alpha}$ (\#prov doublon avec le chap4).
 Une fois cette analyse produite, et toujours dans le but d'obtenir $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z)$ et $\beta_{\mathrm{Ly}\alpha}(z)$ pour $\num{1.9} < z  < \num{3.6}$, nous ajustons les paramètres \lya{} mesurés dans les données par une loi de puissance. La figure~\ref{fig:bias_vs_z} présente les mesures $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ dans les quatre bins en redshift, ainsi que l'ajustement fait sur ces quatre points.
 % Pour le biais effectif, nous obtenons $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$ avec $\gamma = \num{3.474} \pm \num{0.025}$.
-\textbf{Pour le biais effectif, nous obtenons $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z) = A (1+z)^{\gamma}$ avec $A = \num{0.0029} \pm \num{0.0009}$ et $\gamma = \num{3.47} \pm \num{0.26}$.
+Pour le biais effectif, nous obtenons $b_{\mathrm{eff},\mathrm{Ly}\alpha}(z) = A (1+z)^{\gamma}$ avec $A = \num{0.0029} \pm \num{0.0009}$ et $\gamma = \num{3.47} \pm \num{0.26}$.
 % Pour le paramètre RSD, nous obtenons $\beta_{\mathrm{Ly}\alpha}(z) \propto (1+z)^{\gamma}$ avec $\gamma = - \num{2.32} \pm \num{1.97}$.
 Pour le paramètre RSD, nous obtenons $\beta_{\mathrm{Ly}\alpha}(z) = A (1+z)^{\gamma}$ avec $A = \num{27.7} \pm \num{47.1}$ et $\gamma = - \num{2.32} \pm \num{1.40}$.
 Ces deux ajustements sont utilisés comme référence pour l'ajustement des paramètres des mocks (section~\ref{sec:tuning}). Ils sont extrapolés de $z = \num{1.9}$ jusqu'à $z = \num{3.6}$.
-}
+
 
 \begin{figure}
   \centering
@@ -268,16 +268,16 @@ Ces deux ajustements sont utilisés comme référence pour l'ajustement des para
 % \end{tabular}
 % \end{table}
 Après avoir produit les ajustements présentés dans la section précédente, nous avons cherché à savoir si la mesure des paramètres \lya{} était fiable. Nous avons d'abord regardé la corrélation des paramètres $b_{\eta,\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec les autres paramètres du modèle. La table~\ref{tab:corr_bias_lya} présente ces corrélations.
-\textbf{Premièrement, nous pouvons remarquer que les deux paramètres \lya{} ajustés sont très anticorrélés : \SI{-87}{\percent}.}
+Premièrement, nous pouvons remarquer que les deux paramètres \lya{} ajustés sont très anticorrélés : \SI{-87}{\percent}.
 % Il serait intéressant d'étudier quel couple de paramètres sont les moins corrélés.
 % Ceci vient du fait que le paramètre RSD du \lya{} est très important : le signal se trouve principalement le long de la ligne de visée. Avec peu de signal perpendiculairement à la ligne de visée, il est difficile de décorréler le biais du paramètre RSD du traceur.
 Deuxièmement, les paramètres du \lya{} sont très corrélés avec ceux des HCD, notamment $\beta_{\mathrm{Ly}\alpha}$ qui est corrélé à \SI{-75}{\percent} avec $b_{\textsc{HCD}}$.
 % Ceci pose plusieurs problèmes : d'abord, la modélisation des HCD choisie dans \textcite{DuMasdesBourboux2020} et utilisée ici consiste à identifier puis masquer les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$, les HCD non masqués étant pris en compte par le terme $F_{\textsc{HCD}}$ (voir section~\ref{subsec:model_donnees}).
-\textbf{Ceci pose plusieurs problèmes : d'abord, la modélisation des HCD choisie dans \textcite{DuMasdesBourboux2020} et utilisée ici consiste à masquer les HCD identifiés par un algorithme. En pratique cela revient à masquer les HCD avec une densité de colonne $\log n_{\textsc{HI}} > \num{20.3}$. Les HCD non masqués sont pris en compte par le terme $F_{\textsc{HCD}}$ (voir section~\ref{subsec:model_donnees}).}
+Ceci pose plusieurs problèmes : d'abord, la modélisation des HCD choisie dans \textcite{DuMasdesBourboux2020} et utilisée ici consiste à masquer les HCD identifiés par un algorithme. En pratique cela revient à masquer les HCD avec une densité de colonne $\log n_{\textsc{HI}} > \num{20.3}$. Les HCD non masqués sont pris en compte par le terme $F_{\textsc{HCD}}$ (voir section~\ref{subsec:model_donnees}).
 Cependant, l'algorithme utilisé ne possède pas une efficacité de \SI{100}{\percent} (Chabanier et al. (in prep)). Des HCD avec une grande densité de colonne ne sont donc pas masqués.
 Ces HCD produisent des absorptions intenses, non prises en compte par le terme $F_{\textsc{HCD}}$, ce qui a pour effet d'augmenter le biais du \lya{}.
 % Ensuite, le paramètre effectif $L_{\textsc{HCD}}$ est fixé à \SI{10}{\perh\Mpc} car il est corrélé avec les autres paramètres.
-\textbf{Ensuite, le paramètre effectif $L_{\textsc{HCD}}$ doit être fixé car il est très corrélé avec les autres paramètres et peut empêcher l'ajustement de converger.
+Ensuite, le paramètre effectif $L_{\textsc{HCD}}$ doit être fixé car il est très corrélé avec les autres paramètres et peut empêcher l'ajustement de converger.
 Sa valeur, qui dépend de la distribution des HCD non masqués, est difficile à déterminer.
 Une valeur de \SI{10}{\perh\Mpc} a été choisie dans l’analyse DR16, de façon un peu arbitraire dans la mesure où cela n’affecte pas la mesure de l’échelle BAO.}
 % Du fait des corrélations avec les autres paramètres, le fait de changer $L_{\textsc{HCD}}$ change la valeur de $b_{\textsc{HCD}}$.
@@ -287,7 +287,7 @@ Une valeur de \SI{10}{\perh\Mpc} a été choisie dans l’analyse DR16, de faço
 Nous remarquons que les paramètres des HCD obtenus dépendent de la valeur de $L_{\textsc{HCD}}$ choisie, comme illustré sur la figure~\ref{fig:bias_hcd_vs_L0_dr16}.
 A cause des corrélations entre les paramètres liés aux HCD et ceux liés au \lya{}, le fait de changer $L_{\textsc{HCD}}$ change aussi les paramètres \lya{} obtenus.
 La figure~\ref{fig:bias_lya_vs_L0_dr16} montre la dépendance de $b_{\mathrm{eff},\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ avec $L_{\textsc{HCD}}$. Ainsi, le paramètre RSD $\beta_{\mathrm{Ly}\alpha}$ est très corrélé avec $L_{\textsc{HCD}}$. Lorsque nous laissons libre $L_{\textsc{HCD}}$, en utilisant un prior gaussien centré sur \SI{10}{\perh\Mpc} et avec une largeur $\sigma = \SI{1}{\perh\Mpc}$, nous mesurons une corrélation entre $L_{\textsc{HCD}}$ et $\beta_{\mathrm{Ly}\alpha}$ de \SI{-38}{\percent}.
-\textbf{Lorsque $L_{\textsc{HCD}}$ est laissé totalement libre, il est corrélé, en valeur absolue, à plus de \SI{85}{\percent} avec les paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$, $b_{\textsc{HCD}}$ et $b_{\eta, \mathrm{SiIII}(1207)}$. Dans ce cas, nous mesurons $L_{\textsc{HCD}} = \num{2.54} \pm \num{0.73} \si{\perh\Mpc}$, très éloignée de la valeur à laquelle il est fixé dans l'analyse DR16. Nous discutons cette valeur dans la section~\ref{subsec:comprendre_hcd}).}
+Lorsque $L_{\textsc{HCD}}$ est laissé totalement libre, il est corrélé, en valeur absolue, à plus de \SI{85}{\percent} avec les paramètres $b_{\mathrm{eff},\mathrm{Ly}\alpha}$, $\beta_{\mathrm{Ly}\alpha}$, $b_{\textsc{HCD}}$ et $b_{\eta, \mathrm{SiIII}(1207)}$. Dans ce cas, nous mesurons $L_{\textsc{HCD}} = \num{2.54} \pm \num{0.73} \si{\perh\Mpc}$, très éloignée de la valeur à laquelle il est fixé dans l'analyse DR16. Nous discutons cette valeur dans la section~\ref{subsec:comprendre_hcd}).
 
 Enfin, le modèle des HCD choisi influence la mesure des paramètres \lya{}. Toujours dans le but d'avoir une mesure robuste des paramètres \lya{}, nous avons essayé d'utiliser un autre modèle pour les HCD, développé par Edmond Chaussidon et Julien Guy (modèle C-G). Nous détaillons l'analyse en utilisant ce modèle dans la section~\ref{subsec:model_alter_hcd}.
 
@@ -412,7 +412,7 @@ Ceci suggère que la valeur de $L_{\textsc{HCD}}$ utilisée dans l'ajustement de
 
 \subsection{Effet du masquage des HCD}
 \label{subsec:effet_masquage_hcd}
-\textbf{Dans l'analyse des mocks eboss-0.2, afin d'imiter l'analyse des données DR16, les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués lors du calcul des $\delta_F$.}
+Dans l'analyse des mocks eboss-0.2, afin d'imiter l'analyse des données DR16, les HCD pour lesquels $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués lors du calcul des $\delta_F$.
 Comme expliqué dans la section~\ref{subsec:stab_pars_lya}, le masquage des HCD dans les données s'effectue selon le résultat de l'algorithme d'identification. Les HCD identifiés puis reconstruits avec $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués. Dans le cas des mocks, les HCD avec $\log n_{\textsc{HI}} > \num{20.3}$ sont masqués à partir du \og vrai \fg catalogue. Nous étudions ici l'effet du masquage à partir du catalogue produit par l'algorithme d'identification.
 Pour ce faire, nous produisons l'analyse d'une réalisation de mock eboss-0.2, pour laquelle nous utilisons l'algorithme d'identification pour créer un catalogue de HCD. Le champ $\delta_F$ est calculé en masquant les HCD identifiés par l'algorithme, puis la fonction de corrélation \lya{}$\times$\lya{} est estimée dans les quatre bins en redshift utilisés jusqu'ici. Nous nommons cette analyse \emph{eboss-0.2\_finder}.
 La figure~\ref{fig:cf_finder_vs_true} présente la fonction de corrélation \lya{}$\times$\lya{} estimée à partir de la même réalisation des mocks, en version eboss-0.0, eboss-0.2 et eboss-0.2\_finder.
@@ -697,9 +697,9 @@ Cependant, lorsque nous faisons le même exercice sur les mocks (graphique de ga
 Ici encore, nous sommes face à une incohérence : lorsque nous étudions la distribution des HCD présents dans les mocks (avec une densité de colonne comprise dans la gamme $\num{17.2} < \log n_{\mathrm{HI}} < \num{20.3}$), le modèle C-G nous suggère d'utiliser $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$. Pourtant lorsque $L_{\textsc{HCD}}$ est laissé libre, la valeur obtenue est en tension avec $L_{\textsc{HCD}} = \num{2.8} \si{\perh\Mpc}$.
 Quand nous fixons les paramètres \lya{} aux valeurs mesurées sur les mocks eboss-0.0 et laissons libre $L_{\textsc{HCD}}$, nous mesurons $L_{\textsc{HCD}} = \num{4.38} \pm \num{0.47} \si{\perh\Mpc}$.
 % Ceci a pour effet de réduire les tensions.
-\textbf{Ceci a pour effet de produire une mesure de $L_{\textsc{HCD}}$ plus proche de la valeur suggérée par le modèle C-G.
+Ceci a pour effet de produire une mesure de $L_{\textsc{HCD}}$ plus proche de la valeur suggérée par le modèle C-G.
 % Mais la mesure produite n'est tout de même pas compatible ($\sim 3 \sigma$) avec ce que suggère le modèle C-G.
-Mais cette mesure n'est tout de même pas compatible ($\sim 3 \sigma$) avec cette valeur suggérée de $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$.}
+Mais cette mesure n'est tout de même pas compatible ($\sim 3 \sigma$) avec cette valeur suggérée de $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$.
 
 
 \paragraph{}
@@ -710,7 +710,7 @@ Cependant, le fait que ce résultat ne soit pas également obtenu sur les mocks,
 De plus, le fait que les ajustements effectués sur les données DR16 avec le modèle C-G, lorsque les HCD sont masqués ou ne sont pas masqués, ne soient pas compatibles ne nous conforte pas dans l'idée d'utiliser aveuglément ce modèle.
 Il est probable que des effets systématiques inconnus soient présents dans les données, et que les différents modèles de HCD prennent ces effets en compte.
 
-\textbf{Étant donné l'état de connaissance actuel de la modélisation des HCD et des effets systématiques qui pourraient affecter les données, nous pensons qu'il est préférable d'utiliser le modèle C-G sans masquer les HCD dans les données.}
+Étant donné l'état de connaissance actuel de la modélisation des HCD et des effets systématiques qui pourraient affecter les données, nous pensons qu'il est préférable d'utiliser le modèle C-G sans masquer les HCD dans les données.
 Premièrement, le fait de ne pas masquer les HCD permet d'avoir plus de pixel d'absorptions dans l'analyse, et donc de disposer de plus de statistique pour effectuer la mesure de la position du pic BAO.
 De plus, lorsque le nombre de HCD présents dans les données est plus important, la fonction $F_{\textsc{HCD}}$ est plus importante est donc les paramètres \lya{} et ceux des HCD sont moins corrélés.
 Deuxièmement, le fait de masquer les HCD consiste à retirer une partie non aléatoire des données, qui plus est qui correspond à des régions denses de l'univers.
