@@ -46,13 +46,13 @@ Chacune des fonctions de corrélation est ajustée au redshift effectif de la me
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{dr16_4bins}
-  \caption{Fonctions de corrélation \lya{}$\times$\lya{} dans chacun des bins en redshift de l'analyse. Les courbes en trait plein donne le meilleur ajustement du modèle obtenu avec \texttt{picca}. Chaque graphique correspond à un bin en redshift. Pour chacun des bins, la fonction de corrélation et l'ajustement sont montrés dans quatre bins en $\mu$.}
+  \caption{Fonctions de corrélation \lya{}$\times$\lya{} dans chacun des bins en redshift de l'analyse. Les courbes en trait plein donne le meilleur ajustement du modèle obtenu avec \picca{}. Chaque graphique correspond à un bin en redshift. Pour chacun des bins, la fonction de corrélation et l'ajustement sont montrés dans quatre bins en $\mu$.}
   \label{fig:dr16_4bins}
 \end{figure}
 
 \begin{table}[]
   \centering
-  \caption{Résultats de l'ajustement fait avec \texttt{picca} des fonctions de corrélation \lya{}$\times$\lya{} calculées sur les données DR16. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le modèle comporte \num{13} paramètres libres. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1577}$. Enfin, la dernière section donne le biais et le biais effectif du \lya{}. Ils sont reliés aux paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ par les équations~\ref{eq:def_bias} et~\ref{eq:def_bias_eff}.}
+  \caption{Résultats de l'ajustement fait avec \picca{} des fonctions de corrélation \lya{}$\times$\lya{} calculées sur les données DR16. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le modèle comporte \num{13} paramètres libres. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1577}$. Enfin, la dernière section donne le biais et le biais effectif du \lya{}. Ils sont reliés aux paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ par les équations~\ref{eq:def_bias} et~\ref{eq:def_bias_eff}.}
   \label{tab:dr16_4bins}
   \footnotesize
   \begin{tabular}{lccccc}
@@ -279,7 +279,7 @@ Ces HCD produisent des absorptions intenses, non prises en compte par le terme $
 % Ensuite, le paramètre effectif $L_{\textsc{HCD}}$ est fixé à \SI{10}{\perh\Mpc} car il est corrélé avec les autres paramètres.
 Ensuite, le paramètre effectif $L_{\textsc{HCD}}$ doit être fixé car il est très corrélé avec les autres paramètres et peut empêcher l'ajustement de converger.
 Sa valeur, qui dépend de la distribution des HCD non masqués, est difficile à déterminer.
-Une valeur de \SI{10}{\perh\Mpc} a été choisie dans l’analyse DR16, de façon un peu arbitraire dans la mesure où cela n’affecte pas la mesure de l’échelle BAO.}
+Une valeur de \SI{10}{\perh\Mpc} a été choisie dans l’analyse DR16, de façon un peu arbitraire dans la mesure où cela n’affecte pas la mesure de l’échelle BAO.
 % Du fait des corrélations avec les autres paramètres, le fait de changer $L_{\textsc{HCD}}$ change la valeur de $b_{\textsc{HCD}}$.
 % Du fait des corrélations avec les autres paramètres, les paramètres des HCD obtenus dépendent de la valeur de $L_{\textsc{HCD}}$ choisie.
 % La figure~\ref{fig:bias_hcd_vs_L0_dr16} montre la dépendance de $b_{\textsc{HCD}}$ et $\beta_{\textsc{HCD}}$ avec $L_{\textsc{HCD}}$.
@@ -609,7 +609,7 @@ Nous pouvons voir sur la figure~\ref{fig:cf_nhi_bins} que les HCD qui ont le plu
 Afin de comprendre les différences entre le modèle de Rogers et le modèle C-G observées sur la figure~\ref{fig:bias_cg_rogers_comp},
 nous étudions maintenant comment ces deux modèles se comportent lorsque nous ajustons les mocks contenant des HCD avec une densité de colonne fixe.
 Dans chacun des ajustements, nous devons utiliser pour chaque modèle un terme $F_{\textsc{HCD}}$ adéquat aux HCD présents.
-En ce qui concerne le modèle de C-G, le code \texttt{picca} permet de calculer le terme $F_{\textsc{HCD}}$ pour une distribution en $\log n_{\mathrm{HI}}$ données. Nous calculons donc $F_{\textsc{HCD}}$ pour chacune des valeurs de $\log n_{\mathrm{HI}}$.
+En ce qui concerne le modèle de C-G, le code \picca{} permet de calculer le terme $F_{\textsc{HCD}}$ pour une distribution en $\log n_{\mathrm{HI}}$ données. Nous calculons donc $F_{\textsc{HCD}}$ pour chacune des valeurs de $\log n_{\mathrm{HI}}$.
 Pour le modèle de Rogers, la forme de $F_{\textsc{HCD}}$ est fixée (équation~\ref{eq:f_hcd_def}). Il nous suffit, pour chaque valeur de $\log n_{\mathrm{HI}}$, de trouver la valeur de $L_{\textsc{HCD}}$ à utiliser. Mais ceci n'est pas chose aisée. Dans l'analyse DR16, $L_{\textsc{HCD}}$ est choisie de manière un peu arbitraire à \SI{10}{\perh\Mpc}, car il influence très peu la mesure des paramètres BAO.
 Mais comme nous l'avons vu à plusieurs reprises, $L_{\textsc{HCD}}$ influence grandement la mesure des paramètres \lya{}. Nous devons donc le choisir avec précaution.
 
@@ -628,7 +628,7 @@ Nous ne nous intéressons pas aux $k$ plus grands que \SI{0.8}{\h\per\Mpc} car l
 Ainsi, les valeurs de $L_{\textsc{HCD}}$ que nous obtenons pour $\log n_{\mathrm{HI}} \in [\num{17.6}\,;\num{18.2}\,;\num{18.8}\,;\num{19.4}\,;\num{20}]$ sont $L_{\textsc{HCD}} \in [\num{0.28}\,; \num{0.60}\,; \num{1.2}\,; \num{2.5}\,; \num{5}]$.
 % Ainsi, afin de reproduire le comportement de $F_{\textsc{HCD}}(k)$ pour $k \lesssim \SI{0.8}{\h\per\Mpc}$, les valeurs de $L_{\textsc{HCD}}$ que nous choisissons pour $\log n_{\mathrm{HI}} \in [\num{17.6}\,;\num{18.2}\,;\num{18.8}\,;\num{19.4}\,;\num{20}]$ sont $[\num{0.28}\,; \num{0.60}\,; \num{1.2}\,; \num{2.5}\,; \num{5}]$.
 La figure~\ref{fig:f_hcd_fixed} présente les fonctions $F_{\textsc{HCD}}(k)$ pour le modèle C-G (lignes continues) et pour le modèle de Rogers (lignes tiretées) en utilisant les valeurs de $L_{\textsc{HCD}}$ obtenues précédemment.
-% Les lignes continues donnent les fonctions $F_{\textsc{HCD}}(k)$ calculées par \texttt{picca}. Ce sont les fonctions utilisées dans le cadre du modèle de C-G. Les lignes tiretées donnent les termes $F_{\textsc{HCD}}(k)$ pour le modèle de Rogers, c'est à dire $F_{\textsc{HCD}}(k) = \exp(- L_{\textsc{HCD}} k)$.
+% Les lignes continues donnent les fonctions $F_{\textsc{HCD}}(k)$ calculées par \picca{}. Ce sont les fonctions utilisées dans le cadre du modèle de C-G. Les lignes tiretées donnent les termes $F_{\textsc{HCD}}(k)$ pour le modèle de Rogers, c'est à dire $F_{\textsc{HCD}}(k) = \exp(- L_{\textsc{HCD}} k)$.
 Pour chaque valeur de $\log n_{\mathrm{HI}}$, les fonctions $F_{\textsc{HCD}}$ sont très similaires entre les deux modèles.
 
 Nous ajustons maintenant chacune des versions des mocks avec les deux modèles. Pour le modèle de Rogers, nous utilisons les valeurs de $L_{\textsc{HCD}}$ déterminées précédemment.
@@ -641,7 +641,7 @@ Si ces modèles ne parviennent pas à distinguer l'effet du \lya{} de l'effet de
 \paragraph{}
 Nous comparons maintenant les fonctions $F_{\textsc{HCD}}$ correspondant à une large gamme en densité de colonne.
 Nous considérons premièrement la gamme en densité de colonne des HCD présents dans les mocks eboss-0.2 lorsque les HCD avec $\log n_{\mathrm{HI}} > \num{20.3}$ sont masqués, c'est à dire la gamme $\num{17.2} < \log n_{\mathrm{HI}} < \num{20.3}$. 
-La fonction $F_{\textsc{HCD}}$ utilisée dans le modèle de C-G pour cette gamme en $\log n_{\mathrm{HI}}$ est calculée par \texttt{picca}.
+La fonction $F_{\textsc{HCD}}$ utilisée dans le modèle de C-G pour cette gamme en $\log n_{\mathrm{HI}}$ est calculée par \picca{}.
 Comme précédemment, afin de déterminer le $L_{\textsc{HCD}}$ à utiliser dans le modèle de Rogers, nous cherchons à reproduire le comportement de $F_{\textsc{HCD}}(k)$ utilisé dans le modèle de C-G dans la gamme $k \lesssim \SI{0.8}{\h\per\Mpc}$. Pour ce faire, nous devons choisir $L_{\textsc{HCD}} = \SI{2.8}{\perh\Mpc}$.
 La figure~\ref{fig:f_hcd_range} présente les fonctions $F_{\textsc{HCD}}$ ainsi obtenues (en bleu). Nous pouvons remarquer que pour une large gamme en $\log n_{\mathrm{HI}}$, il est plus difficile d'obtenir un accord entre le modèle de Rogers et le modèle C-G.
 La figure~\ref{fig:f_hcd_range} présente aussi, à titre de comparaison, la  fonction $F_{\textsc{HCD}}$ obtenue avec $L_{\textsc{HCD}} = \SI{10}{\perh\Mpc}$ (en vert).

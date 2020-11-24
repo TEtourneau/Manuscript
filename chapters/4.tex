@@ -23,7 +23,7 @@ Ces mocks visent à reproduire les données d'eBOSS et de DESI. Ils sont nommés
 Le code est écrit en Python\footnote{https://www.python.org/} et se trouve en accès libre sur GitHub\footnote{https://github.com/igmhub/SaclayMocks}. L'utilisation de ces mocks et leur validation seront présentés dans les chapitres suivants.
 
 \section{Objectifs des mocks}
-% Les mocks s'inscrivent dans le projet DESI, et sont utilisés dans l'analyse finale des données eBOSS \autocite{CITE:dr16}.
+% Les mocks s'inscrivent dans le projet DESI, et sont utilisés dans l'analyse finale des données eBOSS~\autocite{CITE:dr16}.
 Contrairement à ce qu'on appelle les simulations, les mocks ne contiennent pas de physique à proprement parler : ils ne sont pas utilisés afin de déduire des paramètres astrophysiques. Certaines simulations, les simulations hydrodynamiques, permettent de mesurer des effets astrophysiques, comme par exemple le biais de l'hydrogène ou du \lya{}. Mais ces simulations sont très coûteuses car elles nécessitent de modéliser les effets physiques qui affectent les paramètres mesurés.
 Les mocks, quant à eux, sont conçus afin de répliquer rapidement un jeu de données, dans le but de tester l'analyse qui sera appliquée sur ces données.
 % Dans le cas de l'analyse \lya{} d'eBOSS et de DESI, les mocks sont utilisés afin
@@ -38,14 +38,14 @@ Il est important de produire un grand nombre de réalisations des mocks afin de 
 % La production et l'analyse d'un grand nombre de mocks permet de répondre précisément à ces questions.Ces mocks sont donc nécessaires pour pouvoir valider l'analyse menée sur les données.
 
 \paragraph{}
-Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS \autocite{DuMasdesBourboux2020}, et seront utilisés dans l'analyse \lya{} de DESI.
+Les mocks décrits dans ce manuscrit s'inscrivent dans les projets eBOSS et DESI. Ils sont utilisés dans l'analyse \lya{} des données complète d'eBOSS~\autocite{DuMasdesBourboux2020}, et seront utilisés dans l'analyse \lya{} de DESI.
 L'objectif de ces mocks est donc de répliquer au mieux les données \lya{} d'eBOSS et de DESI. Ces relevés couvrent un volume de plusieurs dizaines de \si{\cubic\Gpc}, et les échelles sondées grâce au \lya{} descendent jusqu'à la centaine de \si{\kpc}. Les mocks nécessitent donc de reproduire un volume immense, avec une bonne résolution.
 Les simulations dites \emph{N-corps} sont des simulations qui traitent le problème à N corps.
 % Elles sont initialisées avec une distribution de matière noire, représentée par des macro-particules de masse $\sim 10^{9} M_{\odot}$, à un redshift élevé ($z > 100$).
 Elles sont initialisées à un redshift élevé ($z > \num{100}$), avec une distribution de matière noire représentée par des macro-particules.
 % Généralement, environ $(\num{10000})^3$ macro-particules sont présentes dans ces simulations.
 Actuellement, les simulations les plus performantes utilisent environ $(\num{10000})^3$ macro-particules.
-La masse de ces particules dépend du volume simulé. Par exemple, la simulation Outer Rim \autocite{Heitmann2019} simule un volume d'environ $(\SI{4}{\Gpc})^3$, et les particules possèdent une masse $\sim 10^{9} M_{\odot}$.
+La masse de ces particules dépend du volume simulé. Par exemple, la simulation Outer Rim~\autocite{Heitmann2019} simule un volume d'environ $(\SI{4}{\Gpc})^3$, et les particules possèdent une masse $\sim 10^{9} M_{\odot}$.
 Puis, à chaque pas de temps, ces macro-particules sont déplacées en considérant uniquement les interactions gravitationnelles. Le champ de matière initial évolue ainsi jusqu'à $z=0$. Ces simulations sont très utiles pour étudier les effets de la gravité à grande échelle. Cependant elles ne sont pas adaptées à notre utilisation : afin d'avoir la résolution et le volume requis, la simulation nécessiterait beaucoup trop de macro-particules pour être réalisable dans un temps raisonnable.
 
 Les simulations hydrodynamiques fonctionnent de la même manière que les simulations N-corps. Elles incluent, en plus des macro-particules de matière noire, la physique baryonique présente dans le milieu galactique. Les baryons sont aussi représentés par des macro-particules. Afin de résoudre l'intérieur des galaxies, les macro-particules utilisées possèdent une masse plus faible que dans le cas des simulations N-corps. En contrepartie, le volume simulé est plus petit. Dans le cas des simulations hydrodynamiques, la densité, la pression et la température sont tracées dans chaque cellule. Certains effets astrophysiques, comme les supernovae ou les AGN peuvent aussi être présents. 
@@ -96,7 +96,7 @@ En effet, comme montré dans \textcite{Font-Ribera2012a}, les objets tirés aux 
 % Plutôt que de modéliser ces non-linéarités, nous considérons une seconde solution : nous considérons que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
 Une solution alternative consiste à considérer que les quasars suivent une distribution log-normale. Ceci permet d'obtenir une meilleure corrélation aux petites échelles.
 % Comme expliqué précédemment, l'utilisation des GRF ne permet pas de capturer l'évolution non linéaire du champ de matière. Plutôt que de modéliser ces non-linéarités, nous considérons que les quasars suivent une distribution log-normale.
-Ce choix est souvent fait pour simuler des relevés de galaxies \autocite{Agrawal2017}, et est en accord avec ce qui est observé dans les données \autocite{Clerkin2016}.
+Ce choix est souvent fait pour simuler des relevés de galaxies~\autocite{Agrawal2017}, et est en accord avec ce qui est observé dans les données~\autocite{Clerkin2016}.
 % Ainsi, au lieu de placer les quasars dans les voxels qui possèdent une densité plus élevé qu'un certain seuil, nous tirons les quasars dans chaque voxel avec une probabilité
 % Ainsi, dans chaque voxel, les quasars sont tirés avec une probabilité
 Nous optons donc pour cette seconde solution. Ainsi, les quasars sont tirés dans chaque voxel avec une probabilité
@@ -416,7 +416,7 @@ L'ascension droite $\alpha$ et la déclinaison $\delta$ du point $(\textsc{x},\t
            \sqrt{\textsc{x}^2 + \textsc{y}^2 + \textsc{z}^2}
            }) \; .
 \end{align}
-Enfin, grâce au facteur $N(z)$, les quasars sont tirés selon la distribution en $z$ prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous tirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{sec:quickquasars}). De plus, cela permet d'utiliser les mocks pour d'autres projets, comme WEAVE\footnote{WEAVE est un spectrographe à fibre multi-objets. Il possède \num{1000} fibres avec un champ de vue de $\SI{3.1}{\square\deg}$. Le relevé WEAVE-QSO prévoit d'observer \num{350000} quasars à grand redshift, sur un relevé de $\SI{6000}{\square\deg}$ \autocite{Pieri2016}.}, qui possèdent une densité de cible plus élevée que celle de DESI.
+Enfin, grâce au facteur $N(z)$, les quasars sont tirés selon la distribution en $z$ prédite pour DESI. Cette distribution est présentée sur la figure~\ref{fig:dndz_qso}. Cependant, nous tirons environ deux fois plus de quasars, afin de pouvoir simuler, entre autre, la sélection des cibles à l'aide du code \texttt{quickquasars} (présenté dans la section~\ref{sec:quickquasars}). De plus, cela permet d'utiliser les mocks pour d'autres projets, comme WEAVE\footnote{WEAVE est un spectrographe à fibre multi-objets. Il possède \num{1000} fibres avec un champ de vue de $\SI{3.1}{\square\deg}$. Le relevé WEAVE-QSO prévoit d'observer \num{350000} quasars à grand redshift, sur un relevé de $\SI{6000}{\square\deg}$~\autocite{Pieri2016}.}, qui possèdent une densité de cible plus élevée que celle de DESI.
 A la fin, nous obtenons environ \num{100} quasars à $z > \num{2.1}$ par degré carré.
 \begin{figure}
   \centering
@@ -579,12 +579,13 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
   \label{fig:p1d_smoothing}
 \end{figure}
 
-Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci est calculé en corrélant les pixels d'une même forêt. Il donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, on peut montrer que le spectre de puissance à une dimension est donné par l'intégrale du spectre de puissance à trois dimensions sur la direction transverse à la ligne de visée \autocite{lumsden_clustering_1989} :
+Cependant, ces fluctuations sont importantes pour le spectre de puissance à une dimension. Celui-ci est calculé en corrélant les pixels d'une même forêt. Il donne la puissance mesurée le long de la ligne de visée. Pour un mode $\kpar{}$ donné, on peut montrer que le spectre de puissance à une dimension est donné par l'intégrale du spectre de puissance à trois dimensions sur la direction transverse à la ligne de visée~\autocite{lumsden_clustering_1989} :
 \begin{equation}
   \label{eq:p1d}
   P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{0}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; .
 \end{equation}
-Les spectres des quasars sondent la densité le long de la ligne de visée, avec une résolution transverse extrêmement faible, équivalente à la taille d'un quasar (inférieure au parsec). Le calcul du spectre de puissance sur ces spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.
+% Les spectres des quasars sondent la densité le long de la ligne de visée, avec une résolution transverse extrêmement faible, équivalente à la taille d'un quasar (inférieure au parsec). Le calcul du spectre de puissance sur ces spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.
+\textbf{Un spectre de quasar sonde la densité de matière le long de la ligne de visée. Il procure ainsi un échantillonnage, transverse à la ligne de visée, de la densité à une échelle très faible, de l'ordre du parsec. Le calcul du spectre de puissance sur de tels spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.}
 % Avec la taille non nulle des voxels, l'intégrale s'effectue seulement jusqu'à $k_N$. De plus, le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ réduit davantage l'amplitude de ce spectre de puissance. Ces deux effets sont représentés sur la figure~\ref{prov} (\#prov faire la figure). Contrairement au cas à trois dimensions, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
 % En effet, ce spectre de puissance le long d'une ligne de visée est beaucoup plus sensible au bruit que le spectre de puissance calculé sur une colonne de section de $(\SI{2.19}{\perh\Mpc})^2$.
 % A cause de ces deux effets, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.
@@ -691,7 +692,7 @@ Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$.
 \label{subsubsec:pred}
 
 % Il aurait été possible d'implémenter les RSD différemment. Une solution serait, par exemple, de déplacer chaque pixel d'absorption proportionnellement à la vitesse particulière du gaz dans la cellule considéré, puis de modifier l'absorption en fonction du gradient de vitesse dans cette cellule. En effet, si le gradient de vitesse est non nul, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque cellule. Cette méthode pour ajouter les RSD dans des mocks \lya{} est la méthode choisie par \textcite{le_goff_simulations_2011} et \textcite{Farr2019}.
-% Ce n'est pas la méthode que nous choisissons ici, car celle-ci ne permet pas de prédire la fonction de corrélation obtenue avec les mocks. Dans le cas où $F$ est relié au GRF $\delta$ par une fonction analytique (équation~\ref{eq:fgpa4}), il est possible de relier la fonction de corrélation $\xi_F$ du champ $F$ à la fonction de corrélation $\xi_g$ du champ $\delta$ \autocite{Font-Ribera2012}. Ces deux fonctions de corrélation sont reliées par la relation
+% Ce n'est pas la méthode que nous choisissons ici, car celle-ci ne permet pas de prédire la fonction de corrélation obtenue avec les mocks. Dans le cas où $F$ est relié au GRF $\delta$ par une fonction analytique (équation~\ref{eq:fgpa4}), il est possible de relier la fonction de corrélation $\xi_F$ du champ $F$ à la fonction de corrélation $\xi_g$ du champ $\delta$~\autocite{Font-Ribera2012}. Ces deux fonctions de corrélation sont reliées par la relation
 % La méthode que nous utilisons, décrite dans la section précédente, a l'avantage d'avoir une fonction de corrélation prédictible. C'est pour cela que nous avons fait le choix de cette méthode.
 La méthode que nous utilisons pour ajouter les RSD, décrite dans la section précédente, a l'avantage d'avoir une fonction de corrélation prédictible. % C'est pour cela que nous avons fait le choix de cette méthode.
 Dans les lignes qui suivent, nous expliquons comment calculer la prédiction de la fonction de corrélation. Comme décrit par \textcite{Font-Ribera2012}, dans le cas où le champ $\delta_F$ est une fonction d'un champ gaussien $\delta_g$, il est possible de relier la fonction de corrélation $\xi_F$ du champ $\delta_F$ à la fonction de corrélation $\xi_g$ du champ $\delta_g$. La fonction de corrélation $\xi_F(r_{12})$ pour la séparation $r_{12}$ est reliée à $\xi_g(r_{12})$ par
@@ -919,7 +920,7 @@ Encore une fois, le code tourne en parallèle \num{512} fois : chaque instance d
 Lorsque les lignes de visée sont toutes reconstruites, la formule FGPA est appliquée afin d'obtenir le champ de transmission $F$ pour chaque ligne de visée.
 La dernière étape consiste à regrouper le résultat de tous les chunks. Le module \texttt{merge\_qso.py} permet de lire tous les quasars tirés dans chaque tranche de chaque chunk et de créer un catalogue global appelé \texttt{master.fits}. Une fois le catalogue construit, le code \texttt{dla\_saclay.py} tire les HCD le long de chaque ligne de visée. Le code est tourné sur les sept chunks en parallèle. Puis le module \texttt{merge\_dla.py}, comme pour les quasars, permet de regrouper tous les HCD tirés et de construire le catalogue global \texttt{master\_DLA.fits}.
 Enfin le code \texttt{make\_transmissions.py} permet de mettre les fichiers contenant les forêts au bon format :
-Les forêts sont regroupées par pixel HEALPix \autocite{Gorski2004} dans des fichiers FITS, puis ces fichiers FITS sont regroupés par 100 selon leur pixel HEALPix :
+Les forêts sont regroupées par pixel HEALPix~\autocite{Gorski2004} dans des fichiers FITS, puis ces fichiers FITS sont regroupés par 100 selon leur pixel HEALPix :
 \begin{equation*}
   \texttt{\textsc{n}/\textsc{pix}/transmission-nside-\textsc{pix}.fits.gz} \; ,
 \end{equation*}
@@ -1014,7 +1015,7 @@ nous commençons donc par construire le spectre de puissance $P^{\mathrm{1D}}_{\
 %   \label{eq:p1d_data}
 %   f(k) = \exp(- a k + b + \frac{c}{k + d}) \times f_{Si}(k) \; ,
 % \end{equation}
-% où $a$, $b$, $c$ et $d$ sont quatres paramètres à ajuster, et $f_{Si}$ est la fonction qui prend en compte les oscillations dues au silicium. La forme choisie permet d'avoir $\log(P^{\mathrm{1D}}_{modèle})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \autocite{Arinyo-i-Prats2015}.
+% où $a$, $b$, $c$ et $d$ sont quatres paramètres à ajuster, et $f_{Si}$ est la fonction qui prend en compte les oscillations dues au silicium. La forme choisie permet d'avoir $\log(P^{\mathrm{1D}}_{modèle})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques~\autocite{Arinyo-i-Prats2015}.
 % Tout d'abord, les données provenant de (\#prov On fit les données DR12 sans les oscillations du Si, quel papier ?) sont ajustées dans la gamme $\num{0.2} < k < {2.0} \si{\h\per\Mpc}$.
 Tout d'abord, le spectre de puissance à une dimension provenant des données DR12 dans lequel les oscillations dues au silicium ont été retirées (Nathalie Palanque-Delabrouille, communication privée) est ajusté dans la gamme $\num{0.2} < k < {2.0} \si{\h\per\Mpc}$.
 La fonction ajustée aux données est définie comme
@@ -1026,7 +1027,7 @@ La fonction ajustée aux données est définie comme
 où $a$, $b$, $c$ et $d$ sont quatre paramètres à ajuster.
 % La fonction $f_{\mathrm{Si}}$ prend en compte les oscillations dues au silicium.
 % Une fois la fonction $f$ de l'équation~\ref{eq:p1d_data} ajustée sur les données, nous utilisons comme modèle pour le spectre de puissance à une dimension la fonction $f$ sans la contribution du silicium $f_{\mathrm{Si}}$. Ceci nous permet de nous affranchir des oscillations dues au silicium dans notre modèle.
-La forme choisie pour $f$ permet d'avoir $\log(P^{\mathrm{1D}}_{\mathrm{modèle}})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques \autocite{Arinyo-i-Prats2015}.
+La forme choisie pour $f$ permet d'avoir $\log(P^{\mathrm{1D}}_{\mathrm{modèle}})$ linéaire à grand k, en accord avec ce qui est mesuré dans les simulations hydrodynamiques~\autocite{Arinyo-i-Prats2015}.
 % L'ajustement est fait dans les cinqs bins en redshift $z_1$, $z_2$, $z_3$, $z_4$ et $z_5$.
 % L'ajustement est fait dans les bins en redshift \num{2.2} ; \num{2.4} ; \num{2.6} ; \num{2.8} ; \num{3.0} ; \num{3.2} ; \num{3.4} et \num{3.6}.
 % Du fait de la résolution $d_{\mathrm{pix}} = \SI{0.2}{\perh\Mpc}$ des spectres simulés, nous avons besoin de calculer le  $P_{s}$ jusqu'à $k_{\mathrm{Ny}} = \pi / d_{\mathrm{pix}} \sim \SI{15.7}{\perh\Mpc}$.
@@ -1094,8 +1095,8 @@ Afin de corriger ces différences, nous ajustons itérativement la forme de $P_{
 Quelques itérations sont suffisantes pour obtenir un $P_{s}$ qui donne un $P^{\mathrm{1D}}_{\mathrm{mock}}$ en accord avec les données. Nous en effectuons dix pour chaque valeur du redshift.
 
 % A ce stade, nous disposons des informations nécessaires pour générer la prédiction. Nous générons donc la prédiction, puis nous l'ajustons avec le code \picca{}.
-A ce stade, nous disposons des informations nécessaires pour calculer la prédiction. Afin de mesurer les paramètres \lya{} prédits, nous générons une pseudo-fonction de corrélation qui suit la prédiction calculée avec le jeu de paramètres. Nous ajustons ensuite cette pseudo-fonction de corrélation avec le code picca, comme nous le ferions avec les mocks.
-  Le code picca ajuste les paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$. Le biais $b_{\mathrm{Ly}\alpha}$ est relié à ces deux paramètres par la relation
+A ce stade, nous disposons des informations nécessaires pour calculer la prédiction. Afin de mesurer les paramètres \lya{} prédits, nous générons une pseudo-fonction de corrélation qui suit la prédiction calculée avec le jeu de paramètres. Nous ajustons ensuite cette pseudo-fonction de corrélation avec le code \picca{}, comme nous le ferions avec les mocks.
+  Le code \picca{} ajuste les paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$. Le biais $b_{\mathrm{Ly}\alpha}$ est relié à ces deux paramètres par la relation
   \begin{equation}
     \label{eq:def_bias}
     b_{\mathrm{Ly}\alpha}  = \frac{b_{\eta, \mathrm{Ly}\alpha} f}{\beta_{\mathrm{Ly}\alpha}} \; ,
@@ -1185,7 +1186,7 @@ Le continuum des quasars est généré à l'aide du module \texttt{SIMQSO}, du p
 Le modèle utilisé est composé de plusieurs lois de puissance. Ces lois de puissance sont mises bout à bout pour créer le continuum.
 Les raies d'émission sont ajoutées en utilisant un modèle fondé sur les spectres des quasars observés par BOSS.
 Une option permet d'ajouter des BAL aux spectres de quasars simulés. Nous n'utilisons pas cette option car les spectres présentant un BAL sont retirés des données lors de l'analyse.
-Le code permet aussi d'ajouter des HCD et des métaux. Les HCD sont ajoutés dans les spectres aux positions indiquées par le catalogue de HCD que nous générons (section~\ref{subsec:hcd)}). Pour chaque HCD, un profil de Voigt, dont la profondeur dépend de la densité de colonne, est créé puis ajouté au spectre.
+Le code permet aussi d'ajouter des HCD et des métaux. Les HCD sont ajoutés dans les spectres aux positions indiquées par le catalogue de HCD que nous générons (section~\ref{subsec:hcd}). Pour chaque HCD, un profil de Voigt, dont la profondeur dépend de la densité de colonne, est créé puis ajouté au spectre.
 En ce qui concerne les métaux, ils sont ajoutés en utilisant la transmission du \lya{} : pour chaque métal, la forêt \lya{} est décalée en longueurs d'onde observées par un facteur $\lambda_m / \lambda_{\mathrm{Ly}\alpha}$, où $\lambda_m$ est la longueur d'onde du métal considéré.
 Puis, l'absorption est modifiée : 
 le flux de chaque absorption est corrigé par un facteur $A_m$, où $A_m$ relie la profondeur optique de la raie d'absorption du métal à la profondeur optique du \lya{} : $\tau_m = A_m \tau_{\mathrm{Ly}\alpha}$. Le paramètre $A_m$ est ajusté afin d'obtenir le bon biais pour chaque métal.

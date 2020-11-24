@@ -46,7 +46,7 @@ Une fois tous les modèles ajustés, ils sont triés selon leur $\chi^{2}$ rédu
 Tous les spectres mesurés par SDSS et classifiés comme quasar constituent l'échantillon \emph{superset}. Il contient \num{1440627} objets.
 
 Certains quasars peuvent être difficiles à classifier à cause d'absorptions intenses comme les DLA ou les BAL\footnote{Les BAL (Broad Absorption Line) sont des quasars qui présentent des absorptions intenses au voisinage de leurs raies d'émission. Cette absorption est interprétée comme étant due à un absorbeur dense situé juste devant le quasar. La figure~\ref{fig:exemple_bal} présente un spectre de quasar avec un BAL.}.
-Tous les quasars du relevé BOSS ont été inspectés visuellement \autocite{Paris2016} afin de confirmer la classification du pipeline de SDSS, et d'estimer leur redshifts. Cet échantillon représente \num{297301} objets.
+Tous les quasars du relevé BOSS ont été inspectés visuellement~\autocite{Paris2016} afin de confirmer la classification du pipeline de SDSS, et d'estimer leur redshifts. Cet échantillon représente \num{297301} objets.
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{quasar_number}
@@ -60,9 +60,9 @@ Tous les quasars du relevé BOSS ont été inspectés visuellement \autocite{Par
   \label{fig:exemple_bal}
 \end{figure}
 Cependant, à cause du grand nombre de quasars observés par eBOSS (figure~\ref{fig:quasar_number}), l'observation visuelle n'a pas pu être effectuée pour tous ces objets.
-% Une deuxième classification, fondée sur le pipeline de SDSS, est alors appliquée \autocite{CITE:Lyke in prep}.
-% Elle est complétée par l'algorithme \texttt{QuasarNET} \autocite{Busca2018} afin de réduire le nombre de mauvaises et non-identifications, et donc le nombre d'inspections visuelles nécessaires. Grâce à \texttt{QuasarNET}, ce chiffre est réduit à \SI{0.6}{\percent} des spectres, soit \num{8581} spectres. Une sous-échantillon du superset est alors construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
-Afin de vérifier la première identification faite par le pipeline de SDSS, une seconde classification est alors effectuée \autocite{Lyke2020}. Elle est complétée par l'algorithme \texttt{QuasarNET} \autocite{Busca2018}. Ceci réduit le nombre d'identifications douteuses et donc le nombre d'inspections visuelles requises. A la fin, \SI{0.6}{\percent} des spectres, soit \num{8581} spectres, requièrent une inspection visuelle.
+% Une deuxième classification, fondée sur le pipeline de SDSS, est alors appliquée~\autocite{CITE:Lyke in prep}.
+% Elle est complétée par l'algorithme \texttt{QuasarNET}~\autocite{Busca2018} afin de réduire le nombre de mauvaises et non-identifications, et donc le nombre d'inspections visuelles nécessaires. Grâce à \texttt{QuasarNET}, ce chiffre est réduit à \SI{0.6}{\percent} des spectres, soit \num{8581} spectres. Une sous-échantillon du superset est alors construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
+Afin de vérifier la première identification faite par le pipeline de SDSS, une seconde classification est alors effectuée~\autocite{Lyke2020}. Elle est complétée par l'algorithme \texttt{QuasarNET}~\autocite{Busca2018}. Ceci réduit le nombre d'identifications douteuses et donc le nombre d'inspections visuelles requises. A la fin, \SI{0.6}{\percent} des spectres, soit \num{8581} spectres, requièrent une inspection visuelle.
 
 Une fois les spectres classifiés, un sous-échantillon du superset est construit. Il contient \num{750426} objets, confirmés comme quasar par la chaîne de traitement précédente.
 Pour chaque objet, le catalogue fournit plusieurs estimations de redshift. Le pipeline de SDSS produit une première estimation. L'algorithme \texttt{QuasarNET} en fournit une seconde. Les spectres inspectés visuellement possèdent une autre estimation. Enfin, l'algorithme \texttt{redvsblue}\footnote{https://github.com/londumas/redvsblue} produit plusieurs estimations de redshift, parmi lesquelles figurent \texttt{Z\_PCA} et \texttt{Z\_LYAWG}.
@@ -76,7 +76,7 @@ A la fin, le catalogue ainsi construit (DR16Q dans la suite de ce manuscrit) con
 
 
 \paragraph{}
-L'analyse \lya{} des données complètes d'eBOSS \autocite{DuMasdesBourboux2020} utilise le catalogue DR16Q. Le redshift des quasars est choisi comme étant \texttt{Z\_LYAWG}. Les quasars sont sélectionnés avec un redshift $\num{1.77} < z \leq 4$. L'échantillon correspondant représente alors \num{341468} objets. La distribution en redshift de ces quasars traceurs (ceux utilisés comme traceurs pour la fonction de corrélation croisée \lya{}-QSO) est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
+L'analyse \lya{} des données complètes d'eBOSS~\autocite{DuMasdesBourboux2020} utilise le catalogue DR16Q. Le redshift des quasars est choisi comme étant \texttt{Z\_LYAWG}. Les quasars sont sélectionnés avec un redshift $\num{1.77} < z \leq 4$. L'échantillon correspondant représente alors \num{341468} objets. La distribution en redshift de ces quasars traceurs (ceux utilisés comme traceurs pour la fonction de corrélation croisée \lya{}-QSO) est présentée dans le graphique de gauche de la figure~\ref{fig:pixel_number}.
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{pixel_number}
@@ -206,7 +206,7 @@ Dans ce calcul, les poids $w_q(\lambda)$ sont corrigés de la dépendance en red
   \sigma_q^{-2}(\lambda_i)
   \left( \frac{1+z_{i}}{1+2.25} \right)^{\gamma_{\mathrm{Ly}\alpha} -1} \;,
 \end{equation}
-avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$ \autocite{McDonald2004}.
+avec $\gamma_{\mathrm{Ly}\alpha} = 2.9$~\autocite{McDonald2004}.
 % Grâce à cette transformation, la distorsion due à l'ajustement du continuum est exacte et connue.
 Grâce à cette transformation, l'effet sur la fonction de corrélation peut ainsi être modélisé et pris en compte. Sa modélisation passe par le calcul de la \emph{matrice de distorsion}, détaillée dans la section~\ref{sec:calcul_dmat}.
 
