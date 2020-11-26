@@ -46,13 +46,13 @@ Chacune des fonctions de corrélation est ajustée au redshift effectif de la me
 \begin{figure}
   \centering
   \includegraphics[scale=0.4]{dr16_4bins}
-  \caption{Fonctions de corrélation \lya{}$\times$\lya{} dans chacun des bins en redshift de l'analyse. Les courbes en trait plein donne le meilleur ajustement du modèle obtenu avec \picca{}. Chaque graphique correspond à un bin en redshift. Pour chacun des bins, la fonction de corrélation et l'ajustement sont montrés dans quatre bins en $\mu$.}
+  \caption{Fonctions de corrélation \lya{}$\times$\lya{} estimées à partir des données DR16. Les courbes en trait plein donne le meilleur ajustement du modèle obtenu avec \picca{}. Chaque graphique correspond à un bin en redshift. Pour chacun des bins, la fonction de corrélation et l'ajustement sont montrés dans quatre bins en $\mu$.}
   \label{fig:dr16_4bins}
 \end{figure}
 
 \begin{table}[]
   \centering
-  \caption{Résultats de l'ajustement fait avec \picca{} des fonctions de corrélation \lya{}$\times$\lya{} calculées sur les données DR16. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le modèle comporte \num{13} paramètres libres. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1577}$. Enfin, la dernière section donne le biais et le biais effectif du \lya{}. Ils sont reliés aux paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ par les équations~\ref{eq:def_bias} et~\ref{eq:def_bias_eff}.}
+  \caption{Résultats de l'ajustement fait avec \picca{} des fonctions de corrélation \lya{}$\times$\lya{} estimées à partir des données DR16. Chaque colonne donne le résultat de l'ajustement d'un bin en redshift. La dernière colonne donne le résultat de l'ajustement de la corrélation moyennée sur ces quatre bins en redshift. La première section du tableau donne les paramètres du modèle qui sont ajustés. La seconde donne le $\chi^2$ et le redshift effectif $z_{\mathrm{eff}}$. Le modèle comporte \num{13} paramètres libres. Le nombre de bins sur lesquels le modèle est ajusté est $N_{bin} = \num{1590}$, ce qui donne un nombre de degrés de liberté $n_{d.o.f.} = \num{1577}$. Enfin, la dernière section donne le biais et le biais effectif du \lya{}. Ils sont reliés aux paramètres $b_{\eta, \mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ par les équations~\ref{eq:def_bias} et~\ref{eq:def_bias_eff}.}
   \label{tab:dr16_4bins}
   \footnotesize
   \begin{tabular}{lccccc}
@@ -220,7 +220,7 @@ Ces deux ajustements sont utilisés comme référence pour l'ajustement des para
 
 \begin{table}[]
   \centering
-  \caption{Corrélations des paramètres du modèle avec les paramètres $b_{\eta,\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ lors de l'ajustement de la fonction de corrélation \lya{}$\times$\lya{}. L'ajustement est fait sur la moyenne des fonctions de corrélation calculées dans chaque bin en redshift, soit l'ensemble des données DR16.}
+  \caption{Corrélations des paramètres du modèle avec les paramètres $b_{\eta,\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$ lors de l'ajustement de la fonction de corrélation \lya{}$\times$\lya{} estimée à partir des données DR16. L'ajustement est fait sur la moyenne des fonctions de corrélation calculées dans chaque bin en redshift, soit l'ensemble des données DR16.}
   \label{tab:corr_bias_lya}
   \begin{tabular}{lcc}
     \toprule
@@ -598,7 +598,7 @@ Nous pouvons voir sur la figure~\ref{fig:cf_nhi_bins} que les HCD qui ont le plu
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{cf_nhi_bins}
-  \caption{Fonctions de corrélation \lya{}$\times$\lya{} estimées à partir d'une réalisation.
+  \caption{Fonctions de corrélation \lya{}$\times$\lya{} estimées à partir d'une réalisation des mocks.
     La ligne bleue foncée donne la corrélation pour les mocks eboss-0.0 (sans HCD). La ligne violette donne la corrélation pour les mocks eboss-0.2 incluant les HCD avec $\num{17.2} < \log n_{\mathrm{HI}} < \num{20.3}$. Les autres couleurs donnent les corrélations pour les mocks eboss-0.2 incluant des HCD avec une valeur fixe en $\log n_{\mathrm{HI}}$.
     % Chaque couleur donne la densité de colonne $\log n_{\mathrm{HI}}$ utilisée pour générer les HCD. Le détail est donné dans le texte.
     Le graphique de gauche montre les corrélations dans quatre gammes en $\mu$. Ces gammes sont, de haut en bas : $\num{0}<\mu<\num{0.5}$, $\num{0.5}<\mu<\num{0.8}$, $\num{0.8}<\mu<\num{0.95}$ et $\num{0.95}<\mu<\num{1}$. Le graphique de droite montre les corrélations moyennées sur $\num{0} < \mu < \num{1}$.}

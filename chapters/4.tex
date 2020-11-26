@@ -126,11 +126,12 @@ Afin de construire le champ d'absorption \lya{}, nous avons besoin du champ de d
 \begin{equation}
   F = \exp(- \tau) \; .
 \end{equation}
-De plus, la formule FGPA (Fluctuating Gunn Peterson Approximation) permet de relier la profondeur optique $\tau$ au contraste de densité $\delta$ à $z = 0$ :
+De plus, l'approximation FGPA (Fluctuating Gunn Peterson Approximation) permet de relier la profondeur optique $\tau$ au contraste de densité $\delta$ à $z = 0$ :
 \begin{equation}
   \label{eq:fgpa1}
   \tau(z) = a(z) \exp(b(z) G(z) \delta) \; .
 \end{equation}
+Elle est décrite dans l'appendice~\ref{app:fgpa}.
 Dans cette approximation, l'élargissement des raies d'absorption causé par la température est négligé. Étant donné que l'élargissement thermique est la source dominante d'élargissement des raies d'absorption \lya{}, et que cet effet est environ cinq fois inférieur à la résolution des données que nous cherchons à modéliser, l'utilisation de la formule FGPA est approprié.
 
 Dans cette approximation (équation~\ref{eq:fgpa1}), les paramètres $a$ et $b$ sont des paramètres à ajuster afin d'obtenir le bon biais du \lya{} et la bonne transmission moyenne $\overline F$. Leur détermination est décrite dans la section~\ref{sec:tuning}. Le facteur de croissance $G$ prend en compte l'évolution avec le redshift du champ de densité $\delta$. Ainsi il nous suffit de construire un GRF qui suit la fonction de corrélation à $z=0$ pour simuler le champ d'absorption du \lya{}. Pour ce faire, nous partons de la même boîte $\delta_k$ utilisée pour construire les 3 boîtes log-normales des quasars. Ceci garanti la corrélation croisée entre les quasars et le champ d'absorption \lya{}. Le spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$ est ensuite appliqué à la boîte $\delta_k$. Enfin, nous obtenons la boîte de densité $\delta_{\mathrm{matière}}$ à $z = 0$ qui servira au calcul du champ d'absorption du \lya{} en effectuant la transformée de Fourier de la boîte
@@ -287,8 +288,8 @@ puis, nous définissons le champ $\hat \delta_{\textsc{QSO}, 12}$ comme une inte
   \caption{Gauche : fonctions de corrélation $\xi_{i}(z_i)$, normalisées par un facteur $1 / \alpha^2(z_i)$ et obtenues par interpolation (orange) et extrapolation (bleu et vert) des fonctions de corrélation $\xi_1$ et $\xi_2$ à $z_1 = \num{2.1}$ et $z_2 = \num{3.5}$. Leur obtention est détaillée dans le texte. Droite : rapports $\xi_i / \alpha^2(z_i) \xi_0$. Le redshift $z = \num{3.0}$ est le redshift pour lequel la déviation par rapport à $\xi_0$ est la plus importante.}
   \label{fig:qsolognormal2}
 \end{figure}
-La figure~\ref{fig:qsolognormal2} montre les fonctions de corrélation normalisées $\xi_i$ qui correspondent au champ $\hat \delta_{\textsc{QSO},12}$ à différents redshifts $z_i$. Elles sont obtenues en interpolant linéairement (équation~\ref{eq:boiteqsointerp2}) les fonctions de corrélation $\xi_1$ et $\xi_2$, elles-mêmes obtenues aux redshifts $z_1$ et $z_2$ grâce aux transformations log-normales (équation~\ref{eq:lognormal2}) de $\alpha^2(z_1)\xi_0$ et $\alpha^2(z_2)\xi_0$.
-Nous pouvons remarquer sur cette figure~\ref{fig:qsolognormal2} que l'écart entre les fonctions de corrélation $\xi_1$ et $\xi_2$ (en rouge) et les fonctions de corrélation interpolées est moins important que dans le cas avec un seul champ log-normal. La courbe orange montre la fonction de corrélation $\xi_i$ au redshift $z_i = \num{3.0}$ pour lequel l'écart avec $\xi_1$ et $\xi_2$ est maximal.
+La figure~\ref{fig:qsolognormal2} présente les fonctions de corrélation normalisées $\xi_i$ qui correspondent au champ $\hat \delta_{\textsc{QSO},12}$ à différents redshifts $z_i$. Elles sont obtenues en interpolant linéairement (équation~\ref{eq:boiteqsointerp2}) les fonctions de corrélation $\xi_1$ et $\xi_2$, elles-mêmes obtenues aux redshifts $z_1$ et $z_2$ grâce aux transformations log-normales (équation~\ref{eq:lognormal2}) de $\alpha^2(z_1)\xi_0$ et $\alpha^2(z_2)\xi_0$.
+Nous pouvons remarquer sur cette figure~\ref{fig:qsolognormal2} que l'écart entre les fonctions de corrélation $\xi_1$ et $\xi_2$ (en rouge) et les fonctions de corrélation interpolées est moins important que dans le cas avec un seul champ log-normal. La courbe orange présente la fonction de corrélation $\xi_i$ au redshift $z_i = \num{3.0}$ pour lequel l'écart avec $\xi_1$ et $\xi_2$ est maximal.
 Comme précédemment, nous pouvons constater que l'effet entre une interpolation (orange) et une extrapolation (vert, par exemple) et similaire et de signe opposé. Afin d'affiner encore l'évolution avec le redshift du champ utilisé pour tirer les quasars, nous pouvons considérer trois champs log-normaux, et combiner une interpolation et une extrapolation obtenues à partir de ces trois champs.
 
 Nous considérons donc finalement trois champs log-normaux $\delta_{\textsc{QSO},1}$, $\delta_{\textsc{QSO},2}$ et $\delta_{\textsc{QSO},3}$  à $z_1 = \num{1.9}$,  $z_2 = \num{2.75}$  et $z_3 = \num{3.6}$. C'est la solution qui a été choisie et implémentée dans les mocks. Ces trois champs sont stockés dans les boîtes construites dans la section~\ref{subsubsec:boiteqso}. A partir de ces trois boîtes, nous construisons les 3 boîtes $\hat \delta_{\textsc{QSO},1}$, $\hat \delta_{\textsc{QSO},2}$ et $\hat \delta_{\textsc{QSO},3}$ (équation~\ref{eq:boiteqsointerp1}), puis les deux boîtes interpolées $\hat \delta_{\textsc{QSO},12}$ et $\hat \delta_{\textsc{QSO},23}$ (équation~\ref{eq:boiteqsointerp2}). Enfin, nous construisons la boîte
@@ -296,7 +297,7 @@ Nous considérons donc finalement trois champs log-normaux $\delta_{\textsc{QSO}
   \label{eq:boiteqsointerp3}
   \hat \delta_{\textsc{QSO}}(z) = K(z) \hat \delta_{\textsc{QSO}, 12}(z) + (1 - K(z)) \hat \delta_{\textsc{QSO}, 23}(z) \; ,
 \end{equation}
-comme la combinaison linéaire de deux boîtes interpolées $\hat \delta_{\textsc{QSO},12}$ et $\hat \delta_{\textsc{QSO},23}$. Le paramètre $K(z)$ est déterminé tel que, pour chaque $z$, le rapport de la fonction de corrélation $\xi_{\textsc{QSO}}$, normalisée par $1/\alpha^2(z)$ et obtenue avec l'équation~\ref{eq:boiteqsointerp3}, par la fonction de corrélation $\xi_0$, vaille 1 à $r = \SI{5}{\perh\Mpc}$. La figure~\ref{fig:qsolognormal3} présente les rapports normalisés $\xi_{12}(z) / \xi_0$ (correspondant à l'interpolation, en bleu) et $\xi_{23}(z) / \xi_0$ (correspondant à l'extrapolation, en orange) au redshift $z = \num{2.38}$. La combinaison linéaire des deux (équation~\ref{eq:boiteqsointerp3}) est montrée en vert. Le redshift $z = \num{2.38}$ correspond au redshift pour lequel la différence entre $\xi_{\textsc{QSO}}$ et $\xi_0$ est la plus grande. Le graphique de droite de cette figure~\ref{fig:qsolognormal3} montre un zoom de la courbe verte. Sur ce zoom, nous pouvons voir que $\xi_{\textsc{QSO}}$ ne dévie pas de $\xi_0$ de plus de $5\times 10^{-4}$ pour $r > \SI{5}{\perh\Mpc}$.
+comme la combinaison linéaire de deux boîtes interpolées $\hat \delta_{\textsc{QSO},12}$ et $\hat \delta_{\textsc{QSO},23}$. Le paramètre $K(z)$ est déterminé tel que, pour chaque $z$, le rapport de la fonction de corrélation $\xi_{\textsc{QSO}}$, normalisée par $1/\alpha^2(z)$ et obtenue avec l'équation~\ref{eq:boiteqsointerp3}, par la fonction de corrélation $\xi_0$, vaille 1 à $r = \SI{5}{\perh\Mpc}$. La figure~\ref{fig:qsolognormal3} présente les rapports normalisés $\xi_{12}(z) / \xi_0$ (correspondant à l'interpolation, en bleu) et $\xi_{23}(z) / \xi_0$ (correspondant à l'extrapolation, en orange) au redshift $z = \num{2.38}$. La combinaison linéaire des deux (équation~\ref{eq:boiteqsointerp3}) est montrée en vert. Le redshift $z = \num{2.38}$ correspond au redshift pour lequel la différence entre $\xi_{\textsc{QSO}}$ et $\xi_0$ est la plus grande. Le graphique de droite de cette figure~\ref{fig:qsolognormal3} présente un zoom de la courbe verte. Sur ce zoom, nous pouvons voir que $\xi_{\textsc{QSO}}$ ne dévie pas de $\xi_0$ de plus de $5\times 10^{-4}$ pour $r > \SI{5}{\perh\Mpc}$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.45]{qsolognormal3}
@@ -534,7 +535,7 @@ Nous manquons donc toutes les fluctuations pour lesquelles $k > k_N$.
 % ne possède pas la bonne amplitude. De plus, ce sont ces fluctuations aux petites échelles qui contribuent principalement à la variance du champ. Le champ $F$ construit ne possède donc pas le bon niveau de bruit.
 % \textbf{Ces fluctuations ne sont pas importante pour la corrélation à trois dimensions. En effet, nous calculons cette dernière pour mesurer l'échelle BAO, qui se situe à beaucoup plus grand échelle ($\sim \SI{100}{\perh\Mpc}$). De plus, comme expliqué dans la section~\ref{prov}, nous moyennons la fonction de corrélation à trois dimensions dans des bins de \SI{4}{\perh\Mpc} de large.
 % }
-Ces fluctuations ne sont pas importantes pour la corrélation à trois dimensions. La figure~\ref{fig:pk_smoothing} montre le spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$ (noir), obtenu avec Camb, ainsi que l'effet du lissage gaussien et l'effet de la taille non nulle de ces voxels.
+Ces fluctuations ne sont pas importantes pour la corrélation à trois dimensions. La figure~\ref{fig:pk_smoothing} présente le spectre de puissance de la matière $P_{\mathrm{matière}}(k)$ à $z=0$ (noir), obtenu avec Camb, ainsi que l'effet du lissage gaussien et l'effet de la taille non nulle de ces voxels.
   La courbe bleu donne le spectre de puissance qui inclut l'effet du lissage gaussien. Il s'exprime comme
   \begin{equation}
     P(k) =  W^2(k) P_{\mathrm{matière}}(k) \; ,
@@ -554,7 +555,7 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
     G(k) = \mathrm{sinc}\left(\frac{k d_{\mathrm{cell}}}{2}\right)  \; .
   \end{equation}
   La courbe rouge donne le spectre de puissance qui inclut ces deux effets, c'est à dire multiplié par $W^2(k)G^2(k)$.
-  La figure~\ref{fig:xi_smoothing} montre les fonctions de corrélation, qui sont les transformée de Fourier de ces spectres de puissance.
+  La figure~\ref{fig:xi_smoothing} présente les fonctions de corrélation, qui sont les transformée de Fourier de ces spectres de puissance.
   % L'effet est faible (\#prov combien ?) et principalement localisé à petit $r$.
   Les effets liés au lissage gaussien et à la taille des voxels sont principalement localisés à petit $r$ et autour du pic BAO. Ces effets sont faibles, en particulier celui produit par la taille non nulle des voxels.
   Ainsi, ces fluctuations à petite échelle ne sont pas importantes pour la fonction de corrélation à trois dimension.
@@ -568,7 +569,7 @@ Ces fluctuations ne sont pas importantes pour la corrélation à trois dimension
 \begin{figure}
   \centering
   \includegraphics[scale=0.38]{xi_smoothing}
-  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur la fonction de corrélation des mocks. Le graphique du haut montre les fonctions de corrélation obtenues à partir du spectre de puissance de Camb (noir), du spectre de puissance de Camb multiplié par $W^2(k)$ en bleu, du spectre de puissance de Camb multiplié par $G^2(k)$ en vert, et du spectre de puissance de Camb multiplié par $W^2(k)G^2(k)$ en rouge (équations~\ref{eq:gauss_smoothing} et~\ref{eq:effet_reso}). Le graphique du bas montre la différence entre les courbes bleue et noire, en bleu, entre les courbes vert et noire, en vert, ainsi qu'entre les courbes rouge et noire, en rouge.}
+  \caption{Effet du lissage gaussien et de la taille non nulle des pixels sur la fonction de corrélation des mocks. Le graphique du haut présente les fonctions de corrélation obtenues à partir du spectre de puissance de Camb (noir), du spectre de puissance de Camb multiplié par $W^2(k)$ en bleu, du spectre de puissance de Camb multiplié par $G^2(k)$ en vert, et du spectre de puissance de Camb multiplié par $W^2(k)G^2(k)$ en rouge (équations~\ref{eq:gauss_smoothing} et~\ref{eq:effet_reso}). Le graphique du bas présente la différence entre les courbes bleue et noire, en bleu, entre les courbes vert et noire, en vert, ainsi qu'entre les courbes rouge et noire, en rouge.}
   \label{fig:xi_smoothing}
 \end{figure}
 \begin{figure}
@@ -723,7 +724,7 @@ Dans cette équation, $\xi_F(r_{12})$ ne dépend que de la valeur de $\xi_g(r_{1
   \caption{La fonction de corrélation $\xi_F$ obtenue à l'aide de l'équation~\ref{eq:xig2xif} pour chaque valeur de $\xi_g/ \sigma_g^2 \in [-1 \, ; 1]$.}
   \label{fig:xiF_vs_xig}
 \end{figure}
-La figure~\ref{fig:xiF_vs_xig} montre la fonction de corrélation $\xi_F$ obtenue, en fonction de $\xi_g/ \sigma_g^2$.
+La figure~\ref{fig:xiF_vs_xig} présente la fonction de corrélation $\xi_F$ obtenue, en fonction de $\xi_g/ \sigma_g^2$.
 % Afin d'obtenir la prédiction pour $\xi(r, \mu)$, nous utilisons les formules décrites dans \textcite{hamilton_measuring_1992} :
 % Afin d'obtenir la prédiction dans l'espace des redshifts, nous commençons par relier $\xi_g(r, \mu)$ à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
 % De plus, nous pouvons relier la fonction de corrélation dans l'espace des redshifts $\xi_g(r, \mu)$, à la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ :
@@ -735,13 +736,13 @@ D'après la formule de Kaiser (équation~\ref{eq:kaiser5}), le champ $\delta_g$ 
     P_g(k) = (1 + c \mu_k^2)^2 P_l(k) \; ,
   \end{equation}
   où $P_l$ est le spectre de puissance que suit le champ $\delta_l$.
-  La figure~\ref{fig:xi_g} montre la fonction de corrélation du champ $\delta_g$ mesuré dans les mocks ainsi que la fonction de corrélation obtenue à partir du spectre de puissance de l'équation~\ref{eq:pk_g} (voir le passage de $P_g(k)$ à $\xi_g(r,\mu)$ dans les lignes qui suivent). Nous vérifions que ces deux fonctions de corrélation sont en accord.
+  La figure~\ref{fig:xi_g} présente la fonction de corrélation du champ $\delta_g$ mesuré dans les mocks ainsi que la fonction de corrélation obtenue à partir du spectre de puissance de l'équation~\ref{eq:pk_g} (voir le passage de $P_g(k)$ à $\xi_g(r,\mu)$ dans les lignes qui suivent). Nous vérifions que ces deux fonctions de corrélation sont en accord.
 Nous observons cependant de petites différences essentiellement le long de la ligne de visée.
   Cela pourrait être dû à l'effet de la taille des voxels utilisés pour construire les boîtes de gradient de vitesse $\eta$, ou possiblement au lissage gaussien appliqué à $\eta_{\parallel}$.
   \begin{figure}
     \centering
     \includegraphics[scale=0.4]{xi_g}
-    \caption{Fonctions de corrélation du champ $\delta_g$ (points) et prédiction de cette fonction de corrélation (équations~\ref{eq:pk_g} et~\ref{eq:hamilton1}. Le graphique de gauche montre les corrélations dans quatre bins en $\mu$. Celui de droite montre les corrélations dans la gamme $0 < \mu < 1$. La corrélation mesurée sur le champ $\delta_g$ est en bon accord avec la corrélation prédite, même s'il existe un écart le long de la ligne de visée.}
+    \caption{Fonctions de corrélation du champ $\delta_g$ (points) et prédiction de cette fonction de corrélation (équations~\ref{eq:pk_g} et~\ref{eq:hamilton1}. Le graphique de gauche présente les corrélations dans quatre bins en $\mu$. Celui de droite présente les corrélations dans la gamme $0 < \mu < 1$. La corrélation mesurée sur le champ $\delta_g$ est en bon accord avec la corrélation prédite, même s'il existe un écart le long de la ligne de visée.}
     \label{fig:xi_g}
   \end{figure}
 
@@ -787,7 +788,7 @@ Nous négligeons ici l'effet de la taille non nulle des voxels sur le spectre de
 %   \label{eq:effet_reso}
 %   G(k) = \mathrm{sinc}\left(\frac{k d_{\mathrm{cell}}}{2}\right) \;.
 % \end{equation}
-La figure~\ref{fig:xi_smoothing} montre l'effet de $W(k)$ et $G(k)$ sur la fonction de corrélation. L'effet lié à $G(k)$ est nettement moins important que celui lié à $W(k)$.
+La figure~\ref{fig:xi_smoothing} présente l'effet de $W(k)$ et $G(k)$ sur la fonction de corrélation. L'effet lié à $G(k)$ est nettement moins important que celui lié à $W(k)$.
 % (\#prov il y a pas un facteur $\frac{1}{2}$ en trop ? on a $\sigma_{smooth}^2 = 2 d_{\mathrm{cell}}^2$)
 Puis, à l'aide d'une transformation de Fourier du spectre de puissance, nous obtenons la fonction de corrélation $\xi(r)$ que suit le champ $\delta_l$ obtenu par interpolation avec lissage des boîtes.
 % Nous définissons le champ $\delta_g$ comme
@@ -839,11 +840,11 @@ L'équation~\ref{eq:biais_seuil} est donc équivalente à
 % Afin d'obtenir le seuil pour un biais donné, nous calculons $b_{\nu}$ pour une large gamme de seuils $\nu$ puis nous interpolons $b_{\nu}$ sur $\nu$.
 % Ainsi, pour un biais $b$, nous connaissons le seuil $\nu(b)$ à choisir.
 Afin d'obtenir le seuil pour un biais donné, nous tabulons $b_{\nu}$ pour une large gamme de seuils $\nu$, puis nous interpolons  $\nu$ en fonction de $b_{\nu}$.
-  Le graphique de gauche de la figure~\ref{fig:bnu_lambda} montre le biais $b_{\nu}$ en fonction du seuil $\nu$.
+  Le graphique de gauche de la figure~\ref{fig:bnu_lambda} présente le biais $b_{\nu}$ en fonction du seuil $\nu$.
 \begin{figure}
   \centering
   \includegraphics[scale=0.42]{bnu_lambda}
-  \caption{Le graphique de gauche montre le biais $b_{\nu}$ obtenu pour un seuil $\nu$. Le graphique de droite montre le paramètre $\lambda(z)$, utilisé pour tirer les HCD.}
+  \caption{Le graphique de gauche présente le biais $b_{\nu}$ obtenu pour un seuil $\nu$. Le graphique de droite présente le paramètre $\lambda(z)$, utilisé pour tirer les HCD.}
   \label{fig:bnu_lambda}
 \end{figure}
 Dans notre cas, le champ $\delta_l$ suit une distribution de probabilité gaussienne. Cependant, sa variance n'est pas égale à 1. De plus, le champ $\delta_l$ interpolé le long des lignes de visée correspond au champ de matière à $z=0$. Ainsi, pour obtenir un biais $b_{\textsc{HCD}}$, pour chaque redshift nous  calculons le seuil $\nu$ comme si nous visions un biais $b = b_{\textsc{HCD}} \sigma_l G(z)$. Le terme $\sigma_l$ prend en compte la variance du champ $\delta_l$, et $G(z)$ le fait que $\delta_l$ soit construit à $z=0$. Nous choisissons de tirer les HCD avec un biais $b_{\textsc{HCD}} = 2$.

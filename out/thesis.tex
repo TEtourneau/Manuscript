@@ -49,10 +49,17 @@
 \cleardoublepage
 
 % \appendix
-% \foreach \i in {1,2,...,\NumOfAppendices}{
+% \foreach \i in {1,...,\NumOfAppendices}{
 % \input{../appendices/\i}
 % \cleardoublepage
 % }
+
+\begin{appendices}
+  \foreach \i in {1,...,\NumOfAppendices}{
+    \input{../appendices/\i}
+    \cleardoublepage
+  }
+\end{appendices}
 
 %   \bibliography{../source/library}
 \printbibliography

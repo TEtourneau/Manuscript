@@ -39,11 +39,13 @@
 \usepackage{emptypage}
 \usepackage{setspace}
 \usepackage{pgffor}
-    \setlength{\columnseprule}{0pt}
-    \setlength\columnsep{10pt}
+\setlength{\columnseprule}{0pt}
+\setlength\columnsep{10pt}
 \usepackage[francais,nohints]{minitoc}
-    \setcounter{minitocdepth}{3}
- 
+\setcounter{minitocdepth}{3}
+\usepackage[toc,page]{appendix}
+% \renewcommand{\appendixpagename}{Appendices}
+    
  %https://la-bibliotex.fr/2019/02/03/ecrire-les-nombres-et-les-unites-avec-latex/   
 \usepackage{siunitx}
 % \sisetup{
@@ -242,7 +244,7 @@ bottom=30mm
 \newcommand*{\NumOfChapters}{6}
 
 % Change this variable if you add or remove appendices
-\newcommand*{\NumOfAppendices}{2}
+\newcommand*{\NumOfAppendices}{1}
 
 % PDF metadata
 \hypersetup{
