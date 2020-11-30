@@ -25,32 +25,34 @@
 
 \begin{small}
 \vspace{-.25cm}
-\paragraph*{Mots clés :} cosmologie, relevé à grand redshift, énergie noire, forêts Lyman-$\alpha$, simulations, champs aléatoires gaussiens
+\paragraph*{Mots clés :} cosmologie, relevé à grand redshift, énergie noire, forêts Lyman-$\alpha$, mocks, champs aléatoires gaussiens
 
 \vspace{-.5cm}
 \begin{multicols}{2}
   \paragraph*{Résumé :}
   Cette thèse s'inscrit dans le cadre des projets eBOSS et DESI.
   Ces projets utilisent, entre autres, l'absorption Lyman-$\alpha$ (\lya) afin de sonder la répartition de matière dans l'univers et ainsi mesurer l'échelle des oscillations acoustiques de baryon (BAO).
-  La mesure du rapport de la taille de l'échelle BAO et de la taille de l'horizon acoustique lors du découplage des baryons et des photons permet de contraire l'expansion de l'univers, et donc le modèle \lcdm{}, modèle standard de la cosmologie.
+  La mesure du rapport de la taille de l'échelle BAO et de la taille de l'horizon acoustique lors du découplage des baryons et des photons permet de contraindre l'expansion de l'univers,
+  % et donc le modèle \lcdm{}, modèle standard de la cosmologie.
+  et donc les paramètres de l'équation d'état de l'énergie noire.
 
-  Cette thèse présente le développement de simulations utilisées afin de vérifier les analyses BAO des groupes \lya{} de eBOSS et DESI.
-  Ces simulations ont recours aux champs aléatoires gaussiens (GRF).
+  Cette thèse présente le développement de simulations (ou pseudo-données, ou mocks) à partir de champs aléatoires gaussiens (GRF) utilisées afin de tester les analyses BAO des groupes \lya{} de eBOSS et DESI.
+  % Ces simulations ont recours à des champs aléatoires gaussiens (GRF).
   Les GRF permettent de générer un champ de densité $\delta$.
   A partir de ce champ de densité, les positions des quasars (QSO) sont tirées, puis à partir de chaque quasar, les lignes de visées sont constituées.
   Le champ de densité $\delta$ est interpolé le long de ces lignes de visées.
   Enfin, à l'aide de l'approximation FGPA (Fluctuating Gunn Peterson Approximation), la densité interpolée est transformée en profondeur optique $\tau$, puis en absorption \lya{}.
   Grâce à un programme développé par la communauté de DESI, un continuum est ajouté aux forêts \lya{} afin de créer des spectres de quasars synthétiques.
-  Les simulations présentées dans ce manuscrit fournissent donc un relevé de quasars dont les forêts \lya{} présentes dans les spectres possèdent les bonnes fonctions d'auto-corrélation \lya{}$\times$\lya{}, de corrélation croisée \lya{}$\times$QSO, ainsi que d'auto-corrélation QSO$\times$QSO et HCD$\times$HCD (High Column Density systems).
+  Les mocks présentées dans ce manuscrit fournissent donc un relevé de quasars dont les forêts \lya{} présentes dans les spectres possèdent les bonnes fonctions d'auto-corrélation \lya{}$\times$\lya{}, de corrélation croisée \lya{}$\times$QSO, ainsi que d'auto-corrélation QSO$\times$QSO et HCD$\times$HCD (High Column Density systems).
 
-  L'étude de ces simulations permet de montrer que l'analyse BAO menée sur l'ensemble des données \lya{} du relevé eBOSS produit une mesure non biaisée des paramètres BAO $\apar{}$ et $\aperp{}$.
+  L'étude de ces mocks permet de montrer que l'analyse BAO menée sur l'ensemble des données \lya{} du relevé eBOSS produit une mesure non biaisée des paramètres BAO $\apar{}$ et $\aperp{}$.
   Par ailleurs, une étude approfondie du modèle utilisé pour ajuster les fonctions de corrélation montre que la forme de la fonction d'auto-corrélation \lya{}$\times$\lya{}, c'est à dire les mesures du biais $b_{\mathrm{Ly}\alpha}$ et du paramètre RSD (Redshift Space Distorsions) $\beta_{\mathrm{Ly}\alpha}$, est comprise à environ \SI{20}{\percent} près.
   Les systématiques qui affectent les mesures des paramètres \lya{} ($b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$) sont issues de deux effets.
   Le premier effet provient de la matrice de distorsion qui ne capture pas l'intégralité des distorsions produites par l'ajustement du continuum des quasars.
   Le second effet est lié à la modélisation des HCD.
   La modélisation de ces absorbeurs denses n'est pas parfaite et affecte la mesure des paramètres \lya{}, en particulier le paramètre RSD $\beta_{\mathrm{Ly}\alpha}$.
 
-  L'analyse de ces simulations permet donc de valider un bon contrôle des systématiques pour les analyses BAO avec le \lya{}.
+  L'analyse de ces mocks permet donc de valider un bon contrôle des systématiques pour les analyses BAO avec le \lya{}.
   Cependant, une meilleure compréhension des mesures des paramètres \lya{} est nécessaire afin d'envisager une analyse RSD à l'aide de la combinaison de l'auto-corrélation \lya{}$\times$\lya{} et de la corrélation croisée \lya{}$\times$QSO.
 \end{multicols}
 \end{small}
@@ -66,7 +68,7 @@
 
 \begin{small}
 \vspace{-.25cm}
-\paragraph*{Keywords:} cosmology, high-redshift survey, dark energy, Lyman-$\alpha$ forests, simulations, gaussian random fields
+\paragraph*{Keywords:} cosmology, high-redshift survey, dark energy, Lyman-$\alpha$ forests, mock data sets, gaussian random fields
 
 \vspace{-.5cm}
 \begin{multicols}{2}
@@ -75,23 +77,23 @@
   These projects, among other tracers, use the Lyman-$\alpha$ (\lya) absorption to probe the matter distribution in the universe and measure the baryon acoustic oscillations (BAO) scale.
   The measurement of the BAO scale to the sound horizon ratio allows to constrain the universe expansion and so the \lcdm{} model, the standard model of cosmology.
 
-  This thesis presents the development of simulations used in order to check the BAO analyses carried out by the \lya{} group within the eBOSS and DESI collaborations.
-  These simulations make use of gaussian random fields (GRF).
+  This thesis presents the development of mock data sets used in order to check the BAO analyses carried out by the \lya{} group within the eBOSS and DESI collaborations.
+  These mocks make use of gaussian random fields (GRF).
   GRF allow to generate a density field $\delta$.
   From this density field, quasar (QSO) positions are drawn. From each quasar, a line of sight is constructed.
   Then, the density field $\delta$ is interpolated along each line of sight.
   Finally, the fluctuating Gunn Peterson approximation (FGPA) is used to convert the interpolated density into the optical depth $\tau$, and then into the \lya{} absorption.
   Thanks to a program developed by the DESI community, a continuum is added to each \lya{} forest in order to produce quasar synthetic spectra.
-  The simulations presented in the manuscript provide a survey of quasars whose \lya{} forests in the quasar spectra have the correct \lya{}$\times$\lya{} auto-correlation, \lya{}$\times$QSO cross-correlation, as well as the correct QSO$\times$QSO and HCD$\times$HCD (High Column Density systems) auto-correlation functions.
+  The mocks presented in the manuscript provide a survey of quasars whose \lya{} forests in the quasar spectra have the correct \lya{}$\times$\lya{} auto-correlation, \lya{}$\times$QSO cross-correlation, as well as the correct QSO$\times$QSO and HCD$\times$HCD (High Column Density systems) auto-correlation functions.
 
-  The study of these simulations shows that the BAO analysis run on the whole \lya{} eBOSS data set produces a non-biaised measurement of the BAO parameters $\apar{}$ et $\aperp{}$.
+  The study of these mocks shows that the BAO analysis run on the whole \lya{} eBOSS data set produces a non-biaised measurement of the BAO parameters $\apar{}$ et $\aperp{}$.
   In addition, the analysis of the model used to fit the correlation functions shows that the shape of the \lya{}$\times$\lya{} auto-correlation, which is linked to the bias $b_{\mathrm{Ly}\alpha}$ and redshift space distorsions (RSD) parameter $\beta_{\mathrm{Ly}\alpha}$, are understood up to \SI{80}{\percent}.
   The systematics affecting the measurement of the \lya{} parameters ($b_{\mathrm{Ly}\alpha}$ et $\beta_{\mathrm{Ly}\alpha}$) come from two different effects.
   The first one originates from the distortion matrix which does not capture all the distortions produced by the quasar continuum fitting procedure.
   The second one is linked to the HCD modelling.
   The modelling of these strong absorbers is not perfect and affects the measurement of the \lya{} parameters, especially the RSD parameter $\beta_{\mathrm{Ly}\alpha}$.
 
-  Thus, the analysis of these simulations allows to validate the systematic control of the BAO analyses done with the \lya{}.
+  Thus, the analysis of these mocks allows to validate the systematic control of the BAO analyses done with the \lya{}.
   However, a better understanding of the measurement of the \lya{} parameters is required in order to consider using the \lya{}, which means combining the \lya{}$\times$\lya{} auto-correlation and \lya{}$\times$QSO cross-correlation, to do a RSD analysis.
 \end{multicols}
 \end{small}

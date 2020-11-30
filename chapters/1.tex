@@ -49,8 +49,8 @@ Ces quinze années (1915 - 1929) très fertiles pour la cosmologie ont popularis
 % . Ces points conduisent à nommer ces classes de solutions \emph{hot big bang models}, ou modèles de big bang en français, symbolisant l'idée qu'à l'origine\footnote{\#prov ou plutôt aussi loin que nous puissions remonter ? Ca vaut peut-être le coup d'expliquer la distinction}, l'univers fût un point infiniment chaud et dense.
 
 Suite notamment aux publications de Friedmann, Lemaître et Hubble, les défenseurs des modèles de big bang ont commencé à chercher des observables capables de prouver ces modèles. En 1948, George Gamow, Ralph Alpher et Robert Herman, reprenant les travaux de Georges Lemaître, prédisent l'existence du \emph{fond diffus cosmologique} (CMB : Cosmic Microwave Background). Ce rayonnement fossile, si les modèles de big bang sont vérifiés, aurait été émis lorsque l'univers était encore dense et chaud. Il repose sur le raisonnement suivant : du fait de la température initialement très élevée, les particules possèdent trop d'énergie pour s'assembler et former les premières briques élémentaires. L'univers n'est alors qu'une soupe où toutes les particules s'entrechoquent constamment. Lorsque l'univers s'expand, la température baisse et l'énergie des particules aussi, autorisant ainsi la formation des premiers noyaux d'atomes. Mais la température et la densité sont toujours trop importantes pour laisser les premiers atomes se former : l'univers est alors un bain de noyaux, principalement d'hydrogène et d'hélium, d'électrons et de photons. Les photons sont diffusés constamment sur les électrons libres, rendant le plasma de l'univers primordial opaque. Puis, lorsque l'univers devient suffisamment froid, les électrons ne disposant plus de suffisamment d'énergie sont capturés par les noyaux, formant les premiers atomes de l'univers. Cet instant est appelé la recombinaison. Les atomes ainsi formés, neutres, ne diffusent pas les photons. Ces derniers peuvent alors se propager librement, et l'univers devient transparent. Ce sont ces photons, diffusés une dernière fois environ \num{380000} ans après le big bang, qui forment le fond diffus cosmologique et que nous pouvons mesurer aujourd'hui. Les principales étapes sont résumées sur la figure~\ref{fig:univershistory}, dont notamment la formation des premiers noyaux durant les premières secondes, puis le CMB vers \num{380000} ans.
-\textbf{Après l'apparition des premières étoiles, le rayonnement émis par celles-ci commence progressivement à réioniser l'hydrogène, qui était devenu neutre au moment de l'émission du CMB. Les dernières analyses estiment le redshift de la réionisation à $5 \lesssim z_{\mathrm{réionisation}} \lesssim 9$~\autocite{Collaboration2018}.
-Après la phase de réionisation, la quasi-totalité des atomes d'hydrogène sont ionisés. Seul 1 atome sur \num{10000} à 1 atome sur \num{1000} demeure neutre au sein du milieu intergalactique.}
+Après l'apparition des premières étoiles, le rayonnement émis par celles-ci commence progressivement à réioniser l'hydrogène, qui était devenu neutre au moment de l'émission du CMB. Les dernières analyses estiment le redshift de la réionisation à $5 \lesssim z_{\mathrm{réionisation}} \lesssim 9$~\autocite{Collaboration2018}.
+Après la phase de réionisation, la quasi-totalité des atomes d'hydrogène du milieu intergalactique sont ionisés. Seul 1 atome sur \num{10000} à 1 atome sur \num{1000} demeure neutre.
 
 En 1965, 17 ans après sa prédiction, le CMB est détecté par Penzias et Wilson, établissant ainsi le consensus sur les modèles de big bang. A partir de ce moment là, un certain nombre d'observations ont été menées par les cosmologistes afin de contraindre et distinguer les différents modèles de big bang.
 Nous retraçons dans la section suivante comment le modèle \lcdm{} s'est établi en tant que modèle standard de la cosmologie, puis nous le décrivons en détail.
@@ -160,13 +160,13 @@ Le décalage vers le rouge, ou \emph{redshift} en anglais, est la mesure du déc
   1 + z = \frac{\lambda_o}{\lambda_e}  \; ,
 \end{equation}
 où $\lambda_{e}$ est la longueur d'onde émise et $\lambda_{o}$ la longueur d'onde observée.
-\textbf{Le redshift trouve son origine dans deux effets.
-Le premier : le redshift est causé par la vitesse particulière de  l'objet. Dans ce cas, nous parlons d'\emph{effet Doppler}\footnote{L'effet Doppler est l'augmentation ou la diminution de la longueur d'onde d'une onde lorsque l'émetteur de cette dernière s'approche ou s'éloigne de l'observateur. L'exemple le plus connu est celui de l'ambulance : le son entendu est plus aigu lorsque l'ambulance s'approche, puis plus grave lorsqu'elle s'éloigne. Le même processus est à l'œuvre avec la lumière.}.
+Le redshift trouve son origine dans deux effets.
+Le premier : le redshift causé par la vitesse particulière de  l'objet. Dans ce cas, nous parlons d'\emph{effet Doppler}\footnote{L'effet Doppler est l'augmentation ou la diminution de la longueur d'onde d'une onde lorsque l'émetteur de cette dernière s'approche ou s'éloigne de l'observateur. L'exemple le plus connu est celui de l'ambulance : le son entendu est plus aigu lorsque l'ambulance s'approche, puis plus grave lorsqu'elle s'éloigne. Le même processus est à l'œuvre avec la lumière.}.
 Le second : dans le cadre des modèles de big bang, l'expansion de l'univers produit un décalage vers le rouge du spectre des objets distants. Dans ce cas, nous parlons de \emph{redshift cosmologique}.
-Pour les objets lointains que nous considérons dans ce manuscrit, le redshift induit par les vitesses particulières est négligeable devant le redshift causé par l'expansion de l'univers. Nous confondons donc dans la suite redshift et redshift cosmologique.}
+Pour les objets lointains que nous considérons dans ce manuscrit, le redshift induit par les vitesses particulières est faible devant le redshift causé par l'expansion de l'univers. Nous confondons donc dans la suite redshift et redshift cosmologique. Mais ceci est une approximation, qui produit des distorsions (voir section~\ref{subsec:intro_rsd}) dans l'objet d'étude de ce manuscrit : les fonctions de corrélation (voir section~\ref{subsec:intro_cf}).
 
-\textbf{Les objets distants s'éloignent de nous du fait de l'expansion. Similairement à l'effet Doppler, le spectre observé de ces objets est décalé vers les grandes longueurs d'onde.
-Mais contrairement à l'effet Doppler, le redshift n'est pas directement dû à la vitesse de récession de l'objet : à cause de l'expansion, les photons, lors de leur propagation, voient leur longueur d'onde augmenter.}
+Les objets distants s'éloignent de nous du fait de l'expansion. Similairement à l'effet Doppler, le spectre observé de ces objets est décalé vers les grandes longueurs d'onde.
+Mais contrairement à l'effet Doppler, le redshift n'est pas directement dû à la vitesse de récession de l'objet : à cause de l'expansion, les photons, lors de leur propagation, voient leur longueur d'onde augmenter.
 % Dans le cadre des modèles de big bang, le redshift est interprété comme une conséquence de l'expansion de l'univers.
 % Les objets distants s'éloignent de nous du fait de l'expansion. Similairement à l'effet Doppler\footnote{L'effet Doppler est l'augmentation ou la diminution de la longueur d'onde d'une onde lorsque l'émetteur de cette dernière s'approche ou s'éloigne de l'observateur. L'exemple le plus connu est celui de l'ambulance : le son entendu est plus aigu lorsque l'ambulance s'approche, puis plus grave lorsqu'elle s'éloigne.}, le spectre observé de ces objets est décalé vers les grandes longueurs d'onde.
 % Mais contrairement à l'effet Doppler, le redshift n'est pas directement dû à la vitesse de récession de l'objet :
@@ -538,7 +538,7 @@ Ce dernier présente un pic à $l \sim 200$, qui correspond à une taille angula
 \end{figure}
 
 \subsection{La fonction de corrélation}
-
+\label{subsec:intro_cf}
 Maintenant que nous avons présenté le spectre de puissance, nous allons décrire la fonction de corrélation à deux points, l'objet d'étude de ce manuscrit. De la même manière que nous nous sommes intéressés précédemment au spectre de puissance de la matière, nous nous intéressons ici à la fonction de corrélation de la matière. Elle permet d'étudier de façon statistique la distribution de matière dans l'univers. Plus exactement, elle donne la corrélation de la distribution de matière entre 2 points de l'espace séparés d'une distance $\vec r$. La fonction de corrélation du contraste de densité de la matière $\xi$ est définie comme
 \begin{equation}
   \label{eq:def_cf}
@@ -714,8 +714,8 @@ Prenons un exemple. Supposons que nous voulons reconstruire la distribution de l
 Les galaxies, comme tous les objets effondrés, se forment dans les endroits les plus denses de l'univers.
 % Ceci est illustré sur la figure~\ref{fig:schema_biais} par le fait que les galaxies ne peuvent se former que pour des densitées $\rho$ supérieures à un certain seuil.
 \textbf{En dessous d'un certain seuil de densité, les galaxies ne peuvent se former\footnote{Pour être exact, la probabilité qu'une galaxie se forme dans une région où la densité moyenne est inférieure à ce seuil est extrêmement faible.}.
-Ainsi, sonder la distribution de matière via l'observation des galaxies nous fait manquer toute la distribution de matière pour laquelle $\rho$ est inférieur à ce seuil.
-La distribution reconstruite sera donc plus structurée que la distribution sous-jacente : les surdensités seront mieux échantillonnées que les sous-densités.}
+Ainsi, sonder la distribution de matière via l'observation des galaxies nous fait manquer toute la distribution de matière pour laquelle la densité est inférieure à ce seuil.
+La distribution reconstruite sera donc plus structurée que la distribution sous-jacente (voir la section 5.7 de \textcite{Padmanabhan1993}.}
 Ce phénomène est décrit par ce qu'on nomme le \emph{biais}. Le biais $b_i(z)$ du traceur $i$ au redshift $z$ est défini par
 \begin{equation}
   \label{eq:biais1}
@@ -733,12 +733,12 @@ Comme indiqué dans l'équation précédente, la fonction de corrélation associ
 
 \subsection{Distorsions dans l'espace des redshifts}
 \label{subsec:intro_rsd}
-\textbf{Afin de construire la fonction de corrélation du traceur $i$, il est nécessaire de connaître le redshift cosmologique de chaque traceur. Dans le cas des traceurs booléens, comme par exemple les galaxies, le redshift est obtenu en mesurant le spectre de l'objet, puis en comparant les longueurs d'onde des raies d'émission présentes dans le spectre aux longueurs d'onde mesurées en laboratoire. Le redshift mesuré est donc le suivant :}
+\textbf{Afin de construire la fonction de corrélation du traceur $i$, le redshift cosmologique de chaque traceur est utilisé. Dans le cas des traceurs booléens, comme par exemple les galaxies, le redshift est obtenu en mesurant le spectre de l'objet, puis en comparant les longueurs d'onde des raies d'émission présentes dans le spectre aux longueurs d'onde mesurées en laboratoire. Le redshift mesuré est donc le suivant :}
 \begin{equation}
   z_{\mathrm{mesure}} = z_{\mathrm{cosmo}} + \Delta z_{\mathrm{v}} + \delta z_{\mathrm{sys}} + \delta z_{\mathrm{stat}}  \; ,
 \end{equation}
 où $z_{\mathrm{mesure}}$ est le redshift mesuré, $\delta z_{\mathrm{sys}}$ et $\delta z_{\mathrm{stat}}$ sont les erreurs statistiques et systématiques sur la mesure du redshift, $z_{\mathrm{cosmo}}$ est le redshift cosmologique,
-et $\Delta z_{\mathrm{v}}$ et le redshift induit par la vitesse particulière $v_{\parallel}$ du traceur le long de la ligne de visée (effet Doppler) :
+et $\Delta z_{\mathrm{v}}$ et le redshift induit par la vitesse particulière $v_{\parallel}$ du traceur le long de la ligne de visée (effet Doppler). Pour les faibles redshifts ($z << 1$), celui-ci s'exprime comme :
 \begin{equation}
   \label{eq:delta_z}
   \Delta z_{\mathrm{v}} = \frac{v_{\parallel}}{c} \; .
@@ -843,7 +843,7 @@ La grande luminosité des quasars les rend observables à très grand redshift, 
 
 Les quasars sont donc des objets idéaux pour construire un relevé spectroscopique étendu et à grand redshift, et ainsi sonder l'échelle BAO sur un grand volume d'univers. De plus, comme expliqué précédemment, les quasars sont des objets qui se forment dans des environnements très denses. Ils constituent donc un traceur très biaisé.
 \textbf{Le biais des quasars est mesuré par \textcite{Laurent2017} dans quatre bins en redshift (voir table~2).
-Nous utilisons leurs valeurs pour paramétrer le biais des quasars selon une loi de puissance. La paramétrisation que nous utilisons dans ce manuscrit est la suivante}
+Nous utilisons leurs valeurs ainsi que celles données dans \textcite{Croom2004} pour paramétrer le biais des quasars selon une loi de puissance. La paramétrisation que nous utilisons dans ce manuscrit est la suivante}
 % Nous le paramétrisons ici comme
 % \begin{equation}
 %   \label{eq:b_qso}

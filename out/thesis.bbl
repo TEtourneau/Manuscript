@@ -6758,8 +6758,10 @@
     \entry{eBOSSCollaboration2020}{article}{}
       \name{author}{100}{}{%
         {{uniquename=0,hash=5684b2c872cbbf51dad91813765be13d}{%
-           family={eBOSS Collaboration},
-           familyi={C\bibinitperiod}}}
+           family={Collaboration},
+           familyi={C\bibinitperiod},
+           prefix={eBOSS},
+           prefixi={e\bibinitperiod}}}%
         {{uniquename=0,hash=71c3df7b4bc20b417f28992d26bda471}{%
            family={Alam},
            familyi={A\bibinitperiod},
@@ -7291,6 +7293,83 @@
       \endverb
       \verb{url}
       \verb https://www.sdss.org/surveys/eboss/
+      \endverb
+    \endentry
+    \entry{Croom2004}{article}{}
+      \name{author}{9}{}{%
+        {{uniquename=0,hash=2fe146603424126f72983b2bb4f89844}{%
+           family={Croom},
+           familyi={C\bibinitperiod},
+           given={Scott\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=68d55a136c24afc13557980ddddfde8e}{%
+           family={Boyle},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=c2fd76afeff43cfb10629a0f28caece8}{%
+           family={Shanks},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{uniquename=0,hash=5b116c6258bed0e9b959560303a4587b}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=2dea7a7e1b13450c64c938fb9ab76b80}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{uniquename=0,hash=e3e70e40d6313d9f224886a28bcdaf7e}{%
+           family={Outram},
+           familyi={O\bibinitperiod},
+           given={P.\bibnamedelimi J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=c24b3890e080059a8b05580edc0570f7}{%
+           family={Loaring},
+           familyi={L\bibinitperiod},
+           given={N.\bibnamedelimi S.},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{uniquename=0,hash=ae74b4d090e71ba97e5a4d70f2634fc4}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{uniquename=0,hash=68e0c96aa9aa7ee33540f6f9947a048b}{%
+           family={Angela},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           prefix={da},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{077ea61ac5bbdc69c5d75427274992cf}
+      \strng{fullhash}{eccc4caaad787ce206122d18e73a694f}
+      \strng{authornamehash}{077ea61ac5bbdc69c5d75427274992cf}
+      \strng{authorfullhash}{eccc4caaad787ce206122d18e73a694f}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{title}{{The 2dF QSO Redshift Survey - XIV. Structure and evolution from the two-point correlation function}}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.1111/j.1365-2966.2004.08379.x/abs/
+      \endverb
+      \verb{eprint}
+      \verb 0409314
+      \endverb
+      \verb{file}
+      \verb :Users/tetourne/Library/Application Support/Mendeley Desktop/Downloaded/Croom et al. - 2004 - The 2dF QSO Redshift Survey - XIV. Structure and evolution from the two-point correlation function.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/astro-ph/0409314
       \endverb
     \endentry
     \entry{Dawson2015}{article}{}
@@ -14047,6 +14126,27 @@
       \verb{url}
       \verb http://arxiv.org/abs/astro-ph/0108030%20http://dx.doi.org/10.1086/339686
       \endverb
+    \endentry
+    \entry{Padmanabhan1993}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cff5545e6431e2dfc249b8755ee7e30b}{%
+           family={Padmanabhan},
+           familyi={P\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{cff5545e6431e2dfc249b8755ee7e30b}
+      \strng{fullhash}{cff5545e6431e2dfc249b8755ee7e30b}
+      \strng{authornamehash}{cff5545e6431e2dfc249b8755ee7e30b}
+      \strng{authorfullhash}{cff5545e6431e2dfc249b8755ee7e30b}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0521424860}
+      \field{title}{{Structure Formation in the Universe}}
+      \field{year}{1993}
     \endentry
     \entry{Paris2016}{article}{}
       \name{author}{46}{}{%
