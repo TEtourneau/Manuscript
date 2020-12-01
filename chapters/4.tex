@@ -167,22 +167,24 @@ Comme précédemment, la boîte $\delta_{k, \mathrm{matière}}$ est la même que
 %   v_{\parallel}(\vec r) = \frac{\vec r \cdot \vec v}{|| \vec r ||} \; .
 % \end{equation}
 
-Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une modification de la formule FGPA. Pour ce faire, nous avons besoin du gradient de vitesse $\eta_{\parallel}$ à $z=0$.
-Nous utilisons la définition donnée dans l'équation 2.2 de \textcite{Arinyo-i-Prats2015} :
+\textbf{Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une modification de la formule FGPA (voir la fin de l'appendice~\ref{app:fgpa}). Pour ce faire, nous avons besoin du gradient de vitesse $\eta_{\parallel}$ à $z=0$.
+% Nous utilisons la définition donnée dans l'équation 2.2 de \textcite{Arinyo-i-Prats2015} :
+Le gradient de vitesse est donné par}
 \begin{equation}
-  \eta = - \frac{1}{aH} \frac{\partial v_p}{\partial x_p} \; ,
+  \eta = \frac{1}{aH} \frac{\partial v_p}{\partial x_p} \; ,
 \end{equation}
 où $\eta$ est le gradient sans dimension de la vitesse $v_p$ le long de la ligne de visée, et $x_p$ est la coordonnées comobile le long de cette ligne de visée.
 En utilisant la définition précédente, et l'équation~\ref{eq:v1}, nous obtenons le gradient $\eta_{nm}$ de la vitesse $v_n$ selon la direction $\vec u_m$ en fonction du champ $\delta_k$ :
 % Le gradient $\eta_{nm}$ selon la direction $\vec u_m$ de la vitesse $v_n$ est défini comme
 \begin{equation}
   \label{eq:eta1}
-  \eta_{nm}(\vec k) = \frac{k_n k_m}{k^2} f \delta_k(\vec k) \; .
+  \eta_{nm}(\vec k) = - f \frac{k_n k_m}{k^2} \delta_k(\vec k) \; .
 \end{equation}
-Cette équation permet de retrouver la formule de kaiser :
+% Cette équation permet de retrouver la formule de kaiser :
+\textbf{Ceci nous permet, lorsque nous soustrayons $\eta$ au contraste $\delta$ (appendice~\ref{app:fgpa}), de retrouver la formule de Kaiser :}
 \begin{align}
   \label{eq:kaiser5}
-  \delta_k^s(\vec k) &= \delta_k(\vec k) + \eta_{\parallel}(\vec k) \; ,   \\
+  \delta_k^s(\vec k) &= \delta_k(\vec k) - \eta_{\parallel}(\vec k) \; ,   \\
                      &= (1 + f \mu_k^2) \delta_k(\vec k)  \; .  \nonumber
 \end{align}
   La boîte $\delta_k$ utilisée est le GRF initial, afin de garantir les corrélations entre les différents champs. A l'aide d'une transformation de Fourier inverse, nous obtenons\footnote{Lors de la construction des 6 boîtes de gradients de vitesses, nous omettons volontairement le facteur $f(z=0)$ de l'équation~\ref{eq:eta1}. Ce facteur $f$ manquant sera pris en compte lors de l'ajout de la dépendance en redshift (voir section~\ref{subsubsec:rsdlya})} les 6 boîtes de gradients de vitesses  à $z = 0$ dans l'espace réel $\eta_{\textsc{xx}}$, $\eta_{\textsc{yy}}$, $\eta_{\textsc{zz}}$, $\eta_{\textsc{xy}}$, $\eta_{\textsc{yz}}$ et $\eta_{\textsc{xz}}$.
@@ -586,7 +588,7 @@ Cependant, ces fluctuations sont importantes pour le spectre de puissance à une
   P^{\mathrm{1D}}(\kpar{}) = \frac{1}{2 \pi} \int_{0}^{\infty} \kperp{} P(\kpar{}, \kperp{}) d\kperp{} \; .
 \end{equation}
 % Les spectres des quasars sondent la densité le long de la ligne de visée, avec une résolution transverse extrêmement faible, équivalente à la taille d'un quasar (inférieure au parsec). Le calcul du spectre de puissance sur ces spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.
-\textbf{Un spectre de quasar sonde la densité de matière le long de la ligne de visée. Il procure ainsi un échantillonnage, transverse à la ligne de visée, de la densité à une échelle très faible, de l'ordre du parsec. Le calcul du spectre de puissance sur de tels spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.}
+Un spectre de quasar sonde la densité de matière le long de la ligne de visée. Il procure ainsi un échantillonnage, transverse à la ligne de visée, de la densité à une échelle très faible, de l'ordre du parsec. Le calcul du spectre de puissance sur de tels spectres implique donc une intégrale jusqu'à $\kperp{} = \infty$.
 % Avec la taille non nulle des voxels, l'intégrale s'effectue seulement jusqu'à $k_N$. De plus, le lissage gaussien appliqué à l'interpolation de la boîte $\delta_l$ réduit davantage l'amplitude de ce spectre de puissance. Ces deux effets sont représentés sur la figure~\ref{prov} (\#prov faire la figure). Contrairement au cas à trois dimensions, l'effet de la taille des voxels et du lissage gaussien est important pour le spectre de puissance à une dimension.
 % En effet, ce spectre de puissance le long d'une ligne de visée est beaucoup plus sensible au bruit que le spectre de puissance calculé sur une colonne de section de $(\SI{2.19}{\perh\Mpc})^2$.
 % A cause de ces deux effets, l'amplitude du spectre de puissance à une dimension n'est pas correcte. Et ainsi, la variance du champ, donnée par l'intégrale du $P^{\mathrm{1D}}$, n'est pas correcte non plus.

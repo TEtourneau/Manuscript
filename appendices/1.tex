@@ -10,13 +10,15 @@
 \chapter{Fluctuating Gunn Peterson Approximation}
 \label{app:fgpa}
 
-L'approximation FGPA (Fluctuating Gunn Peterson Approximation), présentée dans la section~\ref{subsubsec:lya_field}, relie le contraste de densité d'absorption \lya{} $\delta_F$ à la profondeur optique $\tau$ :
+L'approximation FGPA (Fluctuating Gunn Peterson Approximation), présentée dans la section~\ref{subsubsec:lya_field}, relie la profondeur optique $\tau$ au contraste de densité $\delta$ :
 \begin{equation}
-  \tau = a \exp(b \delta_F) \; ,
+  \tau = a \exp(b \delta) \; ,
 \end{equation}
 où $a$ et $b$ sont deux paramètres.
+Dans cette approximation, l'élargissement thermique des raies d'absorption est négligé.
 
-Afin d'obtenir cette relation, nous débutons avec l'équation qui donne l'équilibre de photo-ionisation de l'hydrogène neutre :
+\paragraph{}
+Afin de relier la profondeur optique $\tau$ au contraste de densité $\delta$, nous débutons avec l'équation qui donne l'équilibre de photo-ionisation de l'hydrogène neutre ($\mathrm{H}_{\mathrm{I}}$) :
 \begin{equation}
   \gamma + \mathrm{H}_{\mathrm{I}} \leftrightarrow \mathrm{e}^{-} + \mathrm{p}^{+} \; ,
 \end{equation}
@@ -25,14 +27,16 @@ qui se traduit comme
   n_{\gamma} n_{\mathrm{H}_{\mathrm{I}}} \langle \sigma_{\mathrm{ioni}} c \rangle
   = n_{\mathrm{e}} n_{\mathrm{p}} \langle \sigma_{\mathrm{rec}} v \rangle_{T} \; ,
 \end{equation}
-où $n_{\gamma}$, $n_{\mathrm{H}_{\mathrm{I}}}$, $n_{\mathrm{e}}$ et $n_{\mathrm{p}}$ donnent respectivement les densités de photons, d'hydrogènes neutres, d'électrons et de protons.
-$ \sigma_{\mathrm{ioni}}$ et $\sigma_{\mathrm{rec}}$ donnent respectivement les sections efficaces de l'ionisation d'un atome d'hydrogène neutre et de la recombinaison d'un électron et d'un proton.
-En sachant que les densités d'électron et de protons sont égales à la densité de baryons, nous pouvons exprimer la densité d'hydrogène neutre comme
+où $n_{\gamma}$, $n_{\mathrm{H}_{\mathrm{I}}}$, $n_{\mathrm{e}}$ et $n_{\mathrm{p}}$ donnent respectivement les densités de photons, d'hydrogènes neutres, d'électrons et de protons, 
+et $ \sigma_{\mathrm{ioni}}$ et $\sigma_{\mathrm{rec}}$ donnent respectivement les sections efficaces de l'ionisation d'un atome d'hydrogène neutre et de la recombinaison d'un électron et d'un proton.
+% En sachant que les densités d'électron et de protons sont égales à la densité de baryons, nous pouvons exprimer la densité d'hydrogène neutre comme
+En négligeant l'hélium et parce que l'hydrogène est quasiment totalement ionisé (entre 1 atome sur \num{10000} et 1 atome sur \num{1000} demeure neutre), nous pouvons approximer les densités d'électron et de protons par la densité de baryons. La densité d'hydrogène neutre s'exprime alors comme
 \begin{equation}
   n_{\mathrm{H}_{\mathrm{I}}}
   = n_{b}^2 \frac{\langle \sigma_{\mathrm{rec}} v \rangle_{T}}{n_{\gamma} \langle \sigma_{\mathrm{ioni}} c \rangle } \; .
 \end{equation}
-De plus, le terme $\langle \sigma_{\mathrm{rec}} v \rangle_{T}$ est proportionnel à $T^{-\num{0.7}}$, nous avons donc la relation de proportionnalité
+% De plus, le terme $\langle \sigma_{\mathrm{rec}} v \rangle_{T}$ est proportionnel à $T^{-\num{0.7}}$, nous avons donc la relation de proportionnalité
+De plus, nous avons $\langle \sigma_{\mathrm{rec}} v \rangle_{T} \propto T^{-\num{0.7}}$, nous avons donc la relation de proportionnalité
 \begin{equation}
   n_{\mathrm{H}_{\mathrm{I}}} \propto \frac{(1+z)^6 \Omega_b^2 (1+\delta)^2 T^{-\num{0.7}}}{n_{\gamma} \langle \sigma_{\mathrm{ioni}} c \rangle} \; ,
 \end{equation}
@@ -41,7 +45,7 @@ Nous pouvons relier de la même manière la température $T$ au contraste de den
 \begin{equation}
   T = \overline T(z)(1+\delta)^{\gamma(z) -1 } \; ,
 \end{equation}
-où $\gamma (z \sim 3) \sim \num{1.6}$.
+où $\gamma (z \sim 3) \sim \num{1.6}$ \autocite{Hui1996}.
 Nous pouvons ainsi relier la profondeur optique $\tau$ au contraste de densité comme
 \begin{equation}
   \label{eq:tau_vs_delta}
@@ -49,11 +53,24 @@ Nous pouvons ainsi relier la profondeur optique $\tau$ au contraste de densité 
   \frac{(1+\delta)^{\beta}}{1+\eta} \; ,
 \end{equation}
 où $\eta$ est le gradient de vitesse $\eta = v'_{p}(z) / H(z)$, $H(z)J_{\gamma}$ correspond au flux ionisant de photons, et $\beta = 2 - \num{0.7}(\gamma(z) -1) \sim \num{1.6}$ à $z \sim 3$.
-De l'équation précédente, nous déduisons que, pour des faibles gradients de vitesse et pour $z \sim 3$
+% De l'équation précédente, nous déduisons que, pour des faibles gradients de vitesse et pour $z \sim 3$
+% \begin{equation}
+% \tau(z) \propto \exp(\num{1.6} \times \delta) (1 - \eta) \; .
+% \end{equation}
+% Cette équation correspond à l'approximation FGPA (Fluctuating Gunn Peterson Approximation).
+
+\paragraph{}
+Lorsque nous nous intéressons uniquement au contraste de densité $\delta$, l'équation~\ref{eq:tau_vs_delta} et l'approximation log-normale \autocite{coles_lognormal_1991} nous donnent 
 \begin{equation}
-\tau(z) \propto \exp(\num{1.6} \times \delta) (1 - \eta) \; .
+\tau(z) \propto \exp(\beta \delta) \; ,
 \end{equation}
+avec $\beta \sim \num{1.6}$ à $z \sim 3$.
 Cette équation correspond à l'approximation FGPA (Fluctuating Gunn Peterson Approximation).
+Lorsque nous prenons en compte le gradient de vitesse $\eta$, nous obtenons une version légèrement modifiée de l'approximation FGPA
+\begin{equation}
+\tau(z) \propto \exp(\beta \delta - \eta) \; .
+\end{equation}
+Cette équation est l'approximation que nous utilisons pour construire les mocks présentés dans ce manuscrit.
 
 
 % \printbibliography
