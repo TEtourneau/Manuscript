@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 DEC 2020 17:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 DEC 2020 12:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2958,9 +2958,6 @@ Package pdftex.def Info: ../figures/intro/bao_schema.png used on input line 609
 .
 (pdftex.def)             Requested size: 297.61115pt x 388.95216pt.
 
-Underfull \vbox (badness 3428) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2997,8 +2994,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29 <../figures/intro/bao_dessin.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 675.
+
+<../figures/intro/h_vs_z.png, id=820, 830.10126pt x 647.41875pt>
+File: ../figures/intro/h_vs_z.png Graphic file (type png)
+
+<use ../figures/intro/h_vs_z.png>
+Package pdftex.def Info: ../figures/intro/h_vs_z.png used on input line 691.
+(pdftex.def)             Requested size: 290.5398pt x 226.59995pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3006,12 +3011,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30] <../figures/intro/h_vs_z.png, id=834, 830.10126pt x 647.41875pt>
-File: ../figures/intro/h_vs_z.png Graphic file (type png)
+[30]
+Underfull \vbox (badness 7740) has occurred while \output is active []
 
-<use ../figures/intro/h_vs_z.png>
-Package pdftex.def Info: ../figures/intro/h_vs_z.png used on input line 691.
-(pdftex.def)             Requested size: 290.5398pt x 226.59995pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3047,16 +3049,19 @@ Package pdftex.def Info: ../figures/intro/schema_rsd.png used on input line 757
 LaTeX Warning: Command \` invalid in math mode on input line 782.
 
 
+LaTeX Warning: Command \` invalid in math mode on input line 788.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33]
-
-LaTeX Warning: Command \` invalid in math mode on input line 788.
-
-<../figures/intro/schema_qso2.png, id=892, 474.77374pt x 316.18124pt>
+[33] <../figures/intro/schema_qso2.png, id=892, 474.77374pt x 316.18124pt>
 File: ../figures/intro/schema_qso2.png Graphic file (type png)
 
 <use ../figures/intro/schema_qso2.png>
@@ -3078,7 +3083,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34 <../figures/intro/schema_rsd.png>]
-<../figures/intro/spectre_qso.png, id=911, 1119.18124pt x 434.62375pt>
+<../figures/intro/spectre_qso.png, id=912, 1119.18124pt x 434.62375pt>
 File: ../figures/intro/spectre_qso.png Graphic file (type png)
 
 <use ../figures/intro/spectre_qso.png>
@@ -3148,9 +3153,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37 <../figures/intro/schema_lya.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.1595pt.
@@ -5220,10 +5222,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43703 strings out of 492995
- 828332 string characters out of 6132704
- 1867616 words of memory out of 5000000
- 45447 multiletter control sequences out of 15000+600000
+ 43705 strings out of 492995
+ 828362 string characters out of 6132704
+ 1867683 words of memory out of 5000000
+ 45449 multiletter control sequences out of 15000+600000
  271083 words of font info for 202 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,22n,70p,10388b,3325s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5266,7 +5268,7 @@ b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.
 pfb>
-Output written on thesis.pdf (190 pages, 12950619 bytes).
+Output written on thesis.pdf (190 pages, 12950825 bytes).
 PDF statistics:
  3217 PDF objects out of 3580 (max. 8388607)
  2684 compressed objects within 27 object streams
