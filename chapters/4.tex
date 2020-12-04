@@ -645,7 +645,7 @@ Mais cette solution n'est pas envisageable car les lignes de visées ne sont pas
 Une autre solution est d'utiliser le champ de vitesse défini dans l'équation~\ref{eq:v1}. Chaque pixel d'absorption est alors déplacé proportionnellement à la vitesse particulière du gaz dans la cellule considérée. Puis l'absorption est modifiée en fonction de la différence des vitesses des pixels voisins. En effet, si cette différence est non nulle, le gaz se retrouve comprimé par endroit, et détendu dans d'autres, modifiant l'absorption dans chaque pixel.
 Cette méthode pour ajouter les RSD dans les mocks \lya{} est la méthode choisie par \textcite{LeGoff2011} et \textcite{Farr2019}.
 Ce n'est pas la solution que nous utilisons ici. Afin d'inclure les RSD dans le champ d'absorption $F$, nous utilisons le champ de gradient de vitesse $\eta_{\parallel}$, présenté dans la section~\ref{subsubsec:vitesses}.
-Contrairement à la méthode qui utilise le champ de vitesse, la solution qui soustraie le champ $\eta_{\parallel}$ au champ $\delta_l$ permet de prédire les fonctions de corrélation des mocks.
+Contrairement à la méthode qui utilise le champ de vitesse, la solution qui ajoute le champ $\eta_{\parallel}$ au champ $\delta_l$ permet de prédire les fonctions de corrélation des mocks.
 Ceci est un atout majeur pour nos simulations, car cela nous permet de prédire la valeur des paramètres que nous devons obtenir lorsque nous ajustons les fonctions de corrélation des mocks.
 Cela est notamment très utile pour vérifier que la mesure du biais $b_{\mathrm{Ly}\alpha}$ et du paramètre RSD $\beta_{\mathrm{Ly}\alpha}$ faite lors de l'ajustement des fonctions de corrélation des mocks, dans l'optique d'effectuer une analyse RSD, est une mesure non biaisée.
 Nous décrivons la prédiction des fonctions de corrélation des mocks dans la section suivante.
@@ -657,22 +657,22 @@ Nous décrivons la prédiction des fonctions de corrélation des mocks dans la s
 Plusieurs essais ont été menés afin de savoir comment inclure correctement le champ $\eta_{\parallel}$ dans FGPA.
 La première solution envisagée était de modifier la profondeur optique $\tau$. Comme $\delta_{\tau} = \tau / \overline \tau - 1$ est conservée lors du passage dans l'espace des redshifts, nous modifiions $\tau$ (équation~\ref{eq:fgpa1}) comme
 \begin{equation}
-  \tau \rightarrow \tau - \overline \tau \eta_{\parallel} \; .
+  \tau \rightarrow \tau + \overline \tau \eta_{\parallel} \; .
 \end{equation}
-Cette solution produisait une trop faible quantité de RSD. Nous avons alors décidé d'inclure les RSD causées par les petites échelles. Similairement à $\delta_l$ et $\delta_s$, nous soustrayions à la profondeur optique la contribution aux grandes et petites échelles $\eta_l$ et $\eta_s$. En faisant ceci, nous étions plus proche de ce que nous aurions obtenu avec une taille de voxel plus petite.
+Cette solution produisait une trop faible quantité de RSD. Nous avons alors décidé d'inclure les RSD causées par les petites échelles. Similairement à $\delta_l$ et $\delta_s$, nous ajoutions à la profondeur optique la contribution aux grandes et petites échelles $\eta_l$ et $\eta_s$. En faisant ceci, nous étions plus proche de ce que nous aurions obtenu avec une taille de voxel plus petite.
 La profondeur optique était alors donnée par
 % à la profondeur optique, car c'est ce que nous aurions obtenu avec une taille de voxel plus petite. La profondeur optique était alors donnée par
 \begin{equation}
-  \tau = a \exp\left[b G (\delta_l + \delta_s)\right] - \overline \tau (\eta_l + \eta_s) \; .
+  \tau = a \exp\left[b G (\delta_l + \delta_s)\right] + \overline \tau (\eta_l + \eta_s) \; .
 \end{equation}
 Cette solution produisait la bonne quantité de RSD. Cependant, la profondeur optique était négative pour un nombre non négligeable de pixels, résultant en une absorption $F > 1$ non physique pour ces pixels.
 Finalement, nous avons décidé d'inclure le gradient de vitesse directement au niveau du champ $\delta$.
 % Nous présentons dans les lignes qui suivent la solution retenue.
-Le champ $\eta_{\parallel}$ est donc soustrait au champ $\delta_l$. Ceci nous permet de retrouver la formule de Kaiser (équation~\ref{eq:kaiser5}). De plus, cette solution ne produit pas de pixel avec $F > 1$.
+Le champ $\eta_{\parallel}$ est donc ajouté, en plus du champ $\delta_s$, au champ $\delta_l$. Ceci nous permet de retrouver la formule de Kaiser (équation~\ref{eq:kaiser5}). De plus, cette solution ne produit pas de pixel avec $F > 1$.
 Afin de gérer la bonne quantité de RSD, nous ajoutons un coefficient $c$, qui dépend de $z$. L'ajustement de ce paramètre nous permet d'obtenir la bonne dépendance en $z$ pour $\beta_{\mathrm{Ly}\alpha}$. La formule FGPA devient donc
 \begin{equation}
   \label{eq:fgpa4}
-  F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s - c(z)\eta_{\parallel}))\right] ;.  
+  F = \exp\left[ - a(z) \exp(b(z) G(z) (\delta_l + \delta_s + c(z)\eta_{\parallel}))\right] ;.  
 \end{equation}
 Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$. De plus, le facteur $f$ que nous avons laissé de côté dans la section~\ref{subsubsec:vitesses} n'est pas explicité ici : pour les redshifts $z > 2$, l'univers est dominé par la matière et donc, en bonne approximation, nous avons $f(z) \sim 1$. Les paramètres $a(z)$, $b(z)$, $c(z)$, ainsi que $P_{s}(k,z)$ sont ajustés afin d'obtenir les bons $b_{\mathrm{Ly}\alpha}(z)$, $\beta_{\mathrm{Ly}\alpha}(z)$, $\overline F(z)$ et $P^{\mathrm{1D}}_{\mathrm{Ly}\alpha}(k,z)$. L'ajustement est décrit dans la section~\ref{sec:tuning}.
 
@@ -680,7 +680,7 @@ Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$.
 \paragraph{}
 
   % Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, les graphiques de cette figure représentent : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
-  Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, le premier graphique de cette figure présente les champs à grande échelle $\delta_l$, $c(z)\eta_{\parallel}$ et la différence des deux. Le deuxième présente la somme $\delta_l + \delta_s$ et le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s - c(z) \eta_{\parallel}$. Le troisième présente la fraction de flux transmise $F$, et enfin le dernier graphique présente le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$. La remontée observée pour les longueurs d'onde proches de \SI{1200}{\angstrom} est causée par la proximité de la raie \lya{}.
+  Les différentes étapes relatives à la création des forêts de chaque quasar sont résumées sur la figure~\ref{fig:building_trans}. De haut en bas, le premier graphique de cette figure présente les champs à grande échelle $\delta_l$, $c(z)\eta_{\parallel}$ et la somme des deux. Le deuxième présente la somme $\delta_l + \delta_s$ et le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$. Le troisième présente la fraction de flux transmise $F$, et enfin le dernier graphique présente le spectre du quasar. Cette dernière étape est produite par le code \texttt{quickquasars} (voir section~\ref{sec:quickquasars}). Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$. La remontée observée pour les longueurs d'onde proches de \SI{1200}{\angstrom} est causée par la proximité de la raie \lya{}.
   
 
 \begin{figure}
@@ -688,7 +688,7 @@ Les champs $\delta_l$, $\delta_s$ et $\eta_{\parallel}$ sont calculés à $z=0$.
   \includegraphics[scale=0.6]{building_trans.pdf}
   \caption{
     % De haut en bas : le champ à grande échelle $\delta_l$, la somme $\delta_l + c(z)\eta_{\parallel}$, le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$, la fraction de flux transmise $F$, et enfin le spectre du quasar. Le quasar est situé à un redshift $z=\num{3.167}$. La raie \lyb{} est visible à gauche dans le graphique du bas, et la base du pic \lya{} est visible à droite. Une DLA avec une grande densité de colonne est aussi visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
-    De haut en bas, le premier graphique présente les champs à grande échelle $\delta_l$, $c(z)\eta_{\parallel}$ et la différence des deux. Le deuxième présente la somme $\delta_l + \delta_s$ et le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s - c(z) \eta_{\parallel}$. Le troisième présente la fraction de flux transmise $F$, et enfin le dernier graphique présente le spectre du quasar. Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
+    De haut en bas, le premier graphique présente les champs à grande échelle $\delta_l$, $c(z)\eta_{\parallel}$ et la somme des deux. Le deuxième présente la somme $\delta_l + \delta_s$ et le champ $\delta_g$ défini comme $\delta_g = \delta_l + \delta_s + c(z) \eta_{\parallel}$. Le troisième présente la fraction de flux transmise $F$, et enfin le dernier graphique présente le spectre du quasar. Un DLA avec une grande densité de colonne est visible à $\lambda_{\mathrm{RF}} \sim \SI{1165}{\angstrom}$.
   }
   \label{fig:building_trans}
 \end{figure}
@@ -720,7 +720,7 @@ Dans les lignes qui suivent, nous expliquons comment calculer la prédiction de 
 \end{equation}
 où $\delta_g$ est un GRF de variance $1$ et $\delta_F$ est le champ d'absorption calculé à partir du champ gaussien.
 % , et $r_{12}$ est la distance qui sépare les deux points où sont évalués les champs $\delta_g$ et $\delta_F$.
-Dans notre cas, le champ $\delta_g$ représente le champ $\delta_l + \delta_s - c(z)\eta_{\parallel}$. Ce champ est un champ gaussien, de valeur moyenne nulle et de variance $\sigma_g^2$. Cette variance est dominé par la variance de $\delta_s$.
+Dans notre cas, le champ $\delta_g$ représente le champ $\delta_l + \delta_s + c(z)\eta_{\parallel}$. Ce champ est un champ gaussien, de valeur moyenne nulle et de variance $\sigma_g^2$. Cette variance est dominé par la variance de $\delta_s$.
 Nous compensons le fait que $\sigma_g^2 \neq 1$ en remplaçant $\xi_g$ par $\xi_g / \sigma_g^2$ dans l'équation~\ref{eq:xig2xif}. % Ainsi, grâce à l'équation~\ref{eq:xig2xif}, pour chaque valeur de $\xi_g \in [-1 ; 1]$, nous pouvons déterminer $\xi_F$.
 Dans cette équation, $\xi_F(r_{12})$ ne dépend que de la valeur de $\xi_g(r_{12})/ \sigma_g^2$. Nous construisons donc une table qui permet de relier chaque valeur de $\xi_g/ \sigma_g^2 \in [-1 \, ; 1]$ à la valeur $\xi_F$ correspondante.
 \begin{figure}
@@ -1001,7 +1001,7 @@ En ce qui concerne le terme $\overline F^2$, nous le calculons pour chaque valeu
 Une fois les paramètres $a$, $b$ et $c$ choisis, nous déterminons le spectre de puissance $P_{s}$ à appliquer à $\delta_{k,s}$ afin d'obtenir le bon $P_{\mathrm{mock}}^{\mathrm{1D}}$.
 % Il nous faut $P_{s}$ avant de calculer la prédiction car nous avons besoin de connaître $\sigma_g$.
 Nous avons besoin de $P_{s}$ car il nous faut connaître $\sigma_g$, qui lui même requiert $\sigma_s$, pour chaque valeur du redshift afin de calculer la prédiction.
-La variance du champ $g = \delta_l + \delta_s - c(z)\eta_{\parallel}$ est donnée par
+La variance du champ $g = \delta_l + \delta_s + c(z)\eta_{\parallel}$ est donnée par
 \begin{equation}
   \label{eq:sigma_g}
   \sigma_g^2(z) = \langle \delta_l^2 \rangle + \langle \delta_s^2 \rangle + c^2(z) \langle \eta_{\parallel}^2 \rangle +
@@ -1075,7 +1075,7 @@ Pour le bin $z = \num{1.8}$, aucune donnée \lya{} n'est disponible. Nous extrap
   P^{\mathrm{1D}}_{\mathrm{modèle}}(k, z=\num{1.8}) = P^{\mathrm{1D}}_{\mathrm{modèle}}(k, z=\num{2.2}) \left(\frac{P^{\mathrm{1D}}_{\mathrm{modèle}}(k, z=\num{2.2})}{P^{\mathrm{1D}}_{\mathrm{modèle}}(k, z=\num{2.4})} \right)^2 \; .
 \end{equation}
 
-Une fois le spectre de puissance modèle défini, nous estimons le spectre de puissance à une dimension $P^{\mathrm{1D}}_{l}$ du champ interpolé $\delta_l - c \eta_{\parallel}$. Nous partons du spectre de puissance fournit par Camb. Nous multiplions ce spectre de puissance par le terme de kaiser $(1 + c \mu_k^2)^2$ puis par le terme $W^2$ représentant l'effet du lissage gaussien (équation~\ref{eq:gauss_smoothing}). Enfin, nous calculons $P^{\mathrm{1D}}_{l}$ grâce à l'équation~\ref{eq:p1d}, en nous restreignant aux $k < k_{max}$. % (\#prov dans p1d\_missing.py, on calcule le p1d avec un cut sur les k. Pourquoi c'est pas un sinus cardinal carré ?).
+Une fois le spectre de puissance modèle défini, nous estimons le spectre de puissance à une dimension $P^{\mathrm{1D}}_{l}$ du champ interpolé $\delta_l + c \eta_{\parallel}$. Nous partons du spectre de puissance fournit par Camb. Nous multiplions ce spectre de puissance par le terme de kaiser $(1 + c \mu_k^2)^2$ puis par le terme $W^2$ représentant l'effet du lissage gaussien (équation~\ref{eq:gauss_smoothing}). Enfin, nous calculons $P^{\mathrm{1D}}_{l}$ grâce à l'équation~\ref{eq:p1d}, en nous restreignant aux $k < k_{max}$. % (\#prov dans p1d\_missing.py, on calcule le p1d avec un cut sur les k. Pourquoi c'est pas un sinus cardinal carré ?).
 Une première estimation du spectre de puissance à une dimension $P_{s}^0$ à appliquer à $\delta_{k,s}$ afin d'obtenir le bon $P_{\mathrm{mock}}^{\mathrm{1D}}$ est donnée par
 \begin{equation}
   P_{s}^0(k) = P^{\mathrm{1D}}_{\mathrm{modèle}}(k) - P^{\mathrm{1D}}_{l}(k) \; .
