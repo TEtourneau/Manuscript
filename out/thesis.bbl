@@ -3779,6 +3779,56 @@
       \endverb
       \keyw{Cosmology: observations,Dark energy,Distance scale,Large-scale structure of Universe,Surveys}
     \endentry
+    \entry{Bi1996}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=f3ec8306aba9062bed50c422ad895353}{%
+           family={Bi},
+           familyi={B\bibinitperiod},
+           given={HongGuang},
+           giveni={H\bibinitperiod}}}%
+        {{uniquename=0,hash=a078ab7adf6e3a31fb8883c5a5fe9f46}{%
+           family={Davidsen},
+           familyi={D\bibinitperiod},
+           given={Arthur\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Astronomical Society}%
+      }
+      \strng{namehash}{092d8caa4ac1209f08e29b730c0614ca}
+      \strng{fullhash}{092d8caa4ac1209f08e29b730c0614ca}
+      \strng{authornamehash}{092d8caa4ac1209f08e29b730c0614ca}
+      \strng{authorfullhash}{092d8caa4ac1209f08e29b730c0614ca}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We have performed a detailed statistical study of the evolution of structure in a photoionized intergalactic medium (IGM) using analytical simulations to extend the calculation into the mildly non-linear density regime found to prevail at z = 3. Our work is based on a simple fundamental conjecture: that the probability distribution function of the density of baryonic diffuse matter in the universe is described by a lognormal (LN) random field. The LN field has several attractive features and follows plausibly from the assumption of initial linear Gaussian density and velocity fluctuations at arbitrarily early times. Starting with a suitably normalized power spectrum of primordial fluc- tuations in a universe dominated by cold dark matter (CDM), we compute the behavior of the baryonic matter, which moves slowly toward minima in the dark matter potential on scales larger than the Jeans length. We have computed two models that succeed in matching observations. One is a non-standard CDM model with Omega=1, h=0.5 and $\backslash$Gamma=0.3, and the other is a low density flat model with a cosmological constant(LCDM), with Omega=0.4, Omega{\_}Lambda=0.6 and h=.65. In both models, the variance of the density distribution function grows with time, reaching unity at about z=4, where the simulation yields spectra that closely resemble the Ly-alpha forest absorption seen in the spectra of high z quasars. The calculations also successfully predict the observed properties of the Ly-alpha forest clouds and their evolution from z=4 down to at least z=2, assuming a constant intensity for the metagalactic UV background over this redshift range. However, in our model the forest is not due to discrete clouds, but rather to fluctuations in a continuous intergalactic medium. (This is an abreviated abstract; the complete abstract is included with the manuscript.)}
+      \field{eprintclass}{astro-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{11}
+      \field{number}{2}
+      \field{title}{{Evolution of Structure in the Intergalactic Medium and the Nature of the Ly-alpha Forest}}
+      \field{volume}{479}
+      \field{year}{1996}
+      \field{pages}{523\bibrangedash 542}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1086/303908
+      \endverb
+      \verb{eprint}
+      \verb 9611062
+      \endverb
+      \verb{file}
+      \verb ::
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/astro-ph/9611062%20http://dx.doi.org/10.1086/303908
+      \endverb
+      \keyw{Astrophysics,Cosmology: Dark Matter,Galaxies: Intergalactic Medium,Galaxies: Quasars: Absorption Lines,Hydrodynamics,cosmology: large,scale structure of universe}
+    \endentry
     \entry{Blanton2001}{article}{}
       \name{author}{6}{}{%
         {{uniquename=2,hash=55affce1978018a24154b872b51f53ec}{%
@@ -11428,7 +11478,7 @@
       \field{labeltitlesource}{title}
       \field{abstract}{To cite this article: Andreu Font-Ribera et al JCAP01(2012)001 View the article online for updates and enhancements. Related content The effect of high column density systems on the measurement of the Lyman-forest correlation function Andreu Font-Ribera and Jordi Miralda-Escudé -The Lyman-forest in three dimensions: measurements of large scale flux correlations from BOSS 1st-year data Anže Slosar, Andreu Font-Ribera, Matthew M. Pieri et al. -How to estimate the 3D power spectrum of the Lyman-forest Andreu Font-Ribera, Patrick McDonald and Anže Slosar -Recent citations How to estimate the 3D power spectrum of the Lyman-forest Andreu Font-Ribera et al -Baryon acoustic oscillations from the complete SDSS-III Ly-quasar cross-correlation function at z = 2.4 Hélion du Mas des Bourboux et al -Modeling the Ly Forest in Collisionless Simulations Daniele Sorini et al. -This content was downloaded from IP address 132.166.28.42 on 13/03/2018 at 15:11 Abstract. Massive spectroscopic surveys of high-redshift quasars yield large numbers of correlated Ly$\alpha$ absorption spectra that can be used to measure large-scale structure. Simu-lations of these surveys are required to accurately interpret the measurements of correlations and correct for systematic errors. An efficient method to generate mock realizations of Ly$\alpha$ forest surveys is presented which generates a field over the lines of sight to the survey sources only, instead of having to generate it over the entire three-dimensional volume of the survey. The method can be calibrated to reproduce the power spectrum and one-point distribution function of the transmitted flux fraction, as well as the redshift evolution of these quantities, and is easily used for modeling any survey systematic effects. We present an example of how these mock surveys are applied to predict the measurement errors in a survey with similar parameters as the BOSS quasar survey in SDSS-III.}
       \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
-      \field{title}{{Generating mock data sets for large-scale Lyman- $\alpha$ forest correlation measurements Generating mock data sets for large-scale Lyman-$\alpha$ forest correlation measurements}}
+      \field{title}{{Generating mock data sets for large-scale Lyman-alpha forest correlation measurements Generating mock data sets for large-scale Lyman-alpha forest correlation measurements}}
       \field{year}{2012}
       \verb{doi}
       \verb 10.1088/1475-7516/2012/01/001

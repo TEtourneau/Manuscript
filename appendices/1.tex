@@ -30,47 +30,85 @@ qui se traduit comme
 où $n_{\gamma}$, $n_{\mathrm{H}_{\mathrm{I}}}$, $n_{\mathrm{e}}$ et $n_{\mathrm{p}}$ donnent respectivement les densités de photons, d'hydrogènes neutres, d'électrons et de protons, 
 et $ \sigma_{\mathrm{ioni}}$ et $\sigma_{\mathrm{rec}}$ donnent respectivement les sections efficaces de l'ionisation d'un atome d'hydrogène neutre et de la recombinaison d'un électron et d'un proton.
 % En sachant que les densités d'électron et de protons sont égales à la densité de baryons, nous pouvons exprimer la densité d'hydrogène neutre comme
-En négligeant l'hélium et parce que l'hydrogène est quasiment totalement ionisé (entre 1 atome sur \num{10000} et 1 atome sur \num{1000} demeure neutre), nous pouvons approximer les densités d'électron et de protons par la densité de baryons. La densité d'hydrogène neutre s'exprime alors comme
+En négligeant l'hélium et parce que l'hydrogène est quasiment totalement ionisé (entre 1 atome sur \num{10000} et 1 atome sur \num{1000} demeure neutre), nous pouvons approximer les densités d'électrons et de protons par la densité de baryons. La densité d'hydrogènes neutres s'exprime alors comme
 \begin{equation}
   n_{\mathrm{H}_{\mathrm{I}}}
   = n_{b}^2 \frac{\langle \sigma_{\mathrm{rec}} v \rangle_{T}}{n_{\gamma} \langle \sigma_{\mathrm{ioni}} c \rangle } \; .
 \end{equation}
 % De plus, le terme $\langle \sigma_{\mathrm{rec}} v \rangle_{T}$ est proportionnel à $T^{-\num{0.7}}$, nous avons donc la relation de proportionnalité
-De plus, nous avons $\langle \sigma_{\mathrm{rec}} v \rangle_{T} \propto T^{-\num{0.7}}$, nous avons donc la relation de proportionnalité
+De plus, nous avons $\langle \sigma_{\mathrm{rec}} v \rangle_{T} \propto T^{-\num{0.7}}$, et donc la relation de proportionnalité
 \begin{equation}
   n_{\mathrm{H}_{\mathrm{I}}} \propto \frac{(1+z)^6 \Omega_b^2 (1+\delta)^2 T^{-\num{0.7}}}{n_{\gamma} \langle \sigma_{\mathrm{ioni}} c \rangle} \; ,
 \end{equation}
-où nous avons explicité la densité de baryon $n_{b}^2 = (1+z)^6 \Omega_b^2 (1+\delta)^2$ en fonction du contraste de densité $\delta$.
-Nous pouvons relier de la même manière la température $T$ au contraste de densité $\delta$ comme
+où nous avons explicité la densité de baryons $n_{b}^2 = (1+z)^6 \Omega_b^2 (1+\delta)^2$ en fonction du contraste de densité $\delta$.
+Par ailleurs, nous pouvons relier la température $T$ au contraste de densité $\delta$ comme
 \begin{equation}
   T = \overline T(z)(1+\delta)^{\gamma(z) -1 } \; ,
 \end{equation}
-où $\gamma (z \sim 3) \sim \num{1.6}$ \autocite{Hui1996}.
-Nous pouvons ainsi relier la profondeur optique $\tau$ au contraste de densité comme
+où $\gamma (z \sim 3) \sim \num{1.6}$ \autocite{Hui1996}. \\
+Nous obtenons donc 
+\begin{equation}
+  \label{eq:densite_vs_delta}
+  n_{\mathrm{H}_{\mathrm{I}}} \propto \frac{(1+z)^6 \Omega_b^2 \overline T(z) (1+\delta)^{\beta}}{n_{\gamma} \langle \sigma_{\mathrm{ioni}} c \rangle} \; ,
+\end{equation}
+avec $\beta = 2 - \num{0.7}(\gamma(z) -1) \sim \num{1.6}$ à $z \sim 3$.
+
+\paragraph{}
+La profondeur optique $\tau$ est proportionnelle à la densité d'hydrogènes neutres $n_{\mathrm{H}_{\mathrm{I}}}$. Cependant, elle est affectée par le gradient de vitesse $v'$ le long de la ligne de visée, qui inclut à la fois la contribution cosmologique et la contribution des vitesses particulières. Celui-ci s'exprime comme
+\begin{equation}
+  v' = a H + v_p' = a H (1 - \eta) \; ,
+\end{equation}
+où $v_p'$ est le gradient de vitesse provoqué par les vitesses particulières, et  $\displaystyle \eta = - \frac{1}{aH} \frac{\partial v_p}{\partial x_p}$ est le gradient sans dimension de la vitesse $v_p$ le long de la ligne de visée, avec $x_p$ la coordonnée comobile le long de cette ligne de visée \autocite{Arinyo-i-Prats2015}.
+Lorsque le gradient de vitesse $v'$ est important, la densité de colonne effective relative à l'absorption \lya{} est réduite, car la région effective le long de la ligne de visée dans laquelle peut se produire l'absorption est réduite. Ainsi la profondeur optique $\tau$ est réduite. De la même manière, lorsque $v'$ est faible, la profondeur optique $\tau$ est augmentée. Nous avons ainsi la relation de proportionnalité
+\begin{equation}
+  \tau \propto \frac{  n_{\mathrm{H}_{\mathrm{I}}}}{v'} \; ,
+\end{equation}
+soit
+\begin{equation}
+  \tau \propto \frac{  n_{\mathrm{H}_{\mathrm{I}}}}{a H (1 - \eta)} \; .
+\end{equation}
+En utilisant l'équation~\ref{eq:densite_vs_delta} et en omettant certains termes, nous obtenons la profondeur optique $\tau$ en fonction du contraste de densité $\delta$
 \begin{equation}
   \label{eq:tau_vs_delta}
-  \tau(z) \propto  \Omega_b^2 \frac{(1+z)^6 \overline T(z)^{-\num{0.7}}}{H(z)J_{\gamma}}
-  \frac{(1+\delta)^{\beta}}{1+\eta} \; ,
+  \tau \propto \frac{(1+\delta)^{\beta}}{1 - \eta} \; .
 \end{equation}
-où $\eta$ est le gradient de vitesse $\eta = v'_{p}(z) / H(z)$, $H(z)J_{\gamma}$ correspond au flux ionisant de photons, et $\beta = 2 - \num{0.7}(\gamma(z) -1) \sim \num{1.6}$ à $z \sim 3$.
+Lorsque nous nous intéressons uniquement au contraste de densité $\delta$ et négligeons le gradient de vitesse $\eta$, l'équation~\ref{eq:tau_vs_delta} et l'approximation log-normale \autocite{coles_lognormal_1991, Bi1996} nous donnent 
+\begin{equation}
+\tau(z) \propto \exp(\beta \delta) \; ,
+\end{equation}
+avec $\beta \sim \num{1.6}$ à $z \sim 3$.
+Cette équation correspond à l'approximation FGPA (Fluctuating Gunn Peterson Approximation).
+Lorsque nous prenons en compte le gradient de vitesse $\eta$, nous obtenons une version modifiée de l'approximation FGPA
+\begin{equation}
+\tau(z) \propto \exp(\beta \delta + \eta) \; .
+\end{equation}
+Cette équation est l'approximation que nous utilisons pour construire les mocks présentés dans ce manuscrit.
+
+% Nous pouvons ainsi relier la profondeur optique $\tau$ au contraste de densité comme
+% \begin{equation}
+%   \label{eq:tau_vs_delta}
+%   \tau(z) \propto  \Omega_b^2 \frac{(1+z)^6 \overline T(z)^{-\num{0.7}}}{H(z)J_{\gamma}}
+%   \frac{(1+\delta)^{\beta}}{1+\eta} \; ,
+% \end{equation}
+% où $\eta$ est le gradient de vitesse $\eta = v'_{p}(z) / H(z)$, $H(z)J_{\gamma}$ correspond au flux ionisant de photons, et $\beta = 2 - \num{0.7}(\gamma(z) -1) \sim \num{1.6}$ à $z \sim 3$.
 % De l'équation précédente, nous déduisons que, pour des faibles gradients de vitesse et pour $z \sim 3$
 % \begin{equation}
 % \tau(z) \propto \exp(\num{1.6} \times \delta) (1 - \eta) \; .
 % \end{equation}
 % Cette équation correspond à l'approximation FGPA (Fluctuating Gunn Peterson Approximation).
 
-\paragraph{}
-Lorsque nous nous intéressons uniquement au contraste de densité $\delta$, l'équation~\ref{eq:tau_vs_delta} et l'approximation log-normale \autocite{coles_lognormal_1991} nous donnent 
-\begin{equation}
-\tau(z) \propto \exp(\beta \delta) \; ,
-\end{equation}
-avec $\beta \sim \num{1.6}$ à $z \sim 3$.
-Cette équation correspond à l'approximation FGPA (Fluctuating Gunn Peterson Approximation).
-Lorsque nous prenons en compte le gradient de vitesse $\eta$, nous obtenons une version légèrement modifiée de l'approximation FGPA
-\begin{equation}
-\tau(z) \propto \exp(\beta \delta - \eta) \; .
-\end{equation}
-Cette équation est l'approximation que nous utilisons pour construire les mocks présentés dans ce manuscrit.
+% \paragraph{}
+% Lorsque nous nous intéressons uniquement au contraste de densité $\delta$, l'équation~\ref{eq:tau_vs_delta} et l'approximation log-normale \autocite{coles_lognormal_1991, Bi1996} nous donnent 
+% \begin{equation}
+% \tau(z) \propto \exp(\beta \delta) \; ,
+% \end{equation}
+% avec $\beta \sim \num{1.6}$ à $z \sim 3$.
+% Cette équation correspond à l'approximation FGPA (Fluctuating Gunn Peterson Approximation).
+% Lorsque nous prenons en compte le gradient de vitesse $\eta$, nous obtenons une version modifiée de l'approximation FGPA
+% \begin{equation}
+% \tau(z) \propto \exp(\beta \delta - \eta) \; .
+% \end{equation}
+% Cette équation est l'approximation que nous utilisons pour construire les mocks présentés dans ce manuscrit.
 
 
 % \printbibliography
