@@ -38,8 +38,8 @@
 % \listoffigures
 % \listoftables
 
-
-% \setcounter{mtc}{2}	% "Corrige" les minitocs décallés à cause des chapter* (ex : table des matières)
+\adjustmtc  % avoid having preface etc in minitoc
+\setcounter{mtc}{2}	% "Corrige" les minitocs décallés à cause des chapter* (ex : table des matières)
 
 \cleardoublepage
 
@@ -60,10 +60,14 @@
 
 \begin{appendices}
   \foreach \i in {1,...,\NumOfAppendices}{
-    \input{../appendices/\i}
     \cleardoublepage
+    \input{../appendices/\i}
   }
 \end{appendices}
+
+\thispagestyle{empty} % add white page
+\null
+\cleardoublepage
 
 %   \bibliography{../source/library}
 \printbibliography
