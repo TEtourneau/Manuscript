@@ -167,9 +167,9 @@ Comme précédemment, la boîte $\delta_{k, \mathrm{matière}}$ est la même que
 %   v_{\parallel}(\vec r) = \frac{\vec r \cdot \vec v}{|| \vec r ||} \; .
 % \end{equation}
 
-\textbf{Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une modification de la formule FGPA (voir la fin de l'appendice~\ref{app:fgpa}).
+Concernant le champ d'absorption \lya{}, les RSD sont prises en compte par une modification de la formule FGPA (voir la fin de l'appendice~\ref{app:fgpa}).
   Pour ce faire, nous avons besoin du gradient de vitesse $\eta_{\parallel}$ à $z=0$.
-  Nous utilisons la définition donnée dans l'équation 2.2 de \textcite{Arinyo-i-Prats2015} :}
+  Nous utilisons la définition donnée dans l'équation 2.2 de \textcite{Arinyo-i-Prats2015} :
   % Le gradient de vitesse est donné par
 \begin{equation}
   \eta = - \frac{1}{aH} \frac{\partial v_p}{\partial x_p} \; ,
@@ -182,7 +182,7 @@ En utilisant la définition précédente, et l'équation~\ref{eq:v1}, nous obten
   \eta_{nm}(\vec k) = f \frac{k_n k_m}{k^2} \delta_k(\vec k) \; .
 \end{equation}
 % Cette équation permet de retrouver la formule de kaiser :
-\textbf{Ceci nous permet, lorsque nous sommons le gradient $\eta$ et le contraste $\delta$ (voir appendice~\ref{app:fgpa}), de retrouver la formule de Kaiser :}
+Ceci nous permet, lorsque nous sommons le gradient $\eta$ et le contraste $\delta$ (voir appendice~\ref{app:fgpa}), de retrouver la formule de Kaiser :
 \begin{align}
   \label{eq:kaiser5}
   \delta_k^s(\vec k) &= \delta_k(\vec k) + \eta_{\parallel}(\vec k) \; ,   \\
@@ -455,7 +455,7 @@ Le facteur $(1+z)$ dans l'équation~\ref{eq:r_rsd} vient de la conversion des di
 \subsection{Création des lignes de visée}
 \label{subsec:los_interp}
 A cette étape, nous disposons d'un catalogue de quasars corrélés avec le champ de densité $\delta_{\mathrm{matière}}$ qui sera utilisé pour construire l'absorption \lya{}. Nous pouvons donc créer les lignes de visées à partir de chaque quasar et jusqu'à l'observateur, puis interpoler la boîte contenant le champ de densité le long de ces lignes de visée.
-\textbf{Nous pouvons noter ici une importante amélioration par rapport aux mocks développés pour BOSS : ces mocks disposaient de lignes de visée parallèles \autocite{LeGoff2011}, ou alors ne disposaient pas de corrélation croisée \lya{}$\times$QSO \autocite{Font-Ribera2012}. Les mocks présentés dans ce manuscrit disposent à la fois de lignes de visée non parallèles et d'une corrélation croisée \lya{}$\times$QSO.}
+Nous pouvons noter ici une importante amélioration par rapport aux mocks développés pour BOSS : ces mocks disposaient de lignes de visée parallèles \autocite{LeGoff2011}, ou alors ne disposaient pas de corrélation croisée \lya{}$\times$QSO \autocite{Font-Ribera2012}. Les mocks présentés dans ce manuscrit disposent à la fois de lignes de visée non parallèles et d'une corrélation croisée \lya{}$\times$QSO.
 
 Dans un premier temps, nous commençons par définir le tableau en longueurs d'onde observées, sur lequel sera interpolé la boîte de densité. Nous choisissons une taille de pixel $d_{\mathrm{pix}} = \SI{0.2}{\perh\Mpc}$. Les limites $\num{1.8} < z < \num{3.6}$ en redshift se traduisent par des limites $\num{3403.876} < \lambda < \SI{5592.082}{\angstrom}$ sur la longueur d'onde observée pour le \lya{}. Nous ajoutons la limite basse des spectrographes de DESI : $\lambda_{min} = \SI{3530}{\angstrom}$, que nous réduisons afin d'inclure certains métaux dans les forêts (cela sera expliqué dans la section~\ref{subsec:model_donnees}). Les longueurs d'onde observées couvrent donc $\num{3476.1877} < \lambda < \SI{5591.566}{\angstrom}$ à l'aide de \num{6524} pixels\footnote{Ces limites sont aussi choisies afin de garantir un nombre entier de pixels.}.
 
