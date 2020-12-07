@@ -1209,12 +1209,6 @@ La figure~\ref{fig:quickquasars_spectrum} présente le spectre d'un quasar simul
 %   Le graphique du bas montre le spectre dans les régions des forêts \lya{} et \lyb{} (bleu), superposées à la fraction de flux transmis multipliée par 30 (vert), en fonction de la longueur d'onde au repos. Les pointillés gris indiquent les raies \lya{} et \lyb{}. Un DLA est visible dans le spectre synthétique pour $\lambda_{\mathrm{RF}} \sim \SI{1135}{\angstrom}$.}
 %   \label{fig:quickquasars_spectra}
 % \end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.42]{quickquasars_spectrum}
-  \caption{Spectre d'un quasar synthétique généré par \texttt{quickquasars}. Le quasar se trouve à un redshift $z = \num{3.167}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure.}
-  \label{fig:quickquasars_spectrum}
-\end{figure}
 
 \paragraph{}
 % A l'aide du code \texttt{quickquasars},nous produisons plusieurs versions différentes des mocks :
@@ -1231,6 +1225,14 @@ Nous présentons l'analyse de ces différentes versions des mocks dans le chapit
 
 Un point important à noter est que, pour chaque réalisation, les quatre versions présentées ci-dessus sont produites avec le même sous-échantillon de quasars. Ceci facilite la comparaison des différentes versions.
 % En effet, à ce stade nous disposons uniquement d'un relevé de quasars, et pour chacun d'entre deux, une forêt contenant le champ d'absorption $F$ variant entre 0 et 1. Ainsi, afin de simuler complètement les données, nous devons ajouter un continuum à ces forêts, puis les inclure dans des spectres synthétiques. Le code utilisé pour créer ces spectres synthétiques est le code \texttt{quickquasars}. Il fait parti du package \texttt{desisim}\footnote{https://github.com/desihub/desisim} et est décrit dans \textcite{prov}. Ce code utilise 
+
+\newpage
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.42]{quickquasars_spectrum}
+  \caption{Spectre d'un quasar synthétique généré par \texttt{quickquasars}. Le quasar se trouve à un redshift $z = \num{3.167}$. La partie bleue du spectre correspond au spectrographe bleu, la partie rouge correspond au spectrographe rouge. Pour des questions de visibilité, nous avons réduit la zone de recouvrement des deux spectrographes dans cette figure.}
+  \label{fig:quickquasars_spectrum}
+\end{figure}
 
 
 
